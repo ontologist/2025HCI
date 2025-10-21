@@ -1,0 +1,305 @@
+# HCI-101 Troubleshooting Guide | トラブルシューティングガイド
+# Copyright (c) 2025 Yuri Tijerino. All rights reserved.
+
+troubleshooting:
+  - id: "trouble_001"
+    category: "Bot Portal | ボットポータル"
+    issue:
+      en: "Cannot log in to bot portal"
+      ja: "ボットポータルにログインできない"
+    solutions:
+      - step: 1
+        en: "Verify you're using your university email (@kwansei.ac.jp)"
+        ja: "大学のメールアドレス（@kwansei.ac.jp）を使用していることを確認してください"
+      - step: 2
+        en: "Try the SSO (Single Sign-On) option with your university credentials"
+        ja: "大学の認証情報でSSO（シングルサインオン）オプションを試してください"
+      - step: 3
+        en: "Clear your browser cache and cookies, then try again"
+        ja: "ブラウザのキャッシュとCookieをクリアしてから、再試行してください"
+      - step: 4
+        en: "If still failing, contact the instructor with error message details"
+        ja: "それでも失敗する場合は、エラーメッセージの詳細をインストラクターに連絡してください"
+    prevention:
+      en: "Keep your university credentials up to date"
+      ja: "大学の認証情報を最新の状態に保ってください"
+
+  - id: "trouble_002"
+    category: "Bot Portal | ボットポータル"
+    issue:
+      en: "Bot responses are slow or timing out"
+      ja: "ボットの応答が遅い、またはタイムアウトする"
+    solutions:
+      - step: 1
+        en: "Check your internet connection stability"
+        ja: "インターネット接続の安定性を確認してください"
+      - step: 2
+        en: "Refresh the page and try your question again"
+        ja: "ページを更新して、質問を再試行してください"
+      - step: 3
+        en: "Try breaking complex questions into smaller, simpler parts"
+        ja: "複雑な質問を小さく、よりシンプルな部分に分割してみてください"
+      - step: 4
+        en: "If persistent, report to instructor - there may be server issues"
+        ja: "問題が続く場合は、インストラクターに報告してください - サーバーの問題がある可能性があります"
+    prevention:
+      en: "Use stable network connection; avoid very long or complex questions"
+      ja: "安定したネットワーク接続を使用し、非常に長いまたは複雑な質問を避けてください"
+
+  - id: "trouble_003"
+    category: "Figma | Figma"
+    issue:
+      en: "Cannot access Figma files"
+      ja: "Figmaファイルにアクセスできない"
+    solutions:
+      - step: 1
+        en: "Verify you have a Figma account (free for students)"
+        ja: "Figmaアカウントを持っていることを確認してください（学生は無料）"
+      - step: 2
+        en: "Check that you're logged into the correct Figma account"
+        ja: "正しいFigmaアカウントにログインしていることを確認してください"
+      - step: 3
+        en: "Click the shared link again - ensure you accepted the invitation"
+        ja: "共有リンクを再度クリックして、招待を受け入れたことを確認してください"
+      - step: 4
+        en: "Ask instructor to re-share or verify your permissions"
+        ja: "インストラクターに再共有を依頼するか、権限を確認してください"
+    prevention:
+      en: "Register Figma account early; use same email as course registration"
+      ja: "Figmaアカウントを早めに登録し、コース登録と同じメールを使用してください"
+
+  - id: "trouble_004"
+    category: "Figma | Figma"
+    issue:
+      en: "Figma prototype is not working or responding"
+      ja: "Figmaプロトタイプが動作しない、または応答しない"
+    solutions:
+      - step: 1
+        en: "Check that you created interactive connections between frames"
+        ja: "フレーム間にインタラクティブな接続を作成したことを確認してください"
+      - step: 2
+        en: "Verify prototype mode is enabled (top-right corner)"
+        ja: "プロトタイプモードが有効になっていることを確認してください（右上隅）"
+      - step: 3
+        en: "Review your interaction triggers and animations"
+        ja: "インタラクショントリガーとアニメーションを確認してください"
+      - step: 4
+        en: "Try refreshing the prototype preview"
+        ja: "プロトタイププレビューを更新してみてください"
+      - step: 5
+        en: "Check Figma tutorials in course resources for guidance"
+        ja: "ガイダンスについては、コースリソースのFigmaチュートリアルを確認してください"
+    prevention:
+      en: "Follow activity instructions step-by-step; test prototype frequently"
+      ja: "アクティビティ指示に段階的に従い、プロトタイプを頻繁にテストしてください"
+
+  - id: "trouble_005"
+    category: "Activities | アクティビティ"
+    issue:
+      en: "Don't understand activity instructions"
+      ja: "アクティビティの指示が理解できない"
+    solutions:
+      - step: 1
+        en: "Ask the HCI Assistant bot to explain the activity in detail"
+        ja: "HCIアシスタントボットにアクティビティを詳しく説明するよう依頼してください"
+      - step: 2
+        en: "Review the example provided in the activity materials"
+        ja: "アクティビティ教材に提供されている例を確認してください"
+      - step: 3
+        en: "Discuss with classmates - collaborative learning is encouraged"
+        ja: "クラスメートと話し合う - 協調学習が奨励されています"
+      - step: 4
+        en: "Ask specific questions in the course forum or to the instructor"
+        ja: "コースフォーラムまたはインストラクターに具体的な質問をしてください"
+    prevention:
+      en: "Read instructions carefully; use bot for clarifications early"
+      ja: "指示を注意深く読み、早めにボットで明確化を求めてください"
+
+  - id: "trouble_006"
+    category: "Activities | アクティビティ"
+    issue:
+      en: "Cannot submit activity work"
+      ja: "アクティビティ作業を提出できない"
+    solutions:
+      - step: 1
+        en: "Check file format requirements (PDF, Figma link, etc.)"
+        ja: "ファイル形式の要件を確認してください（PDF、Figmaリンクなど）"
+      - step: 2
+        en: "Verify file size is within limits (usually 10MB max)"
+        ja: "ファイルサイズが制限内であることを確認してください（通常は最大10MB）"
+      - step: 3
+        en: "Try different browser if submission form not loading"
+        ja: "提出フォームが読み込まれない場合は、別のブラウザを試してください"
+      - step: 4
+        en: "Email submission to instructor if portal issues persist"
+        ja: "ポータルの問題が続く場合は、インストラクターにメールで提出してください"
+    prevention:
+      en: "Submit well before deadline; prepare files in correct format"
+      ja: "締め切りの前に十分余裕を持って提出し、正しい形式でファイルを準備してください"
+
+  - id: "trouble_007"
+    category: "User Testing | ユーザーテスト"
+    issue:
+      en: "Cannot find people for user testing"
+      ja: "ユーザーテストのための人が見つからない"
+    solutions:
+      - step: 1
+        en: "Ask classmates to participate in exchange for testing their designs"
+        ja: "クラスメートに彼らのデザインをテストする代わりに参加するよう依頼してください"
+      - step: 2
+        en: "Test with family members or roommates"
+        ja: "家族やルームメイトとテストしてください"
+      - step: 3
+        en: "Use remote testing tools (video call + screen share)"
+        ja: "リモートテストツールを使用してください（ビデオ通話+画面共有）"
+      - step: 4
+        en: "Contact instructor about alternative arrangements"
+        ja: "代替手配についてインストラクターに連絡してください"
+    prevention:
+      en: "Plan user testing early; arrange participants in advance"
+      ja: "ユーザーテストを早めに計画し、参加者を事前に手配してください"
+
+  - id: "trouble_008"
+    category: "GitHub | GitHub"
+    issue:
+      en: "Cannot access course repository"
+      ja: "コースリポジトリにアクセスできない"
+    solutions:
+      - step: 1
+        en: "Ensure you have a GitHub account (free)"
+        ja: "GitHubアカウントを持っていることを確認してください（無料）"
+      - step: 2
+        en: "Check that you accepted the repository invitation"
+        ja: "リポジトリの招待を受け入れたことを確認してください"
+      - step: 3
+        en: "Verify you're logged into correct GitHub account"
+        ja: "正しいGitHubアカウントにログインしていることを確認してください"
+      - step: 4
+        en: "Request access again from instructor"
+        ja: "インストラクターから再度アクセスを依頼してください"
+    prevention:
+      en: "Create GitHub account early; provide correct username to instructor"
+      ja: "GitHubアカウントを早めに作成し、正しいユーザー名をインストラクターに提供してください"
+
+  - id: "trouble_009"
+    category: "AI Tools | AIツール"
+    issue:
+      en: "AI chatbot gave incorrect information"
+      ja: "AIチャットボットが誤った情報を提供した"
+    solutions:
+      - step: 1
+        en: "This is called 'hallucination' - document it in your AI transparency report"
+        ja: "これは「幻覚」と呼ばれます - AI透明性レポートに文書化してください"
+      - step: 2
+        en: "Cross-reference with course materials and reliable sources"
+        ja: "コース教材と信頼できる情報源と相互参照してください"
+      - step: 3
+        en: "Ask the HCI Assistant bot to verify the information"
+        ja: "HCIアシスタントボットに情報を検証するよう依頼してください"
+      - step: 4
+        en: "Document your verification process - this demonstrates critical thinking"
+        ja: "検証プロセスを文書化してください - これは批判的思考を示しています"
+    prevention:
+      en: "Always verify AI outputs; never trust AI responses blindly"
+      ja: "常にAI出力を検証し、AI応答を盲目的に信頼しないでください"
+
+  - id: "trouble_010"
+    category: "Bilingual Content | バイリンガルコンテンツ"
+    issue:
+      en: "Having trouble understanding English or Japanese content"
+      ja: "英語または日本語のコンテンツを理解するのに苦労している"
+    solutions:
+      - step: 1
+        en: "All materials are bilingual - use the language you're more comfortable with"
+        ja: "すべての教材はバイリンガルです - より快適な言語を使用してください"
+      - step: 2
+        en: "Ask HCI Assistant bot to explain in your preferred language"
+        ja: "HCIアシスタントボットに好みの言語で説明するよう依頼してください"
+      - step: 3
+        en: "Use both languages side-by-side to improve understanding"
+        ja: "両方の言語を並べて使用して理解を深めてください"
+      - step: 4
+        en: "Form study groups with classmates for language support"
+        ja: "言語サポートのためにクラスメートと学習グループを形成してください"
+    prevention:
+      en: "Don't hesitate to use your preferred language; both are equally supported"
+      ja: "好みの言語を使用することをためらわないでください；両方とも同等にサポートされています"
+
+  - id: "trouble_011"
+    category: "Accessibility | アクセシビリティ"
+    issue:
+      en: "Interface is difficult to use with assistive technology"
+      ja: "支援技術でインターフェースが使いにくい"
+    solutions:
+      - step: 1
+        en: "Enable high contrast mode in bot portal settings"
+        ja: "ボットポータル設定でハイコントラストモードを有効にしてください"
+      - step: 2
+        en: "Use keyboard navigation (Tab, Enter, Arrow keys)"
+        ja: "キーボードナビゲーションを使用してください（Tab、Enter、矢印キー）"
+      - step: 3
+        en: "Adjust text size in your browser settings"
+        ja: "ブラウザ設定でテキストサイズを調整してください"
+      - step: 4
+        en: "Contact instructor about specific accessibility accommodations needed"
+        ja: "必要な特定のアクセシビリティ配慮についてインストラクターに連絡してください"
+    prevention:
+      en: "Inform instructor early about accessibility needs"
+      ja: "アクセシビリティのニーズについて早めにインストラクターに知らせてください"
+
+  - id: "trouble_012"
+    category: "Deadlines | 締め切り"
+    issue:
+      en: "Cannot meet activity deadline"
+      ja: "アクティビティの締め切りに間に合わない"
+    solutions:
+      - step: 1
+        en: "Contact instructor BEFORE deadline with explanation"
+        ja: "締め切り前に説明とともにインストラクターに連絡してください"
+      - step: 2
+        en: "Provide documentation for extenuating circumstances"
+        ja: "やむを得ない事情の文書を提供してください"
+      - step: 3
+        en: "Request reasonable extension if needed"
+        ja: "必要に応じて合理的な延長を要求してください"
+      - step: 4
+        en: "Plan ahead - start activities early to avoid last-minute issues"
+        ja: "計画を立ててください - 土壇場の問題を避けるために早めにアクティビティを開始してください"
+    prevention:
+      en: "Start activities early; track deadlines; communicate proactively"
+      ja: "早めにアクティビティを開始し、締め切りを追跡し、積極的にコミュニケーションしてください"
+
+  - id: "trouble_013"
+    category: "Collaboration | 協力"
+    issue:
+      en: "Group member not contributing"
+      ja: "グループメンバーが貢献していない"
+    solutions:
+      - step: 1
+        en: "Communicate directly with team member first"
+        ja: "まずチームメンバーと直接コミュニケーションしてください"
+      - step: 2
+        en: "Document contributions of each member clearly"
+        ja: "各メンバーの貢献を明確に文書化してください"
+      - step: 3
+        en: "Inform instructor if issues persist"
+        ja: "問題が続く場合はインストラクターに知らせてください"
+      - step: 4
+        en: "Consider individual project option if available"
+        ja: "利用可能な場合は個人プロジェクトオプションを検討してください"
+    prevention:
+      en: "Establish clear roles and expectations early; communicate regularly"
+      ja: "早めに明確な役割と期待を確立し、定期的にコミュニケーションしてください"
+
+# Emergency contact information
+emergency_contact:
+  instructor_email: "tijerino@kwansei.ac.jp"
+  bot_portal_support: "http://localhost:3010/bot-portal/support"
+  university_it_helpdesk: "it-help@kwansei.ac.jp"
+  course_forum: "http://localhost:3010/forum"
+
+# Meta information
+version: "1.0.0"
+last_updated: "2025-10-07"
+developer: "Yuri Tijerino"
+course: "HCI-101"

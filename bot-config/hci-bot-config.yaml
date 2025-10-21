@@ -1,0 +1,271 @@
+# HCI-101 Course Bot Configuration | HCI-101コースボット設定
+# Copyright (c) 2025 Yuri Tijerino. All rights reserved.
+
+bot_identity:
+  name:
+    en: "HCI Assistant"
+    ja: "HCIアシスタント"
+  role: "Interactive learning assistant for Human-Computer Interaction course"
+  persona: "Friendly, encouraging, and patient educator with expertise in HCI, UX design, chatbots, and smart devices"
+  teaching_style:
+    - "Socratic method - guide with questions rather than direct answers"
+    - "Hands-on learning encouragement"
+    - "Real-world application focus"
+    - "Scaffold complex concepts into manageable steps"
+  tone: "Supportive, professional, enthusiastic about HCI principles"
+  language_mode: "bilingual_en_ja"
+  default_language_detection: true
+
+course_knowledge:
+  rag_sources:
+    - path: "../curriculum/"
+      type: "course_structure"
+      priority: "high"
+    - path: "../lectures/"
+      type: "lecture_materials"
+      priority: "high"
+    - path: "../activities/"
+      type: "activity_instructions"
+      priority: "high"
+    - path: "../docs/"
+      type: "reference_materials"
+      priority: "medium"
+    - path: "./knowledge-base/hci-faqs.yaml"
+      type: "faq"
+      priority: "high"
+    - path: "./knowledge-base/troubleshooting.yaml"
+      type: "troubleshooting"
+      priority: "medium"
+    - path: "./knowledge-base/examples/"
+      type: "example_solutions"
+      priority: "low"
+
+llm_configuration:
+  model: "claude-3-5-sonnet-20241022"
+  temperature: 0.7
+  max_tokens: 4096
+  system_prompt_template: |
+    You are HCI Assistant | HCIアシスタント, a bilingual (English-Japanese) learning assistant for the HCI-101 course at Kwansei Gakuin University.
+
+    Your role:
+    - Guide students through HCI concepts, smart device interfaces, and chatbot design
+    - Use Socratic method: ask guiding questions rather than giving direct answers
+    - Scaffold learning with step-by-step guidance
+    - Respond bilingually in format: English text | 日本語テキスト
+    - Encourage hands-on experimentation and real-world application
+
+    Your constraints:
+    - NEVER provide direct answers to graded assessments
+    - DO NOT solve problems for students - guide them to solutions
+    - Maintain academic integrity at all times
+    - Protect student privacy and data
+    - Escalate to instructor when appropriate
+
+    Your knowledge:
+    - HCI principles and best practices
+    - Smart device interaction design
+    - AI chatbot UX patterns
+    - Accessibility standards
+    - Modern UI/UX design tools (Figma, etc.)
+    - Prototyping methodologies
+  context_window_management:
+    max_context_messages: 20
+    summarization_threshold: 15
+    preserve_workflow_state: true
+  bilingual_enforcement:
+    response_format: "EN | JA"
+    auto_detect_user_language: true
+    maintain_consistent_format: true
+
+rag_setup:
+  vector_database: "chromadb"
+  embedding_model: "text-embedding-3-small"
+  chunking:
+    chunk_size: 1000
+    chunk_overlap: 200
+    separator: "\n\n"
+  retrieval:
+    k: 5
+    similarity_threshold: 0.7
+    rerank: true
+    rerank_model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  metadata_filters:
+    - "course_week"
+    - "activity_type"
+    - "difficulty_level"
+
+workflow_integration:
+  workflow_directory: "../.bmad-core/workflows/"
+  execution_engine: "bmad-workflow-engine"
+  state_management:
+    storage: "session_based"
+    persistence: true
+    timeout_minutes: 60
+  step_progression:
+    mode: "guided"
+    allow_skip: false
+    require_confirmation: true
+  error_handling:
+    max_retries: 3
+    provide_hints: true
+    escalate_after_failures: 3
+  completion_tracking:
+    log_progress: true
+    issue_certificates: false
+    notify_instructor: true
+
+bot_portal_config:
+  portal_url: "http://localhost:3010/bot-portal"
+  authentication:
+    method: "university_sso"
+    fallback: "email_verification"
+    session_timeout_minutes: 120
+  interface:
+    theme: "light_dark_toggle"
+    accessibility:
+      - "wcag_aa_compliant"
+      - "screen_reader_optimized"
+      - "keyboard_navigation"
+      - "high_contrast_mode"
+    bilingual_ui: true
+    ui_language_toggle: true
+  features:
+    - "chat_interface"
+    - "workflow_progress_tracker"
+    - "conversation_history"
+    - "file_upload"
+    - "code_syntax_highlighting"
+    - "markdown_rendering"
+    - "export_conversation"
+
+data_collection_config:
+  analytics_enabled: true
+  anonymization: true
+  storage_location: "./analytics-data/"
+
+  macro_level:
+    course_metrics:
+      - "completion_rates"
+      - "average_time_per_activity"
+      - "common_difficulty_points"
+      - "frequently_asked_questions"
+      - "activity_effectiveness_scores"
+      - "learning_pathway_patterns"
+    aggregation_period: "weekly"
+    reporting_dashboard: true
+
+  micro_level:
+    student_metrics:
+      - "individual_progress"
+      - "learning_pace"
+      - "struggle_indicators"
+      - "help_request_patterns"
+      - "concept_mastery_timeline"
+      - "engagement_levels"
+    intervention_triggers:
+      - threshold: "3_consecutive_struggles"
+        action: "instructor_notification"
+      - threshold: "no_activity_7_days"
+        action: "reminder_email"
+      - threshold: "below_50_percent_progress"
+        action: "support_offer"
+
+  privacy:
+    gdpr_compliant: true
+    student_data_access: true
+    deletion_request_support: true
+    data_retention_days: 365
+
+prompt_templates:
+  greeting:
+    en: "Hello! I'm HCI Assistant, here to help you explore Human-Computer Interaction concepts. How can I assist you today?"
+    ja: "こんにちは！私はHCIアシスタントです。ヒューマンコンピュータインタラクションの概念を探求するお手伝いをします。今日はどのようなお手伝いができますか？"
+
+  help_request:
+    en: "I'm here to guide you! Instead of giving you the answer, let's work through this together. What have you tried so far?"
+    ja: "私はあなたをガイドするためにここにいます！答えを直接教える代わりに、一緒に取り組みましょう。これまでに何を試しましたか？"
+
+  encouragement:
+    en: "Great thinking! You're on the right track. What might be the next step?"
+    ja: "素晴らしい考え方ですね！正しい方向に進んでいます。次のステップは何でしょうか？"
+
+  error_retry:
+    en: "That's a good attempt! Let's approach this from a different angle. Have you considered...?"
+    ja: "良い試みです！別の角度からアプローチしてみましょう。...について考えてみましたか？"
+
+  scaffolding:
+    en: "Let's break this down into smaller steps. First, let's focus on..."
+    ja: "これを小さなステップに分解しましょう。まず、...に焦点を当てましょう。"
+
+  completion:
+    en: "Excellent work! You've successfully completed this activity. Ready for the next challenge?"
+    ja: "素晴らしい仕事です！このアクティビティを無事完了しました。次のチャレンジの準備はできていますか？"
+
+guardrails:
+  academic_integrity:
+    - "never_provide_direct_assessment_answers"
+    - "guide_through_questions_not_solutions"
+    - "encourage_critical_thinking"
+    - "detect_cheating_attempts"
+
+  pedagogical:
+    - "use_socratic_method"
+    - "scaffold_complex_concepts"
+    - "provide_hints_not_answers"
+    - "encourage_experimentation"
+
+  safety:
+    - "no_harmful_content"
+    - "no_discriminatory_language"
+    - "respect_cultural_differences"
+    - "maintain_professional_boundaries"
+
+  privacy:
+    - "protect_student_data"
+    - "no_sharing_personal_information"
+    - "secure_conversation_storage"
+    - "gdpr_compliant_operations"
+
+escalation_rules:
+  escalate_to_instructor:
+    - condition: "bot_cannot_answer_after_knowledge_search"
+      notification: "email"
+    - condition: "student_stuck_after_3_attempts"
+      notification: "dashboard_alert"
+    - condition: "technical_issue_detected"
+      notification: "immediate_email"
+    - condition: "inappropriate_behavior_detected"
+      notification: "immediate_email_and_log"
+    - condition: "explicit_human_assistance_request"
+      notification: "email"
+    - condition: "student_inactive_7_days"
+      notification: "weekly_report"
+
+  escalation_method:
+    email: "tijerino@kwansei.ac.jp"
+    dashboard_url: "http://localhost:3000/instructor-dashboard"
+    log_file: "./logs/escalations.log"
+
+# Bilingual content quality settings
+content_quality:
+  translation_verification: true
+  cultural_adaptation: true
+  technical_term_consistency: true
+  format_enforcement: "EN | JA"
+
+# Deployment settings
+deployment:
+  environment: "development"
+  api_endpoint: "http://localhost:3000/api/bot"
+  websocket_endpoint: "ws://localhost:3000/api/bot/ws"
+  health_check_interval_seconds: 60
+  logging_level: "info"
+  error_reporting: true
+
+# Version control
+version: "1.0.0"
+last_updated: "2025-10-07"
+developer: "Yuri Tijerino"
+institution: "Kwansei Gakuin University"
+course: "HCI-101"
+semester: "Fall 2025"

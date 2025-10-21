@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1: Introduction to HCI | HCI入門</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Welcome to HCI-101!</h1>
+                <h2 class="japanese">HCI-101へようこそ！</h2>
+                <hr>
+                <h3>Introduction to Human-Computer Interaction in the Era of Smart Devices and AI Chatbots</h3>
+                <p class="japanese">スマートデバイスとAIチャットボット時代のヒューマンコンピュータインタラクション入門</p>
+                <br>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <!-- Slide 2: Agenda -->
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul>
+                    <li>What is HCI? | HCIとは？</li>
+                    <li>Evolution: Desktop → Smart Devices | 進化：デスクトップ → スマートデバイス</li>
+                    <li>User-Centered Design Principles | ユーザー中心デザイン原則</li>
+                    <li>Course Overview & Expectations | コース概要と期待</li>
+                    <li>Meet Your AI Design Mentor | AIデザインメンターとの出会い</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives</h3>
+                <p style="font-size: 0.8em;">By the end of today, you will understand what HCI is, recognize the shift to smart devices, identify user-centered design principles, and know course expectations.</p>
+            </section>
+
+            <!-- Slide 3: What is HCI? -->
+            <section>
+                <h2>What is HCI? | HCIとは？</h2>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p style="font-size: 1.2em;"><strong>Human-Computer Interaction</strong> is the study of how people interact with computers and the design of computer interfaces that are usable, useful, and enjoyable.</p>
+                    <p class="japanese">ヒューマンコンピュータインタラクションは、人々がコンピュータとどのように相互作用するかの研究と、使用可能で有用で楽しいコンピュータインターフェースのデザインです。</p>
+                </div>
+                <div class="two-column" style="margin-top: 2em;">
+                    <div>
+                        <h3>Key Components</h3>
+                        <ul style="font-size: 0.8em;">
+                            <li>👤 <strong>Human:</strong> Users, needs, abilities</li>
+                            <li>💻 <strong>Computer:</strong> Technology, devices</li>
+                            <li>🔄 <strong>Interaction:</strong> Communication</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Why It Matters</h3>
+                        <ul style="font-size: 0.8em;">
+                            <li>24/7 technology interaction</li>
+                            <li>Good design = happy users</li>
+                            <li>Better interfaces = success</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Evolution of Interfaces -->
+            <section>
+                <h2>Evolution of Interfaces | インターフェースの進化</h2>
+                <div style="font-size: 0.8em;">
+                    <h3>🖥️ 1980s-1990s: Desktop Era</h3>
+                    <ul>
+                        <li>Command Line: Text-based interaction</li>
+                        <li>GUI: Windows, icons, menus</li>
+                        <li>Mouse and keyboard</li>
+                    </ul>
+                    
+                    <h3>🌐 2000s-2010s: Web and Mobile</h3>
+                    <ul>
+                        <li>Web interfaces and browsers</li>
+                        <li>Mobile revolution: Touch screens, apps</li>
+                        <li>Responsive design</li>
+                    </ul>
+                    
+                    <h3>📱 2010s-Present: Smart Devices & AI</h3>
+                    <ul>
+                        <li>Smartphones & tablets</li>
+                        <li>Wearables (smartwatches)</li>
+                        <li>IoT devices & smart homes</li>
+                        <li>AI chatbots & voice assistants</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 5: Modern HCI Challenges -->
+            <section>
+                <h2>Modern HCI Challenges | 現代のHCIの課題</h2>
+                <div class="two-column" style="font-size: 0.85em;">
+                    <div>
+                        <h3>Device Diversity</h3>
+                        <ul>
+                            <li>Multiple screen sizes</li>
+                            <li>Different input methods</li>
+                            <li>Context switching</li>
+                        </ul>
+                        <h3 style="margin-top: 1em;">User Expectations</h3>
+                        <ul>
+                            <li>Instant gratification</li>
+                            <li>Intuitive design</li>
+                            <li>Personalization</li>
+                            <li>Accessibility</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Technology Integration</h3>
+                        <ul>
+                            <li>AI & Machine Learning</li>
+                            <li>Voice & Natural Language</li>
+                            <li>Augmented Reality</li>
+                        </ul>
+                        <div style="background: #e3f2fd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                            <p><strong>Question:</strong> How many different devices do you use in a typical day?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: User-Centered Design Principles -->
+            <section>
+                <h2>User-Centered Design Principles</h2>
+                <h3 class="japanese">ユーザー中心デザイン原則</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; margin-top: 2em; font-size: 0.75em;">
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h3>1. Usability</h3>
+                        <p class="japanese">ユーザビリティ</p>
+                        <ul>
+                            <li>Efficiency</li>
+                            <li>Effectiveness</li>
+                            <li>Satisfaction</li>
+                        </ul>
+                        <p style="margin-top: 0.5em;">Users can accomplish tasks quickly and successfully</p>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h3>2. Learnability</h3>
+                        <p class="japanese">学習可能性</p>
+                        <ul>
+                            <li>Intuitive</li>
+                            <li>Consistent</li>
+                            <li>Discoverable</li>
+                        </ul>
+                        <p style="margin-top: 0.5em;">Easy to understand without training</p>
+                    </div>
+                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                        <h3>3. Error Prevention</h3>
+                        <p class="japanese">エラー予防</p>
+                        <ul>
+                            <li>Prevent mistakes</li>
+                            <li>Clear feedback</li>
+                            <li>Easy recovery</li>
+                        </ul>
+                        <p style="margin-top: 0.5em;">Design prevents and fixes errors easily</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Design Thinking Process -->
+            <section>
+                <h2>The HCI Design Process | HCIデザインプロセス</h2>
+                <div style="font-size: 0.75em;">
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5em; margin: 2em 0;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>1. Empathize</h4>
+                            <p class="japanese">共感</p>
+                            <p>User research, interviews, observations</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>2. Define</h4>
+                            <p class="japanese">定義</p>
+                            <p>Problem statement, personas, criteria</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>3. Ideate</h4>
+                            <p class="japanese">発想</p>
+                            <p>Brainstorming, sketching, concepts</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>4. Prototype</h4>
+                            <p class="japanese">試作</p>
+                            <p>Build, test, iterate</p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                            <h4>5. Test</h4>
+                            <p class="japanese">テスト</p>
+                            <p>Usability testing, feedback, refine</p>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 1.2em;">→ This framework guides our entire course! →</p>
+                </div>
+            </section>
+
+            <!-- Slide 8: Course Overview -->
+            <section>
+                <h2>Course Overview | コース概要</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div>
+                        <h3>Structure</h3>
+                        <ul>
+                            <li><strong>14 weeks</strong></li>
+                            <li><strong>100 min/week</strong></li>
+                            <li><span class="emphasis">20% Lecture</span></li>
+                            <li><span class="emphasis">80% Hands-on</span></li>
+                        </ul>
+                        <h3 style="margin-top: 1em;">Key Topics</h3>
+                        <ul>
+                            <li>User Research</li>
+                            <li>Design Thinking</li>
+                            <li>Interface Design</li>
+                            <li>Conversational AI</li>
+                            <li>Usability Testing</li>
+                            <li>Accessibility</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Learning Approach</h3>
+                        <ul>
+                            <li>✅ Activity-based learning</li>
+                            <li>✅ Real-world projects</li>
+                            <li>✅ No-code tools</li>
+                            <li>✅ AI integration</li>
+                            <li>❌ No programming!</li>
+                        </ul>
+                        <h3 style="margin-top: 1em;">Tools</h3>
+                        <ul>
+                            <li>Figma / Adobe XD</li>
+                            <li>Botmock / Voiceflow</li>
+                            <li>HCI-101 Bot</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Assessment -->
+            <section>
+                <h2>Assessment Structure | 評価構造</h2>
+                <div style="background: #4caf50; color: white; padding: 1em; border-radius: 10px; margin-bottom: 1em;">
+                    <h3 style="color: white;">✓ NO FINAL EXAM! | 最終試験なし！</h3>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; font-size: 0.8em;">
+                    <div style="background: #e3f2fd; padding: 1.5em; border-radius: 8px;">
+                        <h3>📝 Weekly Activities (40%)</h3>
+                        <ul>
+                            <li>Hands-on exercises</li>
+                            <li>User research</li>
+                            <li>Prototypes</li>
+                            <li>Bot interactions</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1.5em; border-radius: 8px;">
+                        <h3>🤖 Bot Assessments (15%)</h3>
+                        <ul>
+                            <li>Conversational quizzes</li>
+                            <li>HCI knowledge</li>
+                            <li>Design rationale</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1.5em; border-radius: 8px;">
+                        <h3>🎨 Final Project (35%)</h3>
+                        <ul>
+                            <li>Individual project</li>
+                            <li>Complete process</li>
+                            <li>Portfolio quality</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1.5em; border-radius: 8px;">
+                        <h3>👥 Participation (10%)</h3>
+                        <ul>
+                            <li>Class engagement</li>
+                            <li>Peer feedback</li>
+                            <li>Bot portal usage</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Final Project Options -->
+            <section>
+                <h2>Final Project Options | 最終プロジェクトオプション</h2>
+                <div class="two-column" style="font-size: 0.75em; margin-top: 2em;">
+                    <div style="background: #e1f5fe; padding: 1.5em; border-radius: 10px;">
+                        <h3>Option A: AI Chatbot Interface</h3>
+                        <p class="japanese">AIチャットボットインターフェースデザイン</p>
+                        <p><strong>What you'll design:</strong></p>
+                        <ul>
+                            <li>Conversational AI for specific use case</li>
+                            <li>Complete conversation flows</li>
+                            <li>Personality & tone design</li>
+                            <li>Error handling</li>
+                        </ul>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>Customer service bot</li>
+                            <li>Learning assistant</li>
+                            <li>Health advisor</li>
+                            <li>Campus information bot</li>
+                        </ul>
+                        <p><strong>Tools:</strong> Botmock, Voiceflow</p>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1.5em; border-radius: 10px;">
+                        <h3>Option B: Smart Device Interface</h3>
+                        <p class="japanese">スマートデバイスインターフェースデザイン</p>
+                        <p><strong>What you'll design:</strong></p>
+                        <ul>
+                            <li>Multi-screen interface</li>
+                            <li>Interactive prototype</li>
+                            <li>Responsive design</li>
+                            <li>User research</li>
+                        </ul>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>Fitness app</li>
+                            <li>Smart home controller</li>
+                            <li>Student planner</li>
+                            <li>Accessibility tool</li>
+                        </ul>
+                        <p><strong>Tools:</strong> Figma, Adobe XD</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1em; text-align: center;"><em>You have until Week 3 to decide! | 第3週まで決定できます！</em></p>
+            </section>
+
+            <!-- Slide 11: AI Design Mentor -->
+            <section>
+                <h2>Meet Your AI Design Mentor</h2>
+                <h3 class="japanese">AIデザインメンターとの出会い</h3>
+                <div style="background: #e8f5e9; padding: 2em; border-radius: 15px; margin: 2em 0;">
+                    <h3>🤖 HCI-101 Bot</h3>
+                    <p style="font-size: 1.1em;"><strong>Your 24/7 Design Assistant</strong></p>
+                </div>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div>
+                        <h4>What the Bot Can Do:</h4>
+                        <ul>
+                            <li>✓ Guide design thinking</li>
+                            <li>✓ Provide templates</li>
+                            <li>✓ Answer HCI questions</li>
+                            <li>✓ Conduct assessments</li>
+                            <li>✓ Troubleshoot problems</li>
+                            <li>✓ Give design feedback</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>How to Access:</h4>
+                        <ul>
+                            <li>📱 Course portal</li>
+                            <li>🔑 Credentials provided today</li>
+                            <li>🌐 http://localhost:3000</li>
+                            <li>💬 Bilingual support</li>
+                        </ul>
+                        <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                            <p><strong>⚠️ Remember:</strong> AI transparency is mandatory!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: AI Usage Policy -->
+            <section>
+                <h2>Course Policies | コースポリシー</h2>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #d4edda; padding: 1em; border-radius: 8px; margin: 1em 0;">
+                        <h3>✅ AI Chatbots ARE ENCOURAGED</h3>
+                        <ul>
+                            <li>Understanding concepts</li>
+                            <li>Brainstorming ideas</li>
+                            <li>Writing documentation</li>
+                            <li>Getting feedback</li>
+                            <li>Tool troubleshooting</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f8d7da; padding: 1em; border-radius: 8px; margin: 1em 0;">
+                        <h3>❌ NOT ALLOWED During:</h3>
+                        <ul>
+                            <li>Formal assessments</li>
+                            <li>Final presentations</li>
+                            <li>In-class evaluations</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3cd; padding: 1em; border-radius: 8px; margin: 1em 0;">
+                        <h3>📝 REQUIRED Documentation:</h3>
+                        <ul>
+                            <li>All prompts used</li>
+                            <li>All AI responses</li>
+                            <li>Verification process</li>
+                            <li>Hallucination checks</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: What You'll Need -->
+            <section>
+                <h2>What You'll Need | 必要なもの</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; font-size: 0.8em; margin-top: 2em;">
+                    <div>
+                        <h3>💻 Software & Tools</h3>
+                        <ul>
+                            <li>Figma or Adobe XD (free)</li>
+                            <li>Web browser</li>
+                            <li>Note-taking app</li>
+                            <li>Screenshot tool</li>
+                        </ul>
+                        <h3 style="margin-top: 1em;">🔧 Hardware</h3>
+                        <ul>
+                            <li>Computer with internet</li>
+                            <li>Minimum 4GB RAM</li>
+                            <li>Optional: Mobile device</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>🔐 Accounts & Access</h3>
+                        <ul>
+                            <li>HCI-101 Bot Portal</li>
+                            <li>AI chatbot accounts</li>
+                            <li>Design tool accounts</li>
+                        </ul>
+                        <div style="background: #4caf50; color: white; padding: 1.5em; border-radius: 10px; margin-top: 1em;">
+                            <h3 style="color: white;">📚 NO TEXTBOOK REQUIRED!</h3>
+                            <p>All materials provided through course portal</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 14: This Week's Activity -->
+            <section>
+                <h2>This Week's Activity | 今週のアクティビティ</h2>
+                <h3>Interface Analysis Exercise</h3>
+                <div style="font-size: 0.75em; margin-top: 2em;">
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5em; margin-bottom: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px; text-align: center;">
+                            <h4>Step 1</h4>
+                            <p>Meet Your Bot</p>
+                            <p><strong>10 min</strong></p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px; text-align: center;">
+                            <h4>Step 2</h4>
+                            <p>Select Interfaces</p>
+                            <p><strong>12 min</strong></p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px; text-align: center;">
+                            <h4>Step 3</h4>
+                            <p>Analyze Design</p>
+                            <p><strong>15 min</strong></p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px; text-align: center;">
+                            <h4>Step 4</h4>
+                            <p>Choose Project</p>
+                            <p><strong>13 min</strong></p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 8px; text-align: center;">
+                            <h4>Step 5</h4>
+                            <p>Document Learning</p>
+                            <p><strong>10 min</strong></p>
+                        </div>
+                    </div>
+                    <div style="background: #fff3cd; padding: 1.5em; border-radius: 10px;">
+                        <h4>📋 Deliverables:</h4>
+                        <ul>
+                            <li>Interface Analysis Reflection (2-4 pages)</li>
+                            <li>Bot Interaction Screenshots</li>
+                            <li>AI Transparency Log (if external AI used)</li>
+                        </ul>
+                        <p><strong>Due:</strong> End of Week 1</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15: Questions -->
+            <section>
+                <h2>Questions? | 質問はありますか？</h2>
+                <div style="font-size: 0.85em; margin-top: 2em;">
+                    <h3>Common Questions:</h3>
+                    <ul>
+                        <li><strong>Q:</strong> Do I need programming experience?<br>
+                            <strong>A:</strong> No! This course uses no-code tools</li>
+                        <li><strong>Q:</strong> Can I change my project choice later?<br>
+                            <strong>A:</strong> Yes, until Week 3</li>
+                        <li><strong>Q:</strong> How much time outside class?<br>
+                            <strong>A:</strong> 2-3 hours/week for activities</li>
+                    </ul>
+                    <hr>
+                    <h3>Getting Help:</h3>
+                    <ul>
+                        <li>📢 During Class: Raise your hand</li>
+                        <li>📧 Outside Class: Email instructor</li>
+                        <li>🤖 24/7 Support: HCI-101 Bot</li>
+                        <li>💬 Course Forum: Peer discussion</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 16: Welcome -->
+            <section>
+                <h1>Welcome to Your HCI Journey!</h1>
+                <h2 class="japanese">HCIの旅へようこそ！</h2>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px; margin: 2em 0;">
+                    <h3 style="color: white;">Today's Key Takeaways:</h3>
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>✓ HCI is everywhere in your daily life</li>
+                        <li>✓ User-centered design solves real problems</li>
+                        <li>✓ You'll learn by doing, not just listening</li>
+                        <li>✓ AI is your learning partner 24/7</li>
+                    </ul>
+                </div>
+                <h2 style="color: #4caf50;">Let's Begin!</h2>
+                <p>Access your bot portal and start your first activity!</p>
+                <p class="japanese">ボットポータルにアクセスして最初のアクティビティを開始してください！</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>
+
+
+
+

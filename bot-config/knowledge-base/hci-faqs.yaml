@@ -1,0 +1,159 @@
+# HCI-101 Frequently Asked Questions | よくある質問
+# Copyright (c) 2025 Yuri Tijerino. All rights reserved.
+
+faqs:
+  - id: "faq_001"
+    category: "Course Basics | コース基本"
+    question:
+      en: "What is Human-Computer Interaction?"
+      ja: "ヒューマンコンピュータインタラクションとは何ですか？"
+    answer:
+      en: "Human-Computer Interaction (HCI) is the study of how people interact with computers and digital systems. It focuses on designing interfaces that are intuitive, efficient, and enjoyable to use. In this course, we'll explore HCI in the context of modern technologies like smart devices, AI chatbots, and emerging interfaces."
+      ja: "ヒューマンコンピュータインタラクション（HCI）は、人々がコンピュータやデジタルシステムとどのように相互作用するかを研究する学問です。直感的で効率的、そして楽しく使えるインターフェースの設計に焦点を当てています。このコースでは、スマートデバイス、AIチャットボット、新興インターフェースなどの現代技術の文脈でHCIを探求します。"
+    tags: ["basics", "definition", "hci"]
+
+  - id: "faq_002"
+    category: "Course Structure | コース構造"
+    question:
+      en: "Is there a final exam?"
+      ja: "期末試験はありますか？"
+    answer:
+      en: "No! This course uses a project-based assessment approach. Instead of a final exam, you'll complete a final project that demonstrates your understanding of HCI principles through a real-world application. You can work individually or in groups."
+      ja: "いいえ！このコースはプロジェクトベースの評価アプローチを使用しています。期末試験の代わりに、実世界での応用を通じてHCI原則の理解を示す最終プロジェクトを完成させます。個人またはグループで作業できます。"
+    tags: ["assessment", "project", "no_exam"]
+
+  - id: "faq_003"
+    category: "AI Usage | AI使用"
+    question:
+      en: "Can I use AI chatbots like ChatGPT for my work?"
+      ja: "ChatGPTのようなAIチャットボットを課題に使用できますか？"
+    answer:
+      en: "Yes! AI chatbot use is ENCOURAGED for reports, research, and coding. However, you must follow the AI Transparency Policy: share all prompts you used, share all AI responses, document how you verified the information, and explain any hallucination checks you performed. Note: AI tools are NOT allowed during formal assessments."
+      ja: "はい！レポート、研究、コーディングにAIチャットボットの使用は奨励されています。ただし、AI透明性ポリシーに従う必要があります：使用したすべてのプロンプトを共有し、すべてのAI応答を共有し、情報をどのように検証したかを文書化し、実行した幻覚チェックを説明してください。注意：正式な評価中はAIツールは使用できません。"
+    tags: ["ai", "policy", "chatgpt", "transparency"]
+
+  - id: "faq_004"
+    category: "Tools & Software | ツールとソフトウェア"
+    question:
+      en: "Do I need to know programming for this course?"
+      ja: "このコースにプログラミングの知識は必要ですか？"
+    answer:
+      en: "No programming experience is required! This course uses a no-code/low-code approach. We'll use tools like Figma for prototyping, and other user-friendly platforms for creating interactive prototypes. The focus is on HCI principles and design thinking, not coding."
+      ja: "プログラミング経験は必要ありません！このコースはノーコード・ローコードアプローチを使用します。プロトタイピングにはFigmaなどのツール、インタラクティブなプロトタイプ作成には他のユーザーフレンドリーなプラットフォームを使用します。焦点はHCI原則とデザイン思考であり、コーディングではありません。"
+    tags: ["tools", "programming", "no_code"]
+
+  - id: "faq_005"
+    category: "Activities | アクティビティ"
+    question:
+      en: "How much time should I spend on hands-on activities?"
+      ja: "ハンズオンアクティビティにどのくらい時間をかけるべきですか？"
+    answer:
+      en: "This is an 80% hands-on course. Each week includes a short lecture (10-20 minutes) followed by 40-60 minutes of hands-on activities. You'll learn by doing, experimenting with real interfaces, and applying HCI principles to practical problems."
+      ja: "これは80%ハンズオンコースです。毎週、短い講義（10〜20分）の後に40〜60分のハンズオンアクティビティが含まれています。実際のインターフェースを実験し、HCI原則を実際的な問題に適用することで、実践を通じて学びます。"
+    tags: ["activities", "time", "hands_on"]
+
+  - id: "faq_006"
+    category: "Smart Devices | スマートデバイス"
+    question:
+      en: "What types of smart devices will we work with?"
+      ja: "どのような種類のスマートデバイスを扱いますか？"
+    answer:
+      en: "We'll explore various smart device interfaces including smartphones, tablets, smartwatches, voice assistants (Alexa, Google Home), and IoT devices. You'll analyze their interaction patterns, evaluate their usability, and design your own smart device interfaces as part of the course projects."
+      ja: "スマートフォン、タブレット、スマートウォッチ、音声アシスタント（Alexa、Google Home）、IoTデバイスなど、さまざまなスマートデバイスインターフェースを探求します。それらのインタラクションパターンを分析し、ユーザビリティを評価し、コースプロジェクトの一環として独自のスマートデバイスインターフェースを設計します。"
+    tags: ["smart_devices", "iot", "interfaces"]
+
+  - id: "faq_007"
+    category: "Chatbot Design | チャットボット設計"
+    question:
+      en: "Will we build actual chatbots?"
+      ja: "実際のチャットボットを作成しますか？"
+    answer:
+      en: "Yes! You'll design and prototype chatbot interfaces using no-code tools. We'll explore conversational UX design, dialogue flows, error handling, and personality design. The focus is on creating effective, user-friendly chatbot experiences without requiring programming knowledge."
+      ja: "はい！ノーコードツールを使用してチャットボットインターフェースを設計およびプロトタイプ化します。会話型UXデザイン、対話フロー、エラー処理、パーソナリティデザインを探求します。焦点は、プログラミング知識を必要とせずに、効果的でユーザーフレンドリーなチャットボット体験を作成することです。"
+    tags: ["chatbot", "conversational_ux", "prototyping"]
+
+  - id: "faq_008"
+    category: "Accessibility | アクセシビリティ"
+    question:
+      en: "Why is accessibility important in HCI?"
+      ja: "HCIにおいてアクセシビリティはなぜ重要ですか？"
+    answer:
+      en: "Accessibility ensures that technology is usable by everyone, including people with disabilities. In modern HCI, we design inclusive interfaces that work for diverse users with varying abilities, devices, and contexts. This includes considerations for visual, auditory, motor, and cognitive accessibility."
+      ja: "アクセシビリティは、障害を持つ人々を含むすべての人が技術を使用できるようにします。現代のHCIでは、さまざまな能力、デバイス、コンテキストを持つ多様なユーザーに対応する包括的なインターフェースを設計します。これには、視覚、聴覚、運動、認知のアクセシビリティに関する考慮事項が含まれます。"
+    tags: ["accessibility", "inclusive_design", "wcag"]
+
+  - id: "faq_009"
+    category: "Bot Portal | ボットポータル"
+    question:
+      en: "How do I use the HCI Assistant bot?"
+      ja: "HCIアシスタントボットをどのように使用しますか？"
+    answer:
+      en: "Access the bot portal at the course website. Log in with your university credentials. The HCI Assistant is available 24/7 to answer questions, guide you through activities, and provide learning support. It responds in both English and Japanese. Ask questions, request help with activities, or discuss HCI concepts anytime!"
+      ja: "コースウェブサイトのボットポータルにアクセスしてください。大学の認証情報でログインします。HCIアシスタントは24時間365日利用可能で、質問に答え、アクティビティをガイドし、学習サポートを提供します。英語と日本語の両方で応答します。いつでも質問したり、アクティビティのヘルプを依頼したり、HCIコンセプトについて議論したりできます！"
+    tags: ["bot", "portal", "support", "24_7"]
+
+  - id: "faq_010"
+    category: "Evaluation | 評価"
+    question:
+      en: "How is my work evaluated?"
+      ja: "私の作業はどのように評価されますか？"
+    answer:
+      en: "Assessment is based on: weekly activity submissions (40%), participation and engagement (20%), and final project (40%). All assessments use clear rubrics shared in advance. The focus is on demonstrating understanding through application, not memorization. AI transparency documentation is required when using AI tools."
+      ja: "評価は次の基準に基づいています：週次アクティビティ提出物（40％）、参加と関与（20％）、最終プロジェクト（40％）。すべての評価は事前に共有される明確なルーブリックを使用します。焦点は暗記ではなく、応用を通じた理解の実証です。AIツールを使用する場合はAI透明性文書化が必要です。"
+    tags: ["evaluation", "rubrics", "assessment"]
+
+  - id: "faq_011"
+    category: "Design Tools | デザインツール"
+    question:
+      en: "What is Figma and why do we use it?"
+      ja: "Figmaとは何ですか？なぜそれを使用するのですか？"
+    answer:
+      en: "Figma is a collaborative interface design tool used by professional designers worldwide. It's free for students and requires no installation (runs in web browser). We use it for prototyping because it allows you to create interactive mockups, test user flows, and collaborate in real-time. It's the industry standard for UI/UX design."
+      ja: "Figmaは、世界中のプロのデザイナーが使用する共同インターフェースデザインツールです。学生は無料で使用でき、インストールは不要です（Webブラウザで実行）。インタラクティブなモックアップを作成し、ユーザーフローをテストし、リアルタイムで共同作業できるため、プロトタイピングに使用します。UI/UXデザインの業界標準です。"
+    tags: ["figma", "prototyping", "tools"]
+
+  - id: "faq_012"
+    category: "Group Work | グループワーク"
+    question:
+      en: "Can I work alone or do I need a group?"
+      ja: "一人で作業できますか、それともグループが必要ですか？"
+    answer:
+      en: "Most weekly activities can be done individually or in pairs. For the final project, you have the choice to work individually OR in groups of 2-4 students. Group projects may be more ambitious in scope, while individual projects allow complete creative control. Both approaches are equally valid."
+      ja: "ほとんどの週次アクティビティは個人またはペアで実行できます。最終プロジェクトについては、個人で作業するか、2〜4人の学生のグループで作業するかを選択できます。グループプロジェクトはより野心的な範囲になる可能性がありますが、個人プロジェクトでは完全な創造的コントロールが可能です。どちらのアプローチも同等に有効です。"
+    tags: ["group_work", "collaboration", "final_project"]
+
+  - id: "faq_013"
+    category: "User Research | ユーザーリサーチ"
+    question:
+      en: "Do we conduct user testing with real people?"
+      ja: "実際の人々でユーザーテストを実施しますか？"
+    answer:
+      en: "Yes! User research is a core HCI skill. You'll conduct usability tests, interviews, and observations with real users (classmates, friends, family). We'll cover ethical considerations, consent procedures, and proper research methods. This hands-on experience is invaluable for understanding how real people interact with your designs."
+      ja: "はい！ユーザーリサーチはコアなHCIスキルです。実際のユーザー（クラスメート、友人、家族）とユーザビリティテスト、インタビュー、観察を実施します。倫理的配慮、同意手続き、適切な研究方法をカバーします。この実践的な経験は、実際の人々があなたのデザインとどのように相互作用するかを理解するために非常に貴重です。"
+    tags: ["user_research", "usability_testing", "ethics"]
+
+  - id: "faq_014"
+    category: "Technical Issues | 技術的問題"
+    question:
+      en: "What do I do if I have technical problems?"
+      ja: "技術的な問題が発生した場合はどうすればよいですか？"
+    answer:
+      en: "First, ask the HCI Assistant bot for help - it has troubleshooting guides for common issues. If the bot can't resolve your issue, it will escalate to the instructor. You can also email the instructor directly or post in the course discussion forum. For university IT issues (login, network), contact the university IT helpdesk."
+      ja: "まず、HCIアシスタントボットに助けを求めてください - 一般的な問題のトラブルシューティングガイドがあります。ボットが問題を解決できない場合は、インストラクターにエスカレートされます。インストラクターに直接メールを送るか、コースディスカッションフォーラムに投稿することもできます。大学のIT問題（ログイン、ネットワーク）については、大学のITヘルプデスクに連絡してください。"
+    tags: ["technical_support", "troubleshooting", "help"]
+
+  - id: "faq_015"
+    category: "Course Materials | コース教材"
+    question:
+      en: "Where can I find lecture slides and activity materials?"
+      ja: "講義スライドとアクティビティ教材はどこで見つけられますか？"
+    answer:
+      en: "All course materials are available in the GitHub repository at github.com/[course-repo]/2025HCI. The repository includes: lectures/ (lecture slides), activities/ (activity instructions), resources/ (reference materials), and docs/ (documentation). Materials are bilingual (English | Japanese) and regularly updated."
+      ja: "すべてのコース教材はGitHubリポジトリ（github.com/[course-repo]/2025HCI）で利用できます。リポジトリには以下が含まれます：lectures/（講義スライド）、activities/（アクティビティ指示）、resources/（参考資料）、docs/（ドキュメント）。教材はバイリンガル（英語 | 日本語）で、定期的に更新されます。"
+    tags: ["materials", "github", "resources"]
+
+# Meta information
+version: "1.0.0"
+last_updated: "2025-10-07"
+developer: "Yuri Tijerino"
+course: "HCI-101"
