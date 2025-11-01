@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9: AI Chatbot Error Handling | AIチャットボットエラーハンドリング</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5em;
+        }
+        .error-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1em;
+            margin: 0.5em 0;
+        }
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 1em;
+            margin: 0.5em 0;
+        }
+        .bad-example {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 0.8em;
+            margin: 0.3em 0;
+        }
+        .good-example {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 0.8em;
+            margin: 0.3em 0;
+        }
+        .fallback-level {
+            padding: 1em;
+            border-radius: 8px;
+            margin: 0.5em 0;
+        }
+        .level-1 { background: #fff3cd; }
+        .level-2 { background: #ffe5b4; }
+        .level-3 { background: #ffd4a3; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Week 9: AI Chatbot Interaction Design and Error Handling</h1>
+                <h2 class="japanese">第9週：AIチャットボットインタラクションデザインとエラーハンドリング</h2>
+                <hr>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <!-- Slide 2: Agenda -->
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul style="font-size: 0.85em;">
+                    <li>Understanding NLU Limitations | 自然言語理解の限界</li>
+                    <li>Handling Ambiguity and Confusion | 曖昧性と混乱の処理</li>
+                    <li>Error Recovery Strategies | エラー回復戦略</li>
+                    <li>Fallback Responses | フォールバック応答</li>
+                    <li>Human Handoff Design | 人間への引き継ぎデザイン</li>
+                    <li>Testing Chatbot Conversations | チャットボット会話のテスト</li>
+                    <li>Hands-On: Complete Chatbot Prototype | ハンズオン</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives | 学習目標</h3>
+                <p style="font-size: 0.75em;">Understand NLU limitations, design error recovery strategies, create graceful fallbacks, implement human handoff, build complete chatbot prototypes</p>
+            </section>
+
+            <!-- Slide 3: Recap -->
+            <section>
+                <h2>Recap from Week 8</h2>
+                <h3 class="japanese">第8週の振り返り</h3>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #e8f5e9; padding: 1.5em; border-radius: 10px;">
+                        <h4>Last Week ✅</h4>
+                        <ul>
+                            <li>Conversational UI principles</li>
+                            <li>Chatbot types</li>
+                            <li>Dialog design</li>
+                            <li>Conversation flow</li>
+                            <li>Personality & tone</li>
+                        </ul>
+                        <p><strong>Focus: When things go RIGHT</strong></p>
+                    </div>
+                    <div style="background: #fff3cd; padding: 1.5em; border-radius: 10px;">
+                        <h4>This Week ⚠️</h4>
+                        <ul>
+                            <li>NLU limitations</li>
+                            <li>Error types</li>
+                            <li>Recovery strategies</li>
+                            <li>Fallback responses</li>
+                            <li>Human handoff</li>
+                        </ul>
+                        <p><strong>Focus: When things go WRONG</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Why Error Handling Matters -->
+            <section>
+                <h2>Why Error Handling Matters</h2>
+                <h3 class="japanese">なぜエラーハンドリングが重要なのか</h3>
+                <div style="background: #e3f2fd; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <h3>The Reality of Chatbots</h3>
+                    <div style="font-size: 1.2em; margin: 1em 0;">
+                        <p>📊 <strong>60-70%</strong> of interactions encounter misunderstandings</p>
+                        <p>❌ <strong>30%</strong> of users abandon after one failure</p>
+                        <p>✅ <strong>80%</strong> recovery rate with good error handling</p>
+                    </div>
+                </div>
+                <div class="two-column" style="font-size: 0.75em; margin-top: 1em;">
+                    <div class="bad-example">
+                        <h4>❌ Poor Error Handling</h4>
+                        <ul>
+                            <li>"I don't understand" (repeated)</li>
+                            <li>No guidance</li>
+                            <li>Stuck in loops</li>
+                            <li>No human option</li>
+                        </ul>
+                    </div>
+                    <div class="good-example">
+                        <h4>✅ Good Error Handling</h4>
+                        <ul>
+                            <li>Clear explanation</li>
+                            <li>Specific suggestions</li>
+                            <li>Alternative paths</li>
+                            <li>Easy escalation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: NLU Limitations -->
+            <section>
+                <h2>Understanding NLU Limitations</h2>
+                <h3 class="japanese">自然言語理解の限界を理解する</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+                        <div class="error-box">
+                            <h4>1. Ambiguity | 曖昧性</h4>
+                            <p>"Can you book me?"</p>
+                            <p><em>Make reservation or put in book?</em></p>
+                        </div>
+                        <div class="error-box">
+                            <h4>2. Homophones | 同音異義語</h4>
+                            <p>there / their / they're</p>
+                            <p>to / too / two</p>
+                        </div>
+                        <div class="error-box">
+                            <h4>3. Slang | スラング</h4>
+                            <p>"That's fire!" = great</p>
+                            <p>"I'm dead" = laughing hard</p>
+                        </div>
+                        <div class="error-box">
+                            <h4>4. Sarcasm | 皮肉</h4>
+                            <p>"Oh great, another delay"</p>
+                            <p><em>Sounds positive, actually negative</em></p>
+                        </div>
+                        <div class="error-box">
+                            <h4>5. Context-Dependent | コンテキスト依存</h4>
+                            <p>"Apple" = fruit or company?</p>
+                            <p><em>Depends on context</em></p>
+                        </div>
+                        <div class="error-box">
+                            <h4>6. Multi-Intent | マルチ意図</h4>
+                            <p>"Book flight AND check points"</p>
+                            <p><em>Two intents in one sentence</em></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Types of Errors -->
+            <section>
+                <h2>Types of Chatbot Errors</h2>
+                <h3 class="japanese">チャットボットエラーのタイプ</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em;">
+                        <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
+                            <h4>1. No Match</h4>
+                            <p class="japanese">マッチなし</p>
+                            <p>Bot doesn't understand intent</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>2. Partial Match</h4>
+                            <p class="japanese">部分的マッチ</p>
+                            <p>Ambiguous intent</p>
+                        </div>
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>3. Missing Info</h4>
+                            <p class="japanese">情報不足</p>
+                            <p>Lacks required details</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>4. Invalid Input</h4>
+                            <p class="japanese">無効な入力</p>
+                            <p>Wrong format</p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                            <h4>5. Out of Scope</h4>
+                            <p class="japanese">スコープ外</p>
+                            <p>Beyond capabilities</p>
+                        </div>
+                        <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
+                            <h4>6. System Error</h4>
+                            <p class="japanese">システムエラー</p>
+                            <p>Technical failure</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Error Recovery Framework -->
+            <section>
+                <h2>Error Recovery Framework</h2>
+                <h3 class="japanese">エラー回復戦略フレームワーク</h3>
+                <div style="background: #e8f5e9; padding: 2em; border-radius: 10px; font-size: 0.8em;">
+                    <h3>4-Step Process: AEGO</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 1em;">
+                        <div>
+                            <h4>1. ACKNOWLEDGE | 認識</h4>
+                            <div class="good-example">✅ "I didn't quite catch that"</div>
+                            <div class="bad-example">❌ "Error"</div>
+                        </div>
+                        <div>
+                            <h4>2. EXPLAIN | 説明</h4>
+                            <div class="good-example">✅ "I need date in MM/DD/YYYY format"</div>
+                            <div class="bad-example">❌ "I don't understand"</div>
+                        </div>
+                        <div>
+                            <h4>3. GUIDE | ガイド</h4>
+                            <div class="good-example">✅ "Try saying 'track my order'"</div>
+                            <div class="bad-example">❌ "Try again"</div>
+                        </div>
+                        <div>
+                            <h4>4. OFFER ALTERNATIVES | 代替案</h4>
+                            <div class="good-example">✅ "Speak with a team member?"</div>
+                            <div class="bad-example">❌ No alternatives</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Fallback Strategy -->
+            <section>
+                <h2>3-Level Fallback Strategy</h2>
+                <h3 class="japanese">3レベルフォールバック戦略</h3>
+                <div style="font-size: 0.75em;">
+                    <div class="fallback-level level-1">
+                        <h4>Level 1: Soft Recovery</h4>
+                        <p class="japanese">レベル1：ソフトリカバリ</p>
+                        <p><strong>First failure - Be helpful</strong></p>
+                        <p>"I didn't quite understand that. Could you rephrase?"</p>
+                    </div>
+                    <div style="text-align: center; font-size: 2em;">↓</div>
+                    <div class="fallback-level level-2">
+                        <h4>Level 2: Guided Help</h4>
+                        <p class="japanese">レベル2：ガイド付きヘルプ</p>
+                        <p><strong>Second failure - Provide examples</strong></p>
+                        <p>"I'm still not sure. Here are things I can help with:"<br>
+                        [Track Order] [Return Item] [Product Info]</p>
+                    </div>
+                    <div style="text-align: center; font-size: 2em;">↓</div>
+                    <div class="fallback-level level-3">
+                        <h4>Level 3: Escalate</h4>
+                        <p class="japanese">レベル3：エスカレート</p>
+                        <p><strong>Third failure - Human handoff</strong></p>
+                        <p>"I apologize for the trouble. Let me connect you with a team member who can help."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Disambiguation -->
+            <section>
+                <h2>Handling Ambiguity</h2>
+                <h3 class="japanese">曖昧性の処理</h3>
+                <div class="three-column" style="font-size: 0.7em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Pattern 1: Multiple Choice</h4>
+                        <p>Present options as buttons</p>
+                        <div style="margin-top: 1em;">
+                            <p>"Did you mean:"</p>
+                            <button style="display: block; width: 100%; margin: 0.3em 0;">Track Order</button>
+                            <button style="display: block; width: 100%; margin: 0.3em 0;">Track Shipment</button>
+                            <button style="display: block; width: 100%; margin: 0.3em 0;">Check Status</button>
+                        </div>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                        <h4>Pattern 2: Ask-and-Confirm</h4>
+                        <p>Make best guess and confirm</p>
+                        <div style="margin-top: 1em;">
+                            <p>"It sounds like you want to track your order. Is that right?"</p>
+                            <button style="display: inline-block; margin: 0.3em;">Yes</button>
+                            <button style="display: inline-block; margin: 0.3em;">No</button>
+                        </div>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Pattern 3: Progressive Narrowing</h4>
+                        <p>Series of questions</p>
+                        <div style="margin-top: 1em;">
+                            <p>"What brings you here?" →<br>
+                            "Is it about order, product, or account?" →<br>
+                            "What's the issue?"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Human Handoff -->
+            <section>
+                <h2>Human Handoff Design</h2>
+                <h3 class="japanese">人間への引き継ぎデザイン</h3>
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div style="background: #fff3cd; padding: 1em; border-radius: 8px;">
+                        <h4>When to Hand Off (6 Triggers)</h4>
+                        <ul>
+                            <li>1. Repeated Failures (2-3 attempts)</li>
+                            <li>2. Complex Requests</li>
+                            <li>3. Emotional Distress</li>
+                            <li>4. Out of Scope</li>
+                            <li>5. User Request</li>
+                            <li>6. High-Value Transactions</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>Before Handoff</h4>
+                        <ul>
+                            <li>✓ Set expectations</li>
+                            <li>✓ Collect information</li>
+                            <li>✓ Provide wait time</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">During Handoff</h4>
+                        <ul>
+                            <li>✓ Transfer conversation transcript</li>
+                            <li>✓ Include user details</li>
+                            <li>✓ Flag sentiment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: #e3f2fd; padding: 1em; border-radius: 8px; margin-top: 1em; font-size: 0.8em;">
+                    <h4>Example: "I'll connect you with a team member. They'll have our conversation history, so you won't need to repeat yourself. Current wait is about 5 minutes. Would you like to wait or schedule a callback?"</h4>
+                </div>
+            </section>
+
+            <!-- Slide 11: Testing -->
+            <section>
+                <h2>Testing Chatbot Error Handling</h2>
+                <h3 class="japanese">チャットボットエラーハンドリングのテスト</h3>
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div>
+                        <h4>Test Scenarios:</h4>
+                        <ul>
+                            <li>☐ Nonsense input</li>
+                            <li>☐ Empty input</li>
+                            <li>☐ Very long input</li>
+                            <li>☐ Special characters</li>
+                            <li>☐ Typos</li>
+                            <li>☐ Ambiguous requests</li>
+                            <li>☐ Out of scope</li>
+                            <li>☐ Context switches</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Metrics to Track:</h4>
+                        <ul>
+                            <li>📊 Fallback Rate</li>
+                            <li>✅ Resolution Rate</li>
+                            <li>🤝 Handoff Rate</li>
+                            <li>😊 User Satisfaction</li>
+                        </ul>
+                        <div style="background: #fff3cd; padding: 1em; border-radius: 8px; margin-top: 1em;">
+                            <p><strong>Test with real users!</strong></p>
+                            <p>Where do they get confused?<br>
+                            What errors occur most?<br>
+                            Do they recover?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: This Week's Activity -->
+            <section>
+                <h2>This Week's Activity</h2>
+                <h3 class="japanese">今週のアクティビティ</h3>
+                <div style="font-size: 0.7em;">
+                    <h4>Complete Chatbot Prototype with Error Handling (70 min)</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; margin: 1em 0;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>Part 1 (20 min)</h4>
+                            <p>Error Scenario Planning</p>
+                            <ul>
+                                <li>Review Week 8 flow</li>
+                                <li>Identify 5-7 errors</li>
+                                <li>Map recovery paths</li>
+                            </ul>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>Part 2 (25 min)</h4>
+                            <p>Design Error Responses</p>
+                            <ul>
+                                <li>Write 3-level fallbacks</li>
+                                <li>Clarification dialogs</li>
+                                <li>Handoff flow</li>
+                                <li>Empathetic language</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>Part 3 (25 min)</h4>
+                            <p>Build Prototype</p>
+                            <ul>
+                                <li>Use Botmock/Voiceflow</li>
+                                <li>Build complete flow</li>
+                                <li>Happy + error paths</li>
+                                <li>Test with partner</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="background: #fff3cd; padding: 1.5em; border-radius: 10px;">
+                        <h4>📋 Deliverables:</h4>
+                        <p>1. Enhanced Conversation Flow Diagram • 2. Error Response Script • 3. Interactive Chatbot Prototype • 4. Test Results Documentation • 5. AI Transparency Log</p>
+                        <p><strong>Due:</strong> End of Week 9</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Key Takeaways -->
+            <section>
+                <h2>Key Takeaways</h2>
+                <h3 class="japanese">重要なポイント</h3>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px;">
+                    <div style="font-size: 0.9em;">
+                        <h3 style="color: white;">Today's Main Points:</h3>
+                        <ol style="text-align: left;">
+                            <li><strong>Errors are Inevitable</strong> - 60-70% of conversations encounter them</li>
+                            <li><strong>AEGO Framework</strong> - Acknowledge, Explain, Guide, Offer Alternatives</li>
+                            <li><strong>Progressive Fallbacks</strong> - Level 1 (soft) → 2 (guided) → 3 (escalate)</li>
+                            <li><strong>Empathy Matters</strong> - Recognize frustration and respond with understanding</li>
+                            <li><strong>Test Thoroughly</strong> - Error paths need as much testing as happy paths</li>
+                        </ol>
+                    </div>
+                </div>
+                <div style="margin-top: 2em; font-size: 1.2em;">
+                    <p><strong>Remember:</strong> Good chatbots anticipate problems and help users recover gracefully!</p>
+                    <p><strong>Next Week:</strong> Usability Testing with real users</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

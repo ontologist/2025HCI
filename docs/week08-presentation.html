@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8: Conversational UI and Chatbot Design | 会話型UIとチャットボットデザイン</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+        .chat-bubble {
+            background: #e3f2fd;
+            padding: 1em;
+            border-radius: 10px;
+            margin: 0.5em 0;
+        }
+        .chat-bubble.bot {
+            background: #f3e5f5;
+            text-align: left;
+        }
+        .chat-bubble.user {
+            background: #e8f5e9;
+            text-align: right;
+        }
+        .good-example {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        .bad-example {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Week 8: Conversational UI and Chatbot Design</h1>
+                <h2 class="japanese">第8週：会話型UIとチャットボットデザイン</h2>
+                <hr>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <!-- Slide 2: Agenda -->
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul style="font-size: 0.9em;">
+                    <li>Introduction to Conversational UI | 会話型UI入門</li>
+                    <li>Types of Chatbots and Use Cases | チャットボットのタイプとユースケース</li>
+                    <li>Dialog Design Principles | 対話デザイン原則</li>
+                    <li>Personality and Tone in Chatbots | チャットボットのパーソナリティとトーン</li>
+                    <li>Conversation Flow Mapping | 会話フローマッピング</li>
+                    <li>Hands-On Activity | ハンズオンアクティビティ</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives | 学習目標</h3>
+                <p style="font-size: 0.8em;">Understand conversational UI principles, identify chatbot types, design dialog flows, and create chatbot personalities.</p>
+            </section>
+
+            <!-- Slide 3: What is Conversational UI? -->
+            <section>
+                <h2>What is Conversational UI?</h2>
+                <h3 class="japanese">会話型UIとは？</h3>
+                <div style="background: #e3f2fd; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p style="font-size: 1.1em;"><strong>Conversational User Interface (CUI)</strong> enables users to interact with computers using natural language through text or voice, mimicking human-to-human conversation.</p>
+                </div>
+                <div class="two-column" style="margin-top: 1.5em; font-size: 0.85em;">
+                    <div>
+                        <h4>Key Characteristics:</h4>
+                        <ul>
+                            <li>💬 Natural Language</li>
+                            <li>🔄 Turn-Taking</li>
+                            <li>🧠 Context Awareness</li>
+                            <li>🎯 Intent Recognition</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Why It Matters:</h4>
+                        <ul>
+                            <li>♿ Accessibility</li>
+                            <li>⚡ Efficiency</li>
+                            <li>🌐 24/7 Availability</li>
+                            <li>📈 Scalability</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Evolution -->
+            <section>
+                <h2>Evolution of Conversational Interfaces</h2>
+                <h3 class="japanese">会話型インターフェースの進化</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #f5f5f5; padding: 1.5em; border-radius: 8px; margin: 1em 0;">
+                        <h4>🖥️ 1960s-1990s: Early AI Chatbots</h4>
+                        <ul>
+                            <li>ELIZA (1966): First chatbot</li>
+                            <li>Rule-based systems</li>
+                            <li>Limited understanding</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e3f2fd; padding: 1.5em; border-radius: 8px; margin: 1em 0;">
+                        <h4>🎙️ 2000s-2010s: Voice Assistants</h4>
+                        <ul>
+                            <li>Siri (2011), Google Assistant</li>
+                            <li>Alexa & Cortana</li>
+                            <li>Smart home integration</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1.5em; border-radius: 8px; margin: 1em 0;">
+                        <h4>🤖 2015-Present: AI-Powered Chatbots</h4>
+                        <ul>
+                            <li>Machine learning & NLP</li>
+                            <li>ChatGPT, Claude, Gemini</li>
+                            <li>Specialized domain bots</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Types of Chatbots -->
+            <section>
+                <h2>Types of Chatbots | チャットボットのタイプ</h2>
+                <div class="three-column" style="font-size: 0.7em; margin-top: 2em;">
+                    <div style="background: #fff3e0; padding: 1.5em; border-radius: 10px;">
+                        <h3>Rule-Based</h3>
+                        <p class="japanese">ルールベース</p>
+                        <ul>
+                            <li>Decision trees</li>
+                            <li>Button-based</li>
+                            <li>Predictable</li>
+                        </ul>
+                        <p><strong>Best For:</strong></p>
+                        <ul>
+                            <li>FAQ</li>
+                            <li>Order tracking</li>
+                        </ul>
+                        <p><em>Example: Pizza ordering bot</em></p>
+                    </div>
+                    <div style="background: #e3f2fd; padding: 1.5em; border-radius: 10px;">
+                        <h3>AI-Powered</h3>
+                        <p class="japanese">AI搭載</p>
+                        <ul>
+                            <li>NLP</li>
+                            <li>Learning</li>
+                            <li>Flexible</li>
+                        </ul>
+                        <p><strong>Best For:</strong></p>
+                        <ul>
+                            <li>Customer support</li>
+                            <li>Personal assistants</li>
+                        </ul>
+                        <p><em>Example: ChatGPT</em></p>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1.5em; border-radius: 10px;">
+                        <h3>Hybrid</h3>
+                        <p class="japanese">ハイブリッド</p>
+                        <ul>
+                            <li>Rules + AI</li>
+                            <li>Structured paths</li>
+                            <li>Human handoff</li>
+                        </ul>
+                        <p><strong>Best For:</strong></p>
+                        <ul>
+                            <li>E-commerce</li>
+                            <li>Banking</li>
+                        </ul>
+                        <p><em>Example: Service bots</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Use Cases -->
+            <section>
+                <h2>Common Chatbot Use Cases</h2>
+                <h3 class="japanese">一般的なチャットボットユースケース</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>🛍️ Customer Service & Support</h4>
+                        <ul>
+                            <li>24/7 availability</li>
+                            <li>Order tracking</li>
+                            <li>Example: Amazon bot</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                        <h4>🛒 E-Commerce & Sales</h4>
+                        <ul>
+                            <li>Product recommendations</li>
+                            <li>Cart management</li>
+                            <li>Example: Sephora</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>📚 Education & Learning</h4>
+                        <ul>
+                            <li>Tutoring assistance</li>
+                            <li>Course navigation</li>
+                            <li>Example: Duolingo</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>🏥 Healthcare & Wellness</h4>
+                        <ul>
+                            <li>Symptom checking</li>
+                            <li>Appointments</li>
+                            <li>Example: Ada Health</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                        <h4>💰 Banking & Finance</h4>
+                        <ul>
+                            <li>Account inquiries</li>
+                            <li>Transfers</li>
+                            <li>Example: Erica (BofA)</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f1f8e9; padding: 1em; border-radius: 8px;">
+                        <h4>🎓 Campus Services</h4>
+                        <ul>
+                            <li>Information lookup</li>
+                            <li>Navigation help</li>
+                            <li>Example: University bots</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Dialog Design Principles -->
+            <section>
+                <h2>Dialog Design Principles</h2>
+                <h3 class="japanese">対話デザイン原則</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="margin: 1em 0;">
+                        <h4>1. Be Clear and Concise | 明確で簡潔に</h4>
+                        <div class="chat-bubble bad-example">❌ "We are currently experiencing a high volume of requests..."</div>
+                        <div class="chat-bubble good-example">✅ "I'll be with you in about 2 minutes!"</div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 1em;">
+                        <div>
+                            <h4>2. Set Clear Expectations</h4>
+                            <p>"I can help with order tracking, product info, and store hours."</p>
+                        </div>
+                        <div>
+                            <h4>3. Provide Guidance</h4>
+                            <p>Offer suggestions and quick reply buttons</p>
+                        </div>
+                        <div>
+                            <h4>4. Confirm Understanding</h4>
+                            <p>"Let me track order #12345. Is that correct?"</p>
+                        </div>
+                        <div>
+                            <h4>5. Handle Errors Gracefully</h4>
+                            <p>"I didn't understand. Could you rephrase?"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Conversation Flow Structure -->
+            <section>
+                <h2>Conversation Flow Structure</h2>
+                <h3 class="japanese">会話フロー構造</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="display: flex; justify-content: space-between; margin: 2em 0;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px; width: 15%;">
+                            <strong>1. Greeting</strong>
+                            <p>挨拶</p>
+                        </div>
+                        <div style="font-size: 2em;">→</div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px; width: 15%;">
+                            <strong>2. Intent</strong>
+                            <p>意図識別</p>
+                        </div>
+                        <div style="font-size: 2em;">→</div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px; width: 15%;">
+                            <strong>3. Info Gathering</strong>
+                            <p>情報収集</p>
+                        </div>
+                        <div style="font-size: 2em;">→</div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px; width: 15%;">
+                            <strong>4. Response</strong>
+                            <p>応答</p>
+                        </div>
+                        <div style="font-size: 2em;">→</div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 8px; width: 15%;">
+                            <strong>5. Closure</strong>
+                            <p>終了</p>
+                        </div>
+                    </div>
+                    <div style="background: #f5f5f5; padding: 1.5em; border-radius: 10px;">
+                        <h4>Example Conversation:</h4>
+                        <div class="chat-bubble bot">"Hi! I'm your campus assistant. What can I help you with?"</div>
+                        <div class="chat-bubble user">"Where is the library?"</div>
+                        <div class="chat-bubble bot">"Which library? Main or Science?"</div>
+                        <div class="chat-bubble user">"Main Library"</div>
+                        <div class="chat-bubble bot">"Main Library is in Building 5, open 8am-10pm today. Directions?"</div>
+                        <div class="chat-bubble user">"No, thanks"</div>
+                        <div class="chat-bubble bot">"Great! Come back anytime!"</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Happy Path vs Alternative Paths -->
+            <section>
+                <h2>Designing Conversation Flows</h2>
+                <h3 class="japanese">会話フローのデザイン</h3>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #e8f5e9; padding: 1.5em; border-radius: 10px;">
+                        <h4>😊 Happy Path</h4>
+                        <p class="japanese">ハッピーパス</p>
+                        <ul>
+                            <li>Ideal scenario</li>
+                            <li>Clear questions</li>
+                            <li>Smooth flow</li>
+                            <li>4-5 turns</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3cd; padding: 1.5em; border-radius: 10px;">
+                        <h4>🔀 Alternative Paths</h4>
+                        <p class="japanese">代替パス</p>
+                        <ul>
+                            <li>Clarification needed</li>
+                            <li>Missing information</li>
+                            <li>Out of scope</li>
+                            <li>Error recovery</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top: 2em; background: #e3f2fd; padding: 1.5em; border-radius: 10px;">
+                    <h4>Flow Mapping Tools:</h4>
+                    <p>Botmock, Voiceflow, Miro, Lucidchart</p>
+                </div>
+            </section>
+
+            <!-- Slide 10: Personality and Tone -->
+            <section>
+                <h2>Personality and Tone</h2>
+                <h3 class="japanese">パーソナリティとトーン</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px; margin-bottom: 1em;">
+                        <h4>Why Personality Matters:</h4>
+                        <p>Builds trust • Creates connection • Brand alignment • Differentiates experience</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em;">
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>Formal vs Casual</h4>
+                            <div class="chat-bubble">"Good afternoon. How may I assist?"</div>
+                            <div class="chat-bubble">"Hey! What can I help with?"</div>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>Professional vs Friendly</h4>
+                            <div class="chat-bubble">"I'll process immediately."</div>
+                            <div class="chat-bubble">"I'm on it! Give me a sec."</div>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>Serious vs Playful</h4>
+                            <div class="chat-bubble">"Balance: $523.45"</div>
+                            <div class="chat-bubble">"You've got $523.45! Nice!"</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Writing Effective Responses -->
+            <section>
+                <h2>Writing Effective Bot Responses</h2>
+                <h3 class="japanese">効果的なボット応答の作成</h3>
+                <div style="font-size: 0.7em;">
+                    <div class="two-column" style="gap: 1em;">
+                        <div>
+                            <h4>1. Use Active Voice</h4>
+                            <div class="chat-bubble bad-example">❌ "Your order has been shipped."</div>
+                            <div class="chat-bubble good-example">✅ "We shipped your order!"</div>
+                        </div>
+                        <div>
+                            <h4>2. Be Specific</h4>
+                            <div class="chat-bubble bad-example">❌ "Soon"</div>
+                            <div class="chat-bubble good-example">✅ "In 2 minutes"</div>
+                        </div>
+                        <div>
+                            <h4>3. Show Empathy</h4>
+                            <div class="chat-bubble bad-example">❌ "Payment failed."</div>
+                            <div class="chat-bubble good-example">✅ "Oh no! Let's try together."</div>
+                        </div>
+                        <div>
+                            <h4>4. Provide Options</h4>
+                            <div class="chat-bubble good-example">✅ "I can:
+                                • Connect you to team
+                                • Send resources
+                                • Schedule callback"</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Button vs Free Text -->
+            <section>
+                <h2>Button vs. Free Text Input</h2>
+                <h3 class="japanese">ボタン vs 自由テキスト入力</h3>
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1.5em; border-radius: 10px;">
+                        <h4>🔘 Buttons</h4>
+                        <p><strong>When to use:</strong></p>
+                        <ul>
+                            <li>Multiple choice</li>
+                            <li>Yes/No confirmation</li>
+                            <li>Menu navigation</li>
+                        </ul>
+                        <p><strong>Advantages:</strong></p>
+                        <ul>
+                            <li>Clear options</li>
+                            <li>Prevent errors</li>
+                            <li>Faster</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1.5em; border-radius: 10px;">
+                        <h4>⌨️ Free Text</h4>
+                        <p><strong>When to use:</strong></p>
+                        <ul>
+                            <li>Open-ended questions</li>
+                            <li>Descriptions</li>
+                            <li>Feedback</li>
+                        </ul>
+                        <p><strong>Advantages:</strong></p>
+                        <ul>
+                            <li>Flexible</li>
+                            <li>Natural</li>
+                            <li>Detailed</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: #e8f5e9; padding: 1.5em; border-radius: 10px; margin-top: 1em; font-size: 0.8em;">
+                    <h4>✅ Hybrid Approach (Recommended):</h4>
+                    <p>"How can I help?"<br>
+                    [Check Order] [Product Info] [Store Hours]<br>
+                    [Other - Type your question]</p>
+                </div>
+            </section>
+
+            <!-- Slide 13: Context and Memory -->
+            <section>
+                <h2>Context and Memory</h2>
+                <h3 class="japanese">コンテキストとメモリ</h3>
+                <div class="three-column" style="font-size: 0.7em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Session Context</h4>
+                        <p class="japanese">セッションコンテキスト</p>
+                        <p>Within current conversation</p>
+                        <div class="chat-bubble user">"I want pizza"</div>
+                        <div class="chat-bubble bot">"What size?"</div>
+                        <div class="chat-bubble user">"Large"</div>
+                        <div class="chat-bubble bot">"What toppings for your <strong>large pizza</strong>?"</div>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                        <h4>User Context</h4>
+                        <p class="japanese">ユーザーコンテキスト</p>
+                        <p>Across sessions</p>
+                        <div class="chat-bubble bot">"Welcome back, Sarah! Your <strong>usual order</strong>?"</div>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Environmental Context</h4>
+                        <p class="japanese">環境コンテキスト</p>
+                        <p>External factors</p>
+                        <ul>
+                            <li>Time: "Good morning!"</li>
+                            <li>Location: "Nearest store..."</li>
+                            <li>Device: Mobile vs desktop</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: #e8f5e9; padding: 1em; border-radius: 10px; margin-top: 1em; font-size: 0.8em;">
+                    <h4>Best Practices:</h4>
+                    <p>Reference previous exchanges • Avoid asking twice • Handle session breaks gracefully</p>
+                </div>
+            </section>
+
+            <!-- Slide 14: Design Patterns -->
+            <section>
+                <h2>Chatbot Design Patterns</h2>
+                <h3 class="japanese">チャットボットデザインパターン</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>1. Menu-Based Pattern</h4>
+                            <p>Guided navigation through options</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>2. Question-Answer Pattern</h4>
+                            <p>Direct information retrieval</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>3. Form-Fill Pattern</h4>
+                            <p>Sequential data collection</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>4. Guided Troubleshooting</h4>
+                            <p>Step-by-step problem solving</p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                            <h4>5. Recommendation Pattern</h4>
+                            <p>Personalized suggestions</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15: Accessibility -->
+            <section>
+                <h2>Accessibility in Conversational UI</h2>
+                <h3 class="japanese">会話型UIのアクセシビリティ</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>1. Multiple Input Methods</h4>
+                            <p>Text, voice, buttons</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>2. Clear Visual Hierarchy</h4>
+                            <p>Distinguish messages, timestamps</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>3. Screen Reader Compatible</h4>
+                            <p>Alt text, semantic HTML, ARIA</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>4. Adjustable Text/Contrast</h4>
+                            <p>Font sizing, high contrast mode</p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                            <h4>5. No Time Pressure</h4>
+                            <p>Allow time to respond, save progress</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 16: This Week's Activity -->
+            <section>
+                <h2>This Week's Activity</h2>
+                <h3 class="japanese">今週のアクティビティ</h3>
+                <div style="font-size: 0.75em;">
+                    <div class="two-column" style="gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>Part 1: Analyze Existing Chatbots (30 min)</h4>
+                            <ul>
+                                <li>Test 2-3 real chatbots</li>
+                                <li>Analyze type, personality, errors</li>
+                                <li>Document findings</li>
+                            </ul>
+                            <p><strong>Examples:</strong> Sephora, H&M, Amazon, BofA (Erica), Duolingo, ChatGPT</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>Part 2: Design Conversation Flows (40 min)</h4>
+                            <ul>
+                                <li>Choose a use case</li>
+                                <li>Map complete flow</li>
+                                <li>Design happy path AND errors</li>
+                                <li>Define personality</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="background: #fff3cd; padding: 1.5em; border-radius: 10px; margin-top: 1em;">
+                        <h4>📋 Deliverables:</h4>
+                        <p>Chatbot Analysis Report (2-3 pages) • Conversation Flow Diagram • Personality Guidelines (1 page) • Bot Interaction Screenshots • AI Transparency Log</p>
+                        <p><strong>Due:</strong> End of Week 8</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 17: Looking Ahead & Key Takeaways -->
+            <section>
+                <h2>Looking Ahead & Key Takeaways</h2>
+                <h3 class="japanese">第9週の予告と重要なポイント</h3>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #e3f2fd; padding: 1.5em; border-radius: 10px;">
+                        <h4>Next Week: Error Handling</h4>
+                        <ul>
+                            <li>NLU limitations</li>
+                            <li>Handling ambiguity</li>
+                            <li>Error recovery strategies</li>
+                            <li>Fallback responses</li>
+                            <li>Human handoff</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1.5em; border-radius: 10px;">
+                        <h4>Today's Key Takeaways:</h4>
+                        <ol>
+                            <li>Conversational UI is natural & accessible</li>
+                            <li>Different types serve different purposes</li>
+                            <li>Dialog design requires clear structure</li>
+                            <li>Personality matters for engagement</li>
+                            <li>Context is king for natural conversations</li>
+                        </ol>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px; margin-top: 2em;">
+                    <h3 style="color: white;">Remember:</h3>
+                    <p style="font-size: 1.2em;">Good chatbots feel like helpful conversations, not interrogations!</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

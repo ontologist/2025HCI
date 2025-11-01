@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 13: Emerging Technologies and Future Interactions | 新興技術と未来のインタラクション</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+        .future-theme {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2em;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Week 13</h1>
+                <h2>Emerging Technologies and Future Interactions</h2>
+                <h3 class="japanese">新興技術と未来のインタラクション</h3>
+                <hr>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>HCI-101</strong> | Fall 2025 | 2025年秋学期</p>
+            </section>
+
+            <!-- Slide 2: Agenda -->
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul style="font-size: 0.9em;">
+                    <li>🥽 AR/VR Interfaces | AR/VRインターフェース</li>
+                    <li>🗣️ Voice and Natural Language | 音声と自然言語</li>
+                    <li>👋 Gesture Control | ジェスチャーコントロール</li>
+                    <li>⌚ Wearables and IoT | ウェアラブルとIoT</li>
+                    <li>🧠 Brain-Computer Interfaces | ブレインコンピュータインターフェース</li>
+                    <li>🔮 Future of HCI | HCIの未来</li>
+                </ul>
+                <hr>
+                <h3 style="font-size: 0.85em;">Learning Objectives</h3>
+                <p style="font-size: 0.75em;">Understand emerging interface technologies, explore AR/VR design principles, identify future interaction paradigms, complete your final project</p>
+            </section>
+
+            <!-- Slide 3: Evolution Continues -->
+            <section>
+                <h2>The Evolution Continues | 進化は続く</h2>
+                <div class="three-column" style="font-size: 0.75em; margin-top: 2em;">
+                    <div style="background: #e3f2fd; padding: 1.5em; border-radius: 10px;">
+                        <h3>Past | 過去</h3>
+                        <ul>
+                            <li>Command Line</li>
+                            <li>GUI: Windows, mouse</li>
+                            <li>Touch screens</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1.5em; border-radius: 10px;">
+                        <h3>Present | 現在</h3>
+                        <ul>
+                            <li>Smartphones</li>
+                            <li>Voice Assistants</li>
+                            <li>Chatbots</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1.5em; border-radius: 10px;">
+                        <h3>Future | 未来</h3>
+                        <ul>
+                            <li>AR/VR</li>
+                            <li>Brain-Computer</li>
+                            <li>Ambient Computing</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Augmented Reality -->
+            <section>
+                <h2>Augmented Reality (AR)</h2>
+                <h3 class="japanese">拡張現実（AR）</h3>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p><strong>AR overlays digital information on the physical world</strong> through devices like smartphones, tablets, or specialized glasses.</p>
+                    <p class="japanese">ARは、スマートフォン、タブレット、または専用メガネなどのデバイスを通じて、物理世界にデジタル情報を重ねます。</p>
+                </div>
+                <div class="two-column" style="margin-top: 2em; font-size: 0.8em;">
+                    <div>
+                        <h4>Consumer AR</h4>
+                        <ul>
+                            <li>Pokémon GO</li>
+                            <li>Instagram Filters</li>
+                            <li>IKEA Place</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Professional AR</h4>
+                        <ul>
+                            <li>Medical Training</li>
+                            <li>Manufacturing</li>
+                            <li>Navigation</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1em; font-size: 0.85em;"><strong>Devices:</strong> Apple Vision Pro, Meta Quest 3, Microsoft HoloLens, Google Glass</p>
+            </section>
+
+            <!-- Slide 5: AR Design Principles -->
+            <section>
+                <h2>AR Design Principles</h2>
+                <h3 class="japanese">ARデザイン原則</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>1. Physical-Digital Integration | 物理デジタル統合</h4>
+                        <p>Spatial awareness, object occlusion, lighting consistency</p>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>2. User Comfort and Safety | ユーザーの快適性と安全性</h4>
+                        <p>Field of view, motion sickness prevention, physical awareness</p>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>3. Interaction Methods | インタラクション方法</h4>
+                        <p>Gesture recognition, voice commands, gaze tracking, controllers</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Best Practices | ベストプラクティス</h4>
+                        <p>Context-aware, minimal UI, progressive disclosure, multimodal feedback</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Virtual Reality -->
+            <section>
+                <h2>Virtual Reality (VR)</h2>
+                <h3 class="japanese">仮想現実（VR）</h3>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p><strong>VR creates fully immersive digital environments</strong> that replace the physical world, experienced through headsets.</p>
+                    <p class="japanese">VRは、ヘッドセットを通じて体験される、物理世界を置き換える完全没入型のデジタル環境を作成します。</p>
+                </div>
+                <div class="three-column" style="margin-top: 2em; font-size: 0.7em;">
+                    <div>
+                        <h4>Entertainment</h4>
+                        <ul>
+                            <li>Gaming</li>
+                            <li>Social VR</li>
+                            <li>Virtual Tourism</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Education</h4>
+                        <ul>
+                            <li>Medical Simulation</li>
+                            <li>Flight Training</li>
+                            <li>Language Learning</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Professional</h4>
+                        <ul>
+                            <li>Architecture</li>
+                            <li>Design Review</li>
+                            <li>Remote Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1em; font-size: 0.85em;"><strong>Devices:</strong> Meta Quest 3, PlayStation VR2, Valve Index, Apple Vision Pro</p>
+            </section>
+
+            <!-- Slide 7: VR Design Principles -->
+            <section>
+                <h2>VR Design Principles</h2>
+                <h3 class="japanese">VRデザイン原則</h3>
+                <div class="two-column" style="font-size: 0.7em;">
+                    <div>
+                        <div style="background: #fce4ec; padding: 1em; margin-bottom: 1em; border-radius: 8px;">
+                            <h4>Motion Sickness Prevention</h4>
+                            <ul>
+                                <li>High frame rate (90fps+)</li>
+                                <li>Low latency (<20ms)</li>
+                                <li>Smooth movement</li>
+                                <li>Comfort settings</li>
+                            </ul>
+                        </div>
+                        <div style="background: #e1f5fe; padding: 1em; border-radius: 8px;">
+                            <h4>3D Spatial UI Design</h4>
+                            <ul>
+                                <li>Depth perception</li>
+                                <li>Text readability</li>
+                                <li>Reachability</li>
+                                <li>Gaze-based selection</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="background: #f3e5f5; padding: 1em; margin-bottom: 1em; border-radius: 8px;">
+                            <h4>Immersion and Presence</h4>
+                            <ul>
+                                <li>360° audio</li>
+                                <li>Realistic physics</li>
+                                <li>Hand tracking</li>
+                                <li>Avatar representation</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>Interaction Patterns</h4>
+                            <ul>
+                                <li>Ray casting</li>
+                                <li>Direct manipulation</li>
+                                <li>Menu systems</li>
+                                <li>Teleportation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Voice Interfaces -->
+            <section>
+                <h2>Voice Interfaces</h2>
+                <h3 class="japanese">音声インターフェース</h3>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p><strong>Voice interfaces</strong> allow users to interact through spoken commands and conversations.</p>
+                    <p class="japanese">音声インターフェースは、ユーザーが音声コマンドと会話を通じてインタラクトできるようにします。</p>
+                </div>
+                <div class="two-column" style="margin-top: 2em; font-size: 0.8em;">
+                    <div>
+                        <h4>Popular Assistants</h4>
+                        <ul>
+                            <li>🔵 Amazon Alexa (Echo)</li>
+                            <li>🔴 Google Assistant (Nest)</li>
+                            <li>🟣 Apple Siri (HomePod)</li>
+                            <li>📱 Mobile voice assistants</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Use Cases</h4>
+                        <ul>
+                            <li>Smart home control</li>
+                            <li>Information retrieval</li>
+                            <li>Music and media</li>
+                            <li>Task management</li>
+                            <li>Accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Voice Design -->
+            <section>
+                <h2>Voice Interface Design</h2>
+                <h3 class="japanese">音声インターフェースデザイン</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Challenge: No Visual Feedback</h4>
+                        <p>Users can't see options, must remember commands, discoverability issues</p>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Challenge: Natural Language Understanding</h4>
+                        <p>Intent recognition, entity extraction, context awareness, ambiguity handling</p>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Challenge: Error Recovery</h4>
+                        <p>Clarification dialogs, fallback responses, graceful degradation</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Best Practices</h4>
+                        <p>Brief responses, confirmation, progressive disclosure, personality consistency, multimodal support</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Gesture Control -->
+            <section>
+                <h2>Gesture Control</h2>
+                <h3 class="japanese">ジェスチャーコントロール</h3>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p><strong>Gesture control</strong> uses body movements and hand gestures to interact with technology without touching.</p>
+                    <p class="japanese">ジェスチャーコントロールは体の動きと手のジェスチャーを使用して、触れずに技術とインタラクトします。</p>
+                </div>
+                <div class="two-column" style="margin-top: 2em; font-size: 0.75em;">
+                    <div>
+                        <h4>Consumer Examples</h4>
+                        <ul>
+                            <li>Smartphone: swipe, pinch, rotate</li>
+                            <li>Game consoles: Xbox Kinect</li>
+                            <li>Smart TVs: wave to control</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Professional</h4>
+                        <ul>
+                            <li>Medical imaging (touchless)</li>
+                            <li>Manufacturing</li>
+                            <li>Automotive</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>AR/VR Integration</h4>
+                        <ul>
+                            <li>Hand tracking in VR</li>
+                            <li>Full body tracking</li>
+                            <li>Eye tracking</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Technologies</h4>
+                        <ul>
+                            <li>Camera-based vision</li>
+                            <li>Accelerometer sensors</li>
+                            <li>Ultrasound (Project Soli)</li>
+                            <li>EMG sensors</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Gesture Design -->
+            <section>
+                <h2>Gesture Design Principles</h2>
+                <h3 class="japanese">ジェスチャーデザイン原則</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #fce4ec; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Challenge: Learnability</h4>
+                        <p>Natural mappings, cultural differences, discoverability</p>
+                    </div>
+                    <div style="background: #e1f5fe; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Challenge: Accuracy and Recognition</h4>
+                        <p>False positives, gesture boundaries, similar gestures</p>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Challenge: Physical Fatigue</h4>
+                        <p>Gorilla arm syndrome, ergonomics, rest positions</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <h4>Best Practices</h4>
+                        <p>Small gesture set (5-10 max), distinct gestures, visual feedback, tutorial, multimodal alternatives</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Wearables -->
+            <section>
+                <h2>Wearables and IoT</h2>
+                <h3 class="japanese">ウェアラブルとIoT</h3>
+                <div class="two-column" style="font-size: 0.7em; margin-top: 2em;">
+                    <div>
+                        <h4>Wearable Types</h4>
+                        <div style="background: #e3f2fd; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                            <strong>Smartwatches:</strong> Apple Watch, Samsung Galaxy Watch, Garmin
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                            <strong>Fitness Trackers:</strong> Fitbit, Whoop, Oura Ring
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                            <strong>Smart Glasses:</strong> Ray-Ban Meta, Google Glass
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                            <strong>Medical:</strong> CGM, ECG monitors, smart hearing aids
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Design Challenges</h4>
+                        <ul>
+                            <li>Small screen size</li>
+                            <li>Glanceability (<5 sec)</li>
+                            <li>Battery life</li>
+                            <li>Privacy concerns</li>
+                            <li>Social acceptance</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">IoT Devices</h4>
+                        <ul>
+                            <li>Smart lighting</li>
+                            <li>Climate control</li>
+                            <li>Security systems</li>
+                            <li>Smart appliances</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Brain-Computer Interfaces -->
+            <section>
+                <h2>Brain-Computer Interfaces</h2>
+                <h3 class="japanese">ブレインコンピュータインターフェース</h3>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p><strong>BCI allows direct communication between brain and external devices</strong>, bypassing traditional input methods.</p>
+                    <p class="japanese">BCIは、従来の入力方法をバイパスして、脳と外部デバイス間の直接コミュニケーションを可能にします。</p>
+                </div>
+                <div class="two-column" style="font-size: 0.75em; margin-top: 2em;">
+                    <div>
+                        <h4>Current Applications</h4>
+                        <ul>
+                            <li>Paralysis assistance</li>
+                            <li>Prosthetic control</li>
+                            <li>Communication devices</li>
+                            <li>Seizure detection</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Research Projects</h4>
+                        <ul>
+                            <li>Neuralink</li>
+                            <li>Emotiv</li>
+                            <li>Kernel</li>
+                            <li>Facebook/Meta</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Future Possibilities</h4>
+                        <ul>
+                            <li>Direct information transfer</li>
+                            <li>Enhanced memory</li>
+                            <li>Telepathy</li>
+                            <li>Full VR control</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Ethical Concerns</h4>
+                        <ul>
+                            <li>Privacy of thoughts</li>
+                            <li>Consent and control</li>
+                            <li>Accessibility equity</li>
+                            <li>Security and hacking</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 14: Future Trends -->
+            <section>
+                <h2>Future Trends in HCI</h2>
+                <h3 class="japanese">HCIの未来トレンド</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="background: #e3f2fd; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <strong>1. Ambient Computing:</strong> Technology fades into background, context-aware, proactive assistance
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <strong>2. Multimodal Interaction:</strong> Combined input (voice + gesture + gaze), seamless switching
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <strong>3. AI Integration:</strong> Predictive interfaces, personalization, generative UI
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <strong>4. Spatial Computing:</strong> 3D interfaces everywhere, mixed reality workspaces, holographic displays
+                    </div>
+                    <div style="background: #fce4ec; padding: 1em; margin: 0.5em 0; border-radius: 8px;">
+                        <strong>5. Ethical & Inclusive Design:</strong> Privacy by design, universal accessibility, sustainability
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15: Activity -->
+            <section>
+                <h2>Today's Activities</h2>
+                <h3 class="japanese">今日のアクティビティ</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1.5em; margin: 1em 0; border-radius: 10px;">
+                        <h4>Activity 1: Emerging Interface Exploration (25 min)</h4>
+                        <p>Research AR/VR apps, voice assistants, or IoT devices. Analyze interaction patterns. Share findings.</p>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1.5em; margin: 1em 0; border-radius: 10px;">
+                        <h4>Activity 2: Future Interaction Brainstorm (20 min)</h4>
+                        <p>Imagine 2030. Sketch a futuristic interface concept. Explain design rationale.</p>
+                    </div>
+                    <div style="background: #fff3cd; padding: 1.5em; margin: 1em 0; border-radius: 10px;">
+                        <h4>Activity 3: Final Project Completion (25 min)</h4>
+                        <p>Finalize chatbot or smart device interface. Prepare presentation for Week 14. Bot support available.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 16: Final Presentation Prep -->
+            <section>
+                <h2>Final Presentations - Week 14</h2>
+                <h3 class="japanese">最終プレゼンテーション - 第14週</h3>
+                <div style="background: #4caf50; color: white; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
+                    <h3 style="color: white;">Time Limit: 7-10 minutes</h3>
+                </div>
+                <div style="font-size: 0.75em;">
+                    <h4>Required Content:</h4>
+                    <ol>
+                        <li>Problem and user research</li>
+                        <li>Design process journey</li>
+                        <li>Final prototype demo</li>
+                        <li>Usability testing results</li>
+                        <li>Reflections and learnings</li>
+                    </ol>
+                    <h4 style="margin-top: 1em;">Tips:</h4>
+                    <ul>
+                        <li>Tell a story - engage your audience</li>
+                        <li>Show, don't tell - demonstrate prototype</li>
+                        <li>Be honest about challenges</li>
+                        <li>Connect to HCI principles</li>
+                        <li>Practice timing!</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 17: Key Takeaways -->
+            <section>
+                <h2>Key Takeaways</h2>
+                <h3 class="japanese">主要な要点</h3>
+                <div class="future-theme" style="margin: 2em 0;">
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>✓ AR/VR create immersive, spatial interfaces</li>
+                        <li>✓ Voice interfaces enable hands-free, accessible interaction</li>
+                        <li>✓ Gesture control offers natural, intuitive input</li>
+                        <li>✓ Wearables and IoT create ambient computing</li>
+                        <li>✓ Brain-computer interfaces: the ultimate frontier</li>
+                        <li>✓ Future: Multimodal, AI-powered, invisible, ethical</li>
+                    </ul>
+                </div>
+                <h3 style="margin-top: 1em;">Next Week:</h3>
+                <h2 style="color: #4caf50;">Final Presentations! 🎉</h2>
+                <p>Complete your projects and prepare to showcase your work!</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

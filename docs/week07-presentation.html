@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7: Advanced Prototyping | 高度なプロトタイピング</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+        .japanese { color: #666; font-size: 0.8em; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 2em; }
+        .highlight { color: #2a76dd; font-weight: bold; }
+        .emphasis { background-color: #fff3cd; padding: 0.2em 0.5em; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h1>Week 7: Advanced Prototyping</h1>
+                <h2 class="japanese">第7週：高度なプロトタイピング</h2>
+                <hr>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul>
+                    <li>From Static to Interactive</li>
+                    <li>Adding Interactivity to Wireframes</li>
+                    <li>Creating User Flows</li>
+                    <li>Transitions and Animations</li>
+                    <li>Building Multi-Screen Prototypes</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives</h3>
+                <p style="font-size: 0.8em;">Transform wireframes into interactive prototypes, create navigation flows, design transitions, build testable prototypes</p>
+            </section>
+
+            <section>
+                <h2>Recap: Where We Are</h2>
+                <div class="two-column" style="font-size: 0.85em;">
+                    <div>
+                        <h3>Week 6 Accomplishments</h3>
+                        <ul>
+                            <li>✅ Wireframing fundamentals</li>
+                            <li>✅ Figma/Adobe XD basics</li>
+                            <li>✅ Static wireframes created</li>
+                            <li>✅ Layout established</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Week 7: Next Step</h3>
+                        <ul>
+                            <li>Static → Interactive</li>
+                            <li>Layout → User flows</li>
+                            <li>Screens → Experiences</li>
+                            <li>Structure → Behavior</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Interactive Prototypes</h2>
+                <div style="background: #e3f2fd; padding: 2em; border-radius: 10px;">
+                    <p style="font-size: 1.1em;"><strong>Interactive prototype:</strong> A clickable simulation demonstrating navigation and interactions</p>
+                    <p class="japanese">インタラクティブプロトタイプ：ナビゲーションとインタラクションを示すクリック可能なシミュレーション</p>
+                </div>
+                <div class="two-column" style="margin-top: 2em; font-size: 0.85em;">
+                    <div>
+                        <h3>Characteristics</h3>
+                        <ul>
+                            <li>🖱️ Clickable elements</li>
+                            <li>🔄 Screen navigation</li>
+                            <li>✨ Transitions</li>
+                            <li>🧪 Testable</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Benefits</h3>
+                        <ul>
+                            <li>Validate user flows</li>
+                            <li>Test with users</li>
+                            <li>Communicate intent</li>
+                            <li>Refine interactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Understanding User Flows</h2>
+                <p><strong>User Flow:</strong> The path users take to complete a task</p>
+                <div style="font-size: 0.8em; margin-top: 2em;">
+                    <h3>Components:</h3>
+                    <ol>
+                        <li><strong>Entry Point:</strong> Where user starts</li>
+                        <li><strong>Actions:</strong> What user does</li>
+                        <li><strong>Decision Points:</strong> Choices user makes</li>
+                        <li><strong>Exit Point:</strong> Where flow ends</li>
+                    </ol>
+                    <h3 style="margin-top: 1em;">Common Flows:</h3>
+                    <ul>
+                        <li>Onboarding: Welcome → Login → Tutorial → Home</li>
+                        <li>Search: Home → Search → Results → Detail</li>
+                        <li>Purchase: Browse → Cart → Checkout → Confirmation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Creating Hotspots & Links</h2>
+                <p><strong>Hotspots:</strong> Clickable areas that trigger navigation</p>
+                <div style="font-size: 0.85em; margin-top: 2em;">
+                    <h3>Types of Interactive Elements:</h3>
+                    <ul>
+                        <li><strong>Buttons:</strong> Primary/secondary actions</li>
+                        <li><strong>Navigation:</strong> Tab bars, menus, back buttons</li>
+                        <li><strong>Components:</strong> Cards, list items, form fields</li>
+                    </ul>
+                    <h3 style="margin-top: 1em;">In Figma:</h3>
+                    <ol>
+                        <li>Switch to Prototype mode</li>
+                        <li>Select element</li>
+                        <li>Drag connector to target screen</li>
+                        <li>Set trigger (On Tap)</li>
+                        <li>Choose transition</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <h2>Transition Types | トランジションタイプ</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; font-size: 0.7em;">
+                    <div style="background: #f5f5f5; padding: 1em; border-radius: 8px;">
+                        <h4>Instant</h4>
+                        <p>No animation<br>Use for: Tab switching</p>
+                    </div>
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Dissolve/Fade</h4>
+                        <p>Crossfade<br>Use for: Modal overlays</p>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Slide</h4>
+                        <p>Direction-based<br>Use for: Sequential flows</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>Push</h4>
+                        <p>Both screens move<br>Use for: Deep navigation</p>
+                    </div>
+                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                        <h4>Modal</h4>
+                        <p>Slides up from bottom<br>Use for: Temporary tasks</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Micro-Interactions</h2>
+                <p><strong>Micro-interactions:</strong> Small animations providing feedback</p>
+                <div class="two-column" style="font-size: 0.8em; margin-top: 2em;">
+                    <div>
+                        <h3>Button States</h3>
+                        <ul>
+                            <li>Hover: Color change</li>
+                            <li>Press: Depth effect</li>
+                            <li>Disabled: Grayed out</li>
+                        </ul>
+                        <h3>Loading States</h3>
+                        <ul>
+                            <li>Spinners</li>
+                            <li>Progress bars</li>
+                            <li>Skeleton screens</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Feedback</h3>
+                        <ul>
+                            <li>✅ Success: Green checkmarks</li>
+                            <li>❌ Error: Red warnings</li>
+                            <li>💬 Toast: Brief messages</li>
+                        </ul>
+                        <h3>Why They Matter</h3>
+                        <ul>
+                            <li>Provide feedback</li>
+                            <li>Guide attention</li>
+                            <li>Create delight</li>
+                            <li>Prevent errors</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Navigation Principles</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; font-size: 0.8em;">
+                    <div style="background: #e3f2fd; padding: 1.5em; border-radius: 8px;">
+                        <h3>1. Clarity</h3>
+                        <p>Users always know where they are</p>
+                        <ul>
+                            <li>Show current location</li>
+                            <li>Clear page titles</li>
+                            <li>Breadcrumbs for deep hierarchies</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1.5em; border-radius: 8px;">
+                        <h3>2. Consistency</h3>
+                        <p>Navigation in same place</p>
+                        <ul>
+                            <li>Tab bars at bottom</li>
+                            <li>Back buttons top-left</li>
+                            <li>Same patterns throughout</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1.5em; border-radius: 8px;">
+                        <h3>3. Efficiency</h3>
+                        <p>Minimize taps to content</p>
+                        <ul>
+                            <li>3 taps or less</li>
+                            <li>Shortcuts for frequent tasks</li>
+                            <li>Quick access to home</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1.5em; border-radius: 8px;">
+                        <h3>4. Forgiveness</h3>
+                        <p>Allow users to go back</p>
+                        <ul>
+                            <li>Always provide back button</li>
+                            <li>Don't trap users</li>
+                            <li>Offer cancel options</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Building Multi-Screen Prototypes</h2>
+                <div style="font-size: 0.85em;">
+                    <h3>Four-Step Process:</h3>
+                    <ol>
+                        <li><strong>Prepare Screens:</strong> Complete all wireframes, name descriptively</li>
+                        <li><strong>Add Hotspots:</strong> Link buttons, connect tab bars, add back navigation</li>
+                        <li><strong>Set Transitions:</strong> Choose appropriate animations, set duration (200-400ms)</li>
+                        <li><strong>Test Flow:</strong> Click through, verify links, check navigation</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <h2>Best Practices</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #d4edda; padding: 1.5em; border-radius: 8px;">
+                        <h3>✅ DO's</h3>
+                        <ul>
+                            <li>Focus on 2-3 key flows</li>
+                            <li>Start with basic navigation</li>
+                            <li>Test early and often</li>
+                            <li>Keep transitions consistent</li>
+                            <li>Include back navigation</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f8d7da; padding: 1.5em; border-radius: 8px;">
+                        <h3>❌ DON'Ts</h3>
+                        <ul>
+                            <li>Add every possible detail</li>
+                            <li>Link every element</li>
+                            <li>Use random transitions</li>
+                            <li>Forget mobile gestures</li>
+                            <li>Skip self-testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Testing Your Prototype</h2>
+                <div style="font-size: 0.8em;">
+                    <h3>Self-Testing Checklist:</h3>
+                    <div class="two-column">
+                        <div>
+                            <h4>Navigation</h4>
+                            <ul>
+                                <li>□ Navigate to all screens?</li>
+                                <li>□ Back buttons work?</li>
+                                <li>□ Tab bars functional?</li>
+                                <li>□ Return to home?</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Interaction</h4>
+                            <ul>
+                                <li>□ Buttons respond?</li>
+                                <li>□ Elements clickable?</li>
+                                <li>□ Transitions smooth?</li>
+                                <li>□ Feels responsive?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Bot Support</h2>
+                <div style="background: #e8f5e9; padding: 2em; border-radius: 15px;">
+                    <h3>🤖 HCI-101 Bot Can Help:</h3>
+                    <ul style="font-size: 0.85em;">
+                        <li>✓ Suggest navigation paths</li>
+                        <li>✓ Identify missing screens</li>
+                        <li>✓ Recommend transitions</li>
+                        <li>✓ Troubleshoot connections</li>
+                        <li>✓ Review navigation logic</li>
+                        <li>✓ Assess flow completeness</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>This Week's Activity</h2>
+                <div style="font-size: 0.8em;">
+                    <h3>Build Interactive Prototype (70 min):</h3>
+                    <ol>
+                        <li>Planning User Flows (10 min)</li>
+                        <li>Adding Interactivity (30 min)</li>
+                        <li>Setting Transitions (10 min)</li>
+                        <li>Testing Prototype (10 min)</li>
+                        <li>Bot Feedback & Iteration (10 min)</li>
+                    </ol>
+                    <h3>Deliverables:</h3>
+                    <ul>
+                        <li>Interactive Prototype (6-8 screens)</li>
+                        <li>User Flow Diagram</li>
+                        <li>Prototype Link</li>
+                        <li>Bot Interaction Log</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Common Mistakes</h2>
+                <div style="font-size: 0.75em;">
+                    <ol>
+                        <li><strong>Too Many Connections:</strong> Focus on 2-3 key flows</li>
+                        <li><strong>Inconsistent Transitions:</strong> Use same for same actions</li>
+                        <li><strong>Missing Back Navigation:</strong> Always include back button</li>
+                        <li><strong>Over-Animation:</strong> Keep animations subtle</li>
+                        <li><strong>Not Testing:</strong> Test every flow yourself first</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <h2>Preparing for Testing</h2>
+                <h3>Next: Week 10-11 Usability Testing</h3>
+                <div style="font-size: 0.85em;">
+                    <p>Your interactive prototype will be tested with real users!</p>
+                    <h4>Quality Checklist:</h4>
+                    <ul>
+                        <li>□ All critical screens connected</li>
+                        <li>□ Navigation clear and consistent</li>
+                        <li>□ Can complete 2-3 key tasks</li>
+                        <li>□ Transitions smooth</li>
+                        <li>□ No broken links</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h1>Let's Build!</h1>
+                <h2 class="japanese">構築しましょう！</h2>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px;">
+                    <h3 style="color: white;">Today's Goals:</h3>
+                    <ul style="text-align: left;">
+                        <li>✅ Wireframes → Interactive prototype</li>
+                        <li>✅ 6-8 screens connected</li>
+                        <li>✅ 2-3 user flows working</li>
+                        <li>✅ Transitions applied</li>
+                        <li>✅ Prototype tested</li>
+                    </ul>
+                </div>
+                <h3 style="margin-top: 1em;">Let's bring your designs to life!</h3>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

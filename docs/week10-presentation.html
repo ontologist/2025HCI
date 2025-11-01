@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10: Usability Testing Fundamentals | ユーザビリティテストの基礎</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+        .success {
+            color: #28a745;
+        }
+        .warning {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Week 10: Usability Testing Fundamentals</h1>
+                <h2 class="japanese">第10週：ユーザビリティテストの基礎</h2>
+                <hr>
+                <h3>Introduction to Human-Computer Interaction</h3>
+                <p class="japanese">ヒューマンコンピュータインタラクション入門</p>
+                <br>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <!-- Slide 2: Agenda -->
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul style="font-size: 0.9em;">
+                    <li>What is Usability Testing? | ユーザビリティテストとは？</li>
+                    <li>Types of Testing Methods | テスト方法の種類</li>
+                    <li>Planning and Preparing Tests | テストの計画と準備</li>
+                    <li>Think-Aloud Protocol | シンクアラウドプロトコル</li>
+                    <li>Usability Metrics | ユーザビリティメトリクス</li>
+                    <li>Hands-On Practice | ハンズオン実践</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives</h3>
+                <p style="font-size: 0.8em;">By the end of today, you will understand different usability testing methods, create comprehensive test plans, apply think-aloud protocol, and measure usability using standard metrics.</p>
+            </section>
+
+            <!-- Slide 3: What is Usability Testing? -->
+            <section>
+                <h2>What is Usability Testing?</h2>
+                <h3 class="japanese">ユーザビリティテストとは？</h3>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p style="font-size: 1.1em;"><strong>Usability Testing</strong> is the process of evaluating a product or interface by testing it with representative users to identify usability problems, gather data, and determine user satisfaction.</p>
+                    <p class="japanese" style="font-size: 0.9em;">ユーザビリティテストは、代表的なユーザーでテストすることによって製品またはインターフェースを評価し、ユーザビリティの問題を特定し、データを収集し、ユーザー満足度を判断するプロセスです。</p>
+                </div>
+                <div class="two-column" style="margin-top: 1.5em; font-size: 0.85em;">
+                    <div>
+                        <h4>Why Test?</h4>
+                        <ul>
+                            <li>✓ Validate Design Decisions</li>
+                            <li>✓ Identify Issues Early</li>
+                            <li>✓ Improve User Experience</li>
+                            <li>✓ Reduce Development Costs</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3cd; padding: 1.5em; border-radius: 10px;">
+                        <h4 style="color: #856404;">Key Principle:</h4>
+                        <p style="font-size: 1.3em; font-weight: bold; color: #856404;">YOU ARE NOT THE USER!</p>
+                        <p style="font-size: 0.9em;">あなたはユーザーではありません！</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Types of Usability Testing -->
+            <section>
+                <h2>Types of Usability Testing</h2>
+                <h3 class="japanese">ユーザビリティテストの種類</h3>
+                <div style="font-size: 0.75em; margin-top: 1em;">
+                    <h3>Moderated Testing | 司会付きテスト</h3>
+                    <div class="two-column" style="margin-bottom: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>In-Person Moderated</h4>
+                            <p><strong>Pros:</strong> Rich insights, deep probing, body language</p>
+                            <p><strong>Cons:</strong> Time-consuming, limited participants</p>
+                            <p><strong>Best For:</strong> Early prototypes, complex interfaces</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>Remote Moderated</h4>
+                            <p><strong>Pros:</strong> Wider pool, natural environment</p>
+                            <p><strong>Cons:</strong> Technical issues, harder to observe</p>
+                            <p><strong>Best For:</strong> Distributed teams, mobile</p>
+                        </div>
+                    </div>
+                    <h3>Unmoderated Testing | 司会なしテスト</h3>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Remote Unmoderated</h4>
+                        <p><strong>Pros:</strong> Fast, scalable, lower cost, no scheduling</p>
+                        <p><strong>Cons:</strong> No probing, can't clarify confusion</p>
+                        <p><strong>Best For:</strong> Large samples, quantitative metrics</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Choosing the Right Method -->
+            <section>
+                <h2>Choosing the Right Testing Method</h2>
+                <h3 class="japanese">適切なテスト方法の選択</h3>
+                <div class="two-column" style="font-size: 0.8em; margin-top: 2em;">
+                    <div style="background: #d4edda; padding: 1.5em; border-radius: 10px;">
+                        <h4 style="color: #155724;">Use Moderated When:</h4>
+                        <ul>
+                            <li>Deep qualitative insights needed</li>
+                            <li>Testing early prototypes</li>
+                            <li>Complex tasks requiring guidance</li>
+                            <li>5-8 participants sufficient</li>
+                            <li>Budget allows researcher time</li>
+                        </ul>
+                    </div>
+                    <div style="background: #cce5ff; padding: 1.5em; border-radius: 10px;">
+                        <h4 style="color: #004085;">Use Unmoderated When:</h4>
+                        <ul>
+                            <li>Quantitative metrics at scale</li>
+                            <li>Simple, well-defined tasks</li>
+                            <li>Geographically dispersed participants</li>
+                            <li>Large sample needed (20+ users)</li>
+                            <li>Limited time and budget</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: #4caf50; color: white; padding: 1.5em; border-radius: 10px; margin-top: 1em;">
+                    <h3 style="color: white;">Nielsen's Rule: 5 Users Uncover 85% of Problems</h3>
+                    <p>5人のユーザーが85%の問題を発見</p>
+                </div>
+            </section>
+
+            <!-- Slide 6: The Usability Test Plan -->
+            <section>
+                <h2>The Usability Test Plan</h2>
+                <h3 class="japanese">ユーザビリティテスト計画</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>1. Test Objectives</h4>
+                            <p>What do you want to learn? What design questions need answers?</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>2. Participant Criteria</h4>
+                            <p>Who are target users? Demographics? How many?</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>3. Test Tasks</h4>
+                            <p>Realistic scenarios, clear start/end, measurable criteria, 5-8 tasks</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>4. Test Environment</h4>
+                            <p>Location, equipment, recording tools, prototype version</p>
+                        </div>
+                    </div>
+                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px; margin-top: 1em;">
+                        <h4>5. Metrics to Collect</h4>
+                        <p>Task success rate | Time on task | Error rate | Satisfaction</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Creating Effective Test Tasks -->
+            <section>
+                <h2>Creating Effective Test Tasks</h2>
+                <h3 class="japanese">効果的なテストタスクの作成</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Good Task Characteristics:</h4>
+                    <ul style="color: #28a745;">
+                        <li>✅ Realistic (based on real user goals)</li>
+                        <li>✅ Specific (clear what to accomplish)</li>
+                        <li>✅ Scenario-Based (provides context)</li>
+                        <li>✅ Measurable (success/failure defined)</li>
+                        <li>✅ Independent (each task stands alone)</li>
+                    </ul>
+                    <div class="two-column" style="margin-top: 1em;">
+                        <div style="background: #d4edda; padding: 1em; border-radius: 8px;">
+                            <h4 style="color: #155724;">✓ Good Task Example:</h4>
+                            <p>"You want to track your morning run. Start a running session and record 30 minutes of activity."</p>
+                        </div>
+                        <div style="background: #f8d7da; padding: 1em; border-radius: 8px;">
+                            <h4 style="color: #721c24;">✗ Bad Task Examples:</h4>
+                            <p><strong>Too Vague:</strong> "Use the app to do something with running."</p>
+                            <p><strong>Leading:</strong> "Click the green 'Start Run' button to begin tracking."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Think-Aloud Protocol -->
+            <section>
+                <h2>The Think-Aloud Protocol</h2>
+                <h3 class="japanese">シンクアラウドプロトコル</h3>
+                <div style="background: #e3f2fd; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p style="font-size: 1.1em;"><strong>Think-Aloud:</strong> Users verbalize their thoughts, feelings, and actions while using an interface.</p>
+                </div>
+                <div class="two-column" style="font-size: 0.8em; margin-top: 1em;">
+                    <div>
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>💡 Reveals mental models</li>
+                            <li>❓ Identifies confusion points</li>
+                            <li>⚡ Exposes mismatched expectations</li>
+                            <li>📊 Provides rich qualitative data</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Instructions for Participants:</h4>
+                        <p style="font-style: italic;">"Please think out loud as you complete the tasks. Tell me what you're looking for, what you're thinking, and what you're trying to do."</p>
+                    </div>
+                    <div>
+                        <h4>Moderator Prompts:</h4>
+                        <ul>
+                            <li>"What are you thinking?"</li>
+                            <li>"What do you expect to happen?"</li>
+                            <li>"Why did you choose that option?"</li>
+                            <li>"What are you looking for?"</li>
+                        </ul>
+                        <div style="background: #fff3cd; padding: 1em; border-radius: 8px; margin-top: 1em;">
+                            <h4 style="color: #856404;">⚠️ Avoid Leading Questions!</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Usability Metrics - Quantitative -->
+            <section>
+                <h2>Usability Metrics - Quantitative</h2>
+                <h3 class="japanese">ユーザビリティメトリクス - 定量的データ</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>1. Task Success Rate</h4>
+                            <p><strong>Formula:</strong></p>
+                            <p>(Successful tasks / Total attempts) × 100</p>
+                            <p><strong>Types:</strong> Binary or Partial Credit</p>
+                            <p><strong>Benchmark:</strong> >78% success</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>2. Time on Task</h4>
+                            <p><strong>Measure:</strong> Start to successful completion</p>
+                            <p><strong>Analysis:</strong> Average time, watch for outliers</p>
+                            <p><strong>Note:</strong> Faster ≠ Always Better</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>3. Error Rate</h4>
+                            <p><strong>Formula:</strong></p>
+                            <p>(Errors / Total attempts) × 100</p>
+                            <p><strong>Types:</strong> Slips vs. Mistakes</p>
+                            <p><strong>Track:</strong> Frequency, severity, recovery time</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Usability Metrics - Qualitative -->
+            <section>
+                <h2>Usability Metrics - Qualitative</h2>
+                <h3 class="japanese">ユーザビリティメトリクス - 定性的データ</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>4. Subjective Satisfaction - System Usability Scale (SUS)</h4>
+                    <div class="two-column" style="margin-top: 1em;">
+                        <div>
+                            <p><strong>10-item standardized questionnaire</strong></p>
+                            <p>5-point scale: Strongly Disagree to Strongly Agree</p>
+                            <p style="margin-top: 1em;"><strong>Sample Questions:</strong></p>
+                            <ol style="font-size: 0.9em;">
+                                <li>I would like to use this system frequently</li>
+                                <li>I found the system unnecessarily complex</li>
+                                <li>I thought the system was easy to use</li>
+                                <li>I would need technical support to use this</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4>SUS Score Interpretation:</h4>
+                            <div style="background: #28a745; color: white; padding: 0.5em; border-radius: 5px; margin: 0.5em 0;">
+                                <strong>80+</strong> = Excellent | 優秀
+                            </div>
+                            <div style="background: #5cb85c; color: white; padding: 0.5em; border-radius: 5px; margin: 0.5em 0;">
+                                <strong>70-79</strong> = Good | 良い
+                            </div>
+                            <div style="background: #f0ad4e; color: white; padding: 0.5em; border-radius: 5px; margin: 0.5em 0;">
+                                <strong>60-69</strong> = Fair | まあまあ
+                            </div>
+                            <div style="background: #d9534f; color: white; padding: 0.5em; border-radius: 5px; margin: 0.5em 0;">
+                                <strong>&lt;60</strong> = Needs Improvement | 改善が必要
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Preparing for Testing -->
+            <section>
+                <h2>Preparing for Testing Sessions</h2>
+                <h3 class="japanese">テストセッションの準備</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>Materials</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>☐ Test plan document</li>
+                                <li>☐ Task scenarios</li>
+                                <li>☐ Consent forms</li>
+                                <li>☐ Pre-test questionnaire</li>
+                                <li>☐ Post-test questionnaire (SUS)</li>
+                                <li>☐ Data recording sheets</li>
+                                <li>☐ Prototype (functional)</li>
+                            </ul>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>Technical Setup</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>☐ Screen recording software</li>
+                                <li>☐ Audio recording equipment</li>
+                                <li>☐ Camera (if needed)</li>
+                                <li>☐ Backup devices</li>
+                                <li>☐ Quiet, comfortable environment</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>Moderator Preparation</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>☐ Practice test script</li>
+                                <li>☐ Rehearse think-aloud prompts</li>
+                                <li>☐ Know prototype thoroughly</li>
+                                <li>☐ Prepare neutral responses</li>
+                                <li>☐ Plan time buffer between sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Conducting the Session -->
+            <section>
+                <h2>Conducting the Test Session</h2>
+                <h3 class="japanese">テストセッションの実施</h3>
+                <div style="font-size: 0.75em;">
+                    <h4>Session Structure (60 minutes typical):</h4>
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5em; margin-top: 1em;">
+                        <div style="background: #e3f2fd; padding: 0.8em; border-radius: 8px; text-align: center;">
+                            <h5>Introduction</h5>
+                            <p><strong>5 min</strong></p>
+                            <p style="font-size: 0.9em;">Welcome, explain purpose, consent</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 0.8em; border-radius: 8px; text-align: center;">
+                            <h5>Pre-Test</h5>
+                            <p><strong>5 min</strong></p>
+                            <p style="font-size: 0.9em;">Demographics, experience</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 0.8em; border-radius: 8px; text-align: center;">
+                            <h5>Task Scenarios</h5>
+                            <p><strong>35-40 min</strong></p>
+                            <p style="font-size: 0.9em;">Main testing, observe, record</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 0.8em; border-radius: 8px; text-align: center;">
+                            <h5>Post-Test</h5>
+                            <p><strong>10 min</strong></p>
+                            <p style="font-size: 0.9em;">SUS, experience, suggestions</p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 0.8em; border-radius: 8px; text-align: center;">
+                            <h5>Debrief</h5>
+                            <p><strong>5 min</strong></p>
+                            <p style="font-size: 0.9em;">Thank, answer questions</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Moderator Best Practices -->
+            <section>
+                <h2>Moderator Best Practices</h2>
+                <h3 class="japanese">モデレーターのベストプラクティス</h3>
+                <div class="two-column" style="font-size: 0.8em; margin-top: 2em;">
+                    <div style="background: #d4edda; padding: 1.5em; border-radius: 10px;">
+                        <h4 style="color: #155724;">✅ DO:</h4>
+                        <ul>
+                            <li>Stay neutral</li>
+                            <li>Listen actively</li>
+                            <li>Observe body language</li>
+                            <li>Take detailed notes</li>
+                            <li>Let users struggle briefly</li>
+                            <li>Ask open-ended questions</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f8d7da; padding: 1.5em; border-radius: 10px;">
+                        <h4 style="color: #721c24;">❌ DON'T:</h4>
+                        <ul>
+                            <li>Lead the user</li>
+                            <li>Defend the design</li>
+                            <li>Interrupt too quickly</li>
+                            <li>Make assumptions</li>
+                            <li>Show frustration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: #cce5ff; padding: 1.5em; border-radius: 10px; margin-top: 1em; font-size: 0.85em;">
+                    <h4>Neutral Responses:</h4>
+                    <p>"What do you expect to see?" | "Tell me more about that." | "Why did you choose that option?" | "What are you looking for?"</p>
+                </div>
+            </section>
+
+            <!-- Slide 14: Recording Findings -->
+            <section>
+                <h2>Recording and Documenting Findings</h2>
+                <h3 class="japanese">調査結果の記録と文書化</h3>
+                <div class="two-column" style="font-size: 0.75em; margin-top: 1em;">
+                    <div>
+                        <h4>Quantitative Data:</h4>
+                        <ul>
+                            <li>✓ Task success/failure</li>
+                            <li>✓ Time to complete</li>
+                            <li>✓ Number and type of errors</li>
+                            <li>✓ Number of attempts</li>
+                            <li>✓ SUS scores and ratings</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Qualitative Data:</h4>
+                        <ul>
+                            <li>✓ Participant quotes (verbatim)</li>
+                            <li>✓ Observed behaviors</li>
+                            <li>✓ Body language</li>
+                            <li>✓ Confusion and pain points</li>
+                            <li>✓ Positive reactions</li>
+                            <li>✓ Feature requests</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 8px;">
+                        <h4>Observation Sheet Example:</h4>
+                        <pre style="font-size: 0.8em; text-align: left;">
+Participant ID: P01
+Task: Find book under 2000 yen
+
+Time Started: 10:35 AM
+Time Ended: 10:42 AM
+Total Time: 7 minutes
+
+Success: ✓ Partial
+(added to cart but didn't checkout)
+
+Observations:
+- Struggled with search filter (2 min)
+- "Where is the price filter?" (quote)
+- Clicked wrong category initially
+- Smiled when found book
+- Confused by checkout button location
+
+Errors: 2 (wrong category, missed filter)
+                        </pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15: Common Usability Issues -->
+            <section>
+                <h2>Common Usability Issues to Watch For</h2>
+                <h3 class="japanese">注意すべき一般的なユーザビリティ問題</h3>
+                <div style="font-size: 0.7em; display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+                    <div>
+                        <div style="background: #ffebee; padding: 1em; border-radius: 8px; margin-bottom: 0.5em;">
+                            <h4>Navigation Issues</h4>
+                            <p>Can't find features | Unclear labels | Broken information architecture</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px; margin-bottom: 0.5em;">
+                            <h4>Interaction Issues</h4>
+                            <p>Unresponsive elements | Unclear affordances | Inconsistent patterns</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>Content Issues</h4>
+                            <p>Too much text | Jargon/unclear language | Missing information</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px; margin-bottom: 0.5em;">
+                            <h4>Visual Design Issues</h4>
+                            <p>Poor contrast | Small touch targets | Unclear visual hierarchy</p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                            <h4>Error Handling Issues</h4>
+                            <p>Unclear error messages | No recovery path | Silent failures</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 16: Ethics and Participant Care -->
+            <section>
+                <h2>Ethics and Participant Care</h2>
+                <h3 class="japanese">倫理と参加者ケア</h3>
+                <div style="font-size: 0.75em; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; margin-top: 1em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Informed Consent</h4>
+                        <ul style="font-size: 0.9em;">
+                            <li>Explain study purpose</li>
+                            <li>Describe participant tasks</li>
+                            <li>Explain data use</li>
+                            <li>Obtain written consent</li>
+                            <li>Allow withdrawal anytime</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                        <h4>Privacy & Confidentiality</h4>
+                        <ul style="font-size: 0.9em;">
+                            <li>Anonymize participant data</li>
+                            <li>Store recordings securely</li>
+                            <li>Share only with authorized team</li>
+                            <li>Delete when no longer needed</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Participant Comfort</h4>
+                        <ul style="font-size: 0.9em;">
+                            <li>Create welcoming environment</li>
+                            <li>No wrong answers</li>
+                            <li>Allow breaks</li>
+                            <li>Respect their time</li>
+                            <li>Provide incentive</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 17: Today's Activity & Key Takeaways -->
+            <section>
+                <h2>Today's Activity & Key Takeaways</h2>
+                <h3 class="japanese">今日のアクティビティと重要なポイント</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Hands-On Activity (60 minutes):</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; margin: 1em 0;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h5>Part 1 (25 min)</h5>
+                            <p>Create Test Plan: objectives, tasks, criteria, metrics</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h5>Part 2 (25 min)</h5>
+                            <p>Practice Think-Aloud Testing in pairs</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h5>Part 3 (10 min)</h5>
+                            <p>Debrief and reflection</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Key Takeaways:</h4>
+                    <ol>
+                        <li>✓ Test Early and Often - don't wait for perfection</li>
+                        <li>✓ You Are NOT the User - test with real users</li>
+                        <li>✓ 5 Users = 85% of Problems - quality over quantity</li>
+                        <li>✓ Both Metrics Matter - quantitative + qualitative</li>
+                    </ol>
+                    <p><strong>Next Week:</strong> Analyzing Results and Prioritizing Issues | 結果分析と問題の優先順位付け</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

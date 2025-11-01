@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11: Conducting Tests and Analyzing Results | テスト実施と結果分析</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+        .japanese { color: #666; font-size: 0.8em; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 2em; }
+        .highlight { color: #2a76dd; font-weight: bold; }
+        .emphasis { background-color: #fff3cd; padding: 0.2em 0.5em; border-radius: 4px; }
+        .priority-box { padding: 1em; border-radius: 8px; margin: 0.5em 0; }
+        .p1 { background: #ffebee; border-left: 4px solid #c62828; }
+        .p2 { background: #fff3e0; border-left: 4px solid #f57c00; }
+        .p3 { background: #e8f5e9; border-left: 4px solid #388e3c; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <section>
+                <h1>Week 11</h1>
+                <h2>Conducting Tests and Analyzing Results</h2>
+                <h3 class="japanese">第11週：テスト実施と結果分析</h3>
+                <hr>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul>
+                    <li>Conducting Real Usability Tests | 実際のユーザビリティテストの実施</li>
+                    <li>Analyzing Test Results | テスト結果の分析</li>
+                    <li>Finding Patterns Across Participants | 参加者間のパターンの発見</li>
+                    <li>Prioritizing Usability Issues | ユーザビリティ問題の優先順位付け</li>
+                    <li>Creating Actionable Recommendations | 実行可能な推奨事項の作成</li>
+                    <li>Bot-Conducted Assessment | ボット実施評価</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>From Testing to Analysis | テストから分析へ</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Week 10</h3>
+                        <ul style="font-size: 0.9em;">
+                            <li>Planning tests</li>
+                            <li>Creating protocols</li>
+                            <li>Defining metrics</li>
+                            <li>Preparing materials</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Week 11</h3>
+                        <ul style="font-size: 0.9em;">
+                            <li>Executing tests</li>
+                            <li>Collecting data</li>
+                            <li>Analyzing results</li>
+                            <li>Creating recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p><strong>Goal:</strong> Transform observations into actionable improvements</p>
+            </section>
+
+            <section>
+                <h2>Analyzing Quantitative Data</h2>
+                <h3 class="japanese">定量的データの分析</h3>
+                <div style="font-size: 0.85em;">
+                    <h4>1. Task Success Rate</h4>
+                    <p>Successful tasks / Total attempts × 100</p>
+                    <p><strong>Benchmark:</strong> >78% = Acceptable | <50% = Critical</p>
+                    
+                    <h4>2. Time on Task</h4>
+                    <p>Look for outliers and patterns</p>
+                    <p>Fast ≠ always good (might skip steps)</p>
+                    
+                    <h4>3. Error Rate</h4>
+                    <p>Slips vs. Mistakes</p>
+                    <p>Recovery time matters</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Analyzing Qualitative Data</h2>
+                <h3 class="japanese">定性的データの分析</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Quote Analysis</h4>
+                    <ul>
+                        <li>Direct user pain points</li>
+                        <li>Expectations vs. reality</li>
+                        <li>Group similar quotes by theme</li>
+                    </ul>
+                    <h4>Behavior Analysis</h4>
+                    <ul>
+                        <li>Hesitation points</li>
+                        <li>Navigation paths</li>
+                        <li>Repeated attempts</li>
+                        <li>Body language</li>
+                    </ul>
+                    <p><strong>Pattern Rule:</strong> 3+ participants = Pattern worth addressing</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Finding Patterns | パターンの発見</h2>
+                <div style="font-size: 0.8em;">
+                    <div class="priority-box p1">
+                        <h4>Strong Patterns (High Priority)</h4>
+                        <p>5/5 participants affected | Causes task failure</p>
+                    </div>
+                    <div class="priority-box p2">
+                        <h4>Moderate Patterns (Medium Priority)</h4>
+                        <p>3-4/5 participants affected | Causes delays</p>
+                    </div>
+                    <div class="priority-box p3">
+                        <h4>Weak Patterns (Low Priority)</h4>
+                        <p>1-2/5 participants affected | Minor impact</p>
+                    </div>
+                    <p><strong>Triangulation:</strong> Combine quantitative + qualitative + behavioral data</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Severity Rating Framework</h2>
+                <h3 class="japanese">Jakob Nielsen's 0-4 Scale</h3>
+                <div style="font-size: 0.75em;">
+                    <p><strong>0</strong> = Not a usability problem</p>
+                    <p><strong>1</strong> = Cosmetic (fix if time allows)</p>
+                    <p><strong>2</strong> = Minor usability problem (low priority)</p>
+                    <p><strong>3</strong> = Major usability problem (high priority)</p>
+                    <p><strong>4</strong> = Usability catastrophe (MUST FIX)</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Prioritization Matrix</h2>
+                <h3 class="japanese">優先順位付けマトリックス</h3>
+                <div style="font-size: 0.75em;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <th></th>
+                            <th>High Frequency</th>
+                            <th>Med Frequency</th>
+                            <th>Low Frequency</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Critical Impact</strong></td>
+                            <td style="background: #ffebee;">P1</td>
+                            <td style="background: #fff3e0;">P2</td>
+                            <td style="background: #e8f5e9;">P3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Major Impact</strong></td>
+                            <td style="background: #fff3e0;">P2</td>
+                            <td style="background: #e8f5e9;">P3</td>
+                            <td style="background: #f5f5f5;">P4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Minor Impact</strong></td>
+                            <td style="background: #e8f5e9;">P3</td>
+                            <td style="background: #f5f5f5;">P4</td>
+                            <td style="background: #f5f5f5;">P4</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top: 1em;"><strong>Frequency × Impact = Priority</strong></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Root Cause Analysis</h2>
+                <h3 class="japanese">根本原因分析</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>The "5 Whys" Technique</h4>
+                    <p><strong>Symptom:</strong> Users can't complete checkout</p>
+                    <p>Why? → Can't find button</p>
+                    <p>Why? → Below the fold</p>
+                    <p>Why? → Too much info above</p>
+                    <p>Why? → Wanted single screen</p>
+                    <p>Why? → Unvalidated assumption</p>
+                    <hr>
+                    <p><strong>Root Cause:</strong> Design decision based on unvalidated assumption</p>
+                    <p><strong>Solution:</strong> Test assumptions, prioritize critical actions</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Actionable Recommendations</h2>
+                <h3 class="japanese">実行可能な推奨事項</h3>
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div style="background: #ffebee; padding: 1em;">
+                        <h4>❌ BAD</h4>
+                        <p>"Improve navigation"</p>
+                        <p>"Make it user-friendly"</p>
+                        <p>"Fix the issues"</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em;">
+                        <h4>✅ GOOD</h4>
+                        <p>"Move menu icon to top-left, increase to 44×44 px"</p>
+                        <p>"Add price filter with '$' icon at top of list"</p>
+                        <p>"Display errors in red with specific instructions"</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1em; font-size: 0.8em;"><strong>Good recommendations are:</strong> Specific • Actionable • Evidence-based • Prioritized • User-centered</p>
+            </section>
+
+            <section>
+                <h2>Recommendation Template</h2>
+                <div style="font-size: 0.7em; text-align: left;">
+                    <p><strong>Issue:</strong> Price filter not visible</p>
+                    <p><strong>Priority:</strong> P1 (Critical)</p>
+                    <p><strong>Evidence:</strong> 4/5 users (80%) couldn't find it; 40% success rate; avg 4.2 min vs. expected 1.5 min</p>
+                    <p><strong>Root Cause:</strong> Hidden in collapsed section</p>
+                    <p><strong>Recommendations:</strong></p>
+                    <ol>
+                        <li>Move to top of product list</li>
+                        <li>Display expanded by default</li>
+                        <li>Add clear "$" icon</li>
+                        <li>Increase height from 32px to 48px</li>
+                    </ol>
+                    <p><strong>Expected Impact:</strong> >78% success rate, ~1.5 min completion</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Iterative Design Cycle</h2>
+                <h3 class="japanese">反復デザインサイクル</h3>
+                <div style="font-size: 0.85em;">
+                    <p>Design → Test → Analyze → Prioritize → Redesign → Test Again → Repeat</p>
+                    <hr>
+                    <h4>Why Iteration Matters:</h4>
+                    <ul>
+                        <li>First test reveals major issues</li>
+                        <li>Second test reveals subtle issues</li>
+                        <li>Each cycle improves design</li>
+                        <li>"Fail fast, learn fast"</li>
+                    </ul>
+                    <p><strong>Remember:</strong> Design is never "done" – it continuously evolves</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Common Mistakes to Avoid</h2>
+                <h3 class="japanese">避けるべき一般的なミス</h3>
+                <div style="font-size: 0.75em;">
+                    <ul>
+                        <li>❌ <strong>Confirmation Bias:</strong> Only seeing positive data</li>
+                        <li>❌ <strong>Cherry-Picking:</strong> Ignoring negative findings</li>
+                        <li>❌ <strong>Ignoring Outliers:</strong> May reveal accessibility issues</li>
+                        <li>❌ <strong>Vague Recommendations:</strong> "Make it better"</li>
+                        <li>❌ <strong>Analysis Paralysis:</strong> Over-analyzing forever</li>
+                        <li>❌ <strong>Defending Design:</strong> If users don't understand, it's a design problem</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Today's Activity</h2>
+                <h3 class="japanese">今日のアクティビティ (60 min)</h3>
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em;">
+                        <h4>Part 1: Testing (30 min)</h4>
+                        <ul>
+                            <li>Test with 2-3 participants</li>
+                            <li>Use Week 10 test plan</li>
+                            <li>Apply think-aloud protocol</li>
+                            <li>Record all metrics</li>
+                            <li>Take detailed notes</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em;">
+                        <h4>Part 2: Analysis (30 min)</h4>
+                        <ul>
+                            <li>Calculate metrics</li>
+                            <li>Identify patterns</li>
+                            <li>Apply severity ratings</li>
+                            <li>Use priority matrix</li>
+                            <li>Create 3-5 recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1em;"><strong>Deliverable:</strong> Usability findings report with recommendations</p>
+            </section>
+
+            <section>
+                <h2>Bot-Conducted Assessment</h2>
+                <h3 class="japanese">ボット実施評価</h3>
+                <div style="font-size: 0.8em;">
+                    <p><strong>Format:</strong> Conversational interview (15-20 min)</p>
+                    <p><strong>Topics:</strong> Testing methodology, metrics analysis, design rationale, prioritization</p>
+                    <hr>
+                    <h4>What to Expect:</h4>
+                    <ul>
+                        <li>Explain your design choices</li>
+                        <li>Justify recommendations with evidence</li>
+                        <li>Demonstrate HCI principle understanding</li>
+                    </ul>
+                    <p><strong>Note:</strong> Individual assessment – no external AI allowed</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways | 重要なポイント</h2>
+                <div style="font-size: 0.8em;">
+                    <ol>
+                        <li><strong>Analysis transforms data into insights</strong><br>Combine quantitative + qualitative + behavioral</li>
+                        <li><strong>Prioritization is essential</strong><br>Use severity ratings (0-4) and frequency × impact</li>
+                        <li><strong>Recommendations must be actionable</strong><br>Specific, evidence-based, prioritized, user-centered</li>
+                        <li><strong>Design is iterative</strong><br>Test → Analyze → Redesign → Test Again</li>
+                    </ol>
+                    <hr>
+                    <h3>Next Week: Accessibility and Inclusive Design</h3>
+                    <p>Learn to design for all users, including those with disabilities</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+        });
+    </script>
+</body>
+</html>

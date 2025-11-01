@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6: Prototyping and Wireframing | プロトタイピングとワイヤーフレーミング</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+        .wireframe-box {
+            border: 2px dashed #999;
+            padding: 1em;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Week 6: Prototyping & Wireframing</h1>
+                <h2 class="japanese">第6週：プロトタイピングとワイヤーフレーミング入門</h2>
+                <hr>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <!-- Slide 2: Agenda -->
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul>
+                    <li>Wireframing vs. Prototyping</li>
+                    <li>Fidelity Levels: Low, Mid, High</li>
+                    <li>Introduction to Figma and Adobe XD</li>
+                    <li>Hands-On: Create Your First Wireframes</li>
+                    <li>Bot-Guided Wireframing Workflow</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives</h3>
+                <p style="font-size: 0.8em;">Understand wireframes vs prototypes, navigate design tools, create your first mobile wireframes</p>
+            </section>
+
+            <!-- Slide 3: What is Wireframing? -->
+            <section>
+                <h2>What is Wireframing? | ワイヤーフレーミングとは？</h2>
+                <div class="wireframe-box">
+                    <p style="font-size: 1.1em;"><strong>Wireframing</strong> is creating a simplified visual guide that represents the skeletal framework of a digital interface.</p>
+                    <p class="japanese">ワイヤーフレーミングは、デジタルインターフェースの骨格的フレームワークを表す簡略化されたビジュアルガイドを作成するプロセスです。</p>
+                </div>
+                <div class="two-column" style="margin-top: 2em; font-size: 0.85em;">
+                    <div>
+                        <h3>Key Characteristics</h3>
+                        <ul>
+                            <li>📐 Low Detail</li>
+                            <li>⬛ Black and White</li>
+                            <li>📊 Content Hierarchy</li>
+                            <li>⚡ Fast to Create</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Why Wireframe?</h3>
+                        <ul>
+                            <li>✓ Rapid Exploration</li>
+                            <li>✓ Focus on Structure</li>
+                            <li>✓ Easy Feedback</li>
+                            <li>✓ Save Time</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: What is Prototyping? -->
+            <section>
+                <h2>What is Prototyping? | プロトタイピングとは？</h2>
+                <div style="background: #e3f2fd; padding: 2em; border-radius: 10px;">
+                    <p style="font-size: 1.1em;"><strong>Prototyping</strong> is creating an interactive simulation of the final product that users can click through and experience.</p>
+                    <p class="japanese">プロトタイピングは、ユーザーがクリックして体験できる最終製品のインタラクティブシミュレーションを作成することです。</p>
+                </div>
+                <div class="two-column" style="margin-top: 2em; font-size: 0.85em;">
+                    <div>
+                        <h3>Characteristics</h3>
+                        <ul>
+                            <li>🖱️ Interactive</li>
+                            <li>👥 User Testing</li>
+                            <li>💡 Realistic Experience</li>
+                            <li>✅ Validates Ideas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Benefits</h3>
+                        <ul>
+                            <li>Test User Flows</li>
+                            <li>Find Usability Issues</li>
+                            <li>Get Buy-In</li>
+                            <li>Reduce Costs</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Wireframes vs Prototypes -->
+            <section>
+                <h2>Wireframes vs. Prototypes</h2>
+                <div style="font-size: 0.75em;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: #f0f0f0;">
+                                <th style="padding: 1em; border: 1px solid #ddd;"></th>
+                                <th style="padding: 1em; border: 1px solid #ddd;">Wireframes</th>
+                                <th style="padding: 1em; border: 1px solid #ddd;">Prototypes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;"><strong>Purpose</strong></td>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;">Layout & structure</td>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;">User flows & interactions</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;"><strong>Fidelity</strong></td>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;">Low detail</td>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;">Medium to high detail</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;"><strong>Interactivity</strong></td>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;">Static</td>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;">Interactive, clickable</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;"><strong>Time</strong></td>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;">Minutes to hours</td>
+                                <td style="padding: 0.8em; border: 1px solid #ddd;">Hours to days</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="text-align: center; margin-top: 1em; font-size: 1.2em;"><strong>Wireframes → Prototypes → Final Design</strong></p>
+                </div>
+            </section>
+
+            <!-- Slide 6: Fidelity Levels -->
+            <section>
+                <h2>Fidelity Levels | 忠実度レベル</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; font-size: 0.7em;">
+                    <div style="background: #f5f5f5; padding: 1em; border-radius: 8px;">
+                        <h3>Low-Fidelity</h3>
+                        <p class="japanese">低忠実度</p>
+                        <ul>
+                            <li>Simple shapes</li>
+                            <li>Grayscale</li>
+                            <li>Lorem ipsum</li>
+                            <li>Basic layout</li>
+                        </ul>
+                        <p style="margin-top: 0.5em;"><strong>Use for:</strong> Early exploration, rapid iteration</p>
+                    </div>
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h3>Medium-Fidelity</h3>
+                        <p class="japanese">中忠実度</p>
+                        <ul>
+                            <li>Detailed layout</li>
+                            <li>Actual content</li>
+                            <li>Some visuals</li>
+                            <li>Limited color</li>
+                        </ul>
+                        <p style="margin-top: 0.5em;"><strong>Use for:</strong> Stakeholder presentations, content validation</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h3>High-Fidelity</h3>
+                        <p class="japanese">高忠実度</p>
+                        <ul>
+                            <li>Full design</li>
+                            <li>Real content</li>
+                            <li>Brand elements</li>
+                            <li>Interactive</li>
+                        </ul>
+                        <p style="margin-top: 0.5em;"><strong>Use for:</strong> Final testing, developer handoff</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Design Tools -->
+            <section>
+                <h2>Design Tools | デザインツール</h2>
+                <div class="two-column" style="font-size: 0.85em;">
+                    <div style="background: #f3e5f5; padding: 1.5em; border-radius: 10px;">
+                        <h3>Figma (Recommended)</h3>
+                        <ul>
+                            <li>🌐 Cloud-Based</li>
+                            <li>👥 Collaborative</li>
+                            <li>🎓 Free Education Plan</li>
+                            <li>💻 Cross-Platform</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1.5em; border-radius: 10px;">
+                        <h3>Adobe XD (Alternative)</h3>
+                        <ul>
+                            <li>🖥️ Desktop Application</li>
+                            <li>🎨 Adobe Integration</li>
+                            <li>🆓 Free Starter Plan</li>
+                            <li>🎙️ Voice Prototyping</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: #e8f5e9; padding: 1.5em; margin-top: 1em; border-radius: 10px;">
+                    <h3>Why These Tools?</h3>
+                    <p>✅ No Coding Required | ✅ Industry Standard | ✅ Interactive Prototypes | ✅ Portfolio Quality</p>
+                </div>
+            </section>
+
+            <!-- Slide 8: Mobile Considerations -->
+            <section>
+                <h2>Mobile Design Considerations</h2>
+                <div style="font-size: 0.85em;">
+                    <h3>Common Screen Sizes</h3>
+                    <ul>
+                        <li>📱 iPhone: 375 x 812 px</li>
+                        <li>🤖 Android: 360 x 640 px</li>
+                        <li>📲 Tablet: 768 x 1024 px</li>
+                    </ul>
+                    <h3 style="margin-top: 1em;">Touch Targets</h3>
+                    <ul>
+                        <li>Buttons: Minimum 44 x 44 px</li>
+                        <li>Spacing: 8-12 px between elements</li>
+                        <li>One-handed use: Key actions at bottom</li>
+                    </ul>
+                    <h3 style="margin-top: 1em;">Mobile-First Principles</h3>
+                    <ul>
+                        <li>Prioritize content for limited space</li>
+                        <li>Design for vertical scrolling</li>
+                        <li>Bottom navigation for easy reach</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 9: Common Patterns -->
+            <section>
+                <h2>Common Wireframe Patterns</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; font-size: 0.75em;">
+                    <div style="background: #f5f5f5; padding: 1em; border: 2px dashed #999;">
+                        <h4>Homepage/Dashboard</h4>
+                        <ul>
+                            <li>Top Navigation</li>
+                            <li>Hero Section</li>
+                            <li>Card Layout</li>
+                            <li>Bottom Tab Bar</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f5f5f5; padding: 1em; border: 2px dashed #999;">
+                        <h4>List View</h4>
+                        <ul>
+                            <li>Search Bar</li>
+                            <li>List Items</li>
+                            <li>Thumbnail + Text</li>
+                            <li>Action Buttons</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f5f5f5; padding: 1em; border: 2px dashed #999;">
+                        <h4>Detail View</h4>
+                        <ul>
+                            <li>Back Button</li>
+                            <li>Large Image</li>
+                            <li>Content Sections</li>
+                            <li>Call-to-Action</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f5f5f5; padding: 1em; border: 2px dashed #999;">
+                        <h4>Form/Input</h4>
+                        <ul>
+                            <li>Form Fields</li>
+                            <li>Labels</li>
+                            <li>Helper Text</li>
+                            <li>Submit Button</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Best Practices -->
+            <section>
+                <h2>Wireframing Best Practices</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #d4edda; padding: 1.5em; border-radius: 8px;">
+                        <h3>✅ DO's</h3>
+                        <ul>
+                            <li>Focus on layout & hierarchy</li>
+                            <li>Keep it simple (grayscale)</li>
+                            <li>Use consistent alignment</li>
+                            <li>Leave white space</li>
+                            <li>Include navigation</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f8d7da; padding: 1.5em; border-radius: 8px;">
+                        <h3>❌ DON'Ts</h3>
+                        <ul>
+                            <li>Add colors too soon</li>
+                            <li>Use detailed graphics</li>
+                            <li>Spend too much time perfecting</li>
+                            <li>Ignore mobile constraints</li>
+                            <li>Forget navigation elements</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Bot Support -->
+            <section>
+                <h2>Bot-Guided Wireframing</h2>
+                <div style="background: #e8f5e9; padding: 2em; border-radius: 15px;">
+                    <h3>🤖 HCI-101 Bot Can Help With:</h3>
+                    <div style="font-size: 0.85em;">
+                        <ul>
+                            <li>✓ Step-by-step wireframing process</li>
+                            <li>✓ Layout suggestions for your use case</li>
+                            <li>✓ Mobile design best practices</li>
+                            <li>✓ Figma/Adobe XD tool help</li>
+                            <li>✓ Wireframe critique and feedback</li>
+                            <li>✓ Accessibility considerations</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1em;">Upload screenshots → Get feedback → Iterate → Improve</p>
+            </section>
+
+            <!-- Slide 12: Activity -->
+            <section>
+                <h2>This Week's Activity</h2>
+                <h3>Hands-On Wireframing Exercise</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>What You'll Do:</h4>
+                    <ol>
+                        <li>Tool Setup: Install Figma or Adobe XD</li>
+                        <li>Tutorial: Learn basic features</li>
+                        <li>Create: Design 3-4 mobile screens</li>
+                        <li>Feedback: Get bot review</li>
+                        <li>Iterate: Peer critique and improve</li>
+                    </ol>
+                    <h4 style="margin-top: 1em;">Time Breakdown (70 min):</h4>
+                    <p>Setup (10) → Tutorial (15) → Practice (25) → Bot Feedback (10) → Peer Review (10)</p>
+                    <h4 style="margin-top: 1em;">Deliverables:</h4>
+                    <ul>
+                        <li>Wireframe set (3-4 screens)</li>
+                        <li>Design rationale (1-2 pages)</li>
+                        <li>Bot interaction log</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 13: Common Mistakes -->
+            <section>
+                <h2>Common Mistakes to Avoid</h2>
+                <div style="font-size: 0.75em;">
+                    <ul>
+                        <li><strong>Too Much Detail:</strong> Adding colors, images in wireframes → Stay grayscale</li>
+                        <li><strong>Inconsistent Spacing:</strong> Random gaps → Use grid system</li>
+                        <li><strong>Ignoring Mobile:</strong> Desktop layouts on mobile → Design mobile-first</li>
+                        <li><strong>No Hierarchy:</strong> Everything equal → Use size/position for priority</li>
+                        <li><strong>Missing Navigation:</strong> No way to move → Include nav on every screen</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 14: Next Week Preview -->
+            <section>
+                <h2>From Wireframes to Prototypes</h2>
+                <h3>Next Week: Advanced Prototyping</h3>
+                <ul>
+                    <li>🔗 Adding Interactivity</li>
+                    <li>🔄 Creating User Flows</li>
+                    <li>✨ Transitions and Animations</li>
+                    <li>🧪 Testing Prototypes</li>
+                </ul>
+                <div style="background: #e3f2fd; padding: 1.5em; margin-top: 1em; border-radius: 10px;">
+                    <p><strong>The Journey:</strong> Week 6 Wireframes → Week 7 Prototypes → Week 10-11 Testing → Week 14 Final Project</p>
+                </div>
+            </section>
+
+            <!-- Slide 15: Tips for Success -->
+            <section>
+                <h2>Tips for Success | 成功のためのヒント</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div>
+                        <h3>Tool Setup</h3>
+                        <ul>
+                            <li>⏰ Create account early</li>
+                            <li>📧 Use student email</li>
+                            <li>⌨️ Learn shortcuts</li>
+                            <li>💾 Save frequently</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Wireframing</h3>
+                        <ul>
+                            <li>✏️ Sketch on paper first</li>
+                            <li>📱 Reference real apps</li>
+                            <li>🙋 Ask for help</li>
+                            <li>🔁 Iterate quickly</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 16: Let's Start! -->
+            <section>
+                <h1>Let's Get Started!</h1>
+                <h2 class="japanese">始めましょう！</h2>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px;">
+                    <h3 style="color: white;">Today's Goals:</h3>
+                    <ul style="text-align: left;">
+                        <li>✅ Tool installed and set up</li>
+                        <li>✅ Basic navigation mastered</li>
+                        <li>✅ First wireframes created</li>
+                        <li>✅ Bot feedback received</li>
+                        <li>✅ Ready for next week</li>
+                    </ul>
+                </div>
+                <h3 style="margin-top: 1em;">Remember: Focus on layout, not visuals!</h3>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12: Accessibility and Inclusive Design | アクセシビリティと包括的デザイン</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+        .japanese { color: #666; font-size: 0.8em; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 2em; }
+        .three-column { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; }
+        .highlight { color: #2a76dd; font-weight: bold; }
+        .emphasis { background-color: #fff3cd; padding: 0.2em 0.5em; border-radius: 4px; }
+        .pass { background: #e8f5e9; padding: 0.5em; border-left: 4px solid #4caf50; }
+        .fail { background: #ffebee; padding: 0.5em; border-left: 4px solid #f44336; }
+        .level-aa { background: #fff3e0; border: 2px solid #ff9800; padding: 1em; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <section>
+                <h1>Week 12</h1>
+                <h2>Accessibility and Inclusive Design</h2>
+                <h3 class="japanese">アクセシビリティと包括的デザイン</h3>
+                <hr>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <div style="font-size: 0.85em;">
+                    <ul>
+                        <li>What is Accessibility? POUR Principles</li>
+                        <li>Types of Disabilities & Design Implications</li>
+                        <li>WCAG 2.1 Guidelines (Level A/AA/AAA)</li>
+                        <li>Visual, Motor, & Cognitive Accessibility</li>
+                        <li>Assistive Technologies</li>
+                        <li>Testing Tools (WAVE, axe, Lighthouse)</li>
+                        <li>Legal & Ethical Considerations</li>
+                    </ul>
+                    <p><strong>15% of world population has disabilities = 1+ billion people</strong></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>What is Accessibility?</h2>
+                <h3 class="japanese">アクセシビリティとは？</h3>
+                <p>Designing so people with disabilities can use your product</p>
+                <hr>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>P - Perceivable | 知覚可能</h4>
+                        <p>Can users perceive the content?</p>
+                        <ul style="font-size: 0.9em;">
+                            <li>Text alternatives for images</li>
+                            <li>Captions for videos</li>
+                            <li>High contrast colors</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                        <h4>O - Operable | 操作可能</h4>
+                        <p>Can users operate the interface?</p>
+                        <ul style="font-size: 0.9em;">
+                            <li>Keyboard accessibility</li>
+                            <li>Sufficient time</li>
+                            <li>No seizure triggers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="two-column" style="font-size: 0.8em; margin-top: 1em;">
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>U - Understandable | 理解可能</h4>
+                        <p>Can users understand it?</p>
+                        <ul style="font-size: 0.9em;">
+                            <li>Clear, simple language</li>
+                            <li>Consistent navigation</li>
+                            <li>Helpful error messages</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>R - Robust | 堅牢</h4>
+                        <p>Works with assistive tech?</p>
+                        <ul style="font-size: 0.9em;">
+                            <li>Semantic HTML</li>
+                            <li>Screen reader compatible</li>
+                            <li>Valid code</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Types of Disabilities</h2>
+                <h3 class="japanese">障害の種類</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; font-size: 0.7em;">
+                    <div style="background: #ffe0b2; padding: 1em; border-radius: 8px;">
+                        <h4>👁️ Visual Impairments</h4>
+                        <p>Blindness, low vision, color blindness</p>
+                        <p><strong>Needs:</strong> Screen readers, high contrast, keyboard nav</p>
+                    </div>
+                    <div style="background: #c5cae9; padding: 1em; border-radius: 8px;">
+                        <h4>✋ Motor/Physical</h4>
+                        <p>Tremors, limited dexterity, paralysis</p>
+                        <p><strong>Needs:</strong> Large touch targets (44×44 px), keyboard access</p>
+                    </div>
+                    <div style="background: #b2dfdb; padding: 1em; border-radius: 8px;">
+                        <h4>👂 Auditory</h4>
+                        <p>Deafness, hard of hearing</p>
+                        <p><strong>Needs:</strong> Captions, visual alerts</p>
+                    </div>
+                    <div style="background: #f8bbd0; padding: 1em; border-radius: 8px;">
+                        <h4>🧠 Cognitive</h4>
+                        <p>Dyslexia, ADHD, memory, autism</p>
+                        <p><strong>Needs:</strong> Clear language, consistent layouts, no flashing</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1em;"><strong>Many people have multiple disabilities, temporary, or situational</strong></p>
+            </section>
+
+            <section>
+                <h2>WCAG 2.1 Guidelines</h2>
+                <div class="three-column" style="font-size: 0.75em;">
+                    <div style="background: #ffccbc; padding: 1em; border-radius: 8px;">
+                        <h4>Level A</h4>
+                        <p><strong>Minimum</strong></p>
+                        <p>Basic accessibility</p>
+                        <p>Must meet to avoid major barriers</p>
+                    </div>
+                    <div class="level-aa">
+                        <h4>Level AA ⭐</h4>
+                        <p><strong>Recommended</strong></p>
+                        <p>Industry standard</p>
+                        <p>Legal requirement</p>
+                        <p><strong>TARGET FOR YOUR PROJECTS</strong></p>
+                    </div>
+                    <div style="background: #c8e6c9; padding: 1em; border-radius: 8px;">
+                        <h4>Level AAA</h4>
+                        <p><strong>Gold Standard</strong></p>
+                        <p>Highest level</p>
+                        <p>Not always achievable</p>
+                    </div>
+                </div>
+                <hr>
+                <h4>Key Level AA Requirements:</h4>
+                <ul style="font-size: 0.8em;">
+                    <li>4.5:1 contrast ratio for normal text</li>
+                    <li>3:1 contrast for large text (18pt+)</li>
+                    <li>44×44 px minimum touch targets</li>
+                    <li>Keyboard accessibility</li>
+                    <li>Text alternatives for images</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Color Contrast Requirements</h2>
+                <h3 class="japanese">色コントラスト要件</h3>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div class="fail">
+                        <h4>❌ FAILS</h4>
+                        <p style="color: #999;">Light gray (#999) on white</p>
+                        <p><strong>Ratio: 2.8:1</strong></p>
+                        <p>Below 4.5:1 requirement</p>
+                    </div>
+                    <div class="pass">
+                        <h4>✅ PASSES</h4>
+                        <p style="color: #555;">Dark gray (#555) on white</p>
+                        <p><strong>Ratio: 8.6:1</strong></p>
+                        <p>Exceeds 4.5:1 requirement</p>
+                    </div>
+                </div>
+                <hr>
+                <h4>Don't Rely on Color Alone:</h4>
+                <p class="fail" style="font-size: 0.8em;">❌ "Required fields are in red"</p>
+                <p class="pass" style="font-size: 0.8em;">✅ "Required fields are marked with a red asterisk (*)"</p>
+                <p style="font-size: 0.75em; margin-top: 1em;"><strong>Tools:</strong> WebAIM Contrast Checker, Figma Stark plugin, Chrome DevTools</p>
+            </section>
+
+            <section>
+                <h2>Text Alternatives for Images</h2>
+                <h3 class="japanese">画像のテキスト代替</h3>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div class="fail">
+                        <h4>❌ Bad Alt Text</h4>
+                        <ul>
+                            <li>"logo"</li>
+                            <li>"image of person"</li>
+                            <li>"click here"</li>
+                        </ul>
+                    </div>
+                    <div class="pass">
+                        <h4>✅ Good Alt Text</h4>
+                        <ul>
+                            <li>"Acme Corporation logo"</li>
+                            <li>"Woman using laptop at desk"</li>
+                            <li>"Submit button"</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <h4>Guidelines:</h4>
+                <ul style="font-size: 0.8em;">
+                    <li>Describe content and function</li>
+                    <li>Be concise but descriptive</li>
+                    <li>Don't start with "image of..."</li>
+                    <li>Decorative images: use empty alt=""</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Motor Accessibility</h2>
+                <h3 class="japanese">運動アクセシビリティ</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>1. Touch Target Size</h4>
+                    <div class="two-column">
+                        <div class="fail">
+                            <p>❌ 32×32 px (Too small)</p>
+                        </div>
+                        <div class="pass">
+                            <p>✅ 44×44 px minimum</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>2. Keyboard Navigation</h4>
+                    <ul>
+                        <li><strong>Tab:</strong> Move forward</li>
+                        <li><strong>Shift + Tab:</strong> Move backward</li>
+                        <li><strong>Enter/Space:</strong> Activate</li>
+                        <li><strong>Arrows:</strong> Navigate within components</li>
+                    </ul>
+                    <p><strong>Focus indicators must be clearly visible!</strong></p>
+                    <hr>
+                    <h4>3. No Time Limits</h4>
+                    <p>Allow users to extend time or disable timeouts</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Cognitive Accessibility</h2>
+                <div style="font-size: 0.75em;">
+                    <div class="two-column">
+                        <div class="fail">
+                            <h4>❌ Complex Language</h4>
+                            <p>"Utilize the search functionality to locate desired content"</p>
+                        </div>
+                        <div class="pass">
+                            <h4>✅ Simple Language</h4>
+                            <p>"Use search to find what you need"</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Key Principles:</h4>
+                    <ul>
+                        <li><strong>Clear language:</strong> Short sentences, common words, active voice</li>
+                        <li><strong>Consistent layouts:</strong> Same navigation, button styles, colors</li>
+                        <li><strong>No flashing:</strong> Max 3 flashes/second (or none)</li>
+                        <li><strong>Clear errors:</strong> Explain what's wrong and how to fix</li>
+                    </ul>
+                    <div class="two-column" style="margin-top: 1em;">
+                        <div class="fail">
+                            <p>❌ "Error 404: Invalid input"</p>
+                        </div>
+                        <div class="pass">
+                            <p>✅ "Email address is missing. Please enter: name@example.com"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Assistive Technologies</h2>
+                <h3 class="japanese">支援技術</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>Screen Readers</h4>
+                            <p>JAWS, NVDA, VoiceOver, TalkBack</p>
+                            <p><strong>Design needs:</strong> Semantic HTML, alt text, logical order</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>Screen Magnifiers</h4>
+                            <p>ZoomText, built-in Zoom</p>
+                            <p><strong>Design needs:</strong> Works at 200% zoom, text reflows</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>Voice Control</h4>
+                            <p>Dragon, Voice Control, Voice Access</p>
+                            <p><strong>Design needs:</strong> Visible labels, keyboard accessibility</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>Switch Controls</h4>
+                            <p>For severe motor disabilities</p>
+                            <p><strong>Design needs:</strong> Perfect sequential nav, clear focus</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1em;"><strong>Millions of people use these technologies. Test with them!</strong></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Accessibility Testing Tools</h2>
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div>
+                        <h4>Automated Tools</h4>
+                        <ul>
+                            <li><strong>WAVE:</strong> Browser extension, highlights issues</li>
+                            <li><strong>axe DevTools:</strong> Detailed reports, fix suggestions</li>
+                            <li><strong>Lighthouse:</strong> Built into Chrome, scores 0-100</li>
+                            <li><strong>Contrast Checkers:</strong> WebAIM, Figma plugins</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Manual Testing</h4>
+                        <ul>
+                            <li><strong>Keyboard:</strong> Unplug mouse, navigate with Tab</li>
+                            <li><strong>Screen reader:</strong> VoiceOver (Mac), NVDA (Windows)</li>
+                            <li><strong>Zoom:</strong> Test at 200%</li>
+                            <li><strong>Color blindness:</strong> Browser simulation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 8px;">
+                    <p><strong>⚠️ Important:</strong> Automated tools catch only 30-40% of issues. Manual testing is essential!</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Common Issues & Fixes</h2>
+                <div style="font-size: 0.7em;">
+                    <ol>
+                        <li><strong>Low contrast:</strong> Use 4.5:1 or higher</li>
+                        <li><strong>Missing alt text:</strong> Add descriptive alt to all images</li>
+                        <li><strong>Small targets:</strong> Make all tappable elements 44×44 px</li>
+                        <li><strong>No keyboard access:</strong> Use semantic HTML or add handlers</li>
+                        <li><strong>Poor focus:</strong> Never remove outline without replacement</li>
+                        <li><strong>Auto-play:</strong> Don't auto-play or provide pause/stop</li>
+                    </ol>
+                    <p><strong>These 6 issues = ~80% of accessibility problems</strong></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Inclusive Design Examples</h2>
+                <h3 class="japanese">包括的デザインの例</h3>
+                <div style="font-size: 0.75em;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="background: #f5f5f5;">
+                            <th>Feature</th>
+                            <th>Originally For</th>
+                            <th>Also Helps</th>
+                        </tr>
+                        <tr>
+                            <td>Curb Cuts</td>
+                            <td>Wheelchair users</td>
+                            <td>Strollers, luggage, delivery</td>
+                        </tr>
+                        <tr style="background: #f5f5f5;">
+                            <td>Captions</td>
+                            <td>Deaf users</td>
+                            <td>Noisy places, language learners</td>
+                        </tr>
+                        <tr>
+                            <td>Voice Control</td>
+                            <td>Motor disabilities</td>
+                            <td>Drivers, multitaskers</td>
+                        </tr>
+                        <tr style="background: #f5f5f5;">
+                            <td>Dark Mode</td>
+                            <td>Light sensitivity</td>
+                            <td>Night-time use, battery saving</td>
+                        </tr>
+                        <tr>
+                            <td>Large Targets</td>
+                            <td>Motor disabilities</td>
+                            <td>Everyone on mobile</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top: 1em;"><strong>Solutions for disabilities often benefit everyone!</strong></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Legal & Ethical</h2>
+                <div style="font-size: 0.75em;">
+                    <h4>Laws Worldwide:</h4>
+                    <ul>
+                        <li><strong>US:</strong> ADA, Section 508</li>
+                        <li><strong>EU:</strong> European Accessibility Act</li>
+                        <li><strong>Japan:</strong> JIS X 8341-3</li>
+                        <li><strong>Canada:</strong> AODA</li>
+                    </ul>
+                    <hr>
+                    <h4>Business Case:</h4>
+                    <ul>
+                        <li>1+ billion people with disabilities</li>
+                        <li>Avoid lawsuits</li>
+                        <li>Better SEO</li>
+                        <li>Improved UX for everyone</li>
+                    </ul>
+                    <hr>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>The Ethical Imperative:</h4>
+                        <p><strong>Everyone deserves equal access. Digital exclusion is discrimination.</strong></p>
+                        <p>As designers, you have power and responsibility.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Today's Activity</h2>
+                <h3>Accessibility Audit (60 min)</h3>
+                <div class="three-column" style="font-size: 0.7em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Part 1: Automated (20min)</h4>
+                        <ul>
+                            <li>Install WAVE/axe/Lighthouse</li>
+                            <li>Run tests on prototype</li>
+                            <li>Check color contrast</li>
+                            <li>Document issues</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                        <h4>Part 2: Manual (25min)</h4>
+                        <ul>
+                            <li>Keyboard-only nav</li>
+                            <li>Screen reader test</li>
+                            <li>Zoom to 200%</li>
+                            <li>Color blindness sim</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Part 3: Fix (15min)</h4>
+                        <ul>
+                            <li>Create audit report</li>
+                            <li>Prioritize issues</li>
+                            <li>Fix high-priority</li>
+                            <li>Re-test fixes</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1em;"><strong>Deliverable:</strong> Accessibility audit report + improved prototype</p>
+            </section>
+
+            <section>
+                <h2>Key Takeaways | 重要なポイント</h2>
+                <div style="font-size: 0.8em;">
+                    <ol>
+                        <li><strong>Accessibility benefits everyone</strong> – Not just disabled users</li>
+                        <li><strong>POUR principles</strong> – Perceivable, Operable, Understandable, Robust</li>
+                        <li><strong>Aim for WCAG 2.1 Level AA</strong> – 4.5:1 contrast, 44×44 px targets</li>
+                        <li><strong>Test with tools and users</strong> – Automated + Manual testing</li>
+                        <li><strong>Design inclusively from start</strong> – Don't treat as afterthought</li>
+                        <li><strong>It's the right thing to do</strong> – Equal access is a human right</li>
+                    </ol>
+                    <hr>
+                    <h3>Next Week: Emerging Technologies</h3>
+                    <p>AR/VR, voice, gestures, IoT – The future of HCI</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+        });
+    </script>
+</body>
+</html>
