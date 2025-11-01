@@ -35,10 +35,22 @@
             border-radius: 4px;
         }
         /* Make slides scrollable to prevent content truncation */
+        .reveal .slides {
+            height: calc(100vh - 110px) !important; /* Account for top nav (50px) and controls (60px) */
+        }
         .reveal .slides section {
             overflow-y: auto !important;
-            max-height: 90vh;
-            padding: 20px;
+            max-height: calc(100vh - 110px) !important;
+            height: 100% !important;
+            padding: 20px 40px !important;
+            box-sizing: border-box !important;
+        }
+        .reveal .slides section.present {
+            display: block !important;
+        }
+        /* Ensure controls are visible */
+        .reveal .controls {
+            bottom: 20px !important;
         }
     </style>
 </head>
