@@ -17,6 +17,12 @@
         .pass { background: #e8f5e9; padding: 0.5em; border-left: 4px solid #4caf50; }
         .fail { background: #ffebee; padding: 0.5em; border-left: 4px solid #f44336; }
         .level-aa { background: #fff3e0; border: 2px solid #ff9800; padding: 1em; border-radius: 8px; }
+        /* Make slides scrollable to prevent content truncation */
+        .reveal .slides section {
+            overflow-y: auto !important;
+            max-height: 90vh;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>

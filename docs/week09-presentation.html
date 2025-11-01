@@ -57,6 +57,12 @@
         .level-1 { background: #fff3cd; }
         .level-2 { background: #ffe5b4; }
         .level-3 { background: #ffd4a3; }
+        /* Make slides scrollable to prevent content truncation */
+        .reveal .slides section {
+            overflow-y: auto !important;
+            max-height: 90vh;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>

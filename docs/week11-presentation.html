@@ -17,6 +17,12 @@
         .p1 { background: #ffebee; border-left: 4px solid #c62828; }
         .p2 { background: #fff3e0; border-left: 4px solid #f57c00; }
         .p3 { background: #e8f5e9; border-left: 4px solid #388e3c; }
+        /* Make slides scrollable to prevent content truncation */
+        .reveal .slides section {
+            overflow-y: auto !important;
+            max-height: 90vh;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
