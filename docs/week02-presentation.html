@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Design Thinking | デザイン思考</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1 -->
+            <section>
+                <h1>Week 2: Design Thinking</h1>
+                <h2 class="japanese">第2週：デザイン思考とユーザー中心デザイン</h2>
+                <hr>
+                <h3>User-Centered Design Process</h3>
+                <p class="japanese">ユーザー中心デザインプロセス</p>
+                <br>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <!-- Slide 2 -->
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul>
+                    <li>Design Thinking Framework | デザイン思考フレームワーク</li>
+                    <li>User-Centered Design Principles | ユーザー中心デザイン原則</li>
+                    <li>Empathy-Driven Problem Solving | 共感駆動問題解決</li>
+                    <li>Hands-On Design Challenge | ハンズオンデザインチャレンジ</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives | 学習目標</h3>
+                <ul style="font-size: 0.8em;">
+                    <li>Master the 5 stages of design thinking</li>
+                    <li>Apply empathy techniques to understand users</li>
+                    <li>Generate creative solutions through structured ideation</li>
+                    <li>Create and test low-fidelity prototypes</li>
+                </ul>
+            </section>
+
+            <!-- Slide 3 -->
+            <section>
+                <h2>What is Design Thinking?</h2>
+                <h3 class="japanese">デザイン思考とは？</h3>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p style="font-size: 1.1em;"><strong>Design Thinking</strong> is a human-centered approach to innovation that integrates the needs of people, the possibilities of technology, and the requirements for business success.</p>
+                    <p class="japanese">デザイン思考は、人々のニーズ、技術の可能性、ビジネス成功の要件を統合する人間中心のイノベーションアプローチです。</p>
+                </div>
+                <h3>Core Philosophy | 基本哲学</h3>
+                <ul style="font-size: 0.85em;">
+                    <li><strong>Human-Centered:</strong> Start with people, not technology</li>
+                    <li><strong>Problem-Focused:</strong> Solve real problems, not symptoms</li>
+                    <li><strong>Iterative:</strong> Build, test, learn, repeat</li>
+                    <li><strong>Collaborative:</strong> Diverse perspectives create better solutions</li>
+                </ul>
+            </section>
+
+            <!-- Slide 4 -->
+            <section>
+                <h2>The Design Thinking Process</h2>
+                <h3 class="japanese">デザイン思考プロセス</h3>
+                <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5em; font-size: 0.7em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>1. Empathize</h4>
+                        <p class="japanese">共感</p>
+                        <p>Understand users deeply</p>
+                        <ul>
+                            <li>User research</li>
+                            <li>Interviews</li>
+                            <li>Observations</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                        <h4>2. Define</h4>
+                        <p class="japanese">定義</p>
+                        <p>Articulate the problem</p>
+                        <ul>
+                            <li>Problem statement</li>
+                            <li>Point of View</li>
+                            <li>Success criteria</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>3. Ideate</h4>
+                        <p class="japanese">発想</p>
+                        <p>Generate solutions</p>
+                        <ul>
+                            <li>Brainstorming</li>
+                            <li>Divergent thinking</li>
+                            <li>Creative techniques</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>4. Prototype</h4>
+                        <p class="japanese">試作</p>
+                        <p>Build to think</p>
+                        <ul>
+                            <li>Low-fidelity</li>
+                            <li>Fail fast</li>
+                            <li>Iterate</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                        <h4>5. Test</h4>
+                        <p class="japanese">テスト</p>
+                        <p>Validate solutions</p>
+                        <ul>
+                            <li>User testing</li>
+                            <li>Feedback</li>
+                            <li>Refine</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5 -->
+            <section>
+                <h2>Stage 1: Empathize</h2>
+                <h3 class="japanese">共感 - ユーザーの理解</h3>
+                <div class="two-column" style="font-size: 0.85em;">
+                    <div>
+                        <h4>Why Empathy Matters</h4>
+                        <ul>
+                            <li>Avoid assumptions</li>
+                            <li>Discover hidden needs</li>
+                            <li>Build better solutions</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Empathy Techniques</h4>
+                        <ul>
+                            <li>User Interviews</li>
+                            <li>Observation</li>
+                            <li>Empathy Mapping</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Empathy Map</h4>
+                        <ul>
+                            <li><strong>Says:</strong> Direct quotes</li>
+                            <li><strong>Thinks:</strong> Unstated thoughts</li>
+                            <li><strong>Does:</strong> Observed behaviors</li>
+                            <li><strong>Feels:</strong> Emotions during interaction</li>
+                        </ul>
+                        <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                            <p><strong>Goal:</strong> Deep understanding of user context</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6 -->
+            <section>
+                <h2>Stage 2: Define</h2>
+                <h3 class="japanese">定義 - 問題の明確化</h3>
+                <div style="background: #f0f0f0; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
+                    <h4>Point of View (POV) Statement</h4>
+                    <p style="font-family: monospace; font-size: 0.9em;">
+                        [User type] needs [need/goal]<br>
+                        because [insight from research]<br>
+                        but currently [current problem/limitation]
+                    </p>
+                </div>
+                <h4>Characteristics of Good Problem Statements</h4>
+                <ul style="font-size: 0.85em;">
+                    <li><strong>User-Focused:</strong> About people, not technology</li>
+                    <li><strong>Specific:</strong> Clear and actionable</li>
+                    <li><strong>Insight-Based:</strong> Based on real research</li>
+                    <li><strong>Problem-Oriented:</strong> Describes problem, not solution</li>
+                </ul>
+            </section>
+
+            <!-- Slide 7 -->
+            <section>
+                <h2>Stage 3: Ideate</h2>
+                <h3 class="japanese">発想 - ソリューションの生成</h3>
+                <h4>Ideation Principles</h4>
+                <ul style="font-size: 0.85em;">
+                    <li><strong>Quantity Over Quality:</strong> Generate many ideas first</li>
+                    <li><strong>Defer Judgment:</strong> No criticism during brainstorming</li>
+                    <li><strong>Build on Ideas:</strong> "Yes, and..." instead of "Yes, but..."</li>
+                    <li><strong>Encourage Wild Ideas:</strong> Crazy ideas can lead to breakthroughs</li>
+                </ul>
+                <h4>Creative Techniques</h4>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div>
+                        <p><strong>Rapid Sketching</strong></p>
+                        <ul>
+                            <li>8-10 quick ideas, 1 minute each</li>
+                            <li>Focus on concepts, not perfection</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>"What If" Scenarios</strong></p>
+                        <ul>
+                            <li>Remove constraints</li>
+                            <li>Change context</li>
+                            <li>Reverse assumptions</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8 -->
+            <section>
+                <h2>Stage 4: Prototype</h2>
+                <h3 class="japanese">試作 - 考えるために構築</h3>
+                <div style="background: #e8f5e9; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
+                    <p><strong>Build to Think • Fail Fast • Low-Fidelity First</strong></p>
+                </div>
+                <h4>Fidelity Levels</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Low-Fidelity</h4>
+                        <ul>
+                            <li>Paper sketches</li>
+                            <li>Wireframes</li>
+                            <li>Test concepts</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Mid-Fidelity</h4>
+                        <ul>
+                            <li>Digital wireframes</li>
+                            <li>Basic interactions</li>
+                            <li>Test functionality</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                        <h4>High-Fidelity</h4>
+                        <ul>
+                            <li>Visual design</li>
+                            <li>Full interactions</li>
+                            <li>Final validation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9 -->
+            <section>
+                <h2>Stage 5: Test</h2>
+                <h3 class="japanese">テスト - ユーザーから学ぶ</h3>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div>
+                        <h4>Testing Goals</h4>
+                        <ul>
+                            <li>Validate assumptions</li>
+                            <li>Discover usability issues</li>
+                            <li>Gather feedback</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Think-Aloud Protocol</h4>
+                        <ul>
+                            <li>User verbalizes thoughts</li>
+                            <li>Don't guide or help</li>
+                            <li>Rich insights into mental models</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Task-Based Testing</h4>
+                        <ul>
+                            <li>Realistic scenarios</li>
+                            <li>Observe behavior</li>
+                            <li>Measure success</li>
+                        </ul>
+                        <div style="background: #e3f2fd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                            <p><strong>Remember:</strong> Test early and often!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10 -->
+            <section>
+                <h2>User-Centered Design Principles</h2>
+                <h3 class="japanese">ユーザー中心デザイン原則</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; font-size: 0.75em;">
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>1. Know Your Users</h4>
+                        <ul>
+                            <li>User research</li>
+                            <li>Personas</li>
+                            <li>Context of use</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>2. Design for Usability</h4>
+                        <ul>
+                            <li>Efficiency</li>
+                            <li>Effectiveness</li>
+                            <li>Satisfaction</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                        <h4>3. Iterate on Feedback</h4>
+                        <ul>
+                            <li>Test early and often</li>
+                            <li>Learn from failures</li>
+                            <li>Continuous improvement</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 style="margin-top: 1em;">Design Principles in Practice</h4>
+                <ul style="font-size: 0.85em;">
+                    <li><strong>Visibility:</strong> Clear affordances and navigation</li>
+                    <li><strong>Feedback:</strong> Immediate response and clear status</li>
+                    <li><strong>Consistency:</strong> Similar actions work similarly</li>
+                </ul>
+            </section>
+
+            <!-- Slide 11 -->
+            <section>
+                <h2>Design Thinking vs. Traditional Design</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
+                        <h4>Traditional Approach</h4>
+                        <ul>
+                            <li>Solution-First</li>
+                            <li>Assumption-Based</li>
+                            <li>Linear Process</li>
+                            <li>Expert-Driven</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>Design Thinking</h4>
+                        <ul>
+                            <li>Problem-First</li>
+                            <li>Research-Based</li>
+                            <li>Iterative Process</li>
+                            <li>User-Driven</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 style="margin-top: 1em;">Benefits of Design Thinking</h4>
+                <ul style="font-size: 0.85em;">
+                    <li><strong>Better Solutions:</strong> Solve real problems</li>
+                    <li><strong>Reduced Risk:</strong> Test before investing heavily</li>
+                    <li><strong>User Satisfaction:</strong> People want to use the product</li>
+                    <li><strong>Innovation:</strong> Breakthrough solutions emerge</li>
+                </ul>
+            </section>
+
+            <!-- Slide 12 -->
+            <section>
+                <h2>Common Design Thinking Mistakes</h2>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #ffebee; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>1. Skipping Empathy</h4>
+                        <p><strong>Problem:</strong> Jump straight to solutions</p>
+                        <p><strong>Solution:</strong> Always start with user research</p>
+                    </div>
+                    <div style="background: #ffebee; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>2. Solution-Focused Problem Statements</h4>
+                        <p><strong>Problem:</strong> "Students need a better search function"</p>
+                        <p><strong>Better:</strong> "Students need to quickly find courses that match requirements"</p>
+                    </div>
+                    <div style="background: #ffebee; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>3. Judging Ideas Too Early</h4>
+                        <p><strong>Problem:</strong> "That won't work" during brainstorming</p>
+                        <p><strong>Solution:</strong> Generate many ideas first, evaluate later</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13 -->
+            <section>
+                <h2>This Week's Activity Preview</h2>
+                <h3>Campus App Redesign Challenge</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>What You'll Do</h4>
+                    <ol>
+                        <li>Choose a Feature (course registration, campus map, cafeteria ordering)</li>
+                        <li>Interview Users (2-3 fellow students)</li>
+                        <li>Apply Design Thinking (complete all 5 stages)</li>
+                        <li>Create Prototypes (low-fidelity solutions)</li>
+                        <li>Test and Iterate (get feedback and improve)</li>
+                    </ol>
+                    <h4>Time Breakdown</h4>
+                    <p>Empathize: 12 min | Define: 10 min | Ideate: 15 min | Prototype: 13 min | Test: 10 min</p>
+                </div>
+            </section>
+
+            <!-- Slide 14 -->
+            <section>
+                <h2>Bot Integration for Design Thinking</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div>
+                        <h4>Stage Navigation</h4>
+                        <ul>
+                            <li>Process Guide</li>
+                            <li>Checkpoint Validation</li>
+                            <li>Stage Transitions</li>
+                        </ul>
+                        <h4 style="margin-top: 1em;">Template Provision</h4>
+                        <ul>
+                            <li>Empathy Map Builder</li>
+                            <li>POV Statement Generator</li>
+                            <li>Ideation Prompts</li>
+                            <li>Prototype Templates</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Quality Assurance</h4>
+                        <ul>
+                            <li>Problem Statement Review</li>
+                            <li>Idea Evaluation</li>
+                            <li>Prototype Feedback</li>
+                        </ul>
+                        <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                            <p><strong>Example:</strong> "Your empathy map looks complete. Ready for Define?"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15 -->
+            <section>
+                <h2>Design Thinking Success Stories</h2>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>Airbnb</h4>
+                        <p><strong>Problem:</strong> Low-quality photos hurt bookings</p>
+                        <p><strong>Solution:</strong> Professional photography service</p>
+                        <p><strong>Result:</strong> 2.5x increase in bookings</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>Bank of America</h4>
+                        <p><strong>Problem:</strong> Customers not saving money</p>
+                        <p><strong>Solution:</strong> "Keep the Change" program</p>
+                        <p><strong>Result:</strong> 12 million new customers</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 16 -->
+            <section>
+                <h2>Questions & Preparation</h2>
+                <h3 class="japanese">質問と準備</h3>
+                <h4>Common Questions</h4>
+                <ul style="font-size: 0.85em;">
+                    <li><strong>"How do I know if my problem statement is good?"</strong><br>
+                        It should be user-focused, specific, and based on real insights</li>
+                    <li><strong>"What if I can't think of enough ideas?"</strong><br>
+                        Use creative techniques like "worst possible idea" or analogies</li>
+                    <li><strong>"How detailed should my prototype be?"</strong><br>
+                        Low-fidelity is perfect - focus on concepts, not visual details</li>
+                </ul>
+            </section>
+
+            <!-- Slide 17 -->
+            <section>
+                <h1>Let's Begin Design Thinking!</h1>
+                <h2 class="japanese">デザイン思考を始めましょう！</h2>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px; margin: 2em 0;">
+                    <h3 style="color: white;">Today's Challenge</h3>
+                    <p style="font-size: 1.1em;">Redesign a campus app feature using the complete design thinking process</p>
+                    <p class="japanese">完全なデザイン思考プロセスを使用してキャンパスアプリ機能を再設計する</p>
+                </div>
+                <h3>Remember</h3>
+                <ul style="font-size: 0.85em;">
+                    <li>There are no wrong answers - design thinking is about exploration</li>
+                    <li>Fail fast, learn quickly - each iteration teaches something</li>
+                    <li>Users are your guide - let their needs drive your solutions</li>
+                    <li>Have fun! Design thinking is creative and engaging</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

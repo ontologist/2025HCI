@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3: User Research | ユーザー調査</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h1>Week 3: User Research</h1>
+                <h2 class="japanese">第3週：ユーザー調査方法とニーズ分析</h2>
+                <hr>
+                <h3>Methods and Needs Analysis</h3>
+                <p class="japanese">調査方法とニーズ分析</p>
+                <br>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul>
+                    <li>User Research Fundamentals | ユーザー調査の基礎</li>
+                    <li>Research Methods | 調査方法</li>
+                    <li>Data Analysis | データ分析</li>
+                    <li>Hands-On Practice | ハンズオン練習</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives | 学習目標</h3>
+                <ul style="font-size: 0.8em;">
+                    <li>Conduct structured user interviews</li>
+                    <li>Apply active listening and probing techniques</li>
+                    <li>Analyze qualitative data to find patterns</li>
+                    <li>Synthesize findings into user needs</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Why User Research Matters</h2>
+                <h3 class="japanese">なぜユーザー調査が重要なのか</h3>
+                <div style="background: #ffebee; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
+                    <h4>What Happens Without Research</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li>Assumptions replace facts</li>
+                        <li>Solutions don't match problems</li>
+                        <li>Resources wasted</li>
+                        <li>User frustration</li>
+                    </ul>
+                </div>
+                <div style="background: #e8f5e9; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
+                    <h4>What Research Provides</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li>Evidence-based decisions</li>
+                        <li>Deep user understanding</li>
+                        <li>Problem validation</li>
+                        <li>Hidden insights</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Types of User Research</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Qualitative Research</h4>
+                        <p><strong>Understanding why and how</strong></p>
+                        <ul>
+                            <li>Methods: Interviews, observations</li>
+                            <li>Data: Words, behaviors, emotions</li>
+                            <li>Question: "Why do students find registration frustrating?"</li>
+                            <li>When: Early research, understanding context</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Quantitative Research</h4>
+                        <p><strong>Measuring what and how many</strong></p>
+                        <ul>
+                            <li>Methods: Surveys, analytics, A/B testing</li>
+                            <li>Data: Numbers, statistics</li>
+                            <li>Question: "How many students abandon registration?"</li>
+                            <li>When: Validating designs, measuring impact</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1em; text-align: center;"><strong>Key Insight:</strong> What people say ≠ What people do</p>
+            </section>
+
+            <section>
+                <h2>User Interview Fundamentals</h2>
+                <h3>Why Interviews Are Powerful</h3>
+                <ul style="font-size: 0.85em;">
+                    <li>Rich, detailed insights</li>
+                    <li>Flexibility to follow interesting leads</li>
+                    <li>Emotional data</li>
+                    <li>Build empathy</li>
+                    <li>Discover the unknown</li>
+                </ul>
+                <h3 style="margin-top: 1em;">Semi-Structured Interviews (Recommended)</h3>
+                <ul style="font-size: 0.85em;">
+                    <li>Guide with flexibility</li>
+                    <li>Core questions + follow-ups</li>
+                    <li>Balance consistency and exploration</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Interview Structure</h2>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>1. Introduction (2-3 min)</h4>
+                        <p>Build rapport, explain purpose, set expectations, get permission</p>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>2. Warm-Up Questions (3-5 min)</h4>
+                        <p>Easy, non-threatening questions to build comfort</p>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>3. Main Questions (15-20 min)</h4>
+                        <p>Core research topics, open-ended questions, deep exploration</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>4. Wrap-Up (2-3 min)</h4>
+                        <p>"Anything else?" Thank participant, explain next steps</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>The Art of Asking Questions</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
+                        <h4>Avoid: Closed Questions</h4>
+                        <ul>
+                            <li>❌ "Do you like the system?"</li>
+                            <li>❌ "Is it fast or slow?"</li>
+                            <li>❌ "Would you use a mobile app?"</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>Use: Open-Ended Questions</h4>
+                        <ul>
+                            <li>✅ "Tell me about your last registration experience"</li>
+                            <li>✅ "Walk me through how you choose courses"</li>
+                            <li>✅ "What's the most frustrating part?"</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 style="margin-top: 1em;">Critical Probing Questions</h4>
+                <ul style="font-size: 0.85em;">
+                    <li>"Why?"</li>
+                    <li>"Can you tell me more about that?"</li>
+                    <li>"Can you give me an example?"</li>
+                    <li>"What happened next?"</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Active Listening Skills</h2>
+                <h3 class="japanese">アクティブリスニングスキル</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Most Important Interview Skill: Actually Listening</h4>
+                    <div class="two-column">
+                        <div>
+                            <h5>1. Give Full Attention</h5>
+                            <ul>
+                                <li>Put away distractions</li>
+                                <li>Make eye contact</li>
+                                <li>Don't interrupt</li>
+                            </ul>
+                            <h5>2. Let Silence Work</h5>
+                            <ul>
+                                <li>Don't fear silence</li>
+                                <li>Count to 5 before filling gaps</li>
+                                <li>Leads to deeper insights</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>3. Watch Body Language</h5>
+                            <ul>
+                                <li>Frustration: Sighs, tension</li>
+                                <li>Confusion: Pauses, hesitation</li>
+                                <li>Excitement: Leaning forward, smiling</li>
+                            </ul>
+                            <h5>4. Take Good Notes</h5>
+                            <ul>
+                                <li>Record direct quotes</li>
+                                <li>Note behaviors</li>
+                                <li>Capture emotions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Observation Methods</h2>
+                <h3>Learning by Watching</h3>
+                <p><strong>"What people do" often differs from "what people say"</strong></p>
+                <div style="font-size: 0.8em;">
+                    <h4>Direct Observation</h4>
+                    <ul>
+                        <li>Watch users in natural environment</li>
+                        <li>Don't interfere or help</li>
+                        <li>Note what they do, not what they say</li>
+                    </ul>
+                    <h4>Contextual Inquiry</h4>
+                    <ul>
+                        <li>Combination of observation + interview</li>
+                        <li>Watch them work, ask questions during process</li>
+                        <li>Best for understanding workflows</li>
+                    </ul>
+                    <h4>Think-Aloud Protocol</h4>
+                    <ul>
+                        <li>Users verbalize thoughts while performing tasks</li>
+                        <li>Reveals mental models and confusion points</li>
+                        <li>Great for usability testing</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Surveys: When and How</h2>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>Surveys are Good For:</h4>
+                        <ul>
+                            <li>Large sample sizes (100+ participants)</li>
+                            <li>Quantifying patterns</li>
+                            <li>Validating assumptions</li>
+                            <li>Reaching distributed users</li>
+                        </ul>
+                    </div>
+                    <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
+                        <h4>Surveys are BAD For:</h4>
+                        <ul>
+                            <li>Understanding "why"</li>
+                            <li>Initial exploration</li>
+                            <li>Discovering unknown problems</li>
+                            <li>Deep insights</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 style="margin-top: 1em;">Survey Design Best Practices</h4>
+                <ul style="font-size: 0.85em;">
+                    <li>Keep it short: 5-10 minutes max</li>
+                    <li>Clear, simple language</li>
+                    <li>Avoid leading questions</li>
+                    <li>Test before distributing</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Analyzing Qualitative Data</h2>
+                <h3>Affinity Mapping Process</h3>
+                <div style="font-size: 0.8em;">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 5px;">
+                            <h5>1. Extract Insights</h5>
+                            <p>Write each finding on separate note</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 5px;">
+                            <h5>2. Group Similar Items</h5>
+                            <p>Look for patterns, cluster related insights</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 5px;">
+                            <h5>3. Label Themes</h5>
+                            <p>Name each cluster descriptively</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 5px;">
+                            <h5>4. Prioritize</h5>
+                            <p>How many users? How severe?</p>
+                        </div>
+                    </div>
+                    <h4 style="margin-top: 1em;">Finding Patterns</h4>
+                    <ul>
+                        <li><strong>Frequency:</strong> Mentioned by 4/5 users → Important</li>
+                        <li><strong>Emotional Intensity:</strong> Strong frustration → High priority</li>
+                        <li><strong>Surprises:</strong> Unexpected findings → Valuable insights</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Synthesizing User Needs</h2>
+                <h3>From Findings to Actionable Needs</h3>
+                <div style="background: #f0f0f0; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
+                    <h4>User Needs Statement Framework</h4>
+                    <p style="font-family: monospace; font-size: 0.9em;">
+                        [User type] needs to [goal/action]<br>
+                        in order to [desired outcome]<br>
+                        because [current challenge/context]
+                    </p>
+                </div>
+                <h4>Characteristics of Good User Needs</h4>
+                <ul style="font-size: 0.85em;">
+                    <li><strong>User-Focused:</strong> About users, not systems</li>
+                    <li><strong>Specific:</strong> Clear and concrete</li>
+                    <li><strong>Evidence-Based:</strong> Supported by research data</li>
+                    <li><strong>Problem-Oriented:</strong> Not solution-oriented</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Research Ethics</h2>
+                <h3 class="japanese">調査倫理とベストプラクティス</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Informed Consent</h4>
+                    <ul>
+                        <li>Explain purpose, duration, data usage</li>
+                        <li>Get permission (verbal or written)</li>
+                        <li>Right to withdraw anytime</li>
+                    </ul>
+                    <h4>Privacy and Confidentiality</h4>
+                    <ul>
+                        <li>Anonymize data</li>
+                        <li>Secure storage</li>
+                        <li>Use pseudonyms in reports</li>
+                    </ul>
+                    <h4>Avoiding Bias</h4>
+                    <ul>
+                        <li>Don't lead participants</li>
+                        <li>Stay neutral</li>
+                        <li>Include diverse participants</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Common Research Mistakes</h2>
+                <div style="font-size: 0.75em;">
+                    <div style="background: #ffebee; padding: 0.8em; margin: 0.5em 0; border-radius: 5px;">
+                        <h5>1. Leading Questions</h5>
+                        <p>❌ "Don't you think the interface is confusing?"</p>
+                        <p>✅ "How do you feel about the interface?"</p>
+                    </div>
+                    <div style="background: #ffebee; padding: 0.8em; margin: 0.5em 0; border-radius: 5px;">
+                        <h5>2. Asking About Future Behavior</h5>
+                        <p>❌ "Would you use a mobile version?"</p>
+                        <p>✅ "Tell me about times you've tried to register from your phone"</p>
+                    </div>
+                    <div style="background: #ffebee; padding: 0.8em; margin: 0.5em 0; border-radius: 5px;">
+                        <h5>3. Talking Too Much</h5>
+                        <p><strong>80/20 rule:</strong> Participant talks 80%, you talk 20%</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Today's Activity Preview</h2>
+                <h3>Hands-On User Interview Practice</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Activity Structure</h4>
+                    <ol>
+                        <li><strong>Interview Preparation (12 min):</strong> Create interview guide with bot's help</li>
+                        <li><strong>Conduct Interviews (15 min):</strong> Interview 2-3 fellow students</li>
+                        <li><strong>Data Analysis (12 min):</strong> Use affinity mapping, identify patterns</li>
+                        <li><strong>Synthesize User Needs (11 min):</strong> Transform findings into needs statements</li>
+                        <li><strong>Create Research Report (10 min):</strong> Document all findings</li>
+                    </ol>
+                    <div style="background: #e3f2fd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                        <p><strong>Bot Support:</strong> Interview templates, analysis frameworks, quality validation</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways | 主要な要点</h2>
+                <div style="font-size: 0.85em;">
+                    <h3>1. Research is Essential</h3>
+                    <ul>
+                        <li>Never design without understanding users</li>
+                        <li>Evidence > Assumptions</li>
+                        <li>What people do > What people say</li>
+                    </ul>
+                    <h3>2. Ask Better Questions</h3>
+                    <ul>
+                        <li>Open-ended, not closed</li>
+                        <li>About past behavior, not future hypotheticals</li>
+                        <li>Neutral, not leading</li>
+                    </ul>
+                    <h3>3. Listen More Than Talk</h3>
+                    <ul>
+                        <li>80/20 rule - let them talk</li>
+                        <li>Silence is your friend</li>
+                        <li>Follow interesting threads</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Looking Ahead</h2>
+                <h3>Next Week: Personas and Journey Mapping</h3>
+                <p><strong>Building on today's research</strong></p>
+                <ul style="font-size: 0.85em;">
+                    <li>Transform research into personas</li>
+                    <li>Map user journeys</li>
+                    <li>Create scenarios</li>
+                    <li>Extract requirements</li>
+                </ul>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px; margin: 2em 0;">
+                    <h3 style="color: white;">Ready to Start?</h3>
+                    <p>Access your bot portal and begin your user research journey!</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

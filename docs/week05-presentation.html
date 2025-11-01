@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5: Mobile Design Principles | モバイルデザイン原則</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h1>Week 5: Mobile Design Principles</h1>
+                <h2 class="japanese">第5週：スマートデバイスインターフェースデザイン原則</h2>
+                <hr>
+                <h3>Smart Device Interface Design</h3>
+                <p class="japanese">モバイルファーストデザイン</p>
+                <br>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul>
+                    <li>Mobile-First Design Philosophy | モバイルファーストデザイン哲学</li>
+                    <li>Touch Interface Principles | タッチインターフェース原則</li>
+                    <li>Responsive Design Fundamentals | レスポンシブデザイン基礎</li>
+                    <li>Mobile UI Patterns | モバイルUIパターン</li>
+                    <li>Hands-On Sketching Workshop | ハンズオンスケッチワークショップ</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives | 学習目標</h3>
+                <ul style="font-size: 0.8em;">
+                    <li>Understand and apply mobile-first design principles</li>
+                    <li>Design touch-friendly interfaces with appropriate target sizes</li>
+                    <li>Create responsive layouts for different screen sizes</li>
+                    <li>Apply common mobile UI patterns effectively</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>The Mobile Revolution</h2>
+                <h3>Mobile-First Is Not Optional</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Key Statistics</h4>
+                    <ul>
+                        <li>60%+ of web traffic from mobile devices</li>
+                        <li>85% smartphone penetration in developed countries</li>
+                        <li>3-5 hours average daily mobile usage</li>
+                        <li>70%+ of online purchases on mobile</li>
+                    </ul>
+                    <h4>Why Mobile-First Design?</h4>
+                    <ul>
+                        <li><strong>Users expect it:</strong> Mobile experience must be excellent</li>
+                        <li><strong>Constraints breed creativity:</strong> Limited space forces prioritization</li>
+                        <li><strong>Progressive enhancement:</strong> Start with core, enhance for larger screens</li>
+                        <li><strong>Performance matters:</strong> Mobile users on slower connections</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Mobile-First Design Philosophy</h2>
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
+                        <h4>Traditional Approach (Desktop-First)</h4>
+                        <ul>
+                            <li>Design full-featured desktop site</li>
+                            <li>"Shrink" it to fit mobile</li>
+                            <li>Features get cut or hidden</li>
+                            <li>Result: Poor mobile experience</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>Mobile-First Approach</h4>
+                        <ul>
+                            <li>Start with core functionality</li>
+                            <li>Design for smallest screen</li>
+                            <li>Prioritize ruthlessly</li>
+                            <li>Result: Great experience everywhere</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 style="margin-top: 1em;">Core Principles</h3>
+                <ul style="font-size: 0.8em;">
+                    <li><strong>Content first:</strong> Focus on what users need most</li>
+                    <li><strong>Simplicity:</strong> Remove everything not essential</li>
+                    <li><strong>Touch-friendly:</strong> Design for fingers, not mouse</li>
+                    <li><strong>Performance:</strong> Fast load times critical</li>
+                    <li><strong>Thumb-first:</strong> Key actions within thumb reach</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Touch Interface Fundamentals</h2>
+                <h3>Designing for Fingers, Not Cursors</h3>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Mouse/Trackpad</h4>
+                        <ul>
+                            <li>Precise pixel-level control</li>
+                            <li>Hover states possible</li>
+                            <li>Right-click for context</li>
+                            <li>Small targets (10x10px) acceptable</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Touch</h4>
+                        <ul>
+                            <li>Finger is 44-48px wide minimum</li>
+                            <li>No hover - all interactions are taps</li>
+                            <li>Long-press for context</li>
+                            <li>Finger obscures target</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 style="margin-top: 1em;">Target Size Guidelines</h3>
+                <ul style="font-size: 0.8em;">
+                    <li><strong>Minimum:</strong> 44x44 points (Apple), 48x48dp (Google)</li>
+                    <li><strong>Recommended:</strong> 48-56px for important actions</li>
+                    <li><strong>Spacing:</strong> At least 8px between targets</li>
+                    <li><strong>Primary actions:</strong> Even larger (60-70px)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Touch Zones & Thumb Reach</h2>
+                <h3>One-Handed Phone Use</h3>
+                <div style="font-size: 0.85em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em;">
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>Easy to Reach</h4>
+                            <p><strong>Bottom center (thumb zone)</strong></p>
+                            <ul>
+                                <li>Primary actions</li>
+                                <li>Navigation</li>
+                                <li>Most-used buttons</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>Stretch Zone</h4>
+                            <p><strong>Top and opposite corners</strong></p>
+                            <ul>
+                                <li>Secondary actions</li>
+                                <li>Less frequent tasks</li>
+                                <li>Requires hand shift</li>
+                            </ul>
+                        </div>
+                        <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
+                            <h4>Hard to Reach</h4>
+                            <p><strong>Top opposite corner</strong></p>
+                            <ul>
+                                <li>Infrequent actions</li>
+                                <li>Settings, help</li>
+                                <li>Destructive actions OK</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1em; text-align: center;"><strong>Design Implication:</strong> Place primary actions in thumb zone</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Screen Sizes and Responsive Design</h2>
+                <h3>The Device Landscape</h3>
+                <div style="font-size: 0.75em;">
+                    <h4>Common Screen Sizes</h4>
+                    <ul>
+                        <li><strong>Small phones:</strong> 320-375px width (iPhone SE)</li>
+                        <li><strong>Standard phones:</strong> 375-414px width (iPhone 12-15)</li>
+                        <li><strong>Large phones:</strong> 414-480px width (iPhone Pro Max)</li>
+                        <li><strong>Tablets (portrait):</strong> 768-834px width (iPad)</li>
+                        <li><strong>Tablets (landscape):</strong> 1024-1112px width</li>
+                        <li><strong>Desktop:</strong> 1280px+ width</li>
+                    </ul>
+                    <h4>Responsive Design Principles</h4>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5em; margin-top: 0.5em;">
+                        <div style="background: #e3f2fd; padding: 0.8em; border-radius: 5px;">
+                            <h5>1. Fluid Layouts</h5>
+                            <p>Use percentages, not fixed pixels</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 0.8em; border-radius: 5px;">
+                            <h5>2. Flexible Images</h5>
+                            <p>Scale with container</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 0.8em; border-radius: 5px;">
+                            <h5>3. Media Queries</h5>
+                            <p>Breakpoints at key sizes</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 0.8em; border-radius: 5px;">
+                            <h5>4. Content Priority</h5>
+                            <p>Most important first</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Mobile Navigation Patterns</h2>
+                <h3>Navigation on Small Screens</h3>
+                <div style="font-size: 0.7em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>1. Bottom Tab Bar (Most Common)</h4>
+                            <p><strong>When:</strong> 3-5 primary sections, frequent switching</p>
+                            <p><strong>Pros:</strong> Always visible, easy thumb access, clear location</p>
+                            <p><strong>Cons:</strong> Takes screen space, limited to 5 items</p>
+                            <p><strong>Examples:</strong> Instagram, Twitter, iOS Apps</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>2. Hamburger Menu (Hidden Navigation)</h4>
+                            <p><strong>When:</strong> Many options, infrequent changes</p>
+                            <p><strong>Pros:</strong> Saves space, can hold many items</p>
+                            <p><strong>Cons:</strong> Hidden = lower discoverability</p>
+                            <p><strong>Best:</strong> Combine with bottom bar</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>3. Top Navigation Bar</h4>
+                            <p><strong>When:</strong> Single-level, 2-4 main options</p>
+                            <p><strong>Pros:</strong> Standard pattern, clear hierarchy</p>
+                            <p><strong>Cons:</strong> Harder to reach with thumb</p>
+                            <p><strong>Common:</strong> Settings, back, search</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>4. Swipe Gestures</h4>
+                            <p><strong>When:</strong> Sequential content, galleries</p>
+                            <p><strong>Pros:</strong> Natural, efficient, full screen</p>
+                            <p><strong>Cons:</strong> Not discoverable, hard to learn</p>
+                            <p><strong>Best:</strong> Provide visual hints (arrows, dots)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Mobile Form Design</h2>
+                <h3>Forms Are Painful on Mobile - Minimize Input</h3>
+                <div style="font-size: 0.75em;">
+                    <h4>Form Design Principles</h4>
+                    <div class="two-column">
+                        <div>
+                            <h5>1. Minimize Input</h5>
+                            <ul>
+                                <li>Only essential information</li>
+                                <li>Smart defaults, pre-fill when possible</li>
+                                <li>Use device capabilities</li>
+                                <li>Single-column layout</li>
+                            </ul>
+                            <h5>2. Appropriate Input Types</h5>
+                            <ul>
+                                <li>Email: Show email keyboard (@, .com)</li>
+                                <li>Phone: Numeric keypad</li>
+                                <li>Dates: Date picker, not text</li>
+                                <li>Selections: Dropdowns, radio buttons</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>3. Labels and Instructions</h5>
+                            <ul>
+                                <li>Label above field (always visible)</li>
+                                <li>Clear instructions upfront</li>
+                                <li>Inline validation (immediate feedback)</li>
+                                <li>Specific error messages</li>
+                            </ul>
+                            <h5>4. Touch-Friendly Controls</h5>
+                            <ul>
+                                <li>Large input fields: 44px minimum height</li>
+                                <li>Adequate spacing: 16px between fields</li>
+                                <li>Large tap targets for checkboxes (44px)</li>
+                                <li>Primary submit button, large and clear</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Mobile UI Patterns - Lists and Content</h2>
+                <div style="font-size: 0.7em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>1. Vertical Scrolling List</h4>
+                            <p><strong>When:</strong> Feed, inbox, search results</p>
+                            <ul>
+                                <li>Card-based design for separation</li>
+                                <li>Thumbnail + title + brief description</li>
+                                <li>Swipe actions (archive, delete)</li>
+                                <li>Pull-to-refresh</li>
+                            </ul>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>2. Grid Layout</h4>
+                            <p><strong>When:</strong> Photos, products, visual browsing</p>
+                            <ul>
+                                <li>2-3 columns on phone, more on tablet</li>
+                                <li>Consistent aspect ratios</li>
+                                <li>Adequate spacing between items</li>
+                                <li>Responsive grid (adapts to orientation)</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>3. Horizontal Scrolling Carousel</h4>
+                            <p><strong>When:</strong> Categories, featured items, stories</p>
+                            <ul>
+                                <li>Show partial next item (hints more content)</li>
+                                <li>Pagination dots or indicators</li>
+                                <li>Swipe-friendly spacing</li>
+                                <li>Avoid auto-advance (users control)</li>
+                            </ul>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>4. Expandable Sections (Accordion)</h4>
+                            <p><strong>When:</strong> FAQs, settings, long content</p>
+                            <ul>
+                                <li>Clear expand/collapse indicators (+ / -)</li>
+                                <li>One or multiple sections at a time</li>
+                                <li>Smooth animations</li>
+                                <li>Save scroll position</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Feedback and States</h2>
+                <h3>Users Need to Know What's Happening</h3>
+                <div style="font-size: 0.75em;">
+                    <h4>Loading States</h4>
+                    <div class="two-column">
+                        <div>
+                            <h5>1. Skeleton Screens</h5>
+                            <ul>
+                                <li>Placeholder content shapes</li>
+                                <li>Shows structure, feels faster</li>
+                                <li>Better than spinners</li>
+                            </ul>
+                            <h5>2. Progress Indicators</h5>
+                            <ul>
+                                <li>Indeterminate spinner: Unknown duration</li>
+                                <li>Progress bar: Known duration</li>
+                                <li>Estimated time: "About 30 seconds"</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>3. Optimistic UI</h5>
+                            <ul>
+                                <li>Show success immediately</li>
+                                <li>Revert if fails</li>
+                                <li>Example: Like button, send message</li>
+                            </ul>
+                            <h5>Button States</h5>
+                            <ul>
+                                <li>Default: Resting state</li>
+                                <li>Pressed: Visual feedback when tapped</li>
+                                <li>Disabled: Grayed out, not tappable</li>
+                                <li>Loading: Spinner inside button</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 style="margin-top: 0.5em;">Error Handling</h4>
+                    <ul>
+                        <li>Inline errors next to field</li>
+                        <li>Toast messages at bottom</li>
+                        <li>Error screens for critical failures</li>
+                        <li>Retry actions - give users way to fix</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Typography on Mobile</h2>
+                <h3>Readability Is Critical</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Font Size Guidelines</h4>
+                    <ul>
+                        <li><strong>Body text:</strong> 16px minimum (14px is too small)</li>
+                        <li><strong>Headings:</strong> 24-32px for primary headings</li>
+                        <li><strong>Small text:</strong> 12-14px for captions, labels (use sparingly)</li>
+                        <li><strong>Button text:</strong> 16-18px, bold or medium weight</li>
+                        <li><strong>Line height:</strong> 1.4-1.6 for body text</li>
+                    </ul>
+                    <h4>Typography Best Practices</h4>
+                    <ul>
+                        <li><strong>Contrast:</strong> 4.5:1 minimum for body text</li>
+                        <li><strong>Line length:</strong> 50-75 characters per line</li>
+                        <li><strong>Font choice:</strong> System fonts load fastest</li>
+                        <li><strong>Hierarchy:</strong> Clear visual distinction between levels</li>
+                        <li><strong>Avoid long paragraphs:</strong> Break into shorter chunks</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Color and Contrast</h2>
+                <h3>Designing for Various Lighting Conditions</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Contrast Requirements</h4>
+                    <ul>
+                        <li><strong>Normal text (16px+):</strong> 4.5:1 minimum</li>
+                        <li><strong>Large text (18px+ or 14px+ bold):</strong> 3:1 minimum</li>
+                        <li><strong>UI elements:</strong> 3:1 (buttons, icons, borders)</li>
+                        <li><strong>Test in sunlight:</strong> Indoors ≠ outdoors</li>
+                    </ul>
+                    <h4>Color Usage</h4>
+                    <ul>
+                        <li><strong>Don't rely on color alone:</strong> Add icons, text, patterns</li>
+                        <li><strong>Accessible palette:</strong> Test for color blindness (8% of men)</li>
+                        <li><strong>Primary action color:</strong> Consistent throughout app</li>
+                        <li><strong>Standard conventions:</strong> Error = red, success = green, warning = yellow</li>
+                    </ul>
+                    <h4>Dark Mode</h4>
+                    <ul>
+                        <li>Reduce eye strain in low light</li>
+                        <li>True black vs. dark gray (pure black can cause smearing on OLED)</li>
+                        <li>Desaturated colors (bright colors harsh in dark mode)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Performance and Optimization</h2>
+                <h3>Speed Is a Feature</h3>
+                <div style="font-size: 0.75em;">
+                    <h4>Why Performance Matters</h4>
+                    <ul>
+                        <li>Pages should load in under 3 seconds</li>
+                        <li>Mobile networks often slower than wifi</li>
+                        <li>Users on limited data plans</li>
+                        <li>Heavy pages drain battery faster</li>
+                    </ul>
+                    <h4>Optimization Strategies</h4>
+                    <div class="two-column">
+                        <div>
+                            <h5>1. Image Optimization</h5>
+                            <ul>
+                                <li>Compress images (ImageOptim, TinyPNG)</li>
+                                <li>Responsive images (appropriate size)</li>
+                                <li>Lazy loading (load as user scrolls)</li>
+                                <li>Use WebP (smaller than JPEG)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>2. Minimize Code</h5>
+                            <ul>
+                                <li>Remove unused code</li>
+                                <li>Minify CSS/JS</li>
+                                <li>Code splitting (load only needed)</li>
+                            </ul>
+                            <h5>3. Reduce Requests</h5>
+                            <ul>
+                                <li>Combine files</li>
+                                <li>Cache assets</li>
+                                <li>Use CDN</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Accessibility on Mobile</h2>
+                <h3>Design for Everyone</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+                        <div>
+                            <h4>1. Touch Targets</h4>
+                            <ul>
+                                <li>44x44px minimum (critical for accessibility)</li>
+                                <li>Adequate spacing (prevent accidental taps)</li>
+                                <li>One-handed operation</li>
+                            </ul>
+                            <h4>2. Screen Reader Support</h4>
+                            <ul>
+                                <li>Alt text for images</li>
+                                <li>Semantic HTML (headings, buttons, links)</li>
+                                <li>Labeled form fields</li>
+                                <li>Meaningful link text ("Download report" not "click here")</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>3. Text and Contrast</h4>
+                            <ul>
+                                <li>Minimum contrast ratios (4.5:1 text, 3:1 UI)</li>
+                                <li>Resizable text (support user preferences)</li>
+                                <li>Don't disable zoom</li>
+                            </ul>
+                            <h4>4. Motion and Animations</h4>
+                            <ul>
+                                <li>Respect reduced motion (some users get dizzy)</li>
+                                <li>Provide controls (pause/stop auto-playing)</li>
+                                <li>Avoid flashing (can trigger seizures)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Mobile Design Process</h2>
+                <h3>From Idea to Interface</h3>
+                <div style="font-size: 0.75em;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5em;">
+                        <div style="background: #e3f2fd; padding: 0.8em; border-radius: 5px;">
+                            <h5>1. Review Personas & Scenarios</h5>
+                            <p>Who are you designing for? What are they trying to do?</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 0.8em; border-radius: 5px;">
+                            <h5>2. Identify Core Functionality</h5>
+                            <p>What's essential? Mobile = focus</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 0.8em; border-radius: 5px;">
+                            <h5>3. Sketch Info Architecture</h5>
+                            <p>How many screens? Navigation structure?</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 0.8em; border-radius: 5px;">
+                            <h5>4. Sketch Layouts (Today!)</h5>
+                            <p>Low-fidelity first, multiple iterations</p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 0.8em; border-radius: 5px;">
+                            <h5>5. Apply Mobile Patterns</h5>
+                            <p>Navigation, content display, input</p>
+                        </div>
+                        <div style="background: #fff3cd; padding: 0.8em; border-radius: 5px;">
+                            <h5>6. Test and Refine</h5>
+                            <p>Thumb test, scenario walkthrough</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Today's Activity Preview</h2>
+                <h3>Mobile Interface Sketching Workshop</h3>
+                <div style="font-size: 0.75em;">
+                    <h4>Activity Structure</h4>
+                    <ol>
+                        <li><strong>Persona & Scenario Review (8 min):</strong> Review Week 4 personas, select mobile scenario</li>
+                        <li><strong>Information Architecture (10 min):</strong> Map user flow, define navigation</li>
+                        <li><strong>Low-Fidelity Sketching (22 min):</strong> Sketch 3-5 key screens on paper</li>
+                        <li><strong>Apply Mobile Patterns (15 min):</strong> Refine with mobile UI patterns, add interactions</li>
+                        <li><strong>Peer Review & Iteration (10 min):</strong> Exchange sketches, walkthrough, get feedback</li>
+                    </ol>
+                    <h4>Materials Needed</h4>
+                    <ul>
+                        <li>Paper or mobile screen templates</li>
+                        <li>Pencils, pens, markers</li>
+                        <li>Your Week 4 personas and scenarios</li>
+                    </ul>
+                    <div style="background: #e3f2fd; padding: 1em; margin-top: 0.5em; border-radius: 5px;">
+                        <p><strong>Bot Support:</strong> Mobile screen templates, UI pattern library, touch target sizing guide</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways | 主要な要点</h2>
+                <div style="font-size: 0.85em;">
+                    <h3>1. Mobile-First Is Essential</h3>
+                    <ul>
+                        <li>Start with smallest screen, enhance for larger</li>
+                        <li>Constraints force prioritization</li>
+                        <li>Focus on core functionality</li>
+                    </ul>
+                    <h3>2. Touch Is Different from Mouse</h3>
+                    <ul>
+                        <li>Minimum 44x44px touch targets</li>
+                        <li>Design for thumb reach</li>
+                        <li>No hover states - explicit feedback</li>
+                    </ul>
+                    <h3>3. Responsive Design Adapts</h3>
+                    <ul>
+                        <li>Fluid layouts, flexible images</li>
+                        <li>Content priority shifts with screen size</li>
+                        <li>Breakpoints at key device sizes</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Looking Ahead</h2>
+                <h3>Next Week: Usability Testing and Evaluation</h3>
+                <p><strong>Testing your designs with real users</strong></p>
+                <ul style="font-size: 0.85em;">
+                    <li>Usability testing methods</li>
+                    <li>Think-aloud protocol</li>
+                    <li>Identifying usability issues</li>
+                    <li>Analyzing test results</li>
+                    <li>Hands-on testing with your mobile sketches</li>
+                </ul>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px; margin: 2em 0;">
+                    <h3 style="color: white;">Ready to Design?</h3>
+                    <p>Grab your paper and pencils - let's sketch interfaces that work on the devices your personas actually use!</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>

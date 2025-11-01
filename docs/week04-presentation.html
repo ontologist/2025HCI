@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4: Personas & Journey Mapping | ペルソナとジャーニーマッピング</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .bilingual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .japanese {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+        .highlight {
+            color: #2a76dd;
+            font-weight: bold;
+        }
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h1>Week 4: Personas & Journey Mapping</h1>
+                <h2 class="japanese">第4週：ペルソナ、ユーザージャーニーマッピング、シナリオ</h2>
+                <hr>
+                <h3>From Research to Design Artifacts</h3>
+                <p class="japanese">調査からデザイン成果物へ</p>
+                <br>
+                <p><strong>Instructor:</strong> Yuri Tijerino</p>
+                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+            </section>
+
+            <section>
+                <h2>Today's Agenda | 今日のアジェンダ</h2>
+                <ul>
+                    <li>Personas | ペルソナ: Creating representative user profiles</li>
+                    <li>User Journey Maps | ユーザージャーニーマップ: Visualizing experiences</li>
+                    <li>Scenarios | シナリオ: Story-driven design contexts</li>
+                    <li>Hands-On Workshop | ハンズオンワークショップ: Build your design artifacts</li>
+                </ul>
+                <hr>
+                <h3>Learning Objectives | 学習目標</h3>
+                <ul style="font-size: 0.8em;">
+                    <li>Create data-driven personas from research findings</li>
+                    <li>Map complete user journeys with touchpoints and emotions</li>
+                    <li>Write detailed scenarios that guide design decisions</li>
+                    <li>Connect research artifacts to design requirements</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What Are Personas? | ペルソナとは？</h2>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p style="font-size: 1.1em;"><strong>Personas</strong> are fictional, yet realistic, representations of your key user segments based on research data.</p>
+                    <p class="japanese">ペルソナは調査データに基づく、架空だが現実的な、主要ユーザーセグメントの表現です。</p>
+                </div>
+                <h3>Why Personas Matter</h3>
+                <ul style="font-size: 0.85em;">
+                    <li>Focus design decisions - Design for specific users, not "everyone"</li>
+                    <li>Build empathy - Make users real and memorable</li>
+                    <li>Communicate insights - Share research findings with teams</li>
+                    <li>Prevent feature creep - "Would Sarah use this?"</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Anatomy of a Persona</h2>
+                <div style="font-size: 0.75em;">
+                    <h3>Essential Components</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                            <h4>1. Basic Information</h4>
+                            <ul>
+                                <li>Name</li>
+                                <li>Photo</li>
+                                <li>Demographics</li>
+                                <li>Quote</li>
+                            </ul>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
+                            <h4>2. Background & Context</h4>
+                            <ul>
+                                <li>Who they are</li>
+                                <li>Their environment</li>
+                                <li>Technology proficiency</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                            <h4>3. Goals & Motivations</h4>
+                            <ul>
+                                <li>Primary goals</li>
+                                <li>Motivations</li>
+                                <li>Success criteria</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; margin-top: 0.5em;">
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>4. Pain Points</h4>
+                            <ul>
+                                <li>Current challenges</li>
+                                <li>Frustrations</li>
+                                <li>Barriers</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                            <h4>5. Behaviors & Patterns</h4>
+                            <ul>
+                                <li>How they work</li>
+                                <li>Technology usage</li>
+                                <li>Communication preferences</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3cd; padding: 1em; border-radius: 8px;">
+                            <h4>6. Needs & Requirements</h4>
+                            <ul>
+                                <li>From your research</li>
+                                <li>Evidence-based</li>
+                                <li>Priority ranking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Creating Data-Driven Personas</h2>
+                <h3>The Process</h3>
+                <div style="font-size: 0.8em;">
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 5px;">
+                            <h5>1. Review Research</h5>
+                            <p>Gather all interview notes and findings</p>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 5px;">
+                            <h5>2. Identify Segments</h5>
+                            <p>Look for patterns in behaviors and goals</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 5px;">
+                            <h5>3. Create 2-4 Personas</h5>
+                            <p>Each represents a segment</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 5px;">
+                            <h5>4. Make Them Real</h5>
+                            <p>Names, photos, authentic quotes</p>
+                        </div>
+                        <div style="background: #fce4ec; padding: 1em; border-radius: 5px;">
+                            <h5>5. Validate</h5>
+                            <p>Every element traces to research</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Persona Example</h2>
+                <h3>Sarah Chen - The Proactive Planner</h3>
+                <div style="font-size: 0.7em;">
+                    <p><strong>Age:</strong> 21 | <strong>Year:</strong> Junior | <strong>Major:</strong> Business</p>
+                    <p><strong>Quote:</strong> "I need to see all my options at once so I can plan the perfect schedule around my part-time job."</p>
+
+                    <div class="two-column">
+                        <div>
+                            <h4>Background</h4>
+                            <p>Junior business student working 20 hours/week. Highly organized, plans everything in advance. Comfortable with technology, expects apps to work quickly.</p>
+
+                            <h4>Goals</h4>
+                            <ul>
+                                <li>Register for classes that fit work schedule</li>
+                                <li>Graduate on time with required courses</li>
+                                <li>Maintain GPA while working</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Pain Points</h4>
+                            <ul>
+                                <li>System doesn't show schedule conflicts</li>
+                                <li>Must check each course individually</li>
+                                <li>No way to compare with work schedule</li>
+                                <li>Popular courses fill up within hours</li>
+                            </ul>
+
+                            <h4>Needs (from research)</h4>
+                            <ul>
+                                <li>Quickly see schedule conflicts</li>
+                                <li>Compare course times with personal calendar</li>
+                                <li>Save multiple schedule options</li>
+                                <li>Receive notifications when courses open</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5em;"><strong>Evidence:</strong> Based on interviews with 5 students, 4 mentioned work schedule conflicts as primary frustration.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>User Journey Maps</h2>
+                <h3 class="japanese">ユーザージャーニーマップ</h3>
+                <p><strong>A visual representation of the user's experience over time</strong></p>
+                <h4>Why Journey Maps Matter</h4>
+                <ul style="font-size: 0.85em;">
+                    <li>Identify pain points - Where users struggle</li>
+                    <li>Find opportunities - Where to improve experience</li>
+                    <li>Build empathy - Walk in users' shoes</li>
+                    <li>Align teams - Shared understanding</li>
+                    <li>Prioritize features - Focus on high-impact moments</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Journey Map Components</h2>
+                <div style="font-size: 0.75em;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em;">
+                        <div style="background: #e3f2fd; padding: 1em; border-radius: 5px;">
+                            <h5>1-3. Persona, Scenario, Phases</h5>
+                            <ul>
+                                <li>Which user?</li>
+                                <li>What goal?</li>
+                                <li>4-6 major stages</li>
+                            </ul>
+                        </div>
+                        <div style="background: #f3e5f5; padding: 1em; border-radius: 5px;">
+                            <h5>4-6. Actions, Touchpoints, Thoughts</h5>
+                            <ul>
+                                <li>What user does</li>
+                                <li>Where interactions happen</li>
+                                <li>What user is thinking</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3e0; padding: 1em; border-radius: 5px;">
+                            <h5>7-9. Emotions, Pain Points, Opportunities</h5>
+                            <ul>
+                                <li>How user feels</li>
+                                <li>Where problems occur</li>
+                                <li>Where to improve</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Journey Map Example: Sarah's Registration</h2>
+                <div style="font-size: 0.65em;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="background: #e3f2fd;">
+                            <th style="padding: 0.5em; border: 1px solid #ddd;">Stage</th>
+                            <th style="padding: 0.5em; border: 1px solid #ddd;">Actions</th>
+                            <th style="padding: 0.5em; border: 1px solid #ddd;">Emotions</th>
+                            <th style="padding: 0.5em; border: 1px solid #ddd;">Pain Points</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;"><strong>1. Awareness</strong><br>(2 months before)</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">Receives email about registration dates</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">😊 Motivated, organized</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">None yet</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 0.5em; border: 1px solid #ddd;"><strong>2. Research</strong><br>(6 weeks before)</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">Reviews course catalog, checks requirements</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">🙂 Engaged, planning</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">Catalog not mobile-friendly</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;"><strong>3. Planning</strong><br>(4 weeks before)</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">Creates spreadsheet, checks times vs work</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">😐 Frustrated, overwhelmed</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">⚠️ Manual time checking, no conflict detection</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 0.5em; border: 1px solid #ddd;"><strong>4. Registration</strong></td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">Logs in at 6 AM, tries to add courses</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">😰 Anxious, stressed</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">⚠️ Mobile interface slow, first choice full</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;"><strong>5. Problem-Solving</strong></td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">Searches alternatives, switches to laptop</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">😠 Very frustrated, angry</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">⚠️ NO VISUAL SCHEDULE, 45+ minutes</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 0.5em; border: 1px solid #ddd;"><strong>6. Confirmation</strong></td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">Finally completes registration</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">😕 Relief mixed with disappointment</td>
+                            <td style="padding: 0.5em; border: 1px solid #ddd;">Settled for second choices</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top: 0.5em;"><strong>Opportunities:</strong> Mobile-optimized interface, Visual schedule builder, Work schedule integration, Real-time availability, Conflict detection</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Scenarios | シナリオ</h2>
+                <p><strong>Narrative descriptions of how a persona uses your design to accomplish a goal</strong></p>
+                <h3>Types of Scenarios</h3>
+                <div style="font-size: 0.8em;">
+                    <div class="two-column">
+                        <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
+                            <h4>Current State Scenario</h4>
+                            <ul>
+                                <li>How users accomplish tasks NOW</li>
+                                <li>Highlights pain points</li>
+                                <li>Based on research observations</li>
+                            </ul>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                            <h4>Future State Scenario</h4>
+                            <ul>
+                                <li>How users will accomplish tasks with YOUR DESIGN</li>
+                                <li>Shows improved experience</li>
+                                <li>Guides design decisions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Writing Effective Scenarios</h2>
+                <h3>Scenario Structure</h3>
+                <div style="font-size: 0.8em;">
+                    <ol>
+                        <li><strong>Title:</strong> Descriptive and concise</li>
+                        <li><strong>Persona:</strong> Which user?</li>
+                        <li><strong>Context:</strong> Where, when, what situation?</li>
+                        <li><strong>Goal:</strong> What are they trying to accomplish?</li>
+                        <li><strong>Actions:</strong> Step-by-step walkthrough</li>
+                        <li><strong>Outcome:</strong> Do they achieve the goal? How do they feel?</li>
+                    </ol>
+                    <h4>Best Practices</h4>
+                    <ul>
+                        <li><strong>Be Specific:</strong> Include details like device, time, environment</li>
+                        <li><strong>Include Context:</strong> Time constraints, emotional state</li>
+                        <li><strong>Show Interactions:</strong> What user does, what system does</li>
+                        <li><strong>Highlight Emotions:</strong> How user feels at key moments</li>
+                        <li><strong>Base on Research:</strong> Use actual user quotes and behaviors</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>From Artifacts to Requirements</h2>
+                <h3>Connecting Research to Design</h3>
+                <div style="font-size: 0.75em;">
+                    <h4>Extracting Design Requirements</h4>
+                    <div class="two-column">
+                        <div>
+                            <h5>From Personas:</h5>
+                            <p>Sarah is mobile-first, values efficiency →</p>
+                            <ul>
+                                <li>Optimize for mobile interface</li>
+                                <li>Minimize steps and clicks</li>
+                                <li>Fast load times</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>From Journey Maps:</h5>
+                            <p>Can't see schedule conflicts →</p>
+                            <ul>
+                                <li>Real-time conflict detection</li>
+                                <li>Visual schedule preview</li>
+                                <li>Personal calendar integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 style="margin-top: 1em;">Feature Prioritization</h4>
+                    <ul>
+                        <li><strong>Must-Have (P0):</strong> Visual calendar builder, Real-time conflict detection, Mobile-optimized interface</li>
+                        <li><strong>Should-Have (P1):</strong> Personal calendar integration, Save multiple schedules, Notifications</li>
+                        <li><strong>Nice-to-Have (P2):</strong> Course recommendations, Peer reviews, Professor ratings</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Using Personas in Design Decisions</h2>
+                <h3>The "Persona Check"</h3>
+                <div style="font-size: 0.85em;">
+                    <h4>When making design decisions, ask:</h4>
+                    <ul>
+                        <li><strong>"Would Sarah use this feature?"</strong> If no, why are we building it?</li>
+                        <li><strong>"How would Sarah discover this?"</strong> Is it obvious or hidden?</li>
+                        <li><strong>"Can Sarah do this on mobile during lunch?"</strong> Mobile context matters</li>
+                        <li><strong>"Does this solve Sarah's pain points?"</strong> Focus on real problems</li>
+                    </ul>
+                    <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                        <h4>Avoiding Anti-Patterns</h4>
+                        <p><strong>Don't:</strong> Design for yourself, add features "because it's cool," ignore persona constraints</p>
+                        <p><strong>Do:</strong> Reference personas in every design review, test scenarios against wireframes, keep personas visible</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Today's Activity Preview</h2>
+                <h3>Persona and Journey Mapping Workshop</h3>
+                <div style="font-size: 0.8em;">
+                    <h4>Activity Structure</h4>
+                    <ol>
+                        <li><strong>Data Review & Segmentation (10 min):</strong> Review Week 3 research, identify segments</li>
+                        <li><strong>Create Primary Persona (15 min):</strong> Build 1-2 detailed personas</li>
+                        <li><strong>Map User Journey (18 min):</strong> Complete journey with all components</li>
+                        <li><strong>Write Scenarios (12 min):</strong> Current and future state scenarios</li>
+                        <li><strong>Extract Requirements (10 min):</strong> Create prioritized feature list</li>
+                    </ol>
+                    <div style="background: #e3f2fd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                        <p><strong>Bot Support:</strong> Persona templates, journey map frameworks, scenario guides, requirements extraction</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways | 主要な要点</h2>
+                <div style="font-size: 0.85em;">
+                    <h3>1. Personas Make Users Real</h3>
+                    <ul>
+                        <li>Based on research, not fiction</li>
+                        <li>Represent segments, not individuals</li>
+                        <li>Guide every design decision</li>
+                    </ul>
+                    <h3>2. Journey Maps Reveal Opportunities</h3>
+                    <ul>
+                        <li>Show complete experience over time</li>
+                        <li>Identify pain points and delights</li>
+                        <li>Emotion is as important as action</li>
+                    </ul>
+                    <h3>3. Scenarios Make Design Concrete</h3>
+                    <ul>
+                        <li>Tell stories of use</li>
+                        <li>Test designs before building</li>
+                        <li>Current vs. future state comparison</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Looking Ahead</h2>
+                <h3>Next Week: Smart Device Interface Design</h3>
+                <p><strong>From understanding users to designing interfaces</strong></p>
+                <ul style="font-size: 0.85em;">
+                    <li>Mobile-first design principles</li>
+                    <li>Touch interactions - Designing for fingers, not mouse</li>
+                    <li>Screen sizes - Responsive design across devices</li>
+                    <li>Mobile UI patterns - Navigation, forms, feedback</li>
+                    <li>Hands-on sketching - Paper prototypes of mobile interfaces</li>
+                </ul>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px; margin: 2em 0;">
+                    <h3 style="color: white;">Ready to Build?</h3>
+                    <p>Access your bot portal and create personas that bring your users to life!</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            controls: true,
+            progress: true,
+            history: true,
+        });
+    </script>
+</body>
+</html>
