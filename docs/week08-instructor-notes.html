@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 8 Instructor Notes | 第8週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week07-instructor-notes.html" class="nav-btn nav-prev">← Week 7</a>
+        <span class="nav-current">Week 8 Instructor Notes</span>
+        <a href="week09-instructor-notes.html" class="nav-btn nav-next">Week 9 →</a>
+        <a href="week08-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 8 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第8週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> 15-20 minutes
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Prepare examples of chatbots for students to test</li>
+<li class="checkbox">&#9744; Test bot portal access for conversation flow templates</li>
+<li class="checkbox">&#9744; Verify example chatbot links are working (Sephora, H&M, etc.)</li>
+<li class="checkbox">&#9744; Prepare conversation flow diagram examples</li>
+<li class="checkbox">&#9744; Have paper/whiteboards ready for flow mapping activity</li>
+<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; List of recommended chatbots to analyze</li>
+<li class="checkbox">&#9744; Conversation flow template handouts</li>
+<li class="checkbox">&#9744; Personality design worksheet</li>
+<li class="checkbox">&#9744; Activity instructions and deliverables checklist</li>
+<li class="checkbox">&#9744; AI transparency log template</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Ensure students can access chatbot examples on computers</li>
+<li class="checkbox">&#9744; Prepare for bilingual presentation (English/Japanese)</li>
+<li class="checkbox">&#9744; Set up for hands-on activity transition</li>
+<li class="checkbox">&#9744; Have flowchart examples visible</li>
+<li class="checkbox">&#9744; Prepare backup materials if chatbot links fail</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Week 8! | 第8週へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 8! Today we're diving into one of the most exciting topics in modern HCI: Conversational User Interfaces and Chatbot Design."</li>
+<li>"By now, I'm sure you've all interacted with chatbots - whether it's asking Siri for directions, chatting with customer service, or even using ChatGPT."</li>
+<li>"Today, we'll learn what makes chatbots effective, how to design natural conversations, and how to create chatbot personalities that users actually enjoy."</li>
+<li>"This is particularly relevant for those considering the chatbot option for your final project."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第8週へようこそ！今日は現代HCIで最もエキサイティングなトピックの1つ、会話型ユーザーインターフェースとチャットボットデザインに深く入ります。"</li>
+<li>"これまでに、皆さんはチャットボットと相互作用したことがあると思います - Siriに道を尋ねたり、カスタマーサービスとチャットしたり、ChatGPTを使ったりしています。"</li>
+<li>"今日は、チャットボットを効果的にするものは何か、自然な会話をデザインする方法、ユーザーが実際に楽しむチャットボットのパーソナリティを作成する方法を学びます。"</li>
+<li>"これは、最終プロジェクトでチャットボットオプションを検討している人にとって特に関連があります。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>Conversational UI is everywhere in modern technology</li>
+<li>This is a practical skill for careers in UX design</li>
+<li>No programming needed - focus on conversation design</li>
+<li>This week and next week form a two-part chatbot module</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: What is Conversational UI? | 会話型UIとは？</h3>
+
+<h4>Core Concept Introduction (3 minutes) | コアコンセプト紹介（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Conversational UI is fundamentally different from graphical interfaces. Instead of clicking buttons and navigating menus, users interact using natural language."</li>
+<li>"Think about it: when you want to check the weather, you could open an app, find your city, tap through menus... OR you could just ask your phone 'What's the weather today?'"</li>
+<li>"The key characteristics are: natural language, turn-taking like human conversation, context awareness, and intent recognition."</li>
+<li>"Why does this matter? Conversational UI is more accessible - anyone who can speak or type can use it. It's efficient - get answers instantly. It's available 24/7, and it scales to handle thousands of users simultaneously."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"会話型UIは、グラフィカルインターフェースとは根本的に異なります。ボタンをクリックしたりメニューをナビゲートしたりする代わりに、ユーザーは自然言語を使用して相互作用します。"</li>
+<li>"考えてみてください：天気を確認したいとき、アプリを開いて、都市を見つけて、メニューをタップすることもできます... または、電話に「今日の天気は？」と尋ねるだけです。"</li>
+<li>"主要な特性は、自然言語、人間の会話のようなターンテイキング、コンテキスト認識、意図認識です。"</li>
+<li>"なぜこれが重要なのでしょうか？会話型UIはよりアクセシブルです - 話したり入力したりできる人なら誰でも使用できます。効率的です - 即座に回答を得られます。24時間365日利用可能で、同時に数千のユーザーを処理するようにスケーリングします。"</li>
+</ul>
+
+<strong>Interactive Elements:</strong>
+<ul>
+<li>Ask students: "How many of you have used Siri, Alexa, or Google Assistant this week?"</li>
+<li>Show hands: "Who's used a customer service chatbot?"</li>
+<li>Discuss: "What made it a good or frustrating experience?"</li>
+</ul>
+
+<strong>Real-World Examples to Share:</strong>
+<ul>
+<li>Show quick demo of a voice assistant</li>
+<li>Pull up a customer service chatbot live</li>
+<li>Show ChatGPT conversation as example</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: Evolution of Conversational Interfaces | 会話型インターフェースの進化</h3>
+
+<h4>Historical Context (2-3 minutes) | 歴史的文脈（2-3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Chatbots aren't new - they've been around since the 1960s. ELIZA, created at MIT in 1966, was the first chatbot that simulated a psychotherapist."</li>
+<li>"But ELIZA was simple - it used pattern matching and scripted responses. If you said 'I'm sad,' it would respond 'Why are you sad?' Very basic, but people were amazed!"</li>
+<li>"The 2010s brought voice assistants like Siri and Alexa into our homes. These could understand speech and perform tasks, but still had limitations."</li>
+<li>"Now with AI like ChatGPT and Claude, we have chatbots that can understand context, remember conversations, and generate human-like responses. The technology has advanced dramatically."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"チャットボットは新しいものではありません - 1960年代から存在しています。1966年にMITで作成されたELIZAは、心理療法士をシミュレートした最初のチャットボットでした。"</li>
+<li>"しかし、ELIZAはシンプルでした - パターンマッチングとスクリプト応答を使用していました。「悲しい」と言うと、「なぜ悲しいのですか？」と応答します。非常に基本的ですが、人々は驚きました！"</li>
+<li>"2010年代は、SiriやAlexaのような音声アシスタントを私たちの家に持ち込みました。これらは音声を理解してタスクを実行できましたが、まだ制限がありました。"</li>
+<li>"今、ChatGPTやClaudeのようなAIにより、コンテキストを理解し、会話を覚え、人間のような応答を生成できるチャットボットがあります。技術は劇的に進歩しました。"</li>
+</ul>
+
+<strong>Visual Timeline:</strong>
+<ul>
+<li>Point to the three eras on the slide</li>
+<li>Emphasize the acceleration in recent years</li>
+<li>Connect to students' own experiences with each era</li>
+</ul>
+
+<strong>Discussion Point:</strong>
+<ul>
+<li>"Who's old enough to remember life before Siri? How has conversational AI changed your daily life?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Types of Chatbots | チャットボットのタイプ</h3>
+
+<h4>Chatbot Categories (3-4 minutes) | チャットボットカテゴリー（3-4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"There are three main types of chatbots, and understanding the differences is crucial for your design work."</li>
+<li>"Rule-based chatbots follow decision trees. They're like 'choose your own adventure' books - very predictable. If you click 'Track my order,' you always get the same path. These are great for simple, structured tasks."</li>
+<li>"AI-powered chatbots use machine learning and natural language processing. They can understand variations in how you ask questions. If you say 'Where's my package?' or 'Track my shipment' or 'When will my order arrive?' - they recognize these are the same intent."</li>
+<li>"Hybrid chatbots combine both approaches - they have structured paths for common tasks, but AI to handle unexpected questions. This is what most modern customer service bots use."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"チャットボットには3つの主なタイプがあり、違いを理解することがデザイン作業にとって重要です。"</li>
+<li>"ルールベースチャットボットは決定木に従います。「自分で選ぶ冒険」の本のようなものです - 非常に予測可能です。「注文を追跡」をクリックすると、常に同じパスになります。これらはシンプルで構造化されたタスクに最適です。"</li>
+<li>"AI搭載チャットボットは機械学習と自然言語処理を使用します。質問の仕方のバリエーションを理解できます。「荷物はどこ？」または「出荷を追跡」または「注文はいつ届く？」と言っても - これらが同じ意図であることを認識します。"</li>
+<li>"ハイブリッドチャットボットは両方のアプローチを組み合わせます - 一般的なタスク用の構造化されたパスがありますが、予期しない質問を処理するためのAIもあります。これが最新のカスタマーサービスボットのほとんどが使用しているものです。"</li>
+</ul>
+
+<strong>Examples to Discuss:</strong>
+<ul>
+<li><strong>Rule-based:</strong> Simple FAQ bots, pizza ordering bots</li>
+<li><strong>AI-powered:</strong> ChatGPT, advanced customer service</li>
+<li><strong>Hybrid:</strong> Banking bots, e-commerce support</li>
+</ul>
+
+<strong>Interactive Element:</strong>
+<ul>
+<li>"For your final project, which type makes sense? Rule-based is simpler to design, AI-powered is more flexible but harder to control. Think about your use case."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Common Chatbot Use Cases | 一般的なチャットボットユースケース</h3>
+
+<h4>Use Case Overview (2-3 minutes) | ユースケース概要（2-3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's look at where chatbots are being used successfully. These examples will help you think about your final project."</li>
+<li>"Customer service is the most common use case. Bots handle FAQs, track orders, and route complex issues to humans. This saves companies money while giving customers instant answers."</li>
+<li>"E-commerce bots help you shop - they recommend products, manage your cart, and share promotions. Sephora's bot can even show you how makeup looks on your face using AR."</li>
+<li>"Education bots are growing rapidly. Duolingo uses a bot to practice conversations in foreign languages. Universities use bots to help students find classes and navigate campus."</li>
+<li>"Healthcare bots do symptom checking and appointment booking. Banking bots handle account inquiries and transfers."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"チャットボットが成功裏に使用されている場所を見てみましょう。これらの例は、最終プロジェクトについて考えるのに役立ちます。"</li>
+<li>"カスタマーサービスは最も一般的なユースケースです。ボットはFAQを処理し、注文を追跡し、複雑な問題を人間にルーティングします。これにより、企業はお金を節約し、顧客に即座の回答を提供します。"</li>
+<li>"eコマースボットは買い物を支援します - 製品を推奨し、カートを管理し、プロモーションを共有します。SephoraのボットはARを使用して、メイクが顔にどのように見えるかを示すことさえできます。"</li>
+<li>"教育ボットは急速に成長しています。Duolingoは外国語で会話を練習するためにボットを使用します。大学は学生がクラスを見つけてキャンパスをナビゲートするのを支援するためにボットを使用します。"</li>
+<li>"ヘルスケアボットは症状チェックと予約予約を行います。銀行ボットはアカウント問い合わせと送金を処理します。"</li>
+</ul>
+
+<strong>Project Ideas to Share:</strong>
+<ul>
+<li>Campus information bot for your university</li>
+<li>Study buddy bot for course help</li>
+<li>Wellness reminder bot for students</li>
+<li>Library navigation bot</li>
+<li>Event planning assistant bot</li>
+</ul>
+
+<strong>Engagement Question:</strong>
+<ul>
+<li>"What's a chatbot you wish existed for your daily life? What problem would it solve?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Dialog Design Principles | 対話デザイン原則</h3>
+
+<h4>Core Design Principles (4 minutes) | コアデザイン原則（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now let's talk about the principles that make conversations effective. These five principles apply to all chatbots."</li>
+<li>"First: Be clear and concise. Look at this bad example: 'We are currently experiencing a high volume of requests...' - that's corporate speak. The good example: 'I'm helping other customers right now. I'll be with you in about 2 minutes!' - much friendlier and specific."</li>
+<li>"Second: Set clear expectations. Tell users upfront what you can and cannot do. This prevents frustration when users ask for something outside your scope."</li>
+<li>"Third: Provide guidance. Don't just ask open-ended questions - offer examples and quick reply buttons. Guide users through the conversation."</li>
+<li>"Fourth: Confirm understanding. Before taking action, repeat back what you understood. 'Great! Let me track order #12345. Is that correct?' This prevents errors."</li>
+<li>"Fifth: Handle errors gracefully. Don't just say 'Error' or 'I don't understand.' Acknowledge confusion and offer alternatives or human handoff."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"では、会話を効果的にする原則について話しましょう。これらの5つの原則はすべてのチャットボットに適用されます。"</li>
+<li>"第一：明確で簡潔に。この悪い例を見てください：「現在、大量のリクエストを経験しており...」- これは企業用語です。良い例：「今、他のお客様を支援しています。約2分後にお答えします！」- はるかにフレンドリーで具体的です。"</li>
+<li>"第二：明確な期待を設定します。できることとできないことを最初にユーザーに伝えます。これにより、ユーザーがスコープ外のことを尋ねたときの不満を防ぎます。"</li>
+<li>"第三：ガイダンスを提供します。オープンエンドの質問をするだけではなく - 例とクイック返信ボタンを提供します。会話を通じてユーザーをガイドします。"</li>
+<li>"第四：理解を確認します。アクションを実行する前に、理解したことを繰り返します。「素晴らしい！注文番号12345を追跡します。それで正しいですか？」これによりエラーを防ぎます。"</li>
+<li>"第五：エラーを優雅に処理します。「エラー」や「理解できませんでした」と言うだけではありません。混乱を認識し、代替案や人間への引き継ぎを提供します。"</li>
+</ul>
+
+<strong>Teaching Strategy:</strong>
+<ul>
+<li>Read the bad examples in a robotic voice</li>
+<li>Read the good examples in a friendly, natural voice</li>
+<li>This contrast helps students feel the difference</li>
+</ul>
+
+<strong>Interactive Activity:</strong>
+<ul>
+<li>"Turn to your neighbor and think of a bad chatbot response you've experienced. How could it be improved using these principles?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Conversation Flow Structure | 会話フロー構造</h3>
+
+<h4>Flow Components (3 minutes) | フローコンポーネント（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Every conversation has a structure. Understanding this structure helps you design better chatbots."</li>
+<li>"Start with a greeting - welcome the user and set expectations. Tell them what you can help with."</li>
+<li>"Then identify intent - understand what the user wants. This might take one question or several."</li>
+<li>"Next, gather information - collect the details needed to fulfill the request. Keep questions focused and one at a time."</li>
+<li>"Provide action and response - give the answer or complete the task. Be specific and helpful."</li>
+<li>"Confirm and follow up - make sure you answered their question. Offer additional help."</li>
+<li>"Finally, closure - end the conversation politely. Leave the door open for future interactions."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"すべての会話には構造があります。この構造を理解することで、より良いチャットボットをデザインできます。"</li>
+<li>"挨拶から始めます - ユーザーを歓迎し、期待を設定します。何を支援できるかを伝えます。"</li>
+<li>"次に意図を識別します - ユーザーが何を望んでいるかを理解します。これには1つの質問または複数の質問が必要かもしれません。"</li>
+<li>"次に、情報を収集します - リクエストを満たすために必要な詳細を収集します。質問を焦点を当てて一度に1つにします。"</li>
+<li>"アクションと応答を提供します - 回答を提供するかタスクを完了します。具体的で役立つものにします。"</li>
+<li>"確認とフォローアップ - 質問に答えたことを確認します。追加の支援を提供します。"</li>
+<li>"最後に、クロージング - 会話を丁寧に終了します。将来の相互作用のためにドアを開けたままにします。"</li>
+</ul>
+
+<strong>Example Walkthrough:</strong>
+<p>Walk through the library bot example on the slide step by step, showing how each component works.</p>
+
+<strong>Visual Learning:</strong>
+<ul>
+<li>Draw the flow on the whiteboard as you explain</li>
+<li>Use arrows to show conversation progression</li>
+<li>Highlight where errors might occur</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Designing Conversation Flows | 会話フローのデザイン</h3>
+
+<h4>Happy Path vs Edge Cases (3 minutes) | ハッピーパスとエッジケース（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"When designing conversations, you need to plan for both the happy path and alternative paths."</li>
+<li>"The happy path is the ideal scenario - everything goes smoothly, user asks clear questions, bot provides clear answers. But this rarely happens in real life!"</li>
+<li>"You also need alternative paths for edge cases: What if the question is unclear? What if you need more information? What if the request is outside your capabilities?"</li>
+<li>"Look at the examples on the slide. The happy path is just 4 turns. But alternative paths handle clarification, missing information, and out-of-scope requests."</li>
+<li>"Tools like Botmock, Voiceflow, or even simple flowcharts in Miro or Lucidchart help you map these conversations visually."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"会話をデザインするとき、ハッピーパスと代替パスの両方を計画する必要があります。"</li>
+<li>"ハッピーパスは理想的なシナリオです - すべてがスムーズに進み、ユーザーは明確な質問をし、ボットは明確な回答を提供します。しかし、これは実生活ではめったに起こりません！"</li>
+<li>"エッジケース用の代替パスも必要です：質問が不明確な場合はどうしますか？より多くの情報が必要な場合はどうしますか？リクエストが機能の範囲外の場合はどうしますか？"</li>
+<li>"スライドの例を見てください。ハッピーパスは4ターンだけです。しかし、代替パスは明確化、情報不足、スコープ外のリクエストを処理します。"</li>
+<li>"Botmock、Voiceflow、またはMiroやLucidchartのシンプルなフローチャートなどのツールは、これらの会話を視覚的にマッピングするのに役立ちます。"</li>
+</ul>
+
+<strong>Common Student Mistake to Address:</strong>
+<ul>
+<li>"Students often only design the happy path and forget error cases. In real life, errors happen constantly! Always design for confusion, mistakes, and unexpected questions."</li>
+</ul>
+
+<strong>Activity Preview:</strong>
+<ul>
+<li>"In today's activity, you'll map out conversation flows including both happy paths and error scenarios. This is critical practice for your final project."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Personality and Tone in Chatbots | チャットボットのパーソナリティとトーン</h3>
+
+<h4>Why Personality Matters (4 minutes) | なぜパーソナリティが重要なのか（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Chatbot personality might seem superficial, but it's actually crucial for user engagement."</li>
+<li>"A consistent personality builds trust. Users know what to expect. It creates connection - people engage more with bots that feel human. It aligns with your brand - the bot represents your company or service. And it differentiates your bot from generic assistants."</li>
+<li>"There are three main personality dimensions to consider:"</li>
+<li>"First, formal vs casual. Formal is 'Good afternoon. How may I assist you?' Casual is 'Hey there! What can I help you with?' Neither is wrong - it depends on context."</li>
+<li>"Second, professional vs friendly. Professional is efficient and businesslike. Friendly is warm and conversational."</li>
+<li>"Third, serious vs playful. Serious maintains a straightforward tone. Playful adds humor and emojis."</li>
+<li>"The key is matching personality to context. A healthcare bot should be empathetic and calm. A banking bot should be trustworthy and professional. An e-commerce bot can be friendly and enthusiastic. A student services bot should be approachable and supportive."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"チャットボットのパーソナリティは表面的に見えるかもしれませんが、実際にはユーザーエンゲージメントにとって重要です。"</li>
+<li>"一貫したパーソナリティは信頼を構築します。ユーザーは何を期待するかを知っています。つながりを作ります - 人々は人間らしいボットとより多く関わります。ブランドと整合します - ボットはあなたの会社やサービスを代表します。そして、一般的なアシスタントからボットを差別化します。"</li>
+<li>"考慮すべき3つの主なパーソナリティの次元があります："</li>
+<li>"第一に、フォーマルvsカジュアル。フォーマルは「こんにちは。どのようにお手伝いできますか？」カジュアルは「やあ！何をお手伝いできますか？」どちらも間違っていません - コンテキストに依存します。"</li>
+<li>"第二に、プロフェッショナルvsフレンドリー。プロフェッショナルは効率的でビジネスライクです。フレンドリーは暖かく会話的です。"</li>
+<li>"第三に、シリアスvs遊び心。シリアスは率直なトーンを維持します。遊び心はユーモアと絵文字を追加します。"</li>
+<li>"鍵はコンテキストにパーソナリティを合わせることです。ヘルスケアボットは共感的で落ち着いている必要があります。銀行ボットは信頼できてプロフェッショナルである必要があります。eコマースボットはフレンドリーで熱心である可能性があります。学生サービスボットは親しみやすくサポート的である必要があります。"</li>
+</ul>
+
+<strong>Real Examples to Share:</strong>
+<ul>
+<li>Show Duolingo's playful notifications</li>
+<li>Compare formal bank bot vs casual shopping bot</li>
+<li>Demonstrate tone consistency across conversation</li>
+</ul>
+
+<strong>Design Exercise:</strong>
+<ul>
+<li>"Think about your final project. What personality should your bot have? Why?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Writing Effective Bot Responses | 効果的なボット応答の作成</h3>
+
+<h4>Response Writing Tips (3 minutes) | 応答作成のヒント（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"The way your bot speaks is just as important as what it says. Let's look at five response writing best practices."</li>
+<li>"Use active voice, not passive. 'We shipped your order!' is better than 'Your order has been shipped.' It sounds more human and engaging."</li>
+<li>"Be specific and actionable. Don't say 'soon' - say '2 minutes' or '24 hours.' Users appreciate concrete information."</li>
+<li>"Show empathy, especially during problems. Compare 'Your payment failed. Try again.' to 'Oh no! Your payment didn't go through. Let's try another method together.' The second shows you care."</li>
+<li>"Provide options when you can't help directly. Don't dead-end with 'I can't help.' Instead, offer alternatives: connect with a person, send resources, schedule a callback."</li>
+<li>"Use conversational language. Avoid robotic phrases like 'Request acknowledged. Processing initiated.' Say 'Got it! Let me look that up for you.'"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ボットの話し方は、何を言うかと同じくらい重要です。5つの応答作成ベストプラクティスを見てみましょう。"</li>
+<li>"受動態ではなく能動態を使用します。「注文を発送しました！」は「注文は発送されました」よりも良いです。より人間らしく魅力的に聞こえます。"</li>
+<li>"具体的で実行可能にします。「まもなく」と言わないでください - 「2分」または「24時間」と言ってください。ユーザーは具体的な情報を評価します。"</li>
+<li>"特に問題の間、共感を示します。「支払いが失敗しました。もう一度お試しください。」と「あらら！支払いが通りませんでした。一緒に別の方法を試しましょう。」を比較してください。2番目は気にかけていることを示します。"</li>
+<li>"直接支援できない場合はオプションを提供します。「支援できません」で行き止まりにしないでください。代わりに、代替案を提供します：人とつながる、リソースを送る、コールバックをスケジュールする。"</li>
+<li>"会話的言語を使用します。「リクエスト確認。処理開始。」のようなロボット的なフレーズを避けます。「了解！調べてみます。」と言ってください。"</li>
+</ul>
+
+<strong>Side-by-Side Comparison:</strong>
+<ul>
+<li>Read examples on slide in contrasting voices</li>
+<li>Robotic voice for bad examples</li>
+<li>Friendly voice for good examples</li>
+<li>This makes the difference very clear</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Button vs. Free Text Input | ボタン vs 自由テキスト入力</h3>
+
+<h4>Input Method Selection (2 minutes) | 入力方法選択（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"One key design decision is when to use buttons versus free text input."</li>
+<li>"Buttons are great for clear, limited options. They prevent errors, speed up interaction, and guide the conversation flow. Use buttons for multiple choice, yes/no confirmations, menu navigation, and common actions."</li>
+<li>"Free text is better for open-ended questions, detailed descriptions, feedback collection, and custom queries. It's more flexible and natural, but harder to process correctly."</li>
+<li>"The best approach is usually hybrid - offer buttons for common paths, but include an 'Other' option with a text field. This gives structure while maintaining flexibility."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"重要なデザイン決定の1つは、ボタンと自由テキスト入力をいつ使用するかです。"</li>
+<li>"ボタンは明確で限定的なオプションに最適です。エラーを防ぎ、相互作用を高速化し、会話フローをガイドします。多肢選択、はい/いいえの確認、メニューナビゲーション、一般的なアクション用にボタンを使用します。"</li>
+<li>"自由テキストはオープンエンドの質問、詳細な説明、フィードバック収集、カスタムクエリに適しています。より柔軟で自然ですが、正しく処理するのが難しいです。"</li>
+<li>"最良のアプローチは通常ハイブリッドです - 一般的なパス用にボタンを提供しますが、テキストフィールド付きの「その他」オプションを含めます。これにより、柔軟性を維持しながら構造を提供します。"</li>
+</ul>
+
+<strong>Design Principle:</strong>
+<ul>
+<li>"Give users a guided path, but don't trap them in it. Always offer a way to say something unexpected."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: Context and Memory in Conversations | 会話のコンテキストとメモリ</h3>
+
+<h4>Context Management (3 minutes) | コンテキスト管理（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Good chatbots remember context. There are three types of context to consider."</li>
+<li>"Session context is what happened in the current conversation. If a user says 'I want pizza,' and you ask 'What size?', you need to remember they want pizza when they answer 'Large.'"</li>
+<li>"User context is information about the user across sessions. 'Welcome back, Sarah! Would you like your usual order?' This requires storing user preferences."</li>
+<li>"Environmental context includes external factors: time of day, location, device. A good morning greeting at 8am, good evening at 8pm."</li>
+<li>"Best practices: Reference previous exchanges to show you're listening. Avoid asking the same question twice - it's frustrating. Handle session breaks gracefully - 'Welcome back! We were discussing...'"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"良いチャットボットはコンテキストを覚えています。考慮すべき3つのタイプのコンテキストがあります。"</li>
+<li>"セッションコンテキストは現在の会話で何が起こったかです。ユーザーが「ピザが欲しい」と言い、「サイズは？」と尋ねた場合、「大きい」と答えたときにピザが欲しいことを覚えておく必要があります。"</li>
+<li>"ユーザーコンテキストはセッション間のユーザーに関する情報です。「おかえりなさい、サラ！いつもの注文でいいですか？」これにはユーザー設定の保存が必要です。"</li>
+<li>"環境コンテキストには外部要因が含まれます：時刻、場所、デバイス。午前8時におはようの挨拶、午後8時にこんばんはの挨拶。"</li>
+<li>"ベストプラクティス：聞いていることを示すために以前のやり取りを参照します。同じ質問を2回尋ねるのを避けます - それはイライラします。セッション中断を優雅に処理します - 「お帰りなさい！話していました...」"</li>
+</ul>
+
+<strong>Common Mistake:</strong>
+<ul>
+<li>"Students often forget to track context in their designs. Every time you ask for information, note it down in your flow diagram. Use it later!"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: Chatbot Design Patterns | チャットボットデザインパターン</h3>
+
+<h4>Pattern Overview (2 minutes) | パターン概要（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Just like UI design has common patterns, so does conversational design. Let's look at five common patterns."</li>
+<li>"Menu-based pattern: Present options and guide users through choices. Good for structured navigation."</li>
+<li>"Question-answer pattern: Direct information retrieval. User asks, bot answers. Simple and efficient."</li>
+<li>"Form-fill pattern: Collect multiple data points sequentially. Like filling out a form, but conversationally."</li>
+<li>"Guided troubleshooting: Step-by-step problem solving with branching logic based on answers."</li>
+<li>"Recommendation pattern: Provide personalized suggestions based on user preferences or behavior."</li>
+<li>"You can combine these patterns in one bot. A shopping bot might use menus for navigation, Q&A for product info, and recommendations for personalization."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"UIデザインに一般的なパターンがあるように、会話デザインにもあります。5つの一般的なパターンを見てみましょう。"</li>
+<li>"メニューベースパターン：オプションを提示し、選択を通じてユーザーをガイドします。構造化されたナビゲーションに適しています。"</li>
+<li>"質問-回答パターン：直接情報検索。ユーザーが尋ね、ボットが答えます。シンプルで効率的です。"</li>
+<li>"フォーム記入パターン：複数のデータポイントを順次収集します。フォームに記入するようなものですが、会話的です。"</li>
+<li>"ガイド付きトラブルシューティング：回答に基づく分岐ロジックを使用したステップバイステップの問題解決。"</li>
+<li>"推奨パターン：ユーザーの好みや行動に基づいてパーソナライズされた提案を提供します。"</li>
+<li>"1つのボットでこれらのパターンを組み合わせることができます。ショッピングボットはナビゲーション用にメニュー、製品情報用にQ&A、パーソナライゼーション用に推奨を使用する可能性があります。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Accessibility in Conversational UI | 会話型UIのアクセシビリティ</h3>
+
+<h4>Accessible Design (2 minutes) | アクセシブルデザイン（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Accessibility is crucial in conversational UI, just like in graphical interfaces."</li>
+<li>"Support multiple input methods: text, voice, and buttons. Users should be able to interact however they're comfortable."</li>
+<li>"Provide clear visual hierarchy: distinguish user messages from bot messages, show timestamps, indicate when messages are being processed."</li>
+<li>"Ensure screen reader compatibility: alt text for images, semantic HTML, ARIA labels. This helps users with visual impairments."</li>
+<li>"Make text and contrast adjustable: users should be able to increase font size, use high contrast mode, and don't rely only on color to convey information."</li>
+<li>"No time pressure: don't time out sessions too quickly. Let users take their time to respond."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"アクセシビリティは、グラフィカルインターフェースと同様に会話型UIでも重要です。"</li>
+<li>"複数の入力方法をサポート：テキスト、音声、ボタン。ユーザーは快適な方法で相互作用できるようにする必要があります。"</li>
+<li>"明確なビジュアル階層を提供：ユーザーメッセージとボットメッセージを区別し、タイムスタンプを表示し、メッセージが処理されているときに示します。"</li>
+<li>"スクリーンリーダー互換性を確保：画像の代替テキスト、セマンティックHTML、ARIAラベル。これは視覚障害を持つユーザーを支援します。"</li>
+<li>"テキストとコントラストを調整可能にする：ユーザーはフォントサイズを増やし、ハイコントラストモードを使用でき、情報を伝えるために色だけに頼らないでください。"</li>
+<li>"時間的プレッシャーなし：セッションをあまり早くタイムアウトしないでください。ユーザーが応答する時間を取れるようにします。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: This Week's Activity | 今週のアクティビティ</h3>
+
+<h4>Activity Introduction (2 minutes) | アクティビティ紹介（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now it's time to put this knowledge into practice. Today's activity has two parts."</li>
+<li>"Part 1: Analyze existing chatbots. You'll test 2-3 real chatbots and analyze their design. What type are they? What's their personality? How do they handle errors? What works well, what doesn't?"</li>
+<li>"I've provided a list of chatbots to test - customer service bots, banking bots, educational bots. Choose ones that interest you."</li>
+<li>"Part 2: Design your own conversation flows. Pick a use case - maybe a campus bot, library helper, or course registration guide. Map out the complete conversation flow including greeting, intent identification, information gathering, response, and closure."</li>
+<li>"Most importantly, design for BOTH happy paths and error scenarios. What happens when users are confused? When they ask unexpected questions?"</li>
+<li>"You'll also define your bot's personality. Is it formal or casual? Professional or friendly? Write example responses that show this personality."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"では、この知識を実践する時です。今日のアクティビティには2つのパートがあります。"</li>
+<li>"パート1：既存のチャットボットを分析します。2-3の実際のチャットボットをテストし、デザインを分析します。どのタイプですか？パーソナリティは何ですか？エラーをどのように処理しますか？何がうまくいき、何がうまくいきませんか？"</li>
+<li>"テストするチャットボットのリストを提供しました - カスタマーサービスボット、銀行ボット、教育ボット。興味のあるものを選択してください。"</li>
+<li>"パート2：独自の会話フローをデザインします。ユースケースを選択します - おそらくキャンパスボット、図書館ヘルパー、またはコース登録ガイド。挨拶、意図識別、情報収集、応答、クロージャーを含む完全な会話フローをマッピングします。"</li>
+<li>"最も重要なのは、ハッピーパスとエラーシナリオの両方のためにデザインすることです。ユーザーが混乱しているときは何が起こりますか？予期しない質問をするときは？"</li>
+<li>"また、ボットのパーソナリティを定義します。フォーマルですか、カジュアルですか？プロフェッショナルですか、フレンドリーですか？このパーソナリティを示す例の応答を書いてください。"</li>
+</ul>
+
+<strong>Transition to Activity:</strong>
+<ul>
+<li>"You have 70 minutes for this activity. Let's get started!"</li>
+<li>"The HCI-101 Bot will provide templates and feedback. Don't hesitate to ask me questions as you work."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Looking Ahead to Week 9 | 第9週の予告</h3>
+
+<h4>Preview Next Week (1 minute) | 来週のプレビュー（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Next week, we'll build on today's foundation by focusing on error handling and AI limitations."</li>
+<li>"We'll learn how to handle ambiguity, design effective fallback responses, and know when to hand off to a human."</li>
+<li>"You'll also create a complete chatbot prototype with full error handling."</li>
+<li>"For now, start thinking: when have chatbots failed you? What went wrong? How could better error handling have fixed it?"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"来週は、エラーハンドリングとAIの限界に焦点を当てることで、今日の基礎の上に構築します。"</li>
+<li>"曖昧性を処理する方法、効果的なフォールバック応答をデザインする方法、人間に引き継ぐタイミングを知る方法を学びます。"</li>
+<li>"また、完全なエラーハンドリングを備えた完全なチャットボットプロトタイプを作成します。"</li>
+<li>"今のところ、考え始めてください：チャットボットがあなたを失望させたのはいつですか？何が間違っていましたか？より良いエラーハンドリングがそれをどのように修正できたでしょうか？"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Key Takeaways | 重要なポイント</h3>
+
+<h4>Closing (1 minute) | クロージング（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's recap today's key points:"</li>
+<li>"Conversational UI enables natural language interaction - it's accessible, efficient, and scalable."</li>
+<li>"Different chatbot types serve different purposes. Choose the right type for your use case."</li>
+<li>"Dialog design requires clear structure, helpful guidance, and graceful error handling."</li>
+<li>"Personality matters - consistent tone builds trust and engagement."</li>
+<li>"Context is king - remember what users said to create natural conversations."</li>
+<li>"And remember: good chatbots feel like helpful conversations, not interrogations!"</li>
+<li>"Now let's move into our hands-on activity. Have fun designing!"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日の重要なポイントを要約しましょう："</li>
+<li>"会話型UIは自然言語相互作用を可能にします - アクセシブルで効率的でスケーラブルです。"</li>
+<li>"異なるチャットボットタイプは異なる目的を果たします。ユースケースに適したタイプを選択してください。"</li>
+<li>"対話デザインには明確な構造、役立つガイダンス、優雅なエラーハンドリングが必要です。"</li>
+<li>"パーソナリティが重要です - 一貫したトーンが信頼とエンゲージメントを構築します。"</li>
+<li>"コンテキストが王様です - ユーザーが言ったことを覚えて自然な会話を作成してください。"</li>
+<li>"そして覚えておいてください：良いチャットボットは尋問ではなく、役立つ会話のように感じます！"</li>
+<li>"では、ハンズオンアクティビティに移りましょう。デザインを楽しんでください！"</li>
+</ul>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Immediate Next Steps | 即座の次のステップ</h3>
+<p>1. <strong>Distribute Activity Materials</strong> | アクティビティ教材を配布</p>
+<p>   - Chatbot list for testing</p>
+<p>   - Conversation flow templates</p>
+<p>   - Personality worksheet</p>
+<p>   - Deliverables checklist</p>
+
+<p>2. <strong>Set Up Activity</strong> | アクティビティをセットアップ</p>
+<p>   - Ensure students can access example chatbots</p>
+<p>   - Verify HCI-101 Bot portal is working</p>
+<p>   - Provide flowcharting tools access (or paper)</p>
+
+<p>3. <strong>Circulate and Support</strong> | 巡回とサポート</p>
+<p>   - Help students test chatbots</p>
+<p>   - Guide conversation flow mapping</p>
+<p>   - Answer design questions</p>
+<p>   - Provide feedback on personality definitions</p>
+
+<h3>Common Issues to Watch For | 注意すべき一般的な問題</h3>
+<ul>
+<li><strong>Chatbot Access Problems</strong> | チャットボットアクセス問題: Some bots may not work, have backups ready</li>
+<li><strong>Scope Too Large</strong> | スコープが大きすぎる: Students try to design complex bots, encourage simplicity</li>
+<li><strong>Only Happy Path</strong> | ハッピーパスのみ: Remind students to design error scenarios</li>
+<li><strong>Generic Personality</strong> | 一般的なパーソナリティ: Push for specific, distinctive character</li>
+</ul>
+
+<h3>Support Strategies | サポート戦略</h3>
+<ul>
+<li><strong>Example Flows</strong> | 例のフロー: Show sample conversation flows for inspiration</li>
+<li><strong>Peer Review</strong> | ピアレビュー: Have students test each other's flows</li>
+<li><strong>Bot Guidance</strong> | ボットガイダンス: Encourage use of HCI-101 Bot for templates</li>
+<li><strong>Iteration</strong> | 反復: Emphasize that first draft is just a start</li>
+</ul>
+
+<hr>
+
+<h2>Assessment and Feedback | 評価とフィードバック</h2>
+
+<h3>During Activity | アクティビティ中</h3>
+<ul>
+<li><strong>Monitor Progress</strong> | 進捗を監視: Check that students are analyzing multiple chatbots</li>
+<li><strong>Provide Guidance</strong> | ガイダンスを提供: Help with flow mapping techniques</li>
+<li><strong>Answer Questions</strong> | 質問に答える: Clarify concepts and expectations</li>
+<li><strong>Encourage Depth</strong> | 深さを奨励: Push beyond surface-level analysis</li>
+</ul>
+
+<h3>Deliverables Review Criteria | 成果物レビュー基準</h3>
+
+<strong>Chatbot Analysis Report:</strong>
+<ul>
+<li>Analyzes at least 2-3 different chatbots</li>
+<li>Identifies chatbot type and use case</li>
+<li>Evaluates personality and tone</li>
+<li>Documents strengths and weaknesses</li>
+<li>Suggests improvements based on principles</li>
+</ul>
+
+<strong>Conversation Flow Diagram:</strong>
+<ul>
+<li>Includes all flow components (greeting, intent, info gathering, response, closure)</li>
+<li>Shows both happy path and error scenarios</li>
+<li>Uses clear visual format (flowchart or conversation map)</li>
+<li>Demonstrates understanding of branching logic</li>
+<li>Practical and implementable</li>
+</ul>
+
+<strong>Personality Guidelines:</strong>
+<ul>
+<li>Defines clear personality dimensions (formal/casual, professional/friendly, etc.)</li>
+<li>Matches personality to use case</li>
+<li>Provides example responses showing personality</li>
+<li>Consistent tone throughout examples</li>
+</ul>
+
+<h3>Feedback Focus | フィードバックフォーカス</h3>
+<ul>
+<li><strong>Praise Creativity</strong> | 創造性を称賛: Unique use cases and personalities</li>
+<li><strong>Guide Improvement</strong> | 改善をガイド: More complete error handling</li>
+<li><strong>Connect to Next Week</strong> | 来週につなげる: Preview error handling topics</li>
+<li><strong>Portfolio Quality</strong> | ポートフォリオ品質: Encourage professional presentation</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Procedures | 緊急手順</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+<ul>
+<li><strong>Chatbot Links Down</strong> | チャットボットリンクダウン: Have backup examples or videos</li>
+<li><strong>No Internet</strong> | インターネットなし: Switch to paper-based flow mapping</li>
+<li><strong>Bot Portal Issues</strong> | ボットポータル問題: Provide templates manually</li>
+</ul>
+
+<h3>Student Issues | 学生の問題</h3>
+<ul>
+<li><strong>Confusion About Activity</strong> | アクティビティの混乱: Provide step-by-step guidance</li>
+<li><strong>Lack of Ideas</strong> | アイデア不足: Brainstorm use cases together</li>
+<li><strong>Technical Difficulties</strong> | 技術的困難: Offer alternatives or extensions</li>
+</ul>
+
+<h3>Time Management | 時間管理</h3>
+<ul>
+<li><strong>Running Short</strong> | 時間不足: Focus on Part 2 (conversation flow design)</li>
+<li><strong>Finished Early</strong> | 早く終了: Encourage deeper analysis, more error scenarios</li>
+<li><strong>Need Extension</strong> | 延長が必要: Allow submission by end of week</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week07-instructor-notes.html" class="nav-btn nav-prev">← Week 7</a>
+        <span class="nav-current">Week 8 Instructor Notes</span>
+        <a href="week09-instructor-notes.html" class="nav-btn nav-next">Week 9 →</a>
+        <a href="week08-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

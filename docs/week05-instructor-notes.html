@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 5 Instructor Notes | 第5週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week04-instructor-notes.html" class="nav-btn nav-prev">← Week 4</a>
+        <span class="nav-current">Week 5 Instructor Notes</span>
+        <a href="week06-instructor-notes.html" class="nav-btn nav-next">Week 6 →</a>
+        <a href="week05-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 5 Instructor Notes: Smart Device Interface Design Principles</h1>
+<h1>第5週インストラクターノート：スマートデバイスインターフェースデザイン原則</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction in the Era of Smart Devices and AI Chatbots
+<strong>コース：</strong> HCI-101 - スマートデバイスとAIチャットボット時代のヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Semester:</strong> Fall 2025 | 2025年秋学期
+<strong>Duration:</strong> 15-20 minutes lecture + 60-65 minutes hands-on activity | 15-20分講義 + 60-65分ハンズオンアクティビティ
+
+<hr>
+
+<h2>Lecture Overview | 講義概要</h2>
+
+<h3>Key Learning Objectives | 主要学習目標</h3>
+<p>Students will master mobile-first design principles, understand touch interface fundamentals, and apply common mobile UI patterns to create effective smartphone and tablet interfaces.</p>
+<p>学生はモバイルファーストデザイン原則をマスターし、タッチインターフェースの基礎を理解し、一般的なモバイルUIパターンを適用して効果的なスマートフォンとタブレットインターフェースを作成する。</p>
+
+<h3>Lecture Flow | 講義の流れ</h3>
+<p>1. <strong>Introduction</strong> (2 min): The mobile revolution and why it matters | モバイル革命とそれが重要な理由</p>
+<p>2. <strong>Mobile-First Philosophy</strong> (4 min): Design approach and principles | デザインアプローチと原則</p>
+<p>3. <strong>Touch Interface Fundamentals</strong> (4 min): Fingers vs. cursors, target sizes | 指 vs カーソル、ターゲットサイズ</p>
+<p>4. <strong>Responsive Design</strong> (3 min): Adapting to screen sizes | 画面サイズへの適応</p>
+<p>5. <strong>Mobile UI Patterns</strong> (5 min): Navigation, forms, feedback | ナビゲーション、フォーム、フィードバック</p>
+<p>6. <strong>Activity Preview</strong> (2 min): Sketching mobile interfaces | モバイルインターフェースのスケッチ</p>
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Test bot portal access for mobile design module</li>
+<li class="checkbox">&#9744; Print mobile screen templates (iPhone and Android sizes)</li>
+<li class="checkbox">&#9744; Prepare mobile device examples to show (smartphones, tablets)</li>
+<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
+<li class="checkbox">&#9744; Have mobile design pattern examples ready</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Mobile screen templates (various sizes: 320px, 375px, 414px widths)</li>
+<li class="checkbox">&#9744; Touch target sizing guide (44x44px grids)</li>
+<li class="checkbox">&#9744; Mobile UI pattern library (printed reference)</li>
+<li class="checkbox">&#9744; Pencils, pens, markers for sketching</li>
+<li class="checkbox">&#9744; Sticky notes for annotations</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Arrange seating for individual sketching work</li>
+<li class="checkbox">&#9744; Set up materials station with templates and drawing tools</li>
+<li class="checkbox">&#9744; Ensure students have access to Week 4 personas</li>
+<li class="checkbox">&#9744; Prepare wall space for displaying sketches</li>
+<li class="checkbox">&#9744; Set up for peer review sessions</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Mobile Interface Design Week! | モバイルインターフェースデザイン週へようこそ！</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Connect to previous week</strong> | 前週とつなげる: "Last week you created personas and journey maps. Today we design interfaces for them."</li>
+<li><strong>Show mobile devices</strong> | モバイルデバイスを表示: Hold up smartphones and tablets physically</li>
+<li><strong>Check understanding</strong> | 理解をチェック: "How many of you use your phone more than desktop?" (Most will raise hands)</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Mobile dominance</strong> | モバイルの支配: Not a trend, it's reality</li>
+<li><strong>Your personas use mobile</strong> | あなたのペルソナはモバイルを使用: Sarah registers on her phone, remember?</li>
+<li><strong>Different design constraints</strong> | 異なるデザイン制約: Small screens require different thinking</li>
+</ul>
+
+<h4>Common Questions | よくある質問</h4>
+<ul>
+<li><strong>"Do we still need to design for desktop?"</strong> | 「まだデスクトップのためにデザインする必要がありますか？」</li>
+</ul>
+<p>  - <strong>Answer:</strong> Yes, but start with mobile. Mobile-first doesn't mean mobile-only.</p>
+<ul>
+<li><strong>"What about tablets?"</strong> | 「タブレットについてはどうですか？」</li>
+</ul>
+<p>  - <strong>Answer:</strong> Tablets are between phones and desktop - we'll cover responsive design.</p>
+
+<hr>
+
+<h3>Slide 2: The Mobile Revolution | モバイル革命</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Present statistics</strong> | 統計を提示: Emphasize 60%+ mobile traffic</li>
+<li><strong>Make it personal</strong> | 個人的にする: "Check your own phone screen time - probably 3-5 hours daily"</li>
+<li><strong>Show real examples</strong> | 実際の例を表示: Websites that work well on mobile vs. poorly</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Mobile is primary</strong> | モバイルが主要: For many users, it's their only device</li>
+<li><strong>Expectations are high</strong> | 期待が高い: Users expect mobile to work as well as desktop</li>
+<li><strong>Bad mobile = lost users</strong> | 悪いモバイル = ユーザーを失う: 53% abandon sites that take >3 seconds to load</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use student data</strong> | 学生データを使用: "How do you register for courses? Check email? Browse social media?"</li>
+<li><strong>Contrast examples</strong> | 例を対比: Show same website desktop vs. mobile</li>
+<li><strong>Real-world impact</strong> | 実世界への影響: "Your final project needs excellent mobile experience"</li>
+</ul>
+
+<h4>Interactive Activity | インタラクティブアクティビティ</h4>
+<ul>
+<li>Quick poll: "What device did you use to check this course's syllabus?"</li>
+<li>Show hands: Phone, tablet, laptop, desktop</li>
+<li>Discuss implications for course material delivery</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: Mobile-First Design Philosophy | モバイルファーストデザイン哲学</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Explain paradigm shift</strong> | パラダイムシフトを説明: Desktop-first is backwards</li>
+<li><strong>Draw comparison</strong> | 比較を描く: Desktop-first vs. mobile-first approaches</li>
+<li><strong>Demonstrate constraints</strong> | 制約を実演: Use a phone screen template - "This is all the space you have"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Constraints are good</strong> | 制約は良い: Force you to prioritize what matters</li>
+<li><strong>Content first</strong> | コンテンツファースト: What do users actually need?</li>
+<li><strong>Progressive enhancement</strong> | プログレッシブエンハンスメント: Start small, grow to larger screens</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use phone analogy</strong> | 電話の類推を使用: "If you had to fit your entire house in one room, what would you keep?"</li>
+<li><strong>Show before/after</strong> | 前/後を表示: Same design desktop-first vs. mobile-first</li>
+<li><strong>Emphasize ruthless prioritization</strong> | 無慈悲な優先順位付けを強調: "Everything can't be primary"</li>
+</ul>
+
+<h4>Common Student Mistakes | 一般的な学生の間違い</h4>
+<ul>
+<li><strong>Trying to fit everything</strong> | すべてを収める試み: Can't shrink desktop to mobile</li>
+<li><strong>Hiding important features</strong> | 重要な機能を非表示: "Hamburger menu of doom"</li>
+<li><strong>Desktop thinking on mobile</strong> | モバイルでのデスクトップ思考: Hover states, small text</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Touch Interface Fundamentals | タッチインターフェースの基礎</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Physical demonstration</strong> | 物理的実演: Use your finger on screen/template - "See how big it is?"</li>
+<li><strong>Show minimum sizes</strong> | 最小サイズを表示: Draw 44x44px box - "This is the minimum"</li>
+<li><strong>Demonstrate thumb zones</strong> | 親指ゾーンを実演: Hold phone, show where thumb can easily reach</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>44x44px minimum</strong> | 最小44x44px: Apple and Google guidelines - follow them</li>
+<li><strong>Thumb-friendly placement</strong> | 親指フレンドリーな配置: Bottom center for primary actions</li>
+<li><strong>No hover states</strong> | ホバー状態なし: Can't show info on hover - must be explicit</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Interactive demo</strong> | インタラクティブデモ: Have students hold phones, notice what's easy/hard to reach</li>
+<li><strong>Show bad examples</strong> | 悪い例を表示: Tiny buttons, clustered links</li>
+<li><strong>Size comparison</strong> | サイズ比較: Mouse cursor (1px point) vs. finger (44px area)</li>
+</ul>
+
+<h4>Demonstration | 実演</h4>
+<ul>
+<li>Draw 44x44px grid on board</li>
+<li>Show how many desktop buttons would be too small</li>
+<li>Demonstrate spacing requirements between targets</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Screen Sizes and Responsive Design | 画面サイズとレスポンシブデザイン</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Show device spectrum</strong> | デバイススペクトラムを表示: From smallest phone to desktop</li>
+<li><strong>Explain breakpoints</strong> | ブレークポイントを説明: Where layout changes</li>
+<li><strong>Demonstrate fluid layouts</strong> | 流体レイアウトを実演: How content adapts</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Many screen sizes</strong> | 多くの画面サイズ: Can't design for just one</li>
+<li><strong>Fluid not fixed</strong> | 固定ではなく流体: Use percentages, adapt to space</li>
+<li><strong>Content priority shifts</strong> | コンテンツ優先度がシフト: Secondary features hide or move on small screens</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use physical props</strong> | 物理的小道具を使用: Show different sized devices</li>
+<li><strong>Draw examples</strong> | 例を描く: Same content, 3 screen sizes</li>
+<li><strong>Emphasize testing</strong> | テストを強調: Must test on real devices</li>
+</ul>
+
+<h4>Interactive Exercise | インタラクティブな演習</h4>
+<ul>
+<li>Show a desktop layout</li>
+<li>Ask: "What stays, what goes on phone?"</li>
+<li>Discuss prioritization decisions</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Mobile Navigation Patterns | モバイルナビゲーションパターン</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Show real app examples</strong> | 実際のアプリ例を表示: Instagram (bottom bar), Gmail (hamburger)</li>
+<li><strong>Demonstrate each pattern</strong> | 各パターンを実演: Physical gestures for swipe, tap</li>
+<li><strong>Explain trade-offs</strong> | トレードオフを説明: When to use which pattern</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Bottom bar most common</strong> | 下部バーが最も一般的: 3-5 main sections</li>
+<li><strong>Hamburger menu controversial</strong> | ハンバーガーメニューは議論の余地あり: Hides navigation</li>
+<li><strong>Context matters</strong> | コンテキストが重要: Choose pattern based on app structure</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use student phones</strong> | 学生の電話を使用: "Open Instagram - see the bottom bar?"</li>
+<li><strong>Pros and cons lists</strong> | 長所と短所のリスト: For each pattern type</li>
+<li><strong>Connect to personas</strong> | ペルソナとつなげる: "Would Sarah find hamburger menu easily?"</li>
+</ul>
+
+<h4>Demonstration | 実演</h4>
+<ul>
+<li>Show 4 navigation patterns on actual apps</li>
+<li>Discuss when each is appropriate</li>
+<li>Have students identify patterns in their favorite apps</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Mobile Form Design | モバイルフォームデザイン</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Show painful mobile forms</strong> | 苦痛なモバイルフォームを表示: Bad examples that frustrate</li>
+<li><strong>Demonstrate good practices</strong> | 良い実践を実演: Single column, large fields, smart keyboards</li>
+<li><strong>Explain input types</strong> | 入力タイプを説明: Email keyboard, numeric keypad, date pickers</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Every field is a burden</strong> | すべてのフィールドが負担: Only ask for essentials</li>
+<li><strong>Single column layout</strong> | 単一列レイアウト: Easier to scan and complete</li>
+<li><strong>Appropriate keyboards</strong> | 適切なキーボード: Email, phone, number inputs show right keyboard</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Live demo on phone</strong> | 電話でライブデモ: Fill out form on your phone, narrate experience</li>
+<li><strong>Bad example walkthrough</strong> | 悪い例のウォークスルー: Show frustrating form, identify problems</li>
+<li><strong>Best practice checklist</strong> | ベストプラクティスチェックリスト: Provide reference</li>
+</ul>
+
+<h4>Common Student Mistakes | 一般的な学生の間違い</h4>
+<ul>
+<li><strong>Multi-column layouts</strong> | 複数列レイアウト: Confusing on mobile</li>
+<li><strong>Placeholder as label</strong> | ラベルとしてプレースホルダー: Disappears when typing</li>
+<li><strong>Generic input types</strong> | 一般的な入力タイプ: Not using email/tel/number inputs</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Mobile UI Patterns - Lists and Content | モバイルUIパターン - リストとコンテンツ</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Show pattern examples</strong> | パターン例を表示: Vertical lists, grids, carousels</li>
+<li><strong>Explain when to use each</strong> | いつ使用するかを説明: Context and content type matters</li>
+<li><strong>Demonstrate interactions</strong> | 相互作用を実演: Swipe actions, pull-to-refresh</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Vertical scroll is natural</strong> | 垂直スクロールは自然: Most common pattern</li>
+<li><strong>Grids for visual content</strong> | 視覚的コンテンツのためのグリッド: Photos, products</li>
+<li><strong>Accordions save space</strong> | アコーディオンがスペースを節約: Expand/collapse sections</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use familiar apps</strong> | 馴染みのあるアプリを使用: Twitter (list), Instagram (grid)</li>
+<li><strong>Pattern library</strong> | パターンライブラリ: Provide reference with examples</li>
+<li><strong>Show in context</strong> | コンテキストで表示: Same content, different patterns</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Feedback and States | フィードバックと状態</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Emphasize importance</strong> | 重要性を強調: Users must know what's happening</li>
+<li><strong>Show loading patterns</strong> | ローディングパターンを表示: Spinners, skeleton screens, progress bars</li>
+<li><strong>Demonstrate button states</strong> | ボタン状態を実演: Default, pressed, disabled, loading</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>No hover on mobile</strong> | モバイルではホバーなし: Feedback must be explicit</li>
+<li><strong>Skeleton screens > spinners</strong> | スケルトンスクリーン > スピナー: Feels faster</li>
+<li><strong>Optimistic UI</strong> | 楽観的UI: Show success immediately, revert if fails</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Compare experiences</strong> | 体験を比較: Good feedback vs. no feedback</li>
+<li><strong>Show timing</strong> | タイミングを表示: When to show loading indicators</li>
+<li><strong>Error handling</strong> | エラー処理: How to help users recover</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Typography on Mobile | モバイルでのタイポグラフィ</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Show size comparisons</strong> | サイズ比較を表示: 14px vs. 16px at arm's length</li>
+<li><strong>Demonstrate readability</strong> | 可読性を実演: Good vs. bad line height, contrast</li>
+<li><strong>Explain accessibility</strong> | アクセシビリティを説明: Why 16px minimum matters</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>16px minimum</strong> | 最小16px: 14px is too small for mobile</li>
+<li><strong>Line height matters</strong> | 行の高さが重要: 1.4-1.6 improves readability</li>
+<li><strong>Contrast ratios</strong> | コントラスト比: 4.5:1 minimum for text</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Physical demonstration</strong> | 物理的実演: Hold phone at arm's length, show text sizes</li>
+<li><strong>Accessibility connection</strong> | アクセシビリティ接続: Good typography helps everyone</li>
+<li><strong>System fonts</strong> | システムフォント: Fast loading, optimized</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Color and Contrast | 色とコントラスト</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Explain sunlight problem</strong> | 日光問題を説明: Mobile used outdoors</li>
+<li><strong>Show contrast checker</strong> | コントラストチェッカーを表示: Tool for testing ratios</li>
+<li><strong>Demonstrate dark mode</strong> | ダークモードを実演: Why it's increasingly expected</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>4.5:1 minimum contrast</strong> | 最小4.5:1コントラスト: For normal text</li>
+<li><strong>Test in sunlight</strong> | 日光でテスト: What works indoors may fail outdoors</li>
+<li><strong>Don't rely on color alone</strong> | 色だけに頼らない: Add icons, labels, patterns</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use contrast tool</strong> | コントラストツールを使用: Show real-time checking</li>
+<li><strong>Color blindness</strong> | 色盲: 8% of men affected</li>
+<li><strong>Dark mode demo</strong> | ダークモードデモ: Show same interface light and dark</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: Performance and Optimization | パフォーマンスと最適化</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Present speed statistics</strong> | 速度統計を提示: 3 second rule</li>
+<li><strong>Explain mobile constraints</strong> | モバイル制約を説明: Slower networks, limited data</li>
+<li><strong>Show optimization strategies</strong> | 最適化戦略を表示: Image compression, code minification</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Speed is a feature</strong> | 速度は機能: Not just nice to have</li>
+<li><strong>Every second counts</strong> | 1秒ごとが重要: Abandonment increases with delay</li>
+<li><strong>Mobile networks are slow</strong> | モバイルネットワークは遅い: Design for 3G, not just wifi</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Show load times</strong> | 読み込み時間を表示: Fast vs. slow sites</li>
+<li><strong>Throttle connection</strong> | 接続をスロットル: Demo how site performs on 3G</li>
+<li><strong>Optimization tips</strong> | 最適化のヒント: Practical strategies students can use</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: Accessibility on Mobile | モバイルでのアクセシビリティ</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Emphasize universal benefit</strong> | 普遍的な利益を強調: Accessibility helps everyone</li>
+<li><strong>Show screen reader demo</strong> | スクリーンリーダーデモを表示: How blind users navigate</li>
+<li><strong>Explain touch accessibility</strong> | タッチアクセシビリティを説明: Target sizes matter more</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Touch targets for accessibility</strong> | アクセシビリティのためのタッチターゲット: 44x44px helps motor impairment</li>
+<li><strong>Screen reader support</strong> | スクリーンリーダーサポート: Alt text, semantic HTML</li>
+<li><strong>Respect user preferences</strong> | ユーザー設定を尊重: Text size, reduced motion</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Screen reader demo</strong> | スクリーンリーダーデモ: Turn on VoiceOver/TalkBack, navigate</li>
+<li><strong>Accessibility checklist</strong> | アクセシビリティチェックリスト: Provide reference</li>
+<li><strong>Connect to personas</strong> | ペルソナとつなげる: Some users have disabilities</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Mobile Design Process | モバイルデザインプロセス</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Walk through process</strong> | プロセスを歩く: 6 steps from persona to sketch</li>
+<li><strong>Emphasize iteration</strong> | 反復を強調: First sketch won't be perfect</li>
+<li><strong>Preview activity</strong> | アクティビティをプレビュー: "You'll do this in 15 minutes"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Start with personas</strong> | ペルソナから始める: Who are you designing for?</li>
+<li><strong>Prioritize core features</strong> | コア機能に優先順位を付ける: What's essential for mobile?</li>
+<li><strong>Sketch multiple options</strong> | 複数のオプションをスケッチ: Don't settle for first idea</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use Week 4 work</strong> | 週4の作業を使用: Build on personas and scenarios</li>
+<li><strong>Show example process</strong> | 例のプロセスを表示: Persona → sketch progression</li>
+<li><strong>Emphasize speed</strong> | 速度を強調: Low-fidelity = fast iteration</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: Today's Activity Preview | 今日のアクティビティプレビュー</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Build excitement</strong> | 興奮を構築: "Now you'll design real mobile interfaces!"</li>
+<li><strong>Explain structure</strong> | 構造を説明: 5 steps with bot guidance</li>
+<li><strong>Show materials</strong> | 教材を表示: Screen templates, drawing tools</li>
+<li><strong>Set expectations</strong> | 期待を設定: "Low-fidelity sketches, focus on layout"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Paper prototyping</strong> | 紙プロトタイピング: Fast, easy to change</li>
+<li><strong>Use personas</strong> | ペルソナを使用: Design for Sarah, not yourself</li>
+<li><strong>Apply mobile patterns</strong> | モバイルパターンを適用: Use what you learned today</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Reduce anxiety</strong> | 不安を減らす: "You don't need to be an artist"</li>
+<li><strong>Show example sketches</strong> | 例のスケッチを表示: Low-fidelity is fine</li>
+<li><strong>Emphasize peer feedback</strong> | ピアフィードバックを強調: Learn from each other</li>
+</ul>
+
+<h4>Time Management | 時間管理</h4>
+<ul>
+<li><strong>Step 1:</strong> 8 minutes - Persona and scenario review</li>
+<li><strong>Step 2:</strong> 10 minutes - Information architecture</li>
+<li><strong>Step 3:</strong> 22 minutes - Low-fidelity sketching</li>
+<li><strong>Step 4:</strong> 15 minutes - Apply mobile patterns</li>
+<li><strong>Step 5:</strong> 10 minutes - Peer review and iteration</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Key Takeaways | 主要な要点</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Summarize main points</strong> | 主要ポイントをまとめる: Five key principles</li>
+<li><strong>Connect to real world</strong> | 実世界とつなげる: These apply to professional work</li>
+<li><strong>Encourage practice</strong> | 練習を奨励: Keep sketching and iterating</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Mobile-first is standard</strong> | モバイルファーストは標準: Not optional anymore</li>
+<li><strong>Touch is different</strong> | タッチは異なる: Design accordingly</li>
+<li><strong>Patterns exist for a reason</strong> | パターンは理由があって存在: Use them effectively</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Make it memorable</strong> | 記憶に残るようにする: "44x44, not 14x14"</li>
+<li><strong>Practical application</strong> | 実用的な応用: Use in final project</li>
+<li><strong>Open for questions</strong> | 質問をオープン: "Any final questions before we start?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Looking Ahead | 先を見る</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Preview Week 6</strong> | 週6をプレビュー: Usability testing</li>
+<li><strong>Connect activities</strong> | アクティビティをつなげる: "Next week you'll test your sketches with users"</li>
+<li><strong>Build anticipation</strong> | 期待を構築: "See how real users interact with your designs"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Testing validates design</strong> | テストがデザインを検証: Don't skip this step</li>
+<li><strong>User feedback is gold</strong> | ユーザーフィードバックは金: Find problems early</li>
+<li><strong>Iterate based on testing</strong> | テストに基づいて反復: Improve continuously</li>
+</ul>
+
+<h4>Final Encouragement | 最終的な励まし</h4>
+<ul>
+<li>"You have the principles and patterns"</li>
+<li>"The bot will guide you through sketching"</li>
+<li>"Let's create mobile interfaces your personas will love!"</li>
+</ul>
+
+<hr>
+
+<h2>Activity Transition | アクティビティ移行</h2>
+
+<h3>Before Starting Activity | アクティビティ開始前</h3>
+<p>1. <strong>Verify bot access</strong> | ボットアクセスを確認: All students logged in to mobile design module</p>
+<p>2. <strong>Distribute materials</strong> | 教材を配布: Screen templates, drawing tools</p>
+<p>3. <strong>Ensure persona access</strong> | ペルソナアクセスを確保: Students can reference Week 4 work</p>
+<p>4. <strong>Quick demo</strong> | クイックデモ: Show how to use screen templates</p>
+
+<h3>During Activity | アクティビティ中</h3>
+<p>1. <strong>Circulate actively</strong> | 積極的に巡回: Monitor all students</p>
+<p>2. <strong>Answer questions</strong> | 質問に答える: But encourage bot use first</p>
+<p>3. <strong>Watch for issues</strong> | 問題を監視: Common problems detailed below</p>
+<p>4. <strong>Manage time</strong> | 時間を管理: Give warnings at transitions</p>
+<p>5. <strong>Take photos</strong> | 写真を撮る: Document student work for sharing</p>
+
+<h3>Common Issues During Activity | アクティビティ中の一般的な問題</h3>
+
+<h4>Issue 1: Students Try to Design for Desktop First | 問題1：学生がデスクトップファーストでデザインしようとする</h4>
+<ul>
+<li><strong>Signs:</strong> Sketches show features that won't fit on mobile</li>
+<li><strong>Intervention:</strong> "Start with phone screen - what's the ONE most important thing?"</li>
+<li><strong>Prevention:</strong> Emphasize mobile-first in lecture repeatedly</li>
+</ul>
+
+<h4>Issue 2: Touch Targets Too Small | 問題2：タッチターゲットが小さすぎる</h4>
+<ul>
+<li><strong>Signs:</strong> Buttons, links smaller than 44x44px</li>
+<li><strong>Intervention:</strong> "Use your finger - can you comfortably tap this?"</li>
+<li><strong>Bot Help:</strong> Bot provides touch target sizing grid overlay</li>
+</ul>
+
+<h4>Issue 3: Too Much Content on One Screen | 問題3：1つの画面にコンテンツが多すぎる</h4>
+<ul>
+<li><strong>Signs:</strong> Cramped, crowded sketches</li>
+<li><strong>Intervention:</strong> "Divide this into 2-3 screens. What's the hierarchy?"</li>
+<li><strong>Reminder:</strong> "Mobile = focus. One primary action per screen."</li>
+</ul>
+
+<h4>Issue 4: Ignoring Thumb Zones | 問題4：親指ゾーンを無視</h4>
+<ul>
+<li><strong>Signs:</strong> Primary actions at top of screen</li>
+<li><strong>Intervention:</strong> Hold phone: "Where can your thumb reach easily?"</li>
+<li><strong>Bot Help:</strong> Bot shows thumb reach heatmap</li>
+</ul>
+
+<h4>Issue 5: No Navigation Pattern | 問題5：ナビゲーションパターンなし</h4>
+<ul>
+<li><strong>Signs:</strong> Can't tell how user moves between screens</li>
+<li><strong>Intervention:</strong> "How does user get back? Move to next section?"</li>
+<li><strong>Reminder:</strong> "Choose a navigation pattern - bottom bar, hamburger, etc."</li>
+</ul>
+
+<h4>Issue 6: Inconsistent with Mobile Conventions | 問題6：モバイル規則と矛盾</h4>
+<ul>
+<li><strong>Signs:</strong> Non-standard patterns, unusual placements</li>
+<li><strong>Intervention:</strong> "Users expect X here. Why change it?"</li>
+<li><strong>Bot Help:</strong> Bot validates against platform guidelines</li>
+</ul>
+
+<h4>Issue 7: Skipping Annotations | 問題7：注釈をスキップ</h4>
+<ul>
+<li><strong>Signs:</strong> Drawings without labels, interaction notes</li>
+<li><strong>Intervention:</strong> "Add notes - what happens when user taps this?"</li>
+<li><strong>Reminder:</strong> "These sketches need to communicate to others"</li>
+</ul>
+
+<hr>
+
+<h2>Post-Activity Discussion | アクティビティ後のディスカッション</h2>
+
+<h3>Reflection Questions | 振り返り質問</h3>
+<p>1. <strong>"What was most challenging about mobile-first design?"</strong> | 「モバイルファーストデザインで最も挑戦的だったことは何ですか？」</p>
+<p>2. <strong>"How did touch target sizing affect your layouts?"</strong> | 「タッチターゲットサイジングはレイアウトにどのように影響しましたか？」</p>
+<p>3. <strong>"Which mobile pattern did you choose and why?"</strong> | 「どのモバイルパターンを選択し、なぜですか？」</p>
+<p>4. <strong>"How did peer feedback change your design?"</strong> | 「ピアフィードバックはどのようにデザインを変えましたか？」</p>
+<p>5. <strong>"Does your sketch support your persona's goals?"</strong> | 「スケッチはペルソナの目標をサポートしますか？」</p>
+
+<h3>Key Learnings to Reinforce | 強化すべき主要な学び</h3>
+<ul>
+<li><strong>Constraints force focus</strong> | 制約が焦点を強制: Mobile = prioritization</li>
+<li><strong>Touch is fundamentally different</strong> | タッチは根本的に異なる: Bigger targets, thumb zones</li>
+<li><strong>Patterns solve common problems</strong> | パターンが一般的な問題を解決: Don't reinvent the wheel</li>
+<li><strong>Sketching is fast iteration</strong> | スケッチは速い反復: Low-fidelity allows experimentation</li>
+</ul>
+
+<h3>Common Student Insights | 一般的な学生の洞察</h3>
+<ul>
+<li>"I had to cut so many features to fit on mobile"</li>
+<li>"Touch targets are way bigger than I expected"</li>
+<li>"Following patterns made design easier"</li>
+<li>"My persona's scenario really guided my decisions"</li>
+</ul>
+
+<h3>Next Week Connection | 来週の接続</h3>
+<ul>
+<li><strong>"Bring your sketches"</strong> | 「スケッチを持参」: We'll test them next week</li>
+<li><strong>"Think about test tasks"</strong> | 「テストタスクについて考える」: What will you have users try?</li>
+<li><strong>"Clean up sketches"</strong> | 「スケッチをクリーンアップ」: Make them testable</li>
+</ul>
+
+<hr>
+
+<h2>Assessment Notes | 評価ノート</h2>
+
+<h3>What to Look For in Submissions | 提出物で何を見るか</h3>
+
+<h4>Mobile-First Approach | モバイルファーストアプローチ</h4>
+<ul>
+<li><strong>Designed for smallest screen first</strong> | 最小の画面を最初にデザイン: Not desktop shrunk down</li>
+<li><strong>Core functionality prioritized</strong> | コア機能に優先順位: Essential features prominent</li>
+<li><strong>Progressive enhancement noted</strong> | プログレッシブエンハンスメント注記: Ideas for larger screens</li>
+</ul>
+
+<h4>Touch Interface Design | タッチインターフェースデザイン</h4>
+<ul>
+<li><strong>Touch targets 44x44px minimum</strong> | タッチターゲット最小44x44px: Measured and labeled</li>
+<li><strong>Adequate spacing</strong> | 適切な間隔: Between interactive elements</li>
+<li><strong>Thumb-friendly placement</strong> | 親指フレンドリーな配置: Primary actions within reach</li>
+</ul>
+
+<h4>Mobile UI Patterns | モバイルUIパターン</h4>
+<ul>
+<li><strong>Appropriate navigation pattern</strong> | 適切なナビゲーションパターン: Bottom bar, hamburger, etc.</li>
+<li><strong>Standard content patterns</strong> | 標準コンテンツパターン: Lists, grids, cards used appropriately</li>
+<li><strong>Clear user flows</strong> | 明確なユーザーフロー: Screen transitions annotated</li>
+</ul>
+
+<h4>Sketch Quality | スケッチの質</h4>
+<ul>
+<li><strong>3-5 key screens</strong> | 3-5個の主要な画面: Complete user flow</li>
+<li><strong>Clear annotations</strong> | 明確な注釈: Interactions, states, notes</li>
+<li><strong>Legible and organized</strong> | 読みやすく整理されている: Easy to understand</li>
+<li><strong>Uses templates</strong> | テンプレートを使用: Standard screen sizes</li>
+</ul>
+
+<h4>Persona Alignment | ペルソナの整合性</h4>
+<ul>
+<li><strong>Supports persona goals</strong> | ペルソナの目標をサポート: Addresses user needs</li>
+<li><strong>Matches scenario context</strong> | シナリオコンテキストと一致: Right device, situation</li>
+<li><strong>Solves identified pain points</strong> | 特定されたペインポイントを解決: From journey map</li>
+</ul>
+
+<h4>Bot Interaction Evidence | ボットインタラクション証拠</h4>
+<ul>
+<li><strong>Screenshots</strong> | スクリーンショット: Key bot conversations</li>
+<li><strong>Template usage</strong> | テンプレート使用: Screen templates, pattern libraries</li>
+<li><strong>Guidance followed</strong> | ガイダンスに従う: Bot suggestions applied</li>
+<li><strong>Validation</strong> | 検証: Bot checked design decisions</li>
+</ul>
+
+<h3>Grading Rubric | 評価基準</h3>
+
+<h4>Excellent (90-100%) | 優秀（90-100％）</h4>
+<ul>
+<li>Mobile-first approach with clear prioritization</li>
+<li>All touch targets meet 44x44px minimum with proper spacing</li>
+<li>Appropriate mobile patterns consistently applied</li>
+<li>4-5 detailed screens with complete annotations</li>
+<li>Strong alignment with persona goals and scenarios</li>
+<li>Thoughtful design decisions documented</li>
+<li>Extensive bot interaction evidence</li>
+</ul>
+
+<h4>Good (80-89%) | 良い（80-89％）</h4>
+<ul>
+<li>Mobile-first approach, some prioritization</li>
+<li>Most touch targets meet minimum size requirements</li>
+<li>Mobile patterns used, mostly appropriate</li>
+<li>3-4 screens with good annotations</li>
+<li>Good alignment with persona</li>
+<li>Design decisions explained</li>
+<li>Good bot interaction evidence</li>
+</ul>
+
+<h4>Satisfactory (70-79%) | 満足（70-79％）</h4>
+<ul>
+<li>Attempts mobile-first, some desktop thinking</li>
+<li>Some touch targets too small</li>
+<li>Basic mobile patterns, some inconsistency</li>
+<li>2-3 screens with basic annotations</li>
+<li>Acceptable persona alignment</li>
+<li>Some design rationale provided</li>
+<li>Some bot interaction evidence</li>
+</ul>
+
+<h4>Needs Improvement (<70%) | 改善が必要（<70％）</h4>
+<ul>
+<li>Desktop-first approach</li>
+<li>Many touch targets too small</li>
+<li>Limited or inappropriate pattern usage</li>
+<li>Few screens, sparse annotations</li>
+<li>Weak persona connection</li>
+<li>Little design rationale</li>
+<li>Minimal bot interaction</li>
+</ul>
+
+<hr>
+
+<h2>Troubleshooting Guide | トラブルシューティングガイド</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+<ul>
+<li><strong>Bot not loading mobile module</strong> | ボットがモバイルモジュールを読み込まない: Clear cache, try different browser</li>
+<li><strong>Printing template problems</strong> | テンプレート印刷問題: Have digital versions available</li>
+<li><strong>No drawing materials</strong> | 描画材料なし: Students can use plain paper, ruler</li>
+</ul>
+
+<h3>Process Issues | プロセスの問題</h3>
+<ul>
+<li><strong>Students stuck on features</strong> | 学生が機能で立ち往生: Guide back to persona needs</li>
+<li><strong>Can't decide on pattern</strong> | パターンを決められない: Ask about app structure (3 sections? 10+?)</li>
+<li><strong>Overcomplicated designs</strong> | 過度に複雑なデザイン: Encourage simplification</li>
+</ul>
+
+<h3>Content Issues | コンテンツの問題</h3>
+<ul>
+<li><strong>Desktop-first thinking persists</strong> | デスクトップファースト思考が続く: Physically cover/limit to phone template</li>
+<li><strong>Touch targets consistently small</strong> | タッチターゲットが一貫して小さい: Provide 44px ruler/template overlay</li>
+<li><strong>No clear navigation</strong> | 明確なナビゲーションなし: Review navigation patterns slide</li>
+</ul>
+
+<hr>
+
+<h2>Additional Resources for Students | 学生向け追加リソース</h2>
+
+<h3>Recommended Reading | 推奨読み物</h3>
+<ul>
+<li><strong>"Mobile First" by Luke Wroblewski</strong> | Luke Wroblewskiの「Mobile First」: The definitive guide</li>
+<li><strong>Apple Human Interface Guidelines (Mobile)</strong> | Apple Human Interface Guidelines（モバイル）: iOS patterns</li>
+<li><strong>Material Design Guidelines</strong> | Material Designガイドライン: Android patterns</li>
+<li><strong>"Don't Make Me Think Mobile" by Steve Krug</strong> | Steve Krugの「Don't Make Me Think Mobile」: Usability basics</li>
+</ul>
+
+<h3>Tools and Templates | ツールとテンプレート</h3>
+<ul>
+<li><strong>Mobile screen templates</strong> | モバイル画面テンプレート: Various device sizes</li>
+<li><strong>Touch target grids</strong> | タッチターゲットグリッド: 44x44px overlay</li>
+<li><strong>UI pattern library</strong> | UIパターンライブラリ: Common mobile patterns</li>
+<li><strong>Contrast checker</strong> | コントラストチェッカー: WebAIM tool</li>
+</ul>
+
+<h3>Practice Opportunities | 練習機会</h3>
+<ul>
+<li><strong>Sketch app interfaces</strong> | アプリインターフェースをスケッチ: Practice with familiar apps</li>
+<li><strong>Critique mobile sites</strong> | モバイルサイトを批評: Analyze good and bad examples</li>
+<li><strong>Bot practice</strong> | ボット練習: Use bot for design feedback</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Backup Plans | 緊急バックアッププラン</h2>
+
+<h3>If Bot Portal Fails | ボットポータルが失敗した場合</h3>
+<p>1. Use provided paper templates and pattern libraries</p>
+<p>2. Instructor provides verbal guidance for each step</p>
+<p>3. Students work in pairs for peer feedback</p>
+<p>4. Extend sketching time to compensate</p>
+
+<h3>If No Printing Available | 印刷が利用できない場合</h3>
+<p>1. Students draw phone rectangles on blank paper</p>
+<p>2. Provide dimensions verbally (375px × 667px common)</p>
+<p>3. Share digital templates via projector for reference</p>
+<p>4. Focus on concepts over perfect sizing</p>
+
+<h3>If Time Runs Short | 時間が不足した場合</h3>
+<p>1. <strong>Priority:</strong> Complete at least 2-3 key screens</p>
+<p>2. <strong>Skip if needed:</strong> Detailed annotations (assign as homework)</p>
+<p>3. <strong>Simplify:</strong> Basic user flow, refine later</p>
+<p>4. <strong>Extend:</strong> Peer review becomes homework</p>
+
+<hr>
+
+<h2>Week 5 Success Metrics | 週5の成功指標</h2>
+
+<h3>Student Engagement Indicators | 学生エンゲージメント指標</h3>
+<ul>
+<li>Active participation in sketching</li>
+<li>Thoughtful questions about mobile patterns</li>
+<li>Collaborative peer review</li>
+<li>Productive bot interactions</li>
+<li>Multiple sketch iterations</li>
+</ul>
+
+<h3>Learning Outcome Evidence | 学習成果証拠</h3>
+<ul>
+<li>Students explain mobile-first philosophy</li>
+<li>Students apply 44x44px touch target sizing</li>
+<li>Students choose appropriate mobile patterns</li>
+<li>Students create responsive layout concepts</li>
+<li>Students connect designs to personas</li>
+</ul>
+
+<h3>Quality Markers | 質マーカー</h3>
+<ul>
+<li>Sketches designed for mobile context</li>
+<li>Touch targets appropriately sized and spaced</li>
+<li>Mobile navigation patterns correctly applied</li>
+<li>Clear user flows with annotations</li>
+<li>Persona goals addressed in design</li>
+<li>Design decisions documented with rationale</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+<em>インストラクターノート終了</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week04-instructor-notes.html" class="nav-btn nav-prev">← Week 4</a>
+        <span class="nav-current">Week 5 Instructor Notes</span>
+        <a href="week06-instructor-notes.html" class="nav-btn nav-next">Week 6 →</a>
+        <a href="week05-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

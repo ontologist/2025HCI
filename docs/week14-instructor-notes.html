@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 14 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 14 Instructor Notes | 第14週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week13-instructor-notes.html" class="nav-btn nav-prev">← Week 13</a>
+        <span class="nav-current">Week 14 Instructor Notes</span>
+        <span class="nav-btn nav-disabled">Next →</span>
+        <a href="week14-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 14 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第14週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> Full class session (90+ minutes for presentations)
+<strong>Target Audience:</strong> Undergraduate students completing final projects
+
+<hr>
+
+<h2>Pre-Class Setup | クラス前セットアップ</h2>
+
+<h3>Critical Technical Preparation | 重要な技術準備</h3>
+<li class="checkbox">&#9744; Test projection/display system thoroughly</li>
+<li class="checkbox">&#9744; Verify internet connectivity for prototype demos</li>
+<li class="checkbox">&#9744; Have backup laptop/device ready</li>
+<li class="checkbox">&#9744; Test bot portal for final assessments</li>
+<li class="checkbox">&#9744; Prepare presentation order (alphabetical or random draw)</li>
+<li class="checkbox">&#9744; Set up timer for presentations (visible to students)</li>
+<li class="checkbox">&#9744; Have backup files of all student presentations if possible</li>
+<li class="checkbox">&#9744; Test any recording equipment if recording presentations</li>
+
+<h3>Materials to Print and Distribute | 印刷して配布する教材</h3>
+<li class="checkbox">&#9744; Presentation schedule with order and timing</li>
+<li class="checkbox">&#9744; Peer feedback forms (one per presentation per student)</li>
+<li class="checkbox">&#9744; Presentation rubric (for instructor use)</li>
+<li class="checkbox">&#9744; Bot assessment schedule</li>
+<li class="checkbox">&#9744; Certificate of completion or course completion acknowledgment</li>
+<li class="checkbox">&#9744; Contact information exchange sheet (optional)</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Arrange seating for optimal viewing</li>
+<li class="checkbox">&#9744; Ensure presenters can easily connect devices</li>
+<li class="checkbox">&#9744; Have HDMI/USB-C adapters ready</li>
+<li class="checkbox">&#9744; Set up presenter space at front</li>
+<li class="checkbox">&#9744; Prepare timer display</li>
+<li class="checkbox">&#9744; Have water available for presenters</li>
+<li class="checkbox">&#9744; Create celebratory atmosphere (optional: decorations, refreshments)</li>
+
+<h3>Emotional Preparation | 感情的準備</h3>
+<li class="checkbox">&#9744; This is a celebration, not just evaluation</li>
+<li class="checkbox">&#9744; Create supportive, encouraging atmosphere</li>
+<li class="checkbox">&#9744; Prepare to handle presentation anxiety</li>
+<li class="checkbox">&#9744; Be ready to troubleshoot technical issues calmly</li>
+<li class="checkbox">&#9744; Have encouraging words ready for all students</li>
+<li class="checkbox">&#9744; Prepare specific praise points for each presenter</li>
+
+<hr>
+
+<h2>Class Flow and Timing | クラスフローとタイミング</h2>
+
+<h3>Suggested Schedule for 100-minute Class | 100分クラスの推奨スケジュール</h3>
+
+<strong>Introduction (10 minutes)</strong>
+<ul>
+<li>Welcome and celebration opening</li>
+<li>Review presentation format and expectations</li>
+<li>Explain peer feedback process</li>
+<li>Announce presentation order</li>
+<li>Set supportive atmosphere</li>
+</ul>
+
+<strong>Presentations (60-75 minutes)</strong>
+<ul>
+<li>Approximately 4-6 presentations depending on class size</li>
+<li>12-15 minutes per student (7-10 min presentation + Q&A + feedback)</li>
+<li>5-minute break after every 3-4 presentations</li>
+</ul>
+
+<strong>Wrap-up and Reflection (10-15 minutes)</strong>
+<ul>
+<li>Thank all presenters</li>
+<li>Highlight common themes and excellent work</li>
+<li>Preview bot assessment process</li>
+<li>Course reflection and farewell</li>
+<li>Celebration and informal networking</li>
+</ul>
+
+<strong>Post-Class (30-60 minutes)</strong>
+<ul>
+<li>Individual bot assessments (can be scheduled separately)</li>
+<li>Office hours for questions</li>
+<li>Final submission verification</li>
+</ul>
+
+<hr>
+
+<h2>Opening Remarks | オープニングリマーク</h2>
+
+<h3>Welcome and Celebration (5 minutes) | ウェルカムと祝賀（5分）</h3>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 14 - our final class! Today is a celebration of everything you've accomplished over these 14 weeks."</li>
+<li>"You started this course as HCI novices. Today, you'll present professional-quality interface designs that solve real problems for real users."</li>
+<li>"This isn't just about grades or evaluation. This is about showcasing your creativity, your hard work, and your growth as designers."</li>
+<li>"I'm incredibly proud of every one of you. The work you've done is impressive, and I can't wait to see your final presentations."</li>
+<li>"Remember: everyone in this room has worked hard. Be supportive, be encouraging, and be proud of what you've achieved together."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第14週へようこそ - 私たちの最後のクラスです！今日は、この14週間であなたが成し遂げたすべてを祝う日です。"</li>
+<li>"あなたはこのコースをHCI初心者として始めました。今日、実際のユーザーのための実際の問題を解決するプロフェッショナル品質のインターフェースデザインを発表します。"</li>
+<li>"これは成績や評価だけではありません。これはあなたの創造性、勤勉さ、そしてデザイナーとしての成長を示すことです。"</li>
+<li>"私はあなた方一人一人をとても誇りに思っています。あなたがした仕事は印象的で、最終プレゼンテーションを見るのが待ちきれません。"</li>
+<li>"覚えておいてください：この部屋の全員が一生懸命働きました。支援的で、励まし、一緒に達成したことを誇りに思ってください。"</li>
+</ul>
+
+<strong>Set the Tone:</strong>
+<ul>
+<li>This is a safe, supportive environment</li>
+<li>Technical issues can happen - we'll handle them calmly</li>
+<li>Questions should be genuine curiosity, not criticism</li>
+<li>Feedback should be constructive and kind</li>
+<li>Everyone has worked hard and deserves respect</li>
+</ul>
+
+<hr>
+
+<h2>Presentation Format and Expectations | プレゼンテーション形式と期待</h2>
+
+<h3>Review Format (3 minutes) | 形式のレビュー（3分）</h3>
+
+<strong>Time Structure:</strong>
+<ul>
+<li>7-10 minutes: Student presentation</li>
+<li>2-3 minutes: Q&A from audience</li>
+<li>2 minutes: Peer feedback completion</li>
+<li>Total: 12-15 minutes per student</li>
+</ul>
+
+<strong>Required Content Reminder:</strong>
+<p>1. Problem and user research</p>
+<p>2. Design process journey</p>
+<p>3. Final prototype demo</p>
+<p>4. Usability testing results</p>
+<p>5. Reflections and learnings</p>
+
+<strong>Technical Guidelines:</strong>
+<ul>
+<li>Connect device before your turn</li>
+<li>Have prototype ready to demo</li>
+<li>Backup plan if demo fails (screenshots, video)</li>
+<li>Stay within time limit</li>
+<li>Face audience, not screen</li>
+</ul>
+
+<hr>
+
+<h2>Peer Feedback Process | ピアフィードバックプロセス</h2>
+
+<h3>Explaining Peer Feedback (2 minutes) | ピアフィードバックの説明（2分）</h3>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"For each presentation, you'll complete a peer feedback form. This is valuable for your classmates and for your own learning."</li>
+<li>"Focus on being specific and constructive. Don't just say 'good job' - explain what worked well and why."</li>
+<li>"Use HCI principles we've learned. Reference usability, accessibility, design thinking, user-centered design."</li>
+<li>"Balance positive feedback with constructive suggestions. Everyone deserves to hear what they did well."</li>
+<li>"Your feedback should help your classmate improve. Be the kind of critic you'd want for your own work."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"各プレゼンテーションについて、ピアフィードバックフォームに記入します。これはクラスメートと自分自身の学習にとって価値があります。"</li>
+<li>"具体的で建設的であることに焦点を当ててください。ただ「良い仕事」と言うのではなく、何がうまくいったか、なぜかを説明してください。"</li>
+<li>"学んだHCI原則を使用してください。ユーザビリティ、アクセシビリティ、デザイン思考、ユーザー中心デザインを参照してください。"</li>
+<li>"肯定的なフィードバックと建設的な提案のバランスを取ってください。誰もが自分がうまくやったことを聞く価値があります。"</li>
+<li>"あなたのフィードバックはクラスメートが改善するのに役立つべきです。自分自身の作品に対して欲しい種類の批評家になってください。"</li>
+</ul>
+
+<strong>Feedback Form Reminders:</strong>
+<ul>
+<li>Fill out for each presentation except your own</li>
+<li>Complete during Q&A and peer feedback time</li>
+<li>Be honest but kind</li>
+<li>Focus on design, not personal preferences</li>
+<li>Collect all forms at end of class</li>
+</ul>
+
+<hr>
+
+<h2>Managing Presentations | プレゼンテーションの管理</h2>
+
+<h3>Presentation Flow</h3>
+
+<strong>Before Each Presentation:</strong>
+<p>1. Announce next presenter</p>
+<p>2. Give them 1-2 minutes to set up</p>
+<p>3. Help with technical issues if needed</p>
+<p>4. Distribute peer feedback forms</p>
+<p>5. Start timer when ready</p>
+
+<strong>During Presentation:</strong>
+<p>1. Monitor time (give 2-minute and 1-minute warnings)</p>
+<p>2. Take notes on strengths to mention</p>
+<p>3. Prepare thoughtful question if Q&A is slow</p>
+<p>4. Watch audience engagement</p>
+<p>5. Note any technical issues</p>
+
+<strong>After Presentation:</strong>
+<p>1. Lead applause</p>
+<p>2. Facilitate Q&A (2-3 minutes)</p>
+<p>3. Ask your own question if needed</p>
+<p>4. Give 2 minutes for peer feedback completion</p>
+<p>5. Thank presenter</p>
+<p>6. Transition to next presenter</p>
+
+<h3>Time Management Strategies</h3>
+
+<strong>If Running Over:</strong>
+<ul>
+<li>Politely interrupt with time warnings</li>
+<li>"That's our 10-minute mark, please wrap up"</li>
+<li>Allow to finish thought but keep brief</li>
+<li>Adjust Q&A time if needed</li>
+</ul>
+
+<strong>If Running Short:</strong>
+<ul>
+<li>Extended Q&A</li>
+<li>Ask follow-up questions</li>
+<li>Encourage deeper discussion</li>
+<li>Extra feedback time</li>
+</ul>
+
+<strong>If Technical Issues:</strong>
+<ul>
+<li>Stay calm and supportive</li>
+<li>"Let's take a minute to troubleshoot"</li>
+<li>Have backup options ready</li>
+<li>Don't count setup time against presentation</li>
+</ul>
+
+<hr>
+
+<h2>Question and Answer Facilitation | Q&Aファシリテーション</h2>
+
+<h3>Encouraging Good Questions</h3>
+
+<strong>Model Good Questions:</strong>
+<ul>
+<li>"Can you explain why you chose that color scheme?"</li>
+<li>"How did user feedback influence that design decision?"</li>
+<li>"What accessibility features did you include?"</li>
+<li>"If you had more time, what would you add?"</li>
+</ul>
+
+<strong>If No Questions:</strong>
+<ul>
+<li>Ask your prepared question</li>
+<li>"I'm curious about..."</li>
+<li>"I noticed... can you tell us more?"</li>
+<li>Highlight something impressive and ask about it</li>
+</ul>
+
+<strong>If Inappropriate Questions:</strong>
+<ul>
+<li>Redirect diplomatically</li>
+<li>"Let's focus on the design decisions"</li>
+<li>"That's more about personal preference than design principles"</li>
+<li>Protect presenters from harsh criticism</li>
+</ul>
+
+<hr>
+
+<h2>Evaluation and Rubric Use | 評価とルーブリック使用</h2>
+
+<h3>Using the Presentation Rubric</h3>
+
+<strong>Evaluation Categories:</strong>
+<p>1. User Research (5 points)</p>
+<p>2. Design Process (5 points)</p>
+<p>3. Final Prototype (5 points)</p>
+<p>4. Usability Testing (5 points)</p>
+<p>5. Accessibility (5 points)</p>
+<p>6. Clarity and Organization (4 points)</p>
+<p>7. Demonstration (3 points)</p>
+<p>8. Reflection and Insights (3 points)</p>
+
+<strong>Total: 35 points</strong>
+
+<h3>Evaluation Tips</h3>
+
+<strong>Be Fair and Consistent:</strong>
+<ul>
+<li>Use the same standards for all students</li>
+<li>Compare to rubric, not to other students</li>
+<li>Credit effort and growth</li>
+<li>Consider starting point and improvement</li>
+</ul>
+
+<strong>Look For:</strong>
+<ul>
+<li>Evidence of design thinking process</li>
+<li>User-centered decisions</li>
+<li>Clear rationale for choices</li>
+<li>Thoughtful iteration</li>
+<li>Professional execution</li>
+<li>Connection to HCI principles</li>
+</ul>
+
+<strong>Common Strengths to Recognize:</strong>
+<ul>
+<li>Thorough user research</li>
+<li>Clear persona development</li>
+<li>Multiple design iterations</li>
+<li>Effective usability testing</li>
+<li>Strong accessibility features</li>
+<li>Professional presentation</li>
+<li>Honest reflection</li>
+</ul>
+
+<strong>Common Areas for Growth:</strong>
+<ul>
+<li>More user testing needed</li>
+<li>Accessibility could be stronger</li>
+<li>Design rationale unclear</li>
+<li>Limited iterations shown</li>
+<li>Time management in presentation</li>
+</ul>
+
+<hr>
+
+<h2>Bot-Conducted Final Assessment | ボット実施最終評価</h2>
+
+<h3>Purpose and Process</h3>
+
+<strong>What is the Bot Assessment?</strong>
+<p>The HCI-101 Bot conducts a conversational interview with each student about their design decisions, testing their understanding of HCI principles and ability to justify design choices.</p>
+
+<strong>HCI-101ボットは何ですか？</strong>
+<p>HCI-101ボットは、各学生のデザイン決定について会話形式のインタビューを実施し、HCI原則の理解とデザイン選択を正当化する能力をテストします。</p>
+
+<strong>Assessment Topics:</strong>
+<p>1. User research methodology and findings</p>
+<p>2. Design thinking process application</p>
+<p>3. Usability principles and heuristics</p>
+<p>4. Accessibility standards and implementation</p>
+<p>5. Design iteration rationale</p>
+<p>6. Technical decision justification</p>
+
+<strong>Scheduling:</strong>
+<ul>
+<li>15-20 minutes per student</li>
+<li>Can be done after all presentations</li>
+<li>Or scheduled separately outside class time</li>
+<li>Students access via bot portal</li>
+<li>No outside AI assistance allowed during assessment</li>
+</ul>
+
+<strong>Grading:</strong>
+<ul>
+<li>Part of final project grade (15 points from bot assessments)</li>
+<li>Evaluates depth of understanding</li>
+<li>Ability to articulate design rationale</li>
+<li>Application of HCI principles</li>
+<li>Critical thinking about own work</li>
+</ul>
+
+<hr>
+
+<h2>Handling Different Scenarios | 異なるシナリオの処理</h2>
+
+<h3>Technical Difficulties</h3>
+
+<strong>Prototype Won't Load:</strong>
+<ul>
+<li>"That's okay, walk us through with screenshots"</li>
+<li>"Describe what would happen if we could see it"</li>
+<li>"Show us your design files instead"</li>
+<li>Don't penalize for technical issues outside student control</li>
+</ul>
+
+<strong>Connectivity Issues:</strong>
+<ul>
+<li>Have offline backup plan</li>
+<li>Use personal hotspot if available</li>
+<li>Continue with non-demo portions</li>
+<li>Reschedule demo if necessary</li>
+</ul>
+
+<strong>Device Compatibility:</strong>
+<ul>
+<li>Have multiple adapters ready</li>
+<li>Test connections before class</li>
+<li>Have backup laptop available</li>
+<li>Allow presentation from instructor's computer</li>
+</ul>
+
+<h3>Student Anxiety</h3>
+
+<strong>Very Nervous Presenters:</strong>
+<ul>
+<li>Smile and make eye contact</li>
+<li>Nod encouragingly</li>
+<li>Ask easy warm-up question</li>
+<li>Highlight strengths during Q&A</li>
+<li>Remind them it's okay to be nervous</li>
+</ul>
+
+<strong>Presentation Freezing:</strong>
+<ul>
+<li>"Take a deep breath"</li>
+<li>"Would you like some water?"</li>
+<li>Ask specific question to restart</li>
+<li>Offer to come back to them later if needed</li>
+</ul>
+
+<strong>Time Running Out:</strong>
+<ul>
+<li>"You're doing great, let's move to the demo"</li>
+<li>Help them prioritize remaining content</li>
+<li>Allow to finish key points briefly</li>
+</ul>
+
+<h3>Quality Issues</h3>
+
+<strong>Incomplete Work:</strong>
+<ul>
+<li>Focus on what was accomplished</li>
+<li>Ask about challenges faced</li>
+<li>Discuss lessons learned</li>
+<li>Credit effort and partial completion</li>
+<li>Mention growth and improvement</li>
+</ul>
+
+<strong>Weak Presentation:</strong>
+<ul>
+<li>Ask probing questions to draw out understanding</li>
+<li>Highlight any strengths</li>
+<li>Provide constructive feedback privately later</li>
+<li>Remember presentation skills ≠ design skills</li>
+</ul>
+
+<strong>Exceptional Work:</strong>
+<ul>
+<li>Give deserved praise</li>
+<li>Ask to share specific techniques</li>
+<li>Use as learning example for class</li>
+<li>Encourage portfolio development</li>
+<li>Don't make others feel inadequate</li>
+</ul>
+
+<hr>
+
+<h2>Post-Presentation Wrap-Up | プレゼンテーション後のまとめ</h2>
+
+<h3>Collective Reflection (10 minutes) | 集団振り返り（10分）</h3>
+
+<strong>After All Presentations Complete:</strong>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Wow. I am incredibly impressed by what you've all accomplished. Every single project showed creativity, hard work, and real understanding of HCI principles."</li>
+<li>"Let's reflect on some common themes I saw: user empathy, thoughtful iteration, accessibility consideration, professional execution. You've truly grown as designers."</li>
+<li>"Some highlights: [mention specific impressive elements without comparing students]"</li>
+<li>"What did you learn from seeing each other's work? [allow discussion]"</li>
+<li>"These projects are portfolio-worthy. I hope you'll continue to develop them and showcase them to future employers or graduate programs."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"わあ。あなた方全員が成し遂げたことに非常に感銘を受けました。すべてのプロジェクトが創造性、勤勉さ、HCI原則の真の理解を示しました。"</li>
+<li>"私が見たいくつかの共通テーマを振り返りましょう：ユーザー共感、思慮深い反復、アクセシビリティ考慮、プロフェッショナルな実行。あなたは真にデザイナーとして成長しました。"</li>
+<li>"いくつかのハイライト：[学生を比較せずに特定の印象的な要素に言及]"</li>
+<li>"お互いの作品を見て何を学びましたか？[議論を許可]"</li>
+<li>"これらのプロジェクトはポートフォリオに値します。将来の雇用主や大学院プログラムに展示するために開発を続けることを願っています。"</li>
+</ul>
+
+<h3>Course Reflection</h3>
+
+<strong>Key Questions to Discuss:</strong>
+<ul>
+<li>What was the most valuable thing you learned?</li>
+<li>How has your understanding of HCI changed?</li>
+<li>What surprised you about the design process?</li>
+<li>How will you apply this knowledge in the future?</li>
+<li>What advice would you give to future HCI-101 students?</li>
+</ul>
+
+<strong>Acknowledge Growth:</strong>
+<ul>
+<li>From not knowing what HCI is → creating professional interfaces</li>
+<li>From never conducting user research → empathizing with users</li>
+<li>From no design experience → justifying design decisions</li>
+<li>From unfamiliar with prototyping → creating interactive prototypes</li>
+<li>From unclear on accessibility → designing inclusively</li>
+</ul>
+
+<hr>
+
+<h2>Final Words and Farewell | 最後の言葉と別れ</h2>
+
+<h3>Closing Remarks (5 minutes) | クロージングリマーク（5分）</h3>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"As we conclude HCI-101, I want you to remember: you are now HCI practitioners. You have the knowledge and skills to design better interfaces."</li>
+<li>"More importantly, you understand that design is about people. It's about empathy, about solving real problems, about making technology accessible and usable for everyone."</li>
+<li>"The field of HCI is constantly evolving. AR, VR, voice interfaces, brain-computer interfaces - the future is exciting. I hope you'll continue learning and contributing to this field."</li>
+<li>"Thank you for your dedication, your creativity, your hard work, and your willingness to learn. It's been an honor teaching you."</li>
+<li>"Stay connected, keep designing, and always put users first. Congratulations on completing HCI-101!"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"HCI-101を終えるにあたり、覚えておいてほしいのは：あなたは今やHCI実践者です。より良いインターフェースをデザインするための知識とスキルを持っています。"</li>
+<li>"さらに重要なのは、デザインが人々についてであることを理解していることです。共感について、実際の問題を解決すること、すべての人にとって技術をアクセス可能で使いやすくすることです。"</li>
+<li>"HCIの分野は常に進化しています。AR、VR、音声インターフェース、ブレインコンピュータインターフェース - 未来はエキサイティングです。この分野で学び続け、貢献し続けることを願っています。"</li>
+<li>"献身、創造性、勤勉さ、そして学ぶ意欲に感謝します。あなたを教えることは光栄でした。"</li>
+<li>"つながり続け、デザインを続け、常にユーザーを第一に。HCI-101の修了おめでとうございます！"</li>
+</ul>
+
+<h3>Next Steps Reminder</h3>
+
+<strong>Immediate:</strong>
+<ul>
+<li>Complete bot assessment (scheduled separately)</li>
+<li>Submit final deliverables if not already done</li>
+<li>Complete course evaluation</li>
+<li>Exchange contact information with classmates</li>
+</ul>
+
+<strong>Future:</strong>
+<ul>
+<li>Add projects to portfolios</li>
+<li>Connect on LinkedIn</li>
+<li>Join UX/UI communities</li>
+<li>Continue learning</li>
+<li>Consider advanced HCI courses</li>
+</ul>
+
+<hr>
+
+<h2>Post-Class Administrative Tasks | クラス後の管理タスク</h2>
+
+<h3>Immediately After Class | クラス直後</h3>
+<li class="checkbox">&#9744; Collect all peer feedback forms</li>
+<li class="checkbox">&#9744; Verify all students presented</li>
+<li class="checkbox">&#9744; Note any technical issues to address</li>
+<li class="checkbox">&#9744; Schedule bot assessments if not done</li>
+<li class="checkbox">&#9744; Thank students individually if possible</li>
+
+<h3>Grading and Evaluation | 採点と評価</h3>
+<li class="checkbox">&#9744; Complete presentation rubrics for all students</li>
+<li class="checkbox">&#9744; Review peer feedback forms for insights</li>
+<li class="checkbox">&#9744; Grade final deliverables</li>
+<li class="checkbox">&#9744; Conduct or review bot assessment results</li>
+<li class="checkbox">&#9744; Calculate final course grades</li>
+<li class="checkbox">&#9744; Prepare individual feedback for students</li>
+
+<h3>Course Completion | コース完了</h3>
+<li class="checkbox">&#9744; Submit grades by deadline</li>
+<li class="checkbox">&#9744; Provide final feedback to students</li>
+<li class="checkbox">&#9744; Archive student work (with permission)</li>
+<li class="checkbox">&#9744; Complete course reports</li>
+<li class="checkbox">&#9744; Reflect on course improvements for next time</li>
+<li class="checkbox">&#9744; Send thank you message to class</li>
+
+<h3>Bot Assessment Coordination | ボット評価調整</h3>
+<li class="checkbox">&#9744; Verify all students have bot portal access</li>
+<li class="checkbox">&#9744; Schedule assessment times</li>
+<li class="checkbox">&#9744; Monitor completion</li>
+<li class="checkbox">&#9744; Review bot assessment transcripts</li>
+<li class="checkbox">&#9744; Assign grades based on bot evaluations</li>
+<li class="checkbox">&#9744; Provide feedback from bot assessments</li>
+
+<hr>
+
+<h2>Celebration Ideas | 祝賀アイデア</h2>
+
+<h3>Creating a Memorable Final Class | 記憶に残る最後のクラスを作成</h3>
+
+<strong>Optional Celebration Elements:</strong>
+<ul>
+<li>Certificates of completion</li>
+<li>Design awards (Most Creative, Best Accessibility, etc.)</li>
+<li>Group photo</li>
+<li>Light refreshments</li>
+<li>Music during breaks</li>
+<li>Decorations</li>
+<li>Student yearbook/portfolio compilation</li>
+</ul>
+
+<strong>Recognition Categories:</strong>
+<ul>
+<li>Most Innovative Design</li>
+<li>Best User Research</li>
+<li>Excellence in Accessibility</li>
+<li>Most Improved Designer</li>
+<li>Best Presentation</li>
+<li>Outstanding Prototype</li>
+<li>Creative Problem Solving</li>
+</ul>
+
+<strong>Keep It Inclusive:</strong>
+<ul>
+<li>Recognize everyone's unique contributions</li>
+<li>Avoid competitive atmosphere</li>
+<li>Focus on growth and learning</li>
+<li>Celebrate collective achievement</li>
+<li>Make everyone feel valued</li>
+</ul>
+
+<hr>
+
+<h2>Reflection for Instructor | インストラクターのための振り返り</h2>
+
+<h3>After the Course Concludes | コース終了後</h3>
+
+<strong>What Worked Well:</strong>
+<ul>
+<li>Which activities were most effective?</li>
+<li>What teaching methods resonated?</li>
+<li>Which resources were most valuable?</li>
+<li>How well did bot integration work?</li>
+<li>What surprised you positively?</li>
+</ul>
+
+<strong>What to Improve:</strong>
+<ul>
+<li>Which topics needed more time?</li>
+<li>What activities fell flat?</li>
+<li>Where did students struggle most?</li>
+<li>How can bot integration be enhanced?</li>
+<li>What resources should be updated?</li>
+</ul>
+
+<strong>Student Feedback:</strong>
+<ul>
+<li>Review course evaluations thoroughly</li>
+<li>Identify common themes</li>
+<li>Note specific suggestions</li>
+<li>Compare to your observations</li>
+<li>Plan improvements for next offering</li>
+</ul>
+
+<strong>Personal Growth:</strong>
+<ul>
+<li>What did you learn as an instructor?</li>
+<li>How did you adapt to challenges?</li>
+<li>What skills did you develop?</li>
+<li>How can you improve facilitation?</li>
+<li>What professional development is needed?</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Scenarios and Solutions | 緊急シナリオと解決策</h2>
+
+<h3>Last-Minute Issues</h3>
+
+<strong>Student Absent on Presentation Day:</strong>
+<ul>
+<li>Contact immediately</li>
+<li>Offer makeup presentation</li>
+<li>Accept video submission</li>
+<li>Be flexible with valid excuses</li>
+<li>Don't penalize for emergencies</li>
+</ul>
+
+<strong>Multiple Technical Failures:</strong>
+<ul>
+<li>Move to backup classroom if possible</li>
+<li>Allow screenshot presentations</li>
+<li>Extend class time if permitted</li>
+<li>Schedule continuation session</li>
+<li>Don't count tech issues against students</li>
+</ul>
+
+<strong>Student Unable to Present:</strong>
+<ul>
+<li>Offer alternative demonstration</li>
+<li>Accept pre-recorded presentation</li>
+<li>One-on-one presentation with instructor</li>
+<li>Extended office hours presentation</li>
+<li>Portfolio submission alternative</li>
+</ul>
+
+<strong>Overwhelming Emotion:</strong>
+<ul>
+<li>Some students may cry from stress/relief</li>
+<li>Have tissues available</li>
+<li>Offer break if needed</li>
+<li>Private conversation if appropriate</li>
+<li>Normalize emotional response</li>
+</ul>
+
+<hr>
+
+<h2>Final Checklist | 最終チェックリスト</h2>
+
+<h3>Before Class Starts | クラス開始前</h3>
+<li class="checkbox">&#9744; All technical systems tested</li>
+<li class="checkbox">&#9744; Presentation order determined</li>
+<li class="checkbox">&#9744; Peer feedback forms printed</li>
+<li class="checkbox">&#9744; Rubrics ready</li>
+<li class="checkbox">&#9744; Timer set up</li>
+<li class="checkbox">&#9744; Bot assessment schedule prepared</li>
+<li class="checkbox">&#9744; Celebration elements ready</li>
+<li class="checkbox">&#9744; Emergency contact information available</li>
+
+<h3>During Presentations | プレゼンテーション中</h3>
+<li class="checkbox">&#9744; Time each presentation</li>
+<li class="checkbox">&#9744; Complete rubrics</li>
+<li class="checkbox">&#9744; Take notes on strengths</li>
+<li class="checkbox">&#9744; Facilitate Q&A</li>
+<li class="checkbox">&#9744; Encourage peer feedback</li>
+<li class="checkbox">&#9744; Handle technical issues calmly</li>
+<li class="checkbox">&#9744; Maintain supportive atmosphere</li>
+
+<h3>After All Presentations | すべてのプレゼンテーション後</h3>
+<li class="checkbox">&#9744; Collect peer feedback forms</li>
+<li class="checkbox">&#9744; Provide closing remarks</li>
+<li class="checkbox">&#9744; Thank all students</li>
+<li class="checkbox">&#9744; Explain bot assessment process</li>
+<li class="checkbox">&#9744; Answer final questions</li>
+<li class="checkbox">&#9744; Take group photo (optional)</li>
+<li class="checkbox">&#9744; Say meaningful goodbye</li>
+
+<h3>Post-Class Follow-up | クラス後フォローアップ</h3>
+<li class="checkbox">&#9744; Grade all presentations</li>
+<li class="checkbox">&#9744; Review peer feedback</li>
+<li class="checkbox">&#9744; Conduct/review bot assessments</li>
+<li class="checkbox">&#9744; Calculate final grades</li>
+<li class="checkbox">&#9744; Provide individual feedback</li>
+<li class="checkbox">&#9744; Submit grades</li>
+<li class="checkbox">&#9744; Archive materials</li>
+<li class="checkbox">&#9744; Reflect on course</li>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Remember:</strong> This is a celebration of student achievement. Create an atmosphere of support, encouragement, and pride. Every student has worked hard and deserves recognition for their growth and accomplishments.
+
+<strong>覚えておいてください：</strong> これは学生の達成の祝賀です。サポート、励まし、誇りの雰囲気を作ってください。すべての学生が一生懸命働き、成長と成果の認識に値します。
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week13-instructor-notes.html" class="nav-btn nav-prev">← Week 13</a>
+        <span class="nav-current">Week 14 Instructor Notes</span>
+        <span class="nav-btn nav-disabled">Next →</span>
+        <a href="week14-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 6 Instructor Notes | 第6週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week05-instructor-notes.html" class="nav-btn nav-prev">← Week 5</a>
+        <span class="nav-current">Week 6 Instructor Notes</span>
+        <a href="week07-instructor-notes.html" class="nav-btn nav-next">Week 7 →</a>
+        <a href="week06-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 6 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第6週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> 15-20 minutes
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Test Figma and Adobe XD access on classroom computers</li>
+<li class="checkbox">&#9744; Verify internet connectivity for cloud-based tools</li>
+<li class="checkbox">&#9744; Prepare demo Figma/XD files to show during lecture</li>
+<li class="checkbox">&#9744; Test bot portal wireframing workflow</li>
+<li class="checkbox">&#9744; Have backup plan if design tools are inaccessible</li>
+<li class="checkbox">&#9744; Prepare example wireframes (good and bad)</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Figma education account signup instructions</li>
+<li class="checkbox">&#9744; Adobe XD download links and setup guide</li>
+<li class="checkbox">&#9744; Activity handout with wireframing exercise details</li>
+<li class="checkbox">&#9744; Wireframe template files (optional starter files)</li>
+<li class="checkbox">&#9744; Mobile screen size reference guide</li>
+<li class="checkbox">&#9744; Common UI patterns cheat sheet</li>
+<li class="checkbox">&#9744; Bot wireframing workflow access instructions</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Ensure all students have computer access</li>
+<li class="checkbox">&#9744; Verify design tool installation or browser access</li>
+<li class="checkbox">&#9744; Prepare projector for tool demonstrations</li>
+<li class="checkbox">&#9744; Set up for hands-on activity transition</li>
+<li class="checkbox">&#9744; Have paper and pencils ready for sketching</li>
+<li class="checkbox">&#9744; Prepare example wireframes for critique</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Week 6! | 第6週へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 6! Today marks an exciting transition from research and planning to actual design creation."</li>
+<li>"You've learned about users through research, created personas and journey maps. Now it's time to turn those insights into visual interfaces."</li>
+<li>"We're introducing prototyping and wireframing - the foundation of interface design. These are essential skills every designer needs."</li>
+<li>"By the end of today, you'll have created your first mobile app wireframes using professional design tools."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第6週へようこそ！今日は調査と計画から実際のデザイン作成への刺激的な移行を示します。"</li>
+<li>"調査を通じてユーザーについて学び、ペルソナとジャーニーマップを作成しました。今、それらの洞察を視覚的なインターフェースに変える時です。"</li>
+<li>"プロトタイピングとワイヤーフレーミングを紹介します - インターフェースデザインの基礎。これらはすべてのデザイナーが必要とする必須スキルです。"</li>
+<li>"今日の終わりまでに、プロフェッショナルデザインツールを使用して最初のモバイルアプリワイヤーフレームを作成します。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>Transition from research to design</li>
+<li>Hands-on tool learning today</li>
+<li>Professional skills with no-code tools</li>
+<li>Portfolio-quality work begins now</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: What is Wireframing? | ワイヤーフレーミングとは？</h3>
+
+<h4>Wireframing Fundamentals (3 minutes) | ワイヤーフレーミングの基礎（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Wireframing is like creating a blueprint for a building - it shows the structure without the decorative details."</li>
+<li>"Think of wireframes as the skeleton of your interface. They show where content goes, how elements are organized, and the overall layout."</li>
+<li>"Wireframes are intentionally simple - grayscale, basic shapes, placeholder text. This helps everyone focus on structure, not visual design."</li>
+<li>"The goal is to explore many layout ideas quickly. You can create 5 different wireframes in the time it takes to do one detailed design."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ワイヤーフレーミングは建物の設計図を作成するようなものです - 装飾的な詳細なしで構造を示します。"</li>
+<li>"ワイヤーフレームをインターフェースの骨格と考えてください。コンテンツがどこに行くか、要素がどのように整理されているか、全体的なレイアウトを示します。"</li>
+<li>"ワイヤーフレームは意図的にシンプルです - グレースケール、基本的な形、プレースホルダーテキスト。これにより、全員が視覚デザインではなく構造に焦点を当てることができます。"</li>
+<li>"目標は多くのレイアウトアイデアを迅速に探索することです。1つの詳細なデザインを行う時間で5つの異なるワイヤーフレームを作成できます。"</li>
+</ul>
+
+<strong>Real-World Examples:</strong>
+<ul>
+<li>Show examples of wireframes vs. final designs</li>
+<li>Point out how wireframes reveal structure</li>
+<li>Demonstrate speed of wireframe iteration</li>
+<li>Compare to architectural blueprints</li>
+</ul>
+
+<strong>Interactive Element:</strong>
+<ul>
+<li>Ask: "Who has sketched a layout on paper before building something?"</li>
+<li>Discuss: "Why do we sketch before committing to final designs?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: What is Prototyping? | プロトタイピングとは？</h3>
+
+<h4>Prototyping Fundamentals (3 minutes) | プロトタイピングの基礎（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"While wireframes show structure, prototypes show behavior. Prototypes are interactive - users can click, tap, and navigate."</li>
+<li>"A prototype is like a working model of your app. It's not the real thing, but it looks and feels close enough to test with users."</li>
+<li>"Prototypes help you answer critical questions: Can users find what they need? Do they understand how to complete tasks? Does the flow make sense?"</li>
+<li>"The beauty of prototypes is you can test and fix problems before any code is written. This saves enormous time and money."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ワイヤーフレームが構造を示す一方、プロトタイプは動作を示します。プロトタイプはインタラクティブです - ユーザーはクリック、タップ、ナビゲートできます。"</li>
+<li>"プロトタイプはアプリの作業モデルのようなものです。本物ではありませんが、ユーザーでテストするのに十分近い見た目と感触です。"</li>
+<li>"プロトタイプは重要な質問に答えるのに役立ちます：ユーザーは必要なものを見つけられますか？タスクを完了する方法を理解していますか？フローは理にかなっていますか？"</li>
+<li>"プロトタイプの美しさは、コードが書かれる前にテストして問題を修正できることです。これにより、膨大な時間とお金を節約できます。"</li>
+</ul>
+
+<strong>Demonstration:</strong>
+<ul>
+<li>Show interactive prototype example</li>
+<li>Click through navigation flows</li>
+<li>Point out transitions and interactions</li>
+<li>Explain how it simulates final product</li>
+</ul>
+
+<strong>Key Benefits to Highlight:</strong>
+<ul>
+<li>Early problem detection</li>
+<li>Stakeholder communication</li>
+<li>User testing capability</li>
+<li>Cost savings before development</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Wireframes vs. Prototypes | ワイヤーフレームvsプロトタイプ</h3>
+
+<h4>Understanding the Differences (2 minutes) | 違いの理解（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's clarify the difference. Wireframes are static - they show layout. Prototypes are interactive - they show user flows."</li>
+<li>"Wireframes are fast to create. You can sketch multiple layout options in minutes. Prototypes take longer because you're adding interactivity."</li>
+<li>"Think of it as stages: wireframes come first to explore structure, then prototypes add behavior and navigation."</li>
+<li>"Today we focus on wireframes. Next week, we'll turn your wireframes into interactive prototypes."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"違いを明確にしましょう。ワイヤーフレームは静的です - レイアウトを示します。プロトタイプはインタラクティブです - ユーザーフローを示します。"</li>
+<li>"ワイヤーフレームは素早く作成できます。数分で複数のレイアウトオプションをスケッチできます。プロトタイプはインタラクティビティを追加するため、より時間がかかります。"</li>
+<li>"ステージと考えてください：ワイヤーフレームが最初に構造を探索し、次にプロトタイプが動作とナビゲーションを追加します。"</li>
+<li>"今日はワイヤーフレームに焦点を当てます。来週、ワイヤーフレームをインタラクティブプロトタイプに変えます。"</li>
+</ul>
+
+<strong>Visual Comparison:</strong>
+<ul>
+<li>Side-by-side wireframe vs. prototype</li>
+<li>Show progression from simple to complex</li>
+<li>Emphasize when to use each</li>
+<li>Connect to design process stages</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Fidelity Levels Explained | 忠実度レベルの説明</h3>
+
+<h4>Low, Medium, High Fidelity (3 minutes) | 低、中、高忠実度（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Fidelity refers to how detailed and realistic your design is. Low fidelity is simple and rough. High fidelity looks like the final product."</li>
+<li>"Low-fidelity wireframes use boxes and grayscale. They're perfect for early exploration when you're testing multiple ideas."</li>
+<li>"Medium-fidelity adds actual content and some visual structure. You use real text instead of Lorem ipsum."</li>
+<li>"High-fidelity includes full branding, colors, images, and detailed design. This is what you show stakeholders for approval."</li>
+<li>"For today's activity, we'll work in low to medium fidelity - focus on structure with some real content."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"忠実度はデザインがどれだけ詳細でリアルかを指します。低忠実度はシンプルで粗いです。高忠実度は最終製品のように見えます。"</li>
+<li>"低忠実度ワイヤーフレームは箱とグレースケールを使用します。複数のアイデアをテストする初期探索に最適です。"</li>
+<li>"中忠実度は実際のコンテンツといくつかの視覚的構造を追加します。Lorem ipsumの代わりに実際のテキストを使用します。"</li>
+<li>"高忠実度は完全なブランディング、色、画像、詳細なデザインを含みます。これはステークホルダーの承認のために示すものです。"</li>
+<li>"今日のアクティビティでは、低から中忠実度で作業します - いくつかの実際のコンテンツを持つ構造に焦点を当てます。"</li>
+</ul>
+
+<strong>Examples to Show:</strong>
+<ul>
+<li>Low-fi: Boxes and lines</li>
+<li>Mid-fi: Content hierarchy visible</li>
+<li>High-fi: Polished, production-ready</li>
+<li>Explain progression path</li>
+</ul>
+
+<strong>When to Use Each:</strong>
+<ul>
+<li>Low-fi: Brainstorming, early feedback</li>
+<li>Mid-fi: Team alignment, content validation</li>
+<li>High-fi: Stakeholder approval, developer handoff</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Introduction to Design Tools | デザインツール入門</h3>
+
+<h4>Figma and Adobe XD Overview (2 minutes) | FigmaとAdobe XD概要（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"We'll use Figma or Adobe XD - professional tools used by designers at companies like Google, Apple, and Microsoft."</li>
+<li>"Figma is cloud-based and works in your browser. It's collaborative, so multiple people can work on the same file simultaneously."</li>
+<li>"Adobe XD is a desktop application with powerful prototyping features. Both tools are free for students."</li>
+<li>"These are no-code tools - you design visually by dragging and dropping elements. No programming required."</li>
+<li>"Both create portfolio-quality work. Many students use these same projects in job applications."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"FigmaまたはAdobe XDを使用します - Google、Apple、Microsoftなどの企業のデザイナーが使用するプロフェッショナルツールです。"</li>
+<li>"Figmaはクラウドベースでブラウザで動作します。コラボレーティブなので、複数の人が同時に同じファイルで作業できます。"</li>
+<li>"Adobe XDは強力なプロトタイピング機能を持つデスクトップアプリケーションです。両方のツールは学生にとって無料です。"</li>
+<li>"これらはノーコードツールです - 要素をドラッグアンドドロップして視覚的にデザインします。プログラミングは不要です。"</li>
+<li>"両方ともポートフォリオ品質の作品を作成します。多くの学生は求人応募でこれらの同じプロジェクトを使用します。"</li>
+</ul>
+
+<strong>Tool Selection Guidance:</strong>
+<ul>
+<li>Figma: Best for collaboration, web-based</li>
+<li>Adobe XD: Good for offline work, Adobe integration</li>
+<li>Either is fine for this course</li>
+<li>Students can switch if needed</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Figma Interface Overview | Figmaインターフェース概要</h3>
+
+<h4>Tool Navigation (2 minutes) | ツールナビゲーション（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let me show you the Figma interface - it's simpler than it looks at first glance."</li>
+<li>"The toolbar at the top has all your tools: move, frame, shapes, text, and hand tool for panning."</li>
+<li>"The left panel shows layers - all your objects organized hierarchically, like folders."</li>
+<li>"The right panel is properties - when you select something, you can change its color, size, position here."</li>
+<li>"The center is your canvas - your design space. You can zoom in and out and create multiple screens."</li>
+<li>"Don't worry if it feels overwhelming. We'll learn by doing, and the bot can help with specific questions."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"Figmaインターフェースを見せましょう - 最初に見るよりもシンプルです。"</li>
+<li>"上部のツールバーにはすべてのツールがあります：移動、フレーム、シェイプ、テキスト、パン用のハンドツール。"</li>
+<li>"左パネルにはレイヤーが表示されます - すべてのオブジェクトがフォルダのように階層的に整理されています。"</li>
+<li>"右パネルはプロパティです - 何かを選択すると、ここで色、サイズ、位置を変更できます。"</li>
+<li>"中央はキャンバスです - デザインスペース。ズームインとズームアウト、複数の画面を作成できます。"</li>
+<li>"圧倒されているように感じても心配しないでください。実践で学び、ボットが特定の質問で助けることができます。"</li>
+</ul>
+
+<strong>Live Demonstration:</strong>
+<ul>
+<li>Open Figma and show each panel</li>
+<li>Create a simple shape to demonstrate</li>
+<li>Show zoom and navigation</li>
+<li>Emphasize learning curve is gentle</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Essential Wireframing Elements | 必須ワイヤーフレーミング要素</h3>
+
+<h4>UI Components Overview (2 minutes) | UIコンポーネント概要（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Every interface is built from common components. Let's review the essential building blocks."</li>
+<li>"Navigation elements include top bars, tab bars, and menus. These help users move through your app."</li>
+<li>"Content elements are headings, body text, images, and cards. These present information to users."</li>
+<li>"Interactive elements are buttons, form fields, checkboxes - anything users can tap or interact with."</li>
+<li>"For mobile apps, the bottom tab bar is crucial - it's easy to reach with your thumb."</li>
+<li>"Today you'll combine these elements to create complete screen layouts."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"すべてのインターフェースは共通のコンポーネントから構築されています。必須の構成要素を確認しましょう。"</li>
+<li>"ナビゲーション要素には、トップバー、タブバー、メニューが含まれます。これらはユーザーがアプリを移動するのに役立ちます。"</li>
+<li>"コンテンツ要素は見出し、本文、画像、カードです。これらはユーザーに情報を提示します。"</li>
+<li>"インタラクティブ要素はボタン、フォームフィールド、チェックボックスです - ユーザーがタップまたは相互作用できるもの。"</li>
+<li>"モバイルアプリの場合、下部タブバーは重要です - 親指で届きやすいです。"</li>
+<li>"今日、これらの要素を組み合わせて完全な画面レイアウトを作成します。"</li>
+</ul>
+
+<strong>Show Examples:</strong>
+<ul>
+<li>Point out elements in popular apps</li>
+<li>Demonstrate how they combine</li>
+<li>Show mobile-specific patterns</li>
+<li>Reference common UI libraries</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Wireframing Best Practices | ワイヤーフレーミングベストプラクティス</h3>
+
+<h4>Do's and Don'ts (2 minutes) | すべきこととすべきでないこと（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's talk about what makes a good wireframe versus a bad one."</li>
+<li>"DO focus on layout and content hierarchy. Make the most important content largest and highest on the screen."</li>
+<li>"DO use consistent alignment and spacing. Line up elements on a grid - this creates visual order."</li>
+<li>"DON'T add colors, detailed graphics, or brand elements yet. Save those for high-fidelity design."</li>
+<li>"DON'T spend too much time perfecting one wireframe. Create multiple versions quickly and compare."</li>
+<li>"The best wireframes are simple enough to create in 15-20 minutes but clear enough to communicate the layout."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"良いワイヤーフレームと悪いワイヤーフレームの違いについて話しましょう。"</li>
+<li>"レイアウトとコンテンツ階層に焦点を当ててください。最も重要なコンテンツを最大かつ画面の最上部に配置します。"</li>
+<li>"一貫した整列とスペーシングを使用してください。要素をグリッドに並べます - これは視覚的な秩序を作成します。"</li>
+<li>"まだ色、詳細なグラフィック、またはブランド要素を追加しないでください。それらは高忠実度デザインのために保存してください。"</li>
+<li>"1つのワイヤーフレームを完璧にすることに多くの時間を費やさないでください。複数のバージョンを迅速に作成して比較してください。"</li>
+<li>"最高のワイヤーフレームは15-20分で作成できるほどシンプルですが、レイアウトを伝えるのに十分明確です。"</li>
+</ul>
+
+<strong>Common Mistakes:</strong>
+<ul>
+<li>Too much detail too soon</li>
+<li>Inconsistent spacing</li>
+<li>Ignoring mobile constraints</li>
+<li>No content hierarchy</li>
+<li>Forgetting navigation</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Mobile Design Considerations | モバイルデザインの考慮事項</h3>
+
+<h4>Mobile-First Design (2 minutes) | モバイルファーストデザイン（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Most apps are used on mobile devices, so we design mobile-first."</li>
+<li>"iPhone screens are typically 375 x 812 pixels. Android varies, but 360 x 640 is common. Use these as your starting point."</li>
+<li>"Touch targets are crucial. Buttons should be at least 44 x 44 pixels - large enough for a finger to tap accurately."</li>
+<li>"Think about one-handed use. Most important actions should be within thumb reach at the bottom of the screen."</li>
+<li>"Mobile users scroll vertically, so design for scrolling rather than cramming everything on one screen."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ほとんどのアプリはモバイルデバイスで使用されるため、モバイルファーストでデザインします。"</li>
+<li>"iPhone画面は通常375 x 812ピクセルです。Androidは異なりますが、360 x 640が一般的です。これらを出発点として使用してください。"</li>
+<li>"タッチターゲットは重要です。ボタンは少なくとも44 x 44ピクセルである必要があります - 指で正確にタップするのに十分な大きさ。"</li>
+<li>"片手使用について考えてください。最も重要なアクションは画面の下部で親指の届く範囲内にある必要があります。"</li>
+<li>"モバイルユーザーは縦にスクロールするため、すべてを1つの画面に詰め込むのではなく、スクロールのためにデザインしてください。"</li>
+</ul>
+
+<strong>Demonstration:</strong>
+<ul>
+<li>Show mobile screen sizes</li>
+<li>Demonstrate thumb reach zones</li>
+<li>Point out touch target sizes</li>
+<li>Show scrolling vs. cramming</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Common Wireframe Patterns | 一般的なワイヤーフレームパターン</h3>
+
+<h4>Mobile App Patterns (2 minutes) | モバイルアプリパターン（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's look at common patterns you'll use in your wireframes."</li>
+<li>"Homepage/Dashboard typically has a top navigation with title and menu, a hero section for main content, cards for grouped information, and bottom tab bar for primary navigation."</li>
+<li>"List views include a search bar, repeated list items with thumbnails and text, and action buttons."</li>
+<li>"Detail views show a back button, large image at top, organized content sections, and a call-to-action button."</li>
+<li>"Forms have clear labels, input fields, helper text for guidance, and a prominent submit button."</li>
+<li>"Don't reinvent the wheel - use these proven patterns and adapt them to your needs."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ワイヤーフレームで使用する一般的なパターンを見てみましょう。"</li>
+<li>"ホームページ/ダッシュボードには通常、タイトルとメニュー付きのトップナビゲーション、メインコンテンツ用のヒーローセクション、グループ化された情報用のカード、主要ナビゲーション用の下部タブバーがあります。"</li>
+<li>"リストビューには、検索バー、サムネイルとテキストを含む繰り返されるリストアイテム、アクションボタンが含まれます。"</li>
+<li>"詳細ビューには、戻るボタン、上部の大きな画像、整理されたコンテンツセクション、行動喚起ボタンが表示されます。"</li>
+<li>"フォームには、明確なラベル、入力フィールド、ガイダンス用のヘルパーテキスト、目立つ送信ボタンがあります。"</li>
+<li>"車輪を再発明しないでください - これらの実証済みのパターンを使用し、ニーズに適応させてください。"</li>
+</ul>
+
+<strong>Show Real Examples:</strong>
+<ul>
+<li>Popular apps using these patterns</li>
+<li>How patterns adapt to different content</li>
+<li>Why these patterns work well</li>
+<li>Encourage pattern library thinking</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: Bot-Guided Wireframing Workflow | ボットガイドワイヤーフレーミングワークフロー</h3>
+
+<h4>HCI-101 Bot Support (1 minute) | HCI-101ボットサポート（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Your HCI-101 Bot is ready to guide you through wireframing step-by-step."</li>
+<li>"The bot can suggest layouts based on your use case, provide mobile design best practices, and help with Figma or Adobe XD if you get stuck."</li>
+<li>"Upload screenshots of your wireframes and the bot will provide feedback on layout, hierarchy, and usability issues."</li>
+<li>"Think of the bot as your design mentor available 24/7. Use it whenever you need help or want feedback."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"HCI-101ボットは、ワイヤーフレーミングをステップバイステップでガイドする準備ができています。"</li>
+<li>"ボットは、ユースケースに基づいてレイアウトを提案し、モバイルデザインのベストプラクティスを提供し、行き詰まった場合はFigmaまたはAdobe XDで助けることができます。"</li>
+<li>"ワイヤーフレームのスクリーンショットをアップロードすると、ボットはレイアウト、階層、ユーザビリティの問題についてフィードバックを提供します。"</li>
+<li>"ボットを24時間365日利用可能なデザインメンターと考えてください。助けが必要な場合やフィードバックが欲しい場合はいつでも使用してください。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: This Week's Activity | 今週のアクティビティ</h3>
+
+<h4>Activity Introduction (1 minute) | アクティビティ紹介（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now it's time for hands-on work! You'll spend the next 70 minutes learning the tool and creating wireframes."</li>
+<li>"First, we'll set up Figma or Adobe XD and learn basic navigation. Then I'll guide you through a quick tutorial."</li>
+<li>"You'll create 3-4 mobile app screens - a simple wireframe set. Choose a scenario relevant to your final project or use the suggested exercise."</li>
+<li>"You'll get bot feedback and share with peers for critique. The deliverable is your wireframe set with a short design rationale."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今、ハンズオン作業の時間です！次の70分間、ツールを学び、ワイヤーフレームを作成します。"</li>
+<li>"まず、FigmaまたはAdobe XDをセットアップし、基本的なナビゲーションを学びます。次に、クイックチュートリアルをガイドします。"</li>
+<li>"3-4つのモバイルアプリ画面を作成します - シンプルなワイヤーフレームセット。最終プロジェクトに関連するシナリオを選択するか、提案された演習を使用してください。"</li>
+<li>"ボットフィードバックを得て、ピアと共有して批評します。成果物は、短いデザイン根拠を持つワイヤーフレームセットです。"</li>
+</ul>
+
+<strong>Transition to Activity:</strong>
+<ul>
+<li>Distribute handouts and credentials</li>
+<li>Show where to access bot workflow</li>
+<li>Provide exercise scenarios</li>
+<li>Set time expectations</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Common Wireframing Mistakes | 一般的なワイヤーフレーミングの間違い</h3>
+
+<h4>Avoiding Pitfalls (1 minute) | 落とし穴を避ける（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Before we start, let's review common mistakes so you can avoid them."</li>
+<li>"Don't add too much detail too soon. Keep it simple - colors and images come later."</li>
+<li>"Watch your spacing. Use consistent margins and padding throughout."</li>
+<li>"Don't ignore mobile constraints. Design for actual mobile screen sizes."</li>
+<li>"Make sure you have clear content hierarchy - not everything can be equally important."</li>
+<li>"Don't forget navigation. Every screen needs a way to get to other screens."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"始める前に、避けられるように一般的な間違いを確認しましょう。"</li>
+<li>"早すぎる詳細を追加しないでください。シンプルに保ちます - 色と画像は後で。"</li>
+<li>"スペーシングに注意してください。全体で一貫したマージンとパディングを使用してください。"</li>
+<li>"モバイル制約を無視しないでください。実際のモバイル画面サイズ用にデザインしてください。"</li>
+<li>"明確なコンテンツ階層があることを確認してください - すべてが同等に重要であることはできません。"</li>
+<li>"ナビゲーションを忘れないでください。すべての画面には他の画面に移動する方法が必要です。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: From Wireframes to Prototypes | ワイヤーフレームからプロトタイプへ</h3>
+
+<h4>Looking Ahead (1 minute) | 先を見る（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Today's wireframes are just the beginning. Next week, we'll add interactivity."</li>
+<li>"You'll turn these static layouts into clickable prototypes with navigation flows and transitions."</li>
+<li>"Each week builds on the previous. Your wireframes become prototypes, prototypes become your final project."</li>
+<li>"Keep iterating and improving. Design is a process, not a one-time event."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日のワイヤーフレームは始まりに過ぎません。来週、インタラクティビティを追加します。"</li>
+<li>"これらの静的レイアウトをナビゲーションフローとトランジション付きのクリック可能なプロトタイプに変えます。"</li>
+<li>"各週は前の週に基づいて構築されます。ワイヤーフレームはプロトタイプになり、プロトタイプは最終プロジェクトになります。"</li>
+<li>"反復と改善を続けてください。デザインはプロセスであり、一度きりのイベントではありません。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Tips for Success | 成功のためのヒント</h3>
+
+<h4>Final Preparation (1 minute) | 最終準備（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"A few final tips before we dive in."</li>
+<li>"Create your account early - don't wait. Use your student email for free features."</li>
+<li>"Start simple with one screen, then build complexity. Don't try to do everything at once."</li>
+<li>"Use keyboard shortcuts - they'll speed up your work significantly."</li>
+<li>"Ask for help when stuck. The bot, your peers, and I are all here to support you."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"飛び込む前のいくつかの最終的なヒント。"</li>
+<li>"早めにアカウントを作成してください - 待たないでください。無料機能のために学生メールを使用してください。"</li>
+<li>"1つの画面からシンプルに始め、次に複雑さを構築してください。一度にすべてをやろうとしないでください。"</li>
+<li>"キーボードショートカットを使用してください - 作業を大幅にスピードアップします。"</li>
+<li>"行き詰まったときに助けを求めてください。ボット、ピア、そして私はすべてあなたをサポートするためにここにいます。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Let's Get Started! | 始めましょう！</h3>
+
+<h4>Activity Launch (1 minute) | アクティビティ開始（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"By the end of today, you'll have professional wireframes created in industry-standard tools."</li>
+<li>"Remember: wireframes are quick and messy. Don't aim for perfection - aim for clarity."</li>
+<li>"Focus on layout, not visuals. Use the bot for help. Learn by doing."</li>
+<li>"Let's begin! Access your design tool and I'll walk you through the first steps."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日の終わりまでに、業界標準ツールで作成されたプロフェッショナルなワイヤーフレームを持ちます。"</li>
+<li>"覚えておいてください：ワイヤーフレームは迅速で雑です。完璧を目指さないでください - 明確さを目指してください。"</li>
+<li>"ビジュアルではなくレイアウトに焦点を当ててください。助けにボットを使用してください。実践で学んでください。"</li>
+<li>"始めましょう！デザインツールにアクセスしてください。最初のステップを案内します。"</li>
+</ul>
+
+<strong>Final Encouragement:</strong>
+<ul>
+<li>Emphasize learning by doing</li>
+<li>Reassure about support available</li>
+<li>Create excitement for hands-on work</li>
+</ul>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Immediate Next Steps | 即座の次のステップ</h3>
+
+<h4>Tool Setup Phase (10 minutes) | ツールセットアップフェーズ（10分）</h4>
+
+<strong>Instructor Actions:</strong>
+<p>1. <strong>Verify Tool Access</strong> | ツールアクセスの確認</p>
+<p>   - Check each student can access Figma or Adobe XD</p>
+<p>   - Help with account creation issues</p>
+<p>   - Provide alternative access methods if needed</p>
+<p>   - Ensure internet connectivity is stable</p>
+
+<p>2. <strong>Distribute Resources</strong> | リソースの配布</p>
+<p>   - Hand out wireframe templates (optional)</p>
+<p>   - Share mobile screen size reference</p>
+<p>   - Provide UI pattern cheat sheet</p>
+<p>   - Give bot workflow access instructions</p>
+
+<p>3. <strong>Initial Guidance</strong> | 初期ガイダンス</p>
+<p>   - Show where to start in Figma/XD</p>
+<p>   - Demonstrate creating first frame</p>
+<p>   - Point out essential tools</p>
+<p>   - Answer setup questions</p>
+
+<strong>Common Issues and Solutions:</strong>
+<ul>
+<li><strong>Can't access Figma/XD</strong> | Figma/XDにアクセスできない: Use web version, check internet, try different browser</li>
+<li><strong>Account creation problems</strong> | アカウント作成の問題: Use student email, verify email address, contact support</li>
+<li><strong>Tool is confusing</strong> | ツールが混乱している: Start with simple shapes, use bot for help, watch quick tutorial</li>
+<li><strong>Don't know where to start</strong> | どこから始めればよいかわからない: Follow bot workflow, use provided template, start with paper sketch</li>
+</ul>
+
+<hr>
+
+<h3>Tutorial Phase (15 minutes) | チュートリアルフェーズ（15分）</h3>
+
+<h4>Guided Walkthrough | ガイド付きウォークスルー</h4>
+
+<strong>Step 1: Create Your First Frame (3 minutes)</strong>
+<ul>
+<li>Demonstrate frame tool</li>
+<li>Create iPhone-sized frame (375 x 812)</li>
+<li>Name the frame appropriately</li>
+<li>Show how to duplicate frames</li>
+</ul>
+
+<strong>Step 2: Add Basic Shapes (4 minutes)</strong>
+<ul>
+<li>Create rectangles for content areas</li>
+<li>Add text elements for headings</li>
+<li>Use placeholder text</li>
+<li>Demonstrate alignment tools</li>
+</ul>
+
+<strong>Step 3: Build a Simple Layout (5 minutes)</strong>
+<ul>
+<li>Create top navigation bar</li>
+<li>Add content section</li>
+<li>Include bottom tab bar</li>
+<li>Show spacing and padding</li>
+</ul>
+
+<strong>Step 4: Organize and Refine (3 minutes)</strong>
+<ul>
+<li>Name layers properly</li>
+<li>Group related elements</li>
+<li>Use consistent spacing</li>
+<li>Align to grid</li>
+</ul>
+
+<strong>Teaching Strategies:</strong>
+<ul>
+<li>Demonstrate on projector while students follow</li>
+<li>Pause frequently for questions</li>
+<li>Show common mistakes and fixes</li>
+<li>Encourage experimentation</li>
+</ul>
+
+<hr>
+
+<h3>Wireframing Practice Phase (25 minutes) | ワイヤーフレーミング練習フェーズ（25分）</h3>
+
+<h4>Student Work Time | 学生作業時間</h4>
+
+<strong>Activity Structure:</strong>
+<p>Students create 3-4 mobile app screens for one of these scenarios:</p>
+
+<strong>Option 1: Campus App Feature</strong>
+<ul>
+<li>Class schedule view</li>
+<li>Assignment list</li>
+<li>Campus map</li>
+<li>Profile screen</li>
+</ul>
+
+<strong>Option 2: Health & Wellness App</strong>
+<ul>
+<li>Daily activity tracker</li>
+<li>Meal logging</li>
+<li>Progress dashboard</li>
+<li>Settings</li>
+</ul>
+
+<strong>Option 3: Student Planner</strong>
+<ul>
+<li>Calendar view</li>
+<li>Task list</li>
+<li>Study timer</li>
+<li>Notes section</li>
+</ul>
+
+<strong>Option 4: Final Project Related</strong>
+<ul>
+<li>Screens relevant to student's chosen final project</li>
+<li>Start building actual project wireframes</li>
+<li>Get early feedback on project direction</li>
+</ul>
+
+<strong>Instructor Circulation:</strong>
+<ul>
+<li>Move around room checking progress</li>
+<li>Answer individual questions</li>
+<li>Point out good examples to class</li>
+<li>Identify common struggles</li>
+</ul>
+
+<strong>What to Look For:</strong>
+<ul>
+<li>Are students using appropriate screen sizes?</li>
+<li>Is content hierarchy clear?</li>
+<li>Are touch targets large enough?</li>
+<li>Is navigation included?</li>
+<li>Are layouts too detailed (colors, images)?</li>
+</ul>
+
+<strong>Gentle Corrections:</strong>
+<ul>
+<li>"That's looking great, but let's simplify the colors for now"</li>
+<li>"Consider making that button larger for touch"</li>
+<li>"How will users navigate from this screen?"</li>
+<li>"Try using a grid to align those elements"</li>
+</ul>
+
+<hr>
+
+<h3>Bot Feedback Phase (10 minutes) | ボットフィードバックフェーズ（10分）</h3>
+
+<h4>Getting Bot Review | ボットレビューの取得</h4>
+
+<strong>Guide Students To:</strong>
+<p>1. <strong>Take Screenshots</strong> | スクリーンショットを撮る</p>
+<p>   - Capture each wireframe screen</p>
+<p>   - Show full layout</p>
+<p>   - Include labels if helpful</p>
+
+<p>2. <strong>Upload to Bot</strong> | ボットにアップロード</p>
+<p>   - Access bot wireframing workflow</p>
+<p>   - Submit screenshots for review</p>
+<p>   - Ask specific questions</p>
+
+<p>3. <strong>Receive Feedback</strong> | フィードバックを受ける</p>
+<p>   - Bot analyzes layout and hierarchy</p>
+<p>   - Identifies usability issues</p>
+<p>   - Suggests improvements</p>
+<p>   - Provides best practice guidance</p>
+
+<p>4. <strong>Make Improvements</strong> | 改善を行う</p>
+<p>   - Apply bot suggestions</p>
+<p>   - Iterate on design</p>
+<p>   - Re-submit if time allows</p>
+
+<strong>Bot Feedback Focus Areas:</strong>
+<ul>
+<li>Content hierarchy and visual weight</li>
+<li>Touch target sizes</li>
+<li>Navigation clarity</li>
+<li>Mobile design best practices</li>
+<li>Accessibility considerations</li>
+<li>Layout consistency</li>
+</ul>
+
+<strong>Instructor Support:</strong>
+<ul>
+<li>Help students interpret bot feedback</li>
+<li>Clarify confusing suggestions</li>
+<li>Validate bot recommendations</li>
+<li>Encourage iteration</li>
+</ul>
+
+<hr>
+
+<h3>Peer Review Phase (10 minutes) | ピアレビューフェーズ（10分）</h3>
+
+<h4>Collaborative Feedback | コラボレーティブフィードバック</h4>
+
+<strong>Peer Review Structure:</strong>
+<p>1. <strong>Pair Up</strong> | ペアを組む</p>
+<p>   - Students share screens with partner</p>
+<p>   - Take turns presenting wireframes</p>
+<p>   - Explain design decisions</p>
+
+<p>2. <strong>Feedback Framework</strong> | フィードバックフレームワーク</p>
+<p>   - <strong>What works well?</strong> | 何がうまくいっていますか？: Identify strengths</p>
+<p>   - <strong>What's confusing?</strong> | 何が混乱していますか？: Point out unclear elements</p>
+<p>   - <strong>Suggestions?</strong> | 提案は？: Offer constructive improvements</p>
+
+<p>3. <strong>Document Feedback</strong> | フィードバックを文書化</p>
+<p>   - Take notes on peer suggestions</p>
+<p>   - Capture good ideas to try</p>
+<p>   - Note areas for improvement</p>
+
+<strong>Facilitation Tips:</strong>
+<ul>
+<li>Model constructive feedback language</li>
+<li>Emphasize design decisions, not preferences</li>
+<li>Encourage specific, actionable suggestions</li>
+<li>Keep critiques respectful and helpful</li>
+</ul>
+
+<strong>Feedback Prompts:</strong>
+<ul>
+<li>"Can you tell what the main action is on this screen?"</li>
+<li>"Is the navigation clear? Can you find your way around?"</li>
+<li>"Are the most important elements prominent?"</li>
+<li>"Does the layout make sense for mobile use?"</li>
+</ul>
+
+<hr>
+
+<h3>Wrap-Up and Reflection (10 minutes) | まとめと振り返り（10分）</h3>
+
+<h4>Class Discussion | クラスディスカッション</h4>
+
+<strong>Reflection Questions:</strong>
+<ul>
+<li>"What was the most challenging part of wireframing?"</li>
+<li>"What surprised you about using design tools?"</li>
+<li>"How did wireframing change how you think about apps?"</li>
+<li>"What will you do differently in your next iteration?"</li>
+</ul>
+
+<strong>Show and Tell:</strong>
+<ul>
+<li>Select 2-3 student examples to share</li>
+<li>Highlight different approaches</li>
+<li>Point out effective techniques</li>
+<li>Celebrate progress</li>
+</ul>
+
+<strong>Next Week Preview:</strong>
+<ul>
+<li>Next week: Interactive prototypes</li>
+<li>Turn wireframes into clickable flows</li>
+<li>Add transitions and animations</li>
+<li>Prepare for usability testing</li>
+</ul>
+
+<strong>Homework Assignment:</strong>
+<ul>
+<li>Complete and refine wireframe set</li>
+<li>Create design rationale document (1-2 pages)</li>
+<li>Include bot interaction screenshots</li>
+<li>Submit by end of week</li>
+</ul>
+
+<hr>
+
+<h2>Assessment and Grading | 評価と採点</h2>
+
+<h3>Week 6 Deliverables | 第6週の成果物</h3>
+
+<h4>1. Wireframe Set (60% of weekly grade)</h4>
+
+<strong>Excellent (90-100%):</strong>
+<ul>
+<li>3-4 complete, well-structured mobile screens</li>
+<li>Clear content hierarchy and layout</li>
+<li>Appropriate use of mobile design patterns</li>
+<li>Consistent spacing and alignment</li>
+<li>Proper screen sizes (375x812 or similar)</li>
+<li>All essential UI elements included</li>
+<li>Professional presentation</li>
+</ul>
+
+<strong>Good (80-89%):</strong>
+<ul>
+<li>3-4 screens with minor layout issues</li>
+<li>Generally clear hierarchy</li>
+<li>Most mobile patterns used correctly</li>
+<li>Mostly consistent spacing</li>
+<li>Correct screen dimensions</li>
+<li>Most UI elements included</li>
+<li>Clear presentation</li>
+</ul>
+
+<strong>Satisfactory (70-79%):</strong>
+<ul>
+<li>2-3 screens completed</li>
+<li>Some hierarchy present</li>
+<li>Basic mobile patterns attempted</li>
+<li>Some spacing inconsistencies</li>
+<li>Screen size approximately correct</li>
+<li>Some UI elements missing</li>
+<li>Basic presentation</li>
+</ul>
+
+<strong>Needs Improvement (<70%):</strong>
+<ul>
+<li>Fewer than 2 screens</li>
+<li>Unclear hierarchy</li>
+<li>Mobile patterns not used</li>
+<li>Inconsistent or missing spacing</li>
+<li>Wrong screen dimensions</li>
+<li>Many UI elements missing</li>
+<li>Unclear presentation</li>
+</ul>
+
+<h4>2. Design Rationale (25% of weekly grade)</h4>
+
+<strong>Excellent (90-100%):</strong>
+<ul>
+<li>Clear explanation of layout decisions</li>
+<li>References user needs and personas</li>
+<li>Explains content hierarchy choices</li>
+<li>Discusses mobile design considerations</li>
+<li>Well-written and organized</li>
+<li>1-2 pages with good detail</li>
+</ul>
+
+<strong>Good (80-89%):</strong>
+<ul>
+<li>Explains most layout decisions</li>
+<li>Some reference to user needs</li>
+<li>Discusses some hierarchy choices</li>
+<li>Mentions mobile considerations</li>
+<li>Clearly written</li>
+<li>Appropriate length</li>
+</ul>
+
+<strong>Satisfactory (70-79%):</strong>
+<ul>
+<li>Basic explanation of decisions</li>
+<li>Limited user need references</li>
+<li>Brief hierarchy discussion</li>
+<li>Minimal mobile discussion</li>
+<li>Understandable writing</li>
+<li>May be too brief or verbose</li>
+</ul>
+
+<strong>Needs Improvement (<70%):</strong>
+<ul>
+<li>Minimal or unclear explanations</li>
+<li>No user need references</li>
+<li>No hierarchy discussion</li>
+<li>No mobile considerations</li>
+<li>Poorly written or organized</li>
+<li>Insufficient length</li>
+</ul>
+
+<h4>3. Bot Interaction and Learning Process (15% of weekly grade)</h4>
+
+<strong>Excellent (90-100%):</strong>
+<ul>
+<li>Multiple bot interactions documented</li>
+<li>Applied bot feedback effectively</li>
+<li>Screenshots show iteration process</li>
+<li>Asked thoughtful questions</li>
+<li>Demonstrated learning and improvement</li>
+</ul>
+
+<strong>Good (80-89%):</strong>
+<ul>
+<li>Several bot interactions</li>
+<li>Applied most bot feedback</li>
+<li>Some iteration visible</li>
+<li>Asked relevant questions</li>
+<li>Showed improvement</li>
+</ul>
+
+<strong>Satisfactory (70-79%):</strong>
+<ul>
+<li>Minimal bot interactions</li>
+<li>Applied some feedback</li>
+<li>Limited iteration</li>
+<li>Basic questions asked</li>
+<li>Some improvement shown</li>
+</ul>
+
+<strong>Needs Improvement (<70%):</strong>
+<ul>
+<li>No or very few bot interactions</li>
+<li>Did not apply feedback</li>
+<li>No iteration shown</li>
+<li>No questions asked</li>
+<li>No improvement visible</li>
+</ul>
+
+<hr>
+
+<h2>Common Student Issues and Solutions | 一般的な学生の問題と解決策</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+
+<h4>Issue 1: Can't Access Design Tool</h4>
+<strong>Symptoms:</strong> Login problems, tool won't load, account creation fails
+<strong>Solutions:</strong>
+<ul>
+<li>Verify student email address</li>
+<li>Try different web browser</li>
+<li>Clear browser cache</li>
+<li>Use desktop app instead of web</li>
+<li>Check internet connectivity</li>
+<li>Contact tool support if persistent</li>
+</ul>
+
+<h4>Issue 2: Tool is Slow or Laggy</h4>
+<strong>Symptoms:</strong> Delayed response, crashes, freezing
+<strong>Solutions:</strong>
+<ul>
+<li>Close other browser tabs/applications</li>
+<li>Reduce zoom level</li>
+<li>Simplify complex designs</li>
+<li>Use desktop app if on web</li>
+<li>Check computer RAM availability</li>
+<li>Save and restart tool</li>
+</ul>
+
+<h4>Issue 3: Can't Find Tools/Features</h4>
+<strong>Symptoms:</strong> Lost in interface, can't locate specific functions
+<strong>Solutions:</strong>
+<ul>
+<li>Use bot for tool navigation help</li>
+<li>Watch quick tutorial video</li>
+<li>Use tool's built-in search</li>
+<li>Refer to keyboard shortcuts</li>
+<li>Ask peer for guidance</li>
+<li>Follow along with instructor demo</li>
+</ul>
+
+<h3>Design Issues | デザイン問題</h3>
+
+<h4>Issue 1: Too Much Detail Too Soon</h4>
+<strong>Symptoms:</strong> Adding colors, images, detailed graphics
+<strong>Solutions:</strong>
+<ul>
+<li>Remind about fidelity levels</li>
+<li>Show low-fi examples</li>
+<li>Encourage grayscale only</li>
+<li>Focus on structure first</li>
+<li>Explain benefits of simplicity</li>
+</ul>
+
+<h4>Issue 2: Unclear Layout</h4>
+<strong>Symptoms:</strong> Confusing hierarchy, poor organization
+<strong>Solutions:</strong>
+<ul>
+<li>Review content hierarchy principles</li>
+<li>Look at example wireframes</li>
+<li>Use grid system for alignment</li>
+<li>Simplify and remove clutter</li>
+<li>Get bot feedback on clarity</li>
+</ul>
+
+<h4>Issue 3: Not Mobile-Appropriate</h4>
+<strong>Symptoms:</strong> Desktop-like layouts, small touch targets
+<strong>Solutions:</strong>
+<ul>
+<li>Check screen dimensions</li>
+<li>Review mobile patterns</li>
+<li>Demonstrate thumb reach zones</li>
+<li>Show mobile app examples</li>
+<li>Adjust touch target sizes</li>
+</ul>
+
+<h4>Issue 4: Missing Navigation</h4>
+<strong>Symptoms:</strong> No way to move between screens
+<strong>Solutions:</strong>
+<ul>
+<li>Review navigation elements</li>
+<li>Show common patterns (tabs, back buttons)</li>
+<li>Explain user flow importance</li>
+<li>Add navigation to each screen</li>
+<li>Plan multi-screen journey</li>
+</ul>
+
+<h3>Process Issues | プロセスの問題</h3>
+
+<h4>Issue 1: Analysis Paralysis</h4>
+<strong>Symptoms:</strong> Can't start, overthinking, perfectionism
+<strong>Solutions:</strong>
+<ul>
+<li>Set time limits (5 min per screen)</li>
+<li>Start with paper sketch</li>
+<li>Use template as starting point</li>
+<li>Encourage iteration mentality</li>
+<li>Remind that changes are easy</li>
+</ul>
+
+<h4>Issue 2: Working Too Slowly</h4>
+<strong>Symptoms:</strong> Spending too much time on details
+<strong>Solutions:</strong>
+<ul>
+<li>Set mini-deadlines</li>
+<li>Focus on completion over perfection</li>
+<li>Skip placeholder text for now</li>
+<li>Use copy/paste for repeated elements</li>
+<li>Encourage speed over polish</li>
+</ul>
+
+<h4>Issue 3: Not Using Resources</h4>
+<strong>Symptoms:</strong> Struggling alone, not asking for help
+<strong>Solutions:</strong>
+<ul>
+<li>Actively offer assistance</li>
+<li>Encourage bot usage</li>
+<li>Promote peer collaboration</li>
+<li>Demonstrate asking for help</li>
+<li>Create safe learning environment</li>
+</ul>
+
+<hr>
+
+<h2>Bot Integration Guidance | ボット統合ガイダンス</h2>
+
+<h3>Wireframing Workflow Prompts | ワイヤーフレーミングワークフロープロンプト</h3>
+
+<strong>Bot-Guided Process:</strong>
+
+<p>1. <strong>Getting Started</strong></p>
+<p>   - Bot: "What type of app are you wireframing? (e.g., health, education, productivity)"</p>
+<p>   - Bot: "Who is your primary user? Describe them briefly."</p>
+<p>   - Bot: "What are the main tasks users need to complete?"</p>
+
+<p>2. <strong>Layout Suggestions</strong></p>
+<p>   - Bot provides layout recommendations based on app type</p>
+<p>   - Shows common patterns for that use case</p>
+<p>   - Explains why certain patterns work</p>
+<p>   - Offers template wireframes</p>
+
+<p>3. <strong>Feedback and Critique</strong></p>
+<p>   - Student uploads wireframe screenshots</p>
+<p>   - Bot analyzes hierarchy, spacing, navigation</p>
+<p>   - Identifies usability issues</p>
+<p>   - Suggests specific improvements</p>
+
+<p>4. <strong>Iteration Support</strong></p>
+<p>   - Bot guides through applying feedback</p>
+<p>   - Answers tool-specific questions</p>
+<p>   - Provides best practice reminders</p>
+<p>   - Validates improvements</p>
+
+<h3>Effective Bot Usage | 効果的なボット使用</h3>
+
+<strong>Teach Students To:</strong>
+<ul>
+<li>Start with bot workflow for structure</li>
+<li>Upload screenshots for visual feedback</li>
+<li>Ask specific questions about layout</li>
+<li>Request examples of patterns</li>
+<li>Verify suggestions against course materials</li>
+<li>Document all bot interactions</li>
+</ul>
+
+<strong>Bot Transparency Requirements:</strong>
+<ul>
+<li>Screenshot all bot conversations</li>
+<li>Document prompts and responses</li>
+<li>Note which suggestions were applied</li>
+<li>Explain why suggestions were accepted/rejected</li>
+<li>Include in final deliverable</li>
+</ul>
+
+<hr>
+
+<h2>Time Management Strategies | 時間管理戦略</h2>
+
+<h3>70-Minute Activity Breakdown | 70分アクティビティ内訳</h3>
+
+<strong>0-10 minutes: Tool Setup</strong>
+<ul>
+<li>Account creation/login</li>
+<li>Initial navigation</li>
+<li>Create first frame</li>
+<li>Orient to interface</li>
+</ul>
+
+<strong>10-25 minutes: Guided Tutorial</strong>
+<ul>
+<li>Follow instructor demonstration</li>
+<li>Create basic shapes</li>
+<li>Build simple layout</li>
+<li>Learn essential tools</li>
+</ul>
+
+<strong>25-50 minutes: Independent Work</strong>
+<ul>
+<li>Create 3-4 wireframe screens</li>
+<li>Apply design patterns</li>
+<li>Organize and refine</li>
+<li>Iterate on layouts</li>
+</ul>
+
+<strong>50-60 minutes: Bot Feedback</strong>
+<ul>
+<li>Screenshot wireframes</li>
+<li>Submit to bot for review</li>
+<li>Receive feedback</li>
+<li>Make improvements</li>
+</ul>
+
+<strong>60-70 minutes: Peer Review</strong>
+<ul>
+<li>Share with partner</li>
+<li>Give and receive feedback</li>
+<li>Document suggestions</li>
+<li>Final refinements</li>
+</ul>
+
+<h3>Keeping Students On Track | 学生を軌道に乗せる</h3>
+
+<strong>Time Announcements:</strong>
+<ul>
+<li>"10 minutes left in tutorial phase"</li>
+<li>"Focus on completing screens, not perfecting them"</li>
+<li>"5 minutes until bot feedback phase"</li>
+<li>"Time to wrap up and prepare for peer review"</li>
+</ul>
+
+<strong>Progress Checks:</strong>
+<ul>
+<li>Circulate and assess progress</li>
+<li>Identify students who need help</li>
+<li>Encourage those working too slowly</li>
+<li>Challenge those finishing early</li>
+</ul>
+
+<strong>Flexible Adjustments:</strong>
+<ul>
+<li>Extend phases if class is struggling</li>
+<li>Provide additional examples if needed</li>
+<li>Offer extra help to struggling students</li>
+<li>Give advanced challenges to fast finishers</li>
+</ul>
+
+<hr>
+
+<h2>Extension Activities | 拡張アクティビティ</h2>
+
+<h3>For Fast Finishers | 早く終わった人向け</h3>
+
+<p>1. <strong>Create Alternative Layouts</strong></p>
+<p>   - Design different version of same screens</p>
+<p>   - Compare effectiveness</p>
+<p>   - Explain trade-offs</p>
+
+<p>2. <strong>Add More Screens</strong></p>
+<p>   - Expand wireframe set to 6-8 screens</p>
+<p>   - Include edge cases and error states</p>
+<p>   - Plan complete user journey</p>
+
+<p>3. <strong>Start Prototyping</strong></p>
+<p>   - Begin linking screens (preview Week 7)</p>
+<p>   - Add simple interactions</p>
+<p>   - Plan transition animations</p>
+
+<p>4. <strong>Help Peers</strong></p>
+<p>   - Offer design feedback to classmates</p>
+<p>   - Share techniques learned</p>
+<p>   - Collaborate on challenging layouts</p>
+
+<h3>For Struggling Students | 苦戦している学生向け</h3>
+
+<p>1. <strong>Use Templates</strong></p>
+<p>   - Provide starter wireframe templates</p>
+<p>   - Adapt template to their needs</p>
+<p>   - Focus on understanding patterns</p>
+
+<p>2. <strong>Simplify Scope</strong></p>
+<p>   - Reduce to 2 screens instead of 4</p>
+<p>   - Choose simpler layout patterns</p>
+<p>   - Focus on core functionality</p>
+
+<p>3. <strong>Paper Prototype First</strong></p>
+<p>   - Sketch on paper before digital</p>
+<p>   - Plan layout offline</p>
+<p>   - Transfer to tool when ready</p>
+
+<p>4. <strong>One-on-One Support</strong></p>
+<p>   - Individual instructor help</p>
+<p>   - Bot-guided step-by-step process</p>
+<p>   - Peer mentoring</p>
+
+<hr>
+
+<h2>Next Week Preparation | 来週の準備</h2>
+
+<h3>Preview Week 7 Content | 第7週のコンテンツプレビュー</h3>
+
+<strong>Advanced Prototyping:</strong>
+<ul>
+<li>Adding interactivity to wireframes</li>
+<li>Creating clickable prototypes</li>
+<li>Designing transitions and animations</li>
+<li>Building multi-screen user flows</li>
+</ul>
+
+<strong>Student Preparation:</strong>
+<ul>
+<li>Refine this week's wireframes</li>
+<li>Think about how screens connect</li>
+<li>Consider user navigation paths</li>
+<li>Review interaction design basics</li>
+</ul>
+
+<strong>Instructor Preparation:</strong>
+<ul>
+<li>Review all student wireframes before Week 7</li>
+<li>Identify common issues to address</li>
+<li>Prepare prototyping examples</li>
+<li>Test prototyping tools and features</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week05-instructor-notes.html" class="nav-btn nav-prev">← Week 5</a>
+        <span class="nav-current">Week 6 Instructor Notes</span>
+        <a href="week07-instructor-notes.html" class="nav-btn nav-next">Week 7 →</a>
+        <a href="week06-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

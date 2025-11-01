@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 11 Instructor Notes | 第11週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week10-instructor-notes.html" class="nav-btn nav-prev">← Week 10</a>
+        <span class="nav-current">Week 11 Instructor Notes</span>
+        <a href="week12-instructor-notes.html" class="nav-btn nav-next">Week 12 →</a>
+        <a href="week11-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 11 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第11週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> 15-20 minutes
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Test bot portal access and assessment functionality</li>
+<li class="checkbox">&#9744; Verify students have access to their prototypes</li>
+<li class="checkbox">&#9744; Prepare analysis templates for distribution</li>
+<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
+<li class="checkbox">&#9744; Have backup plan for internet connectivity issues</li>
+<li class="checkbox">&#9744; Prepare examples of good vs. bad usability findings reports</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Analysis templates (severity rating, priority matrix)</li>
+<li class="checkbox">&#9744; Recommendation format guidelines</li>
+<li class="checkbox">&#9744; Sample findings report</li>
+<li class="checkbox">&#9744; SUS score calculation sheet</li>
+<li class="checkbox">&#9744; Bot assessment schedule and instructions</li>
+<li class="checkbox">&#9744; AI transparency log template</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Ensure students can access their test participants</li>
+<li class="checkbox">&#9744; Prepare for bilingual presentation (English/Japanese)</li>
+<li class="checkbox">&#9744; Set up for hands-on activity transition</li>
+<li class="checkbox">&#9744; Have backup materials for students without devices</li>
+<li class="checkbox">&#9744; Arrange space for simultaneous testing sessions</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Week 11! | 第11週へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 11! We're in the home stretch now. Last week you planned your usability tests - today you'll actually conduct them and analyze the results."</li>
+<li>"This is where things get real. You're going to see actual users interact with your prototypes, and you'll discover things you never expected."</li>
+<li>"By the end of today, you'll have real usability data and a clear roadmap for improving your designs."</li>
+<li>"Plus, you'll have your first bot-conducted assessment - a conversational interview about HCI principles."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第11週へようこそ！私たちは今、ホームストレッチにいます。先週はユーザビリティテストを計画しました - 今日は実際にそれらを実施し、結果を分析します。"</li>
+<li>"ここで物事が本物になります。実際のユーザーがプロトタイプとどのように相互作用するかを見ることになり、予想もしなかったことを発見するでしょう。"</li>
+<li>"今日の終わりまでに、実際のユーザビリティデータとデザインを改善するための明確なロードマップを持つことになります。"</li>
+<li>"さらに、HCI原則に関する会話インタビューである最初のボット実施評価があります。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>Transition from planning to execution</li>
+<li>Real user testing today</li>
+<li>Analysis skills are critical</li>
+<li>Bot assessment is conversational, not scary</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: From Testing to Analysis | テストから分析へ</h3>
+
+<h4>Bridge Between Weeks (3 minutes) | 週間のブリッジ（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Last week you created test plans - the what, who, when, and how of testing. Today you execute those plans and make sense of the data."</li>
+<li>"Testing without analysis is just watching people use your design. Analysis is what transforms observations into actionable improvements."</li>
+<li>"Think about it: if five people can't find your search button, that's not a coincidence - that's a design problem that needs fixing."</li>
+<li>"Your goal today is to go from 'User 3 struggled with checkout' to 'The checkout button needs to be 20% larger and moved above the fold because 80% of users couldn't find it.'"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"先週、テスト計画を作成しました - テストの何を、誰が、いつ、どのようにするか。今日はそれらの計画を実行し、データの意味を理解します。"</li>
+<li>"分析のないテストは、人々があなたのデザインを使用するのを見ているだけです。分析は観察を実行可能な改善に変換するものです。"</li>
+<li>"考えてみてください：5人が検索ボタンを見つけられない場合、それは偶然ではありません - それは修正が必要なデザイン問題です。"</li>
+<li>"今日の目標は、「ユーザー3がチェックアウトで苦労した」から「チェックアウトボタンは80%のユーザーが見つけられなかったため、20%大きくし、フォールドの上に移動する必要がある」に移行することです。"</li>
+</ul>
+
+<strong>Interactive Elements:</strong>
+<ul>
+<li>Ask: "How many of you have ever struggled with an interface and thought 'why didn't they just...?'"</li>
+<li>Discuss: "That's exactly what you're learning to prevent today."</li>
+<li>Emphasize: "You're becoming the designer who doesn't make those mistakes."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: Analyzing Quantitative Data | 定量的データの分析</h3>
+
+<h4>Metrics Deep Dive (4 minutes) | メトリクス詳細（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's start with the numbers - quantitative data. Three core metrics: task success rate, time on task, and error rate."</li>
+<li>"Task success rate is your most important metric. If users can't complete tasks, nothing else matters. The benchmark is 78% - that's industry standard."</li>
+<li>"Below 78%? You have work to do. Below 50%? You have serious usability problems that must be fixed before launch."</li>
+<li>"Time on task tells you about efficiency. If something takes 5 minutes when it should take 1 minute, users are confused or the workflow is broken."</li>
+<li>"But be careful: fast isn't always good. Maybe they skipped important steps. Context matters."</li>
+<li>"Error rate shows where users stumble. A high error rate means your interface is misleading or confusing."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"数字から始めましょう - 定量的データ。3つのコアメトリクス：タスク成功率、タスク時間、エラー率。"</li>
+<li>"タスク成功率は最も重要なメトリクスです。ユーザーがタスクを完了できない場合、他には何も重要ではありません。ベンチマークは78% - それが業界標準です。"</li>
+<li>"78%未満？あなたはやるべきことがあります。50%未満？起動前に修正する必要がある深刻なユーザビリティ問題があります。"</li>
+<li>"タスク時間は効率について教えてくれます。1分かかるべきものが5分かかる場合、ユーザーは混乱しているか、ワークフローが壊れています。"</li>
+<li>"しかし注意してください：速いことが常に良いわけではありません。おそらく重要なステップをスキップしました。コンテキストが重要です。"</li>
+<li>"エラー率はユーザーがつまずく場所を示します。高いエラー率は、インターフェースが誤解を招くまたは混乱していることを意味します。"</li>
+</ul>
+
+<strong>Calculation Examples:</strong>
+<ul>
+<li>Walk through the example: "5 participants, 5 tasks each = 25 attempts. 20 successful = 80% success rate."</li>
+<li>Show time calculation: "User 1: 2.5 min, User 2: 3.1 min, User 3: 1.8 min, User 4: 2.7 min, User 5: 2.2 min. Average: 2.46 minutes."</li>
+<li>Discuss: "Is 2.46 minutes good? Depends on the task complexity."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Analyzing Qualitative Data | 定性的データの分析</h3>
+
+<h4>Beyond Numbers (3 minutes) | 数字を超えて（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Numbers tell you what happened. Qualitative data tells you why it happened."</li>
+<li>"User quotes are gold. When someone says 'I can't find the search button,' that's direct evidence of a usability problem."</li>
+<li>"Group similar quotes together. If three people say variations of 'Where's the price filter?', you've found a pattern."</li>
+<li>"Behavior analysis is crucial. Watch for hesitation - when users pause, they're confused or uncertain."</li>
+<li>"Did they take the expected navigation path? If not, why? Maybe your interface suggests a different mental model."</li>
+<li>"Body language matters too. Frustration, confusion, delight - all tell you about the user experience."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"数字は何が起こったかを教えてくれます。定性的データはなぜそれが起こったかを教えてくれます。"</li>
+<li>"ユーザーの引用は金です。誰かが「検索ボタンが見つからない」と言った場合、それはユーザビリティ問題の直接的な証拠です。"</li>
+<li>"類似の引用をグループ化します。3人が「価格フィルターはどこですか？」のバリエーションを言う場合、パターンを見つけました。"</li>
+<li>"行動分析は重要です。躊躇を観察してください - ユーザーが一時停止するとき、彼らは混乱しているか不確かです。"</li>
+<li>"彼らは予想されるナビゲーションパスを取りましたか？そうでない場合、なぜですか？おそらくあなたのインターフェースは異なるメンタルモデルを示唆しています。"</li>
+<li>"ボディランゲージも重要です。フラストレーション、混乱、喜び - すべてがユーザー体験について教えてくれます。"</li>
+</ul>
+
+<strong>Pattern Recognition:</strong>
+<ul>
+<li>"The magic number is 3. If three or more participants show the same behavior, it's a pattern, not a coincidence."</li>
+<li>"One user struggling might be an outlier. Three users struggling is a design problem."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Finding Patterns Across Participants | 参加者間のパターンの発見</h3>
+
+<h4>Triangulation (3 minutes) | トライアンギュレーション（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Triangulation means combining multiple data sources to see the complete picture."</li>
+<li>"You have quantitative metrics, behavioral observations, and user quotes. Put them together."</li>
+<li>"Example: Task success rate is 40%. Four out of five users scrolled past the filter. Three users asked 'where's the price option?' Average time was 3x expected."</li>
+<li>"All of this points to one conclusion: the price filter has a serious visibility problem."</li>
+<li>"Strong patterns - 5 out of 5 users affected - are your highest priority. These are critical issues."</li>
+<li>"Moderate patterns - 3 to 4 users affected - are still important but medium priority."</li>
+<li>"Weak patterns - 1 to 2 users - might be outliers or edge cases. Still worth noting, but lower priority."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"トライアンギュレーションは、完全な絵を見るために複数のデータソースを組み合わせることを意味します。"</li>
+<li>"定量的メトリクス、行動観察、ユーザー引用があります。それらをまとめてください。"</li>
+<li>"例：タスク成功率は40%です。5人のうち4人がフィルターを見ずにスクロールしました。3人のユーザーが「価格オプションはどこですか？」と尋ねました。平均時間は予想の3倍でした。"</li>
+<li>"これらすべては1つの結論を指しています：価格フィルターには深刻な可視性の問題があります。"</li>
+<li>"強いパターン - 5人のうち5人のユーザーが影響を受ける - は最優先事項です。これらは重大な問題です。"</li>
+<li>"中程度のパターン - 3〜4人のユーザーが影響を受ける - は依然として重要ですが、中優先度です。"</li>
+<li>"弱いパターン - 1〜2人のユーザー - は外れ値またはエッジケースかもしれません。それでも注目する価値がありますが、優先度は低いです。"</li>
+</ul>
+
+<strong>Emphasize:</strong>
+<ul>
+<li>Don't ignore weak patterns completely - they might reveal accessibility issues or edge cases</li>
+<li>Always look for convergence between different data types</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Severity Rating Framework | 重大度評価フレームワーク</h3>
+
+<h4>Jakob Nielsen's Framework (3 minutes) | Jakob Nielsenのフレームワーク（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Not all problems are equal. Some are catastrophic, some are minor. Jakob Nielsen created a 0-4 severity rating scale that's industry standard."</li>
+<li>"0 means it's not actually a usability problem - just personal preference. Ignore these."</li>
+<li>"1 is cosmetic - fix if you have extra time. Example: a minor color inconsistency that doesn't affect function."</li>
+<li>"2 is a minor usability problem. It causes slight delays but users eventually figure it out. Low priority."</li>
+<li>"3 is a major usability problem. High priority. It causes significant frustration and affects most users. Example: hidden navigation that's hard to discover."</li>
+<li>"4 is a catastrophe. Critical priority. Must fix before launch. It prevents task completion. Example: a broken checkout flow in an e-commerce app."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"すべての問題が等しいわけではありません。いくつかは壊滅的で、いくつかは軽微です。Jakob Nielsenは業界標準の0-4の重大度評価スケールを作成しました。"</li>
+<li>"0はそれが実際にはユーザビリティ問題ではないことを意味します - 単なる個人的な好みです。これらは無視してください。"</li>
+<li>"1は表面的です - 追加の時間がある場合に修正します。例：機能に影響しない軽微な色の不一致。"</li>
+<li>"2は軽微なユーザビリティ問題です。わずかな遅延を引き起こしますが、ユーザーは最終的にそれを理解します。低優先度。"</li>
+<li>"3は主要なユーザビリティ問題です。高優先度。重大なフラストレーションを引き起こし、ほとんどのユーザーに影響します。例：発見が困難な隠されたナビゲーション。"</li>
+<li>"4は壊滅的です。重大優先度。起動前に修正する必要があります。タスク完了を妨げます。例：電子商取引アプリの壊れたチェックアウトフロー。"</li>
+</ul>
+
+<strong>Real-World Examples:</strong>
+<ul>
+<li>Show examples of each severity level from familiar apps</li>
+<li>Discuss: "What severity would you give to [specific example]?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Prioritization Matrix | 優先順位付けマトリックス</h3>
+
+<h4>Two-Dimensional Thinking (3 minutes) | 二次元思考（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Severity alone isn't enough. You also need to consider frequency - how many users are affected?"</li>
+<li>"The priority matrix combines frequency and impact. High frequency + critical impact = P1, must fix immediately."</li>
+<li>"Think about it: a critical bug that only one user encountered in edge case is less urgent than a major issue affecting 90% of users."</li>
+<li>"P1 issues: High frequency, critical impact. Drop everything and fix these. Example: search function doesn't work."</li>
+<li>"P2 issues: High frequency major impact OR medium frequency critical impact. Fix in next iteration."</li>
+<li>"P3 issues: Medium frequency minor impact OR low frequency major impact. Address if time permits."</li>
+<li>"P4 issues: Low frequency, minor impact. Backlog for future consideration."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"重大度だけでは十分ではありません。頻度も考慮する必要があります - 何人のユーザーが影響を受けますか？"</li>
+<li>"優先度マトリックスは頻度と影響を組み合わせます。高頻度 + 重大な影響 = P1、すぐに修正する必要があります。"</li>
+<li>"考えてみてください：エッジケースで1人のユーザーだけが遭遇した重大なバグは、90%のユーザーに影響する主要な問題よりも緊急性が低いです。"</li>
+<li>"P1の問題：高頻度、重大な影響。すべてを中断してこれらを修正してください。例：検索機能が動作しません。"</li>
+<li>"P2の問題：高頻度の主要な影響または中頻度の重大な影響。次の反復で修正します。"</li>
+<li>"P3の問題：中頻度の軽微な影響または低頻度の主要な影響。時間があれば対処します。"</li>
+<li>"P4の問題：低頻度、軽微な影響。将来の検討のためのバックログ。"</li>
+</ul>
+
+<strong>Matrix Visualization:</strong>
+<ul>
+<li>Draw the matrix on board if possible</li>
+<li>Plot example issues to demonstrate prioritization</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Root Cause Analysis | 根本原因分析</h3>
+
+<h4>The "5 Whys" (2 minutes) | 「5つのなぜ」（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Don't just fix symptoms - fix root causes. The '5 Whys' technique helps you dig deeper."</li>
+<li>"Walk through the example: Users can't complete checkout. Why? Can't find button. Why? It's below the fold. Why? Too much info above. Why? We wanted single screen. Why? Unvalidated assumption about user preference."</li>
+<li>"The root cause isn't 'button placement' - it's 'design decision based on unvalidated assumption.'"</li>
+<li>"The fix isn't just moving the button - it's changing how we make design decisions: test assumptions, prioritize critical actions, use progressive disclosure."</li>
+<li>"This prevents the same root cause from creating different symptoms elsewhere in your design."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"症状を修正するだけでなく、根本原因を修正してください。「5つのなぜ」技法はより深く掘り下げるのに役立ちます。"</li>
+<li>"例を見てみましょう：ユーザーがチェックアウトを完了できません。なぜですか？ボタンが見つかりません。なぜですか？フォールドの下にあります。なぜですか？上に情報が多すぎます。なぜですか？単一画面が必要でした。なぜですか？ユーザーの好みに関する検証されていない仮定。"</li>
+<li>"根本原因は「ボタンの配置」ではありません - それは「検証されていない仮定に基づくデザイン決定」です。"</li>
+<li>"修正はボタンを移動するだけではありません - デザイン決定の方法を変えることです：仮定をテストし、重要なアクションに優先順位を付け、段階的開示を使用します。"</li>
+<li>"これにより、同じ根本原因がデザインの他の場所で異なる症状を作成するのを防ぎます。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Creating Actionable Recommendations | 実行可能な推奨事項の作成</h3>
+
+<h4>From Problems to Solutions (3 minutes) | 問題から解決策へ（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"A good recommendation is specific, actionable, evidence-based, prioritized, and user-centered."</li>
+<li>"Bad recommendation: 'Make navigation better.' What does that even mean? How do you do it?"</li>
+<li>"Good recommendation: 'Move main menu icon to top-left corner and increase size to 44×44 px to meet touch target standards, based on 4/5 users failing to notice current 32px icon.'"</li>
+<li>"See the difference? The good recommendation tells you exactly what to do, why to do it, and backs it up with data."</li>
+<li>"Always reference your evidence. '4/5 users couldn't find this' is much more compelling than 'I think this should change.'"</li>
+<li>"User-centered means focusing on user needs, not your preferences as a designer."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"良い推奨事項は具体的で、実行可能で、証拠に基づき、優先順位が付けられ、ユーザー中心です。"</li>
+<li>"悪い推奨事項：「ナビゲーションをより良くする。」それは何を意味しますか？どうやってそれをしますか？"</li>
+<li>"良い推奨事項：「メインメニューアイコンを左上隅に移動し、タッチターゲット基準を満たすためにサイズを44×44 pxに増やします。これは4/5人のユーザーが現在の32pxアイコンに気付かなかったことに基づいています。」"</li>
+<li>"違いがわかりますか？良い推奨事項は正確に何をすべきか、なぜそれをすべきかを教え、データでそれを裏付けます。"</li>
+<li>"常に証拠を参照してください。「4/5人のユーザーがこれを見つけられなかった」は「これを変更すべきだと思う」よりもはるかに説得力があります。"</li>
+<li>"ユーザー中心とは、デザイナーとしてのあなたの好みではなく、ユーザーニーズに焦点を当てることを意味します。"</li>
+</ul>
+
+<strong>Template Review:</strong>
+<ul>
+<li>Walk through the recommendation template on slide</li>
+<li>Emphasize each component: issue, priority, evidence, root cause, recommendation, expected impact</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Recommendation Template | 推奨事項テンプレート</h3>
+
+<h4>Structured Format (2 minutes) | 構造化形式（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Use this template for every recommendation. It ensures you include all critical information."</li>
+<li>"Start with a clear issue title. 'Price filter visibility problem' is better than 'filter issue.'"</li>
+<li>"State priority clearly: P1, P2, P3, or P4. This helps with implementation planning."</li>
+<li>"Evidence section is crucial. List all supporting data: metrics, participant counts, quotes, times."</li>
+<li>"Root cause explains why the problem exists. This prevents band-aid solutions."</li>
+<li>"Recommendations should be numbered, specific steps. Multiple actions are often needed."</li>
+<li>"Expected impact shows the value of fixing this. It helps justify the effort."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"すべての推奨事項にこのテンプレートを使用してください。すべての重要な情報を含めることを保証します。"</li>
+<li>"明確な問題タイトルから始めます。「価格フィルターの可視性の問題」は「フィルターの問題」よりも優れています。"</li>
+<li>"優先度を明確に述べます：P1、P2、P3、またはP4。これは実装計画に役立ちます。"</li>
+<li>"証拠セクションは重要です。すべてのサポートデータをリストします：メトリクス、参加者数、引用、時間。"</li>
+<li>"根本原因は問題が存在する理由を説明します。これは絆創膏ソリューションを防ぎます。"</li>
+<li>"推奨事項は番号付きの特定のステップである必要があります。複数のアクションが必要な場合が多いです。"</li>
+<li>"予想される影響はこれを修正する価値を示します。それは努力を正当化するのに役立ちます。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Types of Design Improvements | デザイン改善の種類</h3>
+
+<h4>Effort vs. Impact (2 minutes) | 労力対影響（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Not all fixes take the same effort. Quick fixes - label changes, color adjustments - can be done in hours."</li>
+<li>"Interface refinements like navigation restructuring take days or weeks but have high impact."</li>
+<li>"Feature additions require significant effort and time. Only do these if testing shows they're truly needed."</li>
+<li>"Fundamental redesigns mean you have major problems. Avoid if possible - they require months and new testing."</li>
+<li>"Focus on quick fixes first - low effort, high impact. These give you the best return on investment."</li>
+<li>"For your projects, prioritize P1 and P2 issues. You have limited time, so focus on what matters most."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"すべての修正が同じ労力を必要とするわけではありません。クイックフィックス - ラベル変更、色調整 - は数時間で行うことができます。"</li>
+<li>"ナビゲーション再構築のようなインターフェース改良には数日または数週間かかりますが、高い影響があります。"</li>
+<li>"機能追加には重要な労力と時間が必要です。テストで本当に必要であることが示された場合にのみこれらを行ってください。"</li>
+<li>"基本的な再設計は主要な問題があることを意味します。可能であれば避けてください - 数か月と新しいテストが必要です。"</li>
+<li>"最初にクイックフィックスに焦点を当てます - 低労力、高影響。これらは最高の投資収益率を提供します。"</li>
+<li>"プロジェクトについては、P1とP2の問題に優先順位を付けてください。時間が限られているので、最も重要なことに焦点を当ててください。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: Communicating Findings | 調査結果の伝達</h3>
+
+<h4>Stakeholder Presentation (2 minutes) | ステークホルダープレゼンテーション（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"In the real world, you'll present findings to stakeholders - managers, clients, developers. Your report needs to be clear and compelling."</li>
+<li>"Start with an executive summary: overall usability score, top 3-5 issues, high-priority recommendations."</li>
+<li>"Use visuals: charts, graphs, user quotes, even video clips of users struggling. These are powerful."</li>
+<li>"Structure your report logically: methodology, results, findings, prioritized issues, recommendations, next steps."</li>
+<li>"Remember your audience. Executives want the bottom line. Developers want specific fixes. Designers want context."</li>
+<li>"Your job is to advocate for users. Make their problems visible and understood."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"実世界では、ステークホルダー - マネージャー、クライアント、開発者 - に調査結果を提示します。レポートは明確で説得力のある必要があります。"</li>
+<li>"エグゼクティブサマリーから始めます：全体的なユーザビリティスコア、上位3-5の問題、高優先度の推奨事項。"</li>
+<li>"ビジュアルを使用します：チャート、グラフ、ユーザー引用、さらにはユーザーが苦労しているビデオクリップ。これらは強力です。"</li>
+<li>"レポートを論理的に構成します：方法論、結果、調査結果、優先順位付けされた問題、推奨事項、次のステップ。"</li>
+<li>"聴衆を覚えておいてください。経営幹部は最終結果を望んでいます。開発者は特定の修正を望んでいます。デザイナーはコンテキストを望んでいます。"</li>
+<li>"あなたの仕事はユーザーを擁護することです。彼らの問題を見えるようにし、理解されるようにします。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: Iterative Design Cycle | 反復デザインサイクル</h3>
+
+<h4>Continuous Improvement (2 minutes) | 継続的改善（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Design is never done. It's a continuous cycle: design, test, analyze, prioritize, redesign, test again."</li>
+<li>"Each iteration improves the design. First test reveals major issues. Fix those. Second test reveals more subtle issues."</li>
+<li>"This is why we say 'fail fast, learn fast.' The sooner you test, the sooner you discover problems, the sooner you can fix them."</li>
+<li>"In the real world, products are constantly evolving based on user feedback and testing."</li>
+<li>"For your projects, you'll do at least one test-analyze-improve cycle. Time permitting, test again to validate improvements."</li>
+<li>"Remember: a design that's 'done' is a design that's no longer relevant to users."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"デザインは決して完成しません。それは継続的なサイクルです：デザイン、テスト、分析、優先順位付け、再設計、再度テスト。"</li>
+<li>"各反復がデザインを改善します。最初のテストは主要な問題を明らかにします。それらを修正します。2回目のテストはより微妙な問題を明らかにします。"</li>
+<li>"これが「早く失敗し、早く学ぶ」と言う理由です。早くテストすればするほど、早く問題を発見し、早く修正できます。"</li>
+<li>"実世界では、製品はユーザーフィードバックとテストに基づいて常に進化しています。"</li>
+<li>"プロジェクトについては、少なくとも1回のテスト-分析-改善サイクルを行います。時間が許せば、再度テストして改善を検証します。"</li>
+<li>"覚えておいてください：「完成した」デザインは、もはやユーザーに関連性がないデザインです。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Common Analysis Mistakes to Avoid | 避けるべき一般的な分析ミス</h3>
+
+<h4>Pitfalls (3 minutes) | 落とし穴（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's talk about common mistakes. First: confirmation bias. Don't only see data that confirms your design was good. Actively look for problems."</li>
+<li>"Cherry-picking data is dishonest. If four users hated the navigation and one liked it, you can't just report the positive quote."</li>
+<li>"Don't ignore outliers. That 'one weird user' might reveal an accessibility issue or edge case worth addressing."</li>
+<li>"Vague recommendations are useless. 'Make it better' doesn't help anyone. Be specific."</li>
+<li>"Analysis paralysis is real. Don't over-analyze forever. Set a deadline, prioritize, and move to action."</li>
+<li>"And here's the big one: defending your design. If users don't understand it, it's a design problem, not a user problem. Your ego needs to step aside."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"一般的な間違いについて話しましょう。最初：確証バイアス。デザインが良かったことを確認するデータのみを見ないでください。積極的に問題を探してください。"</li>
+<li>"データのチェリーピッキングは不誠実です。4人のユーザーがナビゲーションを嫌い、1人が好きだった場合、ポジティブな引用だけを報告することはできません。"</li>
+<li>"外れ値を無視しないでください。その「1人の奇妙なユーザー」は、対処する価値のあるアクセシビリティ問題またはエッジケースを明らかにするかもしれません。"</li>
+<li>"曖昧な推奨事項は役に立ちません。「より良くする」は誰にも役立ちません。具体的にしてください。"</li>
+<li>"分析麻痺は現実です。永遠に過剰分析しないでください。締め切りを設定し、優先順位を付け、行動に移ります。"</li>
+<li>"そしてこれが大きなものです：デザインを擁護すること。ユーザーが理解しない場合、それはユーザー問題ではなくデザイン問題です。あなたのエゴは脇に置く必要があります。"</li>
+</ul>
+
+<strong>Student Engagement:</strong>
+<ul>
+<li>Ask: "Has anyone ever defended a design choice when they knew deep down it wasn't working?"</li>
+<li>Discuss: "It's natural to be attached to your work, but your job is to serve users, not your ego."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: Your Turn: Analyzing Test Results | あなたの番：テスト結果の分析</h3>
+
+<h4>Activity Introduction (2 minutes) | アクティビティ紹介（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now it's your turn! You have 60 minutes for two parts: conducting tests and analyzing results."</li>
+<li>"Part 1: 30 minutes to actually test your prototypes with 2-3 participants. Use your test plan from last week."</li>
+<li>"Apply the think-aloud protocol. Encourage participants to speak their thoughts. Stay neutral - don't help or defend."</li>
+<li>"Document everything: task success, time, errors, SUS scores, observations, quotes."</li>
+<li>"Part 2: 30 minutes to analyze your data. Calculate metrics, identify patterns, rate severity, prioritize, create 3-5 recommendations."</li>
+<li>"The bot will guide you through analysis templates and frameworks. Use them!"</li>
+<li>"Your deliverable today: a usability findings report with clear, actionable recommendations."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今、あなたの番です！2つのパートに60分あります：テストの実施と結果の分析。"</li>
+<li>"パート1：2-3人の参加者で実際にプロトタイプをテストするために30分。先週のテスト計画を使用してください。"</li>
+<li>"シンクアラウドプロトコルを適用します。参加者に思考を話すように奨励します。中立を保ってください - 助けたり擁護したりしないでください。"</li>
+<li>"すべてを文書化します：タスク成功、時間、エラー、SUSスコア、観察、引用。"</li>
+<li>"パート2：データを分析するために30分。メトリクスを計算し、パターンを特定し、重大度を評価し、優先順位を付け、3-5の推奨事項を作成します。"</li>
+<li>"ボットが分析テンプレートとフレームワークを案内します。それらを使用してください！"</li>
+<li>"今日の成果物：明確で実行可能な推奨事項を含むユーザビリティ調査結果レポート。"</li>
+</ul>
+
+<strong>Logistics:</strong>
+<ul>
+<li>Explain testing space arrangements</li>
+<li>Clarify submission requirements</li>
+<li>Answer logistical questions</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Bot-Conducted Assessment | ボット実施評価</h3>
+
+<h4>Conversational Interview (2 minutes) | 会話インタビュー（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"After your activity, you'll have a bot-conducted assessment. This is new - it's a conversational interview, not a quiz."</li>
+<li>"The bot will ask about your design choices, testing process, and HCI principles. This is 15-20 minutes."</li>
+<li>"Topics include usability testing methodology, metrics analysis, design rationale, and prioritization frameworks."</li>
+<li>"Be ready to explain your decisions. Why did you prioritize that issue? What evidence supports your recommendation?"</li>
+<li>"This isn't scary! The bot is evaluating your understanding of HCI principles and your ability to justify design decisions with evidence."</li>
+<li>"Important: This is individual assessment. External AI chatbots are NOT allowed during the assessment. Just you and the HCI-101 Bot."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"アクティビティの後、ボット実施評価があります。これは新しいものです - クイズではなく会話インタビューです。"</li>
+<li>"ボットがデザイン選択、テストプロセス、HCI原則について尋ねます。これは15-20分です。"</li>
+<li>"トピックには、ユーザビリティテスト方法論、メトリクス分析、デザイン根拠、優先順位付けフレームワークが含まれます。"</li>
+<li>"決定を説明する準備をしてください。なぜその問題に優先順位を付けましたか？どのような証拠が推奨事項をサポートしますか？"</li>
+<li>"これは怖くありません！ボットはHCI原則の理解と証拠でデザイン決定を正当化する能力を評価しています。"</li>
+<li>"重要：これは個別評価です。評価中は外部AIチャットボットは許可されていません。あなたとHCI-101ボットだけです。"</li>
+</ul>
+
+<strong>Preparation Tips:</strong>
+<ul>
+<li>Review your test results</li>
+<li>Be ready to articulate your reasoning</li>
+<li>Practice explaining usability issues clearly</li>
+<li>Understand your prioritization rationale</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Key Takeaways | 重要なポイント</h3>
+
+<h4>Closing (2 minutes) | クロージング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's recap the key takeaways from today."</li>
+<li>"First: Analysis transforms data into insights. Raw numbers aren't enough - you need to interpret and find patterns."</li>
+<li>"Second: Prioritization is essential. You can't fix everything. Use severity ratings and the frequency-impact matrix."</li>
+<li>"Third: Recommendations must be actionable. Specific, evidence-based, prioritized, user-centered."</li>
+<li>"Fourth: Design is iterative. Test, analyze, redesign, test again. Each cycle improves your design."</li>
+<li>"Next week: Accessibility and Inclusive Design. You'll learn to design for all users, including those with disabilities."</li>
+<li>"This is crucial - good design works for everyone, not just able-bodied users."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日の重要なポイントを要約しましょう。"</li>
+<li>"最初：分析はデータを洞察に変換します。生の数字だけでは十分ではありません - 解釈してパターンを見つける必要があります。"</li>
+<li>"2番目：優先順位付けは不可欠です。すべてを修正することはできません。重大度評価と頻度-影響マトリックスを使用します。"</li>
+<li>"3番目：推奨事項は実行可能でなければなりません。具体的で、証拠に基づき、優先順位が付けられ、ユーザー中心です。"</li>
+<li>"4番目：デザインは反復的です。テスト、分析、再設計、再度テスト。各サイクルがデザインを改善します。"</li>
+<li>"来週：アクセシビリティと包括的デザイン。障害を持つユーザーを含むすべてのユーザーのためにデザインする方法を学びます。"</li>
+<li>"これは重要です - 良いデザインは健常者だけでなく、すべての人のために機能します。"</li>
+</ul>
+
+<strong>Final Encouragement:</strong>
+<ul>
+<li>"You're becoming real UX researchers and designers!"</li>
+<li>"The insights you gain from testing are invaluable."</li>
+<li>"Trust the data, serve the users, iterate continuously."</li>
+</ul>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Immediate Next Steps | 即座の次のステップ</h3>
+
+<p>1. <strong>Set Up Testing Environment</strong> | テスト環境をセットアップ</p>
+<p>   - Ensure adequate space for simultaneous testing</p>
+<p>   - Verify all students have access to test participants</p>
+<p>   - Prepare observation templates and materials</p>
+<p>   - Set up bot assessment scheduling</p>
+
+<p>2. <strong>Distribute Materials</strong> | 教材を配布</p>
+<p>   - Analysis templates (severity rating, priority matrix)</p>
+<p>   - Recommendation format guidelines</p>
+<p>   - SUS calculation sheets</p>
+<p>   - Bot assessment instructions</p>
+
+<p>3. <strong>Monitor Testing Sessions</strong> | テストセッションを監視</p>
+<p>   - Circulate during testing</p>
+<p>   - Ensure proper think-aloud protocol usage</p>
+<p>   - Help with technical issues only</p>
+<p>   - Remind students to stay neutral</p>
+
+<h3>Activity Support | アクティビティサポート</h3>
+
+<strong>During Part 1 (Testing - 30 min):</strong>
+<ul>
+<li>Observe student moderation skills</li>
+<li>Intervene only if serious issues arise</li>
+<li>Remind students to document everything</li>
+<li>Help coordinate participant scheduling if needed</li>
+</ul>
+
+<strong>During Part 2 (Analysis - 30 min):</strong>
+<ul>
+<li>Guide students through analysis templates</li>
+<li>Help with metric calculations if needed</li>
+<li>Encourage pattern recognition</li>
+<li>Review recommendation quality</li>
+<li>Direct students to bot for guidance</li>
+</ul>
+
+<h3>Common Issues to Watch For | 注意すべき一般的な問題</h3>
+
+<ul>
+<li><strong>Helping participants</strong> | 参加者を助ける: Students may want to "save" struggling users - remind them to observe, not intervene</li>
+<li><strong>Insufficient data</strong> | 不十分なデータ: Some students may not collect enough detail - check their notes</li>
+<li><strong>Confirmation bias</strong> | 確証バイアス: Watch for students ignoring negative findings</li>
+<li><strong>Vague recommendations</strong> | 曖昧な推奨事項: Push for specificity</li>
+<li><strong>Over-analysis</strong> | 過剰分析: Some students may get stuck - set time limits</li>
+</ul>
+
+<h3>Support Strategies | サポート戦略</h3>
+
+<ul>
+<li><strong>Bilingual Support</strong> | バイリンガルサポート: Provide explanations in both languages as needed</li>
+<li><strong>Template Guidance</strong> | テンプレートガイダンス: Show examples of well-completed templates</li>
+<li><strong>Bot Direction</strong> | ボット指示: Remind students the bot can help with analysis frameworks</li>
+<li><strong>Time Management</strong> | 時間管理: Keep students on track for both parts</li>
+</ul>
+
+<hr>
+
+<h2>Bot-Conducted Assessment Management | ボット実施評価管理</h2>
+
+<h3>Assessment Scheduling | 評価スケジューリング</h3>
+
+<strong>Timing Options:</strong>
+<ul>
+<li>End of class session (if time permits)</li>
+<li>After activity completion</li>
+<li>As homework/take-home assessment</li>
+<li>Flexible scheduling within week</li>
+</ul>
+
+<strong>Logistics:</strong>
+<ul>
+<li>Ensure all students know how to access assessment</li>
+<li>Clarify time limit (15-20 minutes)</li>
+<li>Emphasize individual work requirement</li>
+<li>No external AI allowed during assessment</li>
+</ul>
+
+<h3>Assessment Topics | 評価トピック</h3>
+
+<strong>Key Areas the Bot Will Assess:</strong>
+<p>1. <strong>Usability Testing Methodology</strong></p>
+<p>   - Understanding of testing procedures</p>
+<p>   - Think-aloud protocol application</p>
+<p>   - Participant selection rationale</p>
+
+<p>2. <strong>Metrics and Analysis</strong></p>
+<p>   - Ability to calculate and interpret metrics</p>
+<p>   - Pattern recognition across participants</p>
+<p>   - Triangulation of data sources</p>
+
+<p>3. <strong>Design Decision Rationale</strong></p>
+<p>   - Justification for design choices</p>
+<p>   - Evidence-based reasoning</p>
+<p>   - User-centered thinking</p>
+
+<p>4. <strong>Prioritization Frameworks</strong></p>
+<p>   - Application of severity ratings</p>
+<p>   - Use of frequency-impact matrix</p>
+<p>   - Understanding of P1-P4 prioritization</p>
+
+<h3>Student Preparation Guidance | 学生準備ガイダンス</h3>
+
+<strong>Advise Students to:</strong>
+<ul>
+<li>Review test results thoroughly before assessment</li>
+<li>Be ready to explain design decisions</li>
+<li>Practice articulating usability issues clearly</li>
+<li>Understand their prioritization rationale</li>
+<li>Have examples ready from their testing</li>
+</ul>
+
+<h3>Assessment Support | 評価サポート</h3>
+
+<ul>
+<li>Make yourself available for pre-assessment questions</li>
+<li>Clarify assessment format and expectations</li>
+<li>Provide examples of good vs. poor responses</li>
+<li>Reassure students this is conversational, not adversarial</li>
+</ul>
+
+<hr>
+
+<h2>Deliverables and Grading | 成果物と評価</h2>
+
+<h3>Today's Deliverable | 今日の成果物</h3>
+
+<strong>Usability Findings Report</strong>
+
+<strong>Required Components:</strong>
+<p>1. <strong>Executive Summary</strong></p>
+<p>   - Overall usability score (SUS average)</p>
+<p>   - Top 3-5 critical issues identified</p>
+<p>   - High-priority recommendations</p>
+
+<p>2. <strong>Methodology</strong></p>
+<p>   - Number of participants</p>
+<p>   - Testing procedures</p>
+<p>   - Tasks evaluated</p>
+
+<p>3. <strong>Quantitative Results</strong></p>
+<p>   - Task success rates (per task and overall)</p>
+<p>   - Average time on task</p>
+<p>   - Error rates</p>
+<p>   - SUS scores</p>
+
+<p>4. <strong>Qualitative Findings</strong></p>
+<p>   - Key observations</p>
+<p>   - User quotes (organized by theme)</p>
+<p>   - Behavioral patterns</p>
+
+<p>5. <strong>Prioritized Issues</strong></p>
+<p>   - Each issue with severity rating (0-4)</p>
+<p>   - Priority level (P1-P4)</p>
+<p>   - Frequency data (% of users affected)</p>
+
+<p>6. <strong>Recommendations</strong></p>
+<p>   - 3-5 specific, actionable recommendations</p>
+<p>   - Evidence supporting each</p>
+<p>   - Expected impact</p>
+<p>   - Using provided template format</p>
+
+<p>7. <strong>AI Transparency Documentation</strong></p>
+<p>   - All external AI prompts and responses</p>
+<p>   - Verification process</p>
+<p>   - How AI assistance was used</p>
+
+<strong>Format:</strong> 4-6 page document with clear sections
+
+<strong>Submission:</strong> [Specify submission method and deadline]
+
+<h3>Grading Criteria | 評価基準</h3>
+
+<strong>Usability Findings Report (Weighted in Weekly Activities 40%):</strong>
+<ul>
+<li>Data Collection Quality (20%): Complete metrics, detailed observations</li>
+<li>Analysis Depth (25%): Pattern identification, triangulation, severity ratings</li>
+<li>Recommendation Quality (30%): Specific, actionable, evidence-based, prioritized</li>
+<li>Presentation (15%): Clear structure, professional format, visual aids</li>
+<li>AI Transparency (10%): Complete documentation of AI usage</li>
+</ul>
+
+<strong>Bot Assessment (Part of Bot Assessments 15%):</strong>
+<ul>
+<li>Understanding of usability testing methods</li>
+<li>Ability to analyze and interpret test data</li>
+<li>Evidence-based design reasoning</li>
+<li>Application of prioritization frameworks</li>
+<li>Clear communication of findings</li>
+</ul>
+
+<hr>
+
+<h2>Resources for Next Week | 来週のためのリソース</h2>
+
+<h3>Week 12 Preview: Accessibility and Inclusive Design | 第12週プレビュー：アクセシビリティと包括的デザイン</h3>
+
+<strong>Topics to Cover:</strong>
+<ul>
+<li>WCAG 2.1 guidelines and standards</li>
+<li>Designing for visual impairments (screen readers, color contrast)</li>
+<li>Motor disability considerations (touch targets, keyboard navigation)</li>
+<li>Cognitive accessibility (clear language, consistent layouts)</li>
+<li>Assistive technologies overview</li>
+<li>Accessibility testing tools (WAVE, axe, Lighthouse)</li>
+</ul>
+
+<strong>Student Preparation:</strong>
+<ul>
+<li>Ask students to explore accessibility settings on their devices</li>
+<li>Encourage trying screen readers or voice control</li>
+<li>Reflect on accessibility barriers they've encountered</li>
+</ul>
+
+<h3>Additional Resources | 追加リソース</h3>
+
+<strong>For Students:</strong>
+<ul>
+<li>Jakob Nielsen's severity rating guidelines</li>
+<li>Priority matrix templates</li>
+<li>Sample usability findings reports</li>
+<li>SUS calculation tools</li>
+<li>Analysis frameworks</li>
+</ul>
+
+<strong>For Instructor:</strong>
+<ul>
+<li>Next week's materials on accessibility</li>
+<li>WCAG guideline summaries</li>
+<li>Accessibility audit templates</li>
+<li>Guest speaker possibilities (accessibility experts)</li>
+</ul>
+
+<hr>
+
+<h2>Reflection and Adaptation | 振り返りと適応</h2>
+
+<h3>Post-Class Reflection Questions | クラス後の振り返り質問</h3>
+
+<strong>For Instructor:</strong>
+<ul>
+<li>Did students successfully conduct usability tests?</li>
+<li>Were they able to identify meaningful patterns?</li>
+<li>Did they create specific, actionable recommendations?</li>
+<li>How was the quality of their analysis?</li>
+<li>Were severity ratings and prioritization applied correctly?</li>
+<li>How did the bot assessment go?</li>
+<li>What needs more emphasis next time?</li>
+</ul>
+
+<strong>For Students (Optional Reflection Prompt):</strong>
+<ul>
+<li>What surprised you most during testing?</li>
+<li>What was hardest about analyzing results?</li>
+<li>How did your assumptions about your design change?</li>
+<li>What will you do differently in your next iteration?</li>
+</ul>
+
+<h3>Continuous Improvement Notes | 継続的改善ノート</h3>
+
+<strong>What Worked Well:</strong>
+<ul>
+<li>[Document successful elements]</li>
+<li>[Note effective teaching strategies]</li>
+<li>[Record good student examples]</li>
+</ul>
+
+<strong>What Needs Adjustment:</strong>
+<ul>
+<li>[Identify challenging concepts]</li>
+<li>[Note time management issues]</li>
+<li>[Plan modifications for next offering]</li>
+</ul>
+
+<strong>Student Feedback Integration:</strong>
+<ul>
+<li>[Collect and analyze student feedback]</li>
+<li>[Identify common challenges]</li>
+<li>[Plan support strategies]</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Procedures | 緊急手順</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+
+<ul>
+<li><strong>Bot Portal Down</strong> | ボットポータルダウン:</li>
+</ul>
+<p>  - Have offline assessment alternative ready</p>
+<p>  - Provide manual analysis templates</p>
+<p>  - Reschedule bot assessment if needed</p>
+
+<ul>
+<li><strong>Participant No-Shows</strong> | 参加者不参加:</li>
+</ul>
+<p>  - Have backup plan for students to test each other's prototypes</p>
+<p>  - Allow flexible testing times within the week</p>
+<p>  - Instructor can serve as participant if absolutely necessary</p>
+
+<ul>
+<li><strong>Tool Access Problems</strong> | ツールアクセス問題:</li>
+</ul>
+<p>  - Have paper-based analysis templates</p>
+<p>  - Provide alternative submission methods</p>
+<p>  - Allow extended deadlines if widespread issue</p>
+
+<h3>Student Issues | 学生の問題</h3>
+
+<ul>
+<li><strong>Insufficient Test Data</strong> | 不十分なテストデータ:</li>
+</ul>
+<p>  - Provide guidance on minimum data requirements</p>
+<p>  - Allow additional testing time if needed</p>
+<p>  - Help student recruit additional participants</p>
+
+<ul>
+<li><strong>Analysis Struggles</strong> | 分析の苦労:</li>
+</ul>
+<p>  - Provide one-on-one support during activity</p>
+<p>  - Direct to bot for guided analysis</p>
+<p>  - Offer office hours assistance</p>
+
+<ul>
+<li><strong>Assessment Anxiety</strong> | 評価不安:</li>
+</ul>
+<p>  - Clarify conversational nature of bot assessment</p>
+<p>  - Provide practice questions</p>
+<p>  - Emphasize learning over perfect performance</p>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week10-instructor-notes.html" class="nav-btn nav-prev">← Week 10</a>
+        <span class="nav-current">Week 11 Instructor Notes</span>
+        <a href="week12-instructor-notes.html" class="nav-btn nav-next">Week 12 →</a>
+        <a href="week11-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

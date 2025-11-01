@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11: Assignment - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #f8f9fa; }
+        nav { background: #2a76dd; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; padding: 8px 15px; border-radius: 5px; transition: background 0.3s; }
+        nav a:hover { background: rgba(255,255,255,0.2); }
+        main { margin-top: 80px; padding: 40px 20px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .assignment-header { background: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .assignment-header h1 { color: #2a76dd; margin: 0 0 10px 0; }
+        .assignment-header .subtitle { color: #666; font-size: 1.1em; }
+        .section { background: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .section h2 { color: #2a76dd; border-bottom: 3px solid #2a76dd; padding-bottom: 10px; margin-top: 0; }
+        .section h3 { color: #7c3aed; margin-top: 25px; }
+        .deliverable-box { background: #f0f7ff; border-left: 4px solid #2a76dd; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        .requirement-list { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 15px 0; }
+        .highlight-box { background: #fff3cd; border: 2px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="week10-assignment.html">← Previous Week</a>
+        <a href="week11-presentation.html">📊 View Presentation</a>
+        <a href="week11-instructor-notes.html">📖 Instructor Notes</a>
+        <a href="week12-assignment.html">Next Week →</a>
+    </nav>
+
+    <main>
+        <div class="assignment-header">
+            <h1>Week 11: Usability Findings Report</h1>
+            <p class="subtitle">Conducting Real Tests and Analyzing Results</p>
+            <p class="bilingual">第11週：ユーザビリティ調査結果レポート - 実際のテスト実施と結果分析</p>
+        </div>
+
+        <div class="section">
+            <h2>📋 Assignment Overview / 課題概要</h2>
+            <p>Conduct real usability tests with 3-5 participants and create a comprehensive findings report with prioritized recommendations.</p>
+            <p class="bilingual">3-5人の参加者で実際のユーザビリティテストを実施し、優先順位付けされた推奨事項を含む包括的な調査結果レポートを作成します。</p>
+        </div>
+
+        <div class="section">
+            <h2>📦 Deliverables / 提出物</h2>
+            <div class="deliverable-box">
+                <h3>Usability Findings Report (4-6 pages)</h3>
+
+                <div class="requirement-list">
+                    <h3>1. Executive Summary</h3>
+                    <ul>
+                        <li>Overall SUS score (System Usability Scale)</li>
+                        <li>Top 3-5 critical issues discovered</li>
+                        <li>High-priority recommendations</li>
+                    </ul>
+
+                    <h3>2. Methodology</h3>
+                    <ul>
+                        <li>Number of participants and demographics</li>
+                        <li>Testing procedures used</li>
+                        <li>Tasks tested</li>
+                    </ul>
+
+                    <h3>3. Quantitative Results</h3>
+                    <ul>
+                        <li>Task success rates (% completion)</li>
+                        <li>Time on task (average and range)</li>
+                        <li>Error rates</li>
+                        <li>SUS scores</li>
+                    </ul>
+
+                    <h3>4. Qualitative Findings</h3>
+                    <ul>
+                        <li>Observations from testing sessions</li>
+                        <li>Direct user quotes</li>
+                        <li>Behavioral patterns noticed</li>
+                        <li>Pain points and delights</li>
+                    </ul>
+
+                    <h3>5. Prioritized Issues</h3>
+                    <ul>
+                        <li>Severity ratings (0-4 scale: 0=cosmetic, 4=catastrophic)</li>
+                        <li>Priority levels (P1-P4)</li>
+                        <li>Frequency data (how many users affected)</li>
+                    </ul>
+
+                    <h3>6. Recommendations</h3>
+                    <ul>
+                        <li>3-5 specific, actionable recommendations</li>
+                        <li>Evidence-based (tied to findings)</li>
+                        <li>Prioritized by impact</li>
+                    </ul>
+
+                    <h3>7. AI Transparency</h3>
+                    <ul>
+                        <li>Complete documentation of bot interactions</li>
+                        <li>How AI guidance influenced analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🤖 Bot Assessment / ボット評価</h2>
+            <div class="highlight-box">
+                <strong>Conversational Interview (15-20 minutes)</strong>
+                <p>You will complete a conversational bot assessment covering:</p>
+                <ul>
+                    <li>Usability testing methodology and choices</li>
+                    <li>Metrics analysis and interpretation</li>
+                    <li>Design rationale for your prototype</li>
+                    <li>Prioritization frameworks and decisions</li>
+                </ul>
+                <p class="bilingual">ユーザビリティテスト方法論、メトリクス分析、デザイン根拠、優先順位付けフレームワークをカバーする会話型ボット評価を完了します。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✅ Submission Requirements / 提出要件</h2>
+            <div class="requirement-list">
+                <ul>
+                    <li><strong>File Format:</strong> PDF</li>
+                    <li><strong>File Naming:</strong> LastName_FirstName_Week11.pdf</li>
+                    <li><strong>Length:</strong> 4-6 pages</li>
+                    <li><strong>Due Date:</strong> Before next class session</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 Tips for Success / 成功のためのヒント</h2>
+            <ul>
+                <li>Test with at least 3 users (5 is ideal for catching 85% of issues)</li>
+                <li>Calculate SUS properly - it's a standardized score (0-100)</li>
+                <li>Use exact quotes - they bring findings to life</li>
+                <li>Prioritize based on severity AND frequency</li>
+                <li>Make recommendations specific and actionable</li>
+                <li>Show your data - use tables and charts</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer style="background: #2a76dd; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2025 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
+    </footer>
+</body>
+</html>

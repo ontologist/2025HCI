@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 12 Instructor Notes | 第12週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week11-instructor-notes.html" class="nav-btn nav-prev">← Week 11</a>
+        <span class="nav-current">Week 12 Instructor Notes</span>
+        <a href="week13-instructor-notes.html" class="nav-btn nav-next">Week 13 →</a>
+        <a href="week12-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 12 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第12週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> 15-20 minutes
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Install accessibility testing tools (WAVE, axe DevTools) on demo computer</li>
+<li class="checkbox">&#9744; Test screen reader functionality (VoiceOver/NVDA)</li>
+<li class="checkbox">&#9744; Prepare accessibility examples (good vs. bad)</li>
+<li class="checkbox">&#9744; Have color contrast checker ready</li>
+<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
+<li class="checkbox">&#9744; Ensure internet connectivity for tool demonstrations</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Accessibility audit checklist</li>
+<li class="checkbox">&#9744; WCAG 2.1 quick reference guide</li>
+<li class="checkbox">&#9744; Tool installation instructions (WAVE, axe, Lighthouse)</li>
+<li class="checkbox">&#9744; Color contrast requirements cheat sheet</li>
+<li class="checkbox">&#9744; Touch target size guidelines</li>
+<li class="checkbox">&#9744; AI transparency log template</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Ensure students can access their prototypes</li>
+<li class="checkbox">&#9744; Prepare for bilingual presentation (English/Japanese)</li>
+<li class="checkbox">&#9744; Set up for hands-on testing activity</li>
+<li class="checkbox">&#9744; Have backup materials for students without devices</li>
+<li class="checkbox">&#9744; Testing tools ready for installation</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Week 12! | 第12週へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 12! Today we're talking about accessibility and inclusive design - one of the most important topics in HCI."</li>
+<li>"Here's a surprising fact: 15% of the world's population - over 1 billion people - have some form of disability. That's a huge user base we need to design for."</li>
+<li>"But here's the thing: designing for accessibility doesn't just help people with disabilities. It makes your interfaces better for everyone."</li>
+<li>"By the end of today, you'll know how to audit your designs for accessibility and make them work for all users."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第12週へようこそ！今日はアクセシビリティと包括的デザインについて話します - HCIで最も重要なトピックの1つです。"</li>
+<li>"驚くべき事実があります：世界人口の15% - 10億人以上 - が何らかの障害を持っています。それは私たちがデザインする必要がある巨大なユーザーベースです。"</li>
+<li>"しかしここで重要なことは：アクセシビリティのためのデザインは障害を持つ人々を助けるだけではありません。すべての人のためにインターフェースを改善します。"</li>
+<li>"今日の終わりまでに、アクセシビリティのためにデザインを監査し、すべてのユーザーに機能させる方法を知るでしょう。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>Accessibility is not optional</li>
+<li>Benefits everyone, not just disabled users</li>
+<li>Legal and ethical imperative</li>
+<li>Practical skills they'll use today</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: What is Accessibility? | アクセシビリティとは？</h3>
+
+<h4>Core Concepts (3 minutes) | コアコンセプト（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Accessibility means designing so that people with disabilities can use your product. Simple as that."</li>
+<li>"The foundation is the POUR framework: Perceivable, Operable, Understandable, Robust."</li>
+<li>"Perceivable: Can users perceive the information? If you're blind, you can't see images - you need text alternatives."</li>
+<li>"Operable: Can users operate the interface? If you can't use a mouse, you need keyboard navigation."</li>
+<li>"Understandable: Can users understand the content and how to use it? Clear language, consistent design."</li>
+<li>"Robust: Does it work with assistive technologies like screen readers? Use semantic HTML, proper structure."</li>
+<li>"These four principles underpin all of WCAG - the Web Content Accessibility Guidelines."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"アクセシビリティとは、障害を持つ人々があなたの製品を使用できるようにデザインすることを意味します。それだけです。"</li>
+<li>"基礎はPOURフレームワークです：知覚可能、操作可能、理解可能、堅牢。"</li>
+<li>"知覚可能：ユーザーは情報を知覚できますか？盲目の場合、画像を見ることができません - テキスト代替が必要です。"</li>
+<li>"操作可能：ユーザーはインターフェースを操作できますか？マウスを使用できない場合、キーボードナビゲーションが必要です。"</li>
+<li>"理解可能：ユーザーはコンテンツとその使用方法を理解できますか？明確な言語、一貫したデザイン。"</li>
+<li>"堅牢：スクリーンリーダーのような支援技術で動作しますか？セマンティックHTML、適切な構造を使用します。"</li>
+<li>"これら4つの原則がWCAG - ウェブコンテンツアクセシビリティガイドライン - のすべてを支えています。"</li>
+</ul>
+
+<strong>Interactive Elements:</strong>
+<ul>
+<li>Ask: "How many of you have ever used captions on a video - maybe in a noisy place?"</li>
+<li>Point out: "That's an accessibility feature designed for deaf users that benefits everyone."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: Types of Disabilities | 障害の種類</h3>
+
+<h4>Understanding Diversity (4 minutes) | 多様性の理解（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's talk about the four main categories of disabilities and what they mean for design."</li>
+<li>"Visual impairments: blindness, low vision, color blindness. These users need screen readers, high contrast, and keyboard navigation."</li>
+<li>"Motor/physical disabilities: limited fine motor control, tremors, paralysis. They need large touch targets - minimum 44×44 pixels - and keyboard-only access."</li>
+<li>"Fun fact: Apple's iOS requires 44 points, Android requires 48dp. Why? Because smaller targets are hard to hit, especially if your hands shake or you have arthritis."</li>
+<li>"Auditory disabilities: deafness, hard of hearing. They need captions for videos and visual alerts instead of beeps."</li>
+<li>"Cognitive disabilities: dyslexia, ADHD, memory impairments, autism. They need clear language, consistent layouts, and no flashing content."</li>
+<li>"Important: Many people have multiple disabilities, and disabilities can be temporary or situational."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"障害の4つの主要なカテゴリーとそれらがデザインにとって何を意味するかについて話しましょう。"</li>
+<li>"視覚障害：盲目、弱視、色覚異常。これらのユーザーはスクリーンリーダー、高コントラスト、キーボードナビゲーションが必要です。"</li>
+<li>"運動/身体障害：限られた細かい運動制御、震え、麻痺。彼らは大きなタッチターゲットが必要です - 最小44×44ピクセル - そしてキーボードのみのアクセス。"</li>
+<li>"楽しい事実：AppleのiOSは44ポイントを要求し、Androidは48dpを要求します。なぜですか？小さなターゲットは特に手が震えたり関節炎がある場合、ヒットするのが困難だからです。"</li>
+<li>"聴覚障害：聴覚障害、難聴。彼らはビデオのキャプションとビープ音の代わりに視覚的アラートが必要です。"</li>
+<li>"認知障害：ディスレクシア、ADHD、記憶障害、自閉症。彼らは明確な言語、一貫したレイアウト、点滅コンテンツなしが必要です。"</li>
+<li>"重要：多くの人々は複数の障害を持っており、障害は一時的または状況的である可能性があります。"</li>
+</ul>
+
+<strong>Real-World Examples:</strong>
+<ul>
+<li>"Broken arm? That's a temporary motor disability. Bright sunlight? That's situational low vision."</li>
+<li>"Good accessible design helps in all these situations."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: WCAG 2.1 Guidelines Overview | WCAG 2.1ガイドライン概要</h3>
+
+<h4>Standards and Compliance (3 minutes) | 基準とコンプライアンス（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"WCAG has three levels: A, AA, and AAA. Think of them as good, better, best."</li>
+<li>"Level A is the bare minimum. If you don't meet this, you have major accessibility barriers."</li>
+<li>"Level AA is what you should aim for. It's the legal requirement in many countries and the industry standard."</li>
+<li>"Level AAA is the highest level. It's not always achievable for all content, but it's the gold standard."</li>
+<li>"For your projects, aim for AA. That means: 4.5:1 color contrast for normal text, 44×44 pixel touch targets, keyboard accessibility, text alternatives for images."</li>
+<li>"Meeting AA isn't just about compliance - it's about making your designs usable for millions of people."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"WCAGには3つのレベルがあります：A、AA、AAA。良い、より良い、最高と考えてください。"</li>
+<li>"レベルAは最低限です。これを満たさない場合、主要なアクセシビリティ障壁があります。"</li>
+<li>"レベルAAは目指すべきものです。それは多くの国で法的要件であり、業界標準です。"</li>
+<li>"レベルAAAは最高レベルです。すべてのコンテンツで常に達成可能ではありませんが、ゴールドスタンダードです。"</li>
+<li>"プロジェクトについては、AAを目指してください。それは：通常のテキストの4.5:1の色コントラスト、44×44ピクセルのタッチターゲット、キーボードアクセシビリティ、画像のテキスト代替を意味します。"</li>
+<li>"AAを満たすことはコンプライアンスだけではありません - 何百万人もの人々のためにデザインを使用可能にすることです。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Visual Accessibility Principles | 視覚アクセシビリティ原則</h3>
+
+<h4>Color and Contrast (4 minutes) | 色とコントラスト（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's talk about color contrast. This is one of the most common accessibility failures."</li>
+<li>"WCAG requires 4.5:1 contrast ratio for normal text. What does that mean? It's a mathematical ratio between the lightest and darkest colors."</li>
+<li>"Light gray on white - like #999 on #FFF - has a ratio of about 2.8:1. That fails. It's hard to read for everyone, not just people with low vision."</li>
+<li>"Dark gray on white - like #555 on #FFF - has a ratio of about 8.6:1. That passes. See how much clearer it is?"</li>
+<li>"Pro tip: Use tools like WebAIM Contrast Checker or the Figma Stark plugin. Don't guess - test."</li>
+<li>"Second principle: Don't rely on color alone. If you say 'required fields are in red,' what about users who can't see red?"</li>
+<li>"Better: 'Required fields are marked with a red asterisk.' Now you have color + symbol + label."</li>
+<li>"Third: Text alternatives for images. Every image needs alt text describing its content and function. Screen readers read this aloud."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"色のコントラストについて話しましょう。これは最も一般的なアクセシビリティの失敗の1つです。"</li>
+<li>"WCAGは通常のテキストに4.5:1のコントラスト比を要求します。それは何を意味しますか？最も明るい色と最も暗い色の間の数学的比率です。"</li>
+<li>"白に薄いグレー - #FFFに#999のような - は約2.8:1の比率です。それは失敗します。弱視の人々だけでなく、すべての人にとって読みにくいです。"</li>
+<li>"白に濃いグレー - #FFFに#555のような - は約8.6:1の比率です。それは合格します。どれだけ明確かを見てください。"</li>
+<li>"プロのヒント：WebAIMコントラストチェッカーまたはFigma Starkプラグインのようなツールを使用してください。推測しないでください - テストしてください。"</li>
+<li>"2番目の原則：色だけに頼らないでください。「必須フィールドは赤です」と言った場合、赤を見ることができないユーザーについてはどうですか？"</li>
+<li>"より良い：「必須フィールドは赤いアスタリスク付きでマークされています。」今、色 + シンボル + ラベルがあります。"</li>
+<li>"3番目：画像のテキスト代替。すべての画像は、そのコンテンツと機能を説明するaltテキストが必要です。スクリーンリーダーはこれを音声で読み上げます。"</li>
+</ul>
+
+<strong>Demonstration:</strong>
+<ul>
+<li>Show examples of good vs. bad color contrast</li>
+<li>Demonstrate contrast checker tool</li>
+<li>Show how screen reader reads alt text</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Motor Accessibility Principles | 運動アクセシビリティ原則</h3>
+
+<h4>Touch and Keyboard (3 minutes) | タッチとキーボード（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Motor accessibility is about making interfaces operable for people who can't use a mouse or have difficulty with precise movements."</li>
+<li>"Rule #1: Minimum 44×44 pixel touch targets. Why? Try tapping a 20-pixel button with a shaky hand - it's impossible."</li>
+<li>"Rule #2: Everything must work with keyboard only. Unplug your mouse and try using your prototype. Can you reach everything? If not, it's not accessible."</li>
+<li>"Tab key moves forward, Shift+Tab moves backward, Enter/Space activates. Arrow keys navigate within components."</li>
+<li>"Focus indicators are critical. That blue outline around the focused element? Don't remove it! Or if you do, replace it with something even more visible."</li>
+<li>"Rule #3: No time limits, or allow users to extend them. Some users need more time to read, process, or interact."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"運動アクセシビリティは、マウスを使用できない、または精密な動きが困難な人々のためにインターフェースを操作可能にすることです。"</li>
+<li>"ルール#1：最小44×44ピクセルのタッチターゲット。なぜですか？震える手で20ピクセルのボタンをタップしてみてください - 不可能です。"</li>
+<li>"ルール#2：すべてがキーボードのみで動作する必要があります。マウスを外してプロトタイプを使用してみてください。すべてに到達できますか？そうでない場合、それはアクセス可能ではありません。"</li>
+<li>"Tabキーは前方に移動し、Shift+Tabは後方に移動し、Enter/Spaceはアクティブ化します。矢印キーはコンポーネント内をナビゲートします。"</li>
+<li>"フォーカスインジケーターは重要です。フォーカスされた要素の周りの青いアウトライン？それを削除しないでください！または削除する場合は、さらに見やすいものに置き換えてください。"</li>
+<li>"ルール#3：時間制限なし、またはユーザーに延長を許可します。一部のユーザーは読む、処理する、または相互作用するためにより多くの時間が必要です。"</li>
+</ul>
+
+<strong>Interactive Exercise:</strong>
+<ul>
+<li>Have students try keyboard navigation on a familiar website</li>
+<li>Identify what works and what doesn't</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Cognitive Accessibility Principles | 認知アクセシビリティ原則</h3>
+
+<h4>Clarity and Consistency (3 minutes) | 明確性と一貫性（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Cognitive accessibility is often overlooked, but it's crucial. It's about making content easy to understand and use."</li>
+<li>"First: Use clear, simple language. Short sentences. Common words instead of jargon. Active voice."</li>
+<li>"Compare: 'Utilize the search functionality to locate desired content' versus 'Use search to find what you need.' Which is clearer?"</li>
+<li>"Second: Consistency. Put your navigation in the same place on every screen. Use the same words for the same actions. Use colors consistently."</li>
+<li>"When users learn your interface once, they shouldn't have to relearn it on every page."</li>
+<li>"Third: Avoid flashing and moving content. It can trigger seizures in people with photosensitive epilepsy, and it's incredibly distracting for people with ADHD."</li>
+<li>"WCAG rule: No more than 3 flashes per second. Better: don't flash at all. Provide pause/stop for animations."</li>
+<li>"Fourth: Clear error messages. Not 'Error 404' - say 'Email address is missing. Please enter your email address in the format: name@example.com.'"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"認知アクセシビリティはしばしば見落とされますが、重要です。コンテンツを理解しやすく使用しやすくすることです。"</li>
+<li>"最初：明確でシンプルな言語を使用します。短い文。専門用語の代わりに一般的な言葉。能動態。"</li>
+<li>"比較：「検索機能を利用して目的のコンテンツを見つける」対「必要なものを見つけるために検索を使用する」。どちらが明確ですか？"</li>
+<li>"2番目：一貫性。ナビゲーションをすべての画面の同じ場所に配置します。同じアクションに同じ言葉を使用します。色を一貫して使用します。"</li>
+<li>"ユーザーがインターフェースを一度学習したら、すべてのページで再学習する必要はありません。"</li>
+<li>"3番目：点滅と移動コンテンツを避けます。光感受性てんかんの人々の発作を引き起こす可能性があり、ADHDの人々にとって非常に気が散ります。"</li>
+<li>"WCAGルール：1秒あたり3回以下の点滅。より良い：まったく点滅しない。アニメーションの一時停止/停止を提供します。"</li>
+<li>"4番目：明確なエラーメッセージ。「エラー404」ではありません - 「メールアドレスが見つかりません。name@example.comの形式でメールアドレスを入力してください」と言います。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Assistive Technologies | 支援技術</h3>
+
+<h4>Understanding the Tools (3 minutes) | ツールの理解（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's talk about the technologies people use to interact with your designs."</li>
+<li>"Screen readers like JAWS, NVDA, VoiceOver, and TalkBack read everything aloud. They're used by blind and low-vision users."</li>
+<li>"For designers: This means semantic HTML matters. Use real buttons, not divs that look like buttons. Screen readers know what a button is, but not what a styled div is."</li>
+<li>"Screen magnifiers enlarge portions of the screen. Your design must work at 200% zoom. Text must reflow, not get cut off."</li>
+<li>"Voice control lets users speak commands. 'Click submit button.' This requires visible text labels - icon-only buttons don't work."</li>
+<li>"Switch controls for users with severe motor disabilities. They navigate by pressing switches to select items one by one. Sequential navigation must be perfect."</li>
+<li>"The takeaway: These technologies exist and millions of people use them. Test with them."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"人々があなたのデザインと相互作用するために使用する技術について話しましょう。"</li>
+<li>"JAWS、NVDA、VoiceOver、TalkBackのようなスクリーンリーダーはすべてを音声で読み上げます。盲目と弱視のユーザーによって使用されます。"</li>
+<li>"デザイナーにとって：これはセマンティックHTMLが重要であることを意味します。ボタンのように見えるdivではなく、本物のボタンを使用してください。スクリーンリーダーはボタンが何であるかを知っていますが、スタイル付きdivが何であるかを知りません。"</li>
+<li>"画面拡大鏡は画面の一部を拡大します。あなたのデザインは200%ズームで動作する必要があります。テキストは再フローし、切り取られてはいけません。"</li>
+<li>"音声制御はユーザーがコマンドを話すことを可能にします。「送信ボタンをクリック。」これには可視テキストラベルが必要です - アイコンのみのボタンは機能しません。"</li>
+<li>"重度の運動障害を持つユーザー向けのスイッチ制御。彼らはスイッチを押して一つずつアイテムを選択してナビゲートします。順次ナビゲーションは完璧でなければなりません。"</li>
+<li>"要点：これらの技術は存在し、何百万人もの人々がそれらを使用しています。それらでテストしてください。"</li>
+</ul>
+
+<strong>Demonstration:</strong>
+<ul>
+<li>Quick demo of VoiceOver or NVDA on a website</li>
+<li>Show how it reads content, navigates, announces buttons</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Accessibility Testing Tools | アクセシビリティテストツール</h3>
+
+<h4>Automated and Manual Testing (3 minutes) | 自動および手動テスト（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"You can't design for accessibility without testing. Let me show you the tools."</li>
+<li>"Automated tools: WAVE, axe DevTools, Lighthouse. These are browser extensions that scan your page and find issues."</li>
+<li>"WAVE highlights errors visually - missing alt text, low contrast, broken structure. It's free and easy to use."</li>
+<li>"axe DevTools gives detailed reports with specific WCAG violations and how to fix them. Also free."</li>
+<li>"Lighthouse is built into Chrome. It scores your accessibility from 0-100 and provides recommendations."</li>
+<li>"Important: Automated tools catch only 30-40% of accessibility issues. You MUST do manual testing."</li>
+<li>"Manual testing: Keyboard-only navigation, screen reader testing, zoom testing, color blindness simulation."</li>
+<li>"Today's activity: You'll use these tools to audit your prototypes. You'll find issues. That's good - finding them now means you can fix them."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"テストなしでアクセシビリティのためにデザインすることはできません。ツールを見せましょう。"</li>
+<li>"自動ツール：WAVE、axe DevTools、Lighthouse。これらはページをスキャンして問題を見つけるブラウザ拡張機能です。"</li>
+<li>"WAVEはエラーを視覚的に強調します - altテキストの欠落、低コントラスト、壊れた構造。無料で使いやすいです。"</li>
+<li>"axe DevToolsは特定のWCAG違反とそれらを修正する方法を含む詳細なレポートを提供します。また無料です。"</li>
+<li>"LighthouseはChromeに組み込まれています。0-100からアクセシビリティをスコア付けし、推奨事項を提供します。"</li>
+<li>"重要：自動ツールはアクセシビリティ問題の30-40%のみを捕捉します。手動テストを行う必要があります。"</li>
+<li>"手動テスト：キーボードのみのナビゲーション、スクリーンリーダーテスト、ズームテスト、色覚異常シミュレーション。"</li>
+<li>"今日のアクティビティ：これらのツールを使用してプロトタイプを監査します。問題が見つかります。それは良いことです - 今それらを見つけることは修正できることを意味します。"</li>
+</ul>
+
+<strong>Demonstration:</strong>
+<ul>
+<li>Run WAVE on a website with accessibility issues</li>
+<li>Show axe DevTools report</li>
+<li>Run Lighthouse audit</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Common Accessibility Issues and Fixes | 一般的なアクセシビリティ問題と修正</h3>
+
+<h4>Practical Solutions (3 minutes) | 実践的な解決策（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's go through the six most common accessibility problems you'll find - and how to fix them."</li>
+<li>"Issue 1: Low color contrast. Fix: Use darker colors. Test with WebAIM Contrast Checker. Aim for 4.5:1."</li>
+<li>"Issue 2: Missing alt text. Fix: Add descriptive alt text to every image. For decorative images, use empty alt."</li>
+<li>"Issue 3: Small touch targets. Fix: Make all tappable elements at least 44×44 pixels with spacing."</li>
+<li>"Issue 4: No keyboard access. Fix: Use semantic HTML. If you must use divs, add proper keyboard handlers."</li>
+<li>"Issue 5: Poor focus indicators. Fix: Never remove outline without replacing it. Design visible focus states."</li>
+<li>"Issue 6: Auto-playing content. Fix: Don't auto-play, or provide prominent pause/stop controls."</li>
+<li>"These six issues account for probably 80% of accessibility problems. Fix these, and you're most of the way there."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"見つかる6つの最も一般的なアクセシビリティ問題 - とそれらを修正する方法を見ていきましょう。"</li>
+<li>"問題1：低い色コントラスト。修正：より暗い色を使用します。WebAIMコントラストチェッカーでテストします。4.5:1を目指します。"</li>
+<li>"問題2：altテキストの欠落。修正：すべての画像に説明的なaltテキストを追加します。装飾的な画像には、空のaltを使用します。"</li>
+<li>"問題3：小さなタッチターゲット。修正：すべてのタップ可能な要素を少なくとも44×44ピクセルで間隔を空けて作成します。"</li>
+<li>"問題4：キーボードアクセスなし。修正：セマンティックHTMLを使用します。divを使用する必要がある場合は、適切なキーボードハンドラーを追加します。"</li>
+<li>"問題5：不十分なフォーカスインジケーター。修正：置き換えずにアウトラインを削除しないでください。可視フォーカス状態をデザインします。"</li>
+<li>"問題6：自動再生コンテンツ。修正：自動再生しない、または目立つ一時停止/停止コントロールを提供します。"</li>
+<li>"これら6つの問題はおそらくアクセシビリティ問題の80%を占めます。これらを修正すれば、ほとんどの道のりが終わります。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: ARIA (Accessible Rich Internet Applications) | ARIA概要</h3>
+
+<h4>When and How to Use ARIA (2 minutes) | ARIAを使用する時期と方法（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"ARIA adds accessibility info to HTML when semantic HTML isn't enough."</li>
+<li>"First rule of ARIA: Don't use it if semantic HTML works. A real button is better than a div with ARIA."</li>
+<li>"Use ARIA when building custom widgets that don't have semantic equivalents: tabs, carousels, modals."</li>
+<li>"Common ARIA attributes: aria-label provides accessible names, aria-labelledby references labels, aria-live announces dynamic content."</li>
+<li>"ARIA is powerful but can make things worse if used incorrectly. When in doubt, stick with semantic HTML."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"セマンティックHTMLが十分でない場合、ARIAはHTMLにアクセシビリティ情報を追加します。"</li>
+<li>"ARIAの第一のルール：セマンティックHTMLが機能する場合は使用しないでください。本物のボタンはARIA付きdivよりも優れています。"</li>
+<li>"セマンティック同等物を持たないカスタムウィジェットを構築する場合にARIAを使用します：タブ、カルーセル、モーダル。"</li>
+<li>"一般的なARIA属性：aria-labelはアクセス可能な名前を提供し、aria-labelledbyはラベルを参照し、aria-liveは動的コンテンツをアナウンスします。"</li>
+<li>"ARIAは強力ですが、誤って使用すると事態を悪化させる可能性があります。疑わしい場合は、セマンティックHTMLに固執してください。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: Inclusive Design vs. Accessibility | 包括的デザイン vs アクセシビリティ</h3>
+
+<h4>Broader Perspective (3 minutes) | より広い視点（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Accessibility and inclusive design are related but different."</li>
+<li>"Accessibility focuses on compliance - meeting WCAG standards, designing for people with disabilities."</li>
+<li>"Inclusive design is broader - it considers the full range of human diversity from the start."</li>
+<li>"Here's the key difference: Accessibility often feels like accommodating disabilities. Inclusive design recognizes that diversity is the norm."</li>
+<li>"Think about curb cuts - those ramps on sidewalks. Originally designed for wheelchairs. But they also help parents with strollers, delivery workers, travelers with luggage."</li>
+<li>"Closed captions: Designed for deaf users. But they also help people in noisy environments, language learners, people who prefer reading."</li>
+<li>"This is the power of inclusive design: Solutions designed for people with disabilities often benefit everyone."</li>
+<li>"Design inclusively from the start. Don't treat accessibility as an afterthought - bake it in from day one."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"アクセシビリティと包括的デザインは関連していますが異なります。"</li>
+<li>"アクセシビリティはコンプライアンスに焦点を当てます - WCAG基準を満たす、障害を持つ人々のためにデザインする。"</li>
+<li>"包括的デザインはより広いです - 最初から人間の多様性の全範囲を考慮します。"</li>
+<li>"ここでの重要な違い：アクセシビリティはしばしば障害に対応しているように感じます。包括的デザインは多様性が標準であることを認識しています。"</li>
+<li>"縁石カット - 歩道のスロープについて考えてみてください。元々車椅子用に設計されました。しかし、ベビーカーの親、配達作業員、荷物を持つ旅行者にも役立ちます。"</li>
+<li>"クローズドキャプション：聴覚障害者用に設計されました。しかし、騒がしい環境の人々、言語学習者、読書を好む人々にも役立ちます。"</li>
+<li>"これが包括的デザインの力です：障害を持つ人々のために設計されたソリューションはしばしばすべての人に利益をもたらします。"</li>
+<li>"最初から包括的にデザインします。アクセシビリティを後付けとして扱わないでください - 初日から組み込みます。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: Accessibility in Smart Devices and AI | スマートデバイスとAIにおけるアクセシビリティ</h3>
+
+<h4>Modern Platforms (2 minutes) | 現代のプラットフォーム（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Modern devices have amazing built-in accessibility features."</li>
+<li>"iOS: VoiceOver screen reader, Voice Control, Zoom, Display Accommodations. All free, all powerful."</li>
+<li>"Android: TalkBack, Voice Access, Magnification, color correction. Also built-in."</li>
+<li>"For chatbots: Provide multiple input methods - text, voice, buttons. Use clear language. Offer conversation history."</li>
+<li>"The bot you're using in this course - HCI-101 Bot - should be accessible too. Does it work with screen readers? Can you use it with keyboard only?"</li>
+<li>"For your projects: If you're designing a chatbot, make sure it's accessible. If you're designing a mobile app, test it with VoiceOver or TalkBack."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"現代のデバイスには素晴らしい組み込みアクセシビリティ機能があります。"</li>
+<li>"iOS：VoiceOverスクリーンリーダー、音声制御、ズーム、ディスプレイ調整。すべて無料、すべて強力。"</li>
+<li>"Android：TalkBack、音声アクセス、拡大、色補正。また組み込み。"</li>
+<li>"チャットボットについて：複数の入力方法を提供します - テキスト、音声、ボタン。明確な言語を使用します。会話履歴を提供します。"</li>
+<li>"このコースで使用しているボット - HCI-101ボット - もアクセス可能である必要があります。スクリーンリーダーで動作しますか？キーボードのみで使用できますか？"</li>
+<li>"プロジェクトについて：チャットボットをデザインしている場合は、アクセス可能であることを確認してください。モバイルアプリをデザインしている場合は、VoiceOverまたはTalkBackでテストしてください。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Legal and Ethical Considerations | 法的および倫理的考慮事項</h3>
+
+<h4>Why This Matters (3 minutes) | なぜこれが重要なのか（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's talk about why accessibility isn't optional."</li>
+<li>"First, the law. In the US, ADA requires accessible websites. In the EU, the European Accessibility Act. In Japan, JIS X 8341-3. Many countries have laws."</li>
+<li>"Companies get sued for inaccessible websites. Domino's Pizza lost a Supreme Court case because blind users couldn't order online."</li>
+<li>"Second, the business case. 15% of the world = 1 billion people with disabilities. That's a huge market you're excluding if you're not accessible."</li>
+<li>"Better SEO: Accessible sites rank better in search engines because semantic HTML helps search engines understand your content."</li>
+<li>"Improved UX for everyone: Clear navigation, readable text, keyboard shortcuts - these help all users."</li>
+<li>"Third, and most important: the ethical imperative. Everyone deserves equal access to information and services."</li>
+<li>"Digital exclusion is discrimination. As designers, you have power and responsibility to create inclusive experiences."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"アクセシビリティがオプションではない理由について話しましょう。"</li>
+<li>"最初に、法律。米国では、ADAはアクセス可能なウェブサイトを要求します。EUでは、ヨーロッパアクセシビリティ法。日本では、JIS X 8341-3。多くの国に法律があります。"</li>
+<li>"企業はアクセス不可能なウェブサイトで訴えられます。Domino's Pizzaは盲目のユーザーがオンラインで注文できなかったため、最高裁判所の訴訟に敗れました。"</li>
+<li>"2番目、ビジネスケース。世界の15% = 10億人の障害者。アクセス可能でない場合、あなたは巨大な市場を除外しています。"</li>
+<li>"より良いSEO：アクセス可能なサイトは検索エンジンでより良くランク付けされます。セマンティックHTMLは検索エンジンがコンテンツを理解するのを助けます。"</li>
+<li>"すべての人のためのUXの改善：明確なナビゲーション、読みやすいテキスト、キーボードショートカット - これらはすべてのユーザーを助けます。"</li>
+<li>"3番目、そして最も重要：倫理的義務。すべての人は情報とサービスへの平等なアクセスに値します。"</li>
+<li>"デジタル排除は差別です。デザイナーとして、あなたは包括的な体験を作成する力と責任を持っています。"</li>
+</ul>
+
+<strong>Personal Appeal:</strong>
+<ul>
+<li>"You're about to become professional designers. The choices you make affect millions of people."</li>
+<li>"Choose to design for everyone. It's the right thing to do."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: Today's Activity: Accessibility Audit | 今日のアクティビティ：アクセシビリティ監査</h3>
+
+<h4>Activity Introduction (2 minutes) | アクティビティ紹介（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now it's your turn to become accessibility auditors!"</li>
+<li>"You have 60 minutes in three parts: automated testing, manual testing, and documenting/fixing issues."</li>
+<li>"Part 1 (20 min): Install and run WAVE, axe, or Lighthouse on your prototypes. Check color contrast. Document all issues."</li>
+<li>"Part 2 (25 min): Manual testing. Navigate with keyboard only. Test with a screen reader if possible. Zoom to 200%. Use color blindness simulation."</li>
+<li>"Part 3 (15 min): Create your accessibility audit report. List issues, prioritize them, and fix the high-priority ones."</li>
+<li>"Your deliverable: An accessibility audit report with prioritized issues and an improved prototype."</li>
+<li>"This isn't busy work - you're making your designs usable for millions more people."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今、アクセシビリティ監査者になるあなたの番です！"</li>
+<li>"3つのパートで60分あります：自動テスト、手動テスト、問題の文書化/修正。"</li>
+<li>"パート1（20分）：プロトタイプでWAVE、axe、またはLighthouseをインストールして実行します。色コントラストをチェックします。すべての問題を文書化します。"</li>
+<li>"パート2（25分）：手動テスト。キーボードのみでナビゲートします。可能であればスクリーンリーダーでテストします。200%にズームします。色覚異常シミュレーションを使用します。"</li>
+<li>"パート3（15分）：アクセシビリティ監査レポートを作成します。問題をリストし、優先順位を付け、高優先度のものを修正します。"</li>
+<li>"成果物：優先順位付けされた問題と改善されたプロトタイプを含むアクセシビリティ監査レポート。"</li>
+<li>"これは忙しい作業ではありません - あなたは何百万人もの人々のためにデザインを使用可能にしています。"</li>
+</ul>
+
+<strong>Logistics:</strong>
+<ul>
+<li>Distribute audit checklist</li>
+<li>Help with tool installation as needed</li>
+<li>Circulate during activity to provide guidance</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Accessibility Resources and Tools | アクセシビリティリソースとツール</h3>
+
+<h4>Where to Learn More (1 minute) | もっと学ぶ場所（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Accessibility is a deep topic - we've only scratched the surface today."</li>
+<li>"Resources: WCAG guidelines at w3.org/WAI, WebAIM tutorials at webaim.org, A11Y Project at a11yproject.com."</li>
+<li>"Tools: WAVE, axe DevTools, Lighthouse for testing. Stark and Able plugins for Figma."</li>
+<li>"Books: 'Accessibility for Everyone' by Laura Kalbag, 'Inclusive Design Patterns' by Heydon Pickering."</li>
+<li>"Keep learning. Accessibility is constantly evolving as technology changes."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Key Takeaways | 重要なポイント</h3>
+
+<h4>Closing (2 minutes) | クロージング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's recap the six essential lessons from today."</li>
+<li>"One: Accessibility benefits everyone, not just people with disabilities. Curb cuts, captions, voice control - all designed for accessibility, all help everyone."</li>
+<li>"Two: POUR principles are the foundation. Perceivable, Operable, Understandable, Robust."</li>
+<li>"Three: Aim for WCAG 2.1 Level AA. That means 4.5:1 contrast, 44×44 px touch targets, keyboard access, alt text."</li>
+<li>"Four: Test with real tools and users. Automated tools catch 30-40%, manual testing finds the rest."</li>
+<li>"Five: Design inclusively from the start. Don't treat accessibility as an afterthought."</li>
+<li>"Six: It's the right thing to do. Equal access is a human right. As designers, you have the power and responsibility to make it happen."</li>
+<li>"Next week: Emerging technologies - AR/VR, voice, gestures, IoT. The future of HCI."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日の6つの重要なレッスンを要約しましょう。"</li>
+<li>"1つ：アクセシビリティは障害を持つ人々だけでなく、すべての人に利益をもたらします。縁石カット、キャプション、音声制御 - すべてアクセシビリティのために設計され、すべての人を助けます。"</li>
+<li>"2つ：POUR原則は基礎です。知覚可能、操作可能、理解可能、堅牢。"</li>
+<li>"3つ：WCAG 2.1レベルAAを目指します。それは4.5:1のコントラスト、44×44 pxのタッチターゲット、キーボードアクセス、altテキストを意味します。"</li>
+<li>"4つ：実際のツールとユーザーでテストします。自動ツールは30-40%を捕捉し、手動テストは残りを見つけます。"</li>
+<li>"5つ：最初から包括的にデザインします。アクセシビリティを後付けとして扱わないでください。"</li>
+<li>"6つ：それは正しいことです。平等なアクセスは人権です。デザイナーとして、あなたはそれを実現する力と責任を持っています。"</li>
+<li>"来週：新興技術 - AR/VR、音声、ジェスチャー、IoT。HCIの未来。"</li>
+</ul>
+
+<strong>Final Inspiration:</strong>
+<ul>
+<li>"You now have the knowledge and tools to design for everyone. Use them."</li>
+<li>"Make the web - and the world - more accessible, one design at a time."</li>
+</ul>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Immediate Next Steps | 即座の次のステップ</h3>
+
+<p>1. <strong>Set Up Testing Tools</strong> | テストツールをセットアップ</p>
+<p>   - Help students install WAVE, axe, or Lighthouse</p>
+<p>   - Provide installation troubleshooting</p>
+<p>   - Ensure everyone can access their prototypes</p>
+
+<p>2. <strong>Distribute Materials</strong> | 教材を配布</p>
+<p>   - Accessibility audit checklist</p>
+<p>   - WCAG quick reference guide</p>
+<p>   - Tool instructions and tutorials</p>
+<p>   - AI transparency log template</p>
+
+<p>3. <strong>Monitor Testing Sessions</strong> | テストセッションを監視</p>
+<p>   - Circulate during automated testing</p>
+<p>   - Help with tool usage</p>
+<p>   - Guide manual testing procedures</p>
+<p>   - Answer accessibility questions</p>
+
+<h3>Activity Support | アクティビティサポート</h3>
+
+<strong>During Part 1 (Automated Testing - 20 min):</strong>
+<ul>
+<li>Ensure tools are working properly</li>
+<li>Help interpret test results</li>
+<li>Explain WCAG violations</li>
+<li>Guide color contrast testing</li>
+</ul>
+
+<strong>During Part 2 (Manual Testing - 25 min):</strong>
+<ul>
+<li>Demonstrate keyboard navigation</li>
+<li>Help with screen reader setup</li>
+<li>Guide zoom testing</li>
+<li>Assist with color blindness simulation</li>
+</ul>
+
+<strong>During Part 3 (Documentation - 15 min):</strong>
+<ul>
+<li>Review audit report quality</li>
+<li>Help prioritize issues</li>
+<li>Guide fix implementation</li>
+<li>Check documentation completeness</li>
+</ul>
+
+<h3>Common Issues to Watch For | 注意すべき一般的な問題</h3>
+
+<ul>
+<li><strong>Tool Installation Problems</strong> | ツールインストール問題: Have backup tools ready</li>
+<li><strong>Prototype Access</strong> | プロトタイプアクセス: Ensure export or live link works</li>
+<li><strong>Screen Reader Confusion</strong> | スクリーンリーダー混乱: Provide simplified instructions</li>
+<li><strong>Overwhelming Number of Issues</strong> | 圧倒的な数の問題: Help students prioritize</li>
+<li><strong>Time Management</strong> | 時間管理: Keep students on track through three parts</li>
+</ul>
+
+<h3>Support Strategies | サポート戦略</h3>
+
+<ul>
+<li><strong>Bilingual Support</strong> | バイリンガルサポート: Explain technical terms in both languages</li>
+<li><strong>Hands-On Demos</strong> | ハンズオンデモ: Show tool usage live</li>
+<li><strong>Pairing Students</strong> | 学生のペアリング: Encourage peer support</li>
+<li><strong>Clear Examples</strong> | 明確な例: Show good audit report examples</li>
+</ul>
+
+<hr>
+
+<h2>Deliverables and Grading | 成果物と評価</h2>
+
+<h3>Today's Deliverable | 今日の成果物</h3>
+
+<strong>Accessibility Audit Report</strong>
+
+<strong>Required Components:</strong>
+<p>1. <strong>Automated Test Results</strong></p>
+<p>   - Tool used (WAVE, axe, Lighthouse)</p>
+<p>   - List of all issues found</p>
+<p>   - WCAG violations noted</p>
+
+<p>2. <strong>Color Contrast Audit</strong></p>
+<p>   - All text/background combinations tested</p>
+<p>   - Contrast ratios documented</p>
+<p>   - Pass/fail status for each</p>
+
+<p>3. <strong>Manual Test Results</strong></p>
+<p>   - Keyboard navigation findings</p>
+<p>   - Screen reader test observations</p>
+<p>   - Zoom test results</p>
+<p>   - Color blindness simulation findings</p>
+
+<p>4. <strong>Issue Summary</strong></p>
+<p>   - Complete list of accessibility issues</p>
+<p>   - Prioritized by severity (Critical, Major, Minor)</p>
+<p>   - WCAG guideline violated for each</p>
+<p>   - How to fix each issue</p>
+
+<p>5. <strong>Implemented Fixes</strong></p>
+<p>   - High-priority issues addressed</p>
+<p>   - Documentation of changes made</p>
+<p>   - Before/after comparisons</p>
+
+<p>6. <strong>AI Transparency Documentation</strong></p>
+<p>   - External AI usage for understanding issues</p>
+<p>   - Prompts and responses</p>
+<p>   - Verification process</p>
+
+<strong>Format:</strong> 4-6 page document with screenshots
+
+<h3>Grading Criteria | 評価基準</h3>
+
+<strong>Accessibility Audit Report (Weighted in Weekly Activities 40%):</strong>
+<ul>
+<li>Thoroughness of Testing (25%): All required tests completed</li>
+<li>Issue Identification (25%): Issues found and documented correctly</li>
+<li>Prioritization (20%): Proper severity and priority assignment</li>
+<li>Fixes Implemented (20%): High-priority issues addressed</li>
+<li>Documentation Quality (10%): Clear, professional report</li>
+</ul>
+
+<hr>
+
+<h2>Resources for Next Week | 来週のためのリソース</h2>
+
+<h3>Week 13 Preview: Emerging Technologies and Future Interactions</h3>
+
+<strong>Topics:</strong>
+<ul>
+<li>AR/VR interfaces</li>
+<li>Voice interfaces and natural language</li>
+<li>Gesture control</li>
+<li>Wearables and IoT</li>
+<li>Future trends in HCI</li>
+</ul>
+
+<strong>Student Preparation:</strong>
+<ul>
+<li>Explore emerging tech if available (VR headsets, voice assistants)</li>
+<li>Think about future interface possibilities</li>
+<li>Begin final project completion</li>
+</ul>
+
+<hr>
+
+<h2>Reflection and Adaptation | 振り返りと適応</h2>
+
+<h3>Post-Class Reflection Questions</h3>
+
+<strong>For Instructor:</strong>
+<ul>
+<li>Did students grasp WCAG principles?</li>
+<li>Were they able to use testing tools effectively?</li>
+<li>How was the quality of audit reports?</li>
+<li>Did they prioritize issues correctly?</li>
+<li>Were manual tests conducted properly?</li>
+<li>What accessibility concepts need reinforcement?</li>
+</ul>
+
+<strong>For Students (Optional Reflection Prompt):</strong>
+<ul>
+<li>What surprised you about accessibility testing?</li>
+<li>What was the most common issue you found?</li>
+<li>How will this change your design approach?</li>
+<li>What accessibility features will you prioritize?</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week11-instructor-notes.html" class="nav-btn nav-prev">← Week 11</a>
+        <span class="nav-current">Week 12 Instructor Notes</span>
+        <a href="week13-instructor-notes.html" class="nav-btn nav-next">Week 13 →</a>
+        <a href="week12-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 13 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 13 Instructor Notes | 第13週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week12-instructor-notes.html" class="nav-btn nav-prev">← Week 12</a>
+        <span class="nav-current">Week 13 Instructor Notes</span>
+        <a href="week14-instructor-notes.html" class="nav-btn nav-next">Week 14 →</a>
+        <a href="week13-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 13 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第13週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> 15-20 minutes
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Test AR/VR demonstration videos or devices (if available)</li>
+<li class="checkbox">&#9744; Prepare voice assistant demo (Siri, Alexa, or Google Assistant)</li>
+<li class="checkbox">&#9744; Queue up emerging technology examples (Apple Vision Pro, Meta Quest, etc.)</li>
+<li class="checkbox">&#9744; Verify bot portal access for final project support</li>
+<li class="checkbox">&#9744; Test presentation slides and multimedia content</li>
+<li class="checkbox">&#9744; Have backup materials for internet connectivity issues</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Future interface exploration activity handout</li>
+<li class="checkbox">&#9744; Final project completion checklist</li>
+<li class="checkbox">&#9744; Week 14 presentation guidelines and rubric</li>
+<li class="checkbox">&#9744; Emerging technology resource links</li>
+<li class="checkbox">&#9744; AI transparency log template reminder</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Ensure students can access demonstration materials</li>
+<li class="checkbox">&#9744; Prepare for bilingual presentation (English/Japanese)</li>
+<li class="checkbox">&#9744; Set up for hands-on exploration activity</li>
+<li class="checkbox">&#9744; Have final project work time prepared</li>
+<li class="checkbox">&#9744; Display Week 14 presentation requirements</li>
+
+<h3>Special Considerations for Week 13 | 第13週の特別な考慮事項</h3>
+<li class="checkbox">&#9744; This is the penultimate week - focus on completion and inspiration</li>
+<li class="checkbox">&#9744; Students need time to finalize projects</li>
+<li class="checkbox">&#9744; Balance new content with practical work time</li>
+<li class="checkbox">&#9744; Generate excitement for future of HCI</li>
+<li class="checkbox">&#9744; Prepare students for presentations next week</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Week 13! | 第13週へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 13! We're in the final stretch of our HCI journey, and today we're going to look beyond what exists today to explore the future of human-computer interaction."</li>
+<li>"We've covered smart devices, chatbots, usability testing, and accessibility. Now let's explore where technology is heading: augmented reality, virtual reality, voice interfaces, brain-computer interfaces, and more."</li>
+<li>"This week is also about completing your final projects. You'll have dedicated time today to put the finishing touches on your chatbot or smart device interface."</li>
+<li>"By the end of today, you'll understand emerging interface technologies and be ready to present your work next week."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第13週へようこそ！私たちはHCIの旅の最終段階にいます。今日は、今日存在するものを超えて、ヒューマンコンピュータインタラクションの未来を探求します。"</li>
+<li>"スマートデバイス、チャットボット、ユーザビリティテスト、アクセシビリティをカバーしました。今、技術がどこに向かっているかを探りましょう：拡張現実、仮想現実、音声インターフェース、ブレインコンピュータインターフェースなど。"</li>
+<li>"今週は最終プロジェクトの完成についてでもあります。今日、チャットボットまたはスマートデバイスインターフェースに最後の仕上げをする専用の時間があります。"</li>
+<li>"今日の終わりまでに、新興インターフェース技術を理解し、来週作品を発表する準備ができます。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>Exciting future technologies ahead</li>
+<li>Balance of learning and project completion</li>
+<li>Preparation for final presentations</li>
+<li>Inspiration and practical application</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: The Evolution Continues | 進化は続く</h3>
+
+<h4>Historical Context and Future Vision (3 minutes) | 歴史的文脈と未来のビジョン（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's look at how far we've come. We started with command-line interfaces in the 1980s - you had to memorize commands to do anything."</li>
+<li>"Then came GUIs with windows, icons, and mice. Then touch screens revolutionized interaction. Then voice assistants and chatbots."</li>
+<li>"But the evolution doesn't stop. Right now, we're seeing the emergence of interfaces that blend digital and physical reality, that respond to our voices and gestures, that might even read our thoughts."</li>
+<li>"The future is about making technology more natural, more invisible, more integrated into our lives without being intrusive."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"どこまで来たか見てみましょう。1980年代のコマンドラインインターフェースから始まりました - 何かをするにはコマンドを暗記する必要がありました。"</li>
+<li>"その後、ウィンドウ、アイコン、マウス付きのGUIが登場しました。その後、タッチスクリーンがインタラクションに革命を起こしました。その後、音声アシスタントとチャットボット。"</li>
+<li>"しかし、進化は止まりません。今、私たちはデジタルと物理的現実を融合し、音声やジェスチャーに応答し、さらには思考を読むかもしれないインターフェースの出現を見ています。"</li>
+<li>"未来は、技術をより自然に、より見えなく、侵入的でなく私たちの生活に統合することです。"</li>
+</ul>
+
+<strong>Interactive Elements:</strong>
+<ul>
+<li>Ask students: "What interface technology amazes you most?"</li>
+<li>Show hands: "Who has tried VR? AR? Voice assistants?"</li>
+<li>Discuss: "What technology do you think will be mainstream in 5 years?"</li>
+</ul>
+
+<strong>Visual Examples to Show:</strong>
+<ul>
+<li>Timeline of interface evolution</li>
+<li>Photos/videos of command line, GUI, touch, voice, AR/VR</li>
+<li>Future concept videos if available</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: Augmented Reality (AR) Interfaces | 拡張現実（AR）インターフェース</h3>
+
+<h4>AR Introduction and Examples (3 minutes) | AR紹介と例（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Augmented Reality overlays digital information on the physical world. Unlike VR, which replaces reality, AR enhances it."</li>
+<li>"You've probably used AR already - Pokémon GO, Instagram filters, or IKEA's app that lets you see furniture in your room before buying."</li>
+<li>"But AR goes beyond fun and games. Surgeons use AR to see patient data during operations. Mechanics use AR to see repair instructions overlaid on car engines. Architects walk through buildings before they're built."</li>
+<li>"The most exciting AR devices right now are Apple Vision Pro and Meta Quest 3. These are mixed reality headsets that blend digital and physical seamlessly."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"拡張現実は物理世界にデジタル情報を重ねます。現実を置き換えるVRとは異なり、ARはそれを強化します。"</li>
+<li>"おそらくすでにARを使用したことがあるでしょう - ポケモンGO、インスタグラムフィルター、または購入前に部屋に家具を見ることができるIKEAのアプリ。"</li>
+<li>"しかし、ARは楽しみとゲームを超えています。外科医は手術中に患者データを見るためにARを使用します。整備士は自動車エンジンに重ねられた修理指示を見るためにARを使用します。建築家は建設前に建物を歩きます。"</li>
+<li>"現在最もエキサイティングなARデバイスは、Apple Vision ProとMeta Quest 3です。これらはデジタルと物理をシームレスに融合するミックスリアリティヘッドセットです。"</li>
+</ul>
+
+<strong>Demonstration Ideas:</strong>
+<ul>
+<li>Show AR app demos on smartphone (if available)</li>
+<li>Play Apple Vision Pro introduction video</li>
+<li>Show IKEA Place or similar AR shopping app</li>
+<li>Demonstrate AR filters (Instagram/Snapchat)</li>
+</ul>
+
+<strong>Discussion Points:</strong>
+<ul>
+<li>"What problems could AR solve in your daily life?"</li>
+<li>"What are the downsides of having digital overlays everywhere?"</li>
+<li>"How would you design AR for accessibility?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: AR Design Principles | ARデザイン原則</h3>
+
+<h4>AR Design Challenges (3 minutes) | ARデザイン課題（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Designing for AR is fundamentally different from traditional UI design. You're not designing for a flat screen - you're designing for 3D space integrated with reality."</li>
+<li>"First challenge: Physical-digital integration. Digital objects need to look like they belong in the real world - correct lighting, shadows, occlusion when objects go behind real things."</li>
+<li>"Second challenge: User comfort and safety. You can't obstruct the user's vision or they might walk into a wall! AR needs to be aware of the user's physical environment."</li>
+<li>"Third challenge: Interaction methods. How do users interact with AR? Gestures? Voice? Eye tracking? Controllers? Each has tradeoffs."</li>
+<li>"Best practices: Keep UI minimal - don't clutter reality. Make information context-aware - show what's relevant. Use progressive disclosure - reveal information gradually."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ARのデザインは従来のUIデザインとは根本的に異なります。フラットスクリーンのデザインではありません - 現実と統合された3D空間のデザインです。"</li>
+<li>"最初の課題：物理デジタル統合。デジタルオブジェクトは実世界に属しているように見える必要があります - 正しい照明、影、オブジェクトが実物の後ろに行くときのオクルージョン。"</li>
+<li>"2番目の課題：ユーザーの快適性と安全性。ユーザーの視界を遮ることはできません。壁にぶつかる可能性があります！ARはユーザーの物理的環境を認識する必要があります。"</li>
+<li>"3番目の課題：インタラクション方法。ユーザーはARとどのようにインタラクトしますか？ジェスチャー？音声？視線追跡？コントローラー？それぞれトレードオフがあります。"</li>
+<li>"ベストプラクティス：UIを最小限に保つ - 現実を散らかさない。情報をコンテキスト認識にする - 関連性のあるものを表示。段階的開示を使用 - 情報を徐々に明らかにする。"</li>
+</ul>
+
+<strong>Real-World Examples:</strong>
+<ul>
+<li>Show examples of good vs. bad AR UI design</li>
+<li>Discuss AR safety considerations</li>
+<li>Highlight gesture control in AR applications</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Virtual Reality (VR) Interfaces | 仮想現実（VR）インターフェース</h3>
+
+<h4>VR Introduction and Use Cases (3 minutes) | VR紹介とユースケース（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Virtual Reality completely replaces your physical environment with a digital one. You put on a headset and you're transported to another world."</li>
+<li>"VR started with gaming - immersive game experiences where you feel like you're actually in the game world. But it's expanded far beyond entertainment."</li>
+<li>"Medical students practice surgery in VR without risking real patients. Pilots train in VR flight simulators. Architects walk clients through buildings that don't exist yet."</li>
+<li>"Even education is being transformed - imagine learning history by walking through ancient Rome, or learning biology by exploring inside a human cell."</li>
+<li>"Popular VR devices include Meta Quest 3, PlayStation VR2, and Apple Vision Pro. These range from gaming-focused to professional-grade."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"仮想現実は物理環境を完全にデジタル環境に置き換えます。ヘッドセットを装着すると、別の世界に運ばれます。"</li>
+<li>"VRはゲームから始まりました - 実際にゲーム世界にいるように感じる没入型ゲーム体験。しかし、エンターテインメントをはるかに超えて拡大しました。"</li>
+<li>"医学生は実際の患者をリスクにさらすことなくVRで手術を練習します。パイロットはVRフライトシミュレーターで訓練します。建築家はまだ存在しない建物をクライアントと歩きます。"</li>
+<li>"教育さえも変革されています - 古代ローマを歩いて歴史を学ぶ、または人間の細胞の中を探索して生物学を学ぶことを想像してください。"</li>
+<li>"人気のVRデバイスには、Meta Quest 3、PlayStation VR2、Apple Vision Proが含まれます。これらはゲームフォーカスからプロフェッショナルグレードまで範囲があります。"</li>
+</ul>
+
+<strong>Demonstration Ideas:</strong>
+<ul>
+<li>Show VR gameplay footage</li>
+<li>Play VR training simulation videos</li>
+<li>Demonstrate VR device if available in classroom</li>
+<li>Show 360° VR videos on YouTube</li>
+</ul>
+
+<strong>Student Engagement:</strong>
+<ul>
+<li>"Who has tried VR? What was your experience?"</li>
+<li>"What would you want to experience in VR?"</li>
+<li>"What makes you uncomfortable or excited about VR?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: VR Design Principles | VRデザイン原則</h3>
+
+<h4>VR Design Challenges and Best Practices (2 minutes) | VRデザイン課題とベストプラクティス（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"VR design has unique challenges. Number one: motion sickness. When what you see doesn't match what your body feels, your brain gets confused and you feel nauseous."</li>
+<li>"To prevent motion sickness, VR must run at very high frame rates - at least 90 frames per second. Any lag between head movement and display update makes people sick."</li>
+<li>"Designing UI in 3D space is completely different. Text needs to be readable at the right distance. Interactive elements need to be within comfortable reach. You can't just port a 2D interface to VR."</li>
+<li>"Interaction patterns include ray casting - pointing at distant objects, direct manipulation - grabbing things with your hands, and menu systems designed for 3D space."</li>
+<li>"Comfort is critical. Users should be able to rest their arms, take breaks, and the interface should accommodate different physical abilities."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"VRデザインには独特の課題があります。第一：乗り物酔い。見ているものが体が感じるものと一致しない場合、脳は混乱し、吐き気を感じます。"</li>
+<li>"乗り物酔いを防ぐために、VRは非常に高いフレームレートで動作する必要があります - 少なくとも毎秒90フレーム。頭の動きとディスプレイ更新の間の遅延は人々を病気にします。"</li>
+<li>"3D空間でのUIデザインは完全に異なります。テキストは適切な距離で読みやすい必要があります。インタラクティブ要素は快適な範囲内にある必要があります。2DインターフェースをVRに単純に移植することはできません。"</li>
+<li>"インタラクションパターンには、レイキャスティング - 遠くのオブジェクトを指す、直接操作 - 手でものをつかむ、3D空間用に設計されたメニューシステムが含まれます。"</li>
+<li>"快適性が重要です。ユーザーは腕を休め、休憩を取ることができるべきであり、インターフェースは異なる身体能力に対応すべきです。"</li>
+</ul>
+
+<strong>Key Takeaways:</strong>
+<ul>
+<li>High performance prevents sickness</li>
+<li>3D UI design is fundamentally different</li>
+<li>Comfort and accessibility matter</li>
+<li>Interaction methods must be natural</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Voice Interfaces and Natural Language | 音声インターフェースと自然言語</h3>
+
+<h4>Voice UI Introduction (3 minutes) | 音声UI紹介（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Voice interfaces let us interact with technology using the most natural method - speaking. No keyboards, no screens, just conversation."</li>
+<li>"You probably use voice assistants already - Siri on iPhone, Alexa on Echo, Google Assistant. These have become ubiquitous in our homes and pockets."</li>
+<li>"Voice is particularly powerful for hands-free situations: driving a car, cooking in the kitchen, when you have a disability that makes typing difficult."</li>
+<li>"Smart homes are largely controlled by voice now. 'Alexa, turn on the lights.' 'Hey Google, what's the weather?' These simple commands control complex systems."</li>
+<li>"But voice interfaces have challenges we'll discuss - no visual feedback, ambiguity in language, privacy concerns."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"音声インターフェースは、最も自然な方法 - 話すことを使用して技術とインタラクトできます。キーボードなし、画面なし、ただ会話。"</li>
+<li>"おそらくすでに音声アシスタントを使用しています - iPhoneのSiri、EchoのAlexa、Google Assistant。これらは私たちの家とポケットに遍在しています。"</li>
+<li>"音声はハンズフリー状況で特に強力です：車の運転、キッチンでの料理、タイピングを困難にする障害がある場合。"</li>
+<li>"スマートホームは現在主に音声で制御されています。「Alexa、電気をつけて。」「Hey Google、天気は？」これらのシンプルなコマンドが複雑なシステムを制御します。"</li>
+<li>"しかし、音声インターフェースには議論する課題があります - 視覚フィードバックなし、言語の曖昧性、プライバシー懸念。"</li>
+</ul>
+
+<strong>Live Demonstration:</strong>
+<ul>
+<li>Demonstrate Siri, Alexa, or Google Assistant (if available)</li>
+<li>Show various voice commands</li>
+<li>Demonstrate error handling and clarification</li>
+<li>Show multilingual voice support</li>
+</ul>
+
+<strong>Discussion:</strong>
+<ul>
+<li>"What do you use voice assistants for?"</li>
+<li>"What frustrates you about voice interfaces?"</li>
+<li>"How could voice interfaces be improved?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Voice Interface Design Principles | 音声インターフェースデザイン原則</h3>
+
+<h4>VUI Design Challenges (2 minutes) | VUIデザイン課題（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Designing voice interfaces is challenging because there's no visual feedback. Users can't see a menu of options - they have to remember or guess what to say."</li>
+<li>"Natural language is ambiguous. 'Set an alarm' - for when? For how long? The system needs to handle incomplete information gracefully."</li>
+<li>"Context matters enormously. 'It's cold' might mean different things: turn up the heat, close the window, or just a weather observation."</li>
+<li>"Error recovery is critical. When the system doesn't understand, it needs to ask clarifying questions without frustrating the user."</li>
+<li>"Best practices: Keep responses brief - users don't want to listen to long explanations. Confirm critical actions - 'I'll set an alarm for 7 AM, okay?' Maintain consistent personality and tone."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"音声インターフェースのデザインは、視覚フィードバックがないため困難です。ユーザーはオプションのメニューを見ることができません - 何を言うべきかを覚えるか推測する必要があります。"</li>
+<li>"自然言語は曖昧です。「アラームを設定」- いつのため？どのくらいの時間？システムは不完全な情報を優雅に処理する必要があります。"</li>
+<li>"コンテキストは非常に重要です。「寒い」は異なることを意味する可能性があります：暖房を上げる、窓を閉める、または単なる天気の観察。"</li>
+<li>"エラー回復は重要です。システムが理解しない場合、ユーザーをイライラさせずに明確化質問をする必要があります。"</li>
+<li>"ベストプラクティス：応答を簡潔に保つ - ユーザーは長い説明を聞きたくありません。重要なアクションを確認 - 「午前7時にアラームを設定します、いいですか？」一貫したパーソナリティとトーンを維持。"</li>
+</ul>
+
+<strong>Real Examples:</strong>
+<ul>
+<li>Show good vs. bad voice interaction examples</li>
+<li>Demonstrate ambiguity handling</li>
+<li>Show error recovery strategies</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Gesture Control and Body Interfaces | ジェスチャーコントロールとボディインターフェース</h3>
+
+<h4>Gesture Interface Introduction (2 minutes) | ジェスチャーインターフェース紹介（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Gesture control uses body movements to interact with technology. Think about how you use your smartphone - swiping, pinching to zoom, rotating."</li>
+<li>"Beyond touch screens, we have technologies like Xbox Kinect that let you control games with full-body movement, or hand tracking in VR headsets."</li>
+<li>"Gestures are powerful in specific contexts: medical imaging where doctors need touchless control in sterile environments, or manufacturing where workers have dirty hands."</li>
+<li>"AR and VR rely heavily on gesture control. In Apple Vision Pro, you interact by looking at things and pinching your fingers together - no controllers needed."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ジェスチャーコントロールは体の動きを使用して技術とインタラクトします。スマートフォンの使用方法を考えてみてください - スワイプ、ピンチしてズーム、回転。"</li>
+<li>"タッチスクリーンを超えて、Xbox Kinectのように全身の動きでゲームをコントロールできる技術、またはVRヘッドセットのハンドトラッキングがあります。"</li>
+<li>"ジェスチャーは特定のコンテキストで強力です：医師が無菌環境で非接触コントロールが必要な医療画像、または作業員が汚れた手を持つ製造。"</li>
+<li>"ARとVRはジェスチャーコントロールに大きく依存しています。Apple Vision Proでは、物を見て指をつまむことでインタラクトします - コントローラーは不要です。"</li>
+</ul>
+
+<strong>Interactive Demonstration:</strong>
+<ul>
+<li>Demonstrate smartphone gesture controls</li>
+<li>Show AR/VR hand tracking videos</li>
+<li>Discuss gesture recognition technologies</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Gesture Interface Design Principles | ジェスチャーインターフェースデザイン原則</h3>
+
+<h4>Gesture Design Challenges (2 minutes) | ジェスチャーデザイン課題（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Gesture design faces a critical challenge: learnability. How do users discover what gestures exist? Gestures need to be intuitive and natural."</li>
+<li>"Cultural differences matter. A gesture that means 'OK' in one culture might be offensive in another. Design must be culturally sensitive."</li>
+<li>"Accuracy is challenging. The system needs to distinguish intentional gestures from random movements. When does a gesture start and end?"</li>
+<li>"Physical fatigue is real - 'gorilla arm' syndrome happens when users hold their arms up for extended periods. Design for comfortable, sustainable gestures."</li>
+<li>"Best practices: Keep the gesture set small - 5-10 maximum. Make gestures distinct and easy to differentiate. Provide visual feedback so users know they've been recognized."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ジェスチャーデザインは重要な課題に直面しています：学習可能性。ユーザーはどのジェスチャーが存在するかをどのように発見しますか？ジェスチャーは直感的で自然である必要があります。"</li>
+<li>"文化的違いが重要です。ある文化で「OK」を意味するジェスチャーは、別の文化では攻撃的かもしれません。デザインは文化的に敏感でなければなりません。"</li>
+<li>"精度は困難です。システムは意図的なジェスチャーとランダムな動きを区別する必要があります。ジェスチャーはいつ開始および終了しますか？"</li>
+<li>"身体的疲労は現実です - 「ゴリラアーム」症候群は、ユーザーが長期間腕を上げているときに発生します。快適で持続可能なジェスチャー用にデザインします。"</li>
+<li>"ベストプラクティス：ジェスチャーセットを小さく保つ - 最大5-10。ジェスチャーを明確で区別しやすくする。ユーザーが認識されたことがわかるように視覚フィードバックを提供。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Wearables and IoT Interfaces | ウェアラブルとIoTインターフェース</h3>
+
+<h4>Wearable Technology Overview (2 minutes) | ウェアラブル技術概要（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Wearables are computers you wear on your body. The most common are smartwatches like Apple Watch, but we also have fitness trackers, smart glasses, even smart rings."</li>
+<li>"Wearables are always with you, constantly collecting data about your health, activity, and context. This creates new design challenges."</li>
+<li>"The screen is tiny on a smartwatch - you can't fit much information. Designs must be glanceable - users should get information in under 5 seconds."</li>
+<li>"Privacy is a major concern. Wearables collect intimate health data - heart rate, sleep patterns, even blood oxygen. Designers must handle this data responsibly."</li>
+<li>"Battery life is critical. Unlike your phone that you charge daily, users want wearables to last days or weeks. Low-power design is essential."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ウェアラブルは体に装着するコンピュータです。最も一般的なのはApple Watchなどのスマートウォッチですが、フィットネストラッカー、スマートグラス、さらにはスマートリングもあります。"</li>
+<li>"ウェアラブルは常にあなたと一緒にあり、健康、アクティビティ、コンテキストに関するデータを常に収集しています。これは新しいデザイン課題を生み出します。"</li>
+<li>"スマートウォッチの画面は小さい - 多くの情報を収めることはできません。デザインは一目でわかる必要があります - ユーザーは5秒以内に情報を取得する必要があります。"</li>
+<li>"プライバシーは大きな懸念です。ウェアラブルは親密な健康データを収集します - 心拍数、睡眠パターン、さらには血中酸素。デザイナーはこのデータを責任を持って処理する必要があります。"</li>
+<li>"バッテリー寿命は重要です。毎日充電する電話とは異なり、ユーザーはウェアラブルが数日または数週間持続することを望みます。低電力デザインが不可欠です。"</li>
+</ul>
+
+<strong>Examples to Show:</strong>
+<ul>
+<li>Apple Watch interface design</li>
+<li>Fitness tracker data visualization</li>
+<li>Smart glasses use cases</li>
+<li>Medical wearable applications</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: IoT and Smart Home Interfaces | IoTとスマートホームインターフェース</h3>
+
+<h4>IoT Interface Design (2 minutes) | IoTインターフェースデザイン（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Internet of Things connects everyday objects to the internet. Your lights, thermostat, door locks, appliances - all connected and controllable."</li>
+<li>"The challenge: device fragmentation. You might have Philips Hue lights, a Nest thermostat, a Ring doorbell - all from different companies with different apps."</li>
+<li>"Good IoT design focuses on unified control. Platforms like Apple HomeKit, Google Home, and Amazon Alexa try to create one interface for everything."</li>
+<li>"Automation is key. Instead of manually controlling each device, you create rules: 'When I arrive home, turn on lights and unlock the door.'"</li>
+<li>"Privacy and security are critical. Every connected device is a potential vulnerability. Designers must prioritize security from day one."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"モノのインターネットは日常のオブジェクトをインターネットに接続します。照明、サーモスタット、ドアロック、家電 - すべて接続され制御可能。"</li>
+<li>"課題：デバイスの断片化。Philips Hueライト、Nestサーモスタット、Ringドアベル - すべて異なる会社の異なるアプリがあるかもしれません。"</li>
+<li>"良いIoTデザインは統一されたコントロールに焦点を当てます。Apple HomeKit、Google Home、Amazon Alexaなどのプラットフォームはすべてに1つのインターフェースを作成しようとします。"</li>
+<li>"自動化が鍵です。各デバイスを手動で制御する代わりに、ルールを作成します：「家に到着したら、照明をつけてドアのロックを解除。」"</li>
+<li>"プライバシーとセキュリティは重要です。接続されたすべてのデバイスは潜在的な脆弱性です。デザイナーは初日からセキュリティを優先する必要があります。"</li>
+</ul>
+
+<strong>Discussion Points:</strong>
+<ul>
+<li>Smart home benefits and concerns</li>
+<li>Interoperability challenges</li>
+<li>Privacy in connected homes</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: Brain-Computer Interfaces (BCI) | ブレインコンピュータインターフェース（BCI）</h3>
+
+<h4>The Ultimate Frontier (3 minutes) | 究極のフロンティア（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Brain-computer interfaces represent the ultimate HCI frontier - direct communication between your brain and computers."</li>
+<li>"Current applications are mainly medical: helping paralyzed people control wheelchairs or prosthetic limbs with their thoughts, or allowing locked-in patients to communicate."</li>
+<li>"Companies like Neuralink (Elon Musk's company) are developing brain implants that could eventually let us control computers, download information, or even communicate telepathically."</li>
+<li>"Non-invasive BCIs use EEG caps to read brain signals without surgery. These are less accurate but safer and more accessible."</li>
+<li>"Ethical questions are enormous: Who owns your brain data? Can employers require brain monitoring? What about hacking someone's thoughts? These are questions future HCI designers must address."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ブレインコンピュータインターフェースは究極のHCIフロンティアを表します - 脳とコンピュータ間の直接コミュニケーション。"</li>
+<li>"現在のアプリケーションは主に医療です：麻痺した人々が思考で車椅子や義肢をコントロールするのを助ける、または閉じ込め症候群患者がコミュニケーションできるようにする。"</li>
+<li>"Neuralink（Elon Muskの会社）などの企業は、最終的にコンピュータを制御したり、情報をダウンロードしたり、さらにはテレパシーでコミュニケーションしたりできる脳インプラントを開発しています。"</li>
+<li>"非侵襲的BCIは手術なしで脳信号を読むためにEEGキャップを使用します。これらは精度は低いですが、より安全でアクセス可能です。"</li>
+<li>"倫理的質問は巨大です：誰があなたの脳データを所有しますか？雇用主は脳モニタリングを要求できますか？誰かの思考をハッキングすることについては？これらは未来のHCIデザイナーが対処しなければならない質問です。"</li>
+</ul>
+
+<strong>Key Ethical Considerations:</strong>
+<ul>
+<li>Privacy of thoughts</li>
+<li>Consent and control</li>
+<li>Accessibility and equity</li>
+<li>Security and hacking</li>
+<li>Enhancement vs. therapy</li>
+</ul>
+
+<strong>Visual Materials:</strong>
+<ul>
+<li>Neuralink demonstration videos</li>
+<li>Medical BCI applications</li>
+<li>EEG cap examples</li>
+<li>Futuristic concept art</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Future Trends in HCI | HCIの未来トレンド</h3>
+
+<h4>Where We're Heading (2 minutes) | どこに向かっているか（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Five major trends will shape the future of HCI."</li>
+<li>"First, ambient computing - technology that fades into the background, always available but never demanding attention. No more pulling out your phone for everything."</li>
+<li>"Second, multimodal interaction - combining voice, gesture, gaze, and touch seamlessly. You'll use whatever input method makes sense in the moment."</li>
+<li>"Third, AI integration - interfaces that predict what you need, personalize to your preferences, and even generate custom interfaces on demand."</li>
+<li>"Fourth, spatial computing - moving beyond flat screens to 3D interfaces that exist in physical space. This is what Apple Vision Pro represents."</li>
+<li>"Fifth, ethical and inclusive design - as interfaces become more powerful, we must ensure they're accessible to everyone and designed with privacy and fairness in mind."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"5つの主要なトレンドがHCIの未来を形作ります。"</li>
+<li>"第一に、アンビエントコンピューティング - 背景に消える技術、常に利用可能ですが注意を要求することはありません。すべてのためにスマートフォンを取り出すことはもうありません。"</li>
+<li>"第二に、マルチモーダルインタラクション - 音声、ジェスチャー、視線、タッチをシームレスに組み合わせます。その瞬間に意味のある入力方法を使用します。"</li>
+<li>"第三に、AI統合 - 必要なものを予測し、設定にパーソナライズし、さらにはオンデマンドでカスタムインターフェースを生成するインターフェース。"</li>
+<li>"第四に、空間コンピューティング - フラットスクリーンを超えて物理空間に存在する3Dインターフェースへ。これがApple Vision Proが表すものです。"</li>
+<li>"第五に、倫理的で包括的なデザイン - インターフェースがより強力になるにつれて、誰でもアクセス可能で、プライバシーと公平性を念頭に置いてデザインされることを確保する必要があります。"</li>
+</ul>
+
+<strong>Inspiring Vision:</strong>
+<ul>
+<li>Technology that enhances human capability</li>
+<li>Interfaces that are invisible yet powerful</li>
+<li>Inclusive design for all abilities</li>
+<li>Ethical considerations built-in from start</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: Activity: Exploring the Future | アクティビティ：未来を探求する</h3>
+
+<h4>Activity Introduction (2 minutes) | アクティビティ紹介（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now it's your turn to explore these emerging technologies and complete your final projects."</li>
+<li>"Activity 1: Spend 25 minutes exploring AR, VR, voice, or IoT interfaces. Try apps, watch demos, analyze the interaction patterns."</li>
+<li>"Activity 2: Brainstorm the future. What will interfaces look like in 2030? Sketch a futuristic concept and explain your design rationale."</li>
+<li>"Activity 3: This is your main focus today - complete your final project. You have 25 minutes of dedicated work time with bot support available."</li>
+<li>"By the end of class, your project should be presentation-ready. Next week is showtime!"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今、これらの新興技術を探求し、最終プロジェクトを完成させる番です。"</li>
+<li>"アクティビティ1：25分間、AR、VR、音声、またはIoTインターフェースを探索します。アプリを試し、デモを見て、インタラクションパターンを分析します。"</li>
+<li>"アクティビティ2：未来をブレインストーミング。2030年のインターフェースはどのように見えますか？未来的なコンセプトをスケッチし、デザイン根拠を説明します。"</li>
+<li>"アクティビティ3：これが今日の主な焦点です - 最終プロジェクトを完成させます。ボットサポートが利用可能な25分間の専用作業時間があります。"</li>
+<li>"クラスの終わりまでに、プロジェクトはプレゼンテーション準備ができているはずです。来週がショータイムです！"</li>
+</ul>
+
+<strong>Activity Management:</strong>
+<ul>
+<li>Set clear time limits for each activity</li>
+<li>Circulate and provide support</li>
+<li>Remind students about bot availability</li>
+<li>Check progress on final projects</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Preparing for Final Presentations | 最終プレゼンテーションの準備</h3>
+
+<h4>Presentation Guidelines (2 minutes) | プレゼンテーションガイドライン（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Next week is presentation week! You'll have 7-10 minutes to showcase your chatbot or smart device interface."</li>
+<li>"Your presentation must include: the problem you're solving, your user research, the design process, a demo of your prototype, usability testing results, and reflections on what you learned."</li>
+<li>"Tips for great presentations: Tell a story - make it engaging. Show, don't just tell - demonstrate your working prototype. Be honest about challenges and what you learned from failures."</li>
+<li>"Connect your work to HCI principles we've covered: user-centered design, usability, accessibility, design thinking."</li>
+<li>"Practice your timing! 7-10 minutes goes quickly. Rehearse multiple times."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"来週はプレゼンテーション週です！チャットボットまたはスマートデバイスインターフェースを紹介するために7-10分間あります。"</li>
+<li>"プレゼンテーションには次のものを含める必要があります：解決している問題、ユーザー調査、デザインプロセス、プロトタイプのデモ、ユーザビリティテスト結果、学んだことの振り返り。"</li>
+<li>"素晴らしいプレゼンテーションのヒント：ストーリーを語る - 魅力的にする。ただ言うのではなく見せる - 動作するプロトタイプを実演。課題と失敗から学んだことについて正直に。"</li>
+<li>"カバーしたHCI原則に作業をつなげる：ユーザー中心デザイン、ユーザビリティ、アクセシビリティ、デザイン思考。"</li>
+<li>"タイミングを練習！7-10分はすぐに過ぎます。複数回リハーサル。"</li>
+</ul>
+
+<strong>Distribute Materials:</strong>
+<ul>
+<li>Presentation rubric and evaluation criteria</li>
+<li>Peer feedback forms</li>
+<li>Final deliverables checklist</li>
+<li>Technical setup instructions for presentations</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Key Takeaways and Next Steps | 主要な要点と次のステップ</h3>
+
+<h4>Closing (1 minute) | クロージング（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"We've covered an incredible range of emerging technologies today: AR/VR creating immersive experiences, voice interfaces making technology accessible, gestures and wearables bringing natural interaction, and even brain-computer interfaces reading our thoughts."</li>
+<li>"The future of HCI is about making technology more natural, more invisible, more integrated into our lives while respecting privacy and accessibility."</li>
+<li>"Your generation will design these interfaces. The principles you've learned - user-centered design, usability, accessibility, ethical considerations - will guide you."</li>
+<li>"Complete your final projects today. Next week, you'll present your work and celebrate what you've accomplished!"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日、信じられないほど幅広い新興技術をカバーしました：AR/VRが没入型体験を作成、音声インターフェースが技術をアクセス可能にする、ジェスチャーとウェアラブルが自然なインタラクションをもたらす、さらには私たちの思考を読むブレインコンピュータインターフェース。"</li>
+<li>"HCIの未来は、プライバシーとアクセシビリティを尊重しながら、技術をより自然に、より見えなく、より私たちの生活に統合することです。"</li>
+<li>"あなたの世代がこれらのインターフェースをデザインします。学んだ原則 - ユーザー中心デザイン、ユーザビリティ、アクセシビリティ、倫理的考慮事項 - があなたをガイドします。"</li>
+<li>"今日最終プロジェクトを完成させてください。来週、あなたの作品を発表し、達成したことを祝います！"</li>
+</ul>
+
+<strong>Final Encouragement:</strong>
+<ul>
+<li>Celebrate student progress</li>
+<li>Express excitement for presentations</li>
+<li>Remind about available support (bot, instructor)</li>
+<li>Build anticipation for Week 14</li>
+</ul>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Activity 1: Emerging Interface Exploration (25 minutes) | アクティビティ1：新興インターフェース探求（25分）</h3>
+
+<strong>Setup and Instructions:</strong>
+<p>1. <strong>Provide Resource List</strong> | リソースリストを提供</p>
+<p>   - AR apps to explore (IKEA Place, Pokémon GO, etc.)</p>
+<p>   - VR demo videos (YouTube VR, Meta Quest demos)</p>
+<p>   - Voice assistant access (Siri, Google Assistant)</p>
+<p>   - Smart home app demos (Philips Hue, Google Home)</p>
+
+<p>2. <strong>Research Phase (10 min)</strong> | 調査フェーズ（10分）</p>
+<p>   - Students explore at least one emerging interface type</p>
+<p>   - Try hands-on demos if possible</p>
+<p>   - Watch demonstration videos</p>
+<p>   - Take screenshots and notes</p>
+
+<p>3. <strong>Analysis Phase (10 min)</strong> | 分析フェーズ（10分）</p>
+<p>   - What interaction patterns did you notice?</p>
+<p>   - How is this different from traditional UI?</p>
+<p>   - What challenges did users face?</p>
+<p>   - How does this apply HCI principles?</p>
+
+<p>4. <strong>Share Findings (5 min)</strong> | 調査結果を共有（5分）</p>
+<p>   - Quick presentations from volunteers</p>
+<p>   - Class discussion of discoveries</p>
+<p>   - Connect to course concepts</p>
+
+<strong>Instructor Role:</strong>
+<ul>
+<li>Circulate and ask probing questions</li>
+<li>Help students access resources</li>
+<li>Facilitate comparisons between technologies</li>
+<li>Connect observations to HCI principles</li>
+</ul>
+
+<hr>
+
+<h3>Activity 2: Future Interaction Brainstorm (20 minutes) | アクティビティ2：未来のインタラクションブレインストーム（20分）</h3>
+
+<strong>Setup and Instructions:</strong>
+<p>1. <strong>Imagine 2030 (10 min)</strong> | 2030を想像（10分）</p>
+<p>   - "How will we interact with technology in 5 years?"</p>
+<p>   - Sketch a futuristic interface concept</p>
+<p>   - Consider technologies: AR glasses, brain control, ambient computing, holographics</p>
+<p>   - Think about daily scenarios: education, work, entertainment, health</p>
+
+<p>2. <strong>Design Rationale (10 min)</strong> | デザイン根拠（10分）</p>
+<p>   - Why would this interface be useful?</p>
+<p>   - What problem does it solve?</p>
+<p>   - What HCI principles apply?</p>
+<p>   - What challenges would designers face?</p>
+<p>   - How would you ensure accessibility and privacy?</p>
+
+<strong>Deliverable:</strong>
+<ul>
+<li>Quick sketch or diagram of future interface</li>
+<li>1-page written rationale</li>
+<li>Presentation to small group or class</li>
+</ul>
+
+<strong>Encourage Creativity:</strong>
+<ul>
+<li>No idea is too wild</li>
+<li>Focus on user needs, not just technology</li>
+<li>Consider ethical implications</li>
+<li>Think about inclusivity</li>
+</ul>
+
+<hr>
+
+<h3>Activity 3: Final Project Completion (25 minutes) | アクティビティ3：最終プロジェクト完成（25分）</h3>
+
+<strong>Dedicated Work Time:</strong>
+<ul>
+<li>Students finalize chatbot or smart device interface</li>
+<li>Complete all required deliverables</li>
+<li>Prepare presentation slides</li>
+<li>Practice demonstrations</li>
+</ul>
+
+<strong>Bot Support Available:</strong>
+<ul>
+<li>Bot provides feedback on designs</li>
+<li>Helps troubleshoot issues</li>
+<li>Assists with presentation preparation</li>
+<li>Answers last-minute questions</li>
+</ul>
+
+<strong>Instructor Circulation:</strong>
+<ul>
+<li>Check on each student's progress</li>
+<li>Provide individual feedback</li>
+<li>Help resolve technical issues</li>
+<li>Ensure presentations are ready</li>
+</ul>
+
+<strong>Final Checklist Distribution:</strong>
+<li class="checkbox">&#9744; Prototype complete and functional</li>
+<li class="checkbox">&#9744; User research documented</li>
+<li class="checkbox">&#9744; Usability testing conducted</li>
+<li class="checkbox">&#9744; Accessibility audit completed</li>
+<li class="checkbox">&#9744; Presentation slides prepared</li>
+<li class="checkbox">&#9744; Demo ready to present</li>
+<li class="checkbox">&#9744; AI transparency log updated</li>
+<li class="checkbox">&#9744; All required files submitted</li>
+
+<hr>
+
+<h2>Assessment and Feedback | 評価とフィードバック</h2>
+
+<h3>During Activities | アクティビティ中</h3>
+
+<strong>Monitor for:</strong>
+<ul>
+<li>Engagement with emerging technologies</li>
+<li>Quality of analysis and insights</li>
+<li>Progress on final projects</li>
+<li>Presentation readiness</li>
+<li>Understanding of future HCI trends</li>
+</ul>
+
+<strong>Provide Feedback On:</strong>
+<ul>
+<li>Interface analysis depth</li>
+<li>Future concept creativity and feasibility</li>
+<li>Project completion status</li>
+<li>Presentation preparation</li>
+<li>Connection to HCI principles</li>
+</ul>
+
+<h3>After Class | クラス後</h3>
+
+<strong>Review Submissions:</strong>
+<ul>
+<li>Emerging interface exploration notes</li>
+<li>Future interaction concepts</li>
+<li>Final project status</li>
+<li>Presentation readiness</li>
+</ul>
+
+<strong>Prepare for Week 14:</strong>
+<ul>
+<li>Review all final projects</li>
+<li>Create presentation schedule</li>
+<li>Prepare evaluation rubrics</li>
+<li>Set up peer feedback process</li>
+<li>Plan celebration elements</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Procedures | 緊急手順</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+<ul>
+<li><strong>Internet Down</strong> | インターネットダウン: Have offline emerging tech videos ready</li>
+<li><strong>Bot Portal Issues</strong> | ボットポータル問題: Provide alternative support channels</li>
+<li><strong>Demonstration Failures</strong> | デモンストレーション失敗: Have backup videos prepared</li>
+</ul>
+
+<h3>Student Issues | 学生の問題</h3>
+<ul>
+<li><strong>Project Not Complete</strong> | プロジェクト未完成: Provide extension guidance and support</li>
+<li><strong>Presentation Anxiety</strong> | プレゼンテーション不安: Offer reassurance and practice opportunities</li>
+<li><strong>Technical Difficulties</strong> | 技術的困難: One-on-one troubleshooting</li>
+</ul>
+
+<hr>
+
+<h2>Week 14 Preparation Reminders | 第14週準備リマインダー</h2>
+
+<h3>For Students | 学生向け</h3>
+<ul>
+<li>Complete all final deliverables</li>
+<li>Practice presentation multiple times</li>
+<li>Test prototype thoroughly</li>
+<li>Prepare for questions</li>
+<li>Bring all necessary files on USB or cloud</li>
+</ul>
+
+<h3>For Instructor | インストラクター向け</h3>
+<ul>
+<li>Create presentation schedule</li>
+<li>Print evaluation rubrics</li>
+<li>Prepare peer feedback forms</li>
+<li>Set up presentation equipment</li>
+<li>Plan celebration/wrap-up activities</li>
+<li>Conduct final bot assessment interviews</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week12-instructor-notes.html" class="nav-btn nav-prev">← Week 12</a>
+        <span class="nav-current">Week 13 Instructor Notes</span>
+        <a href="week14-instructor-notes.html" class="nav-btn nav-next">Week 14 →</a>
+        <a href="week13-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

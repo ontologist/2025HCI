@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 1 Instructor Notes | 第1週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <span class="nav-btn nav-disabled">← Previous</span>
+        <span class="nav-current">Week 1 Instructor Notes</span>
+        <a href="week02-instructor-notes.html" class="nav-btn nav-next">Week 2 →</a>
+        <a href="week01-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 1 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第1週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction  
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門  
+<strong>Instructor:</strong> Yuri Tijerino  
+<strong>Duration:</strong> 15-20 minutes  
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required  
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Test bot portal access and credentials</li>
+<li class="checkbox">&#9744; Verify all design tools are accessible (Figma, Adobe XD)</li>
+<li class="checkbox">&#9744; Prepare bot portal credentials for distribution</li>
+<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
+<li class="checkbox">&#9744; Have backup plan for internet connectivity issues</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Bot portal access credentials (printed or digital)</li>
+<li class="checkbox">&#9744; Activity handouts and templates</li>
+<li class="checkbox">&#9744; Course syllabus and policies</li>
+<li class="checkbox">&#9744; AI transparency log template</li>
+<li class="checkbox">&#9744; Design tool setup instructions</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Ensure students can access computers/internet</li>
+<li class="checkbox">&#9744; Prepare for bilingual presentation (English/Japanese)</li>
+<li class="checkbox">&#9744; Set up for hands-on activity transition</li>
+<li class="checkbox">&#9744; Have backup materials for students without devices</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to HCI-101! | HCI-101へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to HCI-101! I'm Yuri Tijerino, and I'm excited to guide you through this journey into Human-Computer Interaction."</li>
+<li>"This isn't your typical computer science course - we won't be writing code. Instead, we'll be designing the interfaces that make technology usable and enjoyable."</li>
+<li>"By the end of today, you'll understand what HCI is, why it matters in our daily lives, and what you'll be creating in this course."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"HCI-101へようこそ！私はYuri Tijerinoです。ヒューマンコンピュータインタラクションの旅をガイドできることを嬉しく思います。"</li>
+<li>"これは典型的なコンピュータサイエンスのコースではありません - コードを書くことはありません。代わりに、技術を使いやすく楽しいものにするインターフェースをデザインします。"</li>
+<li>"今日の終わりまでに、HCIが何で、なぜ日常生活で重要なのか、そしてこのコースで何を作るのかを理解するでしょう。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>This is a design course, not a programming course</li>
+<li>Focus on user experience and interface design</li>
+<li>Hands-on, practical learning approach</li>
+<li>AI integration as learning support</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: What is Human-Computer Interaction (HCI)? | ヒューマンコンピュータインタラクション（HCI）とは？</h3>
+
+<h4>Core Concept Introduction (3 minutes) | コアコンセプト紹介（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"HCI is the study of how people interact with computers and the design of computer interfaces that are usable, useful, and enjoyable."</li>
+<li>"Think about your smartphone - when you open an app, how do you know what to tap? That's HCI in action."</li>
+<li>"The three components are crucial: Human (you, the user), Computer (the technology), and Interaction (how you communicate with it)."</li>
+<li>"Why does this matter? Because we interact with technology 24/7 - from waking up to checking our phones, to using apps throughout the day, to smart home devices at night."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"HCIは、人々がコンピュータとどのように相互作用するかの研究と、使用可能で有用で楽しいコンピュータインターフェースのデザインです。"</li>
+<li>"スマートフォンを考えてみてください - アプリを開くとき、何をタップすればよいかどうやって知りますか？それがHCIの実践です。"</li>
+<li>"3つのコンポーネントが重要です：人間（あなた、ユーザー）、コンピュータ（技術）、相互作用（それとどのようにコミュニケーションするか）。"</li>
+<li>"なぜこれが重要なのでしょうか？私たちは24時間365日技術と相互作用しているからです - 目覚めてからスマートフォンをチェックし、一日中アプリを使用し、夜はスマートホームデバイスを使用します。"</li>
+</ul>
+
+<strong>Interactive Elements:</strong>
+<ul>
+<li>Ask students: "How many times did you interact with technology before coming to class today?"</li>
+<li>Show hands: "How many of you checked your phone this morning?"</li>
+<li>Point out: "Every tap, swipe, voice command is an HCI interaction"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: The Evolution of Interfaces | インターフェースの進化</h3>
+
+<h4>Historical Context (3 minutes) | 歴史的文脈（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's look at how interfaces have evolved. In the 1980s, you had to type commands like 'dir' or 'ls' to see files. Not very user-friendly!"</li>
+<li>"Then came the graphical user interface - windows, icons, menus. Suddenly, you could point and click instead of memorizing commands."</li>
+<li>"The mobile revolution changed everything again. Touch screens meant you could interact directly with content, not through a mouse."</li>
+<li>"Now we're in the era of smart devices and AI. Your smartwatch, voice assistants, even your refrigerator can have interfaces."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"インターフェースがどのように進化したかを見てみましょう。1980年代、ファイルを見るには'dir'や'ls'のようなコマンドを入力する必要がありました。あまりユーザーフレンドリーではありませんでした！"</li>
+<li>"その後、グラフィカルユーザーインターフェースが登場しました - ウィンドウ、アイコン、メニュー。突然、コマンドを覚える代わりにポイントしてクリックできるようになりました。"</li>
+<li>"モバイル革命が再びすべてを変えました。タッチスクリーンは、マウスを通してではなく、コンテンツと直接相互作用できることを意味しました。"</li>
+<li>"今、私たちはスマートデバイスとAIの時代にいます。スマートウォッチ、音声アシスタント、冷蔵庫でさえインターフェースを持つことができます。"</li>
+</ul>
+
+<strong>Visual Examples to Show:</strong>
+<ul>
+<li>Command line interface (if possible)</li>
+<li>Early GUI screenshots</li>
+<li>Modern mobile app interfaces</li>
+<li>Smart device examples</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Modern HCI Challenges | 現代のHCIの課題</h3>
+
+<h4>Current Challenges (2 minutes) | 現在の課題（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Today's HCI designers face unique challenges. Device diversity means your app needs to work on phones, tablets, watches, and more."</li>
+<li>"User expectations are higher than ever. People want instant responses, intuitive design, and personalized experiences."</li>
+<li>"Technology integration is complex - AI, voice recognition, augmented reality all need to work together seamlessly."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日のHCIデザイナーは独特の課題に直面しています。デバイスの多様性は、アプリが電話、タブレット、時計などで動作する必要があることを意味します。"</li>
+<li>"ユーザーの期待はこれまで以上に高くなっています。人々は即座の応答、直感的なデザイン、パーソナライズされた体験を望んでいます。"</li>
+<li>"技術統合は複雑です - AI、音声認識、拡張現実はすべてシームレスに連携する必要があります。"</li>
+</ul>
+
+<strong>Student Engagement:</strong>
+<ul>
+<li>Ask: "How many different devices do you use in a typical day?"</li>
+<li>Discuss: "What's the most frustrating interface you've used recently?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: User-Centered Design Principles | ユーザー中心デザイン原則</h3>
+
+<h4>Core Principles (3 minutes) | 基本原則（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"User-centered design puts the user at the center of every decision. These three principles guide all good interface design."</li>
+<li>"Usability means users can accomplish tasks efficiently, effectively, and with satisfaction. Think about a well-designed app - you can find what you need quickly."</li>
+<li>"Learnability is about how quickly users can understand the interface. Good design is intuitive - you shouldn't need a manual."</li>
+<li>"Error prevention and recovery is crucial. Good design prevents mistakes, and when they happen, helps users fix them easily."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ユーザー中心デザインは、すべての決定の中心にユーザーを置きます。これらの3つの原則がすべての良いインターフェースデザインをガイドします。"</li>
+<li>"ユーザビリティは、ユーザーが効率的に、効果的に、満足してタスクを完了できることを意味します。よくデザインされたアプリを考えてみてください - 必要なものを素早く見つけることができます。"</li>
+<li>"学習可能性は、ユーザーがインターフェースをどれだけ早く理解できるかについてです。良いデザインは直感的です - マニュアルは必要ありません。"</li>
+<li>"エラー予防と回復は重要です。良いデザインは間違いを防ぎ、間違いが起こったときは、ユーザーが簡単に修正できるようにします。"</li>
+</ul>
+
+<strong>Real-World Examples:</strong>
+<ul>
+<li>Show examples of good vs. bad error messages</li>
+<li>Demonstrate intuitive vs. confusing navigation</li>
+<li>Point out accessibility features in common apps</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: The HCI Design Process | HCIデザインプロセス</h3>
+
+<h4>Design Thinking Framework (3 minutes) | デザイン思考フレームワーク（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"The design thinking framework guides our entire course. It's a human-centered approach to innovation."</li>
+<li>"Empathize: We start by understanding our users through research, interviews, and observation. What are their real needs?"</li>
+<li>"Define: We clearly articulate the problem we're trying to solve. A well-defined problem is half-solved."</li>
+<li>"Ideate: We generate many ideas without judgment. Quantity leads to quality."</li>
+<li>"Prototype: We build quick, low-cost versions to test our ideas. Fail fast, learn fast."</li>
+<li>"Test: We test with real users and iterate based on feedback. Design is never done - it's always improving."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"デザイン思考フレームワークが私たちのコース全体をガイドします。これは人間中心のイノベーションアプローチです。"</li>
+<li>"共感：調査、インタビュー、観察を通じてユーザーを理解することから始めます。彼らの真のニーズは何ですか？"</li>
+<li>"定義：解決しようとしている問題を明確に表現します。よく定義された問題は半分解決されたものです。"</li>
+<li>"発想：判断なしに多くのアイデアを生み出します。量が質につながります。"</li>
+<li>"試作：アイデアをテストするために迅速で低コストのバージョンを構築します。早く失敗し、早く学びます。"</li>
+<li>"テスト：実際のユーザーでテストし、フィードバックに基づいて反復します。デザインは決して完成しません - 常に改善されています。"</li>
+</ul>
+
+<strong>Visual Aid:</strong>
+<ul>
+<li>Draw the design thinking process on board</li>
+<li>Show examples of each stage</li>
+<li>Connect to course activities</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Course Overview - HCI-101 | コース概要 - HCI-101</h3>
+
+<h4>Course Structure (2 minutes) | コース構造（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"This course is structured around hands-on learning. 80% of your time will be spent doing, not just listening."</li>
+<li>"We'll cover user research, design thinking, interface design for smart devices, conversational AI, usability testing, and accessibility."</li>
+<li>"You'll use professional tools like Figma and Adobe XD, but no programming is required."</li>
+<li>"The course integrates AI as your learning partner - you'll work with an AI design mentor throughout the semester."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"このコースはハンズオン学習を中心に構成されています。時間の80%は聞くだけでなく、実際に行うことに費やされます。"</li>
+<li>"ユーザー調査、デザイン思考、スマートデバイス用インターフェースデザイン、会話型AI、ユーザビリティテスト、アクセシビリティをカバーします。"</li>
+<li>"FigmaやAdobe XDなどのプロフェッショナルツールを使用しますが、プログラミングは必要ありません。"</li>
+<li>"コースはAIを学習パートナーとして統合します - 学期を通じてAIデザインメンターと協力します。"</li>
+</ul>
+
+<strong>Emphasize:</strong>
+<ul>
+<li>No programming experience needed</li>
+<li>Focus on design thinking and user experience</li>
+<li>Real-world, practical projects</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Assessment Structure | 評価構造</h3>
+
+<h4>Assessment Overview (2 minutes) | 評価概要（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"There's no final exam! Your learning will be assessed through practical work and projects."</li>
+<li>"40% comes from weekly activities - hands-on exercises, user research, and prototypes."</li>
+<li>"15% from bot assessments - conversational quizzes with your AI mentor."</li>
+<li>"35% from your final project - a complete design project of your choice."</li>
+<li>"10% from participation and collaboration with your peers."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"最終試験はありません！学習は実践的な作業とプロジェクトを通じて評価されます。"</li>
+<li>"40%は週次アクティビティから - ハンズオン演習、ユーザー調査、プロトタイプ。"</li>
+<li>"15%はボット評価から - AIメンターとの会話型クイズ。"</li>
+<li>"35%は最終プロジェクトから - 選択した完全なデザインプロジェクト。"</li>
+<li>"10%はピアとの参加とコラボレーションから。"</li>
+</ul>
+
+<strong>Key Points:</strong>
+<ul>
+<li>No traditional exams</li>
+<li>Focus on practical skills</li>
+<li>Portfolio-building approach</li>
+<li>Collaborative learning</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Final Project Options | 最終プロジェクトオプション</h3>
+
+<h4>Project Introduction (3 minutes) | プロジェクト紹介（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"You'll choose between two exciting project tracks. Both will result in portfolio-quality work."</li>
+<li>"Option A: AI Chatbot Interface Design. You'll design conversational AI for a specific use case - maybe a customer service bot, learning assistant, or campus information system."</li>
+<li>"Option B: Smart Device Interface Design. You'll create interfaces for smartphones, tablets, wearables, or IoT devices - like a fitness app, smart home controller, or accessibility tool."</li>
+<li>"Both options include the complete design process: user research, personas, wireframes, prototypes, and usability testing."</li>
+<li>"You'll use professional tools and create work you can show to future employers."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"2つのエキサイティングなプロジェクトトラックから選択します。両方ともポートフォリオ品質の作品になります。"</li>
+<li>"オプションA：AIチャットボットインターフェースデザイン。特定のユースケース用の会話型AIをデザインします - カスタマーサービスボット、学習アシスタント、キャンパス情報システムなど。"</li>
+<li>"オプションB：スマートデバイスインターフェースデザイン。スマートフォン、タブレット、ウェアラブル、IoTデバイス用のインターフェースを作成します - フィットネスアプリ、スマートホームコントローラー、アクセシビリティツールなど。"</li>
+<li>"両方のオプションには完全なデザインプロセスが含まれます：ユーザー調査、ペルソナ、ワイヤーフレーム、プロトタイプ、ユーザビリティテスト。"</li>
+<li>"プロフェッショナルツールを使用し、将来の雇用主に示すことができる作品を作成します。"</li>
+</ul>
+
+<strong>Show Examples:</strong>
+<ul>
+<li>Previous student projects (if available)</li>
+<li>Professional examples of both types</li>
+<li>Tools they'll use</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Meet Your AI Design Mentor | AIデザインメンターとの出会い</h3>
+
+<h4>AI Integration (2 minutes) | AI統合（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"You'll have a 24/7 AI design mentor - the HCI-101 Bot. This isn't just a chatbot; it's your learning partner."</li>
+<li>"The bot can guide you through design thinking processes, provide templates, answer HCI questions, and even conduct assessments."</li>
+<li>"It's always available when you need help, whether you're working on assignments at 2 AM or preparing for presentations."</li>
+<li>"You'll access it through our course portal, and I'll provide credentials today."</li>
+<li>"Remember: AI transparency is required. You must document all AI interactions for academic integrity."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"24時間365日のAIデザインメンター - HCI-101ボットを持ちます。これは単なるチャットボットではありません；あなたの学習パートナーです。"</li>
+<li>"ボットはデザイン思考プロセスをガイドし、テンプレートを提供し、HCIの質問に答え、評価を実施することもできます。"</li>
+<li>"午前2時に課題に取り組んでいる時でも、プレゼンテーションの準備をしている時でも、必要な時にいつでも利用できます。"</li>
+<li>"コースポータルを通じてアクセスし、今日認証情報を提供します。"</li>
+<li>"覚えておいてください：AI透明性は必須です。学術的誠実性のためにすべてのAI相互作用を文書化する必要があります。"</li>
+</ul>
+
+<strong>Demonstration:</strong>
+<ul>
+<li>Show bot portal interface (if available)</li>
+<li>Demonstrate basic interaction</li>
+<li>Explain transparency requirements</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Course Policies & Expectations | コースポリシーと期待</h3>
+
+<h4>AI Usage Policy (2 minutes) | AI使用ポリシー（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"AI chatbots are encouraged for learning, brainstorming, and getting feedback. They're powerful tools for understanding concepts and generating ideas."</li>
+<li>"However, you must document all AI interactions with complete transparency. This includes prompts, responses, and how you verified the information."</li>
+<li>"AI is not allowed during formal assessments or final presentations. The HCI-101 Bot is always allowed as it's part of the learning system."</li>
+<li>"Collaboration with peers is encouraged, but final projects must be your own work."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"AIチャットボットは学習、ブレインストーミング、フィードバック取得に奨励されます。コンセプトを理解し、アイデアを生み出すための強力なツールです。"</li>
+<li>"しかし、完全な透明性を持ってすべてのAI相互作用を文書化する必要があります。これにはプロンプト、応答、情報を検証した方法が含まれます。"</li>
+<li>"正式な評価や最終プレゼンテーション中はAIは許可されません。HCI-101ボットは学習システムの一部であるため常に許可されています。"</li>
+<li>"ピアとのコラボレーションは奨励されますが、最終プロジェクトは自分自身の作業でなければなりません。"</li>
+</ul>
+
+<strong>Emphasize:</strong>
+<ul>
+<li>AI transparency is mandatory</li>
+<li>Academic integrity requirements</li>
+<li>Collaboration vs. individual work</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: What You'll Need | 必要なもの</h3>
+
+<h4>Requirements (1 minute) | 要件（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"You'll need access to design tools like Figma or Adobe XD - both have free education versions."</li>
+<li>"A computer with internet connection and at least 4GB RAM for design software."</li>
+<li>"No textbook required - all materials are provided through our course portal."</li>
+<li>"I'll provide bot portal credentials today, and you can set up your AI chatbot accounts of choice."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"FigmaやAdobe XDなどのデザインツールへのアクセスが必要です - 両方とも無料の教育版があります。"</li>
+<li>"デザインソフトウェア用にインターネット接続と少なくとも4GB RAMを備えたコンピュータ。"</li>
+<li>"教科書は不要 - すべての教材はコースポータルを通じて提供されます。"</li>
+<li>"今日ボットポータルの認証情報を提供し、選択したAIチャットボットアカウントをセットアップできます。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: This Week's Activity | 今週のアクティビティ</h3>
+
+<h4>Activity Introduction (2 minutes) | アクティビティ紹介（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Today's activity will introduce you to interface analysis and help you choose your final project direction."</li>
+<li>"You'll meet your AI mentor, analyze real smart device interfaces, and document your learning."</li>
+<li>"The activity takes about 60 minutes and includes bot interaction, interface analysis, and reflection writing."</li>
+<li>"You'll submit a 2-4 page reflection document with screenshots of your bot interactions."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日のアクティビティはインターフェース分析を紹介し、最終プロジェクトの方向を選択するのに役立ちます。"</li>
+<li>"AIメンターと出会い、実際のスマートデバイスインターフェースを分析し、学習を文書化します。"</li>
+<li>"アクティビティは約60分かかり、ボットインタラクション、インターフェース分析、振り返り執筆が含まれます。"</li>
+<li>"ボットインタラクションのスクリーンショット付きで2-4ページの振り返り文書を提出します。"</li>
+</ul>
+
+<strong>Transition to Activity:</strong>
+<ul>
+<li>Distribute bot portal credentials</li>
+<li>Provide activity handouts</li>
+<li>Set up for hands-on work</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Questions & Next Steps | 質問と次のステップ</h3>
+
+<h4>Q&A and Transition (2 minutes) | Q&Aと移行（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Any questions about the course, expectations, or today's activity?"</li>
+<li>"Remember: You have until Week 3 to finalize your project choice, so don't worry about deciding today."</li>
+<li>"Next steps: Access your bot portal, complete today's activity, and start thinking about your project interests."</li>
+<li>"I'm here to help - don't hesitate to ask questions during class or via email."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"コース、期待、今日のアクティビティについて質問はありますか？"</li>
+<li>"覚えておいてください：プロジェクト選択を確定するまで第3週までありますので、今日決定することを心配する必要はありません。"</li>
+<li>"次のステップ：ボットポータルにアクセスし、今日のアクティビティを完了し、プロジェクトの興味について考え始めてください。"</li>
+<li>"私は助けるためにここにいます - クラス中やメールで質問を遠慮しないでください。"</li>
+</ul>
+
+<strong>Handle Common Questions:</strong>
+<ul>
+<li>Programming experience requirements</li>
+<li>Project choice flexibility</li>
+<li>Time commitment expectations</li>
+<li>AI usage guidelines</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: Welcome to Your HCI Journey! | HCIの旅へようこそ！</h3>
+
+<h4>Closing (1 minute) | クロージング（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"You're about to embark on an exciting journey into the world of interface design."</li>
+<li>"Remember: HCI is everywhere, good design solves real problems, and you'll learn by doing."</li>
+<li>"Your AI mentor is ready to guide you, and I'm here to support your learning."</li>
+<li>"Let's begin! Access your bot portal and start your first activity."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"インターフェースデザインの世界へのエキサイティングな旅に出発しようとしています。"</li>
+<li>"覚えておいてください：HCIはどこにでもあり、良いデザインは実際の問題を解決し、実践で学びます。"</li>
+<li>"AIメンターがガイドする準備ができており、私はあなたの学習をサポートするためにここにいます。"</li>
+<li>"始めましょう！ボットポータルにアクセスして最初のアクティビティを開始してください。"</li>
+</ul>
+
+<strong>Final Encouragement:</strong>
+<ul>
+<li>Emphasize creativity and learning</li>
+<li>Reassure about support available</li>
+<li>Create excitement for the journey ahead</li>
+</ul>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Immediate Next Steps | 即座の次のステップ</h3>
+<p>1. <strong>Distribute Materials</strong> | 教材を配布</p>
+<p>   - Bot portal credentials</p>
+<p>   - Activity handouts</p>
+<p>   - AI transparency log template</p>
+<p>   - Design tool setup instructions</p>
+
+<p>2. <strong>Set Up Activity</strong> | アクティビティをセットアップ</p>
+<p>   - Ensure all students can access bot portal</p>
+<p>   - Provide technical support for tool access</p>
+<p>   - Monitor initial bot interactions</p>
+
+<p>3. <strong>Circulate and Support</strong> | 巡回とサポート</p>
+<p>   - Answer questions during activity</p>
+<p>   - Help with technical issues</p>
+<p>   - Guide students through bot onboarding</p>
+
+<h3>Common Issues to Watch For | 注意すべき一般的な問題</h3>
+<ul>
+<li><strong>Bot Portal Access</strong> | ボットポータルアクセス: Students may have trouble with credentials</li>
+<li><strong>Technical Setup</strong> | 技術的セットアップ: Design tool installation issues</li>
+<li><strong>Language Barriers</strong> | 言語の壁: Some students may prefer Japanese interface</li>
+<li><strong>Activity Confusion</strong> | アクティビティの混乱: Clarify expectations and deliverables</li>
+</ul>
+
+<h3>Support Strategies | サポート戦略</h3>
+<ul>
+<li><strong>Bilingual Support</strong> | バイリンガルサポート: Provide explanations in both languages</li>
+<li><strong>Peer Assistance</strong> | ピアアシスタンス: Encourage students to help each other</li>
+<li><strong>Technical Backup</strong> | 技術的バックアップ: Have alternative access methods ready</li>
+<li><strong>Clear Instructions</strong> | 明確な指示: Provide step-by-step guidance</li>
+</ul>
+
+<hr>
+
+<h2>Assessment and Feedback | 評価とフィードバック</h2>
+
+<h3>During Activity | アクティビティ中</h3>
+<ul>
+<li><strong>Monitor Engagement</strong> | エンゲージメントを監視: Check bot interaction quality</li>
+<li><strong>Provide Guidance</strong> | ガイダンスを提供: Help with interface analysis</li>
+<li><strong>Answer Questions</strong> | 質問に答える: Clarify concepts and expectations</li>
+<li><strong>Encourage Reflection</strong> | 振り返りを奨励: Guide thoughtful analysis</li>
+</ul>
+
+<h3>After Activity | アクティビティ後</h3>
+<ul>
+<li><strong>Review Submissions</strong> | 提出物をレビュー: Check for completeness and quality</li>
+<li><strong>Provide Feedback</strong> | フィードバックを提供: Give constructive comments</li>
+<li><strong>Identify Issues</strong> | 問題を特定: Note common challenges for next week</li>
+<li><strong>Plan Adjustments</strong> | 調整を計画: Modify approach based on student needs</li>
+</ul>
+
+<h3>Weekly Reflection | 週次振り返り</h3>
+<ul>
+<li><strong>What Worked Well</strong> | うまくいったこと: Successful elements to maintain</li>
+<li><strong>What Needs Improvement</strong> | 改善が必要なこと: Areas to adjust</li>
+<li><strong>Student Feedback</strong> | 学生フィードバック: Collect and analyze responses</li>
+<li><strong>Next Week Preparation</strong> | 来週の準備: Plan based on current week's learnings</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Procedures | 緊急手順</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+<ul>
+<li><strong>Internet Connectivity</strong> | インターネット接続: Have offline materials ready</li>
+<li><strong>Bot Portal Down</strong> | ボットポータルダウン: Provide alternative activity</li>
+<li><strong>Tool Access Problems</strong> | ツールアクセス問題: Have backup options available</li>
+</ul>
+
+<h3>Student Issues | 学生の問題</h3>
+<ul>
+<li><strong>Language Barriers</strong> | 言語の壁: Provide bilingual support</li>
+<li><strong>Technical Difficulties</strong> | 技術的困難: Offer one-on-one assistance</li>
+<li><strong>Activity Confusion</strong> | アクティビティの混乱: Clarify expectations clearly</li>
+</ul>
+
+<h3>Communication Plan | コミュニケーション計画</h3>
+<ul>
+<li><strong>In-Class Support</strong> | クラス内サポート: Circulate and assist actively</li>
+<li><strong>Email Follow-up</strong> | メールフォローアップ: Respond to questions promptly</li>
+<li><strong>Office Hours</strong> | オフィスアワー: Provide additional support time</li>
+<li><strong>Course Forum</strong> | コースフォーラム: Encourage peer discussion</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <span class="nav-btn nav-disabled">← Previous</span>
+        <span class="nav-current">Week 1 Instructor Notes</span>
+        <a href="week02-instructor-notes.html" class="nav-btn nav-next">Week 2 →</a>
+        <a href="week01-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

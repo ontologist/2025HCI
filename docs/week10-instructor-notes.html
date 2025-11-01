@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 10 Instructor Notes | 第10週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week09-instructor-notes.html" class="nav-btn nav-prev">← Week 9</a>
+        <span class="nav-current">Week 10 Instructor Notes</span>
+        <a href="week11-instructor-notes.html" class="nav-btn nav-next">Week 11 →</a>
+        <a href="week10-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 10 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第10週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> 15-20 minutes
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Test bot portal access for test plan templates</li>
+<li class="checkbox">&#9744; Prepare example usability test videos (if available)</li>
+<li class="checkbox">&#9744; Set up screen recording demo for think-aloud protocol</li>
+<li class="checkbox">&#9744; Prepare sample test plans and task scenarios</li>
+<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
+<li class="checkbox">&#9744; Have backup plan for technical demonstrations</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Usability test plan template</li>
+<li class="checkbox">&#9744; Task writing worksheet</li>
+<li class="checkbox">&#9744; Observation sheet templates</li>
+<li class="checkbox">&#9744; SUS questionnaire template</li>
+<li class="checkbox">&#9744; Consent form template (sample)</li>
+<li class="checkbox">&#9744; Participant recruitment criteria worksheet</li>
+<li class="checkbox">&#9744; Metric tracking spreadsheet</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Arrange seating for pair work</li>
+<li class="checkbox">&#9744; Ensure students can access their prototypes</li>
+<li class="checkbox">&#9744; Prepare for peer testing activity</li>
+<li class="checkbox">&#9744; Have recording devices ready (if demonstrating)</li>
+<li class="checkbox">&#9744; Set up timer for activity segments</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Week 10! | 第10週へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 10! We've reached an exciting milestone - you've designed and prototyped your interfaces. Now it's time to find out if they actually work."</li>
+<li>"Today we're diving into usability testing, which is the reality check for all your design decisions."</li>
+<li>"Usability testing is where you discover what works, what doesn't, and most importantly, WHY."</li>
+<li>"By the end of today, you'll have a complete test plan for your projects and hands-on practice conducting tests."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第10週へようこそ！エキサイティングなマイルストーンに到達しました - インターフェースをデザインしプロトタイプを作成しました。今度は実際に機能するかどうかを確認する時です。"</li>
+<li>"今日はユーザビリティテストに飛び込みます。これはすべてのデザイン決定の現実チェックです。"</li>
+<li>"ユーザビリティテストは、何が機能し、何が機能せず、最も重要なのはなぜかを発見する場所です。"</li>
+<li>"今日の終わりまでに、プロジェクト用の完全なテスト計画を持ち、テストを実施するハンズオン実践を行います。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>This is the validation phase of design thinking</li>
+<li>Testing reveals issues you can't predict</li>
+<li>Real users provide invaluable insights</li>
+<li>Testing should happen early and often</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: What is Usability Testing? | ユーザビリティテストとは？</h3>
+
+<h4>Core Concept Introduction (3 minutes) | コアコンセプト紹介（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Usability testing is the process of evaluating your design by testing it with real users."</li>
+<li>"It's not about whether YOU think the design works - it's about whether USERS can actually use it successfully."</li>
+<li>"Think of it as a scientific experiment: you have hypotheses about your design, and testing proves or disproves them."</li>
+<li>"Why test? Four critical reasons: validate decisions, identify issues early, improve user experience, and reduce costs."</li>
+<li>"Here's the most important principle: YOU ARE NOT THE USER. This can't be stressed enough."</li>
+<li>"As designers, we're too close to our work. We know how everything works because we built it. Real users don't have that knowledge."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ユーザビリティテストは、実際のユーザーでテストすることによってデザインを評価するプロセスです。"</li>
+<li>"あなたがデザインが機能すると思うかどうかではありません - ユーザーが実際に成功裏に使用できるかどうかです。"</li>
+<li>"科学実験のように考えてください：デザインについての仮説があり、テストがそれらを証明または反証します。"</li>
+<li>"なぜテストするのか？4つの重要な理由：決定を検証、問題を早期に特定、ユーザー体験を改善、コストを削減。"</li>
+<li>"最も重要な原則はこれです：あなたはユーザーではありません。これは十分に強調できません。"</li>
+<li>"デザイナーとして、私たちは自分の作業に近すぎます。構築したので、すべてがどのように機能するかを知っています。実際のユーザーにはその知識がありません。"</li>
+</ul>
+
+<strong>Real-World Example:</strong>
+<ul>
+<li>Share example: "Apple's first iPhone prototype had many usability issues discovered through testing. Users couldn't find basic features, buttons were too small to tap accurately. Without testing, the iPhone wouldn't have become the successful product it is."</li>
+<li>"アップルの最初のiPhoneプロトタイプには、テストを通じて発見された多くのユーザビリティ問題がありました。ユーザーは基本的な機能を見つけることができず、ボタンは正確にタップするには小さすぎました。テストなしでは、iPhoneは成功した製品にはなりませんでした。"</li>
+</ul>
+
+<strong>Interactive Element:</strong>
+<ul>
+<li>Ask: "How many of you have used an interface that was confusing or frustrating? What made it difficult?"</li>
+<li>Collect responses - this demonstrates why testing matters</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: Types of Usability Testing | ユーザビリティテストの種類</h3>
+
+<h4>Testing Methods Overview (3 minutes) | テスト方法概要（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"There are several ways to conduct usability tests. Let's look at the main types."</li>
+<li>"Moderated in-person testing: You're in the same room as the user, observing directly. This is the richest form of testing."</li>
+<li>"You can see body language, hear tone of voice, and probe deeper when you notice confusion. Great for early prototypes and complex interfaces."</li>
+<li>"Remote moderated testing: Same idea, but via video call. This opened up testing to participants anywhere in the world."</li>
+<li>"During the pandemic, remote moderated became essential. It's now a standard practice."</li>
+<li>"Unmoderated testing: Users complete tasks independently while their sessions are recorded. No researcher present."</li>
+<li>"This is faster and more scalable - you can test with 50 users in a day if needed. But you lose the ability to ask follow-up questions."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ユーザビリティテストを実施するにはいくつかの方法があります。主なタイプを見てみましょう。"</li>
+<li>"司会付き対面テスト：ユーザーと同じ部屋にいて、直接観察します。これは最も豊富なテスト形式です。"</li>
+<li>"ボディランゲージを見ることができ、声のトーンを聞くことができ、混乱に気付いたときにより深く探ることができます。初期プロトタイプと複雑なインターフェースに最適です。"</li>
+<li>"リモート司会付きテスト：同じアイデアですが、ビデオ通話経由です。これにより、世界中のどこにでも参加者へのテストが開かれました。"</li>
+<li>"パンデミック中、リモート司会付きは不可欠になりました。今では標準的な慣行です。"</li>
+<li>"司会なしテスト：ユーザーがセッションが録画されている間に独立してタスクを完了します。研究者は存在しません。"</li>
+<li>"これは速くてよりスケーラブルです - 必要に応じて1日で50人のユーザーでテストできます。しかし、フォローアップ質問をする能力を失います。"</li>
+</ul>
+
+<strong>Comparison Chart Discussion:</strong>
+<ul>
+<li>Walk through the pros/cons of each method</li>
+<li>Explain when to use each type</li>
+<li>"For your projects, I recommend moderated testing with classmates and friends - it's the best learning experience."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Choosing the Right Testing Method | 適切なテスト方法の選択</h3>
+
+<h4>Decision Framework (2 minutes) | 決定フレームワーク（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"How do you choose which method to use? It depends on your goals, resources, and stage of design."</li>
+<li>"Use moderated testing when you need deep insights. When you're testing early concepts or complex interactions."</li>
+<li>"The 5-user rule: Jakob Nielsen's research shows that 5 users uncover about 85% of usability problems."</li>
+<li>"This is a game-changer - you don't need hundreds of participants. Five well-chosen users give you tremendous insights."</li>
+<li>"Use unmoderated testing when you need quantitative data at scale, or when testing simple, well-defined tasks."</li>
+<li>"For your projects, moderated testing with 5-8 users is perfect. You'll get rich qualitative data and meaningful metrics."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"どの方法を使用するかをどのように選択しますか？目標、リソース、デザインの段階に依存します。"</li>
+<li>"深い洞察が必要な場合は司会付きテストを使用します。初期コンセプトまたは複雑な相互作用をテストしている場合。"</li>
+<li>"5ユーザールール：Jakob Nielsenの研究によると、5人のユーザーがユーザビリティ問題の約85%を発見します。"</li>
+<li>"これはゲームチェンジャーです - 何百人もの参加者は必要ありません。よく選ばれた5人のユーザーが途方もない洞察を与えます。"</li>
+<li>"規模で定量的データが必要な場合、またはシンプルで明確に定義されたタスクをテストする場合は、司会なしテストを使用します。"</li>
+<li>"プロジェクトには、5-8人のユーザーとの司会付きテストが完璧です。豊富な定性的データと意味のあるメトリクスを取得します。"</li>
+</ul>
+
+<strong>Visual Aid:</strong>
+<ul>
+<li>Point to decision framework on slide</li>
+<li>Help students think through their own project needs</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: The Usability Test Plan | ユーザビリティテスト計画</h3>
+
+<h4>Planning Essentials (3 minutes) | 計画の本質（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"A good usability test starts with a solid plan. Let's break down the essential components."</li>
+<li>"First: Test objectives. What do you want to learn? What design questions need answers?"</li>
+<li>"For example: 'Can users successfully find and book an appointment?' or 'Is the chatbot's error handling effective?'"</li>
+<li>"Second: Participant criteria. Who should you test with? They should match your target users."</li>
+<li>"If you're designing a student planner app, test with students. If it's for elderly users, test with elderly people."</li>
+<li>"Third: Test tasks. These are the scenarios users will perform. This is critical - bad tasks lead to bad data."</li>
+<li>"Fourth: Test environment. Where will you test? What equipment do you need? What version of the prototype?"</li>
+<li>"Fifth: Metrics. What will you measure? We'll cover this in detail shortly."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"良いユーザビリティテストは確固たる計画から始まります。必須コンポーネントを分解しましょう。"</li>
+<li>"最初：テスト目的。何を学びたいですか？どのデザイン質問に答える必要がありますか？"</li>
+<li>"例えば：「ユーザーは予約を見つけて成功裏に予約できますか？」または「チャットボットのエラーハンドリングは効果的ですか？」"</li>
+<li>"2番目：参加者基準。誰でテストすべきですか？ターゲットユーザーと一致する必要があります。"</li>
+<li>"学生プランナーアプリをデザインしている場合は、学生でテストします。高齢者向けの場合は、高齢者でテストします。"</li>
+<li>"3番目：テストタスク。これらはユーザーが実行するシナリオです。これは重要です - 悪いタスクは悪いデータにつながります。"</li>
+<li>"4番目：テスト環境。どこでテストしますか？どんな機器が必要ですか？プロトタイプのどのバージョン？"</li>
+<li>"5番目：メトリクス。何を測定しますか？これについてはすぐに詳細をカバーします。"</li>
+</ul>
+
+<strong>Practical Tip:</strong>
+<ul>
+<li>"The bot will provide test plan templates to guide you through this process. Don't start from scratch!"</li>
+<li>"ボットはこのプロセスをガイドするテスト計画テンプレートを提供します。ゼロから始めないでください！"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Creating Effective Test Tasks | 効果的なテストタスクの作成</h3>
+
+<h4>Task Writing Best Practices (3 minutes) | タスク作成のベストプラクティス（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Task creation is an art. Good tasks are realistic, specific, scenario-based, measurable, and independent."</li>
+<li>"Let's look at examples. Good task for fitness app: 'You want to track your morning run. Start a running session and record 30 minutes of activity.'"</li>
+<li>"This is realistic - it's something users would actually do. It's specific - clear goal. It's scenario-based - provides context."</li>
+<li>"Bad task example: 'Use the app to do something with running.' This is too vague - users don't know what to accomplish."</li>
+<li>"Another bad example: 'Click the green Start Run button to begin tracking.' This is leading - you're telling them exactly what to do."</li>
+<li>"The goal of testing is to see if users can figure out the interface naturally, not to guide them through it."</li>
+<li>"Write tasks from the user's perspective, not the designer's. Focus on goals, not steps."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"タスク作成は芸術です。良いタスクはリアル、具体的、シナリオベース、測定可能、独立しています。"</li>
+<li>"例を見てみましょう。フィットネスアプリの良いタスク：「朝のランニングを追跡したい。ランニングセッションを開始し、30分のアクティビティを記録してください。」"</li>
+<li>"これはリアルです - ユーザーが実際に行うことです。具体的です - 明確な目標。シナリオベースです - コンテキストを提供します。"</li>
+<li>"悪いタスクの例：「アプリを使用してランニングで何かをする。」これは曖昧すぎます - ユーザーは何を達成すべきかわかりません。"</li>
+<li>"別の悪い例：「緑の「ランニング開始」ボタンをクリックして追跡を開始する。」これは誘導的です - 正確に何をすべきかを伝えています。"</li>
+<li>"テストの目標は、ユーザーが自然にインターフェースを理解できるかどうかを確認することであり、それを通じてガイドすることではありません。"</li>
+<li>"デザイナーの視点ではなく、ユーザーの視点からタスクを書いてください。ステップではなく目標に焦点を当ててください。"</li>
+</ul>
+
+<strong>Activity Preview:</strong>
+<ul>
+<li>"In today's activity, you'll write 5 test tasks for your projects. The bot will help you refine them."</li>
+<li>"今日のアクティビティでは、プロジェクト用に5つのテストタスクを書きます。ボットがそれらを洗練するのを助けます。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: The Think-Aloud Protocol | シンクアラウドプロトコル</h3>
+
+<h4>Think-Aloud Method (2 minutes) | シンクアラウド方法（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"The think-aloud protocol is your secret weapon for understanding what users are thinking."</li>
+<li>"You ask participants to verbalize their thoughts as they use the interface. Everything they're thinking, feeling, and trying to do."</li>
+<li>"This reveals mental models - how users think about the interface. It identifies confusion points. It exposes mismatched expectations."</li>
+<li>"How to facilitate: Give clear instructions at the start. 'Please think out loud as you complete the tasks. Tell me what you're looking for, what you're thinking, and what you're trying to do.'"</li>
+<li>"Emphasize: 'There are no wrong answers - we're testing the design, not you.' This puts participants at ease."</li>
+<li>"When participants go silent, prompt them gently: 'What are you thinking?' 'What do you expect to happen?'"</li>
+<li>"Avoid leading questions! Don't say 'Did you see the button on the right?' Instead ask 'What are you looking for?'"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"シンクアラウドプロトコルは、ユーザーが何を考えているかを理解するための秘密兵器です。"</li>
+<li>"参加者にインターフェースを使用している間に考えを声に出すよう依頼します。考えていること、感じていること、しようとしていることすべて。"</li>
+<li>"これはメンタルモデルを明らかにします - ユーザーがインターフェースについてどう考えているか。混乱ポイントを特定します。不一致の期待を露呈します。"</li>
+<li>"促進方法：最初に明確な指示を与えます。「タスクを完了する際に声に出して考えてください。何を探しているか、何を考えているか、何をしようとしているかを教えてください。」"</li>
+<li>"強調：「間違った答えはありません - デザインをテストしており、あなたではありません。」これは参加者を安心させます。"</li>
+<li>"参加者が沈黙したら、優しく促してください：「何を考えていますか？」「何が起こると予想しますか？」"</li>
+<li>"誘導質問を避けてください！「右側のボタンを見ましたか？」とは言わないでください。代わりに「何を探していますか？」と尋ねてください。"</li>
+</ul>
+
+<strong>Demonstration:</strong>
+<ul>
+<li>If time allows, demonstrate think-aloud with a volunteer</li>
+<li>Show how to prompt without leading</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Usability Metrics - Quantitative Data | ユーザビリティメトリクス - 定量的データ</h3>
+
+<h4>Measuring Usability (3 minutes) | ユーザビリティの測定（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's talk about what to measure. There are four core usability metrics."</li>
+<li>"First: Task success rate. Did users complete the task successfully? This is your most important metric."</li>
+<li>"You can measure this as binary - complete success or complete failure. Or use partial credit - 0%, 50%, 100% completion."</li>
+<li>"Industry benchmark: 78% success rate is considered acceptable for most interfaces. Below that, you have significant usability problems."</li>
+<li>"Second: Time on task. How long did it take? Start timing when the task begins, stop when completed successfully."</li>
+<li>"Look at average time across participants, but also watch for outliers - unusually long times indicate confusion."</li>
+<li>"Important note: Faster isn't always better. If users rush and make errors, or sacrifice accuracy for speed, that's not good usability."</li>
+<li>"Third: Error rate. How many mistakes did users make? Count both slips - unintentional mistakes - and mistakes based on misunderstanding."</li>
+<li>"Track error frequency per task, how long it took to recover, and severity of errors."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"測定するものについて話しましょう。4つのコアユーザビリティメトリクスがあります。"</li>
+<li>"最初：タスク成功率。ユーザーはタスクを成功裏に完了しましたか？これが最も重要なメトリクスです。"</li>
+<li>"これをバイナリとして測定できます - 完全な成功または完全な失敗。または部分的クレジットを使用 - 0%、50%、100%完了。"</li>
+<li>"業界ベンチマーク：ほとんどのインターフェースで78%の成功率が許容できると考えられています。それ以下は、重大なユーザビリティ問題があります。"</li>
+<li>"2番目：タスク時間。どのくらいかかりましたか？タスクが始まったときに計時を開始し、正常に完了したときに停止します。"</li>
+<li>"参加者全体の平均時間を見ますが、外れ値も監視します - 異常に長い時間は混乱を示します。"</li>
+<li>"重要な注意：速いことが常に良いわけではありません。ユーザーが急いでエラーを犯したり、速度のために正確性を犠牲にしたりする場合、それは良いユーザビリティではありません。"</li>
+<li>"3番目：エラー率。ユーザーはいくつの間違いを犯しましたか？意図しない間違い - スリップ - と誤解に基づく間違いの両方を数えます。"</li>
+<li>"タスクごとのエラー頻度、回復にかかった時間、エラーの重大度を追跡します。"</li>
+</ul>
+
+<strong>Practical Example:</strong>
+<ul>
+<li>Show example calculation on board: "5 participants, 5 tasks each = 25 task attempts. 20 successful completions. 20/25 = 80% success rate."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Usability Metrics - Qualitative Data | ユーザビリティメトリクス - 定性的データ</h3>
+
+<h4>Measuring Satisfaction (2 minutes) | 満足度の測定（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"The fourth metric is subjective satisfaction - how users feel about the experience."</li>
+<li>"The System Usability Scale, or SUS, is the industry standard. It's a 10-item questionnaire."</li>
+<li>"Sample questions: 'I think I would like to use this system frequently.' 'I found the system unnecessarily complex.' 'I thought the system was easy to use.'"</li>
+<li>"Users rate on a 5-point scale from Strongly Disagree to Strongly Agree."</li>
+<li>"SUS gives you a score from 0-100. Above 80 is excellent. 70-79 is good. 60-69 is fair. Below 60 needs improvement."</li>
+<li>"Also ask post-task questions: 'How difficult was this task?' 'How confident are you that you completed it correctly?'"</li>
+<li>"These subjective measures are crucial. A task might have high success rate but low satisfaction - that tells you something important."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"4番目のメトリクスは主観的満足度です - ユーザーが体験についてどう感じるか。"</li>
+<li>"システムユーザビリティスケール、またはSUSは、業界標準です。10項目のアンケートです。"</li>
+<li>"サンプル質問：「このシステムを頻繁に使用したいと思います。」「システムが不必要に複雑だと感じました。」「システムは使いやすいと思いました。」"</li>
+<li>"ユーザーは強く同意しないから強く同意するまでの5段階スケールで評価します。"</li>
+<li>"SUSは0-100のスコアを与えます。80以上は優秀です。70-79は良いです。60-69はまあまあです。60未満は改善が必要です。"</li>
+<li>"タスク後の質問も尋ねます：「このタスクはどのくらい難しかったですか？」「正しく完了したと確信していますか？」"</li>
+<li>"これらの主観的測定は重要です。タスクは高い成功率を持つかもしれませんが、低い満足度 - それは重要なことを伝えます。"</li>
+</ul>
+
+<strong>Show Template:</strong>
+<ul>
+<li>Display SUS questionnaire template</li>
+<li>Explain you'll provide this for their projects</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Preparing for Testing Sessions | テストセッションの準備</h3>
+
+<h4>Pre-Test Checklist (2 minutes) | テスト前チェックリスト（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Preparation is key to successful testing. Let's walk through what you need."</li>
+<li>"Materials: Test plan, task scenarios, consent forms, pre-test questionnaire, post-test questionnaire, data recording sheets."</li>
+<li>"Technical setup: Screen recording software, audio recording, camera if you're recording participants, backup devices."</li>
+<li>"Test environment should be quiet and comfortable. Minimize distractions."</li>
+<li>"As moderator, you need to prepare too. Practice your test script. Rehearse think-aloud prompts. Know the prototype thoroughly."</li>
+<li>"Prepare neutral responses to participant questions. Plan time buffers between sessions - you'll need time to reset and review notes."</li>
+<li>"The bot will provide checklists and templates for all of this. You won't be starting from scratch."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"準備は成功したテストの鍵です。必要なものを見ていきましょう。"</li>
+<li>"資料：テスト計画、タスクシナリオ、同意書、事前アンケート、事後アンケート、データ記録シート。"</li>
+<li>"技術的セットアップ：画面録画ソフトウェア、音声録音、参加者を録画する場合はカメラ、バックアップデバイス。"</li>
+<li>"テスト環境は静かで快適である必要があります。気を散らすものを最小限に抑えます。"</li>
+<li>"モデレーターとして、準備も必要です。テストスクリプトを練習してください。シンクアラウドプロンプトをリハーサルしてください。プロトタイプを完全に把握してください。"</li>
+<li>"参加者の質問に対する中立的な応答を準備してください。セッション間のタイムバッファを計画してください - リセットしてノートをレビューする時間が必要です。"</li>
+<li>"ボットはこれすべてのチェックリストとテンプレートを提供します。ゼロから始めることはありません。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Conducting the Test Session | テストセッションの実施</h3>
+
+<h4>Session Flow (2 minutes) | セッションフロー（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"A typical usability test session runs about 60 minutes. Here's the structure."</li>
+<li>"Introduction (5 minutes): Welcome the participant, build rapport, explain the purpose, review consent, explain think-aloud."</li>
+<li>"Emphasize 'We're testing the design, not you' - this is crucial for participant comfort."</li>
+<li>"Pre-test questions (5 minutes): Collect demographics, assess experience level, set baseline."</li>
+<li>"Task scenarios (35-40 minutes): This is the main event. Present tasks one at a time. Observe carefully. Take notes."</li>
+<li>"Prompt think-aloud if participant goes silent, but don't interrupt too much. Avoid helping unless they're completely stuck."</li>
+<li>"Record all metrics: time, success, errors. Note quotes and behaviors."</li>
+<li>"Post-test questions (10 minutes): Administer SUS, ask about overall experience, probe specific observations, get suggestions."</li>
+<li>"Debrief (5 minutes): Thank participant, answer their questions, provide incentive if you have one."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"典型的なユーザビリティテストセッションは約60分間実行されます。構造はこれです。"</li>
+<li>"導入（5分）：参加者を歓迎し、信頼関係を構築し、目的を説明し、同意をレビューし、シンクアラウドを説明します。"</li>
+<li>"「デザインをテストしており、あなたではありません」を強調 - これは参加者の快適さにとって重要です。"</li>
+<li>"テスト前質問（5分）：人口統計を収集し、経験レベルを評価し、ベースラインを設定します。"</li>
+<li>"タスクシナリオ（35-40分）：これがメインイベントです。一度に1つずつタスクを提示します。注意深く観察します。メモを取ります。"</li>
+<li>"参加者が沈黙した場合はシンクアラウドを促しますが、あまり中断しないでください。完全に行き詰まらない限り助けを避けてください。"</li>
+<li>"すべてのメトリクスを記録します：時間、成功、エラー。引用と行動をメモします。"</li>
+<li>"テスト後質問（10分）：SUSを実施し、全体的な体験について尋ね、特定の観察を探り、提案を得ます。"</li>
+<li>"デブリーフ（5分）：参加者に感謝し、質問に答え、インセンティブがある場合は提供します。"</li>
+</ul>
+
+<strong>Time Management:</strong>
+<ul>
+<li>"Stick to the schedule. If a task is taking too long, you can move on - that itself is data."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: Moderator Best Practices | モデレーターのベストプラクティス</h3>
+
+<h4>Do's and Don'ts (2 minutes) | すべきこととすべきでないこと（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Being a good moderator is an art. Here are the do's and don'ts."</li>
+<li>"DO: Stay neutral. Your job is to observe, not to judge. Don't show approval or disapproval of user actions."</li>
+<li>"DO: Listen actively. Pay attention to what users say AND do. Body language tells you a lot."</li>
+<li>"DO: Take detailed notes. You can't rely on memory. Record observations, direct quotes, behaviors."</li>
+<li>"DO: Let users struggle briefly. Don't jump in immediately. See how they problem-solve on their own."</li>
+<li>"DON'T: Lead the user. Never tell them where to click or what to do. That defeats the purpose of testing."</li>
+<li>"DON'T: Defend the design. Even if users criticize your work, stay neutral. Thank them for the feedback."</li>
+<li>"DON'T: Interrupt too quickly. Give users time to think and explore."</li>
+<li>"DON'T: Make assumptions. Ask follow-up questions to understand their reasoning."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"良いモデレーターであることは芸術です。すべきこととすべきでないことはこれです。"</li>
+<li>"すべき：中立を保つ。あなたの仕事は観察することであり、判断することではありません。ユーザーアクションの承認または不承認を示さないでください。"</li>
+<li>"すべき：積極的に聞く。ユーザーが言うことと行うことに注意を払う。ボディランゲージは多くを伝えます。"</li>
+<li>"すべき：詳細なメモを取る。記憶に頼ることはできません。観察、直接引用、行動を記録します。"</li>
+<li>"すべき：ユーザーを少し苦労させる。すぐに飛び込まないでください。彼らが自分で問題を解決する方法を見てください。"</li>
+<li>"すべきでない：ユーザーを誘導する。どこをクリックするか、何をすべきかを決して伝えないでください。それはテストの目的を無効にします。"</li>
+<li>"すべきでない：デザインを擁護する。ユーザーがあなたの作業を批判しても、中立を保ちます。フィードバックに感謝します。"</li>
+<li>"すべきでない：早く中断しすぎる。ユーザーに考えて探索する時間を与えます。"</li>
+<li>"すべきでない：仮定をする。彼らの推論を理解するためにフォローアップ質問をします。"</li>
+</ul>
+
+<strong>Neutral Responses Examples:</strong>
+<ul>
+<li>Practice these: "What do you expect to see?" "Tell me more about that." "Why did you choose that option?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: Recording and Documenting Findings | 調査結果の記録と文書化</h3>
+
+<h4>Data Collection (2 minutes) | データ収集（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Capturing data accurately is crucial. You need both quantitative and qualitative data."</li>
+<li>"Quantitative: task success/failure, time to complete, number and type of errors, number of attempts, SUS scores."</li>
+<li>"Qualitative: participant quotes - write them verbatim! Observed behaviors, body language, confusion points, pain points, positive reactions."</li>
+<li>"Use observation sheets with space for notes. The bot will provide templates."</li>
+<li>"Here's an example observation sheet structure: Participant ID, Task description, Time started/ended, Total time, Success status."</li>
+<li>"Then notes section: Observations, quotes, errors, anything notable."</li>
+<li>"After each session, immediately review and expand your notes while fresh in memory."</li>
+<li>"If you're recording video, timestamps are helpful - note when interesting things happen so you can find them later."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"データを正確にキャプチャすることは重要です。定量的データと定性的データの両方が必要です。"</li>
+<li>"定量的：タスク成功/失敗、完了時間、エラーの数と種類、試行回数、SUSスコア。"</li>
+<li>"定性的：参加者の引用 - 逐語的に書いてください！観察された行動、ボディランゲージ、混乱ポイント、ペインポイント、ポジティブな反応。"</li>
+<li>"メモ用のスペースがある観察シートを使用します。ボットがテンプレートを提供します。"</li>
+<li>"観察シート構造の例はこれです：参加者ID、タスク説明、開始/終了時間、合計時間、成功状態。"</li>
+<li>"その後メモセクション：観察、引用、エラー、注目すべきこと。"</li>
+<li>"各セッション後、すぐにメモをレビューして拡張します - 記憶が新鮮なうちに。"</li>
+<li>"ビデオを録画している場合、タイムスタンプが役立ちます - 興味深いことが起こったときにメモして、後で見つけることができます。"</li>
+</ul>
+
+<strong>Show Template:</strong>
+<ul>
+<li>Display sample observation sheet</li>
+<li>Walk through how to fill it out</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Common Usability Issues to Watch For | 注意すべき一般的なユーザビリティ問題</h3>
+
+<h4>Issue Categories (2 minutes) | 問題カテゴリ（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let me prepare you for common issues you'll likely see in testing."</li>
+<li>"Navigation issues: Users can't find features. Labels are unclear. Information architecture doesn't make sense to them."</li>
+<li>"Interaction issues: Elements don't respond visually when tapped. Users can't tell what's clickable. Similar actions work differently in different parts of the interface."</li>
+<li>"Content issues: Too much text - users won't read walls of text. Jargon or technical language confuses them. Missing information - they need more context."</li>
+<li>"Visual design issues: Poor color contrast makes text hard to read. Touch targets too small - hard to tap accurately on mobile. Visual hierarchy unclear - can't tell what's important."</li>
+<li>"Error handling issues: Error messages don't explain what went wrong. No way to undo or fix mistakes. Actions fail silently with no feedback."</li>
+<li>"Watch for these patterns in your testing. When you see the same issue with multiple users, you know it's a real problem that needs fixing."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"テストで見る可能性が高い一般的な問題に備えさせてください。"</li>
+<li>"ナビゲーション問題：ユーザーが機能を見つけられない。ラベルが不明確。情報アーキテクチャが彼らにとって意味をなさない。"</li>
+<li>"インタラクション問題：要素がタップされたときに視覚的に応答しない。ユーザーが何がクリック可能かわからない。類似のアクションがインターフェースの異なる部分で異なる動作をする。"</li>
+<li>"コンテンツ問題：テキストが多すぎる - ユーザーはテキストの壁を読みません。専門用語または技術言語が彼らを混乱させる。情報不足 - より多くのコンテキストが必要。"</li>
+<li>"ビジュアルデザイン問題：色のコントラストが悪いとテキストが読みにくい。タッチターゲットが小さすぎる - モバイルで正確にタップするのが難しい。ビジュアル階層が不明確 - 何が重要かわからない。"</li>
+<li>"エラーハンドリング問題：エラーメッセージが何が間違ったかを説明しない。間違いを元に戻すまたは修正する方法がない。アクションがフィードバックなしで静かに失敗する。"</li>
+<li>"テストでこれらのパターンを監視してください。複数のユーザーで同じ問題を見たとき、それは修正が必要な実際の問題であることがわかります。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: Ethics and Participant Care | 倫理と参加者ケア</h3>
+
+<h4>Ethical Testing (1 minute) | 倫理的テスト（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Ethics matter in usability testing. You're working with real people."</li>
+<li>"Informed consent: Explain the study purpose, what they'll do, how data will be used. Obtain written consent. Let them know they can withdraw anytime."</li>
+<li>"Privacy: Anonymize participant data. Store recordings securely. Only share with authorized team members."</li>
+<li>"Participant comfort: Create a welcoming environment. Make clear there are no wrong answers. Allow breaks. Respect their time."</li>
+<li>"Building trust: Be warm and approachable. Thank participants sincerely. Explain how their feedback helps improve the design."</li>
+<li>"For your student projects, you'll test with classmates and friends. Still follow these principles - they're professional standards."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ユーザビリティテストでは倫理が重要です。実際の人々と協力しています。"</li>
+<li>"インフォームドコンセント：研究目的、彼らが何をするか、データがどのように使用されるかを説明します。書面による同意を取得します。いつでも撤退できることを知らせます。"</li>
+<li>"プライバシー：参加者データを匿名化します。録画を安全に保存します。承認されたチームメンバーのみと共有します。"</li>
+<li>"参加者の快適さ：歓迎的な環境を作成します。間違った答えはないことを明確にします。休憩を許可します。時間を尊重します。"</li>
+<li>"信頼の構築：温かく親しみやすくします。参加者に心から感謝します。フィードバックがデザインを改善するのにどのように役立つかを説明します。"</li>
+<li>"学生プロジェクトでは、クラスメートや友人でテストします。それでもこれらの原則に従ってください - プロフェッショナルスタンダードです。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Today's Activity Preview | 今日のアクティビティプレビュー</h3>
+
+<h4>Activity Overview (1 minute) | アクティビティ概要（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now for the hands-on part! You'll create your usability test plan and practice testing."</li>
+<li>"Part 1 (25 minutes): Create your test plan. Define objectives, identify participants, write 5 tasks, define success criteria, plan metrics."</li>
+<li>"The bot will guide you with templates and feedback. This is your blueprint for testing your project."</li>
+<li>"Part 2 (25 minutes): Practice think-aloud testing in pairs. One person is moderator, one is participant. Test each other's prototypes."</li>
+<li>"Experience both roles - it's incredibly valuable. When you're the participant, really think aloud. When you're moderator, practice staying neutral."</li>
+<li>"Part 3 (10 minutes): Debrief. Discuss what you learned, identify issues, reflect on the experience."</li>
+<li>"You'll submit your test plan and practice notes. This prepares you for actual testing next week."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ハンズオン部分になりました！ユーザビリティテスト計画を作成し、テストを実践します。"</li>
+<li>"パート1（25分）：テスト計画を作成します。目的を定義し、参加者を特定し、5つのタスクを書き、成功基準を定義し、メトリクスを計画します。"</li>
+<li>"ボットがテンプレートとフィードバックでガイドします。これはプロジェクトをテストするための青写真です。"</li>
+<li>"パート2（25分）：ペアでシンクアラウドテストを実践します。1人がモデレーター、1人が参加者。お互いのプロトタイプをテストします。"</li>
+<li>"両方の役割を経験 - 非常に価値があります。参加者のときは、本当に声に出して考えてください。モデレーターのときは、中立を保つ練習をしてください。"</li>
+<li>"パート3（10分）：デブリーフ。学んだことを議論し、問題を特定し、体験を振り返ります。"</li>
+<li>"テスト計画と実践ノートを提出します。これは来週の実際のテストに備えます。"</li>
+</ul>
+
+<strong>Transition:</strong>
+<ul>
+<li>"Let's get started! Access the bot portal for your test plan template."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Key Takeaways | 重要なポイント</h3>
+
+<h4>Closing (1 minute) | クロージング（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's recap the key points from today."</li>
+<li>"Test early and often. Don't wait for perfection. Testing reveals issues you can't predict."</li>
+<li>"You are NOT the user. Your assumptions may be wrong. Real users think and behave differently."</li>
+<li>"Small sample, big insights. 5 users uncover 85% of problems. Quality over quantity."</li>
+<li>"Both metrics matter. Quantitative tells you what happened. Qualitative tells you why."</li>
+<li>"Next week, we'll analyze your test results and learn how to prioritize issues and create actionable recommendations."</li>
+<li>"The testing phase is exciting - you're about to discover what works and what doesn't in your designs. Embrace the insights!"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日の重要なポイントを振り返りましょう。"</li>
+<li>"早くそして頻繁にテストします。完璧を待たないでください。テストは予測できない問題を明らかにします。"</li>
+<li>"あなたはユーザーではありません。あなたの仮定は間違っているかもしれません。実際のユーザーは異なる考えと行動をします。"</li>
+<li>"小さいサンプル、大きい洞察。5人のユーザーが85%の問題を発見します。量より質。"</li>
+<li>"両方のメトリクスが重要です。定量的は何が起こったかを伝えます。定性的はなぜかを伝えます。"</li>
+<li>"来週、テスト結果を分析し、問題に優先順位を付け、実行可能な推奨事項を作成する方法を学びます。"</li>
+<li>"テストフェーズはエキサイティングです - デザインで何が機能し、何が機能しないかを発見しようとしています。洞察を受け入れてください！"</li>
+</ul>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Part 1: Create Usability Test Plan (25 minutes) | パート1：ユーザビリティテスト計画の作成（25分）</h3>
+
+<h4>Instructions for Students | 学生への指示</h4>
+<p>1. Access bot portal for test plan template</p>
+<p>2. Define 2-3 test objectives for your project</p>
+<p>3. Identify participant criteria (demographics, experience)</p>
+<p>4. Write 5 realistic test tasks with scenarios</p>
+<p>5. Define success criteria for each task</p>
+<p>6. Plan which metrics to collect (success rate, time, errors, SUS)</p>
+<p>7. Get bot feedback on task quality</p>
+
+<h4>Facilitator Role | ファシリテーターの役割</h4>
+<ul>
+<li>Circulate and provide guidance</li>
+<li>Help students write clear, unbiased tasks</li>
+<li>Ensure tasks are realistic and measurable</li>
+<li>Point out leading or vague tasks</li>
+<li>Encourage use of bot for feedback</li>
+<li>Check that success criteria are specific</li>
+</ul>
+
+<h4>Common Issues to Address | 対処すべき一般的な問題</h4>
+<ul>
+<li>Tasks that are too vague or too specific</li>
+<li>Leading language in task descriptions</li>
+<li>Unrealistic scenarios</li>
+<li>Undefined success criteria</li>
+<li>Missing metrics planning</li>
+</ul>
+
+<hr>
+
+<h3>Part 2: Practice Think-Aloud Testing (25 minutes) | パート2：シンクアラウドテストの実践（25分）</h3>
+
+<h4>Activity Structure | アクティビティ構造</h4>
+<ul>
+<li><strong>Pair Formation (2 minutes):</strong> Students pair up</li>
+<li><strong>Round 1 (10 minutes):</strong> Partner A moderates, Partner B tests</li>
+<li><strong>Swap (1 minute):</strong> Switch roles</li>
+<li><strong>Round 2 (10 minutes):</strong> Partner B moderates, Partner A tests</li>
+<li><strong>Individual Reflection (2 minutes):</strong> Note observations</li>
+</ul>
+
+<h4>Instructions for Moderators | モデレーターへの指示</h4>
+<ul>
+<li>Select 2-3 tasks from your test plan</li>
+<li>Explain think-aloud protocol to participant</li>
+<li>Observe and take notes</li>
+<li>Practice neutral prompting</li>
+<li>Record time, success, and errors</li>
+<li>Note quotes and behaviors</li>
+</ul>
+
+<h4>Instructions for Participants | 参加者への指示</h4>
+<ul>
+<li>Think aloud as you complete tasks</li>
+<li>Share what you're looking for</li>
+<li>Explain what you expect to happen</li>
+<li>Don't worry about "doing it wrong"</li>
+<li>Be honest about confusion or frustration</li>
+</ul>
+
+<h4>Facilitator Monitoring | ファシリテーター監視</h4>
+<ul>
+<li>Observe pair interactions</li>
+<li>Provide coaching on moderator techniques</li>
+<li>Remind moderators to stay neutral</li>
+<li>Ensure think-aloud is happening</li>
+<li>Help with technical issues</li>
+</ul>
+
+<hr>
+
+<h3>Part 3: Debrief and Reflection (10 minutes) | パート3：デブリーフと振り返り（10分）</h3>
+
+<h4>Group Discussion Questions | グループディスカッション質問</h4>
+<ul>
+<li>What surprised you during testing?</li>
+<li>What usability issues did you discover?</li>
+<li>How did it feel to be the moderator? The participant?</li>
+<li>What was challenging about staying neutral?</li>
+<li>What insights did you gain about your design?</li>
+</ul>
+
+<h4>Bot-Guided Reflection | ボットガイド付き振り返り</h4>
+<ul>
+<li>Students complete bot reflection exercise</li>
+<li>Share key learnings and observations</li>
+<li>Identify next steps for their projects</li>
+</ul>
+
+<h4>Wrap-Up | まとめ</h4>
+<ul>
+<li>Collect test plans and practice notes</li>
+<li>Remind about Week 11 (analysis and prioritization)</li>
+<li>Assign homework: Recruit 2-3 participants for real testing</li>
+<li>Provide encouragement and next steps</li>
+</ul>
+
+<hr>
+
+<h2>Assessment and Feedback | 評価とフィードバック</h2>
+
+<h3>Deliverables to Collect | 収集する成果物</h3>
+<li class="checkbox">&#9744; Usability test plan (objectives, tasks, criteria, metrics)</li>
+<li class="checkbox">&#9744; Practice test observation notes</li>
+<li class="checkbox">&#9744; Bot interaction log (optional)</li>
+
+<h3>Grading Criteria | 採点基準</h3>
+
+<h4>Test Plan Quality (70%)</h4>
+<ul>
+<li>Clear, specific test objectives</li>
+<li>Well-defined participant criteria</li>
+<li>5 realistic, unbiased test tasks</li>
+<li>Measurable success criteria</li>
+<li>Appropriate metrics planning</li>
+<li>Professional presentation</li>
+</ul>
+
+<h4>Practice Test Notes (20%)</h4>
+<ul>
+<li>Detailed observations recorded</li>
+<li>Quotes captured</li>
+<li>Metrics tracked (time, success, errors)</li>
+<li>Evidence of think-aloud protocol</li>
+<li>Insights identified</li>
+</ul>
+
+<h4>Participation (10%)</h4>
+<ul>
+<li>Active engagement in pair activity</li>
+<li>Thoughtful reflection</li>
+<li>Bot portal usage</li>
+<li>Constructive peer feedback</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Procedures | 緊急手順</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+<ul>
+<li><strong>Bot Portal Down:</strong> Provide printed test plan template</li>
+<li><strong>Prototype Not Working:</strong> Use paper prototypes for practice</li>
+<li><strong>Recording Issues:</strong> Focus on manual note-taking</li>
+</ul>
+
+<h3>Student Issues | 学生の問題</h3>
+<ul>
+<li><strong>Pairing Challenges:</strong> Instructor can join as partner</li>
+<li><strong>Design Not Ready:</strong> Use example interface for practice</li>
+<li><strong>Time Constraints:</strong> Prioritize test plan creation, shorten practice</li>
+</ul>
+
+<h3>Communication Plan | コミュニケーション計画</h3>
+<ul>
+<li><strong>In-Class Support:</strong> Circulate actively</li>
+<li><strong>Email Follow-up:</strong> Answer questions promptly</li>
+<li><strong>Bot Support:</strong> 24/7 availability for assistance</li>
+<li><strong>Office Hours:</strong> Schedule for individual help</li>
+</ul>
+
+<hr>
+
+<h2>Instructor Reflection | インストラクター振り返り</h2>
+
+<h3>Post-Class Review Questions | クラス後レビュー質問</h3>
+<ul>
+<li>Did students understand the difference between moderated and unmoderated testing?</li>
+<li>Were students able to write unbiased, realistic test tasks?</li>
+<li>Did the practice testing help students understand the moderator role?</li>
+<li>What common challenges emerged that need addressing next week?</li>
+<li>Were the bot templates helpful and used effectively?</li>
+</ul>
+
+<h3>Adjustments for Next Time | 次回の調整</h3>
+<ul>
+<li>Note which concepts needed more explanation</li>
+<li>Identify additional examples that would be helpful</li>
+<li>Consider time allocation for activity segments</li>
+<li>Gather student feedback on activity effectiveness</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week09-instructor-notes.html" class="nav-btn nav-prev">← Week 9</a>
+        <span class="nav-current">Week 10 Instructor Notes</span>
+        <a href="week11-instructor-notes.html" class="nav-btn nav-next">Week 11 →</a>
+        <a href="week10-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

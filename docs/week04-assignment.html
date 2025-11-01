@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4: Assignment - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #f8f9fa; }
+        nav { background: #2a76dd; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; padding: 8px 15px; border-radius: 5px; transition: background 0.3s; }
+        nav a:hover { background: rgba(255,255,255,0.2); }
+        main { margin-top: 80px; padding: 40px 20px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .assignment-header { background: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .assignment-header h1 { color: #2a76dd; margin: 0 0 10px 0; }
+        .assignment-header .subtitle { color: #666; font-size: 1.1em; }
+        .section { background: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .section h2 { color: #2a76dd; border-bottom: 3px solid #2a76dd; padding-bottom: 10px; margin-top: 0; }
+        .section h3 { color: #7c3aed; margin-top: 25px; }
+        .deliverable-box { background: #f0f7ff; border-left: 4px solid #2a76dd; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        .requirement-list { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 15px 0; }
+        .requirement-list li { margin: 10px 0; }
+        .grading-rubric { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .grading-rubric th { background: #2a76dd; color: white; padding: 12px; text-align: left; }
+        .grading-rubric td { padding: 12px; border: 1px solid #ddd; }
+        .grading-rubric tr:nth-child(even) { background: #f8f9fa; }
+        .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="week03-assignment.html">← Previous Week</a>
+        <a href="week04-presentation.html">📊 View Presentation</a>
+        <a href="week04-instructor-notes.html">📖 Instructor Notes</a>
+        <a href="week05-assignment.html">Next Week →</a>
+    </nav>
+
+    <main>
+        <div class="assignment-header">
+            <h1>Week 4: Personas and Journey Mapping Assignment</h1>
+            <p class="subtitle">Creating Design Artifacts from Research</p>
+            <p class="bilingual">第4週：ペルソナとジャーニーマッピング課題 - 調査からデザインアーティファクトを作成</p>
+        </div>
+
+        <div class="section">
+            <h2>📋 Assignment Overview / 課題概要</h2>
+            <p>Transform your user research data into actionable design artifacts: personas, user journey maps, scenarios, and requirements. These artifacts will guide your design decisions throughout the project.</p>
+            <p class="bilingual">ユーザー調査データを実用的なデザインアーティファクトに変換します：ペルソナ、ユーザージャーニーマップ、シナリオ、要件。</p>
+        </div>
+
+        <div class="section">
+            <h2>📝 Activity Description / アクティビティ説明</h2>
+
+            <h3>Task 1: Create Personas (ペルソナ作成)</h3>
+            <p>Develop 2-4 evidence-based personas including:</p>
+            <ul>
+                <li>Name, photo, demographic details</li>
+                <li>Goals and motivations</li>
+                <li>Behaviors and tech proficiency</li>
+                <li>Pain points and frustrations</li>
+                <li>Quote that captures their perspective</li>
+                <li>Evidence linking to your interview data</li>
+            </ul>
+
+            <h3>Task 2: User Journey Map (ジャーニーマップ)</h3>
+            <p>Create a detailed journey map with 5-6 stages showing:</p>
+            <ul>
+                <li>Actions users take at each stage</li>
+                <li>Emotional state (emotional graph)</li>
+                <li>Touchpoints (where they interact)</li>
+                <li>Pain points (problems they encounter)</li>
+                <li>Opportunities for improvement</li>
+            </ul>
+
+            <h3>Task 3: Write Scenarios (シナリオ)</h3>
+            <p>Create both current and future state scenarios:</p>
+            <ul>
+                <li><strong>Current State:</strong> How users currently accomplish their goal (with pain points)</li>
+                <li><strong>Future State:</strong> How they would accomplish it with your solution</li>
+                <li>Be specific with names, contexts, and actions</li>
+                <li>Include realistic details</li>
+            </ul>
+
+            <h3>Task 4: Extract Requirements (要件抽出)</h3>
+            <p>Develop 8-12 prioritized requirements with:</p>
+            <ul>
+                <li>Clear requirement statement</li>
+                <li>Priority level (Must have, Should have, Nice to have)</li>
+                <li>Traceability to personas/journey map</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📦 Deliverables / 提出物</h2>
+            <div class="deliverable-box">
+                <h3>Design Artifact Package</h3>
+                <p><strong>Format:</strong> PDF document (6-8 pages)</p>
+
+                <div class="requirement-list">
+                    <strong>Required Components:</strong>
+                    <ol>
+                        <li><strong>Personas (2-3 pages):</strong> 2-4 comprehensive personas with all components</li>
+                        <li><strong>Journey Map (1-2 pages):</strong> Detailed map with 5-6 stages, emotions, and opportunities</li>
+                        <li><strong>Scenarios (1-2 pages):</strong> Both current and future state scenarios (highly specific)</li>
+                        <li><strong>Requirements (1 page):</strong> 8-12 prioritized requirements with traceability</li>
+                        <li><strong>Bot Interaction:</strong> Screenshots showing bot guidance</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Grading Rubric / 評価基準</h2>
+
+            <table class="grading-rubric">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Score</th>
+                        <th>Criteria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Excellent</strong></td>
+                        <td>90-100%</td>
+                        <td>3-4 evidence-based personas, comprehensive journey map (5-6 stages), both scenarios detailed, 8-12 prioritized requirements with clear traceability</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Good</strong></td>
+                        <td>80-89%</td>
+                        <td>2-3 solid personas, good journey map (4-5 stages), both scenarios present, 6-10 requirements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Satisfactory</strong></td>
+                        <td>70-79%</td>
+                        <td>1-2 basic personas, journey map (3-4 stages), at least one scenario, 4-6 requirements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Needs Improvement</strong></td>
+                        <td>&lt;70%</td>
+                        <td>Incomplete or generic work, missing key components</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>✅ Submission Requirements / 提出要件</h2>
+            <div class="requirement-list">
+                <ul>
+                    <li><strong>File Format:</strong> PDF</li>
+                    <li><strong>File Naming:</strong> LastName_FirstName_Week04.pdf</li>
+                    <li><strong>Length:</strong> 6-8 pages</li>
+                    <li><strong>Due Date:</strong> Before next class session</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 Tips for Success / 成功のためのヒント</h2>
+            <ul>
+                <li><strong>Base personas on data:</strong> Every detail should trace back to your research</li>
+                <li><strong>Show emotions:</strong> Journey maps should visualize emotional highs and lows</li>
+                <li><strong>Be specific in scenarios:</strong> Use names, times, locations</li>
+                <li><strong>Prioritize requirements:</strong> Not everything can be "must have"</li>
+                <li><strong>Use templates:</strong> Ask the bot for persona and journey map templates</li>
+                <li><strong>Keep it visual:</strong> Use diagrams, icons, and emotional curves</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer style="background: #2a76dd; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2025 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
+    </footer>
+</body>
+</html>

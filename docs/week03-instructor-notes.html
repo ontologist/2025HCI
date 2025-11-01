@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 3 Instructor Notes | 第3週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week02-instructor-notes.html" class="nav-btn nav-prev">← Week 2</a>
+        <span class="nav-current">Week 3 Instructor Notes</span>
+        <a href="week04-instructor-notes.html" class="nav-btn nav-next">Week 4 →</a>
+        <a href="week03-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 3 Instructor Notes: User Research Methods and Needs Analysis</h1>
+<h1>第3週インストラクターノート：ユーザー調査方法とニーズ分析</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction in the Era of Smart Devices and AI Chatbots
+<strong>コース：</strong> HCI-101 - スマートデバイスとAIチャットボット時代のヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Semester:</strong> Fall 2025 | 2025年秋学期
+<strong>Duration:</strong> 15-20 minutes lecture + 60-70 minutes hands-on activity | 15-20分講義 + 60-70分ハンズオンアクティビティ
+
+<hr>
+
+<h2>Lecture Overview | 講義概要</h2>
+
+<h3>Key Learning Objectives | 主要学習目標</h3>
+<p>Students will master user research methods, conduct effective interviews, and synthesize findings into actionable user needs.</p>
+<p>学生はユーザー調査方法をマスターし、効果的なインタビューを実施し、調査結果を実行可能なユーザーニーズに統合する。</p>
+
+<h3>Lecture Flow | 講義の流れ</h3>
+<p>1. <strong>Introduction</strong> (2 min): Research foundation importance | 調査基盤の重要性</p>
+<p>2. <strong>Research Methods Overview</strong> (6 min): Interviews, surveys, observation | インタビュー、調査、観察</p>
+<p>3. <strong>Interview Techniques</strong> (7 min): Question types, active listening | 質問タイプ、アクティブリスニング</p>
+<p>4. <strong>Data Analysis</strong> (3 min): Affinity mapping and synthesis | アフィニティマッピングと統合</p>
+<p>5. <strong>Activity Preview</strong> (2 min): What students will do today | 学生が今日やること</p>
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Test bot portal access and functionality</li>
+<li class="checkbox">&#9744; Verify all students can access bot's research templates</li>
+<li class="checkbox">&#9744; Prepare interview guide examples to share</li>
+<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
+<li class="checkbox">&#9744; Have backup materials for internet issues</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Interview guide template (printed and digital)</li>
+<li class="checkbox">&#9744; Note-taking sheets for interviews</li>
+<li class="checkbox">&#9744; Affinity mapping materials (sticky notes or digital tools)</li>
+<li class="checkbox">&#9744; Research ethics guidelines handout</li>
+<li class="checkbox">&#9744; User needs statement template</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Arrange seating for pair work and interviews</li>
+<li class="checkbox">&#9744; Ensure good acoustics for recording</li>
+<li class="checkbox">&#9744; Prepare space for affinity mapping activity</li>
+<li class="checkbox">&#9744; Set up for small group discussions</li>
+<li class="checkbox">&#9744; Have quiet areas available for interviews</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to User Research Week! | ユーザー調査週へようこそ！</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Connect to previous week</strong> | 前週とつなげる: "Last week you practiced the complete design thinking process. Today we dive deep into the foundation - user research."</li>
+<li><strong>Check understanding</strong> | 理解をチェック: "Who can remind us what the first stage of design thinking is?" (Empathize)</li>
+<li><strong>Set expectations</strong> | 期待を設定: "Today is hands-on - you'll conduct real user interviews by the end of class"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Research is not optional</strong> | 調査はオプションではない: It's the foundation of good design</li>
+<li><strong>Skills are transferable</strong> | スキルは転用可能: Interview skills apply beyond HCI</li>
+<li><strong>Practice makes perfect</strong> | 練習が完璧を作る: First interviews feel awkward, but improve quickly</li>
+</ul>
+
+<h4>Common Questions | よくある質問</h4>
+<ul>
+<li><strong>"How many people do I need to interview?"</strong> | 「何人にインタビューする必要がありますか？」</li>
+</ul>
+<p>  - <strong>Answer:</strong> 5-8 users for qualitative research is standard. We'll do 2-3 today for practice.</p>
+<ul>
+<li><strong>"What if people don't want to answer?"</strong> | 「人々が答えたくない場合はどうしますか？」</li>
+</ul>
+<p>  - <strong>Answer:</strong> Respect that. Move on gracefully. Their comfort is most important.</p>
+
+<hr>
+
+<h3>Slide 2: Why User Research Matters | なぜユーザー調査が重要なのか</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Use real examples</strong> | 実際の例を使用: "Think of apps you've deleted. Often they failed because designers didn't understand users."</li>
+<li><strong>Tell the Airbnb story</strong> | Airbnbのストーリーを語る: Emphasize how research transformed their business</li>
+<li><strong>Make it personal</strong> | 個人的にする: "Have you ever felt an app just 'gets' you? That's the result of good research."</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Assumptions are dangerous</strong> | 仮定は危険: Designers are not users</li>
+<li><strong>Research saves resources</strong> | 調査はリソースを節約: Better to learn early than fail late</li>
+<li><strong>Hidden insights are gold</strong> | 隠された洞察は金: Users can't always articulate needs - research reveals them</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Interactive moment</strong> | インタラクティブな瞬間: "Raise your hand if you've used an app that seemed designed by someone who never talked to users"</li>
+<li><strong>Use humor</strong> | ユーモアを使用: Share a funny example of bad design from assumption</li>
+<li><strong>Connect to projects</strong> | プロジェクトとつなげる: "Your final project will be better because of research"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: Types of User Research | ユーザー調査のタイプ</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Draw matrix on board</strong> | ボードにマトリックスを描く: Qualitative vs. Quantitative, Attitudinal vs. Behavioral</li>
+<li><strong>Use examples</strong> | 例を使用: "If I want to know WHY students struggle, I interview. If I want to know HOW MANY, I survey."</li>
+<li><strong>Emphasize difference</strong> | 違いを強調: "What people say vs. what people do - this is crucial!"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Right tool for right question</strong> | 正しい質問のための正しいツール: Different methods answer different questions</li>
+<li><strong>Early research is qualitative</strong> | 初期調査は質的: Understand before measuring</li>
+<li><strong>Behavior > Attitudes</strong> | 行動 > 態度: Watch what they do, not just what they say</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Ask for examples</strong> | 例を求める: "When would you use a survey vs. an interview?"</li>
+<li><strong>Address confusion</strong> | 混乱に対処: Students often confuse qualitative with quantitative</li>
+<li><strong>Provide decision framework</strong> | 決定フレームワークを提供: "Start with 'what do I want to learn?'"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: User Interview Fundamentals | ユーザーインタビューの基礎</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Explain interview types</strong> | インタビュータイプを説明: Focus on semi-structured for HCI</li>
+<li><strong>Show timing breakdown</strong> | タイミングの内訳を表示: Intro, warm-up, main, wrap-up</li>
+<li><strong>Emphasize structure</strong> | 構造を強調: "Structure gives you confidence and ensures you get what you need"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Semi-structured is best</strong> | 半構造化が最良: Balance consistency with flexibility</li>
+<li><strong>Introduction matters</strong> | イントロダクションが重要: Set tone, build rapport</li>
+<li><strong>Permission is essential</strong> | 許可は不可欠: Always get consent before starting</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Role-play briefly</strong> | 簡単にロールプレイ: Demonstrate bad vs. good introduction</li>
+<li><strong>Show empathy</strong> | 共感を示す: "First interviews are nervous - that's normal!"</li>
+<li><strong>Provide script</strong> | スクリプトを提供: "Use the introduction template until you're comfortable"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Conducting Effective Interviews | 効果的なインタビューの実施</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Walk through each stage</strong> | 各段階を歩く: Introduction, warm-up, main questions, wrap-up</li>
+<li><strong>Provide time guidance</strong> | 時間ガイダンスを提供: "2-3 minutes intro, 15-20 main questions"</li>
+<li><strong>Show examples</strong> | 例を表示: Display sample warm-up questions</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Warm-up builds comfort</strong> | ウォームアップが快適さを構築: Don't skip this step</li>
+<li><strong>Main questions are core</strong> | メイン質問がコア: This is where insights come from</li>
+<li><strong>Always wrap up properly</strong> | 常に適切にまとめる: Thank them, explain next steps</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Practice with students</strong> | 学生と練習: "Let me show you a 2-minute warm-up right now"</li>
+<li><strong>Address nervousness</strong> | 緊張に対処: "It gets easier with practice - I promise!"</li>
+<li><strong>Emphasize respect</strong> | 尊重を強調: "Their time is valuable - stay on schedule"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: The Art of Asking Questions | 質問の技術</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Show bad vs. good questions</strong> | 悪い質問 vs 良い質問を表示: Use concrete examples</li>
+<li><strong>Practice transformation</strong> | 変換を練習: Turn closed questions into open ones</li>
+<li><strong>Demonstrate probing</strong> | 探索を実演: Show how "why" leads to insights</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Open-ended is gold</strong> | オープンエンドは金: Gets stories, not yes/no</li>
+<li><strong>Behavior beats hypotheticals</strong> | 行動が仮定に勝る: Past actions are reliable</li>
+<li><strong>Probing reveals depth</strong> | 探索が深さを明らかにする: Follow up on interesting answers</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Interactive exercise</strong> | インタラクティブな演習: "Let's transform this question together"</li>
+<li><strong>Use student examples</strong> | 学生の例を使用: "What's a closed question about course registration?"</li>
+<li><strong>Practice probing</strong> | 探索を練習: "Ask me about my morning - practice 'why' and 'tell me more'"</li>
+</ul>
+
+<h4>Common Student Mistakes | 一般的な学生の間違い</h4>
+<ul>
+<li><strong>Leading questions</strong> | 誘導質問: "Don't you think..." suggests the answer</li>
+<li><strong>Double-barreled questions</strong> | 二重質問: Asking two things at once confuses</li>
+<li><strong>Too many closed questions</strong> | クローズド質問が多すぎる: Results in surface-level data</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Active Listening Skills | アクティブリスニングスキル</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Demonstrate listening</strong> | リスニングを実演: Have student speak, show active listening techniques</li>
+<li><strong>Explain silence</strong> | 沈黙を説明: "Count to 5 in your head - don't fill every gap"</li>
+<li><strong>Show body language</strong> | ボディランゲージを示す: What to watch for in participants</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Listening is active work</strong> | リスニングはアクティブな作業: Not passive hearing</li>
+<li><strong>Silence is powerful</strong> | 沈黙は強力: Let them think</li>
+<li><strong>Body language reveals emotion</strong> | ボディランゲージが感情を明らかにする: Watch for frustration, excitement</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Practice silence</strong> | 沈黙を練習: "Let's sit in silence for 5 seconds - feels long, right?"</li>
+<li><strong>Show note-taking</strong> | メモ取りを表示: "Capture quotes, behaviors, emotions"</li>
+<li><strong>Emphasize presence</strong> | 存在を強調: "Put your phone away - be fully there"</li>
+</ul>
+
+<h4>Interactive Activity | インタラクティブアクティビティ</h4>
+<ul>
+<li>Ask a student a question, demonstrate active listening techniques</li>
+<li>Point out: nodding, eye contact, paraphrasing, not interrupting</li>
+<li>Have students pair up for 2-minute practice</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Observation Methods | 観察方法</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Explain types</strong> | タイプを説明: Direct observation, contextual inquiry, think-aloud</li>
+<li><strong>Show differences</strong> | 違いを表示: When to use each method</li>
+<li><strong>Emphasize "do vs. say"</strong> | 「する vs 言う」を強調: Behavior is truth</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Observation complements interviews</strong> | 観察がインタビューを補完: Use both together</li>
+<li><strong>Context matters</strong> | コンテキストが重要: Where/when affects behavior</li>
+<li><strong>Don't interfere</strong> | 干渉しない: Watch naturally, don't help</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Show video example</strong> | ビデオ例を表示: If available, show observation in action</li>
+<li><strong>Practice observation</strong> | 観察を練習: "Watch me use this app for 30 seconds - what do you notice?"</li>
+<li><strong>Connect to testing</strong> | テストとつなげる: "You'll use this in Week 6 for usability testing"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Surveys: When and How to Use Them | 調査：いつどのように使用するか</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Clarify purpose</strong> | 目的を明確にする: "Surveys quantify, interviews explore"</li>
+<li><strong>Show survey examples</strong> | 調査例を表示: Good and bad survey questions</li>
+<li><strong>Explain limitations</strong> | 制限を説明: "Can't discover unknown problems with surveys"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Use after interviews</strong> | インタビュー後に使用: Validate patterns found qualitatively</li>
+<li><strong>Keep short</strong> | 短く保つ: 5-10 minutes maximum</li>
+<li><strong>Clear language</strong> | 明確な言語: No jargon, one question at a time</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Show bad examples</strong> | 悪い例を表示: Leading, ambiguous, double-barreled questions</li>
+<li><strong>Explain when NOT to survey</strong> | 調査しない時を説明: Early exploration, understanding "why"</li>
+<li><strong>Connect to projects</strong> | プロジェクトとつなげる: "You might use surveys later to validate designs"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Analyzing Qualitative Data | 質的データの分析</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Explain affinity mapping</strong> | アフィニティマッピングを説明: Visual, collaborative analysis method</li>
+<li><strong>Walk through process</strong> | プロセスを歩く: Extract, group, label, prioritize</li>
+<li><strong>Show example</strong> | 例を表示: Photos of affinity mapping in action</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Analysis is systematic</strong> | 分析は体系的: Not just gut feeling</li>
+<li><strong>Patterns emerge</strong> | パターンが現れる: Look for frequency and intensity</li>
+<li><strong>Physical/digital both work</strong> | 物理/デジタル両方が機能: Sticky notes or Miro/Mural</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Make it concrete</strong> | 具体的にする: "Each quote or finding on one note"</li>
+<li><strong>Emphasize grouping</strong> | グループ化を強調: "Let patterns emerge naturally"</li>
+<li><strong>Show messy process</strong> | 混乱したプロセスを表示: "It looks chaotic at first - that's normal!"</li>
+</ul>
+
+<h4>Demonstration | 実演</h4>
+<ul>
+<li>If possible, show quick affinity mapping with student input</li>
+<li>Use whiteboard or projected digital tool</li>
+<li>Demonstrate moving notes around to find patterns</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Synthesizing User Needs | ユーザーニーズの統合</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Introduce framework</strong> | フレームワークを紹介: User needs statement template</li>
+<li><strong>Show transformation</strong> | 変換を表示: From raw data to actionable needs</li>
+<li><strong>Practice together</strong> | 一緒に練習: Create one need statement as a class</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>User-focused language</strong> | ユーザー中心の言語: About people, not systems</li>
+<li><strong>Specific and actionable</strong> | 具体的で実行可能: Guide design decisions</li>
+<li><strong>Evidence-based</strong> | 証拠ベース: Link to research data</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use template</strong> | テンプレートを使用: "[User] needs [goal] because [insight] but currently [problem]"</li>
+<li><strong>Show bad examples</strong> | 悪い例を表示: Solution-focused vs. problem-focused</li>
+<li><strong>Practice writing</strong> | 書くことを練習: Have students draft one on the spot</li>
+</ul>
+
+<h4>Interactive Exercise | インタラクティブな演習</h4>
+<ul>
+<li>Present research finding: "3 students said registration is too slow"</li>
+<li>Work together to write user need statement</li>
+<li>Compare to solution-focused alternative to show difference</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: Research Ethics and Best Practices | 調査倫理とベストプラクティス</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Emphasize importance</strong> | 重要性を強調: "Ethics are not optional - they're fundamental"</li>
+<li><strong>Explain consent</strong> | 同意を説明: What informed consent means</li>
+<li><strong>Address privacy</strong> | プライバシーに対処: Anonymization and data protection</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Informed consent required</strong> | インフォームドコンセントが必要: Always explain and get permission</li>
+<li><strong>Privacy matters</strong> | プライバシーが重要: Protect participant data</li>
+<li><strong>Respect participants</strong> | 参加者を尊重: Their comfort and dignity first</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use consent script</strong> | 同意スクリプトを使用: Provide template for students</li>
+<li><strong>Address concerns</strong> | 懸念に対処: "What if they say no?" - That's okay!</li>
+<li><strong>Emphasize trust</strong> | 信頼を強調: "Good research requires trust"</li>
+</ul>
+
+<h4>Important Notes | 重要な注意事項</h4>
+<ul>
+<li><strong>For class activities</strong> | クラスアクティビティのため: Simplified consent process is acceptable</li>
+<li><strong>For real projects</strong> | 実際のプロジェクトのため: More formal consent may be needed</li>
+<li><strong>Cultural sensitivity</strong> | 文化的感受性: Be aware of cultural differences in communication</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: Common Research Mistakes to Avoid | 避けるべき一般的な調査の間違い</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Use humor</strong> | ユーモアを使用: "I've seen all these mistakes - let me save you time!"</li>
+<li><strong>Show examples</strong> | 例を表示: Demonstrate each mistake type</li>
+<li><strong>Provide solutions</strong> | ソリューションを提供: How to avoid each mistake</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>These are common</strong> | これらは一般的: Everyone makes mistakes initially</li>
+<li><strong>Learn from others</strong> | 他人から学ぶ: Benefit from shared experience</li>
+<li><strong>Self-awareness helps</strong> | 自己認識が助ける: Monitor your own biases</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Be encouraging</strong> | 励まし: "Mistakes are learning opportunities"</li>
+<li><strong>Use student questions</strong> | 学生の質問を使用: "Has anyone worried about this?"</li>
+<li><strong>Connect to bot</strong> | ボットとつなげる: "Bot will help you avoid these pitfalls"</li>
+</ul>
+
+<h4>Common Mistakes Coverage | 一般的な間違いのカバレッジ</h4>
+<p>1. <strong>Leading questions</strong> - Suggesting answers</p>
+<p>2. <strong>Future hypotheticals</strong> - Asking "would you..."</p>
+<p>3. <strong>Talking too much</strong> - Not letting participant speak</p>
+<p>4. <strong>Ignoring follow-ups</strong> - Missing opportunities</p>
+<p>5. <strong>Assuming understanding</strong> - Not researching diverse users</p>
+<p>6. <strong>Small homogeneous sample</strong> - Not representative</p>
+
+<hr>
+
+<h3>Slide 14: Research Planning and Preparation | 調査計画と準備</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Explain planning importance</strong> | 計画の重要性を説明: "Don't wing it - plan ahead"</li>
+<li><strong>Walk through components</strong> | コンポーネントを歩く: Goals, participants, guide, logistics</li>
+<li><strong>Show example plan</strong> | 例示計画を表示: Complete research plan template</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Planning saves time</strong> | 計画が時間を節約: Prevents wasted effort</li>
+<li><strong>Guide provides confidence</strong> | ガイドが自信を提供: Reduces anxiety</li>
+<li><strong>Logistics matter</strong> | ロジスティクスが重要: Location, timing, recording</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Provide template</strong> | テンプレートを提供: Research plan framework</li>
+<li><strong>Show realistic timeline</strong> | 現実的なタイムラインを表示: "30-45 minutes per interview"</li>
+<li><strong>Address recruitment</strong> | 募集に対処: "Where to find participants"</li>
+</ul>
+
+<h4>Activity Connection | アクティビティ接続</h4>
+<ul>
+<li>"In 5 minutes, you'll create your own research plan with the bot's help"</li>
+<li>"Bot provides templates for all components"</li>
+<li>"Focus on your final project topic"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: Today's Activity Preview | 今日のアクティビティプレビュー</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Build excitement</strong> | 興奮を構築: "Now you'll apply everything you learned!"</li>
+<li><strong>Explain structure</strong> | 構造を説明: 5 stages with bot guidance</li>
+<li><strong>Set expectations</strong> | 期待を設定: "Real interviews with real users"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Complete process</strong> | 完全なプロセス: Prep, conduct, analyze, synthesize, report</li>
+<li><strong>Bot guidance available</strong> | ボットガイダンスが利用可能: Templates and support</li>
+<li><strong>Real-world practice</strong> | 実世界の練習: These are valuable skills</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Address nervousness</strong> | 緊張に対処: "First interviews are awkward - that's normal"</li>
+<li><strong>Emphasize learning</strong> | 学習を強調: "Focus on process, not perfection"</li>
+<li><strong>Show support</strong> | サポートを示す: "I'll circulate and help"</li>
+</ul>
+
+<h4>Time Management | 時間管理</h4>
+<ul>
+<li><strong>Step 1:</strong> 12 minutes - Interview preparation</li>
+<li><strong>Step 2:</strong> 15 minutes - Conduct interviews</li>
+<li><strong>Step 3:</strong> 12 minutes - Data analysis</li>
+<li><strong>Step 4:</strong> 11 minutes - Synthesize user needs</li>
+<li><strong>Step 5:</strong> 10 minutes - Create report</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Key Takeaways | 主要な要点</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Summarize main points</strong> | 主要ポイントをまとめる: Reinforce key concepts</li>
+<li><strong>Connect to design thinking</strong> | デザイン思考とつなげる: "This is the foundation"</li>
+<li><strong>Preview next week</strong> | 来週をプレビュー: "We'll turn research into personas"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Research is essential</strong> | 調査は不可欠: Never skip it</li>
+<li><strong>Skills improve with practice</strong> | スキルは練習で向上: Keep practicing</li>
+<li><strong>Evidence beats assumptions</strong> | 証拠が仮定に勝る: Always</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Make it memorable</strong> | 記憶に残るようにする: "80/20 rule - listen more than talk"</li>
+<li><strong>Encourage confidence</strong> | 自信を奨励: "You're ready for this"</li>
+<li><strong>Open for questions</strong> | 質問をオープン: "Any final questions before we start?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Looking Ahead | 先を見る</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Preview Week 4</strong> | 週4をプレビュー: Personas and journey mapping</li>
+<li><strong>Connect activities</strong> | アクティビティをつなげる: "Today's research feeds next week's personas"</li>
+<li><strong>Build anticipation</strong> | 期待を構築: "You'll see your research come to life"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Continuity</strong> | 連続性: Each week builds on previous</li>
+<li><strong>Research drives design</strong> | 調査がデザインを推進: Everything starts here</li>
+<li><strong>Portfolio building</strong> | ポートフォリオ構築: These artifacts are valuable</li>
+</ul>
+
+<h4>Final Encouragement | 最終的な励まし</h4>
+<ul>
+<li>"You have the knowledge and tools"</li>
+<li>"The bot will guide you step by step"</li>
+<li>"Let's create great research together!"</li>
+</ul>
+
+<hr>
+
+<h2>Activity Transition | アクティビティ移行</h2>
+
+<h3>Before Starting Activity | アクティビティ開始前</h3>
+<p>1. <strong>Verify bot access</strong> | ボットアクセスを確認: All students logged in</p>
+<p>2. <strong>Form pairs</strong> | ペアを形成: For interview practice</p>
+<p>3. <strong>Distribute materials</strong> | 教材を配布: Note-taking sheets, templates</p>
+<p>4. <strong>Quick demo</strong> | クイックデモ: Show bot interface for research module</p>
+
+<h3>During Activity | アクティビティ中</h3>
+<p>1. <strong>Circulate actively</strong> | 積極的に巡回: Monitor all groups</p>
+<p>2. <strong>Answer questions</strong> | 質問に答える: But encourage bot use first</p>
+<p>3. <strong>Watch for issues</strong> | 問題を監視: Intervene if students stuck</p>
+<p>4. <strong>Manage time</strong> | 時間を管理: Give warnings at transitions</p>
+
+<h3>Common Issues During Activity | アクティビティ中の一般的な問題</h3>
+
+<h4>Issue 1: Students Skip Interview Guide Creation | 問題1：学生がインタビューガイド作成をスキップ</h4>
+<ul>
+<li><strong>Signs:</strong> Jumping straight to interviews without preparation</li>
+<li><strong>Intervention:</strong> "Stop - you need a guide first. Use the bot's template."</li>
+<li><strong>Prevention:</strong> Emphasize importance in lecture</li>
+</ul>
+
+<h4>Issue 2: Closed Questions in Interview Guide | 問題2：インタビューガイドのクローズド質問</h4>
+<ul>
+<li><strong>Signs:</strong> Guide full of yes/no questions</li>
+<li><strong>Intervention:</strong> "Let's transform these. How can we make this open-ended?"</li>
+<li><strong>Bot Help:</strong> Bot provides question transformation suggestions</li>
+</ul>
+
+<h4>Issue 3: Not Taking Detailed Notes | 問題3：詳細なメモを取らない</h4>
+<ul>
+<li><strong>Signs:</strong> Sparse notes, no quotes</li>
+<li><strong>Intervention:</strong> "You'll need direct quotes for analysis. Write them down."</li>
+<li><strong>Reminder:</strong> "If recording, still take notes for key moments"</li>
+</ul>
+
+<h4>Issue 4: Helping During Observation | 問題4：観察中に助ける</h4>
+<ul>
+<li><strong>Signs:</strong> Interviewer jumping in to help participant</li>
+<li><strong>Intervention:</strong> "Let them struggle - that's valuable data!"</li>
+<li><strong>Reminder:</strong> "Observation is about watching, not helping"</li>
+</ul>
+
+<h4>Issue 5: Surface-Level Analysis | 問題5：表面レベルの分析</h4>
+<ul>
+<li><strong>Signs:</strong> Not finding patterns, listing individual quotes</li>
+<li><strong>Intervention:</strong> "Look for themes. What do multiple participants say?"</li>
+<li><strong>Bot Help:</strong> Bot provides affinity mapping structure</li>
+</ul>
+
+<h4>Issue 6: Solution-Focused User Needs | 問題6：ソリューション中心のユーザーニーズ</h4>
+<ul>
+<li><strong>Signs:</strong> "Users need a button to..." instead of "Users need to quickly..."</li>
+<li><strong>Intervention:</strong> "Describe the need, not the solution. What are they trying to do?"</li>
+<li><strong>Bot Help:</strong> Bot validates user needs statements</li>
+</ul>
+
+<hr>
+
+<h2>Post-Activity Discussion | アクティビティ後のディスカッション</h2>
+
+<h3>Reflection Questions | 振り返り質問</h3>
+<p>1. <strong>"What surprised you during your interviews?"</strong> | 「インタビュー中に何が驚きましたか？」</p>
+<p>2. <strong>"What was challenging about asking open-ended questions?"</strong> | 「オープンエンド質問をすることの何が挑戦的でしたか？」</p>
+<p>3. <strong>"Did users say one thing but do another?"</strong> | 「ユーザーは一つのことを言って別のことをしましたか？」</p>
+<p>4. <strong>"What patterns did you find in your data?"</strong> | 「データでどんなパターンを見つけましたか？」</p>
+<p>5. <strong>"How did the bot help you through the process?"</strong> | 「ボットはプロセスをどのように支援しましたか？」</p>
+
+<h3>Key Learnings to Reinforce | 強化すべき主要な学び</h3>
+<ul>
+<li><strong>Open questions are harder but better</strong> | オープン質問は難しいが良い: Takes practice</li>
+<li><strong>Silence is uncomfortable but valuable</strong> | 沈黙は不快だが価値がある: Wait for insights</li>
+<li><strong>Analysis reveals surprises</strong> | 分析が驚きを明らかにする: Patterns you didn't expect</li>
+<li><strong>User needs guide design</strong> | ユーザーニーズがデザインをガイド: Foundation for next steps</li>
+</ul>
+
+<h3>Common Student Insights | 一般的な学生の洞察</h3>
+<ul>
+<li>"I realized I talk too much in conversations normally"</li>
+<li>"Users couldn't articulate what they wanted until I probed"</li>
+<li>"What people said they do wasn't what they actually did"</li>
+<li>"Patterns emerged that I never would have guessed"</li>
+</ul>
+
+<h3>Next Week Connection | 来週の接続</h3>
+<ul>
+<li><strong>"Save your research findings"</strong> | 「調査結果を保存」: You'll use them for personas</li>
+<li><strong>"Reflect on user types"</strong> | 「ユーザータイプを振り返る」: Did you notice different kinds of users?</li>
+<li><strong>"Think about journeys"</strong> | 「ジャーニーについて考える」: How do users move through tasks?</li>
+</ul>
+
+<hr>
+
+<h2>Assessment Notes | 評価ノート</h2>
+
+<h3>What to Look For in Submissions | 提出物で何を見るか</h3>
+
+<h4>Interview Guide Quality | インタビューガイドの質</h4>
+<ul>
+<li><strong>Open-ended questions</strong> | オープンエンド質問: Majority should be open</li>
+<li><strong>Logical flow</strong> | 論理的流れ: Warm-up to deep questions</li>
+<li><strong>Probing prompts</strong> | 探索プロンプト: Follow-up question ideas</li>
+<li><strong>Appropriate scope</strong> | 適切な範囲: 10-15 main questions</li>
+</ul>
+
+<h4>Interview Execution Evidence | インタビュー実行証拠</h4>
+<ul>
+<li><strong>Detailed notes</strong> | 詳細なメモ: Rich, specific information</li>
+<li><strong>Direct quotes</strong> | 直接の引用: Participant words in quotation marks</li>
+<li><strong>Behavioral observations</strong> | 行動観察: What they did, not just said</li>
+<li><strong>Emotional cues noted</strong> | 感情的手がかりをメモ: Frustration, excitement markers</li>
+</ul>
+
+<h4>Analysis Quality | 分析の質</h4>
+<ul>
+<li><strong>Affinity mapping</strong> | アフィニティマッピング: Clear groupings and themes</li>
+<li><strong>Pattern identification</strong> | パターン識別: Frequency and intensity noted</li>
+<li><strong>Evidence-based</strong> | 証拠ベース: Linked to specific data</li>
+<li><strong>Prioritization</strong> | 優先順位付け: Most important themes identified</li>
+</ul>
+
+<h4>User Needs Statements | ユーザーニーズステートメント</h4>
+<ul>
+<li><strong>User-focused</strong> | ユーザー中心: About people, not systems</li>
+<li><strong>Specific</strong> | 具体的: Clear and actionable</li>
+<li><strong>Evidence-based</strong> | 証拠ベース: Linked to research findings</li>
+<li><strong>Problem-oriented</strong> | 問題指向: Not solution-focused</li>
+</ul>
+
+<h4>Bot Interaction Evidence | ボットインタラクション証拠</h4>
+<ul>
+<li><strong>Screenshots</strong> | スクリーンショット: Key bot conversations</li>
+<li><strong>Template usage</strong> | テンプレート使用: Bot-provided frameworks</li>
+<li><strong>Guidance followed</strong> | ガイダンスに従う: Evidence of bot suggestions applied</li>
+<li><strong>Reflection</strong> | 振り返り: How bot helped</li>
+</ul>
+
+<h3>Grading Rubric | 評価基準</h3>
+
+<h4>Excellent (90-100%) | 優秀（90-100％）</h4>
+<ul>
+<li>Comprehensive interview guide with all open-ended questions</li>
+<li>Rich, detailed interview notes with multiple direct quotes</li>
+<li>Clear affinity mapping with well-defined themes</li>
+<li>5-7 specific, evidence-based user needs statements</li>
+<li>Thoughtful reflection on insights and process</li>
+<li>Extensive bot interaction evidence</li>
+</ul>
+
+<h4>Good (80-89%) | 良い（80-89％）</h4>
+<ul>
+<li>Solid interview guide with mostly open-ended questions</li>
+<li>Good interview notes with some direct quotes</li>
+<li>Affinity mapping present with identifiable themes</li>
+<li>3-5 user needs statements, mostly specific</li>
+<li>Adequate reflection on process</li>
+<li>Good bot interaction evidence</li>
+</ul>
+
+<h4>Satisfactory (70-79%) | 満足（70-79％）</h4>
+<ul>
+<li>Basic interview guide with some closed questions</li>
+<li>Interview notes present but limited detail</li>
+<li>Basic analysis with some pattern identification</li>
+<li>2-3 user needs statements, some vague</li>
+<li>Basic reflection</li>
+<li>Some bot interaction evidence</li>
+</ul>
+
+<h4>Needs Improvement (<70%) | 改善が必要（<70％）</h4>
+<ul>
+<li>Incomplete interview guide or mostly closed questions</li>
+<li>Sparse interview notes without quotes</li>
+<li>Limited or missing analysis</li>
+<li>Few or poorly formed user needs statements</li>
+<li>Minimal reflection</li>
+<li>Little bot interaction evidence</li>
+</ul>
+
+<hr>
+
+<h2>Troubleshooting Guide | トラブルシューティングガイド</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+<ul>
+<li><strong>Bot not loading</strong> | ボットが読み込まれない: Clear cache, try different browser</li>
+<li><strong>Recording issues</strong> | 録音問題: Have backup note-taking strategy</li>
+<li><strong>Internet problems</strong> | インターネット問題: Switch to paper-based activities</li>
+</ul>
+
+<h3>Process Issues | プロセスの問題</h3>
+<ul>
+<li><strong>Students can't find interviewees</strong> | 学生がインタビュー対象者を見つけられない: Facilitate pairing, use classmates</li>
+<li><strong>Interviews too short</strong> | インタビューが短すぎる: Remind about probing questions</li>
+<li><strong>Analysis paralysis</strong> | 分析麻痺: Encourage action, bot provides structure</li>
+</ul>
+
+<h3>Content Issues | コンテンツの問題</h3>
+<ul>
+<li><strong>Generic research questions</strong> | 一般的な調査質問: Help make specific to their project</li>
+<li><strong>Leading questions persisting</strong> | 誘導質問が続く: One-on-one intervention, show transformation</li>
+<li><strong>Missing patterns</strong> | パターンを見逃す: Guide affinity mapping process</li>
+</ul>
+
+<hr>
+
+<h2>Additional Resources for Students | 学生向け追加リソース</h2>
+
+<h3>Recommended Reading | 推奨読み物</h3>
+<ul>
+<li><strong>"The Mom Test" by Rob Fitzpatrick</strong> | Rob Fitzpatrickの「The Mom Test」: How to ask good questions</li>
+<li><strong>"Just Enough Research" by Erika Hall</strong> | Erika Hallの「Just Enough Research」: Practical UX research</li>
+<li><strong>Nielsen Norman Group Articles</strong> | Nielsen Norman Groupの記事: User research best practices</li>
+</ul>
+
+<h3>Tools and Templates | ツールとテンプレート</h3>
+<ul>
+<li><strong>Interview guide template</strong> | インタビューガイドテンプレート: Available through bot</li>
+<li><strong>Consent script</strong> | 同意スクリプト: Ethical research template</li>
+<li><strong>Affinity mapping tools</strong> | アフィニティマッピングツール: Miro, Mural, or physical sticky notes</li>
+<li><strong>User needs template</strong> | ユーザーニーズテンプレート: Structured format</li>
+</ul>
+
+<h3>Practice Opportunities | 練習機会</h3>
+<ul>
+<li><strong>Daily practice</strong> | 日々の練習: Interview friends about everyday tasks</li>
+<li><strong>Peer review</strong> | ピアレビュー: Share guides, give feedback</li>
+<li><strong>Bot practice</strong> | ボット練習: Use bot for interview simulations</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Backup Plans | 緊急バックアッププラン</h2>
+
+<h3>If Bot Portal Fails | ボットポータルが失敗した場合</h3>
+<p>1. Use provided paper templates for all activities</p>
+<p>2. Instructor provides verbal guidance for each stage</p>
+<p>3. Students work in small groups for peer support</p>
+<p>4. Extend activity time to compensate for lack of bot efficiency</p>
+
+<h3>If Students Can't Record | 学生が録音できない場合</h3>
+<p>1. Emphasize detailed note-taking techniques</p>
+<p>2. Suggest pairing - one interviewer, one note-taker</p>
+<p>3. Immediately transcribe key quotes after interview</p>
+<p>4. Use memory aids and reconstruction</p>
+
+<h3>If Time Runs Short | 時間が不足した場合</h3>
+<p>1. <strong>Priority:</strong> Complete interviews and basic analysis</p>
+<p>2. <strong>Skip if needed:</strong> Detailed affinity mapping (assign as homework)</p>
+<p>3. <strong>Simplify:</strong> Create 3 user needs instead of 5-7</p>
+<p>4. <strong>Extend:</strong> Make report completion homework</p>
+
+<hr>
+
+<h2>Week 3 Success Metrics | 週3の成功指標</h2>
+
+<h3>Student Engagement Indicators | 学生エンゲージメント指標</h3>
+<ul>
+<li>Active participation in interview practice</li>
+<li>Thoughtful questions during lecture</li>
+<li>Collaborative peer interviews</li>
+<li>Productive bot interactions</li>
+</ul>
+
+<h3>Learning Outcome Evidence | 学習成果証拠</h3>
+<ul>
+<li>Students can explain qualitative vs. quantitative research</li>
+<li>Students write open-ended questions naturally</li>
+<li>Students demonstrate active listening techniques</li>
+<li>Students identify patterns in qualitative data</li>
+<li>Students write user-focused needs statements</li>
+</ul>
+
+<h3>Quality Markers | 質マーカー</h3>
+<ul>
+<li>Interview guides with 80%+ open-ended questions</li>
+<li>Interview notes with direct quotes and observations</li>
+<li>Affinity maps with 3-5 clear themes</li>
+<li>User needs statements that are specific and evidence-based</li>
+<li>Thoughtful reflection on research process</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+<em>インストラクターノート終了</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week02-instructor-notes.html" class="nav-btn nav-prev">← Week 2</a>
+        <span class="nav-current">Week 3 Instructor Notes</span>
+        <a href="week04-instructor-notes.html" class="nav-btn nav-next">Week 4 →</a>
+        <a href="week03-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

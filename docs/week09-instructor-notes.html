@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 9 Instructor Notes | 第9週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week08-instructor-notes.html" class="nav-btn nav-prev">← Week 8</a>
+        <span class="nav-current">Week 9 Instructor Notes</span>
+        <a href="week10-instructor-notes.html" class="nav-btn nav-next">Week 10 →</a>
+        <a href="week09-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 9 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第9週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> 15-20 minutes
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Prepare examples of chatbots with error scenarios</li>
+<li class="checkbox">&#9744; Test bot portal access for error handling templates</li>
+<li class="checkbox">&#9744; Set up Botmock/Voiceflow demo accounts for students</li>
+<li class="checkbox">&#9744; Prepare error scenario examples to demonstrate</li>
+<li class="checkbox">&#9744; Have flowcharting tools ready (digital or paper)</li>
+<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; Error scenario worksheet</li>
+<li class="checkbox">&#9744; Fallback response template</li>
+<li class="checkbox">&#9744; Human handoff design guide</li>
+<li class="checkbox">&#9744; Testing checklist</li>
+<li class="checkbox">&#9744; Activity instructions and deliverables checklist</li>
+<li class="checkbox">&#9744; Assessment rubric</li>
+<li class="checkbox">&#9744; AI transparency log template</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Ensure students can access chatbot design tools</li>
+<li class="checkbox">&#9744; Prepare for bilingual presentation (English/Japanese)</li>
+<li class="checkbox">&#9744; Set up for hands-on prototyping activity</li>
+<li class="checkbox">&#9744; Have error handling examples visible</li>
+<li class="checkbox">&#9744; Prepare backup materials for technical issues</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Week 9! | 第9週へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 9! This is the second and final week of our chatbot module."</li>
+<li>"Last week, we learned how to design conversations when everything goes right. This week, we focus on what happens when things go wrong - and trust me, things go wrong a lot!"</li>
+<li>"Research shows that 60-70% of chatbot interactions encounter some form of misunderstanding. So error handling isn't optional - it's essential."</li>
+<li>"Today you'll learn how to design robust error handling, create effective fallback responses, and know when to hand off to a human."</li>
+<li>"By the end of class, you'll have a complete chatbot prototype with full error handling - ready to test and potentially use in your final project."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第9週へようこそ！これはチャットボットモジュールの2週目で最終週です。"</li>
+<li>"先週は、すべてがうまくいくときの会話をデザインする方法を学びました。今週は、物事がうまくいかないときに何が起こるかに焦点を当てます - そして、物事は頻繁にうまくいきません！"</li>
+<li>"調査によると、チャットボットインタラクションの60-70%が何らかの誤解に遭遇します。したがって、エラーハンドリングはオプションではありません - 必須です。"</li>
+<li>"今日は、堅牢なエラーハンドリングをデザインし、効果的なフォールバック応答を作成し、人間への引き継ぎのタイミングを知る方法を学びます。"</li>
+<li>"クラスの終わりまでに、完全なエラーハンドリングを備えた完全なチャットボットプロトタイプができあがります - テストして最終プロジェクトで使用する準備ができています。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>This builds directly on Week 8 content</li>
+<li>Error handling is what separates good bots from bad bots</li>
+<li>Practical skill applicable to final project</li>
+<li>Today's activity is the most complex yet - completing a full prototype</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: Recap from Week 8 | 第8週の振り返り</h3>
+
+<h4>Quick Review (2 minutes) | クイックレビュー（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's quickly recap what we learned last week to set the foundation."</li>
+<li>"We covered conversational UI principles - natural language interaction, turn-taking, context awareness."</li>
+<li>"We learned about three types of chatbots: rule-based (simple decision trees), AI-powered (natural language processing), and hybrid (combination of both)."</li>
+<li>"We designed conversation flows with clear structure: greeting, intent identification, information gathering, response, and closure."</li>
+<li>"And we defined chatbot personality and tone to create engaging interactions."</li>
+<li>"This week, we're adding the missing piece: what happens when users don't follow the happy path."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"先週学んだことを素早く振り返って基礎を設定しましょう。"</li>
+<li>"会話型UI原則をカバーしました - 自然言語相互作用、ターンテイキング、コンテキスト認識。"</li>
+<li>"3つのタイプのチャットボットについて学びました：ルールベース（シンプルな決定木）、AI搭載（自然言語処理）、ハイブリッド（両方の組み合わせ）。"</li>
+<li>"明確な構造で会話フローをデザインしました：挨拶、意図識別、情報収集、応答、クロージング。"</li>
+<li>"そして、魅力的な相互作用を作成するためにチャットボットのパーソナリティとトーンを定義しました。"</li>
+<li>"今週は、欠けている部分を追加します：ユーザーがハッピーパスに従わない場合に何が起こるか。"</li>
+</ul>
+
+<strong>Interactive Element:</strong>
+<ul>
+<li>"Who completed their Week 8 conversation flow? How many of you designed error scenarios already?"</li>
+<li>"Today we'll make those error scenarios robust and complete."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: Why Error Handling Matters | なぜエラーハンドリングが重要なのか</h3>
+
+<h4>Statistics and Reality (3 minutes) | 統計と現実（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Here are some sobering statistics about chatbots. 60-70% of interactions encounter misunderstandings. That's more than half!"</li>
+<li>"30% of users abandon chatbots after just one failed interaction. One mistake, and you've lost them."</li>
+<li>"But here's the good news: good error handling can recover 80% of frustrated users. That's huge!"</li>
+<li>"Look at the examples on the slide. Poor error handling says 'I don't understand' repeatedly with no guidance. It traps users in loops. There's no way to reach a human."</li>
+<li>"Good error handling explains what went wrong, suggests how to proceed, offers alternatives, and provides easy escalation to human support."</li>
+<li>"The difference between a successful bot and a failed one often comes down to how well it handles errors."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"チャットボットについてのいくつかの厳しい統計があります。インタラクションの60-70%が誤解に遭遇します。それは半分以上です！"</li>
+<li>"ユーザーの30%が1回の失敗後にチャットボットを放棄します。1つの間違いで、彼らを失います。"</li>
+<li>"しかし、良いニュースがあります：良いエラーハンドリングは不満を持つユーザーの80%を回復できます。それは大きいです！"</li>
+<li>"スライドの例を見てください。悪いエラーハンドリングはガイダンスなしで「理解できません」を繰り返し言います。ユーザーをループに閉じ込めます。人間に到達する方法はありません。"</li>
+<li>"良いエラーハンドリングは何が間違っていたかを説明し、進め方を提案し、代替案を提供し、人間サポートへの簡単なエスカレーションを提供します。"</li>
+<li>"成功したボットと失敗したボットの違いは、エラーをどれだけうまく処理するかによることが多いです。"</li>
+</ul>
+
+<strong>Real-World Example:</strong>
+<ul>
+<li>Share a personal frustrating chatbot experience</li>
+<li>Show a video clip of bad chatbot error handling (if available)</li>
+<li>Demonstrate a good error handling example</li>
+</ul>
+
+<strong>Discussion Prompt:</strong>
+<ul>
+<li>"What's the most frustrating chatbot experience you've had? What went wrong?"</li>
+<li>"Have you ever experienced a chatbot that handled errors well? What did it do?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Understanding NLU Limitations | 自然言語理解の限界を理解する</h3>
+
+<h4>NLU Challenges (4 minutes) | NLUの課題（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"To design good error handling, you first need to understand why chatbots fail. It comes down to Natural Language Understanding limitations."</li>
+<li>"NLU is the ability to understand human language - intent recognition, entity extraction, context understanding. But it's far from perfect."</li>
+<li>"Let's look at six common challenges. First, ambiguity. 'Can you book me?' - does that mean make a reservation, or literally put someone in a book? Context matters."</li>
+<li>"Homophones and spelling: 'there,' 'their,' 'they're' sound the same but mean different things. Bots can get confused."</li>
+<li>"Slang and informal language: 'That's fire!' doesn't mean something is burning - it means it's great. Bot training data may not include current slang."</li>
+<li>"Sarcasm and irony: 'Oh great, another delay' sounds positive ('great') but is actually negative. Very hard for bots to detect."</li>
+<li>"Context-dependent meaning: 'Apple' could be a fruit or a company. You need conversation context to know which."</li>
+<li>"Multi-intent queries: 'I want to book a flight to Tokyo and check my points balance' - two different intents in one sentence. Bots need to handle both."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"良いエラーハンドリングをデザインするには、まずチャットボットが失敗する理由を理解する必要があります。それは自然言語理解の限界に帰着します。"</li>
+<li>"NLUは人間の言語を理解する能力です - 意図認識、エンティティ抽出、コンテキスト理解。しかし、完璧にはほど遠いです。"</li>
+<li>"6つの一般的な課題を見てみましょう。第一に、曖昧性。「Can you book me?」- それは予約を作ることを意味するのか、それとも文字通り誰かを本に入れることを意味するのか？コンテキストが重要です。"</li>
+<li>"同音異義語とスペリング：「there」、「their」、「they're」は同じように聞こえますが、異なる意味を持ちます。ボットは混乱する可能性があります。"</li>
+<li>"スラングと非公式言語：「That's fire!」は何かが燃えていることを意味しません - それは素晴らしいことを意味します。ボットトレーニングデータには現在のスラングが含まれていない可能性があります。"</li>
+<li>"皮肉と皮肉：「Oh great, another delay」は肯定的（「great」）に聞こえますが、実際には否定的です。ボットが検出するのは非常に難しいです。"</li>
+<li>"コンテキスト依存の意味：「Apple」は果物または会社である可能性があります。どちらかを知るには会話のコンテキストが必要です。"</li>
+<li>"マルチ意図クエリ：「I want to book a flight to Tokyo and check my points balance」- 1つの文に2つの異なる意図。ボットは両方を処理する必要があります。"</li>
+</ul>
+
+<strong>Teaching Strategy:</strong>
+<ul>
+<li>For each challenge, provide 2-3 examples</li>
+<li>Ask students to identify which type of challenge certain phrases represent</li>
+<li>Emphasize that designers must anticipate these issues</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Types of Chatbot Errors | チャットボットエラーのタイプ</h3>
+
+<h4>Error Taxonomy (4 minutes) | エラー分類（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now let's categorize the types of errors you'll encounter. There are six main types."</li>
+<li>"Type 1: No Match - the bot has no idea what the user wants. Example: 'I need help with my widget thingy' - too vague."</li>
+<li>"Type 2: Partial Match or Ambiguous Intent - the bot sees multiple possible meanings. 'I want to change my account' - change settings? Change account type? Close it?"</li>
+<li>"Type 3: Missing Required Information - bot understands intent but lacks details. 'I want to make a reservation' - needs date, time, location, party size."</li>
+<li>"Type 4: Invalid Input - user provides information in wrong format. Bot asks for MM/DD/YYYY, user says 'next Tuesday.'"</li>
+<li>"Type 5: Out of Scope - user requests something the bot can't do. Asking a pizza bot to book a flight."</li>
+<li>"Type 6: System/Technical Error - backend failure, API down, timeout. Not a user error, but still needs handling."</li>
+<li>"Understanding these types helps you design specific error responses for each situation."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"では、遭遇するエラーのタイプを分類しましょう。6つの主なタイプがあります。"</li>
+<li>"タイプ1：マッチなし - ボットはユーザーが何を望んでいるかわかりません。例：「I need help with my widget thingy」- 曖昧すぎます。"</li>
+<li>"タイプ2：部分的マッチまたは曖昧な意図 - ボットは複数の可能な意味を見ています。「I want to change my account」- 設定を変更？アカウントタイプを変更？閉じる？"</li>
+<li>"タイプ3：必要な情報が不足 - ボットは意図を理解していますが詳細が不足しています。「I want to make a reservation」- 日付、時間、場所、人数が必要です。"</li>
+<li>"タイプ4：無効な入力 - ユーザーが間違った形式で情報を提供します。ボットはMM/DD/YYYYを求め、ユーザーは「next Tuesday」と言います。"</li>
+<li>"タイプ5：スコープ外 - ユーザーはボットができないことをリクエストします。ピザボットにフライトを予約するよう頼む。"</li>
+<li>"タイプ6：システム/技術エラー - バックエンド障害、APIダウン、タイムアウト。ユーザーエラーではありませんが、処理が必要です。"</li>
+<li>"これらのタイプを理解することで、各状況の特定のエラー応答をデザインできます。"</li>
+</ul>
+
+<strong>Visual Aid:</strong>
+<ul>
+<li>Walk through each error type with the examples on the slide</li>
+<li>For each, briefly discuss what the bot should do</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Error Recovery Strategy Framework | エラー回復戦略フレームワーク</h3>
+
+<h4>The 4-Step Process (5 minutes) | 4ステッププロセス（5分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Here's the framework that will solve most of your error handling challenges: the 4-step error recovery process."</li>
+<li>"Step 1: ACKNOWLEDGE. Recognize that something went wrong. Good examples: 'I didn't quite catch that,' 'I'm not sure I understood correctly.' Bad examples: just 'Error' or silence."</li>
+<li>"Step 2: EXPLAIN. Tell the user what the problem is, when possible. 'I need a date in MM/DD/YYYY format' is helpful. Just 'I don't understand' is not."</li>
+<li>"Step 3: GUIDE. Provide specific suggestions for how to proceed. 'Try saying track my order or return an item' gives direction. 'Try again' does not."</li>
+<li>"Step 4: OFFER ALTERNATIVES. Give the user options to escape the error. 'Would you like to speak with a team member?' or 'Should I start over?' provides an exit."</li>
+<li>"This framework works for almost every error scenario. Acknowledge, Explain, Guide, Offer Alternatives. Remember it as AEGO."</li>
+<li>"The key is being helpful, not blaming the user. Never say 'You're not making sense' - say 'I'm having trouble understanding.'"</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"エラーハンドリングの課題のほとんどを解決するフレームワークを紹介します：4ステップエラー回復プロセス。"</li>
+<li>"ステップ1：認識。何かが間違っていたことを認識します。良い例：「それを理解できませんでした」、「正しく理解したか確信がありません」。悪い例：「エラー」だけまたは沈黙。"</li>
+<li>"ステップ2：説明。可能な場合、問題が何であるかをユーザーに伝えます。「MM/DD/YYYY形式の日付が必要です」は役立ちます。「理解できません」だけは役立ちません。"</li>
+<li>"ステップ3：ガイド。進め方の具体的な提案を提供します。「注文を追跡するか、アイテムを返品すると言ってみてください」は方向を示します。「もう一度試してください」は示しません。"</li>
+<li>"ステップ4：代替案を提供。エラーから脱出するオプションをユーザーに提供します。「チームメンバーと話したいですか？」または「最初からやり直しましょうか？」は出口を提供します。"</li>
+<li>"このフレームワークはほぼすべてのエラーシナリオで機能します。認識、説明、ガイド、代替案を提供。AEGOとして覚えてください。"</li>
+<li>"鍵は、ユーザーを責めずに役立つことです。「あなたは意味をなしていません」と決して言わないでください - 「理解するのに苦労しています」と言ってください。"</li>
+</ul>
+
+<strong>Demonstration:</strong>
+<ul>
+<li>Walk through a bad error response and transform it using the 4 steps</li>
+<li>Example: "Error" → "I didn't catch that [acknowledge]. I need your order number to help [explain]. It's in your confirmation email [guide]. Or I can connect you with support [alternative]."</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Designing Effective Fallback Responses | 効果的なフォールバック応答のデザイン</h3>
+
+<h4>3-Level Fallback Strategy (4 minutes) | 3レベルフォールバック戦略（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Fallback responses are what the bot says when it doesn't understand. The key is to have progressive levels."</li>
+<li>"Level 1 is the soft recovery - first time the bot doesn't understand. Be helpful, assume maybe a typo or unclear phrasing. 'I didn't quite understand that. Could you rephrase?'"</li>
+<li>"Level 2 is more directive - second failure. Provide concrete examples and guidance. 'I'm still not sure what you need. Here are some things I can help with:' and show buttons."</li>
+<li>"Level 3 is the final fallback - third strike. Be apologetic and escalate to human. 'I apologize, but I'm having trouble understanding. Let me connect you with a team member.'"</li>
+<li>"The key best practices: vary your messages, don't repeat the same fallback. Provide concrete examples of what you CAN do. Keep tone friendly. Escalate after 2-3 failures. Log failures to improve training."</li>
+<li>"What NOT to do: Don't say 'I don't understand' over and over. Don't blame the user. Don't trap them in loops. Don't give up without offering alternatives."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"フォールバック応答は、ボットが理解しないときに言うことです。鍵は段階的なレベルを持つことです。"</li>
+<li>"レベル1はソフトリカバリ - ボットが理解しない最初の時。役立つようにし、タイプミスや不明確な表現かもしれないと仮定します。「それを理解できませんでした。言い換えていただけますか？」"</li>
+<li>"レベル2はより指示的 - 2回目の失敗。具体的な例とガイダンスを提供します。「まだ何が必要かわかりません。お手伝いできることは次のとおりです：」とボタンを表示します。"</li>
+<li>"レベル3は最終フォールバック - 3回目のストライク。謝罪し、人間にエスカレートします。「申し訳ありませんが、理解するのに苦労しています。チームメンバーにおつなぎします。」"</li>
+<li>"鍵となるベストプラクティス：メッセージを変える、同じフォールバックを繰り返さない。できることの具体的な例を提供。フレンドリーなトーンを保つ。2-3回の失敗後にエスカレート。トレーニングを改善するために失敗をログ。"</li>
+<li>"しないこと：「理解できません」と何度も言わない。ユーザーを責めない。ループに閉じ込めない。代替案を提供せずにあきらめない。"</li>
+</ul>
+
+<strong>Example Walkthrough:</strong>
+<ul>
+<li>Show a conversation where Level 1, 2, then 3 fallbacks are triggered</li>
+<li>Demonstrate how each level increases in directiveness and helpfulness</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Handling Ambiguity and Clarification | 曖昧性の処理と明確化</h3>
+
+<h4>Disambiguation Strategies (3 minutes) | 曖昧性解消戦略（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"When intent is unclear, don't just give up. Use clarification strategies."</li>
+<li>"Pattern 1: Multiple Choice. Present likely options as buttons. 'Did you mean: Track an order, Track a shipment, or Check order status?'"</li>
+<li>"Pattern 2: Ask-and-Confirm. Make your best guess and ask for confirmation. 'It sounds like you want to track your order. Is that right?' Then provide Yes/No buttons."</li>
+<li>"Pattern 3: Progressive Narrowing. Ask a series of questions to narrow down intent. 'What brings you here?' → 'I have a problem' → 'Is it about an order, product, or account?' → 'My order' → 'What's the issue?'"</li>
+<li>"The key is never leaving users stuck. Always provide a way forward, even if it's asking for clarification."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"意図が不明確な場合、あきらめないでください。明確化戦略を使用します。"</li>
+<li>"パターン1：多肢選択。可能性の高いオプションをボタンとして提示します。「次のいずれかですか：注文を追跡、出荷を追跡、注文ステータスを確認？」"</li>
+<li>"パターン2：尋ねて確認。最善の推測をして確認を求めます。「注文を追跡したいようです。それで正しいですか？」次にはい/いいえボタンを提供します。"</li>
+<li>"パターン3：段階的な絞り込み。意図を絞り込むための一連の質問をします。「何があなたをここに連れてきましたか？」→「問題があります」→「注文、製品、アカウントについてですか？」→「私の注文」→「何が問題ですか？」"</li>
+<li>"鍵は、ユーザーを行き詰まらせないことです。明確化を求めることであっても、常に前進する方法を提供します。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Human Handoff Design | 人間への引き継ぎデザイン</h3>
+
+<h4>When and How to Escalate (4 minutes) | エスカレートのタイミングと方法（4分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Knowing when to hand off to a human is crucial. There are six trigger conditions:"</li>
+<li>"1. Repeated failures - after 2-3 failed attempts to understand the user, escalate."</li>
+<li>"2. Complex requests requiring judgment, empathy, or expertise the bot doesn't have."</li>
+<li>"3. Emotional distress - if the user is frustrated, angry, or shows urgency, connect them to a human."</li>
+<li>"4. Out of scope - requests clearly beyond the bot's capabilities."</li>
+<li>"5. User request - if they explicitly ask to speak with a person, honor it immediately."</li>
+<li>"6. High-value transactions - large purchases or sensitive account changes should involve humans."</li>
+<li>"Before handoff: set expectations about what will happen, collect necessary information to help the agent, provide wait time estimates."</li>
+<li>"During handoff: transfer conversation transcript, include user information, flag sentiment (frustrated, urgent)."</li>
+<li>"Offer alternatives: callback scheduling if wait is long, email support for non-urgent issues, knowledge base articles while they wait."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"人間への引き継ぎのタイミングを知ることは重要です。6つのトリガー条件があります："</li>
+<li>"1. 繰り返される失敗 - ユーザーを理解する2-3回の失敗後、エスカレート。"</li>
+<li>"2. ボットが持っていない判断、共感、専門知識が必要な複雑なリクエスト。"</li>
+<li>"3. 感情的苦痛 - ユーザーが不満、怒り、または緊急性を示す場合、人間につなげます。"</li>
+<li>"4. スコープ外 - 明らかにボットの能力を超えるリクエスト。"</li>
+<li>"5. ユーザーリクエスト - 人と話すことを明示的に求める場合、すぐに尊重します。"</li>
+<li>"6. 高価値取引 - 大規模な購入または機密アカウント変更には人間が関与すべきです。"</li>
+<li>"引き継ぎ前：何が起こるかについて期待を設定し、エージェントを助けるために必要な情報を収集し、待機時間見積もりを提供します。"</li>
+<li>"引き継ぎ中：会話トランスクリプトを転送し、ユーザー情報を含め、センチメント（不満、緊急）にフラグを立てます。"</li>
+<li>"代替案を提供：待機が長い場合はコールバックスケジューリング、緊急でない問題にはメールサポート、待っている間はナレッジベース記事。"</li>
+</ul>
+
+<strong>Real-World Example:</strong>
+<ul>
+<li>Show a good handoff example: "I'll connect you with a team member. They'll have our conversation history. Current wait is 5 minutes. Would you like to wait or schedule a callback?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10-13: Error Scenarios & Prevention (4 minutes total)</h3>
+
+<strong>Teaching Points for Slides 10-13:</strong>
+<ul>
+<li>Walk through each error scenario on slide 10 using the response template</li>
+<li>For slide 11 (error prevention), emphasize proactive design</li>
+<li>For slide 12 (sentiment detection), discuss empathy language</li>
+<li>For slide 13 (testing), provide practical test scenario examples</li>
+</ul>
+
+<strong>Key Message:</strong>
+<p>"Good error handling starts with prevention, includes empathetic responses, and requires thorough testing with real scenarios."</p>
+
+<hr>
+
+<h3>Slide 14: Integration with Bot Platforms | ボットプラットフォームとの統合</h3>
+
+<h4>Platform Overview (2 minutes) | プラットフォーム概要（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"For today's activity, you'll use no-code platforms to build your prototype."</li>
+<li>"Popular options include Botmock, Voiceflow, Landbot, and ManyChat. All have free tiers."</li>
+<li>"These platforms have built-in fallback logic, error handling features, and testing tools."</li>
+<li>"Best practice: design your flows on paper or in Figma first, then build incrementally in the platform."</li>
+<li>"Test each conversation path as you build it. Don't wait until the end."</li>
+</ul>
+
+<strong>Platform Recommendations:</strong>
+<ul>
+<li>Botmock: Best for conversation flow visualization</li>
+<li>Voiceflow: Great drag-and-drop interface</li>
+<li>Landbot: Good for web chat integration</li>
+<li>Simple flowchart tools work too (Miro, Lucidchart)</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: This Week's Activity | 今週のアクティビティ</h3>
+
+<h4>Activity Introduction (3 minutes) | アクティビティ紹介（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Now for the main event - building your complete chatbot prototype with error handling."</li>
+<li>"This activity has three parts over 70 minutes. Part 1: Error Scenario Planning (20 min). Review your Week 8 flow, identify 5-7 potential errors, map recovery paths."</li>
+<li>"Part 2: Design Error Responses (25 min). Write 3-level fallback responses, design clarification dialogs, create handoff flow, add empathetic language."</li>
+<li>"Part 3: Build Prototype (25 min). Use Botmock, Voiceflow, or similar tool to build the complete flow including happy path AND error paths. Then test with a partner."</li>
+<li>"Your deliverables include: enhanced conversation flow diagram, error response script, interactive prototype, test results documentation, and AI transparency log."</li>
+<li>"This is the most complex activity yet, but you have all the knowledge you need. The HCI-101 Bot will provide templates and guidance."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"では、メインイベント - エラーハンドリング付きの完全なチャットボットプロトタイプの構築です。"</li>
+<li>"このアクティビティには70分にわたる3つのパートがあります。パート1：エラーシナリオ計画（20分）。第8週のフローをレビューし、5-7の潜在的なエラーを特定し、回復パスをマッピングします。"</li>
+<li>"パート2：エラー応答のデザイン（25分）。3レベルのフォールバック応答を作成し、明確化ダイアログをデザインし、引き継ぎフローを作成し、共感的言語を追加します。"</li>
+<li>"パート3：プロトタイプを構築（25分）。Botmock、Voiceflow、または類似ツールを使用して、ハッピーパスとエラーパスを含む完全なフローを構築します。次にパートナーとテストします。"</li>
+<li>"成果物には、強化された会話フロー図、エラー応答スクリプト、インタラクティブプロトタイプ、テスト結果文書、AI透明性ログが含まれます。"</li>
+<li>"これは最も複雑なアクティビティですが、必要なすべての知識があります。HCI-101ボットはテンプレートとガイダンスを提供します。"</li>
+</ul>
+
+<strong>Transition to Activity:</strong>
+<ul>
+<li>"You have 70 minutes. Work efficiently, help each other, and don't hesitate to ask questions."</li>
+<li>"This prototype will be valuable for your final project - make it good!"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Assessment Rubric | 評価ルーブリック</h3>
+
+<h4>Grading Criteria (1 minute) | 評価基準（1分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's quickly review how you'll be graded."</li>
+<li>"Conversation Flow (25 pts): We're looking for 5+ error scenarios with clear logic and professional diagrams."</li>
+<li>"Error Handling Design (25 pts): 3-level fallbacks, empathetic responses, and human handoff strategy."</li>
+<li>"Prototype Quality (25 pts): Fully interactive with 15+ turns, demonstrating effective error handling."</li>
+<li>"Testing & Documentation (15 pts): At least 5 test scenarios with detailed results."</li>
+<li>"AI Transparency (10 pts): Complete documentation of all AI tool usage."</li>
+<li>"Total is 100 points. This is a significant assignment, so put in the effort!"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Key Takeaways & Next Steps | 重要なポイントと次のステップ</h3>
+
+<h4>Closing (2 minutes) | クロージング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's recap the key takeaways from today."</li>
+<li>"Errors are inevitable - 60-70% of conversations encounter them. Design for failure, not just success."</li>
+<li>"Use the 4-step recovery process: Acknowledge, Explain, Guide, Offer Alternatives."</li>
+<li>"Progressive fallbacks are your friend: soft recovery → guided help → escalation to human."</li>
+<li>"Empathy matters. Recognize frustration and respond with understanding, not blame."</li>
+<li>"Test, test, test. Error paths need as much testing as happy paths."</li>
+<li>"Remember: good chatbots anticipate problems and help users recover gracefully. Errors are opportunities to show empathy and build trust."</li>
+<li>"Next week, we move into usability testing - you'll test your prototypes with real users."</li>
+<li>"Your chatbot should now be nearly complete: happy paths, error paths, personality, and tone. Just needs refinement based on user feedback."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"今日の重要なポイントを要約しましょう。"</li>
+<li>"エラーは避けられません - 会話の60-70%がそれらに遭遇します。成功だけでなく、失敗のためにデザインします。"</li>
+<li>"4ステップ回復プロセスを使用します：認識、説明、ガイド、代替案を提供。"</li>
+<li>"段階的フォールバックはあなたの友達です：ソフトリカバリ → ガイド付きヘルプ → 人間へのエスカレーション。"</li>
+<li>"共感が重要です。不満を認識し、非難ではなく理解をもって応答します。"</li>
+<li>"テスト、テスト、テスト。エラーパスはハッピーパスと同じくらいテストが必要です。"</li>
+<li>"覚えておいてください：良いチャットボットは問題を予測し、ユーザーが優雅に回復するのを支援します。エラーは共感を示し、信頼を構築する機会です。"</li>
+<li>"来週、ユーザビリティテストに移ります - 実際のユーザーでプロトタイプをテストします。"</li>
+<li>"チャットボットはほぼ完成しているはずです：ハッピーパス、エラーパス、パーソナリティ、トーン。ユーザーフィードバックに基づく改良だけが必要です。"</li>
+</ul>
+
+<strong>Final Encouragement:</strong>
+<ul>
+<li>"You've learned the hardest part of chatbot design today. Now go build something amazing!"</li>
+<li>"Remember: the best learning comes from doing. Make mistakes, learn from them, iterate!"</li>
+</ul>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Immediate Next Steps | 即座の次のステップ</h3>
+<p>1. <strong>Distribute Activity Materials</strong></p>
+<p>   - Error scenario worksheet</p>
+<p>   - Fallback response templates</p>
+<p>   - Platform access guides</p>
+<p>   - Deliverables checklist</p>
+
+<p>2. <strong>Set Up Activity</strong></p>
+<p>   - Ensure students can access design platforms</p>
+<p>   - Verify HCI-101 Bot portal working</p>
+<p>   - Provide flowcharting tool access</p>
+
+<p>3. <strong>Circulate and Support</strong></p>
+<p>   - Help with error scenario identification</p>
+<p>   - Guide fallback response writing</p>
+<p>   - Assist with platform tool usage</p>
+<p>   - Monitor progress and time</p>
+
+<h3>Common Issues to Watch For | 注意すべき一般的な問題</h3>
+<ul>
+<li><strong>Scope Too Large:</strong> Students try to handle every possible error</li>
+<li><strong>Generic Responses:</strong> Fallbacks too similar, not progressive</li>
+<li><strong>Platform Confusion:</strong> Technical difficulties with tools</li>
+<li><strong>Time Management:</strong> Not enough time for Part 3</li>
+</ul>
+
+<h3>Support Strategies | サポート戦略</h3>
+<ul>
+<li><strong>Prioritization:</strong> Help students focus on most important errors first</li>
+<li><strong>Response Templates:</strong> Provide examples to speed up writing</li>
+<li><strong>Platform Demos:</strong> Quick mini-tutorials on tools</li>
+<li><strong>Pair Programming:</strong> Encourage students to help each other</li>
+</ul>
+
+<hr>
+
+<h2>Assessment and Feedback | 評価とフィードバック</h2>
+
+<h3>During Activity | アクティビティ中</h3>
+<ul>
+<li><strong>Monitor Progress:</strong> Check that error scenarios are realistic</li>
+<li><strong>Provide Guidance:</strong> Help refine fallback responses</li>
+<li><strong>Answer Questions:</strong> Clarify expectations</li>
+<li><strong>Encourage Testing:</strong> Push students to test error paths</li>
+</ul>
+
+<h3>Deliverables Review Criteria | 成果物レビュー基準</h3>
+
+<strong>Conversation Flow Diagram:</strong>
+<ul>
+<li>Includes happy path from Week 8</li>
+<li>Maps 5+ realistic error scenarios</li>
+<li>Shows clear recovery paths</li>
+<li>Professional visualization</li>
+</ul>
+
+<strong>Error Response Script:</strong>
+<ul>
+<li>3 distinct fallback levels</li>
+<li>Empathetic language</li>
+<li>Specific guidance in responses</li>
+<li>Clear handoff triggers</li>
+</ul>
+
+<strong>Interactive Prototype:</strong>
+<ul>
+<li>Minimum 10-15 conversation turns</li>
+<li>Demonstrates error handling effectively</li>
+<li>Includes both happy and error paths</li>
+<li>Link/screenshots provided</li>
+</ul>
+
+<strong>Test Results:</strong>
+<ul>
+<li>At least 3-5 test scenarios</li>
+<li>Documents errors encountered</li>
+<li>Shows how bot handled errors</li>
+<li>Identifies improvements</li>
+</ul>
+
+<h3>Feedback Focus | フィードバックフォーカス</h3>
+<ul>
+<li><strong>Praise Thoroughness:</strong> Comprehensive error coverage</li>
+<li><strong>Guide Refinement:</strong> More empathetic language</li>
+<li><strong>Connect Forward:</strong> Preview usability testing</li>
+<li><strong>Portfolio Quality:</strong> Encourage professional presentation</li>
+</ul>
+
+<hr>
+
+<h2>Emergency Procedures | 緊急手順</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+<ul>
+<li><strong>Platform Down:</strong> Have alternative (paper prototyping)</li>
+<li><strong>No Internet:</strong> Provide offline activity option</li>
+<li><strong>Tool Access Problems:</strong> Share accounts or use alternatives</li>
+</ul>
+
+<h3>Student Issues | 学生の問題</h3>
+<ul>
+<li><strong>Overwhelming Complexity:</strong> Help prioritize core errors</li>
+<li><strong>Lack of Ideas:</strong> Brainstorm error scenarios together</li>
+<li><strong>Time Shortage:</strong> Allow extension or reduce scope</li>
+</ul>
+
+<h3>Time Management | 時間管理</h3>
+<ul>
+<li><strong>Running Short:</strong> Focus on Part 2 (error responses)</li>
+<li><strong>Finished Early:</strong> Add more error scenarios</li>
+<li><strong>Need Extension:</strong> Allow submission by end of week</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week08-instructor-notes.html" class="nav-btn nav-prev">← Week 8</a>
+        <span class="nav-current">Week 9 Instructor Notes</span>
+        <a href="week10-instructor-notes.html" class="nav-btn nav-next">Week 10 →</a>
+        <a href="week09-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

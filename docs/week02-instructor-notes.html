@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 2 Instructor Notes | 第2週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week01-instructor-notes.html" class="nav-btn nav-prev">← Week 1</a>
+        <span class="nav-current">Week 2 Instructor Notes</span>
+        <a href="week03-instructor-notes.html" class="nav-btn nav-next">Week 3 →</a>
+        <a href="week02-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 2 Instructor Notes: Design Thinking and User-Centered Design</h1>
+<h1>第2週インストラクターノート：デザイン思考とユーザー中心デザイン</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction in the Era of Smart Devices and AI Chatbots  
+<strong>コース：</strong> HCI-101 - スマートデバイスとAIチャットボット時代のヒューマンコンピュータインタラクション入門  
+<strong>Instructor:</strong> Yuri Tijerino  
+<strong>Semester:</strong> Fall 2025 | 2025年秋学期  
+<strong>Duration:</strong> 15-20 minutes lecture + 60-70 minutes hands-on activity | 15-20分講義 + 60-70分ハンズオンアクティビティ
+
+<hr>
+
+<h2>Lecture Overview | 講義概要</h2>
+
+<h3>Key Learning Objectives | 主要学習目標</h3>
+<p>Students will understand and apply the design thinking framework through hands-on practice with campus app redesign.</p>
+<p>学生はキャンパスアプリ再設計を通じてデザイン思考フレームワークを理解し適用する。</p>
+
+<h3>Lecture Flow | 講義の流れ</h3>
+<p>1. <strong>Introduction</strong> (2 min): Welcome back, today's agenda | おかえりなさい、今日のアジェンダ</p>
+<p>2. <strong>Design Thinking Framework</strong> (8 min): The 5 stages explained | 5段階の説明</p>
+<p>3. <strong>User-Centered Design Principles</strong> (5 min): Core principles and examples | 基本原則と例</p>
+<p>4. <strong>Activity Preview</strong> (3 min): What students will do today | 学生が今日やること</p>
+<p>5. <strong>Bot Integration</strong> (2 min): How the bot will guide them | ボットがどのようにガイドするか</p>
+
+<hr>
+
+<h2>Slide-by-Slide Instructor Notes | スライドごとのインストラクターノート</h2>
+
+<h3>Slide 1: Welcome Back! Design Thinking Week | おかえりなさい！デザイン思考週</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Greet students warmly</strong> | 学生を温かく迎える: "Welcome back! How was your first week with the HCI-101 Bot?"</li>
+<li><strong>Check bot portal access</strong> | ボットポータルアクセスをチェック: "Raise your hand if you successfully accessed the bot portal"</li>
+<li><strong>Set expectations</strong> | 期待を設定: "Today we're diving deep into design thinking - this is the foundation of everything we'll do"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Design thinking is a process</strong> | デザイン思考はプロセス: Not just creativity, but systematic problem-solving</li>
+<li><strong>User-centered approach</strong> | ユーザー中心アプローチ: We start with people, not technology</li>
+<li><strong>Hands-on learning</strong> | ハンズオン学習: You'll practice the complete process today</li>
+</ul>
+
+<h4>Common Questions | よくある質問</h4>
+<ul>
+<li><strong>"Do I need to be creative?"</strong> | 「創造的である必要がありますか？」</li>
+</ul>
+<p>  - <strong>Answer:</strong> Design thinking is about process, not artistic ability. Everyone can learn it.</p>
+<ul>
+<li><strong>"What if I don't know what to design?"</strong> | 「何をデザインすればよいかわからない場合はどうしますか？」</li>
+</ul>
+<p>  - <strong>Answer:</strong> We'll start with campus app features you already use - no need to invent something new.</p>
+
+<hr>
+
+<h3>Slide 2: What is Design Thinking? | デザイン思考とは？</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Use interactive examples</strong> | インタラクティブな例を使用: "Think of the last time you used a terrible app. What made it bad?"</li>
+<li><strong>Connect to student experience</strong> | 学生の体験とつなげる: "Have you ever used an app that just 'got' you? That's good design thinking"</li>
+<li><strong>Emphasize the human element</strong> | 人間的要素を強調: "Notice the word 'human-centered' - this is about people, not pixels"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>It's a methodology</strong> | 方法論である: Not just brainstorming, but a structured approach</li>
+<li><strong>Problem-focused</strong> | 問題中心: We solve real problems, not create solutions looking for problems</li>
+<li><strong>Iterative</strong> | 反復的: We build, test, learn, repeat - it's okay to fail</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use real examples</strong> | 実際の例を使用: Show examples of good vs. bad interfaces</li>
+<li><strong>Make it relatable</strong> | 関連性を持たせる: Connect to students' daily technology use</li>
+<li><strong>Encourage questions</strong> | 質問を奨励: "What questions do you have about design thinking?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: The Design Thinking Process | デザイン思考プロセス</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Walk through each stage</strong> | 各段階を歩く: "Let me show you what each stage looks like in practice"</li>
+<li><strong>Use analogies</strong> | 類推を使用: "Think of it like cooking - you don't start by putting food in the oven"</li>
+<li><strong>Emphasize the flow</strong> | 流れを強調: "Each stage builds on the previous one"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Empathize is crucial</strong> | 共感が重要: Without understanding users, everything else fails</li>
+<li><strong>Define focuses the problem</strong> | 定義は問題に焦点: Clear problem statements lead to better solutions</li>
+<li><strong>Ideate is about quantity</strong> | 発想は量について: Generate many ideas, evaluate later</li>
+<li><strong>Prototype is about learning</strong> | プロトタイプは学習について: Build to think, not to impress</li>
+<li><strong>Test validates assumptions</strong> | テストは仮定を検証: Real users tell you what works</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use hand gestures</strong> | 手のジェスチャーを使用: Point to each stage as you explain</li>
+<li><strong>Ask for examples</strong> | 例を求める: "Can anyone think of a time they solved a problem by understanding someone else's needs?"</li>
+<li><strong>Address concerns</strong> | 懸念に対処: "This might seem like a lot, but we'll practice each stage today"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Stage 1: Empathize - Understanding Users | 段階1：共感 - ユーザーの理解</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Demonstrate interview techniques</strong> | インタビュー技法を実演: "Let me show you how to ask good questions"</li>
+<li><strong>Role-play an interview</strong> | インタビューをロールプレイ: Have a student volunteer for a quick demo</li>
+<li><strong>Show empathy mapping</strong> | 共感マッピングを表示: Draw a simple empathy map on the board</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Listen for emotions</strong> | 感情に耳を傾ける: "It's frustrating" tells you more than "I want a button"</li>
+<li><strong>Ask "why" multiple times</strong> | 「なぜ」を複数回尋ねる: Dig deeper into surface-level answers</li>
+<li><strong>Observe behavior</strong> | 行動を観察: What people do vs. what they say they do</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Practice with students</strong> | 学生と練習: "Let's try a quick interview right now"</li>
+<li><strong>Show bad examples</strong> | 悪い例を表示: "Here's what NOT to ask: 'Do you like this app?'"</li>
+<li><strong>Emphasize empathy</strong> | 共感を強調: "You're not just collecting data - you're trying to understand another person"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Stage 2: Define - Articulating the Problem | 段階2：定義 - 問題の明確化</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Write POV statements on board</strong> | ボードにPOV文を書く: Show the format clearly</li>
+<li><strong>Practice with examples</strong> | 例で練習: "Let's write a POV statement for a common problem"</li>
+<li><strong>Show transformation</strong> | 変換を表示: Turn a bad problem statement into a good one</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>User-focused language</strong> | ユーザー中心の言語: "Students need..." not "The app should..."</li>
+<li><strong>Specific and actionable</strong> | 具体的で実行可能: Vague problems lead to vague solutions</li>
+<li><strong>Based on real insights</strong> | 実際の洞察に基づく: Not assumptions or guesses</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use student examples</strong> | 学生の例を使用: "Let's write a POV for something you all experience"</li>
+<li><strong>Show common mistakes</strong> | 一般的な間違いを表示: "Here's what students often write..."</li>
+<li><strong>Practice HMW questions</strong> | HMW質問を練習: "Turn this problem into a 'How might we' question"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Stage 3: Ideate - Generating Solutions | 段階3：発想 - ソリューションの生成</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Demonstrate rapid sketching</strong> | 迅速なスケッチを実演: Draw 3-4 quick interface ideas</li>
+<li><strong>Show brainstorming rules</strong> | ブレインストーミングルールを表示: Write them on the board</li>
+<li><strong>Practice "worst possible idea"</strong> | 「最悪の可能なアイデア」を練習: "Let's design the worst course registration system"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Quantity over quality</strong> | 質より量: Generate many ideas first, evaluate later</li>
+<li><strong>Defer judgment</strong> | 判断を延期: No criticism during brainstorming</li>
+<li><strong>Build on ideas</strong> | アイデアを構築: "Yes, and..." instead of "Yes, but..."</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Set time limits</strong> | 時間制限を設定: "You have 2 minutes to sketch 8 ideas"</li>
+<li><strong>Encourage wild ideas</strong> | ワイルドなアイデアを奨励: "The crazier, the better - we can refine later"</li>
+<li><strong>Show evaluation criteria</strong> | 評価基準を表示: "How do we know which ideas are good?"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 7: Stage 4: Prototype - Building to Think | 段階4：試作 - 考えるために構築</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Show fidelity examples</strong> | 忠実度の例を表示: Bring examples of low, mid, high fidelity prototypes</li>
+<li><strong>Demonstrate paper prototyping</strong> | 紙のプロトタイピングを実演: Draw a quick interface on paper</li>
+<li><strong>Emphasize speed</strong> | 速度を強調: "This should take 10-15 minutes, not hours"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Low-fidelity is perfect</strong> | 低忠実度が完璧: Focus on concepts, not visual details</li>
+<li><strong>Fail fast</strong> | 早く失敗: Learn quickly from mistakes</li>
+<li><strong>Test the interaction</strong> | インタラクションをテスト: Not the visual design</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Show examples</strong> | 例を表示: Bring paper prototypes from previous classes</li>
+<li><strong>Address perfectionism</strong> | 完璧主義に対処: "Don't worry about making it pretty"</li>
+<li><strong>Emphasize learning</strong> | 学習を強調: "The goal is to learn, not to impress"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Stage 5: Test - Learning from Users | 段階5：テスト - ユーザーから学ぶ</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Demonstrate think-aloud</strong> | シンクアラウドを実演: Have a student use a prototype while thinking aloud</li>
+<li><strong>Show observation techniques</strong> | 観察技法を表示: "Watch what they do, not what they say"</li>
+<li><strong>Practice feedback collection</strong> | フィードバック収集を練習: "What questions should you ask?"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Don't help users</strong> | ユーザーを助けない: Let them struggle - that's valuable data</li>
+<li><strong>Ask open-ended questions</strong> | オープンエンド質問をする: "What was confusing?" not "Was this confusing?"</li>
+<li><strong>Observe behavior</strong> | 行動を観察: Actions speak louder than words</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Practice with students</strong> | 学生と練習: "Let's test a simple prototype right now"</li>
+<li><strong>Show observation checklist</strong> | 観察チェックリストを表示: What to watch for during testing</li>
+<li><strong>Emphasize iteration</strong> | 反復を強調: "Testing is not the end - it's the beginning of improvement"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: User-Centered Design Principles | ユーザー中心デザイン原則</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Connect to design thinking</strong> | デザイン思考とつなげる: "These principles guide every stage of design thinking"</li>
+<li><strong>Use real examples</strong> | 実際の例を使用: Show examples of good and bad interfaces</li>
+<li><strong>Ask for student examples</strong> | 学生の例を求める: "What apps do you love? What makes them good?"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Users are the experts</strong> | ユーザーが専門家: They know their needs better than designers</li>
+<li><strong>Design for usability</strong> | ユーザビリティのためにデザイン: Not just aesthetics</li>
+<li><strong>Iterate based on feedback</strong> | フィードバックに基づいて反復: Design is never "done"</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use interactive examples</strong> | インタラクティブな例を使用: Have students analyze interfaces</li>
+<li><strong>Connect to their experience</strong> | 彼らの体験とつなげる: "Think of an app you hate - what principles did it violate?"</li>
+<li><strong>Emphasize accessibility</strong> | アクセシビリティを強調: "Good design works for everyone"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Design Thinking vs. Traditional Design | デザイン思考 vs 従来のデザイン</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Create a comparison chart</strong> | 比較チャートを作成: Draw on board showing differences</li>
+<li><strong>Use student examples</strong> | 学生の例を使用: "Have you ever used an app that seemed designed by engineers?"</li>
+<li><strong>Emphasize the shift</strong> | シフトを強調: "We're moving from technology-centered to human-centered"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Problem-first approach</strong> | 問題優先アプローチ: Start with understanding, not solutions</li>
+<li><strong>Research-based</strong> | 調査ベース: Learn from actual users, not assumptions</li>
+<li><strong>Iterative process</strong> | 反復プロセス: Build, test, learn, repeat</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use analogies</strong> | 類推を使用: "It's like the difference between guessing and asking"</li>
+<li><strong>Show the benefits</strong> | 利点を表示: "Why does this approach work better?"</li>
+<li><strong>Address concerns</strong> | 懸念に対処: "This might seem slower, but it leads to better solutions"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11: Common Design Thinking Mistakes | 一般的なデザイン思考の間違い</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Use humor</strong> | ユーモアを使用: "I've seen students make these mistakes - let me save you time"</li>
+<li><strong>Show examples</strong> | 例を表示: "Here's what NOT to do..."</li>
+<li><strong>Provide solutions</strong> | ソリューションを提供: "Here's how to avoid this mistake"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>These are common</strong> | これらは一般的: Everyone makes these mistakes initially</li>
+<li><strong>Learn from others</strong> | 他人から学ぶ: Avoid these pitfalls by being aware</li>
+<li><strong>Focus on the process</strong> | プロセスに焦点: Don't skip steps or rush ahead</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use student examples</strong> | 学生の例を使用: "Has anyone ever made these mistakes?"</li>
+<li><strong>Be encouraging</strong> | 励まし: "Making mistakes is part of learning"</li>
+<li><strong>Provide tools</strong> | ツールを提供: "Here's how the bot will help you avoid these"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 12: Design Thinking Tools & Techniques | デザイン思考ツールと技法</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Show actual tools</strong> | 実際のツールを表示: Bring examples of templates and guides</li>
+<li><strong>Demonstrate techniques</strong> | 技法を実演: "Let me show you how to use an empathy map"</li>
+<li><strong>Connect to bot</strong> | ボットとつなげる: "The bot will provide all these tools for you"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Tools support the process</strong> | ツールがプロセスをサポート: They don't replace thinking</li>
+<li><strong>Choose appropriate tools</strong> | 適切なツールを選択: Different tools for different stages</li>
+<li><strong>Practice makes perfect</strong> | 練習が完璧を作る: The more you use them, the better you get</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Show variety</strong> | 多様性を表示: "There are many ways to do each stage"</li>
+<li><strong>Emphasize flexibility</strong> | 柔軟性を強調: "Use what works for you"</li>
+<li><strong>Connect to activity</strong> | アクティビティとつなげる: "You'll use these tools today"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 13: This Week's Activity Preview | 今週のアクティビティプレビュー</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Build excitement</strong> | 興奮を構築: "This is where the magic happens - you'll practice the complete process"</li>
+<li><strong>Address concerns</strong> | 懸念に対処: "Don't worry if you're not sure what to design"</li>
+<li><strong>Set expectations</strong> | 期待を設定: "You'll work in pairs, but document individually"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Real-world application</strong> | 実世界での応用: You're solving actual problems</li>
+<li><strong>Complete process</strong> | 完全なプロセス: All 5 stages in one session</li>
+<li><strong>Bot guidance</strong> | ボットガイダンス: You're not alone - the bot will help</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Show examples</strong> | 例を表示: "Here's what previous students created"</li>
+<li><strong>Emphasize learning</strong> | 学習を強調: "Focus on the process, not perfection"</li>
+<li><strong>Address time concerns</strong> | 時間の懸念に対処: "The bot will help you stay on track"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 14: Bot Integration for Design Thinking | デザイン思考のためのボット統合</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Demonstrate bot capabilities</strong> | ボット機能を実演: Show bot portal if possible</li>
+<li><strong>Show examples</strong> | 例を表示: "Here's how the bot will guide you through each stage"</li>
+<li><strong>Address concerns</strong> | 懸念に対処: "The bot is your learning partner, not a replacement for thinking"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Bot provides structure</strong> | ボットが構造を提供: Keeps you on track through the process</li>
+<li><strong>Bot offers templates</strong> | ボットがテンプレートを提供: Ready-to-use frameworks</li>
+<li><strong>Bot validates work</strong> | ボットが作業を検証: Helps ensure quality at each stage</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Show bot examples</strong> | ボットの例を表示: "Here's what the bot will say..."</li>
+<li><strong>Emphasize partnership</strong> | パートナーシップを強調: "You and the bot work together"</li>
+<li><strong>Address AI concerns</strong> | AIの懸念に対処: "The bot helps you learn, it doesn't do the work for you"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 15: Design Thinking Success Stories | デザイン思考の成功事例</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Tell the stories</strong> | ストーリーを語る: Make them engaging and relatable</li>
+<li><strong>Connect to student experience</strong> | 学生の体験とつなげる: "You've probably used these products"</li>
+<li><strong>Emphasize the process</strong> | プロセスを強調: "These companies used design thinking to achieve these results"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>Real-world impact</strong> | 実世界への影響: Design thinking creates measurable results</li>
+<li><strong>User-centered approach</strong> | ユーザー中心アプローチ: These companies started with user needs</li>
+<li><strong>Iterative process</strong> | 反復プロセス: They tested and improved continuously</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Use visuals</strong> | 視覚的要素を使用: Show before/after images if possible</li>
+<li><strong>Make it relatable</strong> | 関連性を持たせる: "You could be the next designer to create something like this"</li>
+<li><strong>Emphasize possibility</strong> | 可能性を強調: "Design thinking can solve any problem"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 16: Questions & Preparation | 質問と準備</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Encourage questions</strong> | 質問を奨励: "What questions do you have before we start?"</li>
+<li><strong>Address common concerns</strong> | 一般的な懸念に対処: "Let me answer the questions I know you're thinking"</li>
+<li><strong>Build confidence</strong> | 自信を構築: "You're ready for this - the bot will guide you"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>No wrong answers</strong> | 間違った答えはない: Design thinking is about exploration</li>
+<li><strong>Process over perfection</strong> | 完璧さよりプロセス: Focus on learning, not impressing</li>
+<li><strong>Support available</strong> | サポートが利用可能: Bot, instructor, and peers are here to help</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Be encouraging</strong> | 励まし: "Everyone can learn design thinking"</li>
+<li><strong>Address fears</strong> | 恐れに対処: "It's okay to make mistakes"</li>
+<li><strong>Set positive tone</strong> | ポジティブなトーンを設定: "This is going to be fun and educational"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 17: Let's Begin Design Thinking! | デザイン思考を始めましょう！</h3>
+
+<h4>Instructor Actions | インストラクターのアクション</h4>
+<ul>
+<li><strong>Build excitement</strong> | 興奮を構築: "You're about to become design thinkers!"</li>
+<li><strong>Set the stage</strong> | ステージを設定: "This is your first real design challenge"</li>
+<li><strong>Provide final encouragement</strong> | 最終的な励まし: "You've got this - let's do it!"</li>
+</ul>
+
+<h4>Key Points to Emphasize | 強調すべき要点</h4>
+<ul>
+<li><strong>You're ready</strong> | 準備ができている: You have the knowledge and tools</li>
+<li><strong>Focus on learning</strong> | 学習に焦点: Don't worry about perfection</li>
+<li><strong>Have fun</strong> | 楽しむ: Design thinking is creative and engaging</li>
+</ul>
+
+<h4>Teaching Tips | 指導のヒント</h4>
+<ul>
+<li><strong>Be enthusiastic</strong> | 熱狂的である: Your energy sets the tone</li>
+<li><strong>Provide reassurance</strong> | 安心を提供: "I'm here to help if you need it"</li>
+<li><strong>Transition smoothly</strong> | スムーズに移行: "Now let's move to the activity"</li>
+</ul>
+
+<hr>
+
+<h2>Activity Transition | アクティビティ移行</h2>
+
+<h3>Before Starting Activity | アクティビティ開始前</h3>
+<p>1. <strong>Ensure bot portal access</strong> | ボットポータルアクセスを確保: All students can log in</p>
+<p>2. <strong>Distribute materials</strong> | 教材を配布: Paper, pencils, any handouts</p>
+<p>3. <strong>Form pairs</strong> | ペアを形成: Students work together but document individually</p>
+<p>4. <strong>Set up workspace</strong> | ワークスペースをセットアップ: Clear desks, good lighting</p>
+
+<h3>During Activity | アクティビティ中</h3>
+<p>1. <strong>Circulate and observe</strong> | 巡回して観察: Watch for students who need help</p>
+<p>2. <strong>Answer questions</strong> | 質問に答える: But encourage them to try the bot first</p>
+<p>3. <strong>Provide encouragement</strong> | 励ましを提供: "You're doing great - keep going"</p>
+<p>4. <strong>Monitor time</strong> | 時間を監視: Help students stay on track</p>
+
+<h3>Common Issues During Activity | アクティビティ中の一般的な問題</h3>
+
+<h4>Students Skip Empathy Stage | 学生が共感段階をスキップ</h4>
+<ul>
+<li><strong>Signs:</strong> Jumping straight to solutions | ソリューションに直接飛ぶ</li>
+<li><strong>Intervention:</strong> "Remember, we start with understanding users. What did you learn from your interviews?"</li>
+<li><strong>Bot Help:</strong> Bot will remind them to complete empathy map</li>
+</ul>
+
+<h4>Problem Statements Too Vague | 問題文が曖昧すぎる</h4>
+<ul>
+<li><strong>Signs:</strong> "Students need a better app" | 「学生はより良いアプリが必要」</li>
+<li><strong>Intervention:</strong> "Let's make this more specific. What exactly do students need? Why?"</li>
+<li><strong>Bot Help:</strong> Bot provides POV template and examples</li>
+</ul>
+
+<h4>Students Get Stuck in Ideation | 学生が発想で行き詰まる</h4>
+<ul>
+<li><strong>Signs:</strong> Only 2-3 ideas generated | 2-3個のアイデアしか生成されない</li>
+<li><strong>Intervention:</strong> "Try the 'worst possible idea' technique. What's the worst way to solve this?"</li>
+<li><strong>Bot Help:</strong> Bot provides creative prompts and techniques</li>
+</ul>
+
+<h4>Prototypes Too Detailed | プロトタイプが詳細すぎる</h4>
+<ul>
+<li><strong>Signs:</strong> Spending 30+ minutes on one prototype | 1つのプロトタイプに30分以上費やす</li>
+<li><strong>Intervention:</strong> "Remember, this is low-fidelity. Focus on the concept, not the details."</li>
+<li><strong>Bot Help:</strong> Bot reminds about fidelity levels and time management</li>
+</ul>
+
+<h4>Testing Feedback Too Positive | テストフィードバックがポジティブすぎる</h4>
+<ul>
+<li><strong>Signs:</strong> "It's great!" "I love it!" | 「素晴らしい！」「気に入った！」</li>
+<li><strong>Intervention:</strong> "Ask more specific questions. What was confusing? What would you change?"</li>
+<li><strong>Bot Help:</strong> Bot provides observation checklist and probing questions</li>
+</ul>
+
+<hr>
+
+<h2>Post-Activity Discussion | アクティビティ後のディスカッション</h2>
+
+<h3>Reflection Questions | 振り返り質問</h3>
+<p>1. <strong>"Which stage was most challenging for you?"</strong> | 「どの段階が最も挑戦的でしたか？」</p>
+<p>2. <strong>"How did user feedback change your design?"</strong> | 「ユーザーフィードバックはあなたのデザインをどのように変更しましたか？」</p>
+<p>3. <strong>"What surprised you about the process?"</strong> | 「プロセスについて何が驚きましたか？」</p>
+<p>4. <strong>"How did the bot help you?"</strong> | 「ボットはどのようにあなたを助けましたか？」</p>
+
+<h3>Key Takeaways to Reinforce | 強化すべき主要な要点</h3>
+<ul>
+<li><strong>Design thinking is a process</strong> | デザイン思考はプロセス: Not just creativity</li>
+<li><strong>Users are the experts</strong> | ユーザーが専門家: Their needs drive solutions</li>
+<li><strong>Iteration is key</strong> | 反復が重要: Design is never "done"</li>
+<li><strong>Tools support thinking</strong> | ツールが思考をサポート: They don't replace it</li>
+</ul>
+
+<h3>Next Week Preview | 来週のプレビュー</h3>
+<ul>
+<li><strong>"Next week we'll dive deeper into user research methods"</strong> | 「来週はユーザー調査方法についてより深く掘り下げます」</li>
+<li><strong>"You'll conduct real user interviews and create personas"</strong> | 「実際のユーザーインタビューを実施し、ペルソナを作成します」</li>
+<li><strong>"The bot will help you analyze your research data"</strong> | 「ボットが調査データの分析を支援します」</li>
+</ul>
+
+<hr>
+
+<h2>Assessment Notes | 評価ノート</h2>
+
+<h3>What to Look For | 何を見るか</h3>
+<ul>
+<li><strong>Complete process documentation</strong> | 完全なプロセス文書: All 5 stages covered</li>
+<li><strong>User-centered approach</strong> | ユーザー中心アプローチ: Solutions based on real user needs</li>
+<li><strong>Creative problem-solving</strong> | 創造的問題解決: Innovative approaches to problems</li>
+<li><strong>Bot interaction evidence</strong> | ボットインタラクション証拠: Screenshots of bot conversations</li>
+</ul>
+
+<h3>Common Strengths | 一般的な強み</h3>
+<ul>
+<li><strong>Strong empathy maps</strong> | 強力な共感マップ: Rich user insights</li>
+<li><strong>Clear problem statements</strong> | 明確な問題文: User-focused and specific</li>
+<li><strong>Creative ideation</strong> | 創造的発想: Many diverse ideas generated</li>
+<li><strong>Good prototyping</strong> | 良いプロトタイピング: Appropriate fidelity level</li>
+</ul>
+
+<h3>Areas for Improvement | 改善の領域</h3>
+<ul>
+<li><strong>Superficial user research</strong> | 表面的なユーザー調査: Need to dig deeper</li>
+<li><strong>Solution-focused problems</strong> | ソリューション中心の問題: Need to focus on user needs</li>
+<li><strong>Limited ideation</strong> | 限定的な発想: Need more creative techniques</li>
+<li><strong>Over-detailed prototypes</strong> | 過度に詳細なプロトタイプ: Need to focus on concepts</li>
+</ul>
+
+<hr>
+
+<h2>Resources for Students | 学生向けリソース</h2>
+
+<h3>Additional Reading | 追加読み物</h3>
+<ul>
+<li><strong>IDEO Design Thinking Guide</strong> | IDEOデザイン思考ガイド: Free online resource</li>
+<li><strong>Stanford d.school Resources</strong> | スタンフォードd.schoolリソース: Templates and examples</li>
+<li><strong>Design Thinking for Educators</strong> | 教育者向けデザイン思考: Toolkit and case studies</li>
+</ul>
+
+<h3>Tools and Templates | ツールとテンプレート</h3>
+<ul>
+<li><strong>Empathy Map Template</strong> | 共感マップテンプレート: Available through bot portal</li>
+<li><strong>POV Statement Generator</strong> | POV文生成器: Bot provides examples</li>
+<li><strong>Ideation Techniques</strong> | 発想技法: Creative prompts and methods</li>
+<li><strong>Prototype Templates</strong> | プロトタイプテンプレート: Paper and digital versions</li>
+</ul>
+
+<h3>Practice Opportunities | 練習機会</h3>
+<ul>
+<li><strong>Daily Design Challenges</strong> | 日々のデザインチャレンジ: Bot provides mini-exercises</li>
+<li><strong>Peer Review Sessions</strong> | ピアレビューセッション: Students critique each other's work</li>
+<li><strong>Design Thinking Workshops</strong> | デザイン思考ワークショップ: Optional extra sessions</li>
+</ul>
+
+<hr>
+
+<h2>Troubleshooting Guide | トラブルシューティングガイド</h2>
+
+<h3>Technical Issues | 技術的問題</h3>
+<ul>
+<li><strong>Bot portal not loading</strong> | ボットポータルが読み込まれない: Check internet connection, try different browser</li>
+<li><strong>Templates not appearing</strong> | テンプレートが表示されない: Refresh page, clear browser cache</li>
+<li><strong>Screenshots not saving</strong> | スクリーンショットが保存されない: Use built-in screenshot tools</li>
+</ul>
+
+<h3>Process Issues | プロセスの問題</h3>
+<ul>
+<li><strong>Students rushing through stages</strong> | 学生が段階を急いでいる: Remind them to use bot guidance</li>
+<li><strong>Not following bot instructions</strong> | ボットの指示に従わない: Circulate and redirect to bot</li>
+<li><strong>Working individually instead of pairs</strong> | ペアではなく個人で作業: Encourage collaboration</li>
+</ul>
+
+<h3>Content Issues | コンテンツの問題</h3>
+<ul>
+<li><strong>Students choosing inappropriate features</strong> | 学生が不適切な機能を選択: Guide them toward campus-related features</li>
+<li><strong>Not conducting real interviews</strong> | 実際のインタビューを実施しない: Emphasize importance of user research</li>
+<li><strong>Generic problem statements</strong> | 一般的な問題文: Help them be more specific</li>
+</ul>
+
+<hr>
+
+<h2>Success Metrics | 成功指標</h2>
+
+<h3>Student Engagement | 学生のエンゲージメント</h3>
+<ul>
+<li><strong>Active participation</strong> | 積極的な参加: Students asking questions and sharing insights</li>
+<li><strong>Bot interaction</strong> | ボットインタラクション: Evidence of using bot guidance</li>
+<li><strong>Peer collaboration</strong> | ピアコラボレーション: Students helping each other</li>
+</ul>
+
+<h3>Learning Outcomes | 学習成果</h3>
+<ul>
+<li><strong>Process understanding</strong> | プロセスの理解: Students can explain each stage</li>
+<li><strong>User-centered thinking</strong> | ユーザー中心思考: Solutions focus on user needs</li>
+<li><strong>Creative problem-solving</strong> | 創造的問題解決: Innovative approaches to problems</li>
+</ul>
+
+<h3>Quality of Work | 作業の質</h3>
+<ul>
+<li><strong>Complete documentation</strong> | 完全な文書化: All stages covered thoroughly</li>
+<li><strong>User research evidence</strong> | ユーザー調査証拠: Real interviews and insights</li>
+<li><strong>Prototype quality</strong> | プロトタイプの質: Appropriate fidelity and clarity</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>  
+<em>インストラクターノート終了</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week01-instructor-notes.html" class="nav-btn nav-prev">← Week 1</a>
+        <span class="nav-current">Week 2 Instructor Notes</span>
+        <a href="week03-instructor-notes.html" class="nav-btn nav-next">Week 3 →</a>
+        <a href="week02-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Instructor Notes - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for instructor notes */
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .notes-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .notes-content h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .notes-content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .notes-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .notes-content h4 {
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .notes-content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .notes-content li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .notes-content li.checkbox {
+            list-style-type: none;
+            margin-left: -20px;
+        }
+
+        .notes-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .notes-content hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .notes-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .notes-content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .notes-content code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .notes-content pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #f9fafb;
+        }
+
+        /* Week Navigation */
+        .week-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-home {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-home:hover {
+            background-color: #059669;
+        }
+
+        .nav-prev, .nav-next {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background-color: #1e5bb8;
+        }
+
+        .nav-presentation {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .nav-presentation:hover {
+            background-color: #6d28d9;
+        }
+
+        .nav-disabled {
+            background-color: var(--disabled);
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-current {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 200px;
+        }
+
+        /* Scrollable content */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .notes-content {
+                padding: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn, .nav-current {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HCI-101: Human-Computer Interaction</h1>
+            <p class="subtitle">Week 7 Instructor Notes | 第7週インストラクターノート</p>
+            <p class="instructor">Instructor: Yuri Tijerino | Kwansei Gakuin University</p>
+        </div>
+    </header>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week06-instructor-notes.html" class="nav-btn nav-prev">← Week 6</a>
+        <span class="nav-current">Week 7 Instructor Notes</span>
+        <a href="week08-instructor-notes.html" class="nav-btn nav-next">Week 8 →</a>
+        <a href="week07-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <main class="notes-container">
+        <div class="notes-content">
+<h1>Week 7 Lecture: Instructor Notes and Speaking Points</h1>
+<h1>第7週講義：インストラクターノートとスピーキングポイント</h1>
+
+<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction
+<strong>コース：</strong> HCI-101 - ヒューマンコンピュータインタラクション入門
+<strong>Instructor:</strong> Yuri Tijerino
+<strong>Duration:</strong> 15-20 minutes
+<strong>Target Audience:</strong> Undergraduate students, no programming experience required
+
+<hr>
+
+<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+
+<h3>Technical Preparation | 技術的準備</h3>
+<li class="checkbox">&#9744; Review student wireframes from Week 6</li>
+<li class="checkbox">&#9744; Prepare example prototypes to demonstrate</li>
+<li class="checkbox">&#9744; Test Figma/Adobe XD prototyping features</li>
+<li class="checkbox">&#9744; Verify bot prototyping workflow access</li>
+<li class="checkbox">&#9744; Have backup examples of user flows</li>
+<li class="checkbox">&#9744; Prepare transition examples (instant, dissolve, slide, push, modal)</li>
+
+<h3>Materials to Distribute | 配布する教材</h3>
+<li class="checkbox">&#9744; User flow diagram templates</li>
+<li class="checkbox">&#9744; Prototyping best practices checklist</li>
+<li class="checkbox">&#9744; Transition type reference guide</li>
+<li class="checkbox">&#9744; Activity handout with exercise details</li>
+<li class="checkbox">&#9744; Bot prototyping workflow instructions</li>
+<li class="checkbox">&#9744; Example user flow diagrams</li>
+
+<h3>Classroom Setup | 教室セットアップ</h3>
+<li class="checkbox">&#9744; Ensure all students can access their Week 6 wireframes</li>
+<li class="checkbox">&#9744; Verify Figma/Adobe XD prototyping mode access</li>
+<li class="checkbox">&#9744; Prepare for live prototyping demonstration</li>
+<li class="checkbox">&#9744; Set up for hands-on activity</li>
+<li class="checkbox">&#9744; Have example prototypes ready to show</li>
+<li class="checkbox">&#9744; Test sharing prototype links</li>
+
+<hr>
+
+<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+
+<h3>Slide 1: Welcome to Week 7! | 第7週へようこそ！</h3>
+
+<h4>Opening (2 minutes) | オープニング（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Welcome to Week 7! This is where your designs come alive."</li>
+<li>"Last week you created static wireframes showing layout and structure. This week, we add interactivity and navigation."</li>
+<li>"By the end of today, you'll have a clickable prototype that users can actually experience and test."</li>
+<li>"This is one of the most exciting parts of the design process - seeing your ideas become interactive."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"第7週へようこそ！これはデザインが生き生きとする場所です。"</li>
+<li>"先週、レイアウトと構造を示す静的ワイヤーフレームを作成しました。今週は、インタラクティビティとナビゲーションを追加します。"</li>
+<li>"今日の終わりまでに、ユーザーが実際に体験してテストできるクリック可能なプロトタイプを持ちます。"</li>
+<li>"これはデザインプロセスの最もエキサイティングな部分の1つです - アイデアがインタラクティブになるのを見ること。"</li>
+</ul>
+
+<strong>Key Points to Emphasize:</strong>
+<ul>
+<li>Building on Week 6 foundation</li>
+<li>Static to interactive transformation</li>
+<li>Ready for user testing after today</li>
+<li>Exciting milestone in design process</li>
+</ul>
+
+<hr>
+
+<h3>Slide 2: Recap: Where We Are | 復習：現在地</h3>
+
+<h4>Reviewing Progress (2 minutes) | 進捗のレビュー（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Let's review what you've accomplished. You created wireframes showing what goes where - the structure of your app."</li>
+<li>"Now we're adding the how - how users navigate between screens, what happens when they tap buttons, how screens transition."</li>
+<li>"This moves us from showing layout to demonstrating behavior. Users can now click through your design."</li>
+<li>"Think of it like building a house: wireframes were the floor plan, now we're adding doors and hallways so people can move through."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"達成したことを振り返りましょう。何がどこに行くかを示すワイヤーフレームを作成しました - アプリの構造。"</li>
+<li>"今、どのように - ユーザーが画面間をナビゲートする方法、ボタンをタップしたときに何が起こるか、画面がどのように遷移するかを追加しています。"</li>
+<li>"これにより、レイアウトの表示から動作の実証に移ります。ユーザーはデザインをクリックできるようになります。"</li>
+<li>"家を建てるように考えてください：ワイヤーフレームは平面図でした。今、人々が動き回れるようにドアと廊下を追加しています。"</li>
+</ul>
+
+<strong>Visual Demonstration:</strong>
+<ul>
+<li>Show before (static wireframes) and after (interactive prototype)</li>
+<li>Click through a simple prototype to demonstrate</li>
+<li>Point out how screens connect</li>
+<li>Show transition effects</li>
+</ul>
+
+<hr>
+
+<h3>Slide 3: What is an Interactive Prototype? | インタラクティブプロトタイプとは？</h3>
+
+<h4>Core Concept (2 minutes) | コアコンセプト（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"An interactive prototype is a clickable simulation of your app. It looks and feels like the real thing but doesn't require code."</li>
+<li>"When you tap a button in the prototype, it navigates to another screen - just like a real app would."</li>
+<li>"This is crucial for testing. Users can actually use your prototype and give feedback on whether it works well."</li>
+<li>"The beauty is you can test and fix issues before any programming happens. It's much cheaper to change a prototype than change code."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"インタラクティブプロトタイプは、アプリのクリック可能なシミュレーションです。本物のように見え、感じますが、コードは必要ありません。"</li>
+<li>"プロトタイプでボタンをタップすると、別の画面にナビゲートします - 実際のアプリと同じように。"</li>
+<li>"これはテストに重要です。ユーザーは実際にプロトタイプを使用し、うまく機能するかどうかについてフィードバックを提供できます。"</li>
+<li>"美しさは、プログラミングが起こる前にテストして問題を修正できることです。プロトタイプを変更する方がコードを変更するよりはるかに安価です。"</li>
+</ul>
+
+<strong>Demonstrate:</strong>
+<ul>
+<li>Show clickable prototype example</li>
+<li>Tap buttons to navigate</li>
+<li>Point out transitions</li>
+<li>Explain how it simulates real app</li>
+</ul>
+
+<hr>
+
+<h3>Slide 4: Understanding User Flows | ユーザーフローの理解</h3>
+
+<h4>User Flow Fundamentals (3 minutes) | ユーザーフローの基礎（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"A user flow is the path users take to complete a task. For example, logging in: start at welcome screen, tap login, enter credentials, tap submit, arrive at home screen."</li>
+<li>"Every flow has an entry point (where it starts), actions (what users do), decision points (choices users make), and an exit point (where it ends)."</li>
+<li>"Common flows include onboarding, search, purchase, and settings. You probably use these flows in apps every day without thinking about them."</li>
+<li>"When designing prototypes, focus on 2-3 key flows. Don't try to prototype everything - focus on what you need to test."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ユーザーフローは、ユーザーがタスクを完了するために取る経路です。たとえば、ログイン：ウェルカム画面から始め、ログインをタップ、認証情報を入力、送信をタップ、ホーム画面に到着。"</li>
+<li>"すべてのフローには、エントリーポイント（開始場所）、アクション（ユーザーが行うこと）、決定ポイント（ユーザーが行う選択）、終了ポイント（終了場所）があります。"</li>
+<li>"一般的なフローには、オンボーディング、検索、購入、設定が含まれます。おそらく毎日これらのフローをアプリで使用していますが、考えていません。"</li>
+<li>"プロトタイプをデザインするときは、2-3の主要フローに焦点を当てます。すべてをプロトタイプ化しようとしないでください - テストする必要があるものに焦点を当ててください。"</li>
+</ul>
+
+<strong>Interactive Element:</strong>
+<ul>
+<li>Draw a simple user flow on board</li>
+<li>Walk through each step</li>
+<li>Ask students to identify flows in apps they use</li>
+<li>Discuss common flow patterns</li>
+</ul>
+
+<hr>
+
+<h3>Slide 5: Planning Your Prototype | プロトタイプの計画</h3>
+
+<h4>Strategic Planning (2 minutes) | 戦略的計画（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Before building, plan your approach. Identify the most important user tasks - what do users need to accomplish?"</li>
+<li>"Map out the journey on paper first. Sketch how screens connect, where users can go, what happens at each step."</li>
+<li>"Consider edge cases: what if users tap back? What if there's an error? What if they want to cancel?"</li>
+<li>"Start simple with basic navigation, then add complexity. Don't try to build everything at once."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"構築する前に、アプローチを計画してください。最も重要なユーザータスクを特定します - ユーザーは何を達成する必要がありますか？"</li>
+<li>"最初に紙でジャーニーをマッピングします。画面がどのように接続するか、ユーザーがどこに行けるか、各ステップで何が起こるかをスケッチします。"</li>
+<li>"エッジケースを考慮してください：ユーザーが戻るをタップしたら？エラーがあったら？キャンセルしたい場合は？"</li>
+<li>"基本的なナビゲーションでシンプルに始め、次に複雑さを追加します。一度にすべてを構築しようとしないでください。"</li>
+</ul>
+
+<strong>Planning Activity:</strong>
+<ul>
+<li>Have students sketch user flow on paper (2 minutes)</li>
+<li>Identify entry and exit points</li>
+<li>Note key decision points</li>
+<li>Share with neighbor</li>
+</ul>
+
+<hr>
+
+<h3>Slide 6: Creating Hotspots and Links | ホットスポットとリンクの作成</h3>
+
+<h4>Technical Implementation (3 minutes) | 技術的実装（3分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Hotspots are clickable areas that trigger navigation. In Figma, you switch to prototype mode and drag connectors between elements and screens."</li>
+<li>"Any element can be a hotspot - buttons, cards, images, even entire screen areas."</li>
+<li>"The most common hotspots are buttons (Submit, Next, Back), navigation elements (tab bars, menus), and interactive components (list items, cards)."</li>
+<li>"Let me show you how to create a connection in Figma..."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ホットスポットは、ナビゲーションをトリガーするクリック可能な領域です。Figmaでは、プロトタイプモードに切り替え、要素と画面の間にコネクタをドラッグします。"</li>
+<li>"任意の要素がホットスポットになれます - ボタン、カード、画像、画面領域全体でさえ。"</li>
+<li>"最も一般的なホットスポットは、ボタン（送信、次へ、戻る）、ナビゲーション要素（タブバー、メニュー）、インタラクティブコンポーネント（リストアイテム、カード）です。"</li>
+<li>"Figmaで接続を作成する方法を示します..."</li>
+</ul>
+
+<strong>Live Demonstration (critical):</strong>
+<p>1. Open Figma prototype mode</p>
+<p>2. Select a button on first screen</p>
+<p>3. Drag blue connector to second screen</p>
+<p>4. Show interaction settings panel</p>
+<p>5. Set trigger to "On Tap"</p>
+<p>6. Preview the connection working</p>
+
+<hr>
+
+<h3>Slide 7: Transition Types | トランジションタイプ</h3>
+
+<h4>Animation Choices (2 minutes) | アニメーション選択（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Transitions are animations between screens. Different transitions communicate different relationships."</li>
+<li>"Instant has no animation - best for tab switching where you want quick response."</li>
+<li>"Dissolve/Fade crossfades between screens - good for modal overlays or subtle changes."</li>
+<li>"Slide is the most common - screens slide from a direction. Use for sequential flows and hierarchical navigation."</li>
+<li>"Push shows both screens moving - the current pushes out, new pushes in. Good for deeper navigation."</li>
+<li>"Modal slides up from bottom - perfect for temporary tasks that overlay the current screen."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"トランジションは画面間のアニメーションです。異なるトランジションは異なる関係を伝えます。"</li>
+<li>"即座にはアニメーションがありません - 素早い応答が必要なタブ切り替えに最適です。"</li>
+<li>"ディゾルブ/フェードは画面間をクロスフェードします - モーダルオーバーレイや微妙な変化に適しています。"</li>
+<li>"スライドは最も一般的です - 画面が方向からスライドします。シーケンシャルフローと階層的ナビゲーションに使用します。"</li>
+<li>"プッシュは両方の画面の動きを示します - 現在がプッシュアウト、新しいがプッシュイン。より深いナビゲーションに適しています。"</li>
+<li>"モーダルは下からスライドアップします - 現在の画面にオーバーレイする一時的なタスクに最適です。"</li>
+</ul>
+
+<strong>Show Examples:</strong>
+<ul>
+<li>Demonstrate each transition type</li>
+<li>Explain when to use each</li>
+<li>Show consistency in usage</li>
+<li>Note common patterns</li>
+</ul>
+
+<hr>
+
+<h3>Slide 8: Micro-Interactions and Feedback | マイクロインタラクションとフィードバック</h3>
+
+<h4>Small Details Matter (2 minutes) | 小さな詳細が重要（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Micro-interactions are small animations that provide feedback. They're subtle but crucial for user experience."</li>
+<li>"Button states show users their action was registered: hover changes color, press shows depth, disabled is grayed out."</li>
+<li>"Loading states tell users to wait: spinners for short waits, progress bars for longer processes, skeleton screens for content loading."</li>
+<li>"Success and error feedback confirms outcomes: green checkmarks for success, red icons for errors, toast notifications for brief messages."</li>
+<li>"While you might not implement all these in your prototype, understanding them helps you design better interactions."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"マイクロインタラクションは、フィードバックを提供する小さなアニメーションです。微妙ですが、ユーザー体験には重要です。"</li>
+<li>"ボタン状態は、ユーザーのアクションが登録されたことを示します：ホバーは色を変更、プレスは深度を示し、無効はグレーアウトされます。"</li>
+<li>"ロード状態は、ユーザーに待つように指示します：短い待機用のスピナー、長いプロセス用のプログレスバー、コンテンツロード用のスケルトン画面。"</li>
+<li>"成功とエラーのフィードバックは結果を確認します：成功用の緑のチェックマーク、エラー用の赤いアイコン、短いメッセージ用のトースト通知。"</li>
+<li>"プロトタイプでこれらすべてを実装しないかもしれませんが、それらを理解することはより良いインタラクションをデザインするのに役立ちます。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 9: Designing Effective Navigation | 効果的なナビゲーションのデザイン</h3>
+
+<h4>Navigation Principles (2 minutes) | ナビゲーション原則（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Four key principles for navigation: Clarity, Consistency, Efficiency, and Forgiveness."</li>
+<li>"Clarity means users always know where they are. Use clear titles, show current location in tab bars, provide breadcrumbs for deep hierarchies."</li>
+<li>"Consistency means putting navigation in the same place. Tab bars at bottom, back buttons top-left, same patterns throughout."</li>
+<li>"Efficiency means minimizing taps. Aim for 3 taps or less to reach any screen. Provide shortcuts for frequent tasks."</li>
+<li>"Forgiveness means letting users go back. Always provide back buttons or swipe gestures. Don't trap users in dead ends."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"ナビゲーションの4つの主要原則：明確性、一貫性、効率性、寛容性。"</li>
+<li>"明確性は、ユーザーが常にどこにいるかを知ることを意味します。明確なタイトルを使用し、タブバーで現在の場所を表示し、深い階層にはパンくずリストを提供します。"</li>
+<li>"一貫性は、ナビゲーションを同じ場所に配置することを意味します。下部のタブバー、左上の戻るボタン、全体で同じパターン。"</li>
+<li>"効率性は、タップを最小化することを意味します。任意の画面に到達するために3タップ以下を目指します。頻繁なタスクへのショートカットを提供します。"</li>
+<li>"寛容性は、ユーザーが戻れるようにすることを意味します。常に戻るボタンまたはスワイプジェスチャーを提供します。行き止まりでユーザーを捕らえないでください。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 10: Creating Multi-Screen Prototypes | マルチスクリーンプロトタイプの作成</h3>
+
+<h4>Building Connected Experiences (2 minutes) | 接続された体験の構築（2分）</h4>
+
+<strong>English Speaking Points:</strong>
+<ul>
+<li>"Building a prototype involves four steps: prepare screens, add hotspots, set transitions, test the flow."</li>
+<li>"First, ensure all your wireframes are complete and properly named. Organization is key."</li>
+<li>"Second, add navigation hotspots. Link buttons to their destination screens, connect tab bars, add back navigation."</li>
+<li>"Third, set appropriate transitions for each connection. Remember: consistency matters."</li>
+<li>"Fourth, and most important: test it yourself. Click through every flow, verify all links work, check that navigation makes sense."</li>
+</ul>
+
+<strong>Japanese Speaking Points:</strong>
+<ul>
+<li>"プロトタイプの構築には4つのステップがあります：画面を準備、ホットスポットを追加、トランジションを設定、フローをテスト。"</li>
+<li>"まず、すべてのワイヤーフレームが完成し、適切に名前が付けられていることを確認します。整理が鍵です。"</li>
+<li>"次に、ナビゲーションホットスポットを追加します。ボタンを宛先画面にリンクし、タブバーを接続し、戻るナビゲーションを追加します。"</li>
+<li>"3番目に、各接続に適切なトランジションを設定します。覚えておいてください：一貫性が重要です。"</li>
+<li>"4番目、そして最も重要：自分でテストします。すべてのフローをクリックスルーし、すべてのリンクが機能することを確認し、ナビゲーションが理にかなっていることを確認します。"</li>
+</ul>
+
+<hr>
+
+<h3>Slide 11-17: [Remaining slides follow similar pattern with concise speaking points focusing on practical application]</h3>
+
+<hr>
+
+<h2>Post-Lecture Activities | 講義後アクティビティ</h2>
+
+<h3>Activity Overview (70 minutes) | アクティビティ概要（70分）</h3>
+
+<strong>Phase 1: Planning (10 min)</strong>
+<ul>
+<li>Students map user flows on paper</li>
+<li>Identify 2-3 key journeys to prototype</li>
+<li>Note all screens needed</li>
+<li>Plan navigation connections</li>
+</ul>
+
+<strong>Phase 2: Adding Interactivity (30 min)</strong>
+<ul>
+<li>Open Week 6 wireframes in Figma/Adobe XD</li>
+<li>Switch to prototype mode</li>
+<li>Create hotspots and connections</li>
+<li>Link navigation elements</li>
+</ul>
+
+<strong>Phase 3: Setting Transitions (10 min)</strong>
+<ul>
+<li>Choose appropriate transitions</li>
+<li>Apply consistently throughout</li>
+<li>Adjust timing and easing</li>
+<li>Preview prototype</li>
+</ul>
+
+<strong>Phase 4: Testing (10 min)</strong>
+<ul>
+<li>Click through all flows</li>
+<li>Verify all connections work</li>
+<li>Identify broken links</li>
+<li>Fix issues</li>
+</ul>
+
+<strong>Phase 5: Bot Feedback & Iteration (10 min)</strong>
+<ul>
+<li>Share prototype link with bot</li>
+<li>Receive navigation feedback</li>
+<li>Make improvements</li>
+<li>Refine user flows</li>
+</ul>
+
+<h3>Instructor Circulation Guidance | インストラクター巡回ガイダンス</h3>
+
+<strong>What to Look For:</strong>
+<ul>
+<li>Are students planning before building?</li>
+<li>Are connections logical and consistent?</li>
+<li>Are transitions appropriate?</li>
+<li>Are back buttons included?</li>
+<li>Is navigation clear and intuitive?</li>
+</ul>
+
+<strong>Common Issues:</strong>
+<ul>
+<li>Too many connections (overwhelming)</li>
+<li>Inconsistent transitions</li>
+<li>Missing back navigation</li>
+<li>Broken or dead-end links</li>
+<li>Over-complicated flows</li>
+</ul>
+
+<strong>Intervention Strategies:</strong>
+<ul>
+<li>Suggest focusing on 2-3 flows</li>
+<li>Recommend transition consistency</li>
+<li>Remind about back navigation</li>
+<li>Help debug broken connections</li>
+<li>Encourage simplification</li>
+</ul>
+
+<hr>
+
+<h2>Assessment Criteria | 評価基準</h2>
+
+<h3>Interactive Prototype (60% of weekly grade)</h3>
+
+<strong>Excellent (90-100%):</strong>
+<ul>
+<li>6-8 screens well connected</li>
+<li>2-3 complete user flows working perfectly</li>
+<li>Consistent, appropriate transitions</li>
+<li>All navigation functional</li>
+<li>No broken links</li>
+<li>Professional quality</li>
+</ul>
+
+<strong>Good (80-89%):</strong>
+<ul>
+<li>6-8 screens connected</li>
+<li>2-3 flows mostly working</li>
+<li>Mostly consistent transitions</li>
+<li>Most navigation functional</li>
+<li>Few broken links</li>
+<li>Good quality</li>
+</ul>
+
+<strong>Satisfactory (70-79%):</strong>
+<ul>
+<li>4-6 screens connected</li>
+<li>1-2 flows working</li>
+<li>Some transition consistency</li>
+<li>Basic navigation functional</li>
+<li>Some broken links</li>
+<li>Acceptable quality</li>
+</ul>
+
+<strong>Needs Improvement (<70%):</strong>
+<ul>
+<li>Fewer than 4 screens</li>
+<li>Flows incomplete or non-functional</li>
+<li>Inconsistent or missing transitions</li>
+<li>Navigation unclear or broken</li>
+<li>Many broken links</li>
+<li>Poor quality</li>
+</ul>
+
+<hr>
+
+<em>End of Instructor Notes</em>
+
+<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+
+        </div>
+    </main>
+
+    <nav class="week-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn nav-home">🏠 Home</a>
+        <a href="week06-instructor-notes.html" class="nav-btn nav-prev">← Week 6</a>
+        <span class="nav-current">Week 7 Instructor Notes</span>
+        <a href="week08-instructor-notes.html" class="nav-btn nav-next">Week 8 →</a>
+        <a href="week07-presentation.html" class="nav-btn nav-presentation">📊 View Presentation</a>
+    </div>
+</nav>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+        </div>
+    </footer>
+</body>
+</html>

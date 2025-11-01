@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 14: Assignment - HCI-101</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #f8f9fa; }
+        nav { background: #2a76dd; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; padding: 8px 15px; border-radius: 5px; transition: background 0.3s; }
+        nav a:hover { background: rgba(255,255,255,0.2); }
+        main { margin-top: 80px; padding: 40px 20px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .assignment-header { background: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .assignment-header h1 { color: #2a76dd; margin: 0 0 10px 0; }
+        .assignment-header .subtitle { color: #666; font-size: 1.1em; }
+        .section { background: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .section h2 { color: #2a76dd; border-bottom: 3px solid #2a76dd; padding-bottom: 10px; margin-top: 0; }
+        .grading-rubric { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .grading-rubric th { background: #2a76dd; color: white; padding: 12px; text-align: left; }
+        .grading-rubric td { padding: 12px; border: 1px solid #ddd; }
+        .grading-rubric tr:nth-child(even) { background: #f8f9fa; }
+        .deliverable-box { background: #f0f7ff; border-left: 4px solid #2a76dd; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        .requirement-list { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 15px 0; }
+        .celebration-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 10px; margin: 20px 0; text-align: center; }
+        .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="week13-assignment.html">← Previous Week</a>
+        <a href="week14-presentation.html">📊 View Presentation</a>
+        <a href="week14-instructor-notes.html">📖 Instructor Notes</a>
+    </nav>
+
+    <main>
+        <div class="assignment-header">
+            <h1>Week 14: Final Project Presentation</h1>
+            <p class="subtitle">Showcase Your Design Journey</p>
+            <p class="bilingual">第14週：最終プロジェクトプレゼンテーション - デザインジャーニーの発表</p>
+        </div>
+
+        <div class="celebration-box">
+            <h2 style="margin-top:0; color: white;">🎉 Congratulations on Completing HCI-101! 🎉</h2>
+            <p style="font-size: 1.1em;">You've journeyed from HCI fundamentals to creating a complete user-centered design project!</p>
+            <p class="bilingual">HCI基礎から完全なユーザー中心設計プロジェクトの作成まで、あなたは旅をしてきました！</p>
+        </div>
+
+        <div class="section">
+            <h2>📋 Assignment Overview / 課題概要</h2>
+            <p>Present your final project to the class in a 7-10 minute presentation. Showcase your design journey, demonstrate your working prototype, and reflect on what you've learned.</p>
+            <p class="bilingual">7-10分のプレゼンテーションでクラスに最終プロジェクトを発表します。デザインジャーニーを披露し、動作するプロトタイプをデモンストレーションし、学んだことを振り返ります。</p>
+        </div>
+
+        <div class="section">
+            <h2>📦 Presentation Requirements / プレゼンテーション要件</h2>
+            <div class="deliverable-box">
+                <h3>Presentation Content (7-10 minutes)</h3>
+                <div class="requirement-list">
+                    <strong>Required Components:</strong>
+                    <ol>
+                        <li><strong>Problem & User Research (1-2 min):</strong>
+                            <ul>
+                                <li>What problem did you address?</li>
+                                <li>Who are your users?</li>
+                                <li>Key research insights</li>
+                            </ul>
+                        </li>
+                        <li><strong>Design Process Journey (2-3 min):</strong>
+                            <ul>
+                                <li>Personas and user needs</li>
+                                <li>Initial sketches to final design</li>
+                                <li>Key design decisions and why</li>
+                                <li>Iterations based on feedback</li>
+                            </ul>
+                        </li>
+                        <li><strong>Final Prototype Demo (2-3 min):</strong>
+                            <ul>
+                                <li>Live demonstration of working prototype</li>
+                                <li>Walk through 1-2 key user flows</li>
+                                <li>Highlight unique features</li>
+                            </ul>
+                        </li>
+                        <li><strong>Usability Testing Results (1 min):</strong>
+                            <ul>
+                                <li>Key findings from testing</li>
+                                <li>Improvements made based on feedback</li>
+                            </ul>
+                        </li>
+                        <li><strong>Reflections & Learnings (1-2 min):</strong>
+                            <ul>
+                                <li>What did you learn about HCI?</li>
+                                <li>What surprised you?</li>
+                                <li>What would you do differently?</li>
+                                <li>Connection to HCI principles</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Grading Rubric (35 points total)</h2>
+
+            <table class="grading-rubric">
+                <thead>
+                    <tr>
+                        <th>Criteria / 基準</th>
+                        <th>Points</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>User Research</td>
+                        <td>5</td>
+                        <td>Quality of research, clear user understanding, evidence-based insights</td>
+                    </tr>
+                    <tr>
+                        <td>Design Process</td>
+                        <td>5</td>
+                        <td>Clear journey from research to final design, iterations shown</td>
+                    </tr>
+                    <tr>
+                        <td>Final Prototype</td>
+                        <td>5</td>
+                        <td>Functional, polished, meets user needs, demonstrates HCI principles</td>
+                    </tr>
+                    <tr>
+                        <td>Usability Testing</td>
+                        <td>5</td>
+                        <td>Evidence of testing, improvements based on findings</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility</td>
+                        <td>5</td>
+                        <td>Demonstrates accessibility considerations and compliance</td>
+                    </tr>
+                    <tr>
+                        <td>Clarity & Organization</td>
+                        <td>4</td>
+                        <td>Clear presentation flow, good pacing, easy to follow</td>
+                    </tr>
+                    <tr>
+                        <td>Demonstration</td>
+                        <td>3</td>
+                        <td>Smooth demo, prototype works as expected, engaging</td>
+                    </tr>
+                    <tr>
+                        <td>Reflection</td>
+                        <td>3</td>
+                        <td>Thoughtful insights, connections to HCI principles, personal growth</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🤖 Bot Assessment / ボット評価</h2>
+            <div class="requirement-list">
+                <strong>Final Conversational Interview (15-20 minutes)</strong>
+                <p>After presentations, you'll complete a final bot assessment covering:</p>
+                <ul>
+                    <li>Overall understanding of HCI principles</li>
+                    <li>Design decisions and rationale</li>
+                    <li>Application of user-centered design process</li>
+                    <li>Reflection on learning journey</li>
+                </ul>
+                <p><strong>Weight:</strong> 15% of final course grade</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✅ Submission Requirements / 提出要件</h2>
+            <div class="requirement-list">
+                <ul>
+                    <li><strong>Presentation Slides:</strong> PDF or PowerPoint</li>
+                    <li><strong>Prototype Link:</strong> Working prototype (Figma/Adobe XD/etc.)</li>
+                    <li><strong>File Naming:</strong> LastName_FirstName_FinalPresentation.pdf</li>
+                    <li><strong>Duration:</strong> 7-10 minutes (strict timing)</li>
+                    <li><strong>Practice:</strong> Rehearse your presentation and demo!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 Tips for Success / 成功のためのヒント</h2>
+            <ul>
+                <li><strong>Practice your demo:</strong> Test it multiple times before presenting</li>
+                <li><strong>Tell a story:</strong> Make it compelling - you're the designer who solved a real problem!</li>
+                <li><strong>Time yourself:</strong> 7-10 minutes goes fast - practice with a timer</li>
+                <li><strong>Show, don't just tell:</strong> Use visuals, screenshots, demo</li>
+                <li><strong>Be confident:</strong> You've done great work - own it!</li>
+                <li><strong>Prepare for Q&A:</strong> Think about questions classmates might ask</li>
+                <li><strong>Have a backup plan:</strong> Save demo screenshots in case of technical issues</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🎓 After the Course / コース終了後</h2>
+            <ul>
+                <li>Add your project to your portfolio</li>
+                <li>Share on LinkedIn with #HCI #UXDesign</li>
+                <li>Continue learning - UX/HCI is an ever-evolving field</li>
+                <li>Apply these principles in future projects</li>
+                <li>Stay connected with your cohort</li>
+            </ul>
+        </div>
+
+        <div class="celebration-box">
+            <h2 style="margin-top:0; color: white;">🌟 You Did It! 🌟</h2>
+            <p style="font-size: 1.1em;">From understanding HCI basics to creating accessible, user-tested prototypes - you've grown tremendously as a designer!</p>
+            <p class="bilingual">HCI基礎の理解から、アクセス可能でユーザーテスト済みのプロトタイプの作成まで - デザイナーとして大きく成長しました！</p>
+        </div>
+    </main>
+
+    <footer style="background: #2a76dd; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2025 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
+        <p style="margin-top: 10px;">Thank you for an amazing semester! | 素晴らしい学期をありがとうございました！</p>
+    </footer>
+</body>
+</html>
