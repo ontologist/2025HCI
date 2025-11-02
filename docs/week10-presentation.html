@@ -48,7 +48,7 @@
             overflow-y: auto !important;
             max-height: calc(100vh - 110px) !important;
             height: 100% !important;
-            padding: 20px 40px !important;
+            padding: 20px 60px 100px 60px !important; /* Extra bottom padding for scrolling */
             box-sizing: border-box !important;
         }
         .reveal .slides section.present {
@@ -616,8 +616,8 @@ Errors: 2 (wrong category, missed filter)
             center: true,
             slideNumber: true,
             transition: 'slide',
-            width: 1280,
-            height: 720,
+            width: 1400,  // Wider aspect ratio
+            height: 900,  // Taller for better content display
             margin: 0.1,
             controls: true,
             progress: true,
