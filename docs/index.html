@@ -20,6 +20,7 @@
             <a href="#overview">Overview</a>
             <a href="#curriculum">Curriculum</a>
             <a href="#presentations">Presentations</a>
+            <a href="#bot">Bot Assistant</a>
             <a href="#resources">Resources</a>
         </div>
     </nav>
@@ -412,6 +413,54 @@
             </div>
         </section>
 
+        <!-- Bot Section -->
+        <section id="bot" class="section">
+            <h2>🤖 HCI-101 Bot Assistant / ボットアシスタント</h2>
+            <div class="bot-grid">
+                <div class="bot-info-card">
+                    <h3>Always-On Course Mentor</h3>
+                    <p>The HCI-101 Bot provides 24/7 support in English and Japanese, guiding you through weekly activities, projects, and design questions.</p>
+                    <ul>
+                        <li>Ask course-related questions or request study tips.</li>
+                        <li>Get feedback on prototypes, personas, and design decisions.</li>
+                        <li>Switch between English and Japanese any time.</li>
+                        <li>Save your conversation locally with automatic history.</li>
+                    </ul>
+                    <div class="bot-setup">
+                        <h4>Access Options</h4>
+                        <p><strong>On this page:</strong> Uses the hosted HTTPS API tunnel when available.</p>
+                        <p><strong>Local testing:</strong> Start the backend (`npm run dev` in `bot-portal/server`) and open this page from `http://localhost:8000/docs/index.html`.</p>
+                        <div id="bot-https-notice" class="bot-https-notice">
+                            <strong>HTTPS setup required:</strong> Update the API endpoint in <code>docs/bot-chat.js</code> with your HTTPS tunnel URL.
+                        </div>
+                    </div>
+                </div>
+                <div class="bot-chat-card" id="bot-chat-container" data-lang="en">
+                    <div class="bot-chat-header">
+                        <div>
+                            <h3>Live Chat</h3>
+                            <p>Connected to the HCI-101 assistant (beta)</p>
+                        </div>
+                        <div class="bot-chat-controls">
+                            <label for="bot-language-toggle">Language</label>
+                            <select id="bot-language-toggle" aria-label="Select chat language">
+                                <option value="en" selected>English</option>
+                                <option value="ja">日本語</option>
+                            </select>
+                            <button type="button" class="btn btn-secondary" id="bot-clear-btn" aria-label="Clear conversation" onclick="window.ml101BotChat?.clearConversation()">🗑️ Clear</button>
+                        </div>
+                    </div>
+                    <div id="bot-loading" class="bot-loading" role="status" aria-live="polite">Connecting to the bot...</div>
+                    <div id="bot-messages" class="bot-messages" aria-live="polite"></div>
+                    <form class="bot-input" onsubmit="event.preventDefault(); window.ml101BotChat?.sendMessage();">
+                        <label class="sr-only" for="bot-message-input">Message</label>
+                        <textarea id="bot-message-input" rows="3" placeholder="Ask about assignments, design methods, or project ideas..."></textarea>
+                        <button type="submit" id="bot-send-btn" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- Resources Section -->
         <section id="resources" class="section">
             <h2>📚 Resources / リソース</h2>
@@ -481,5 +530,6 @@
             <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
         </div>
     </footer>
+    <script src="bot-chat.js"></script>
 </body>
 </html>
