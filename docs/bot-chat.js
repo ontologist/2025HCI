@@ -29,8 +29,8 @@ class ML101BotChat {
             return 'http://localhost:8002/api';
         } else if (isHttps) {
             // HTTPS page (GitHub Pages) - need HTTPS API
-            // Using ngrok tunnel for HTTPS access
-            return 'https://12ccf0a4b473.ngrok-free.app/api';
+            // Using Cloudflare tunnel for HTTPS access
+            return 'https://hcibot.tijerino.ai/api';
         } else {
             // HTTP page - can use HTTP API
             return 'http://192.218.175.132:8002/api';

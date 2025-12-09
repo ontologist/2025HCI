@@ -90,13 +90,15 @@ class SiteAuth {
         
         document.documentElement.classList.add('auth-verified');
         
-        // Restore all hidden elements
-        const hiddenElements = document.body.querySelectorAll('[data-auth-hidden="true"]');
-        hiddenElements.forEach(el => {
-            el.style.display = '';
-            el.style.visibility = '';
-            el.removeAttribute('data-auth-hidden');
-        });
+        // Restore all hidden elements (only if body exists)
+        if (document.body) {
+            const hiddenElements = document.body.querySelectorAll('[data-auth-hidden="true"]');
+            hiddenElements.forEach(el => {
+                el.style.display = '';
+                el.style.visibility = '';
+                el.removeAttribute('data-auth-hidden');
+            });
+        }
         
         // Also explicitly show common elements
         const header = document.body.querySelector('header');
