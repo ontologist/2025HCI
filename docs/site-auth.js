@@ -11,22 +11,33 @@ class SiteAuth {
     }
     
     init() {
-        // Check if user is already authenticated
-        const session = this.getSession();
-        if (session && this.isSessionValid(session)) {
-            // User is authenticated, show content
-            this.showContent();
-            return;
+        // Wait for DOM to be ready before doing anything
+        const initWhenReady = () => {
+            // Check if user is already authenticated
+            const session = this.getSession();
+            if (session && this.isSessionValid(session)) {
+                // User is authenticated, show content
+                this.showContent();
+                return;
+            }
+            
+            // User not authenticated - ensure content is hidden and show login
+            // Force hide content first
+            this.hideContent();
+            
+            // Small delay to ensure DOM is ready, then show modal
+            setTimeout(() => {
+                this.showLoginModal();
+            }, 50);
+        };
+        
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initWhenReady);
+        } else {
+            // DOM already ready, but wait a tick to ensure body exists
+            setTimeout(initWhenReady, 0);
         }
-        
-        // User not authenticated - ensure content is hidden and show login
-        // Force hide content first
-        this.hideContent();
-        
-        // Small delay to ensure DOM is ready, then show modal
-        setTimeout(() => {
-            this.showLoginModal();
-        }, 50);
     }
     
     getSession() {
