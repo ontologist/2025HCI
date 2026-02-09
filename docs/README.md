@@ -128,6 +128,7 @@ To export presentation as PDF:
 - [Reveal.js Documentation](https://revealjs.com/)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
 - [Markdown to HTML Converters](https://www.markdownguide.org/tools/)
+- [Open Source Ollama Bot Research](OPENSOURCE-OLLAMA-BOT-RESEARCH.md)
 
 ---
 

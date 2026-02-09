@@ -118,6 +118,7 @@ See `docs/GETTING-STARTED.md` for course development instructions.
 - [Bot Portal README](bot-portal/README.md)
 - [Quick Start Guide](docs/BOT-PORTAL-GUIDE.md)
 - [Bot Configuration](bot-config/hci-bot-config.yaml)
+- [Open Source Ollama Bot Research](docs/OPENSOURCE-OLLAMA-BOT-RESEARCH.md)
 
 ---
 
