@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 2: Design Thinking | デザイン思考</title>
+    <title>Week 2: The Human Factor 1 | ヒューマンファクター1</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
@@ -66,457 +66,339 @@
 
             <!-- Slide 1 -->
             <section>
-                <h1>Week 2: Design Thinking</h1>
-                <h2 class="japanese">第2週：デザイン思考とユーザー中心デザイン</h2>
+                <h1>Week 2: The Human Factor 1</h1>
+                <h2 class="japanese">第2週：ヒューマンファクター1</h2>
                 <hr>
-                <h3>User-Centered Design Process</h3>
-                <p class="japanese">ユーザー中心デザインプロセス</p>
+                <h3>Physical and Physiological Characteristics</h3>
+                <p class="japanese">身体的・生理学的特性</p>
+                <p style="font-size: 0.8em; color: #666;">Session 2 of 14 | 全14回中の第2回</p>
                 <br>
                 <p><strong>Instructor:</strong> Yuri Tijerino</p>
-                <p><strong>Fall 2025</strong> | 2025年秋学期</p>
+                <p><strong>Fall 2026</strong> | 2026年秋学期</p>
             </section>
 
             <!-- Slide 2 -->
             <section>
                 <h2>Today's Agenda | 今日のアジェンダ</h2>
                 <ul>
-                    <li>Design Thinking Framework | デザイン思考フレームワーク</li>
-                    <li>User-Centered Design Principles | ユーザー中心デザイン原則</li>
-                    <li>Empathy-Driven Problem Solving | 共感駆動問題解決</li>
-                    <li>Hands-On Design Challenge | ハンズオンデザインチャレンジ</li>
+                    <li>Welcome back: a quick recap | おかえりなさい：簡単な振り返り</li>
+                    <li>What are human factors? | ヒューマンファクターとは？</li>
+                    <li>How we sense interfaces: vision, hearing, touch | 視覚、聴覚、触覚</li>
+                    <li>Reaction time and motor control | 反応時間と運動制御</li>
+                    <li>Designing for bodies, not just minds | 心だけでなく身体のためにデザインする</li>
+                    <li>Hands-on: Human Factors Audit | ハンズオン：ヒューマンファクター監査</li>
                 </ul>
                 <hr>
                 <h3>Learning Objectives | 学習目標</h3>
                 <ul style="font-size: 0.8em;">
-                    <li>Master the 5 stages of design thinking</li>
-                    <li>Apply empathy techniques to understand users</li>
-                    <li>Generate creative solutions through structured ideation</li>
-                    <li>Create and test low-fidelity prototypes</li>
+                    <li>Explain how vision, hearing, and touch shape interface design</li>
+                    <li>Apply Fitts's Law and reaction-time research to real interfaces</li>
+                    <li>Recognize physical fatigue as a design problem, including when supervising AI agents</li>
+                    <li>Audit an interface — including an AI assistant — for how well it fits the human body</li>
                 </ul>
             </section>
 
             <!-- Slide 3 -->
             <section>
-                <h2>What is Design Thinking?</h2>
-                <h3 class="japanese">デザイン思考とは？</h3>
-                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
-                    <p style="font-size: 1.1em;"><strong>Design Thinking</strong> is a human-centered approach to innovation that integrates the needs of people, the possibilities of technology, and the requirements for business success.</p>
-                    <p class="japanese">デザイン思考は、人々のニーズ、技術の可能性、ビジネス成功の要件を統合する人間中心のイノベーションアプローチです。</p>
+                <h2>Welcome Back | おかえりなさい</h2>
+                <h3 class="japanese">前回の振り返り</h3>
+                <div style="background: #f0f0f0; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
+                    <p>Last time, in Startup Week, we asked: what is an interface, and how did we get from command lines to AI agents? We agreed that an interface is the place where a person and a machine meet.</p>
+                    <p class="japanese">前回のスタートアップウィークでは、「インターフェースとは何か」「コマンドラインからAIエージェントまでどう進化したか」を考えました。インターフェースとは、人と機械が出会う場所でした。</p>
                 </div>
-                <h3>Core Philosophy | 基本哲学</h3>
+                <h4>Today, we zoom in on the "Human" side | 今日は「人間」の側に焦点を当てます</h4>
                 <ul style="font-size: 0.85em;">
-                    <li><strong>Human-Centered:</strong> Start with people, not technology</li>
-                    <li><strong>Problem-Focused:</strong> Solve real problems, not symptoms</li>
-                    <li><strong>Iterative:</strong> Build, test, learn, repeat</li>
-                    <li><strong>Collaborative:</strong> Diverse perspectives create better solutions</li>
+                    <li>Not what the interface can do — what <strong>your body</strong> can do</li>
+                    <li>Eyes, ears, hands, and reflexes are part of every design decision</li>
+                    <li>This applies just as much to a touchscreen as to a voice-controlled AI agent</li>
                 </ul>
             </section>
 
             <!-- Slide 4 -->
             <section>
-                <h2>The Design Thinking Process</h2>
-                <h3 class="japanese">デザイン思考プロセス</h3>
-                <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5em; font-size: 0.7em;">
+                <h2>What Are Human Factors?</h2>
+                <h3 class="japanese">ヒューマンファクターとは？</h3>
+                <div style="background: #f0f0f0; padding: 2em; border-radius: 10px; margin: 1em 0;">
+                    <p style="font-size: 1.1em;"><strong>Human factors</strong> (also called ergonomics) is the scientific study of how people's physical and mental characteristics should shape the design of tools, interfaces, and systems.</p>
+                    <p class="japanese">ヒューマンファクター（人間工学）は、人の身体的・精神的特性が、道具やインターフェース、システムの設計にどう反映されるべきかを研究する学問です。</p>
+                </div>
+                <h3>Three Kinds of Characteristics | 3種類の特性</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; font-size: 0.8em;">
                     <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
-                        <h4>1. Empathize</h4>
-                        <p class="japanese">共感</p>
-                        <p>Understand users deeply</p>
-                        <ul>
-                            <li>User research</li>
-                            <li>Interviews</li>
-                            <li>Observations</li>
-                        </ul>
-                    </div>
-                    <div style="background: #f3e5f5; padding: 1em; border-radius: 8px;">
-                        <h4>2. Define</h4>
-                        <p class="japanese">定義</p>
-                        <p>Articulate the problem</p>
-                        <ul>
-                            <li>Problem statement</li>
-                            <li>Point of View</li>
-                            <li>Success criteria</li>
-                        </ul>
-                    </div>
-                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
-                        <h4>3. Ideate</h4>
-                        <p class="japanese">発想</p>
-                        <p>Generate solutions</p>
-                        <ul>
-                            <li>Brainstorming</li>
-                            <li>Divergent thinking</li>
-                            <li>Creative techniques</li>
-                        </ul>
+                        <h4>Physical</h4>
+                        <p>Body size, reach, strength</p>
                     </div>
                     <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
-                        <h4>4. Prototype</h4>
-                        <p class="japanese">試作</p>
-                        <p>Build to think</p>
-                        <ul>
-                            <li>Low-fidelity</li>
-                            <li>Fail fast</li>
-                            <li>Iterate</li>
-                        </ul>
+                        <h4>Physiological</h4>
+                        <p>Vision, hearing, touch, reflexes — <strong>today's focus</strong></p>
                     </div>
-                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
-                        <h4>5. Test</h4>
-                        <p class="japanese">テスト</p>
-                        <p>Validate solutions</p>
-                        <ul>
-                            <li>User testing</li>
-                            <li>Feedback</li>
-                            <li>Refine</li>
-                        </ul>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Cognitive</h4>
+                        <p>Memory, attention, mental models — <strong>next session</strong></p>
                     </div>
                 </div>
             </section>
 
             <!-- Slide 5 -->
             <section>
-                <h2>Stage 1: Empathize</h2>
-                <h3 class="japanese">共感 - ユーザーの理解</h3>
-                <div class="two-column" style="font-size: 0.85em;">
-                    <div>
-                        <h4>Why Empathy Matters</h4>
-                        <ul>
-                            <li>Avoid assumptions</li>
-                            <li>Discover hidden needs</li>
-                            <li>Build better solutions</li>
-                        </ul>
-                        <h4 style="margin-top: 1em;">Empathy Techniques</h4>
-                        <ul>
-                            <li>User Interviews</li>
-                            <li>Observation</li>
-                            <li>Empathy Mapping</li>
-                        </ul>
+                <h2>The Human Information-Processing Loop</h2>
+                <h3 class="japanese">人間の情報処理ループ</h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; font-size: 0.8em; margin-top: 1em;">
+                    <div style="background: #e3f2fd; padding: 1.2em; border-radius: 8px;">
+                        <h4>1. Sense | 感知</h4>
+                        <p>Eyes, ears, skin pick up a signal from the interface</p>
                     </div>
-                    <div>
-                        <h4>Empathy Map</h4>
-                        <ul>
-                            <li><strong>Says:</strong> Direct quotes</li>
-                            <li><strong>Thinks:</strong> Unstated thoughts</li>
-                            <li><strong>Does:</strong> Observed behaviors</li>
-                            <li><strong>Feels:</strong> Emotions during interaction</li>
-                        </ul>
-                        <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px;">
-                            <p><strong>Goal:</strong> Deep understanding of user context</p>
-                        </div>
+                    <div style="background: #fff3e0; padding: 1.2em; border-radius: 8px;">
+                        <h4>2. Process | 処理</h4>
+                        <p>The brain interprets it and decides what to do</p>
+                        <p style="font-size: 0.85em; font-style: italic;">(deep dive next session)</p>
                     </div>
+                    <div style="background: #e8f5e9; padding: 1.2em; border-radius: 8px;">
+                        <h4>3. Act | 行動</h4>
+                        <p>Hands, voice, or eyes carry out a response</p>
+                    </div>
+                </div>
+                <div style="background: #fff3cd; padding: 1em; margin-top: 1.5em; border-radius: 5px; font-size: 0.85em;">
+                    <p><strong>Today we focus on steps 1 and 3</strong> — the sensing and the acting — because those are governed by physical and physiological limits that every interface has to respect.</p>
                 </div>
             </section>
 
             <!-- Slide 6 -->
             <section>
-                <h2>Stage 2: Define</h2>
-                <h3 class="japanese">定義 - 問題の明確化</h3>
-                <div style="background: #f0f0f0; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
-                    <h4>Point of View (POV) Statement</h4>
-                    <p style="font-family: monospace; font-size: 0.9em;">
-                        [User type] needs [need/goal]<br>
-                        because [insight from research]<br>
-                        but currently [current problem/limitation]
-                    </p>
+                <h2>How We Sense Interfaces</h2>
+                <h3 class="japanese">インターフェースをどう感知するか</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; font-size: 0.75em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>👁️ Vision | 視覚</h4>
+                        <ul>
+                            <li>~200° field of view, but sharp detail only in a small central area</li>
+                            <li>Peripheral vision is great at noticing motion, poor at reading text</li>
+                            <li><strong>Design rule:</strong> put critical info centrally, use motion for alerts</li>
+                        </ul>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
+                        <h4>👂 Hearing | 聴覚</h4>
+                        <ul>
+                            <li>Range: roughly 20 Hz–20 kHz; most sensitive around 2–5 kHz</li>
+                            <li>That 2–5 kHz band is also where speech consonants live</li>
+                            <li><strong>Design rule:</strong> notification tones and voice agents should sit in that range, with captions as a fallback</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>✋ Touch | 触覚</h4>
+                        <ul>
+                            <li>Our fastest-reacting sense (more on the next slide)</li>
+                            <li>Haptic buzz confirms an action without needing to look</li>
+                            <li><strong>Design rule:</strong> use vibration to confirm something happened, especially for agents acting in the background</li>
+                        </ul>
+                    </div>
                 </div>
-                <h4>Characteristics of Good Problem Statements</h4>
-                <ul style="font-size: 0.85em;">
-                    <li><strong>User-Focused:</strong> About people, not technology</li>
-                    <li><strong>Specific:</strong> Clear and actionable</li>
-                    <li><strong>Insight-Based:</strong> Based on real research</li>
-                    <li><strong>Problem-Oriented:</strong> Describes problem, not solution</li>
-                </ul>
             </section>
 
             <!-- Slide 7 -->
             <section>
-                <h2>Stage 3: Ideate</h2>
-                <h3 class="japanese">発想 - ソリューションの生成</h3>
-                <h4>Ideation Principles</h4>
-                <ul style="font-size: 0.85em;">
-                    <li><strong>Quantity Over Quality:</strong> Generate many ideas first</li>
-                    <li><strong>Defer Judgment:</strong> No criticism during brainstorming</li>
-                    <li><strong>Build on Ideas:</strong> "Yes, and..." instead of "Yes, but..."</li>
-                    <li><strong>Encourage Wild Ideas:</strong> Crazy ideas can lead to breakthroughs</li>
-                </ul>
-                <h4>Creative Techniques</h4>
-                <div class="two-column" style="font-size: 0.8em;">
-                    <div>
-                        <p><strong>Rapid Sketching</strong></p>
-                        <ul>
-                            <li>8-10 quick ideas, 1 minute each</li>
-                            <li>Focus on concepts, not perfection</li>
-                        </ul>
+                <h2>Reaction Time: How Fast Can You Respond?</h2>
+                <h3 class="japanese">反応時間：どれくらい速く反応できるか</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; font-size: 0.8em; text-align: center;">
+                    <div style="background: #e3f2fd; padding: 1.2em; border-radius: 8px;">
+                        <h4>Touch</h4>
+                        <p style="font-size: 1.4em; font-weight: bold;">~150 ms</p>
                     </div>
-                    <div>
-                        <p><strong>"What If" Scenarios</strong></p>
-                        <ul>
-                            <li>Remove constraints</li>
-                            <li>Change context</li>
-                            <li>Reverse assumptions</li>
-                        </ul>
+                    <div style="background: #e8f5e9; padding: 1.2em; border-radius: 8px;">
+                        <h4>Hearing</h4>
+                        <p style="font-size: 1.4em; font-weight: bold;">~160 ms</p>
+                    </div>
+                    <div style="background: #fff3e0; padding: 1.2em; border-radius: 8px;">
+                        <h4>Vision</h4>
+                        <p style="font-size: 1.4em; font-weight: bold;">~220 ms</p>
                     </div>
                 </div>
+                <h4 style="margin-top: 1em;">Choices Slow You Down: Hick's Law | ヒックの法則</h4>
+                <div style="background: #f0f0f0; padding: 1em; border-radius: 8px; font-family: monospace; font-size: 0.85em;">
+                    RT = a + b · log₂(n + 1)
+                </div>
+                <p style="font-size: 0.8em;">More options (<strong>n</strong>) means a longer decision time — but only logarithmically, so a well-organized menu of 20 items is much faster than its raw count suggests.</p>
             </section>
 
             <!-- Slide 8 -->
             <section>
-                <h2>Stage 4: Prototype</h2>
-                <h3 class="japanese">試作 - 考えるために構築</h3>
-                <div style="background: #e8f5e9; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
-                    <p><strong>Build to Think • Fail Fast • Low-Fidelity First</strong></p>
+                <h2>Motor Control and Fitts's Law</h2>
+                <h3 class="japanese">運動制御とフィッツの法則</h3>
+                <div style="background: #f0f0f0; padding: 1.5em; border-radius: 10px; margin: 1em 0;">
+                    <p style="font-family: monospace; font-size: 1em; text-align: center;">MT = a + b · log₂(2D / W)</p>
+                    <p style="font-size: 0.85em; text-align: center; margin-top: 0.5em;">Movement time grows with <strong>D</strong>istance to a target and shrinks with its <strong>W</strong>idth.</p>
                 </div>
-                <h4>Fidelity Levels</h4>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; font-size: 0.75em;">
-                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
-                        <h4>Low-Fidelity</h4>
-                        <ul>
-                            <li>Paper sketches</li>
-                            <li>Wireframes</li>
-                            <li>Test concepts</li>
-                        </ul>
-                    </div>
-                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
-                        <h4>Mid-Fidelity</h4>
-                        <ul>
-                            <li>Digital wireframes</li>
-                            <li>Basic interactions</li>
-                            <li>Test functionality</li>
-                        </ul>
-                    </div>
-                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
-                        <h4>High-Fidelity</h4>
-                        <ul>
-                            <li>Visual design</li>
-                            <li>Full interactions</li>
-                            <li>Final validation</li>
-                        </ul>
-                    </div>
-                </div>
+                <p class="japanese" style="font-size: 0.85em;">移動時間は、ターゲットまでの<strong>距離</strong>が長くなるほど増え、ターゲットの<strong>幅</strong>が広くなるほど減ります。</p>
+                <h4>What This Means for Design | デザインへの意味</h4>
+                <ul style="font-size: 0.85em;">
+                    <li>Frequent actions should be <strong>big and close</strong></li>
+                    <li>Screen edges and corners act like infinitely wide targets — your cursor can't overshoot them</li>
+                    <li><strong>Voice sidesteps Fitts's Law entirely</strong> — there's nothing to point at, which is one reason voice agents can feel faster for some tasks</li>
+                </ul>
             </section>
 
             <!-- Slide 9 -->
             <section>
-                <h2>Stage 5: Test</h2>
-                <h3 class="japanese">テスト - ユーザーから学ぶ</h3>
-                <div class="two-column" style="font-size: 0.8em;">
-                    <div>
-                        <h4>Testing Goals</h4>
-                        <ul>
-                            <li>Validate assumptions</li>
-                            <li>Discover usability issues</li>
-                            <li>Gather feedback</li>
-                        </ul>
-                        <h4 style="margin-top: 1em;">Think-Aloud Protocol</h4>
-                        <ul>
-                            <li>User verbalizes thoughts</li>
-                            <li>Don't guide or help</li>
-                            <li>Rich insights into mental models</li>
-                        </ul>
+                <h2>System Response Time: Three Limits</h2>
+                <h3 class="japanese">システム応答時間：3つの限界</h3>
+                <div style="font-size: 0.8em;">
+                    <div style="background: #e8f5e9; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>0.1 second — feels instant | 瞬時に感じる</h4>
+                        <p>No special feedback needed; the result just appears.</p>
                     </div>
-                    <div>
-                        <h4>Task-Based Testing</h4>
-                        <ul>
-                            <li>Realistic scenarios</li>
-                            <li>Observe behavior</li>
-                            <li>Measure success</li>
-                        </ul>
-                        <div style="background: #e3f2fd; padding: 1em; margin-top: 1em; border-radius: 5px;">
-                            <p><strong>Remember:</strong> Test early and often!</p>
-                        </div>
+                    <div style="background: #fff3e0; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>1.0 second — flow stays unbroken | 流れが途切れない</h4>
+                        <p>You notice the delay, but your train of thought survives.</p>
                     </div>
+                    <div style="background: #ffebee; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
+                        <h4>10 seconds — the limit of attention | 注意の限界</h4>
+                        <p>Beyond this, show a progress indicator or users assume it's frozen.</p>
+                    </div>
+                </div>
+                <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                    <p style="font-size: 0.85em;"><strong>For AI agents:</strong> an agent that "thinks" for 5–10 seconds needs visible progress, or it just looks broken — even though nothing is wrong.</p>
                 </div>
             </section>
 
             <!-- Slide 10 -->
             <section>
-                <h2>User-Centered Design Principles</h2>
-                <h3 class="japanese">ユーザー中心デザイン原則</h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; font-size: 0.75em;">
-                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
-                        <h4>1. Know Your Users</h4>
+                <h2>Physical Fatigue and Ergonomics</h2>
+                <h3 class="japanese">身体的疲労と人間工学</h3>
+                <div class="two-column" style="font-size: 0.85em;">
+                    <div>
+                        <h4>The Classic Problems | 従来の問題</h4>
                         <ul>
-                            <li>User research</li>
-                            <li>Personas</li>
-                            <li>Context of use</li>
+                            <li>Repeated small movements → repetitive strain</li>
+                            <li>Long screen time → eye strain</li>
+                            <li>Poor posture → neck and back pain</li>
                         </ul>
                     </div>
-                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
-                        <h4>2. Design for Usability</h4>
+                    <div>
+                        <h4>A New One: Supervising Agents | 新しい問題：エージェントの監督</h4>
                         <ul>
-                            <li>Efficiency</li>
-                            <li>Effectiveness</li>
-                            <li>Satisfaction</li>
-                        </ul>
-                    </div>
-                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
-                        <h4>3. Iterate on Feedback</h4>
-                        <ul>
-                            <li>Test early and often</li>
-                            <li>Learn from failures</li>
-                            <li>Continuous improvement</li>
+                            <li>Watching an AI agent work is a different kind of tiring — sustained, low-engagement attention</li>
+                            <li>Psychologists call this a <strong>vigilance decrement</strong>: attention quality drops the longer you passively watch</li>
+                            <li><strong>Design response:</strong> don't ask people to watch silently — give them natural checkpoints to confirm or redirect</li>
                         </ul>
                     </div>
                 </div>
-                <h4 style="margin-top: 1em;">Design Principles in Practice</h4>
-                <ul style="font-size: 0.85em;">
-                    <li><strong>Visibility:</strong> Clear affordances and navigation</li>
-                    <li><strong>Feedback:</strong> Immediate response and clear status</li>
-                    <li><strong>Consistency:</strong> Similar actions work similarly</li>
-                </ul>
             </section>
 
             <!-- Slide 11 -->
             <section>
-                <h2>Design Thinking vs. Traditional Design</h2>
-                <div class="two-column" style="font-size: 0.8em;">
-                    <div style="background: #ffebee; padding: 1em; border-radius: 8px;">
-                        <h4>Traditional Approach</h4>
-                        <ul>
-                            <li>Solution-First</li>
-                            <li>Assumption-Based</li>
-                            <li>Linear Process</li>
-                            <li>Expert-Driven</li>
-                        </ul>
+                <h2>Designing for Physical Diversity</h2>
+                <h3 class="japanese">身体的多様性のためのデザイン</h3>
+                <p style="font-size: 0.85em;">Not everyone has the same vision, hearing, or motor ability — and not every situation does either.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; font-size: 0.8em; margin-top: 1em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Permanent</h4>
+                        <p>Low vision, limited mobility, deafness</p>
                     </div>
-                    <div style="background: #e8f5e9; padding: 1em; border-radius: 8px;">
-                        <h4>Design Thinking</h4>
-                        <ul>
-                            <li>Problem-First</li>
-                            <li>Research-Based</li>
-                            <li>Iterative Process</li>
-                            <li>User-Driven</li>
-                        </ul>
+                    <div style="background: #fff3e0; padding: 1em; border-radius: 8px;">
+                        <h4>Situational</h4>
+                        <p>One hand full, a loud room, a cracked screen</p>
                     </div>
                 </div>
-                <h4 style="margin-top: 1em;">Benefits of Design Thinking</h4>
-                <ul style="font-size: 0.85em;">
-                    <li><strong>Better Solutions:</strong> Solve real problems</li>
-                    <li><strong>Reduced Risk:</strong> Test before investing heavily</li>
-                    <li><strong>User Satisfaction:</strong> People want to use the product</li>
-                    <li><strong>Innovation:</strong> Breakthrough solutions emerge</li>
-                </ul>
+                <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px; font-size: 0.85em;">
+                    <p>This is just a preview — <strong>we go deep on accessibility and universal design in a future session.</strong> Keep it in mind as you do today's audit.</p>
+                </div>
             </section>
 
             <!-- Slide 12 -->
             <section>
-                <h2>Common Design Thinking Mistakes</h2>
-                <div style="font-size: 0.75em;">
-                    <div style="background: #ffebee; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
-                        <h4>1. Skipping Empathy</h4>
-                        <p><strong>Problem:</strong> Jump straight to solutions</p>
-                        <p><strong>Solution:</strong> Always start with user research</p>
+                <h2>Bringing This to AI and Agent Interfaces</h2>
+                <h3 class="japanese">AI・エージェントインターフェースへの応用</h3>
+                <div class="two-column" style="font-size: 0.8em;">
+                    <div style="background: #e3f2fd; padding: 1em; border-radius: 8px;">
+                        <h4>Classic interfaces</h4>
+                        <ul>
+                            <li>Fitts's Law governs button size and placement</li>
+                            <li>Feedback is usually instant (under 0.1s)</li>
+                            <li>You watch and act continuously</li>
+                        </ul>
                     </div>
-                    <div style="background: #ffebee; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
-                        <h4>2. Solution-Focused Problem Statements</h4>
-                        <p><strong>Problem:</strong> "Students need a better search function"</p>
-                        <p><strong>Better:</strong> "Students need to quickly find courses that match requirements"</p>
+                    <div style="background: #fce4ec; padding: 1em; border-radius: 8px;">
+                        <h4>Agent interfaces</h4>
+                        <ul>
+                            <li>Voice sidesteps Fitts's Law; touch targets still matter in agent control panels</li>
+                            <li>Delays often exceed 1s — progress feedback is not optional</li>
+                            <li>You supervise, which brings vigilance decrement, not muscle fatigue</li>
+                        </ul>
                     </div>
-                    <div style="background: #ffebee; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
-                        <h4>3. Judging Ideas Too Early</h4>
-                        <p><strong>Problem:</strong> "That won't work" during brainstorming</p>
-                        <p><strong>Solution:</strong> Generate many ideas first, evaluate later</p>
-                    </div>
+                </div>
+                <div style="background: #f0f0f0; padding: 1em; margin-top: 1em; border-radius: 8px; text-align: center;">
+                    <p><strong>Same human body, new kind of interface — the same laws still apply, they just show up differently.</strong></p>
                 </div>
             </section>
 
             <!-- Slide 13 -->
             <section>
-                <h2>This Week's Activity Preview</h2>
-                <h3>Campus App Redesign Challenge</h3>
+                <h2>Today's Activity: Human Factors Audit</h2>
+                <h3 class="japanese">今日のアクティビティ：ヒューマンファクター監査</h3>
                 <div style="font-size: 0.8em;">
-                    <h4>What You'll Do</h4>
+                    <h4>What You'll Do | やること</h4>
                     <ol>
-                        <li>Choose a Feature (course registration, campus map, cafeteria ordering)</li>
-                        <li>Interview Users (2-3 fellow students)</li>
-                        <li>Apply Design Thinking (complete all 5 stages)</li>
-                        <li>Create Prototypes (low-fidelity solutions)</li>
-                        <li>Test and Iterate (get feedback and improve)</li>
+                        <li>Pick an interface you use — an app, a device, or an AI assistant</li>
+                        <li>With a partner, time one key action against Fitts's Law and the three response-time limits</li>
+                        <li>List which senses (vision, hearing, touch) the interface uses, and whether it has a fallback</li>
+                        <li>Propose one redesign based on something from today</li>
+                        <li>Write up your own audit individually</li>
                     </ol>
-                    <h4>Time Breakdown</h4>
-                    <p>Empathize: 12 min | Define: 10 min | Ideate: 15 min | Prototype: 13 min | Test: 10 min</p>
+                    <h4>Time Breakdown | 時間配分</h4>
+                    <p>Pick & test: 15 min | Sensory & timing notes: 15 min | Redesign idea: 15 min | Individual write-up: 15 min</p>
                 </div>
             </section>
 
             <!-- Slide 14 -->
             <section>
-                <h2>Bot Integration for Design Thinking</h2>
-                <div class="two-column" style="font-size: 0.8em;">
-                    <div>
-                        <h4>Stage Navigation</h4>
-                        <ul>
-                            <li>Process Guide</li>
-                            <li>Checkpoint Validation</li>
-                            <li>Stage Transitions</li>
-                        </ul>
-                        <h4 style="margin-top: 1em;">Template Provision</h4>
-                        <ul>
-                            <li>Empathy Map Builder</li>
-                            <li>POV Statement Generator</li>
-                            <li>Ideation Prompts</li>
-                            <li>Prototype Templates</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Quality Assurance</h4>
-                        <ul>
-                            <li>Problem Statement Review</li>
-                            <li>Idea Evaluation</li>
-                            <li>Prototype Feedback</li>
-                        </ul>
-                        <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px;">
-                            <p><strong>Example:</strong> "Your empathy map looks complete. Ready for Define?"</p>
-                        </div>
-                    </div>
+                <h2>Reading, Reflection, and Next Session</h2>
+                <h3 class="japanese">読書課題、振り返り、次回予告</h3>
+                <h4>Before Next Class | 次回授業までに</h4>
+                <ul style="font-size: 0.85em;">
+                    <li>Review the reading on human perception and motor control (on Luna)</li>
+                    <li>Finish and submit your Human Factors Audit</li>
+                    <li>If you used an AI assistant for the audit, log it per the course's transparency habit</li>
+                </ul>
+                <div style="background: #fff3cd; padding: 1em; margin-top: 1em; border-radius: 5px;">
+                    <p style="font-size: 0.85em;"><strong>Next session (Session 3):</strong> The Human Factor 2 — cognition and mental models. We'll go from "how your body senses an interface" to "how your mind makes sense of it."</p>
                 </div>
             </section>
 
             <!-- Slide 15 -->
             <section>
-                <h2>Design Thinking Success Stories</h2>
+                <h2>Key Terms | 重要用語</h2>
                 <div style="font-size: 0.75em;">
-                    <div style="background: #e3f2fd; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
-                        <h4>Airbnb</h4>
-                        <p><strong>Problem:</strong> Low-quality photos hurt bookings</p>
-                        <p><strong>Solution:</strong> Professional photography service</p>
-                        <p><strong>Result:</strong> 2.5x increase in bookings</p>
-                    </div>
-                    <div style="background: #e8f5e9; padding: 1em; margin: 0.5em 0; border-radius: 5px;">
-                        <h4>Bank of America</h4>
-                        <p><strong>Problem:</strong> Customers not saving money</p>
-                        <p><strong>Solution:</strong> "Keep the Change" program</p>
-                        <p><strong>Result:</strong> 12 million new customers</p>
-                    </div>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="background: #2a76dd; color: white;">
+                            <th style="padding: 0.5em; text-align: left;">English</th>
+                            <th style="padding: 0.5em; text-align: left;">日本語</th>
+                        </tr>
+                        <tr style="background: #f0f0f0;"><td style="padding: 0.5em;">human factors / ergonomics</td><td style="padding: 0.5em;">ヒューマンファクター／人間工学</td></tr>
+                        <tr><td style="padding: 0.5em;">perception</td><td style="padding: 0.5em;">知覚</td></tr>
+                        <tr style="background: #f0f0f0;"><td style="padding: 0.5em;">motor control</td><td style="padding: 0.5em;">運動制御</td></tr>
+                        <tr><td style="padding: 0.5em;">Fitts's Law</td><td style="padding: 0.5em;">フィッツの法則</td></tr>
+                        <tr style="background: #f0f0f0;"><td style="padding: 0.5em;">Hick's Law</td><td style="padding: 0.5em;">ヒックの法則</td></tr>
+                        <tr><td style="padding: 0.5em;">reaction time</td><td style="padding: 0.5em;">反応時間</td></tr>
+                        <tr style="background: #f0f0f0;"><td style="padding: 0.5em;">haptic feedback</td><td style="padding: 0.5em;">触覚フィードバック</td></tr>
+                        <tr><td style="padding: 0.5em;">vigilance decrement</td><td style="padding: 0.5em;">注意力の低下</td></tr>
+                    </table>
                 </div>
             </section>
 
             <!-- Slide 16 -->
             <section>
-                <h2>Questions & Preparation</h2>
-                <h3 class="japanese">質問と準備</h3>
-                <h4>Common Questions</h4>
-                <ul style="font-size: 0.85em;">
-                    <li><strong>"How do I know if my problem statement is good?"</strong><br>
-                        It should be user-focused, specific, and based on real insights</li>
-                    <li><strong>"What if I can't think of enough ideas?"</strong><br>
-                        Use creative techniques like "worst possible idea" or analogies</li>
-                    <li><strong>"How detailed should my prototype be?"</strong><br>
-                        Low-fidelity is perfect - focus on concepts, not visual details</li>
-                </ul>
-            </section>
-
-            <!-- Slide 17 -->
-            <section>
-                <h1>Let's Begin Design Thinking!</h1>
-                <h2 class="japanese">デザイン思考を始めましょう！</h2>
+                <h1>Your Body Is Part of the Interface</h1>
+                <h2 class="japanese">あなたの身体もインターフェースの一部</h2>
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2em; border-radius: 15px; margin: 2em 0;">
-                    <h3 style="color: white;">Today's Challenge</h3>
-                    <p style="font-size: 1.1em;">Redesign a campus app feature using the complete design thinking process</p>
-                    <p class="japanese">完全なデザイン思考プロセスを使用してキャンパスアプリ機能を再設計する</p>
+                    <h3 style="color: white;">Today's Challenge | 今日の課題</h3>
+                    <p style="font-size: 1.1em;">Audit an interface — including an AI assistant — for how well it respects your senses, your reaction time, and your body</p>
+                    <p class="japanese">あなたの感覚、反応時間、身体をどれだけ尊重しているか、AIアシスタントを含むインターフェースを監査する</p>
                 </div>
-                <h3>Remember</h3>
+                <h3>Remember | 覚えておいてください</h3>
                 <ul style="font-size: 0.85em;">
-                    <li>There are no wrong answers - design thinking is about exploration</li>
-                    <li>Fail fast, learn quickly - each iteration teaches something</li>
-                    <li>Users are your guide - let their needs drive your solutions</li>
-                    <li>Have fun! Design thinking is creative and engaging</li>
+                    <li>These same laws — Fitts's, Hick's, the response-time limits — apply whether you're tapping a screen or talking to an agent</li>
+                    <li>Design that ignores the body fails, no matter how smart the software is</li>
+                    <li>Document your own work — rule 2 still applies today</li>
                 </ul>
             </section>
 

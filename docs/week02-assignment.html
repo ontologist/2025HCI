@@ -23,6 +23,7 @@
         .stage-box { background: #fff; border: 2px solid #7c3aed; padding: 15px; margin: 10px 0; border-radius: 5px; }
         .highlight-box { background: #fff3cd; border: 2px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0; }
         .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
+        .formula-box { background: #f0f0f0; padding: 15px; border-radius: 5px; margin: 15px 0; font-family: 'Courier New', monospace; text-align: center; }
     </style>
 </head>
 <body>
@@ -36,26 +37,25 @@
 
     <main>
         <div class="assignment-header">
-            <h1>Week 2: Design Thinking Process Assignment</h1>
-            <p class="subtitle">Complete 5-Stage Design Thinking Framework</p>
-            <p class="bilingual">第2週：デザイン思考プロセス課題 - 5段階デザイン思考フレームワーク完成</p>
+            <h1>Week 2: Human Factors Audit</h1>
+            <p class="subtitle">Physical and Physiological Characteristics, Applied to a Real Interface</p>
+            <p class="bilingual">第2週：ヒューマンファクター監査 — 身体的・生理学的特性を実際のインターフェースに適用する</p>
         </div>
 
         <div class="section">
             <h2>📋 Assignment Overview / 課題概要</h2>
-            <p>In this assignment, you'll apply the complete 5-stage design thinking process (Empathize, Define, Ideate, Prototype, Test) to redesign a campus app or service. This hands-on exercise will help you understand the iterative nature of user-centered design.</p>
-            <p class="bilingual">この課題では、5段階のデザイン思考プロセス（共感、定義、アイデア創出、プロトタイプ、テスト）を適用して、キャンパスアプリまたはサービスを再設計します。</p>
+            <p>In this assignment, you'll audit a real interface — an app, a device, or an AI assistant — against what we covered in Session 2: vision, hearing, and touch; reaction time; Fitts's Law and motor control; and system response time. You'll then propose one concrete redesign based on your findings.</p>
+            <p class="bilingual">この課題では、実際のインターフェース（アプリ、デバイス、またはAIアシスタント）を、第2回で学んだ視覚・聴覚・触覚、反応時間、フィッツの法則と運動制御、システム応答時間に照らして監査します。その結果に基づいて、具体的な再デザイン案をひとつ提案します。</p>
         </div>
 
         <div class="section">
             <h2>🎯 Learning Objectives / 学習目標</h2>
             <ul>
-                <li>Apply all 5 stages of the design thinking framework</li>
-                <li>Practice empathy mapping and user understanding</li>
-                <li>Create clear problem statements (POV)</li>
-                <li>Generate multiple solution ideas through ideation</li>
-                <li>Build low-fidelity prototypes</li>
-                <li>Conduct basic user testing and gather feedback</li>
+                <li>Apply Fitts's Law to estimate the difficulty of a real on-screen or voice interaction</li>
+                <li>Measure or estimate a system's response time against the 0.1s / 1.0s / 10s thresholds</li>
+                <li>Identify which senses (vision, hearing, touch) an interface relies on, and whether it offers a fallback</li>
+                <li>Connect a specific human-factors principle to a concrete redesign recommendation</li>
+                <li>Practice the course's AI transparency habit if you use an AI assistant for any part of this work</li>
             </ul>
         </div>
 
@@ -63,48 +63,38 @@
             <h2>📝 Activity Description / アクティビティ説明</h2>
 
             <div class="stage-box">
-                <h3>Stage 1: Empathize (共感)</h3>
+                <h3>Step 1: Choose Your Interface (選択)</h3>
                 <ul>
-                    <li>Interview 2-3 fellow students about their campus app/service experiences</li>
-                    <li>Create an empathy map documenting what users say, think, do, and feel</li>
-                    <li>Identify pain points and opportunities</li>
+                    <li>Pick one app, device, or AI assistant you use regularly</li>
+                    <li>At least one of your three good/bad examples from Startup Week is a good candidate — reuse one if it fits</li>
+                    <li>If you choose an AI assistant or chatbot, note that explicitly — the questions below apply a little differently to it</li>
                 </ul>
             </div>
 
             <div class="stage-box">
-                <h3>Stage 2: Define (定義)</h3>
+                <h3>Step 2: Time One Key Interaction (計測)</h3>
                 <ul>
-                    <li>Synthesize your empathy findings</li>
-                    <li>Write a clear POV (Point of View) statement: "[User] needs [need] because [insight]"</li>
-                    <li>Frame the design challenge as a "How might we..." question</li>
+                    <li>Pick the single action you perform most often in this interface (e.g. sending a message, tapping "like," starting a search)</li>
+                    <li>Estimate Fitts's Law's two inputs for it: how far you have to reach or move (<strong>D</strong>), and how big the target is (<strong>W</strong>). You don't need exact pixel measurements — a reasonable estimate (small / medium / large target, short / long reach) is fine</li>
+                    <li>Time how long the interface takes to respond after you act, and compare it against the three limits from class: 0.1s (instant), 1.0s (flow stays unbroken), 10s (limit of attention)</li>
+                </ul>
+                <div class="formula-box">MT = a + b · log₂(2D / W)</div>
+            </div>
+
+            <div class="stage-box">
+                <h3>Step 3: Map the Senses (感覚のマッピング)</h3>
+                <ul>
+                    <li>List which senses the interface uses to communicate with you: vision, hearing, touch, or some combination</li>
+                    <li>For each one, ask: if I couldn't use this sense right now (too loud, too dark, hands full, hard of hearing), would the interface still work?</li>
+                    <li>Note any fallback it already has — captions, vibration, high-contrast text — or the lack of one</li>
                 </ul>
             </div>
 
             <div class="stage-box">
-                <h3>Stage 3: Ideate (アイデア創出)</h3>
+                <h3>Step 4: Propose One Redesign (再デザイン)</h3>
                 <ul>
-                    <li>Generate at least 10 different solution ideas (brainstorm)</li>
-                    <li>Don't filter - wild ideas are encouraged!</li>
-                    <li>Select top 2-3 ideas to develop further</li>
-                </ul>
-            </div>
-
-            <div class="stage-box">
-                <h3>Stage 4: Prototype (プロトタイプ)</h3>
-                <ul>
-                    <li>Create a low-fidelity prototype (paper sketches or simple digital wireframes)</li>
-                    <li>Focus on key features that address the user need</li>
-                    <li>Keep it simple - this is for testing, not perfection</li>
-                </ul>
-            </div>
-
-            <div class="stage-box">
-                <h3>Stage 5: Test (テスト)</h3>
-                <ul>
-                    <li>Show your prototype to 2-3 users</li>
-                    <li>Ask them to complete key tasks</li>
-                    <li>Document their feedback and reactions</li>
-                    <li>Note what you would change based on testing</li>
+                    <li>Name one specific principle from class — Fitts's Law, Hick's Law, a response-time limit, or a sensory fallback — that your interface violates or could use better</li>
+                    <li>Describe one concrete change that would fix it. "Make it more accessible" is too vague — say what you'd actually change and why, using what you learned today</li>
                 </ul>
             </div>
         </div>
@@ -112,19 +102,18 @@
         <div class="section">
             <h2>📦 Deliverables / 提出物</h2>
             <div class="deliverable-box">
-                <h3>Design Process Documentation</h3>
-                <p><strong>Format:</strong> PDF document (4-6 pages) or presentation slides</p>
+                <h3>Human Factors Audit Write-Up</h3>
+                <p><strong>Format:</strong> PDF document (2–3 pages) or slides</p>
 
                 <div class="requirement-list">
                     <strong>Required Components:</strong>
                     <ul>
-                        <li><strong>Empathize:</strong> Empathy map with user quotes and observations</li>
-                        <li><strong>Define:</strong> POV statement and "How might we..." question</li>
-                        <li><strong>Ideate:</strong> List of at least 10 ideas with top 2-3 highlighted</li>
-                        <li><strong>Prototype:</strong> Photos/screenshots of your low-fidelity prototype</li>
-                        <li><strong>Test:</strong> Testing feedback summary and iteration notes</li>
-                        <li><strong>Bot Interaction:</strong> Screenshots showing bot guidance throughout the process</li>
-                        <li><strong>Reflection:</strong> Brief reflection on what you learned about the design thinking process</li>
+                        <li><strong>Interface chosen:</strong> name and one screenshot or photo</li>
+                        <li><strong>Fitts's Law estimate:</strong> the action you timed, your D and W estimates, and what that implies</li>
+                        <li><strong>Response time:</strong> your measured or estimated time, and which of the three limits it falls into</li>
+                        <li><strong>Sensory map:</strong> which senses the interface uses and whether a fallback exists for each</li>
+                        <li><strong>Redesign recommendation:</strong> the one principle you're applying and the specific change you propose</li>
+                        <li><strong>AI transparency log (if used):</strong> tool, date, what you asked, what you kept or changed, how you checked it</li>
                     </ul>
                 </div>
             </div>
@@ -136,42 +125,34 @@
                 <ul>
                     <li><strong>File Format:</strong> PDF (preferred)</li>
                     <li><strong>File Naming:</strong> LastName_FirstName_Week02.pdf</li>
-                    <li><strong>Length:</strong> 4-6 pages</li>
-                    <li><strong>Include:</strong> All 5 stages documented with evidence</li>
+                    <li><strong>Length:</strong> 2–3 pages</li>
+                    <li><strong>Work style:</strong> you may time the interaction with a partner in class, but write and submit your own audit individually (rule 2: your own work, your own submission)</li>
                     <li><strong>Due Date:</strong> Before next class session</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <h2>🤖 Bot Interaction Requirements / ボット相互作用要件</h2>
+            <h2>🤖 AI Use on This Assignment / この課題でのAI使用</h2>
             <div class="highlight-box">
-                <strong>Use the HCI-101 Bot to:</strong>
-                <ul>
-                    <li>Get empathy mapping templates</li>
-                    <li>Refine your POV statement</li>
-                    <li>Facilitate ideation techniques</li>
-                    <li>Review your prototype approach</li>
-                    <li>Plan your testing strategy</li>
-                </ul>
-                <p>Include screenshots showing how the bot helped guide your process.</p>
+                <p>Using an AI assistant for this assignment is allowed and expected to be useful — for example, to double-check your Fitts's Law math, to brainstorm redesign ideas, or to tighten your writing.</p>
+                <p><strong>If you use one, log it:</strong> which tool, when, what you asked, what you kept or changed, and how you checked it. This is the same transparency habit from Startup Week, and it applies to every assignment in this course, not just this one.</p>
             </div>
         </div>
 
         <div class="section">
             <h2>💡 Tips for Success / 成功のためのヒント</h2>
             <ul>
-                <li><strong>Don't skip stages:</strong> Each stage builds on the previous one</li>
-                <li><strong>Embrace messiness:</strong> Design thinking is iterative - it's okay to go back</li>
-                <li><strong>Focus on users:</strong> Keep user needs central to every decision</li>
-                <li><strong>Document everything:</strong> Take photos of sketches, save empathy notes</li>
-                <li><strong>Test early:</strong> Don't wait for perfection to get feedback</li>
+                <li><strong>Pick something you actually use:</strong> it's easier to notice real friction in a familiar interface</li>
+                <li><strong>Estimates are fine:</strong> you don't need a lab — "the button looks about this big, and my thumb travels about this far" is a legitimate Fitts's Law estimate</li>
+                <li><strong>Be specific in your redesign:</strong> name the principle and the exact change, not a general wish for "better design"</li>
+                <li><strong>If you chose an AI assistant:</strong> pay attention to the delay between asking and answering — that's your response-time measurement</li>
             </ul>
         </div>
     </main>
 
     <footer style="background: #2a76dd; color: white; text-align: center; padding: 20px; margin-top: 40px;">
-        <p>&copy; 2025 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
+        <p>&copy; 2026 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
     </footer>
 </body>
 </html>
