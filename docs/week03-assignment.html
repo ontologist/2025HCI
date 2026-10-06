@@ -20,12 +20,12 @@
         .deliverable-box { background: #f0f7ff; border-left: 4px solid #2a76dd; padding: 20px; margin: 20px 0; border-radius: 5px; }
         .requirement-list { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 15px 0; }
         .requirement-list li { margin: 10px 0; }
-        .grading-rubric { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        .grading-rubric th { background: #2a76dd; color: white; padding: 12px; text-align: left; }
-        .grading-rubric td { padding: 12px; border: 1px solid #ddd; }
-        .grading-rubric tr:nth-child(even) { background: #f8f9fa; }
+        .stage-box { background: #fff; border: 2px solid #7c3aed; padding: 15px; margin: 10px 0; border-radius: 5px; }
         .highlight-box { background: #fff3cd; border: 2px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0; }
         .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
+        .q-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.9em; }
+        .q-table th, .q-table td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; }
+        .q-table th { background: #2a76dd; color: white; }
     </style>
 </head>
 <body>
@@ -39,162 +39,130 @@
 
     <main>
         <div class="assignment-header">
-            <h1>Week 3: User Research Assignment</h1>
-            <p class="subtitle">Conducting Interviews and Needs Analysis</p>
-            <p class="bilingual">第3週：ユーザー調査課題 - インタビューとニーズ分析の実施</p>
+            <h1>Week 3: Cognitive Walkthrough</h1>
+            <p class="subtitle">Evaluating Learnability Without Recruiting a Single User</p>
+            <p class="bilingual">第3週：認知的ウォークスルー — ユーザーを一人も集めずに学習しやすさを評価する</p>
         </div>
 
         <div class="section">
             <h2>📋 Assignment Overview / 課題概要</h2>
-            <p>Conduct user research interviews to understand your target users' needs, behaviors, and pain points. You'll create an interview guide, conduct interviews, analyze the data using affinity mapping, and extract key user needs.</p>
-            <p class="bilingual">ターゲットユーザーのニーズ、行動、課題を理解するためにユーザー調査インタビューを実施します。</p>
+            <p>In this assignment, you'll run a four-question cognitive walkthrough on a short task in a real interface — including, optionally, a task you give an AI assistant. For each step, you'll answer the four questions from class, write a failure story for any "no" or "maybe," and propose one concrete fix.</p>
+            <p class="bilingual">この課題では、実際のインターフェースにおける短いタスクに対して、4つの質問による認知的ウォークスルーを行います。AIアシスタントに与えるタスクを選んでも構いません。各ステップについて、授業で学んだ4つの質問に答え、「いいえ」または「おそらく」に対してフェイラーストーリーを書き、具体的な修正案をひとつ提案します。</p>
         </div>
 
         <div class="section">
             <h2>🎯 Learning Objectives / 学習目標</h2>
             <ul>
-                <li>Design effective interview questions</li>
-                <li>Conduct user interviews using proper techniques</li>
-                <li>Practice active listening and probing</li>
-                <li>Analyze qualitative data using affinity mapping</li>
-                <li>Extract evidence-based user needs</li>
+                <li>Break a task down into discrete, evaluable steps</li>
+                <li>Apply the four cognitive walkthrough questions (Wharton et al., 1994) at each step</li>
+                <li>Turn a "no" or "maybe" answer into a specific, written failure story</li>
+                <li>Connect a failure story to a concrete redesign fix</li>
+                <li>Practice the course's AI transparency habit if you use an AI assistant for any part of this work</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>📝 Activity Description / アクティビティ説明</h2>
 
-            <h3>Step 1: Create Interview Guide (準備)</h3>
-            <ul>
-                <li>Develop 10-15 open-ended questions</li>
-                <li>Focus on behaviors, motivations, and pain points</li>
-                <li>Avoid yes/no questions and leading questions</li>
-                <li>Include follow-up probes (e.g., "Can you tell me more about that?")</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 1: Choose a Task (タスク選択)</h3>
+                <ul>
+                    <li>Pick one short task, 3–5 steps, in an interface you use</li>
+                    <li>You may reuse your Week 2 Human Factors Audit interface, or pick a new one</li>
+                    <li>Consider choosing a task you give an AI assistant (e.g. "ask it to summarize a file" or "ask it to book something") — agent tasks are especially interesting to walk through</li>
+                </ul>
+            </div>
 
-            <h3>Step 2: Conduct Interviews (実施)</h3>
-            <ul>
-                <li>Interview 3-5 potential users (classmates, friends, family)</li>
-                <li>Duration: 15-20 minutes per interview</li>
-                <li>Take detailed notes or record (with permission)</li>
-                <li>Capture direct quotes that reveal insights</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 2: List the Steps (ステップのリスト化)</h3>
+                <ul>
+                    <li>Write out each discrete action the user takes, in order</li>
+                    <li>Keep steps small enough that each one can be judged on its own</li>
+                </ul>
+            </div>
 
-            <h3>Step 3: Affinity Mapping (分析)</h3>
-            <ul>
-                <li>Write key observations on individual notes (physical or digital)</li>
-                <li>Group related observations into themes</li>
-                <li>Identify 3-5 major patterns</li>
-                <li>Name each theme clearly</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 3: Ask the Four Questions at Every Step (4つの質問)</h3>
+                <table class="q-table">
+                    <tr><th>#</th><th>Question</th></tr>
+                    <tr><td>1</td><td>Will the user try to achieve the right effect?</td></tr>
+                    <tr><td>2</td><td>Will the user notice that the correct action is available?</td></tr>
+                    <tr><td>3</td><td>Will the user associate the correct action with the effect they want?</td></tr>
+                    <tr><td>4</td><td>If they perform it, will they see that progress is being made?</td></tr>
+                </table>
+                <p>Answer yes / maybe / no for each question, at each step.</p>
+            </div>
 
-            <h3>Step 4: Extract User Needs (ニーズ抽出)</h3>
-            <ul>
-                <li>Write 5-7 specific user need statements</li>
-                <li>Base each need on interview evidence</li>
-                <li>Format: "Users need [what] in order to [why]"</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 4: Write Failure Stories (フェイラーストーリー)</h3>
+                <ul>
+                    <li>For every "no" or "maybe," write a short, specific hypothesis of where and why a real user would get stuck</li>
+                    <li>Vague answers like "it's confusing" are not failure stories — name the exact question that failed and why</li>
+                </ul>
+            </div>
+
+            <div class="stage-box">
+                <h3>Step 5: Propose One Fix (修正案)</h3>
+                <ul>
+                    <li>Pick your most serious failure story</li>
+                    <li>Describe one concrete change that would fix it</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
             <h2>📦 Deliverables / 提出物</h2>
             <div class="deliverable-box">
-                <h3>User Research Report</h3>
-                <p><strong>Format:</strong> PDF document (4-6 pages)</p>
-
+                <h3>Cognitive Walkthrough Report</h3>
+                <p><strong>Format:</strong> PDF document (2–3 pages) or slides</p>
                 <div class="requirement-list">
                     <strong>Required Components:</strong>
-                    <ol>
-                        <li><strong>Interview Guide (1 page):</strong> 10-15 open-ended questions with probes</li>
-                        <li><strong>Interview Notes (1-2 pages):</strong>
-                            <ul>
-                                <li>Summary of each interview</li>
-                                <li>Key direct quotes (at least 5-8 quotes total)</li>
-                                <li>Behavioral observations</li>
-                            </ul>
-                        </li>
-                        <li><strong>Affinity Map (1 page):</strong>
-                            <ul>
-                                <li>Photo or screenshot of your affinity mapping</li>
-                                <li>3-5 clear themes identified</li>
-                                <li>Brief description of each theme</li>
-                            </ul>
-                        </li>
-                        <li><strong>User Needs (1 page):</strong>
-                            <ul>
-                                <li>5-7 specific, evidence-based user need statements</li>
-                                <li>Each need linked to interview evidence</li>
-                            </ul>
-                        </li>
-                        <li><strong>Bot Interaction Screenshots:</strong> Evidence of bot guidance</li>
-                    </ol>
+                    <ul>
+                        <li><strong>Task and interface:</strong> what you tested, and why</li>
+                        <li><strong>Step list:</strong> every action in the task, in order</li>
+                        <li><strong>Four-question table:</strong> your yes/maybe/no answer for each step and question</li>
+                        <li><strong>Failure stories:</strong> one per "no" or "maybe" answer</li>
+                        <li><strong>Redesign fix:</strong> one concrete change for your most serious failure story</li>
+                        <li><strong>AI transparency log (if used):</strong> tool, date, what you asked, what you kept or changed, how you checked it</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="section">
-            <h2>📊 Grading Rubric / 評価基準</h2>
-
-            <table class="grading-rubric">
-                <thead>
-                    <tr>
-                        <th>Level</th>
-                        <th>Score</th>
-                        <th>Criteria</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Excellent</strong></td>
-                        <td>90-100%</td>
-                        <td>Comprehensive interview guide (10-15 questions), rich detailed notes with quotes, clear affinity mapping (3-5 themes), 5-7 specific evidence-based needs</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Good</strong></td>
-                        <td>80-89%</td>
-                        <td>Solid guide, good notes with quotes, identifiable themes, 3-5 user needs</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Satisfactory</strong></td>
-                        <td>70-79%</td>
-                        <td>Basic guide, limited detail, some patterns, 2-3 user needs</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Needs Improvement</strong></td>
-                        <td>&lt;70%</td>
-                        <td>Incomplete or sparse work, missing key components</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
         <div class="section">
             <h2>✅ Submission Requirements / 提出要件</h2>
             <div class="requirement-list">
                 <ul>
-                    <li><strong>File Format:</strong> PDF</li>
+                    <li><strong>File Format:</strong> PDF (preferred)</li>
                     <li><strong>File Naming:</strong> LastName_FirstName_Week03.pdf</li>
-                    <li><strong>Length:</strong> 4-6 pages</li>
+                    <li><strong>Length:</strong> 2–3 pages</li>
+                    <li><strong>Work style:</strong> you may run the walkthrough with a partner in class, but write and submit your own report individually</li>
                     <li><strong>Due Date:</strong> Before next class session</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
+            <h2>🤖 AI Use on This Assignment / この課題でのAI使用</h2>
+            <div class="highlight-box">
+                <p>An AI assistant can help you draft failure stories or sanity-check your four-question answers — and if you picked an AI assistant as your task, you're evaluating one while possibly using another.</p>
+                <p><strong>If you use one, log it:</strong> which tool, when, what you asked, what you kept or changed, and how you checked it.</p>
+            </div>
+        </div>
+
+        <div class="section">
             <h2>💡 Tips for Success / 成功のためのヒント</h2>
             <ul>
-                <li><strong>Listen more than you talk:</strong> Let users share their stories</li>
-                <li><strong>Ask "why":</strong> Dig deeper to understand motivations</li>
-                <li><strong>Capture quotes:</strong> Direct user words are powerful evidence</li>
-                <li><strong>Look for patterns:</strong> What do multiple users mention?</li>
-                <li><strong>Be specific:</strong> "Need faster access to grades" is better than "Need better app"</li>
-                <li><strong>Use the bot:</strong> Ask for interview question examples and analysis help</li>
+                <li><strong>Pretend you've never used it:</strong> a cognitive walkthrough only works if you're honestly hard on the design</li>
+                <li><strong>Small steps, not big ones:</strong> "complete checkout" is too big; "tap the Buy button" is the right size</li>
+                <li><strong>A "no" is a good result:</strong> finding a real failure story is the point of the assignment, not a sign you did something wrong</li>
+                <li><strong>If you evaluated an AI agent:</strong> treat each conversational turn as one step</li>
             </ul>
         </div>
     </main>
 
     <footer style="background: #2a76dd; color: white; text-align: center; padding: 20px; margin-top: 40px;">
-        <p>&copy; 2025 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
+        <p>&copy; 2026 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
     </footer>
 </body>
 </html>

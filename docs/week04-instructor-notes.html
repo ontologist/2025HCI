@@ -6,7 +6,6 @@
     <title>Week 4 Instructor Notes - HCI-101</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional styles for instructor notes */
         .notes-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -59,14 +58,21 @@
             padding-left: 5px;
         }
 
-        .notes-content li.checkbox {
-            list-style-type: none;
-            margin-left: -20px;
-        }
-
         .notes-content p {
             margin-bottom: 15px;
             color: var(--text-dark);
+        }
+
+        .notes-content p.japanese {
+            color: var(--text-light);
+        }
+
+        .notes-content p.cue {
+            font-weight: 600;
+            color: #b45309;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
         }
 
         .notes-content hr {
@@ -85,30 +91,6 @@
             font-style: italic;
         }
 
-        .notes-content code {
-            background-color: #f3f4f6;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-
-        .notes-content pre {
-            background-color: #1f2937;
-            color: #f9fafb;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-
-        .notes-content pre code {
-            background-color: transparent;
-            padding: 0;
-            color: #f9fafb;
-        }
-
-        /* Week Navigation */
         .week-nav {
             background-color: white;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -137,40 +119,12 @@
             white-space: nowrap;
         }
 
-        .nav-home {
-            background-color: var(--accent-color);
-            color: white;
-        }
-
-        .nav-home:hover {
-            background-color: #059669;
-        }
-
-        .nav-prev, .nav-next {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .nav-prev:hover, .nav-next:hover {
-            background-color: #1e5bb8;
-        }
-
-        .nav-presentation {
-            background-color: var(--secondary-color);
-            color: white;
-        }
-
-        .nav-presentation:hover {
-            background-color: #6d28d9;
-        }
-
-        .nav-disabled {
-            background-color: var(--disabled);
-            color: white;
-            cursor: not-allowed;
-            opacity: 0.5;
-        }
-
+        .nav-home { background-color: var(--accent-color); color: white; }
+        .nav-home:hover { background-color: #059669; }
+        .nav-prev, .nav-next { background-color: var(--primary-color); color: white; }
+        .nav-prev:hover, .nav-next:hover { background-color: #1e5bb8; }
+        .nav-presentation { background-color: var(--secondary-color); color: white; }
+        .nav-presentation:hover { background-color: #6d28d9; }
         .nav-current {
             flex: 1;
             text-align: center;
@@ -179,26 +133,12 @@
             min-width: 200px;
         }
 
-        /* Scrollable content */
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .notes-content {
-                padding: 20px;
-            }
-
-            .nav-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .nav-btn, .nav-current {
-                width: 100%;
-                text-align: center;
-            }
+            .notes-content { padding: 20px; }
+            .nav-container { flex-direction: column; gap: 10px; }
+            .nav-btn, .nav-current { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -221,845 +161,150 @@
     </div>
 </nav>
 
-
     <main class="notes-container">
         <div class="notes-content">
-<h1>Week 4 Instructor Notes: Personas, User Journey Mapping, and Scenarios</h1>
-<h1>第4週インストラクターノート：ペルソナ、ユーザージャーニーマッピング、シナリオ</h1>
+<h1>Week 4 Instructor Notes: Design Principles 1 — User-Centered Design and ISO Standards</h1>
+<h1>第4週インストラクターノート：デザイン原則1 — ユーザー中心設計とISO規格</h1>
 
-<strong>Course:</strong> HCI-101 - Introduction to Human-Computer Interaction in the Era of Smart Devices and AI Chatbots
-<strong>コース：</strong> HCI-101 - スマートデバイスとAIチャットボット時代のヒューマンコンピュータインタラクション入門
-<strong>Instructor:</strong> Yuri Tijerino
-<strong>Semester:</strong> Fall 2025 | 2025年秋学期
-<strong>Duration:</strong> 15-20 minutes lecture + 60-65 minutes hands-on activity | 15-20分講義 + 60-65分ハンズオンアクティビティ
+<strong>Course:</strong> Human &amp; Machine Interaction (HCI-101) — Session 4 of 14<br>
+<strong>コース：</strong> ヒューマン・アンド・マシン・インタラクション（HCI-101）— 全14回中の第4回<br>
+<strong>Instructor:</strong> Yuri Tijerino<br>
+<strong>Semester:</strong> Fall 2026 | 2026年秋学期<br>
+<strong>Format:</strong> Face-to-face, also streamed live on Zoom and recorded. About 20–25 minutes lecture + 60–65 minutes hands-on activity.
+
+<p style="margin-top: 15px; font-size: 0.9em; color: var(--text-light);"><em>How these notes work:</em> each slide has a full spoken script in English, then a Japanese translation. Bracketed cues like <strong>[PAUSE]</strong> and <strong>[ASK]</strong> are for you only.</p>
 
 <hr>
 
 <h2>Lecture Overview | 講義概要</h2>
-
 <h3>Key Learning Objectives | 主要学習目標</h3>
-<p>Students will transform research findings into actionable design artifacts: personas, user journey maps, and scenarios that guide design decisions.</p>
-<p>学生は調査結果を実行可能なデザイン成果物に変換する：デザイン決定をガイドするペルソナ、ユーザージャーニーマップ、シナリオ。</p>
+<p>Students will be able to define user-centered design, name the four activities of ISO 9241-210 and what each produces, explain what makes a persona useful rather than decorative, and begin a research-grounded persona that includes an AI-disposition dimension.</p>
+<p class="japanese">学生は、ユーザー中心設計を定義し、ISO 9241-210の4つの活動とそれぞれが生み出すものを挙げ、ペルソナを装飾ではなく有用にするものを説明し、AIに対する態度の次元を含む、調査に基づくペルソナの作成を開始できるようになります。</p>
 
-<h3>Lecture Flow | 講義の流れ</h3>
-<p>1. <strong>Introduction</strong> (2 min): From research to design artifacts | 調査からデザイン成果物へ</p>
-<p>2. <strong>Personas</strong> (6 min): Creating data-driven user representations | データ駆動のユーザー表現の作成</p>
-<p>3. <strong>Journey Maps</strong> (5 min): Visualizing user experiences | ユーザー体験の視覚化</p>
-<p>4. <strong>Scenarios</strong> (4 min): Story-driven design contexts | ストーリー駆動のデザインコンテキスト</p>
-<p>5. <strong>Activity Preview</strong> (3 min): What students will create today | 学生が今日作成するもの</p>
+<p style="background: #fff3cd; padding: 15px; border-radius: 5px; font-size: 0.9em;"><strong>Heads up:</strong> today's activity (persona draft) is intentionally unfinished. It continues into Session 5, where students complete it alongside an accessibility audit. Don't rush students to a "final" persona today.</p>
 
 <hr>
 
-<h2>Pre-Lecture Setup | 講義前セットアップ</h2>
+<h2>Slide-by-Slide Script | スライドごとのスクリプト</h2>
 
-<h3>Technical Preparation | 技術的準備</h3>
-<li class="checkbox">&#9744; Test bot portal access for persona and journey map modules</li>
-<li class="checkbox">&#9744; Verify all students can access bot's persona templates</li>
-<li class="checkbox">&#9744; Prepare persona and journey map examples to share</li>
-<li class="checkbox">&#9744; Test presentation slides on classroom display</li>
-<li class="checkbox">&#9744; Have backup materials for internet issues</li>
+<h3>Slide 1: Title — Week 4: Design Principles 1 | 第4週：デザイン原則1</h3>
+<p><strong>About 1 minute</strong></p>
+<p>Welcome back. Over the last two sessions we covered the human side of HCI in depth — the body in Session 2, the mind in Session 3. Today we turn that understanding into a process: how do you actually design for the humans you just spent two sessions learning about? This is Session 4 of 14.</p>
+<p class="japanese">おかえりなさい。この2回のセッションで、HCIの人間的な側面を深く扱いました。セッション2では身体、セッション3では心です。今日は、その理解をプロセスに変えます。この2回で学んできた人間のために、実際にどうデザインするのか。全14回中のセッション4です。</p>
+<p class="cue">[pause]</p>
 
-<h3>Materials to Distribute | 配布する教材</h3>
-<li class="checkbox">&#9744; Persona template (printed and digital)</li>
-<li class="checkbox">&#9744; Journey map canvas (large format paper or digital tool)</li>
-<li class="checkbox">&#9744; Scenario writing guide</li>
-<li class="checkbox">&#9744; Requirements extraction worksheet</li>
-<li class="checkbox">&#9744; Sticky notes for journey mapping (various colors)</li>
+<h3>Slide 2: Today's Agenda | 今日のアジェンダ</h3>
+<p><strong>About 1 minute</strong></p>
+<p>Here's the plan. We define user-centered design, look at the international standard that formalizes it, ISO 9241-210, and its four activities. Then we zoom into the first activity, understanding context of use, and see how that leads naturally to personas. You'll spend the second half of class starting your own persona.</p>
+<p class="japanese">今日の流れです。ユーザー中心設計を定義し、それを正式化する国際規格、ISO 9241-210と、その4つの活動を見ます。そして、最初の活動、利用状況の理解に焦点を当て、それがどう自然にペルソナにつながるかを見ます。授業の後半は、皆さん自身のペルソナを開始する時間です。</p>
 
-<h3>Classroom Setup | 教室セットアップ</h3>
-<li class="checkbox">&#9744; Arrange seating for individual and collaborative work</li>
-<li class="checkbox">&#9744; Set up wall space for journey mapping activities</li>
-<li class="checkbox">&#9744; Prepare materials station with sticky notes, markers</li>
-<li class="checkbox">&#9744; Ensure students have access to Week 3 research findings</li>
-<li class="checkbox">&#9744; Set up for group sharing and feedback</li>
+<h3>Slide 3: Welcome Back | おかえりなさい</h3>
+<p><strong>About 1.5 minutes</strong></p>
+<p>Quick recap. Last session we learned to evaluate a design: mental models, the system image, and the four-question cognitive walkthrough. Today we go one step earlier in the process: how to design in the first place, so you have less to fix later.</p>
+<p class="japanese">簡単に振り返ります。前回は、デザインを評価する方法を学びました。メンタルモデル、システムイメージ、そして4つの質問による認知的ウォークスルーです。今日は、プロセスの一歩前、そもそもどうデザインするかに進みます。そうすれば、後で直すことが少なくなります。</p>
+<p>Evaluation tells you when a design is wrong. User-centered design is a process for giving yourself a better starting point, so evaluation finds fewer problems.</p>
+<p class="japanese">評価は、デザインが間違っているときに教えてくれます。ユーザー中心設計は、より良い出発点を自分に与えるためのプロセスです。そうすれば、評価で見つかる問題も少なくなります。</p>
 
-<hr>
+<h3>Slide 4: What Is User-Centered Design? | ユーザー中心設計とは？</h3>
+<p><strong>About 2 minutes</strong></p>
+<p>User-centered design is a design process that puts real users, their needs, and their context at the center of every decision — and checks those decisions against evidence, not opinion.</p>
+<p class="japanese">ユーザー中心設計とは、実際のユーザーと、そのニーズ、利用状況を、すべての意思決定の中心に置き、その決定を意見ではなく根拠に照らして確認する、デザインプロセスです。</p>
+<p>Notice what this is not: it's not just "think about the user" as a vague value. It's a formal, repeatable process — and that's exactly what an international standard exists to define, which brings us to ISO 9241-210.</p>
+<p class="japanese">これが何でないかに注目してください。「ユーザーのことを考える」という漠然とした価値観ではありません。正式で、繰り返し可能なプロセスです。そして、これがまさに国際規格が定義するものであり、ISO 9241-210につながります。</p>
 
-<h2>Slide-by-Slide Speaking Points | スライド別スピーキングポイント</h2>
+<h3>Slide 5: ISO 9241-210 — The International Standard | ISO 9241-210：国際規格</h3>
+<p><strong>About 2 minutes</strong></p>
+<p>ISO 9241-210, titled "Human-centred design for interactive systems," is the international standard that defines human-centered design as a formal process, not just good intentions.</p>
+<p class="japanese">ISO 9241-210、「インタラクティブシステムの人間中心設計」というタイトルの規格は、人間中心設計を、単なる善意ではなく、正式なプロセスとして定義する国際規格です。</p>
+<p>It's widely used across the industry — in agile teams, in large enterprises, in government procurement. Not because it's clever or novel, but because it gives a whole team a shared, checkable process instead of relying on one designer's personal taste.</p>
+<p class="japanese">業界全体で広く使われています。アジャイルチームでも、大企業でも、政府の調達でも。巧妙だから、斬新だからではありません。チーム全体に、一人のデザイナーの個人的な好みに頼るのではなく、共有され、確認可能なプロセスを与えるからです。</p>
 
-<h3>Slide 1: From Research to Design Artifacts | 調査からデザイン成果物へ</h3>
+<h3>Slide 6: The Four Activities | 4つの活動</h3>
+<p><strong>About 2.5 minutes</strong></p>
+<p>The standard names four activities. One, understand — the context of use: who the users are, what task they're doing, in what environment. Two, specify — user requirements: what the design actually has to achieve. Three, produce — design solutions: sketches, prototypes, flows. Four, evaluate — check the design against the requirements you specified.</p>
+<p class="japanese">規格は4つの活動を挙げています。1つ目、理解する。利用状況です。ユーザーが誰か、どんなタスクを行っているか、どんな環境でか。2つ目、specify、specify。ユーザー要求事項です。デザインが実際に達成すべきことです。3つ目、produce。デザインソリューションです。スケッチ、プロトタイプ、フローです。4つ目、評価する。specifyした要求事項に照らして、デザインを確認します。</p>
+<p>And the cycle repeats. Evaluation feeds back into understanding, until the requirements are actually met — not until you run out of time.</p>
+<p class="japanese">そして、このサイクルは繰り返されます。評価は理解にフィードバックされ、要求事項が実際に満たされるまで続きます。時間切れになるまでではありません。</p>
 
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Connect to previous week</strong> | 前週とつなげる: "Last week you conducted user research. Today we transform those insights into design tools."</li>
-<li><strong>Check understanding</strong> | 理解をチェック: "Who can share one key insight from your interviews?" (Get 2-3 responses)</li>
-<li><strong>Set expectations</strong> | 期待を設定: "By end of class, you'll have personas and journey maps ready to guide your designs"</li>
-</ul>
+<h3>Slide 7: Why Iterate? | なぜ反復するのか？</h3>
+<p><strong>About 1.5 minutes</strong></p>
+<p>A linear process assumes you got the requirements right the first time. You almost never do. Without iteration, you ship your first guess, and find out it's wrong from angry users — or worse, from an AI agent that confidently does the wrong thing because nobody checked the requirements against reality.</p>
+<p class="japanese">直線的なプロセスは、最初から要求事項を正しく把握していたという前提に立っています。それはほとんど起こりません。反復がなければ、最初の推測をそのまま出荷し、怒ったユーザーから、あるいはもっと悪いことに、誰も要求事項を現実と照らし合わせなかったために、間違ったことを自信満々に行うAIエージェントから、それが間違っていたと知ることになります。</p>
+<p>With iteration, "done" means evaluation evidence says so — not that you ran out of time to keep doubting yourself.</p>
+<p class="japanese">反復があれば、「完了」とは、評価の根拠がそう示していることを意味します。自分を疑い続ける時間がなくなった、ということではありません。</p>
 
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Research must inform design</strong> | 調査がデザインを通知する必要がある: Don't skip this connection</li>
-<li><strong>Artifacts are communication tools</strong> | 成果物はコミュニケーションツール: Share insights with teams</li>
-<li><strong>Everything connects</strong> | すべてが接続: Personas → Journeys → Scenarios → Requirements</li>
-</ul>
+<h3>Slide 8: Context of Use — Who, What, Where | 利用状況：誰が、何を、どこで</h3>
+<p><strong>About 2 minutes</strong></p>
+<p>Let's zoom into activity one. It asks three questions before any design work starts. Who: the users, their goals, abilities, and limits — this is exactly where our two Human Factor sessions feed in directly. What: the tasks they're actually trying to accomplish, which is often different from the task the organization thinks they're doing. Where: the environment — noisy or quiet, on the move or seated, hands free or full.</p>
+<p class="japanese">活動1に焦点を当てましょう。デザイン作業を始める前に、3つの質問をします。誰が。ユーザー、その目標、能力、限界です。これはまさに、2回のヒューマンファクターのセッションが直接つながる部分です。何を。ユーザーが実際に達成しようとしているタスクで、組織が思っているタスクとは違うことがよくあります。どこで。環境です。騒がしいか静かか、移動中か座っているか、手が空いているか塞がっているか。</p>
 
-<h4>Common Questions | よくある質問</h4>
-<ul>
-<li><strong>"How many personas should I create?"</strong> | 「いくつのペルソナを作成すべきですか？」</li>
-</ul>
-<p>  - <strong>Answer:</strong> 2-4 primary personas. Enough to represent diversity, not so many you lose focus.</p>
-<ul>
-<li><strong>"What if my research only found 2 users?"</strong> | 「調査が2人のユーザーしか見つけなかった場合はどうしますか？」</li>
-</ul>
-<p>  - <strong>Answer:</strong> Personas represent patterns across users, not individuals. Look for behavioral patterns.</p>
+<h3>Slide 9: From Context to Personas | 利用状況からペルソナへ</h3>
+<p><strong>About 1.5 minutes</strong></p>
+<p>Here's a practical problem. "Understand the context of use" is abstract. A team of five people can't design against an abstraction — they need something concrete to point at and argue about. That's exactly what a persona is for.</p>
+<p class="japanese">ここに実践的な問題があります。「利用状況を理解する」は抽象的です。5人のチームは、抽象的なものに対してデザインすることはできません。指し示し、議論できる、具体的な何かが必要です。これこそが、ペルソナの役割です。</p>
 
-<hr>
+<h3>Slide 10: What Is a Persona? | ペルソナとは？</h3>
+<p><strong>About 2 minutes</strong></p>
+<p>A persona is a specific, fictional-but-realistic user, built from real research, used to represent a group of actual users who share similar goals and behavior. It was popularized in the late 1990s by designer Alan Cooper.</p>
+<p class="japanese">ペルソナとは、実際の調査に基づいて作られた、具体的で、架空だが現実的なユーザーであり、似た目標と行動を持つ実際のユーザー群を代表するために使われます。1990年代後半に、デザイナーのアラン・クーパーによって広められました。</p>
+<p>The point isn't the fictional name itself. The point is that it's much easier to design for "Hana, who checks the bus app once a minute while late for class" than to design for "users" in the abstract. A name and a specific situation force specific decisions.</p>
+<p class="japanese">重要なのは、架空の名前そのものではありません。抽象的な「ユーザー」のためにデザインするよりも、「授業に遅れそうで、バスアプリを1分おきに確認するハナ」のためにデザインする方が、はるかに簡単だということです。名前と具体的な状況は、具体的な判断を強いります。</p>
 
-<h3>Slide 2: What Are Personas? | ペルソナとは？</h3>
+<h3>Slide 11: A Good Persona vs. a Bad Persona | 良いペルソナと悪いペルソナ</h3>
+<p><strong>About 2 minutes</strong></p>
+<p>Here's the honest truth: most personas in the wild are bad. A bad persona is a stock photo with a name — no research behind it, just assumptions dressed up as facts. Its goals are generic, like "wants a good experience," which could describe literally anyone. Everyone on the team forgets it exists by week two.</p>
+<p class="japanese">正直に言います。実際に使われているペルソナの多くは、質が良くありません。悪いペルソナは、名前のついたストックフォトです。背後に調査はなく、事実のように見せかけた仮定だけです。目標は、「良い体験をしたい」のように一般的で、文字通り誰にでも当てはまります。チームの誰もが、2週目には存在を忘れてしまいます。</p>
+<p>A good persona is built from interviews, observation, or data. It has specific goals and specific frustrations. And critically, it gets used — to settle real design arguments, as in "would Hana actually understand this button?"</p>
+<p class="japanese">良いペルソナは、インタビュー、観察、データから作られます。具体的な目標と、具体的な不満を持っています。そして決定的に、実際に使われます。「ハナは、本当にこのボタンを理解するだろうか」というように、実際のデザインの議論を解決するために使われるのです。</p>
 
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Define clearly</strong> | 明確に定義: "Personas are fictional but realistic representations based on real research data"</li>
-<li><strong>Show examples</strong> | 例を表示: Display a well-crafted persona (prepared in advance)</li>
-<li><strong>Emphasize data foundation</strong> | データ基盤を強調: "Every detail comes from research, not imagination"</li>
-</ul>
+<h3>Slide 12: Personas for AI and Agent Interfaces | AI・エージェントインターフェースのためのペルソナ</h3>
+<p><strong>About 2 minutes</strong></p>
+<p>When your interface involves an AI agent, a persona needs one more dimension that a classic persona often skips entirely: AI disposition. Does this person trust AI too much, too little, or about right? Have they been burned by a bad AI experience before, or had a great one?</p>
+<p class="japanese">インターフェースにAIエージェントが関わる場合、ペルソナにはもうひとつ、従来のペルソナがしばしば完全に見落としている次元が必要です。AIに対する態度です。この人は、AIを過信していますか、過小評価していますか、それとも適切な程度でしょうか。以前にAIで嫌な経験をしたことがありますか、それとも良い経験をしたことがありますか。</p>
+<p>People interact with interfaces in three basic ways: direct manipulation (tapping, dragging), conversation (asking in words), and delegation (stating a goal and letting the system act). Ask yourself which one your persona defaults to, and why. That answer will shape real design decisions later in the course.</p>
+<p class="japanese">インターフェースとの関わり方には、3つの基本的な方法があります。直接操作（タップやドラッグ）、会話（言葉で尋ねる）、委任（目標を伝え、システムに行動させる）です。あなたのペルソナが、どれをデフォルトで選ぶか、そしてなぜかを自問してください。その答えは、授業の後半の実際のデザイン決定を形づくります。</p>
 
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Personas create empathy</strong> | ペルソナが共感を作る: Users become real, memorable people</li>
-<li><strong>Focus design decisions</strong> | デザイン決定に焦点: "Would Sarah use this?" is a powerful question</li>
-<li><strong>Communication tool</strong> | コミュニケーションツール: Share research findings efficiently</li>
-</ul>
+<h3>Slide 13: Today's Activity — Begin Your Persona | 今日のアクティビティ：ペルソナを開始する</h3>
+<p><strong>About 2 minutes</strong></p>
+<p>Now it's your turn. Pick a real target user group for an interface you care about — it can connect to your eventual final project, or just something you use. Draft a persona: name, one-line summary, two or three goals, two or three frustrations, context of use, and one representative quote. Add the AI disposition dimension from the last slide. And note what it's based on — interviews, observation, or assumptions you still need to check.</p>
+<p class="japanese">では、皆さんの番です。関心のあるインターフェースのための、実際のターゲットユーザー層を選んでください。最終的な最終プロジェクトにつながるものでも、単に自分が使っているものでも構いません。ペルソナ案を作成してください。名前、一行の要約、2〜3個の目標、2〜3個の不満、利用状況、そして代表的な引用です。前のスライドのAIに対する態度の次元を加えてください。そして、それが何に基づいているかを記録してください。インタビュー、観察、あるいはまだ確認が必要な仮定です。</p>
+<p>I want to be very clear: this is a draft, not a finished persona. You'll complete and validate it next session, alongside an accessibility audit. Don't let anyone rush to a polished final version today.</p>
+<p class="japanese">はっきりさせておきたいのですが、これは草案であり、完成したペルソナではありません。次回のセッションで、アクセシビリティ監査とあわせて、完成させ検証します。今日、誰も洗練された最終版を急いで作る必要はありません。</p>
+<p class="cue">[ask: "Who already has a real person in mind — someone you actually know — who could be this persona? That's your best starting point."]</p>
 
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Contrast good and bad</strong> | 良いものと悪いものを対比: "This is a marketing profile vs. a design persona"</li>
-<li><strong>Use student example</strong> | 学生の例を使用: "Think about designing for your classmate - specific, not generic"</li>
-<li><strong>Connect to projects</strong> | プロジェクトとつなげる: "Your final project needs at least one solid persona"</li>
-</ul>
+<h3>Slide 14: Reading, Reflection, and Next Session | 読書課題、振り返り、次回予告</h3>
+<p><strong>About 1 minute</strong></p>
+<p>Before next class: keep your persona draft, you'll complete it next session. If you can, talk to one real person who resembles your persona, even briefly — that's worth more than another hour of guessing alone. And log any AI assistance you used.</p>
+<p class="japanese">次の授業までに、ペルソナ案を保管しておいてください。次回のセッションで完成させます。できれば、あなたのペルソナに似た実際の人と、短時間でも話してみてください。それは、一人で推測し続けるもう1時間よりも価値があります。そして、使用したAI支援を記録してください。</p>
+<p>Next session, Session 5, is Design Principles 2 — Usability, Accessibility, and Universal Design. You'll complete your persona and run an accessibility audit.</p>
+<p class="japanese">次回のセッション5は、デザイン原則2、ユーザビリティ、アクセシビリティ、ユニバーサルデザインです。ペルソナを完成させ、アクセシビリティ監査を行います。</p>
 
-<h4>Common Misconceptions | 一般的な誤解</h4>
-<ul>
-<li><strong>Personas are not stereotypes</strong> | ペルソナはステレオタイプではない: Based on behavior, not demographics alone</li>
-<li><strong>Personas are not fictional stories</strong> | ペルソナは架空の物語ではない: Every element traces to research data</li>
-<li><strong>Personas are not marketing profiles</strong> | ペルソナはマーケティングプロファイルではない: Design tool, not sales tool</li>
-</ul>
+<h3>Slide 15: Key Terms | 重要用語</h3>
+<p><strong>About 0.5 minutes</strong></p>
+<p>Reference table: user-centered design, ISO 9241-210, context of use, user requirements, iterative design, persona, AI disposition. Point students here while they draft their persona.</p>
+<p class="japanese">参照用の表です。ユーザー中心設計、ISO 9241-210、利用状況、ユーザー要求事項、反復デザイン、ペルソナ、AIに対する態度。ペルソナを作成する際に、このスライドに戻るよう学生に伝えてください。</p>
 
-<hr>
-
-<h3>Slide 3: Anatomy of a Persona | ペルソナの構造</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Walk through each component</strong> | 各コンポーネントを歩く: Show how each piece contributes to understanding</li>
-<li><strong>Show complete example</strong> | 完全な例を表示: Full persona with all components filled in</li>
-<li><strong>Explain relationships</strong> | 関係を説明: How goals connect to pain points, etc.</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Every component has purpose</strong> | すべてのコンポーネントに目的がある: Nothing is decorative</li>
-<li><strong>Quote is authentic</strong> | 引用は本物: Direct from research interviews</li>
-<li><strong>Needs link to research</strong> | ニーズは調査にリンク: From Week 3 user needs statements</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Use analogy</strong> | 類推を使用: "Like a character profile, but for real users"</li>
-<li><strong>Show progression</strong> | 進行を示す: "Start with basics, add depth from research"</li>
-<li><strong>Emphasize evidence</strong> | 証拠を強調: "Note how each section references interview data"</li>
-</ul>
-
-<h4>Interactive Activity | インタラクティブアクティビティ</h4>
-<ul>
-<li>Display incomplete persona, ask students what's missing</li>
-<li>Have students identify which elements come from research vs. assumption</li>
-<li>Practice writing one component together (e.g., goals based on sample research)</li>
-</ul>
+<h3>Slide 16: Closing — Design for Someone, Not for "Users" | 「ユーザー」ではなく、誰かのためにデザインする</h3>
+<p><strong>About 1 minute</strong></p>
+<p>Today's challenge: draft a research-grounded persona, including how they relate to AI. You'll finish it next session. Remember: a persona is only useful if it's specific enough to disagree with. "Done" is an evaluation result, not a deadline. And document your own work and your sources — rule 2 still applies. Good luck, and I'll circulate while you work.</p>
+<p class="japanese">今日の課題は、AIとの関わり方を含む、調査に基づくペルソナ案を作成することです。次回のセッションで完成させます。覚えておいてください。ペルソナは、異論を唱えられるほど具体的である場合にのみ役に立ちます。「完了」とは評価の結果であり、締め切りではありません。そして、自分自身の作業と情報源を記録してください。ルール2は今日も当てはまります。頑張ってください。皆さんが作業している間、私は見て回ります。</p>
 
 <hr>
 
-<h3>Slide 4: Creating Data-Driven Personas | データ駆動のペルソナの作成</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
+<h2>During the Activity | アクティビティ中</h2>
+<h3>Common Issues | よくある問題</h3>
 <ul>
-<li><strong>Demonstrate process</strong> | プロセスを実演: Walk through from research to persona</li>
-<li><strong>Show segmentation</strong> | セグメンテーションを表示: How to identify user groups</li>
-<li><strong>Explain validation</strong> | 検証を説明: Every persona element must trace to data</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Start with research review</strong> | 調査レビューから始める: Don't create personas from memory</li>
-<li><strong>Look for patterns</strong> | パターンを探す: Similar goals, behaviors, pain points</li>
-<li><strong>2-4 personas is optimal</strong> | 2-4個のペルソナが最適: Enough diversity, manageable focus</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Use student research</strong> | 学生の調査を使用: "Look at your Week 3 affinity mapping - what groups emerged?"</li>
-<li><strong>Show segmentation axes</strong> | セグメンテーション軸を表示: Experience level, frequency, goals, context</li>
-<li><strong>Practice clustering</strong> | クラスタリングを練習: "These 3 users all prioritize speed - that's one segment"</li>
-</ul>
-
-<h4>Demonstration | 実演</h4>
-<ul>
-<li>Use anonymized student research from previous year</li>
-<li>Show how 5 interviews become 2 distinct personas</li>
-<li>Highlight how behavioral patterns (not demographics) drive segmentation</li>
+<li><strong>Persona is too generic:</strong> push for one very specific scenario — a moment, a place, a frustration — rather than a general description | ペルソナが一般的すぎる場合は、一般的な説明ではなく、ひとつの非常に具体的なシナリオ、瞬間、場所、不満を求めてください</li>
+<li><strong>No real research behind it:</strong> that's expected today — just have them clearly flag which parts are assumptions to validate next session | 背後に実際の調査がないのは今日は想定内です。どの部分が、次回検証すべき仮定なのかを明確に印をつけさせてください</li>
+<li><strong>Students skip the AI disposition dimension:</strong> remind them it's required, and that it should connect to the direct manipulation / conversation / delegation framing from today's slide | 学生がAIに対する態度の次元を省略する場合は、それが必須であること、今日のスライドの直接操作・会話・委任という枠組みとつながるべきことを伝えてください</li>
 </ul>
 
 <hr>
-
-<h3>Slide 5: Persona Example | ペルソナの例</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Present complete persona</strong> | 完全なペルソナを提示: Sarah Chen example</li>
-<li><strong>Trace to research</strong> | 調査に遡る: "Notice evidence: '4/5 users mentioned work schedule conflicts'"</li>
-<li><strong>Show how it guides design</strong> | デザインをどのようにガイドするかを示す: "This tells us mobile optimization is critical"</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Realistic and specific</strong> | 現実的で具体的: Not "student" but "21-year-old business student working part-time"</li>
-<li><strong>Quote captures voice</strong> | 引用が声をキャプチャ: Hear the user's perspective</li>
-<li><strong>Pain points drive design</strong> | ペインポイントがデザインを推進: These become opportunities</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Read it out loud</strong> | 声に出して読む: Makes persona feel like a real person</li>
-<li><strong>Ask design questions</strong> | デザイン質問をする: "What would Sarah need in a mobile interface?"</li>
-<li><strong>Compare to research</strong> | 調査と比較: "See how this connects to interview findings?"</li>
-</ul>
-
-<h4>Interactive Exercise | インタラクティブな演習</h4>
-<ul>
-<li>"If you were designing for Sarah, would you prioritize desktop or mobile? Why?"</li>
-<li>"What's Sarah's biggest frustration? How might we address it?"</li>
-<li>Have students identify which elements came from which research methods</li>
-</ul>
-
-<hr>
-
-<h3>Slide 6: User Journey Maps | ユーザージャーニーマップ</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Define journey maps</strong> | ジャーニーマップを定義: Visual representation of experience over time</li>
-<li><strong>Explain components</strong> | コンポーネントを説明: Stages, actions, touchpoints, emotions</li>
-<li><strong>Show why they matter</strong> | なぜ重要かを示す: Identify pain points and opportunities</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Time-based view</strong> | 時間ベースのビュー: Shows complete experience, not just one moment</li>
-<li><strong>Emotion is critical</strong> | 感情は重要: How users feel matters as much as what they do</li>
-<li><strong>Reveals opportunities</strong> | 機会を明らかにする: Pain points become design interventions</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Use metaphor</strong> | メタファーを使用: "Like a story timeline with emotional arc"</li>
-<li><strong>Connect to personas</strong> | ペルソナとつなげる: "Journey maps bring personas to life"</li>
-<li><strong>Emphasize research basis</strong> | 調査基盤を強調: "Comes from observing real users"</li>
-</ul>
-
-<h4>Visual Support | ビジュアルサポート</h4>
-<ul>
-<li>Show journey map examples on screen</li>
-<li>If possible, display physical journey map on wall</li>
-<li>Use color coding to highlight emotions (green = positive, red = frustration)</li>
-</ul>
-
-<hr>
-
-<h3>Slide 7: Creating User Journey Maps | ユーザージャーニーマップの作成</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Walk through 7-step process</strong> | 7ステップのプロセスを歩く: From persona selection to opportunity identification</li>
-<li><strong>Demonstrate each step</strong> | 各ステップを実演: Use Sarah's registration journey as example</li>
-<li><strong>Emphasize iteration</strong> | 反復を強調: First draft won't be perfect - refine as you go</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Start with persona and scenario</strong> | ペルソナとシナリオから始める: Clear scope before mapping</li>
-<li><strong>4-6 stages is typical</strong> | 4-6段階が典型的: Enough detail, not overwhelming</li>
-<li><strong>Emotions reveal pain points</strong> | 感情がペインポイントを明らかにする: Where frustration peaks = where to improve</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Use timeline analogy</strong> | タイムライン類推を使用: "Think of it as a movie storyboard"</li>
-<li><strong>Practice stage naming</strong> | ステージ命名を練習: "Use verbs: Awareness, Research, Decision"</li>
-<li><strong>Show emotional curve</strong> | 感情曲線を表示: Graph emotional highs and lows</li>
-</ul>
-
-<h4>Common Student Mistakes | 一般的な学生の間違い</h4>
-<ul>
-<li><strong>Too many stages</strong> | 段階が多すぎる: More than 8 becomes unwieldy</li>
-<li><strong>Missing emotions</strong> | 感情を見逃す: Journey map without emotion is just a process diagram</li>
-<li><strong>Not research-based</strong> | 調査ベースではない: Must connect to actual observations</li>
-</ul>
-
-<hr>
-
-<h3>Slide 8: Journey Map Example | ジャーニーマップの例</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Present Sarah's journey</strong> | サラのジャーニーを提示: Walk through all 6 stages</li>
-<li><strong>Highlight emotional shifts</strong> | 感情的変化をハイライト: Point out where frustration builds</li>
-<li><strong>Identify opportunities</strong> | 機会を特定: "See how pain points become design opportunities?"</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Complete experience</strong> | 完全な体験: From awareness to confirmation</li>
-<li><strong>Pain point clustering</strong> | ペインポイントのクラスタリング: Stage 4-5 have multiple frustrations</li>
-<li><strong>Opportunities list</strong> | 機会リスト: Five concrete design interventions identified</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Read it like a story</strong> | 物語のように読む: "Sarah starts motivated, becomes frustrated, ends disappointed"</li>
-<li><strong>Point out evidence</strong> | 証拠を指摘: "Notice touchpoints - mobile then laptop - from research observation"</li>
-<li><strong>Connect to design</strong> | デザインとつなげる: "Visual schedule builder directly addresses pain point"</li>
-</ul>
-
-<h4>Interactive Discussion | インタラクティブディスカッション</h4>
-<ul>
-<li>"Where is Sarah most frustrated? What could we do to help?"</li>
-<li>"What surprised you about this journey?"</li>
-<li>"Which opportunity would you prioritize first? Why?"</li>
-</ul>
-
-<hr>
-
-<h3>Slide 9: Scenarios | シナリオ</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Define scenarios</strong> | シナリオを定義: Narrative descriptions of persona using design</li>
-<li><strong>Explain three types</strong> | 3つのタイプを説明: Current state, future state, edge case</li>
-<li><strong>Show how scenarios guide design</strong> | シナリオがデザインをどのようにガイドするかを示す: Make abstract concrete</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Scenarios tell stories</strong> | シナリオが物語を語る: Narrative format, not bullet points</li>
-<li><strong>Context matters</strong> | コンテキストが重要: Where, when, why user is doing this</li>
-<li><strong>Test designs mentally</strong> | 精神的にデザインをテスト: Walk through scenario to validate solution</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Use movie analogy</strong> | 映画の類推を使用: "Like a screenplay for your design"</li>
-<li><strong>Contrast types</strong> | タイプを対比: Current state shows problems, future state shows solutions</li>
-<li><strong>Emphasize specificity</strong> | 特異性を強調: "Not 'user accesses system' but 'Sarah opens app on iPhone during lunch'"</li>
-</ul>
-
-<hr>
-
-<h3>Slide 10: Writing Effective Scenarios | 効果的なシナリオの書き方</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Present 6-part structure</strong> | 6部構成を提示: Title, persona, context, goal, actions, outcome</li>
-<li><strong>Show good vs. bad examples</strong> | 良い例 vs 悪い例を示す: Generic vs. specific scenarios</li>
-<li><strong>Practice together</strong> | 一緒に練習: Write scenario opening as a class</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Be specific</strong> | 具体的である: Names, devices, times, places</li>
-<li><strong>Include context</strong> | コンテキストを含める: Environmental factors matter</li>
-<li><strong>Show interactions</strong> | 相互作用を示す: User action → system response</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Use template</strong> | テンプレートを使用: Provide structure for consistency</li>
-<li><strong>Read examples aloud</strong> | 例を声に出して読む: Hear the difference between good and bad</li>
-<li><strong>Practice specificity</strong> | 特異性を練習: Transform vague to specific together</li>
-</ul>
-
-<h4>Interactive Exercise | インタラクティブな演習</h4>
-<ul>
-<li>Give generic scenario: "User registers for courses"</li>
-<li>Have students make it specific: Add who, where, when, device, context</li>
-<li>Compare results - see how specificity brings it to life</li>
-</ul>
-
-<hr>
-
-<h3>Slide 11: Scenario Example | シナリオの例</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Present current state scenario</strong> | 現在の状態シナリオを提示: Sarah's frustrating experience</li>
-<li><strong>Contrast with future state</strong> | 将来の状態と対比: Same goal, improved experience</li>
-<li><strong>Highlight differences</strong> | 違いをハイライト: Time, steps, emotions, outcome</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Current state shows problems</strong> | 現在の状態が問題を示す: 35 minutes, frustrated, third choices</li>
-<li><strong>Future state shows solution</strong> | 将来の状態がソリューションを示す: 12 minutes, confident, first choices</li>
-<li><strong>Specific interactions</strong> | 具体的な相互作用: "Taps 'Search Courses' and sees..."</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Read dramatically</strong> | 劇的に読む: Emphasize emotional differences</li>
-<li><strong>Count improvements</strong> | 改善を数える: Time savings, better outcome, positive emotions</li>
-<li><strong>Extract requirements</strong> | 要件を抽出: "This scenario tells us we need conflict detection"</li>
-</ul>
-
-<h4>Discussion Questions | ディスカッション質問</h4>
-<ul>
-<li>"What specific features made the future scenario better?"</li>
-<li>"How did Sarah's emotions change?"</li>
-<li>"What can we learn about mobile design from this?"</li>
-</ul>
-
-<hr>
-
-<h3>Slide 12: From Artifacts to Requirements | 成果物から要件へ</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Show connection process</strong> | 接続プロセスを表示: How personas, journeys, scenarios become requirements</li>
-<li><strong>Demonstrate extraction</strong> | 抽出を実演: From pain point to design requirement</li>
-<li><strong>Explain prioritization</strong> | 優先順位付けを説明: P0 must-have, P1 should-have, P2 nice-to-have</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Requirements come from artifacts</strong> | 要件は成果物から来る: Not invented, discovered</li>
-<li><strong>Each requirement has evidence</strong> | 各要件に証拠がある: Traces back to research</li>
-<li><strong>Prioritization is critical</strong> | 優先順位付けが重要: Can't build everything at once</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Use tracing</strong> | トレーシングを使用: "This requirement came from this pain point in journey map"</li>
-<li><strong>Show prioritization logic</strong> | 優先順位付けロジックを表示: Frequency + severity = priority</li>
-<li><strong>Connect to scope</strong> | 範囲とつなげる: "P0 is your MVP"</li>
-</ul>
-
-<h4>Interactive Exercise | インタラクティブな演習</h4>
-<ul>
-<li>Give students a pain point from journey map</li>
-<li>Have them write a requirement</li>
-<li>Discuss how to prioritize it</li>
-</ul>
-
-<hr>
-
-<h3>Slide 13: Using Personas in Design Decisions | デザイン決定でペルソナを使用</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Introduce persona check</strong> | ペルソナチェックを紹介: Four key questions to ask</li>
-<li><strong>Show anti-patterns</strong> | アンチパターンを表示: What NOT to do</li>
-<li><strong>Demonstrate in practice</strong> | 実践で実演: Use persona to evaluate feature idea</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Personas guide decisions</strong> | ペルソナが決定をガイド: "Would Sarah use this?" is powerful</li>
-<li><strong>Prevent feature creep</strong> | 機能の膨張を防ぐ: If it doesn't serve persona goals, question it</li>
-<li><strong>Keep personas visible</strong> | ペルソナを見えるようにする: Team reference throughout design</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Practice questions</strong> | 質問を練習: Have students ask "Would Sarah...?" about features</li>
-<li><strong>Show real examples</strong> | 実際の例を示す: Features that don't match persona needs</li>
-<li><strong>Emphasize discipline</strong> | 規律を強調: Easy to add features, hard to stay focused</li>
-</ul>
-
-<hr>
-
-<h3>Slide 14: Today's Activity Preview | 今日のアクティビティプレビュー</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Build excitement</strong> | 興奮を構築: "Now you'll create artifacts that bring your research to life!"</li>
-<li><strong>Explain structure</strong> | 構造を説明: 5 steps with bot guidance</li>
-<li><strong>Set expectations</strong> | 期待を設定: "You'll have complete personas and journey maps by end of class"</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Build on Week 3</strong> | 週3に基づく: Use your research findings</li>
-<li><strong>Complete process</strong> | 完全なプロセス: Personas, journeys, scenarios, requirements</li>
-<li><strong>Bot provides templates</strong> | ボットがテンプレートを提供: Structure and guidance throughout</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Address concerns</strong> | 懸念に対処: "Start simple, bot will help you add depth"</li>
-<li><strong>Emphasize quality</strong> | 質を強調: "Better to have one solid persona than three weak ones"</li>
-<li><strong>Show support</strong> | サポートを示す: "I'll circulate and help"</li>
-</ul>
-
-<h4>Time Management | 時間管理</h4>
-<ul>
-<li><strong>Step 1:</strong> 10 minutes - Data review and segmentation</li>
-<li><strong>Step 2:</strong> 15 minutes - Create primary persona</li>
-<li><strong>Step 3:</strong> 18 minutes - Map user journey</li>
-<li><strong>Step 4:</strong> 12 minutes - Write scenarios</li>
-<li><strong>Step 5:</strong> 10 minutes - Extract requirements</li>
-</ul>
-
-<hr>
-
-<h3>Slide 15: Key Takeaways | 主要な要点</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Summarize main points</strong> | 主要ポイントをまとめる: Five key principles</li>
-<li><strong>Connect to design thinking</strong> | デザイン思考とつなげる: "Research informs design through these artifacts"</li>
-<li><strong>Preview next week</strong> | 来週をプレビュー: "Next week we design mobile interfaces guided by these"</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Everything connects to research</strong> | すべてが調査に接続: Data-driven, not imagination</li>
-<li><strong>Artifacts guide design</strong> | 成果物がデザインをガイド: Tools for making decisions</li>
-<li><strong>Users become real</strong> | ユーザーが現実になる: Personas create empathy and focus</li>
-</ul>
-
-<h4>Teaching Tips | 指導のヒント</h4>
-<ul>
-<li><strong>Make it memorable</strong> | 記憶に残るようにする: "Personas answer WHO, journeys show WHERE, scenarios describe HOW"</li>
-<li><strong>Encourage confidence</strong> | 自信を奨励: "You have research data - now make it actionable"</li>
-<li><strong>Open for questions</strong> | 質問をオープン: "Any final questions before we start?"</li>
-</ul>
-
-<hr>
-
-<h3>Slide 16: Looking Ahead | 先を見る</h3>
-
-<h4>Instructor Actions | インストラクターのアクション</h4>
-<ul>
-<li><strong>Preview Week 5</strong> | 週5をプレビュー: Mobile interface design principles</li>
-<li><strong>Connect activities</strong> | アクティビティをつなげる: "Today's personas guide next week's designs"</li>
-<li><strong>Build anticipation</strong> | 期待を構築: "You'll sketch mobile interfaces for your personas"</li>
-</ul>
-
-<h4>Key Points to Emphasize | 強調すべき要点</h4>
-<ul>
-<li><strong>Continuity</strong> | 連続性: Each week builds on previous</li>
-<li><strong>Artifacts are reusable</strong> | 成果物は再利用可能: Use in final project</li>
-<li><strong>Design is user-centered</strong> | デザインはユーザー中心: Always reference personas</li>
-</ul>
-
-<h4>Final Encouragement | 最終的な励まし</h4>
-<ul>
-<li>"You have the research and frameworks"</li>
-<li>"The bot will guide you step by step"</li>
-<li>"Let's create artifacts that make your users real!"</li>
-</ul>
-
-<hr>
-
-<h2>Activity Transition | アクティビティ移行</h2>
-
-<h3>Before Starting Activity | アクティビティ開始前</h3>
-<p>1. <strong>Verify bot access</strong> | ボットアクセスを確認: All students logged in to persona module</p>
-<p>2. <strong>Distribute materials</strong> | 教材を配布: Sticky notes, markers, large paper for journey maps</p>
-<p>3. <strong>Ensure research access</strong> | 調査アクセスを確保: Students can reference Week 3 findings</p>
-<p>4. <strong>Quick demo</strong> | クイックデモ: Show bot interface for persona creation</p>
-
-<h3>During Activity | アクティビティ中</h3>
-<p>1. <strong>Circulate actively</strong> | 積極的に巡回: Monitor all students</p>
-<p>2. <strong>Answer questions</strong> | 質問に答える: But encourage bot use first</p>
-<p>3. <strong>Watch for issues</strong> | 問題を監視: Common problems detailed below</p>
-<p>4. <strong>Manage time</strong> | 時間を管理: Give warnings at transitions</p>
-
-<h3>Common Issues During Activity | アクティビティ中の一般的な問題</h3>
-
-<h4>Issue 1: Students Create Fictional Personas | 問題1：学生が架空のペルソナを作成</h4>
-<ul>
-<li><strong>Signs:</strong> Details not traceable to research, too creative/imaginative</li>
-<li><strong>Intervention:</strong> "Show me where in your research this came from"</li>
-<li><strong>Prevention:</strong> Emphasize evidence-based approach in lecture</li>
-</ul>
-
-<h4>Issue 2: Too Many or Too Few Personas | 問題2：ペルソナが多すぎるまたは少なすぎる</h4>
-<ul>
-<li><strong>Signs:</strong> 6+ personas (too many) or only 1 persona (too few)</li>
-<li><strong>Intervention:</strong> "What are the main behavioral patterns? Group similar users"</li>
-<li><strong>Bot Help:</strong> Bot suggests optimal number based on segmentation</li>
-</ul>
-
-<h4>Issue 3: Generic, Vague Personas | 問題3：一般的で曖昧なペルソナ</h4>
-<ul>
-<li><strong>Signs:</strong> "College student who likes apps" - too broad</li>
-<li><strong>Intervention:</strong> "Add specific details: What's their exact situation? Goals? Pain points?"</li>
-<li><strong>Reminder:</strong> Use quote from actual research to add authenticity</li>
-</ul>
-
-<h4>Issue 4: Journey Maps Without Emotions | 問題4：感情のないジャーニーマップ</h4>
-<ul>
-<li><strong>Signs:</strong> Only listing actions and touchpoints, no emotional data</li>
-<li><strong>Intervention:</strong> "How did the user FEEL at each stage? Check your interview notes"</li>
-<li><strong>Bot Help:</strong> Bot prompts for emotional data at each stage</li>
-</ul>
-
-<h4>Issue 5: Skipping Opportunities | 問題5：機会をスキップ</h4>
-<ul>
-<li><strong>Signs:</strong> Journey map shows pain points but no design opportunities</li>
-<li><strong>Intervention:</strong> "Each pain point is a design opportunity - what could we do here?"</li>
-<li><strong>Reminder:</strong> "This is why we map journeys - to find where to improve"</li>
-</ul>
-
-<h4>Issue 6: Scenarios Too Abstract | 問題6：シナリオが抽象的すぎる</h4>
-<ul>
-<li><strong>Signs:</strong> "User accesses system and completes task" - no detail</li>
-<li><strong>Intervention:</strong> "Who? Where? What device? What time? What's the context?"</li>
-<li><strong>Bot Help:</strong> Bot provides scenario template with prompts for specificity</li>
-</ul>
-
-<h4>Issue 7: Requirements Not Linked to Artifacts | 問題7：成果物にリンクされていない要件</h4>
-<ul>
-<li><strong>Signs:</strong> Requirements list that doesn't connect to personas or journeys</li>
-<li><strong>Intervention:</strong> "Show me which pain point this addresses"</li>
-<li><strong>Reminder:</strong> "Every requirement should trace back to research evidence"</li>
-</ul>
-
-<hr>
-
-<h2>Post-Activity Discussion | アクティビティ後のディスカッション</h2>
-
-<h3>Reflection Questions | 振り返り質問</h3>
-<p>1. <strong>"How did creating a persona change your understanding of users?"</strong> | 「ペルソナを作成することでユーザーの理解はどう変わりましたか？」</p>
-<p>2. <strong>"What surprised you in the journey mapping process?"</strong> | 「ジャーニーマッピングプロセスで何が驚きましたか？」</p>
-<p>3. <strong>"Which pain points offer the biggest design opportunities?"</strong> | 「どのペインポイントが最大のデザイン機会を提供しますか？」</p>
-<p>4. <strong>"How will scenarios guide your design work?"</strong> | 「シナリオはどのようにデザイン作業をガイドしますか？」</p>
-<p>5. <strong>"What requirements are must-haves vs. nice-to-haves?"</strong> | 「どの要件が必須対あると良いですか？」</p>
-
-<h3>Key Learnings to Reinforce | 強化すべき主要な学び</h3>
-<ul>
-<li><strong>Personas make users real</strong> | ペルソナがユーザーを現実にする: Easier to empathize with Sarah than "users"</li>
-<li><strong>Journey maps reveal hidden problems</strong> | ジャーニーマップが隠れた問題を明らかにする: Emotion patterns show where to focus</li>
-<li><strong>Scenarios test solutions</strong> | シナリオがソリューションをテスト: Mental walkthrough before building</li>
-<li><strong>Everything connects to research</strong> | すべてが調査に接続: Data-driven design decisions</li>
-</ul>
-
-<h3>Common Student Insights | 一般的な学生の洞察</h3>
-<ul>
-<li>"I didn't realize how much context affects user experience"</li>
-<li>"Mapping emotions helped me see opportunities I missed in the data"</li>
-<li>"The persona made design decisions much clearer"</li>
-<li>"I found pain points I hadn't noticed in my original research"</li>
-</ul>
-
-<h3>Next Week Connection | 来週の接続</h3>
-<ul>
-<li><strong>"Keep your personas handy"</strong> | 「ペルソナを手元に置く」: You'll design interfaces for them</li>
-<li><strong>"Reference your journey maps"</strong> | 「ジャーニーマップを参照」: See what mobile moments matter most</li>
-<li><strong>"Think about touchpoints"</strong> | 「タッチポイントについて考える」: Where does mobile interaction happen?</li>
-</ul>
-
-<hr>
-
-<h2>Assessment Notes | 評価ノート</h2>
-
-<h3>What to Look For in Submissions | 提出物で何を見るか</h3>
-
-<h4>Persona Quality | ペルソナの質</h4>
-<ul>
-<li><strong>Complete components</strong> | 完全なコンポーネント: All 6 essential sections included</li>
-<li><strong>Evidence-based</strong> | 証拠ベース: Details trace to research findings</li>
-<li><strong>Specific and realistic</strong> | 具体的で現実的: Not generic, includes authentic details</li>
-<li><strong>Authentic quote</strong> | 本物の引用: Direct from research interviews</li>
-<li><strong>Clear needs</strong> | 明確なニーズ: Prioritized list from research</li>
-</ul>
-
-<h4>Journey Map Quality | ジャーニーマップの質</h4>
-<ul>
-<li><strong>Clear stages</strong> | 明確な段階: 4-6 distinct phases with descriptive names</li>
-<li><strong>Detailed actions</strong> | 詳細なアクション: Specific behaviors at each stage</li>
-<li><strong>Touchpoints identified</strong> | タッチポイント識別: Where user interacts with system</li>
-<li><strong>Emotional data</strong> | 感情データ: Feelings captured at each stage</li>
-<li><strong>Pain points highlighted</strong> | ペインポイントハイライト: Problems clearly marked</li>
-<li><strong>Opportunities listed</strong> | 機会リスト: Design interventions identified</li>
-</ul>
-
-<h4>Scenario Quality | シナリオの質</h4>
-<ul>
-<li><strong>Complete structure</strong> | 完全な構造: Title, persona, context, goal, actions, outcome</li>
-<li><strong>Specificity</strong> | 特異性: Detailed context, devices, timing</li>
-<li><strong>Current and future states</strong> | 現在と将来の状態: Both scenarios written</li>
-<li><strong>Realistic interactions</strong> | 現実的な相互作用: Step-by-step actions</li>
-<li><strong>Emotional elements</strong> | 感情要素: How user feels throughout</li>
-</ul>
-
-<h4>Requirements Quality | 要件の質</h4>
-<ul>
-<li><strong>Linked to artifacts</strong> | 成果物にリンク: Each requirement traces to persona/journey/scenario</li>
-<li><strong>Prioritized</strong> | 優先順位付け: P0, P1, P2 classification with rationale</li>
-<li><strong>Specific and actionable</strong> | 具体的で実行可能: Clear enough to guide design</li>
-<li><strong>Evidence-based</strong> | 証拠ベース: Connected to research findings</li>
-</ul>
-
-<h4>Bot Interaction Evidence | ボットインタラクション証拠</h4>
-<ul>
-<li><strong>Screenshots</strong> | スクリーンショット: Key bot conversations</li>
-<li><strong>Template usage</strong> | テンプレート使用: Bot-provided frameworks utilized</li>
-<li><strong>Guidance followed</strong> | ガイダンスに従う: Evidence of bot suggestions applied</li>
-<li><strong>Iteration</strong> | 反復: Refinements based on bot feedback</li>
-</ul>
-
-<h3>Grading Rubric | 評価基準</h3>
-
-<h4>Excellent (90-100%) | 優秀（90-100％）</h4>
-<ul>
-<li>2-4 comprehensive personas with all components, evidence-based</li>
-<li>Detailed journey map with 5-6 stages, emotions, and opportunities</li>
-<li>Both current and future state scenarios, highly specific</li>
-<li>8-12 prioritized requirements with clear traceability</li>
-<li>Thoughtful reflection on insights gained</li>
-<li>Extensive bot interaction evidence</li>
-</ul>
-
-<h4>Good (80-89%) | 良い（80-89％）</h4>
-<ul>
-<li>1-3 solid personas with most components, mostly evidence-based</li>
-<li>Journey map with 4-5 stages, some emotional data</li>
-<li>Both scenarios present, reasonably specific</li>
-<li>6-10 requirements with some prioritization</li>
-<li>Adequate reflection</li>
-<li>Good bot interaction evidence</li>
-</ul>
-
-<h4>Satisfactory (70-79%) | 満足（70-79％）</h4>
-<ul>
-<li>1-2 basic personas with key components</li>
-<li>Journey map with 3-4 stages, limited emotional data</li>
-<li>At least one scenario, some specificity</li>
-<li>4-6 requirements, basic prioritization</li>
-<li>Basic reflection</li>
-<li>Some bot interaction evidence</li>
-</ul>
-
-<h4>Needs Improvement (<70%) | 改善が必要（<70％）</h4>
-<ul>
-<li>Incomplete or generic personas</li>
-<li>Limited journey map, missing components</li>
-<li>Vague or missing scenarios</li>
-<li>Few requirements, no clear prioritization</li>
-<li>Minimal reflection</li>
-<li>Little bot interaction evidence</li>
-</ul>
-
-<hr>
-
-<h2>Troubleshooting Guide | トラブルシューティングガイド</h2>
-
-<h3>Technical Issues | 技術的問題</h3>
-<ul>
-<li><strong>Bot not loading persona module</strong> | ボットがペルソナモジュールを読み込まない: Clear cache, refresh, try different browser</li>
-<li><strong>Can't access Week 3 research</strong> | 週3の調査にアクセスできない: Verify file locations, have backup copies</li>
-<li><strong>Journey mapping tool issues</strong> | ジャーニーマッピングツールの問題: Switch to paper-based alternative</li>
-</ul>
-
-<h3>Process Issues | プロセスの問題</h3>
-<ul>
-<li><strong>Students can't identify segments</strong> | 学生がセグメントを特定できない: Guide affinity mapping review, look for behavioral patterns</li>
-<li><strong>Personas too similar</strong> | ペルソナが似すぎている: Emphasize different goals, behaviors, contexts</li>
-<li><strong>Journey maps too high-level</strong> | ジャーニーマップが高レベルすぎる: Add specific actions, emotions, quotes from research</li>
-</ul>
-
-<h3>Content Issues | コンテンツの問題</h3>
-<ul>
-<li><strong>Fictional details in personas</strong> | ペルソナの架空の詳細: Require evidence citation for each element</li>
-<li><strong>Missing emotional data</strong> | 感情データの欠如: Prompt to review interview notes for feelings</li>
-<li><strong>Requirements don't match artifacts</strong> | 要件が成果物と一致しない: Show traceability requirement, have them connect dots</li>
-</ul>
-
-<hr>
-
-<h2>Additional Resources for Students | 学生向け追加リソース</h2>
-
-<h3>Recommended Reading | 推奨読み物</h3>
-<ul>
-<li><strong>"The User Is Always Right" by Steve Mulder</strong> | Steve Mulderの「The User Is Always Right」: Persona creation guide</li>
-<li><strong>"Mapping Experiences" by Jim Kalbach</strong> | Jim Kalbachの「Mapping Experiences」: Journey mapping techniques</li>
-<li><strong>"About Face" by Alan Cooper</strong> | Alan Cooperの「About Face」: Personas and goal-directed design</li>
-</ul>
-
-<h3>Tools and Templates | ツールとテンプレート</h3>
-<ul>
-<li><strong>Persona template</strong> | ペルソナテンプレート: Available through bot</li>
-<li><strong>Journey map canvas</strong> | ジャーニーマップキャンバス: Digital and printable versions</li>
-<li><strong>Scenario writing guide</strong> | シナリオ書きガイド: Structure and examples</li>
-<li><strong>Requirements extraction worksheet</strong> | 要件抽出ワークシート: From artifacts to design</li>
-</ul>
-
-<h3>Practice Opportunities | 練習機会</h3>
-<ul>
-<li><strong>Persona peer review</strong> | ペルソナピアレビュー: Exchange and critique</li>
-<li><strong>Journey map workshops</strong> | ジャーニーマップワークショップ: Practice with different scenarios</li>
-<li><strong>Bot practice</strong> | ボット練習: Use bot for persona refinement</li>
-</ul>
-
-<hr>
-
-<h2>Emergency Backup Plans | 緊急バックアッププラン</h2>
-
-<h3>If Bot Portal Fails | ボットポータルが失敗した場合</h3>
-<p>1. Use provided paper templates for all activities</p>
-<p>2. Instructor provides verbal guidance for each component</p>
-<p>3. Students work in pairs for peer support</p>
-<p>4. Extend activity time to compensate for lack of bot efficiency</p>
-
-<h3>If Students Don't Have Research Data | 学生が調査データを持っていない場合</h3>
-<p>1. Provide sample research data from previous semester</p>
-<p>2. Conduct quick in-class interviews as foundation</p>
-<p>3. Focus on process over perfect content</p>
-<p>4. Assign research completion as homework, personas as next class</p>
-
-<h3>If Time Runs Short | 時間が不足した場合</h3>
-<p>1. <strong>Priority:</strong> Complete at least one solid persona</p>
-<p>2. <strong>Skip if needed:</strong> Multiple scenarios (assign as homework)</p>
-<p>3. <strong>Simplify:</strong> Basic journey map with 3-4 stages</p>
-<p>4. <strong>Extend:</strong> Requirements extraction becomes homework</p>
-
-<hr>
-
-<h2>Week 4 Success Metrics | 週4の成功指標</h2>
-
-<h3>Student Engagement Indicators | 学生エンゲージメント指標</h3>
-<ul>
-<li>Active participation in persona creation</li>
-<li>Thoughtful questions about segmentation</li>
-<li>Collaborative journey mapping</li>
-<li>Productive bot interactions</li>
-<li>Evidence of connecting to Week 3 research</li>
-</ul>
-
-<h3>Learning Outcome Evidence | 学習成果証拠</h3>
-<ul>
-<li>Students can explain difference between persona and user profile</li>
-<li>Students create evidence-based personas with all components</li>
-<li>Students map complete journeys with emotions and opportunities</li>
-<li>Students write specific, contextual scenarios</li>
-<li>Students extract prioritized requirements from artifacts</li>
-</ul>
-
-<h3>Quality Markers | 質マーカー</h3>
-<ul>
-<li>Personas with authentic quotes and specific details</li>
-<li>Journey maps with clear emotional arcs and pain points</li>
-<li>Scenarios with context, device, timing specificity</li>
-<li>Requirements with clear traceability to artifacts</li>
-<li>Thoughtful reflection on how artifacts guide design</li>
-</ul>
-
-<hr>
-
 <em>End of Instructor Notes</em>
 <em>インストラクターノート終了</em>
 
-<strong>Course:</strong> HCI-101 | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2025</strong>
+<strong>Course:</strong> Human &amp; Machine Interaction (HCI-101) | <strong>Instructor:</strong> Yuri Tijerino | <strong>Fall 2026</strong>
+<p style="margin-top: 15px; font-size: 0.85em; color: var(--text-light);">AI disclosure: this page was drafted with AI assistance and reviewed by the instructor. ISO 9241-210's four activities and the history of personas (Alan Cooper, late 1990s) are drawn from the published standard and established UX design history.</p>
 
         </div>
     </main>
@@ -1074,12 +319,11 @@
     </div>
 </nav>
 
-
     <footer>
         <div class="container">
-            <p>&copy; 2025 Yuri Tijerino. All rights reserved.</p>
-            <p>著作権 © 2025 Yuri Tijerino. 無断転載を禁じます。</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies | Department of Applied Informatics</p>
+            <p>&copy; 2026 Yuri Tijerino. All rights reserved.</p>
+            <p>著作権 © 2026 Yuri Tijerino. 無断転載を禁じます。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Kwansei Gakuin University | School of Policy Studies</p>
         </div>
     </footer>
 </body>

@@ -20,11 +20,10 @@
         .deliverable-box { background: #f0f7ff; border-left: 4px solid #2a76dd; padding: 20px; margin: 20px 0; border-radius: 5px; }
         .requirement-list { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 15px 0; }
         .requirement-list li { margin: 10px 0; }
-        .grading-rubric { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        .grading-rubric th { background: #2a76dd; color: white; padding: 12px; text-align: left; }
-        .grading-rubric td { padding: 12px; border: 1px solid #ddd; }
-        .grading-rubric tr:nth-child(even) { background: #f8f9fa; }
+        .stage-box { background: #fff; border: 2px solid #7c3aed; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .highlight-box { background: #fff3cd; border: 2px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0; }
         .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
+        .draft-banner { background: #fde68a; border: 2px solid #d97706; padding: 15px; border-radius: 5px; margin: 20px 0; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -38,141 +37,127 @@
 
     <main>
         <div class="assignment-header">
-            <h1>Week 4: Personas and Journey Mapping Assignment</h1>
-            <p class="subtitle">Creating Design Artifacts from Research</p>
-            <p class="bilingual">第4週：ペルソナとジャーニーマッピング課題 - 調査からデザインアーティファクトを作成</p>
+            <h1>Week 4: Persona Draft (Part 1 of 2)</h1>
+            <p class="subtitle">User-Centered Design, Applied to a Real Target User</p>
+            <p class="bilingual">第4週：ペルソナ草案（2回のうちの1回目）— ユーザー中心設計を実際のターゲットユーザーに適用する</p>
+        </div>
+
+        <div class="draft-banner">
+            📝 This is a draft deliverable. You will complete and validate this persona as part of the Week 5 assignment, alongside an accessibility audit. Don't aim for a polished final version this week.
+            <div class="bilingual" style="font-weight: normal; margin-top: 8px;">これは草案の提出物です。第5週の課題で、アクセシビリティ監査とあわせてこのペルソナを完成・検証します。今週は完成版を目指さないでください。</div>
         </div>
 
         <div class="section">
             <h2>📋 Assignment Overview / 課題概要</h2>
-            <p>Transform your user research data into actionable design artifacts: personas, user journey maps, scenarios, and requirements. These artifacts will guide your design decisions throughout the project.</p>
-            <p class="bilingual">ユーザー調査データを実用的なデザインアーティファクトに変換します：ペルソナ、ユーザージャーニーマップ、シナリオ、要件。</p>
+            <p>In this assignment, you'll draft a research-grounded persona for a real interface — your own project, or an interface you already use. Unlike a typical persona, yours must also include an AI disposition: how this person relates to AI assistants and agents.</p>
+            <p class="bilingual">この課題では、実際のインターフェースのための、調査に基づくペルソナ案を作成します。自分のプロジェクトでも、すでに使っているインターフェースでも構いません。典型的なペルソナと異なり、あなたのペルソナには、AIに対する態度、つまりこの人物がAIアシスタントやエージェントとどう関わるかも含める必要があります。</p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Learning Objectives / 学習目標</h2>
+            <ul>
+                <li>Apply ISO 9241-210's "understand context of use" activity to a specific user group</li>
+                <li>Build a persona from research or clearly flagged assumptions, not guesswork presented as fact</li>
+                <li>Write goals, frustrations, and context specific enough to use in a real design decision</li>
+                <li>Add an AI-disposition dimension connected to the three basic ways people interact with interfaces</li>
+            </ul>
         </div>
 
         <div class="section">
             <h2>📝 Activity Description / アクティビティ説明</h2>
 
-            <h3>Task 1: Create Personas (ペルソナ作成)</h3>
-            <p>Develop 2-4 evidence-based personas including:</p>
-            <ul>
-                <li>Name, photo, demographic details</li>
-                <li>Goals and motivations</li>
-                <li>Behaviors and tech proficiency</li>
-                <li>Pain points and frustrations</li>
-                <li>Quote that captures their perspective</li>
-                <li>Evidence linking to your interview data</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 1: Pick a Real Target User Group (ターゲットユーザー層の選択)</h3>
+                <ul>
+                    <li>Choose an interface you care about — a project idea, or something you already use</li>
+                    <li>Pick one specific group of real people who would use it</li>
+                </ul>
+            </div>
 
-            <h3>Task 2: User Journey Map (ジャーニーマップ)</h3>
-            <p>Create a detailed journey map with 5-6 stages showing:</p>
-            <ul>
-                <li>Actions users take at each stage</li>
-                <li>Emotional state (emotional graph)</li>
-                <li>Touchpoints (where they interact)</li>
-                <li>Pain points (problems they encounter)</li>
-                <li>Opportunities for improvement</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 2: Draft the Core Persona (ペルソナの核)</h3>
+                <ul>
+                    <li>Name and a one-line summary</li>
+                    <li>2–3 specific goals (not "wants a good experience")</li>
+                    <li>2–3 specific frustrations</li>
+                    <li>Context of use: where, when, under what conditions they'd use this</li>
+                    <li>One representative quote, in their own voice</li>
+                </ul>
+            </div>
 
-            <h3>Task 3: Write Scenarios (シナリオ)</h3>
-            <p>Create both current and future state scenarios:</p>
-            <ul>
-                <li><strong>Current State:</strong> How users currently accomplish their goal (with pain points)</li>
-                <li><strong>Future State:</strong> How they would accomplish it with your solution</li>
-                <li>Be specific with names, contexts, and actions</li>
-                <li>Include realistic details</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 3: Add the AI Disposition (AIに対する態度)</h3>
+                <ul>
+                    <li>How much does this person trust AI — too much, too little, or about right?</li>
+                    <li>Have they had a notably good or bad experience with AI before?</li>
+                    <li>Which of the three basic interaction modes (direct manipulation, conversation, delegation) would they default to, and why?</li>
+                </ul>
+            </div>
 
-            <h3>Task 4: Extract Requirements (要件抽出)</h3>
-            <p>Develop 8-12 prioritized requirements with:</p>
-            <ul>
-                <li>Clear requirement statement</li>
-                <li>Priority level (Must have, Should have, Nice to have)</li>
-                <li>Traceability to personas/journey map</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 4: Mark Your Evidence (根拠の明示)</h3>
+                <ul>
+                    <li>For each part of the persona, note what it's based on: an interview, an observation, or an assumption you still need to check</li>
+                    <li>It's fine — expected, even — to have assumptions at this stage. Flagging them clearly is the point</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
             <h2>📦 Deliverables / 提出物</h2>
             <div class="deliverable-box">
-                <h3>Design Artifact Package</h3>
-                <p><strong>Format:</strong> PDF document (6-8 pages)</p>
-
+                <h3>Persona Draft</h3>
+                <p><strong>Format:</strong> PDF document (1 page) or a single slide</p>
                 <div class="requirement-list">
                     <strong>Required Components:</strong>
-                    <ol>
-                        <li><strong>Personas (2-3 pages):</strong> 2-4 comprehensive personas with all components</li>
-                        <li><strong>Journey Map (1-2 pages):</strong> Detailed map with 5-6 stages, emotions, and opportunities</li>
-                        <li><strong>Scenarios (1-2 pages):</strong> Both current and future state scenarios (highly specific)</li>
-                        <li><strong>Requirements (1 page):</strong> 8-12 prioritized requirements with traceability</li>
-                        <li><strong>Bot Interaction:</strong> Screenshots showing bot guidance</li>
-                    </ol>
+                    <ul>
+                        <li><strong>Name and one-line summary</strong></li>
+                        <li><strong>2–3 goals and 2–3 frustrations</strong></li>
+                        <li><strong>Context of use</strong></li>
+                        <li><strong>One representative quote</strong></li>
+                        <li><strong>AI disposition</strong>, connected to the three interaction modes (direct manipulation, conversation, delegation)</li>
+                        <li><strong>Evidence notes:</strong> what's research-based and what's still an assumption</li>
+                        <li><strong>AI transparency log (if used):</strong> tool, date, what you asked, what you kept or changed, how you checked it</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="section">
-            <h2>📊 Grading Rubric / 評価基準</h2>
-
-            <table class="grading-rubric">
-                <thead>
-                    <tr>
-                        <th>Level</th>
-                        <th>Score</th>
-                        <th>Criteria</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Excellent</strong></td>
-                        <td>90-100%</td>
-                        <td>3-4 evidence-based personas, comprehensive journey map (5-6 stages), both scenarios detailed, 8-12 prioritized requirements with clear traceability</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Good</strong></td>
-                        <td>80-89%</td>
-                        <td>2-3 solid personas, good journey map (4-5 stages), both scenarios present, 6-10 requirements</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Satisfactory</strong></td>
-                        <td>70-79%</td>
-                        <td>1-2 basic personas, journey map (3-4 stages), at least one scenario, 4-6 requirements</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Needs Improvement</strong></td>
-                        <td>&lt;70%</td>
-                        <td>Incomplete or generic work, missing key components</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
         <div class="section">
             <h2>✅ Submission Requirements / 提出要件</h2>
             <div class="requirement-list">
                 <ul>
-                    <li><strong>File Format:</strong> PDF</li>
-                    <li><strong>File Naming:</strong> LastName_FirstName_Week04.pdf</li>
-                    <li><strong>Length:</strong> 6-8 pages</li>
+                    <li><strong>File Format:</strong> PDF (preferred)</li>
+                    <li><strong>File Naming:</strong> LastName_FirstName_Week04_Draft.pdf</li>
+                    <li><strong>Length:</strong> 1 page — this is a draft, not a full report</li>
+                    <li><strong>Work style:</strong> individual</li>
                     <li><strong>Due Date:</strong> Before next class session</li>
+                    <li><strong>Note:</strong> this draft feeds directly into your Week 5 submission, which completes the persona and adds an accessibility audit</li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🤖 AI Use on This Assignment / この課題でのAI使用</h2>
+            <div class="highlight-box">
+                <p>An AI assistant can help you brainstorm goals and frustrations, or tighten your persona's quote — but the person and the research judgment behind them should be yours.</p>
+                <p><strong>If you use one, log it:</strong> which tool, when, what you asked, what you kept or changed, and how you checked it.</p>
             </div>
         </div>
 
         <div class="section">
             <h2>💡 Tips for Success / 成功のためのヒント</h2>
             <ul>
-                <li><strong>Base personas on data:</strong> Every detail should trace back to your research</li>
-                <li><strong>Show emotions:</strong> Journey maps should visualize emotional highs and lows</li>
-                <li><strong>Be specific in scenarios:</strong> Use names, times, locations</li>
-                <li><strong>Prioritize requirements:</strong> Not everything can be "must have"</li>
-                <li><strong>Use templates:</strong> Ask the bot for persona and journey map templates</li>
-                <li><strong>Keep it visual:</strong> Use diagrams, icons, and emotional curves</li>
+                <li><strong>Think of someone real:</strong> a specific person you know makes a far better starting point than an invented stereotype</li>
+                <li><strong>Specific beats polished:</strong> a rough draft with one vivid, true detail beats a slick one with none</li>
+                <li><strong>Flag your assumptions honestly:</strong> next week's assignment will ask you to go check them</li>
+                <li><strong>Don't skip the AI disposition:</strong> it's easy to forget, and it matters for everything we design for the rest of the course</li>
             </ul>
         </div>
     </main>
 
     <footer style="background: #2a76dd; color: white; text-align: center; padding: 20px; margin-top: 40px;">
-        <p>&copy; 2025 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
+        <p>&copy; 2026 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
     </footer>
 </body>
 </html>
