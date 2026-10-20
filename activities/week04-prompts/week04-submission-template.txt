@@ -1,0 +1,74 @@
+WEEK 4 SUBMISSION TEMPLATE | 第4週 提出テンプレート
+
+Part A becomes File 1 (LastName_FirstName_Week04_Draft.pdf, one page).
+Part B becomes File 2 (LastName_FirstName_Week04_AILog.pdf or .txt).
+Copy into Word, Google Docs, or a slide. Replace everything in [brackets].
+パートAはファイル1（1ページ）、パートBはファイル2になります。Word、Googleドキュメント、スライドにコピーし、[ ] の部分を書き換える。
+
+Evidence labels | 根拠の印:
+[Interview] someone told you | 誰かから聞いた
+[Observation] you saw it (including your own behavior) | 自分で見た（自分の行動を含む）
+[Assumption] your guess or the AI's suggestion, still to check | 推測やAIの提案。要確認
+
+============================================================
+PART A: PERSONA DRAFT (PART 1 OF 2) — ONE PAGE
+ペルソナ草案（1回目）— 1ページ
+============================================================
+Interface: [your project idea or an existing interface]
+Target user group: [specific group]
+
+[Image: free stock photo or illustration, with credit]
+
+NAME: [fictional name]
+SUMMARY: [one line that captures who they are] [label]
+
+GOALS | 目標
+1. [specific goal] [label]
+2. [ ] [label]
+3. [optional] [label]
+
+FRUSTRATIONS | 不満
+1. [specific frustration, including what they do instead today] [label]
+2. [ ] [label]
+3. [optional] [label]
+
+CONTEXT OF USE | 利用状況
+Who (abilities, limits): [ ] [label]
+What (task): [ ] [label]
+Where (place, people, device, connection): [ ] [label]
+
+QUOTE | 引用
+"[ ]" [Interview = their real words / Assumption = written by me]
+
+AI DISPOSITION | AIに対する態度
+Trust: [too much / too little / about right], because [ ] [label]
+AI experience: [a notably good or bad experience] [label]
+Default mode: [direct manipulation / conversation / delegation], because [ ] [label]
+
+EVIDENCE NOTES | 根拠メモ
+Interview [n] / Observation [n] / Assumption [n]
+Assumptions to check before the next class | 次の授業までに確かめる仮定:
+1. [assumption] → Question for a real person: [open question]
+2. [assumption] → Question: [ ]
+
+============================================================
+PART B: AI TRANSPARENCY LOG | AI透明性ログ
+============================================================
+AI tools and dates: [e.g., ChatGPT, 2026-10-20, Prompts 0 and 1]   (or "No AI used")
+
+What I kept, changed, or rejected from the AI's drafts (at least 3) | AIの下書きから残した・変えた・使わなかったこと（3つ以上）
+# | Part | AI's draft said | I kept / changed it to / rejected | Why
+1 | [ ] | [ ] | [ ] | [ ]
+2 |
+3 |
+
+How I checked the AI's output | AIの出力の確認方法:
+[ ]
+
+Attached chats (complete, unedited) | 添付した会話（全文、編集なし）:
+=== PROMPT 0 CHAT (if used) — AI tool: ___ — date: ___ ===
+[paste]
+=== PROMPT 1 CHAT — AI tool: ___ — date: ___ ===
+[paste]
+=== REHEARSAL AGENT CHAT (if used) — AI tool: ___ — date: ___ ===
+[paste]

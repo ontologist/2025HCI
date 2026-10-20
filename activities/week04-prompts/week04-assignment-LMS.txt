@@ -1,0 +1,135 @@
+WEEK 4 ASSIGNMENT: PERSONA DRAFT (PART 1 OF 2)
+第4週課題：ペルソナ草案（2回のうちの1回目）
+
+HCI-101 Introduction to Human-Computer Interaction | Points: 10 | 配点：10点
+Due: [DATE, TIME] (before the next class) | 締切：[日付・時刻]（次の授業まで）
+Submit: this assignment in the LMS (2 files) | 提出：LMSのこの課題から（2ファイル）
+Work style: individual | 進め方：個人
+
+------------------------------------------------------------
+1. OVERVIEW | 概要
+------------------------------------------------------------
+
+Draft a research-grounded persona for a real interface: your own project idea, or an interface you already use. Your persona must include an AI disposition: how this person relates to AI assistants and agents. This is a draft. You will complete and check it next week, together with an accessibility audit.
+
+In class you used two AI prompts:
+- Prompt 0: Persona Brainstorm → Persona Starter Pack
+- Prompt 1: Persona Draft → Persona Draft, Evidence Notes, Check-with-a-real-person plan
+
+The AI's output is a draft. What you submit must be your own version: checked, corrected, and written in your own words.
+
+実際のインターフェース（自分のプロジェクト案、またはすでに使っているもの）のための、調査に基づくペルソナ草案を作ります。ペルソナには、AIに対する態度（AIアシスタントやエージェントとどう関わるか）を含めます。これは草案です。来週、アクセシビリティ監査とあわせて完成・確認します。
+
+授業では2つのAIプロンプトを使いました。
+- プロンプト0：ペルソナ・ブレインストーミング → スターターパック
+- プロンプト1：ペルソナ草案 → ペルソナ草案、根拠メモ、実在の人との確認計画
+
+AIの出力は下書きです。提出するのは、自分で確認・修正し、自分の言葉で書き直したものです。
+
+------------------------------------------------------------
+2. WHAT TO SUBMIT (2 FILES) | 提出するもの（2ファイル）
+------------------------------------------------------------
+
+File 1: Persona Draft (PDF, 1 page) | ペルソナ草案（PDF、1ページ）
+   Name: LastName_FirstName_Week04_Draft.pdf
+   Use the template "week04-submission-template.txt" (Part A). One page or one slide. English or Japanese is fine.
+   テンプレート「week04-submission-template.txt」（パートA）を使う。1ページまたは1枚のスライド。英語でも日本語でもよい。
+   Required parts | 必須の要素:
+   - Name and one-line summary | 名前と一行の要約
+   - 2–3 goals and 2–3 frustrations | 目標2〜3個と不満2〜3個
+   - Context of use (who, what, where) | 利用状況（誰が・何を・どこで）
+   - One representative quote | 代表的な引用1つ
+   - AI disposition, connected to the three interaction modes (direct manipulation, conversation, delegation) | AIに対する態度（直接操作・会話・委任の3つのモードにつなげる）
+   - Evidence notes: Interview, Observation, or Assumption | 根拠メモ：インタビュー・観察・仮定
+
+File 2: AI Transparency Log (PDF or TXT) | AI透明性ログ（PDFまたはTXT）
+   Name: LastName_FirstName_Week04_AILog.pdf (or .txt)
+   Use the template (Part B), then attach the complete, unedited chats, each starting with a header line:
+     === PROMPT 0 CHAT (if used) — AI tool: ___ — date: ___ ===
+     === PROMPT 1 CHAT — AI tool: ___ — date: ___ ===
+     === REHEARSAL AGENT CHAT (if used) — AI tool: ___ — date: ___ ===
+   If you did not use AI at all, submit Part B with "No AI used."
+   テンプレート（パートB）を使い、会話の全文を編集せずに添付する（上の見出し行をつける）。AIを使わなかった場合は、パートBに「AI不使用」と書いて提出する。
+
+In the LMS submission comment box, paste the checklist in Section 4, with each item marked [x] (done) or [ ] (not done).
+LMSの提出コメント欄に、4章のチェックリストを貼り付け、各項目に [x]（済）か [ ]（未）をつける。
+
+------------------------------------------------------------
+3. RUBRIC (10 POINTS) | 評価基準（10点）
+------------------------------------------------------------
+
+Each row is scored Full, Partial, or Missing. This is a draft: assumptions do not lose points if they are clearly labeled.
+各行を「満点／一部／なし」で評価します。草案なので、仮定は明確に印をつけていれば減点しません。
+
+R1  Target user and context of use — 2 points
+    Full (2): a specific, real user group (not "students" or "users"); context of use covers who (goals, abilities, limits), what (task), and where (physical, social, technical environment).
+    Partial (1): group too broad, or one of who / what / where missing.
+    Missing (0): no user group or context.
+
+R2  Goals and frustrations — 2 points
+    Full (2): 2–3 goals and 2–3 frustrations, each specific enough to settle a design decision (a concrete task, time, place, device, or number); no generic items like "wants a good experience."
+    Partial (1): too few, or mostly generic.
+    Missing (0): none.
+
+R3  Summary and quote — 1 point
+    Full (1): a name and one-line summary that capture the person; a quote in their own voice, labeled as a real person's words [Interview] or as invented [Assumption].
+    Partial (0.5): summary generic, or quote unlabeled.
+    Missing (0): neither.
+
+R4  AI disposition — 2 points
+    Full (2): trust level (too much / too little / about right) with a reason; a notably good or bad AI experience; a default interaction mode (direct manipulation, conversation, or delegation) with a reason linked to this interface.
+    Partial (1): one or two of these, or no reason given.
+    Missing (0): no AI disposition.
+
+R5  Evidence notes — 2 points
+    Full (2): every part labeled Interview, Observation, or Assumption; at least 2 key assumptions named, each with an open question to ask a real person before the next class.
+    Partial (1): some parts unlabeled, or no assumptions to check.
+    Missing (0): no evidence notes.
+
+R6  AI transparency log — 1 point
+    Full (1): tool and date; complete chats attached; at least 3 specific things you kept or changed from the AI's drafts, and why; how you checked the AI's output. (Or "No AI used.")
+    Partial (0.5): chats missing, or changes vague.
+    Missing (0): AI used but no log.
+
+Deductions | 減点
+- Real names or identifying details of real people in any file (including the chats): −1, and you will be asked to resubmit.
+  いずれかのファイル（会話を含む）に実在の人の名前や個人が分かる情報がある場合：−1（再提出を求めます）。
+- Assumptions presented as interviews or observations (for example, an invented quote labeled [Interview]): R5 is scored Partial or lower.
+  仮定をインタビューや観察として示した場合（作った引用に [Interview] とつけるなど）：R5は「一部」以下。
+- Persona submitted as AI output with no changes (log does not show changes, or the draft matches the chat word for word): R1–R4 are scored at most Partial.
+  AIの出力をそのまま提出した場合（ログに変更点がない、または草案が会話と一字一句同じ）：R1〜R4は最大でも「一部」。
+
+------------------------------------------------------------
+4. SUBMISSION CHECKLIST (PASTE INTO THE LMS COMMENT BOX)
+   提出チェックリスト（LMSのコメント欄に貼り付け）
+------------------------------------------------------------
+
+[ ] File 1 LastName_FirstName_Week04_Draft.pdf — one page
+[ ] File 2 LastName_FirstName_Week04_AILog — Part B + complete chats (or "No AI used")
+[ ] Name and one-line summary
+[ ] 2–3 goals and 2–3 frustrations, all specific
+[ ] Context of use: who, what, where
+[ ] Quote labeled [Interview] or [Assumption]
+[ ] AI disposition: trust, AI experience, default mode and why
+[ ] Every part labeled Interview / Observation / Assumption
+[ ] At least 2 assumptions to check with a real person
+[ ] No real names or identifying details in any file
+[ ] AI tools used: ______________
+
+------------------------------------------------------------
+5. RULES FOR AI USE | AI利用のルール
+------------------------------------------------------------
+
+- AI can help you brainstorm and tighten your wording, but the person and the research judgment must be yours. Disclose all AI use in File 2. AI is a tool, not an author.
+  AIはアイデア出しや言葉の調整に使えますが、人物像と調査上の判断はあなた自身のものであること。AIの利用はファイル2ですべて開示する。AIは道具であり、著者ではない。
+- AI output can contain errors, invented facts, and stereotypes. Anything the AI suggested is an Assumption until a real person confirms it.
+  AIの出力には誤り、作られた事実、ステレオタイプが含まれることがある。AIが出したことは、実在の人が確かめるまでは「仮定」。
+- Practicing with the Rehearsal Agent does not count as checking an assumption. Only a real person can do that.
+  リハーサル・エージェントとの練習は、仮定の確認にはならない。確かめられるのは実在の人だけ。
+- Use only free stock photos (Unsplash, Pexels) or illustrations for the persona image. Never use a photo of a real person you know.
+  ペルソナ画像は無料のストックフォト（Unsplash、Pexels）かイラストのみ。知っている実在の人の写真は使わない。
+- Turn off "use my chats for training" in your AI tool if possible.
+  可能なら、AIツールの「会話を学習に使う」設定をオフにする。
+
+Before the next class: talk to one real person who resembles your persona, even briefly, and bring your notes. Next week you will complete the persona and add an accessibility audit.
+次の授業までに：ペルソナに近い実在の人と、短くてもよいので1人話し、メモを持ってくること。来週、ペルソナを完成させ、アクセシビリティ監査を加えます。

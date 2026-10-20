@@ -24,6 +24,15 @@
         .highlight-box { background: #fff3cd; border: 2px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0; }
         .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
         .draft-banner { background: #fde68a; border: 2px solid #d97706; padding: 15px; border-radius: 5px; margin: 20px 0; font-weight: 600; }
+        .grading-rubric { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .grading-rubric th { background: #2a76dd; color: white; padding: 12px; text-align: left; }
+        .grading-rubric td { padding: 12px; border: 1px solid #ddd; vertical-align: top; }
+        .grading-rubric tr:nth-child(even) { background: #f8f9fa; }
+        .table-wrap { overflow-x: auto; }
+        .file-list li { margin: 10px 0; }
+        .file-list a { color: #2a76dd; font-weight: bold; }
+        .flow { background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; white-space: pre-wrap; font-size: 0.95em; }
+        @media (max-width: 600px) { .grading-rubric { font-size: 0.85em; } .grading-rubric th, .grading-rubric td { padding: 8px; } }
     </style>
 </head>
 <body>
@@ -109,9 +118,31 @@
         </div>
 
         <div class="section">
+            <h2>🤖 In-Class AI Prompts / 授業で使うAIプロンプト</h2>
+            <p>Two prompts guide today's activity. Download one, open a <strong>new chat</strong> in ChatGPT, Claude, Gemini, or Copilot, and paste everything from <strong>▼▼▼ PROMPT START ▼▼▼</strong> to <strong>▲▲▲ PROMPT END ▲▲▲</strong>. Use one new chat per prompt. You can answer in English or Japanese.</p>
+            <p class="bilingual">今日のアクティビティでは2つのプロンプトを使います。ダウンロードして、ChatGPT、Claude、Gemini、Copilot で<strong>新しい会話</strong>を開き、「▼▼▼ PROMPT START ▼▼▼」から「▲▲▲ PROMPT END ▲▲▲」までを貼り付けます。プロンプトごとに新しい会話を使います。英語でも日本語でも答えられます。</p>
+            <div class="requirement-list">
+                <ul class="file-list">
+                    <li><a href="week04-prompts/00-persona-brainstorm-prompt.txt" download>Prompt 0: Persona Brainstorm</a> (about 20 min) — brainstorm with the AI to choose your interface and user group, explore the context of use, list goals and frustrations, and work out the AI disposition. You get a <strong>Persona Starter Pack</strong>, with every idea labeled Interview, Observation, or Assumption.
+                        <div class="bilingual">AIとアイデアを出し合い、インターフェースとユーザー層、利用状況、目標と不満、AIに対する態度を考えます。「ペルソナ・スターターパック」ができます。</div></li>
+                    <li><a href="week04-prompts/01-persona-draft-prompt.txt" download>Prompt 1: Persona Draft</a> (about 20–25 min) — turns the Starter Pack (or your own notes) into a <strong>one-page persona draft</strong>, evidence notes, and a plan for checking your assumptions with a real person. It can also give you an optional rehearsal agent for practicing your questions.
+                        <div class="bilingual">スターターパック（または自分のメモ）から、1ページのペルソナ草案、根拠メモ、実在の人との確認計画を作ります。質問を練習するリハーサル・エージェントも作れます（任意）。</div></li>
+                    <li><a href="week04-prompts/week04-submission-template.txt" download>Submission Template</a> — Part A: the one-page persona draft. Part B: the AI transparency log.
+                        <div class="bilingual">提出テンプレート：パートA（ペルソナ草案）、パートB（AI透明性ログ）。</div></li>
+                </ul>
+            </div>
+            <div class="flow">Prompt 0 → Persona Starter Pack → Prompt 1 → Persona Draft + Evidence Notes + questions for a real person
+                                                   └→ (optional) Rehearsal Agent: practice your questions</div>
+            <div class="highlight-box">
+                <p><strong>AI output is a draft, and everything the AI suggests is an Assumption.</strong> Rewrite the persona in your own words. Don't type real names or identifying details into the AI. The rehearsal agent is not a real user, so practicing with it doesn't count as checking an assumption.</p>
+                <p class="bilingual">AIの出力は下書きで、AIが出したことはすべて「仮定」です。自分の言葉で書き直してください。実在の人の名前や個人が分かる情報はAIに入力しないこと。リハーサル・エージェントは本物のユーザーではないので、練習しても仮定を確かめたことにはなりません。</p>
+            </div>
+        </div>
+
+        <div class="section">
             <h2>📦 Deliverables / 提出物</h2>
             <div class="deliverable-box">
-                <h3>Persona Draft</h3>
+                <h3>File 1: Persona Draft</h3>
                 <p><strong>Format:</strong> PDF document (1 page) or a single slide</p>
                 <div class="requirement-list">
                     <strong>Required Components:</strong>
@@ -122,26 +153,77 @@
                         <li><strong>One representative quote</strong></li>
                         <li><strong>AI disposition</strong>, connected to the three interaction modes (direct manipulation, conversation, delegation)</li>
                         <li><strong>Evidence notes:</strong> what's research-based and what's still an assumption</li>
-                        <li><strong>AI transparency log (if used):</strong> tool, date, what you asked, what you kept or changed, how you checked it</li>
                     </ul>
-                    <p class="bilingual" style="margin-top: 10px;">名前と一行の要約。2〜3個の目標と2〜3個の不満。利用状況。代表的な引用1つ。AIに対する態度（直接操作、会話、委任の3つのインタラクションモードにつなげる）。根拠のメモ：何が調査に基づいていて、何がまだ仮定か。AI透明性ログ（使用した場合）：ツール、日付、尋ねた内容、残した・変更した内容、確認方法。</p>
+                    <p class="bilingual" style="margin-top: 10px;">名前と一行の要約。2〜3個の目標と2〜3個の不満。利用状況。代表的な引用1つ。AIに対する態度（直接操作、会話、委任の3つのインタラクションモードにつなげる）。根拠のメモ：何が調査に基づいていて、何がまだ仮定か。</p>
                 </div>
             </div>
+            <div class="deliverable-box">
+                <h3>File 2: AI Transparency Log</h3>
+                <p><strong>Format:</strong> PDF or TXT (Part B of the template)</p>
+                <div class="requirement-list">
+                    <ul>
+                        <li><strong>Tools and dates</strong> (or “No AI used”)</li>
+                        <li><strong>At least 3 things you kept, changed, or rejected</strong> from the AI's drafts, and why</li>
+                        <li><strong>How you checked</strong> the AI's output</li>
+                        <li><strong>The complete, unedited chats</strong>, each starting with a header line such as <code>=== PROMPT 1 CHAT — AI tool: ___ — date: ___ ===</code></li>
+                    </ul>
+                    <p class="bilingual" style="margin-top: 10px;">ツールと日付（またはAI不使用）。AIの下書きから残した・変えた・使わなかったこと3つ以上とその理由。確認方法。会話の全文（編集なし、見出し行つき）。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Grading Rubric (10 Points) / 評価基準（10点）</h2>
+            <p>Each row is scored Full, Partial, or Missing. This is a draft: assumptions don't lose points if they are clearly labeled.</p>
+            <p class="bilingual">各行を「満点／一部／なし」で評価します。草案なので、仮定は明確に印をつけていれば減点しません。</p>
+            <div class="table-wrap">
+            <table class="grading-rubric">
+                <thead><tr><th>Criterion</th><th>Full</th><th>Partial</th><th>Missing</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>R1 Target user &amp; context of use</strong><br>2 pts</td><td>(2) A specific, real user group; context covers who (goals, abilities, limits), what (task), and where (physical, social, technical environment)</td><td>(1) Group too broad, or who / what / where missing</td><td>(0) None</td></tr>
+                    <tr><td><strong>R2 Goals &amp; frustrations</strong><br>2 pts</td><td>(2) 2–3 of each, specific enough to settle a design decision; nothing like “wants a good experience”</td><td>(1) Too few, or mostly generic</td><td>(0) None</td></tr>
+                    <tr><td><strong>R3 Summary &amp; quote</strong><br>1 pt</td><td>(1) Name and one-line summary that capture the person; quote in their voice, labeled [Interview] (real words) or [Assumption] (written by you)</td><td>(0.5) Generic summary, or unlabeled quote</td><td>(0) Neither</td></tr>
+                    <tr><td><strong>R4 AI disposition</strong><br>2 pts</td><td>(2) Trust level with a reason; a notably good or bad AI experience; default mode (direct manipulation, conversation, or delegation) with a reason linked to this interface</td><td>(1) Only one or two of these, or no reasons</td><td>(0) None</td></tr>
+                    <tr><td><strong>R5 Evidence notes</strong><br>2 pts</td><td>(2) Every part labeled Interview, Observation, or Assumption; at least 2 key assumptions, each with an open question for a real person</td><td>(1) Some parts unlabeled, or no assumptions to check</td><td>(0) None</td></tr>
+                    <tr><td><strong>R6 AI transparency log</strong><br>1 pt</td><td>(1) Tools and dates; complete chats; at least 3 kept or changed items with reasons; how you checked (or “No AI used”)</td><td>(0.5) Chats missing, or vague changes</td><td>(0) AI used but no log</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <h3>Deductions / 減点</h3>
+            <ul>
+                <li><strong>Real names or identifying details</strong> of real people in any file, including the chats: −1, and you will be asked to resubmit.<div class="bilingual">実在の人の名前や個人が分かる情報（会話を含む）：−1（再提出）。</div></li>
+                <li><strong>Assumptions presented as interviews or observations</strong> (for example, an invented quote labeled [Interview]): R5 is scored Partial or lower.<div class="bilingual">仮定をインタビューや観察として示した場合：R5は「一部」以下。</div></li>
+                <li><strong>Unchanged AI output</strong> (the log shows no changes, or the draft matches the chat word for word): R1–R4 are scored at most Partial.<div class="bilingual">AIの出力をそのまま提出した場合：R1〜R4は最大「一部」。</div></li>
+            </ul>
         </div>
 
         <div class="section">
             <h2>✅ Submission Requirements / 提出要件</h2>
             <div class="requirement-list">
                 <ul>
-                    <li><strong>File Format:</strong> PDF (preferred)</li>
-                    <li><strong>File Naming:</strong> LastName_FirstName_Week04_Draft.pdf</li>
+                    <li><strong>Where:</strong> the Week 4 assignment in the university LMS</li>
+                    <li><strong>File 1:</strong> LastName_FirstName_Week04_Draft.pdf (PDF preferred)</li>
+                    <li><strong>File 2:</strong> LastName_FirstName_Week04_AILog.pdf (or .txt)</li>
                     <li><strong>Length:</strong> 1 page — this is a draft, not a full report</li>
                     <li><strong>Work style:</strong> individual</li>
                     <li><strong>Due Date:</strong> Before next class session</li>
                     <li><strong>Note:</strong> this draft feeds directly into your Week 5 submission, which completes the persona and adds an accessibility audit</li>
                 </ul>
-                <p class="bilingual">ファイル形式：PDF（推奨）。ファイル名：LastName_FirstName_Week04_Draft.pdf。長さ：1ページ。これは草案であり、完全なレポートではありません。進め方：個人。締め切り：次の授業までに。注：この草案は、第5週の提出物に直接つながります。そこでペルソナを完成させ、アクセシビリティ監査を加えます。</p>
+                <p class="bilingual">提出先：大学のLMS（第4週の課題）。ファイル1：LastName_FirstName_Week04_Draft.pdf（PDF推奨）。ファイル2：LastName_FirstName_Week04_AILog.pdf（または.txt）。長さ：1ページ。これは草案であり、完全なレポートではありません。進め方：個人。締め切り：次の授業までに。注：この草案は、第5週の提出物に直接つながります。そこでペルソナを完成させ、アクセシビリティ監査を加えます。</p>
             </div>
+            <p><strong>Checklist:</strong> paste this into the LMS submission comment box and mark each item [x] (done) or [ ] (not done).</p>
+            <p class="bilingual">チェックリスト：LMSの提出コメント欄に貼り付け、各項目に [x]（済）か [ ]（未）をつけてください。</p>
+            <div class="flow">[ ] File 1 LastName_FirstName_Week04_Draft.pdf — one page
+[ ] File 2 LastName_FirstName_Week04_AILog — Part B + complete chats (or "No AI used")
+[ ] Name and one-line summary
+[ ] 2–3 goals and 2–3 frustrations, all specific
+[ ] Context of use: who, what, where
+[ ] Quote labeled [Interview] or [Assumption]
+[ ] AI disposition: trust, AI experience, default mode and why
+[ ] Every part labeled Interview / Observation / Assumption
+[ ] At least 2 assumptions to check with a real person
+[ ] No real names or identifying details in any file
+[ ] AI tools used: ______________</div>
         </div>
 
         <div class="section">
@@ -149,8 +231,8 @@
             <div class="highlight-box">
                 <p>An AI assistant can help you brainstorm goals and frustrations, or tighten your persona's quote — but the person and the research judgment behind them should be yours.</p>
                 <p class="bilingual">AIアシスタントは、目標や不満をブレインストーミングしたり、ペルソナの引用を整えたりするのに役立ちます。ただし、その人物像と、その背後にある調査上の判断は、あなた自身のものであるべきです。</p>
-                <p><strong>If you use one, log it:</strong> which tool, when, what you asked, what you kept or changed, and how you checked it.</p>
-                <p class="bilingual"><strong>使った場合は記録してください。</strong>どのツールを、いつ、何を尋ねて、何を残し・変更し、どう確認したか。</p>
+                <p><strong>If you use one, log it:</strong> which tool, when, what you asked, what you kept or changed, and how you checked it. Submit the log as File 2, with the complete chats attached.</p>
+                <p class="bilingual"><strong>使った場合は記録してください。</strong>どのツールを、いつ、何を尋ねて、何を残し・変更し、どう確認したか。ログはファイル2として、会話の全文を添付して提出してください。</p>
             </div>
         </div>
 
