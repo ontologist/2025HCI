@@ -1,30 +1,32 @@
 WEEK 5 SUBMISSION TEMPLATE | 第5週 提出テンプレート
 
-Part A becomes File 1 (LastName_FirstName_Week05_Storyboard.pdf, up to 2 pages).
+Part A becomes File 1 (LastName_FirstName_Week05_Storyboards.pdf, up to 2 pages per persona). Repeat Part A once for each persona (2 or 3).
 Part B becomes File 2 (LastName_FirstName_Week05_AILog.pdf or .txt).
 Copy into Word, Google Docs, or slides. Replace everything in [brackets]. Insert the images where shown.
-パートAはファイル1（2ページまで）、パートBはファイル2になります。Word、Googleドキュメント、スライドにコピーし、[ ] の部分を書き換え、指定の場所に画像を入れる。
+パートAはファイル1（ペルソナ1人につき2ページまで）、パートBはファイル2になります。パートAはペルソナごと（2つか3つ）に繰り返す。Word、Googleドキュメント、スライドにコピーし、[ ] の部分を書き換え、指定の場所に画像を入れる。
 
-Evidence labels | 根拠の印 (carried over from your Week 4 persona | 第4週のペルソナから引き継ぐ):
+Evidence labels | 根拠の印 (carried over from your personas | ペルソナから引き継ぐ):
 [Interview] someone told you | 誰かから聞いた
 [Observation] you saw it (including your own behavior) | 自分で見た（自分の行動を含む）
 [Assumption] your guess or the AI's suggestion | 推測やAIの提案
 
 ============================================================
-PART A: STORYBOARD — UP TO 2 PAGES
-ストーリーボード — 2ページまで
+PART A: STORYBOARD [n] OF [N] — UP TO 2 PAGES (REPEAT FOR EACH PERSONA)
+ストーリーボード [n] / [N] — 2ページまで（ペルソナごとに繰り返す）
 ============================================================
 
 PAGE 1 | 1ページ目
 
 Title: [Persona name] — [the goal, in a few words]
-Interface: [the interface from Week 4]
+Interface: [the same interface for all personas]
 Scenario: [1–2 sentences: who, what goal, which interface, where and when]
 
 [Image: persona illustration]
 Caption: AI-generated illustration of a fictional persona ([tool], [date])
 
-Persona at a glance (from Week 4) | ペルソナの要点（第4週から）:
+Persona at a glance | ペルソナの要点:
+Name and one-line summary: [ ]
+Source: [Week 4 persona / new persona written for Week 5]
 Goal used in this story: [ ]
 Frustration used in Panel 4: [ ]
 AI disposition: trust [too much / too little / about right], default mode [direct manipulation / conversation / delegation]
@@ -59,21 +61,24 @@ Assumptions | 仮定:
 Panels that rest mainly on assumptions: [ ]
 The assumption that would change the story most if it were wrong: [ ] → How the story would change: [ ]
 
+(Repeat Part A for the next persona.)
+
 ============================================================
 PART B: AI TRANSPARENCY LOG | AI透明性ログ
 ============================================================
 AI tools and dates: [e.g., ChatGPT, 2026-11-24, storyboard prompt]   (or "No AI used")
 
-What I kept, changed, or rejected from the AI's script and images (at least 3) | AIの台本と画像から残した・変えた・使わなかったこと（3つ以上）
-# | Part (panel, image, caption) | AI's version | I kept / changed it to / rejected | Why
-1 | [ ] | [ ] | [ ] | [ ]
+What I kept, changed, or rejected from the AI's scripts and images (at least 2 per persona) | AIの台本と画像から残した・変えた・使わなかったこと（ペルソナごとに2つ以上）
+# | Persona | Part (panel, image, caption) | AI's version | I kept / changed it to / rejected | Why
+1 | [ ] | [ ] | [ ] | [ ] | [ ]
 2 |
 3 |
+4 |
 
 Stereotype check of the images and script | 画像と台本のステレオタイプ確認:
 [What I looked for, what I found, and what I asked the AI to redraw, or "none found"]
 
-How I checked the storyboard against my Week 4 persona | 第4週のペルソナとの照合方法:
+How I checked each storyboard against its persona | 各ストーリーボードとペルソナの照合方法:
 [ ]
 
 Attached chat (complete, unedited) | 添付した会話（全文、編集なし）:
