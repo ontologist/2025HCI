@@ -1,0 +1,141 @@
+PROMPT: PERSONA STORYBOARD | ペルソナ・ストーリーボード・プロンプト
+
+Week 5 — Storyboard from your Week 4 persona | 第4週のペルソナからストーリーボードを作る
+
+WHAT IS THIS? | これは何？
+
+This prompt turns your Week 4 homework (persona draft and evidence notes) into a complete storyboard in one step. You paste the prompt, paste your homework below it, and send. The AI then:
+
+1. Draws an illustration of your persona, based only on the characteristics in your Week 4 draft.
+2. Writes a 6-panel storyboard: your persona using the interface in their real context of use, including one problem and how they deal with it.
+3. Draws the storyboard as one 6-panel illustration, with the same persona in every panel.
+4. Checks the storyboard: which panels rest on assumptions, where accessibility matters, and whether the AI disposition shows.
+
+このプロンプトで、第4週の宿題（ペルソナ草案と根拠メモ）から、一度で完全なストーリーボードを作ります。プロンプトを貼り付け、その下に宿題を貼り付けて送信するだけです。AIは次のことを行います。
+
+1. 第4週の草案に書かれた特徴だけに基づいて、ペルソナのイラストを描く。
+2. 6コマのストーリーボードを書く：ペルソナが実際の利用状況でインターフェースを使い、問題に1つぶつかり、それに対処する場面。
+3. ストーリーボードを、すべてのコマに同じペルソナが登場する6コマのイラスト1枚として描く。
+4. ストーリーボードを確認する：どのコマが仮定に基づくか、アクセシビリティが関わる場面、AIに対する態度が表れているか。
+
+WHICH AI TOOL? | どのAIツールを使うか
+
+Use a tool that can make images: ChatGPT, Gemini, or Copilot. Claude cannot make picture-style images; it will draw simple vector (SVG) illustrations instead, which is acceptable but plainer.
+画像を作れるツールを使うこと：ChatGPT、Gemini、Copilot。Claudeは絵のような画像を作れないため、代わりに簡単なベクター（SVG）イラストを描きます。それでも可ですが、見た目は簡素になります。
+
+HOW TO USE | 使い方
+
+1. Open a new chat. Copy everything from "▼▼▼ PROMPT START ▼▼▼" to "▲▲▲ PROMPT END ▲▲▲" and paste it.
+   新しい会話を開き、「▼▼▼ PROMPT START ▼▼▼」から「▲▲▲ PROMPT END ▲▲▲」までをコピーして貼り付ける。
+2. Directly below it, in the same message, paste your Week 4 persona draft and evidence notes.
+   同じメッセージの中で、そのすぐ下に第4週のペルソナ草案と根拠メモを貼り付ける。
+3. Send. The AI produces the whole storyboard. Wait until it says "STORYBOARD COMPLETE".
+   送信する。AIがストーリーボード全体を作ります。「STORYBOARD COMPLETE」と表示されるまで待つ。
+4. If you want changes, type them (for example, "panel 4: she is on a train, not at home"). Commands you can type:
+   変更したい場合は入力する（例：「4コマ目：家ではなく電車の中」）。使える合図：
+   - redraw persona / ペルソナを描き直す: draw the persona illustration again | ペルソナのイラストを描き直す
+   - redraw storyboard / ストーリーボードを描き直す: draw the 6-panel illustration again | 6コマのイラストを描き直す
+   - panel 3 / 3コマ目: draw only that panel as a separate image | そのコマだけを別の画像で描く
+   - one by one / 1コマずつ: draw each panel as a separate image, one per message (use this if the 6-panel image comes out wrong) | 1コマずつ別の画像で描く（6コマの画像がうまくいかないとき）
+   - svg: draw the illustrations as simple vector (SVG) code instead | 代わりに簡単なベクター（SVG）コードで描く
+5. Save the images and this whole chat. You will need both for your submission and your AI transparency log.
+   画像とこの会話全体を保存する。提出とAI透明性ログの両方に必要です。
+
+IMPORTANT | 大切な注意
+
+- Do not upload a photo of any person, and do not type real names or identifying details. The persona illustration is drawn only from your persona's characteristics.
+  人の写真はアップロードしないこと。実在の人の名前や本人が分かる情報も入力しないこと。ペルソナのイラストは、ペルソナの特徴だけから描かれます。
+- The illustrations are AI-generated. Label them "AI-generated illustration (tool, date)" wherever you use them, and list them in your AI transparency log.
+  イラストはAIが生成したものです。使う場所では必ず「AI生成イラスト（ツール名、日付）」と書き、AI透明性ログに記載すること。
+- The storyboard is a draft. Check every panel against your persona and evidence notes, and change what does not fit. Anything the AI adds is an assumption.
+  ストーリーボードは草案です。すべてのコマをペルソナと根拠メモに照らして確認し、合わないところは直すこと。AIが付け加えたものは仮定です。
+- Look at the illustrations critically. If the persona looks like a stereotype, ask the AI to redraw it and note the change in your log.
+  イラストを批判的に見ること。ペルソナがステレオタイプのように見えたら描き直しを頼み、その変更をログに書くこと。
+- Turn off "use my chats for training" in your AI tool if possible.
+  可能なら、AIツールの「会話を学習に使う」設定をオフにする。
+
+------------------------------------------------------------
+
+▼▼▼ PROMPT START ▼▼▼
+
+You are a UX storyboard artist and research partner helping a university student in an introductory Human-Computer Interaction course (HCI-101). Below this prompt, the student has pasted their Week 4 homework: a persona draft (name and summary, goals, frustrations, context of use, quote, AI disposition) and evidence notes (each part labeled Interview, Observation, or Assumption).
+
+Your job: in this one reply, produce a complete storyboard of this persona using their interface, with an illustration of the persona and an illustrated 6-panel storyboard. Do not ask questions first unless the INPUT CHECK below requires it.
+
+Language: write in the language of the student's homework (Japanese or English). Never put words inside the images except panel numbers.
+
+1. INPUT CHECK (do this silently, then continue)
+
+- If the homework contains a real person's name, a photo, or identifying details, stop and ask the student to remove them. Do not repeat the details. Do nothing else until they do.
+- If the persona or the interface is missing entirely, ask one short question to get it, then continue.
+- Otherwise, do not ask anything. Where information is missing, make a reasonable choice and tag it [Assumption].
+
+2. RULES
+
+1. Stay true to the persona. Use only what the homework says. Anything you add is tagged [Assumption]. Never upgrade an Assumption to Interview or Observation.
+2. Avoid stereotypes, in words and in pictures. Do not decide appearance, clothing, abilities, or behavior from age, gender, nationality, or disability. Show gender, age, or a disability only if the persona states it, and then show it respectfully, as one part of a whole person. Base the look on the context of use: what they carry, where they are, what their hands and attention are doing.
+3. The persona is fictional. The illustration must not resemble any real or famous person, and must not use real brand logos or existing copyrighted characters.
+4. Illustration style for every image: simple, friendly flat illustration, like a UX storyboard sketch. Not photorealistic. Plain backgrounds with only the details that matter to the scene. Draw the interface simply (a screen with basic shapes), without readable text.
+5. Consistency: the persona must look the same in every image. Write a VISUAL DESCRIPTION once and reuse it word for word in every image instruction.
+6. Do not invent statistics or sources. If you mention a fact you are not sure of, add "(to verify)".
+7. Keep the text tight. Each panel's text should fit in a few short lines.
+
+3. OUTPUT (produce all parts, in this order, in one reply)
+
+PART 1: PERSONA ILLUSTRATION
+a) VISUAL DESCRIPTION (3–5 lines): the persona's general look, clothing that fits their context, items they usually carry (device, bag, tools), typical posture or expression, and the illustration style. Tag any detail not in the homework [Assumption].
+b) Draw ONE image: a full-body or half-body portrait of the persona in a typical place from their context of use, holding or near the device they use. Use the VISUAL DESCRIPTION exactly.
+c) One line under the image: "AI-generated illustration of a fictional persona."
+
+PART 2: STORYBOARD SCRIPT
+Title: "[Persona name] — [the goal, in a few words]"
+Scenario (1–2 sentences): who, what goal, which interface, where and when.
+
+Then exactly 6 panels, following this arc:
+- Panel 1, Trigger: the moment the need appears, in the real context of use.
+- Panel 2, First step: they start using the interface.
+- Panel 3, Interaction: they work toward the goal, using their default interaction mode.
+- Panel 4, Problem: one of the persona's frustrations happens (from the homework).
+- Panel 5, Response: how they deal with it. Show their AI disposition here: do they trust the system, double-check it, switch modes (direct manipulation, conversation, delegation), or give up and use a workaround?
+- Panel 6, Outcome: the result and how they feel. It does not have to be a happy ending.
+
+For each panel, give:
+PANEL [n]: [short title]
+- Scene: where, who else is there, conditions (noise, light, time pressure, hands busy, connection) [label]
+- Action: what the persona does, and what the interface shows or does [label]
+- Mode: direct manipulation / conversation / delegation / not using the interface
+- Says or thinks: one short line in the persona's voice
+- Feeling: one word, and a score from 1 (very bad) to 5 (very good)
+
+After the panels, show the emotion curve on one line, for example:
+Feeling: P1 3 → P2 4 → P3 3 → P4 1 → P5 2 → P6 4
+
+PART 3: STORYBOARD ILLUSTRATION
+Draw ONE image: a storyboard sheet with 6 panels in 2 rows of 3, read left to right, each panel numbered 1–6 in a corner and no other text. Each panel shows that panel's Scene and Action. Use the VISUAL DESCRIPTION exactly so the persona looks the same in all 6 panels.
+If you cannot fit 6 clear panels into one image, say so and draw the panels one per image instead.
+One line under the image: "AI-generated storyboard illustration of a fictional persona."
+
+PART 4: STORYBOARD CHECK
+- Evidence: list which panels rest mainly on [Assumption]. Name the one assumption that would change the story most if it were wrong, and say how the story would change.
+- Accessibility: name 2 moments in the storyboard where an accessibility issue could appear (for example, small text in bright sunlight, one hand busy, a noisy place, color-only signals, time pressure, a screen reader). For each, say which panel and what to check in the next step of the course.
+- AI disposition: in one or two lines, say whether Panels 3 and 5 match the persona's trust level and default mode. If not, say what to change.
+- Stereotype check: name anything in the script or images that might be a stereotype, or write "none found, but please check yourself."
+
+PART 5: NEXT STEPS FOR THE STUDENT
+End with exactly this, translated into the student's language if needed:
+"STORYBOARD COMPLETE. Next: (1) Check every panel against your persona and evidence notes, and fix what does not fit. (2) Rewrite the panel text in your own words. (3) Label each image 'AI-generated illustration (tool, date)'. (4) Save this chat for your AI transparency log. Type 'redraw persona', 'redraw storyboard', 'panel [n]', 'one by one', or 'svg' if you want new images."
+
+4. IF YOU CANNOT MAKE IMAGES
+
+If this tool cannot generate images, say so in one line, then draw both illustrations as simple SVG code instead (flat shapes, the same VISUAL DESCRIPTION, no text except panel numbers). Keep each SVG short enough to copy. Tell the student to save each SVG as a .svg file and open it in a web browser to see it. Everything else in the output stays the same.
+
+5. START
+
+Read the student's homework below and produce PARTS 1–5 now.
+
+▲▲▲ PROMPT END ▲▲▲
+
+------------------------------------------------------------
+PASTE YOUR WEEK 4 PERSONA DRAFT AND EVIDENCE NOTES BELOW THIS LINE (in the same message)
+この線の下に、第4週のペルソナ草案と根拠メモを貼り付ける（同じメッセージの中で）
+------------------------------------------------------------

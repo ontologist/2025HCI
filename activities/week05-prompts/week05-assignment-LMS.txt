@@ -1,0 +1,130 @@
+WEEK 5 ASSIGNMENT: PERSONA STORYBOARD
+第5週課題：ペルソナ・ストーリーボード
+
+HCI-101 Introduction to Human-Computer Interaction | Points: 10 | 配点：10点
+Due: [DATE, TIME] (before the next class) | 締切：[日付・時刻]（次の授業まで）
+Submit: this assignment in the LMS (2 files) | 提出：LMSのこの課題から（2ファイル）
+Work style: individual | 進め方：個人
+
+------------------------------------------------------------
+1. OVERVIEW | 概要
+------------------------------------------------------------
+
+Turn your Week 4 persona into a 6-panel storyboard: your persona using the interface in their context of use, running into one of their frustrations, and dealing with it. The storyboard shows how the persona's interaction mode and AI disposition shape the experience, and where accessibility issues could appear.
+
+In class you used the storyboard prompt. It draws an illustration of your persona from the Week 4 characteristics (no photos of real people), writes the 6 panels, and draws them as one storyboard image.
+
+The AI's output is a draft. What you submit must be your own version: checked against your persona, corrected, and with the panel text written in your own words.
+
+第4週のペルソナを、6コマのストーリーボードにします。ペルソナが利用状況の中でインターフェースを使い、不満の1つにぶつかり、それに対処する場面です。ストーリーボードでは、ペルソナのインタラクションモードとAIに対する態度が体験をどう形作るか、またアクセシビリティの問題がどこで起こりうるかを示します。
+
+授業ではストーリーボード・プロンプトを使いました。第4週の特徴からペルソナのイラストを描き（実在の人の写真は使わない）、6コマを書き、1枚のストーリーボード画像として描きます。
+
+AIの出力は下書きです。提出するのは、ペルソナと照らし合わせて確認・修正し、コマの説明を自分の言葉で書き直したものです。
+
+------------------------------------------------------------
+2. WHAT TO SUBMIT (2 FILES) | 提出するもの（2ファイル）
+------------------------------------------------------------
+
+File 1: Storyboard (PDF, up to 2 pages) | ストーリーボード（PDF、2ページまで）
+   Name: LastName_FirstName_Week05_Storyboard.pdf
+   Use the template "week05-submission-template.txt" (Part A). English or Japanese is fine.
+   テンプレート「week05-submission-template.txt」（パートA）を使う。英語でも日本語でもよい。
+   Required parts | 必須の要素:
+   - Title, interface, and a 1–2 sentence scenario | タイトル、インターフェース、1〜2文のシナリオ
+   - Persona illustration, labeled "AI-generated illustration (tool, date)" | ペルソナのイラスト（「AI生成イラスト（ツール名、日付）」と表示）
+   - 6-panel storyboard illustration, labeled the same way | 6コマのストーリーボードのイラスト（同様に表示）
+   - Panel text in your own words: scene, action, mode, a line in the persona's voice, feeling (1–5), with evidence labels | 自分の言葉によるコマの説明：場面、行動、モード、ペルソナのセリフ、感情（1〜5）、根拠の印
+   - Feeling curve | 感情の流れ
+   - 2 accessibility moments: which panel, the possible issue, what to check | アクセシビリティが関わる場面2つ：どのコマか、起こりうる問題、確認すること
+   - Assumptions: which panels rest mainly on assumptions | 仮定：主に仮定に基づくコマ
+
+File 2: AI Transparency Log (PDF or TXT) | AI透明性ログ（PDFまたはTXT）
+   Name: LastName_FirstName_Week05_AILog.pdf (or .txt)
+   Use the template (Part B), including the stereotype check, then attach the complete, unedited chat, starting with this header line:
+     === STORYBOARD CHAT — AI tool: ___ — date: ___ ===
+   If you did not use AI at all, submit Part B with "No AI used" and draw the storyboard yourself.
+   テンプレート（パートB、ステレオタイプ確認を含む）を使い、会話の全文を編集せずに添付する（上の見出し行をつける）。AIを使わなかった場合は、パートBに「AI不使用」と書き、ストーリーボードは自分で描く。
+
+In the LMS submission comment box, paste the checklist in Section 4, with each item marked [x] (done) or [ ] (not done).
+LMSの提出コメント欄に、4章のチェックリストを貼り付け、各項目に [x]（済）か [ ]（未）をつける。
+
+------------------------------------------------------------
+3. RUBRIC (10 POINTS) | 評価基準（10点）
+------------------------------------------------------------
+
+Each row is scored Full, Partial, or Missing. Assumptions do not lose points if they are clearly labeled.
+各行を「満点／一部／なし」で評価します。仮定は明確に印をつけていれば減点しません。
+
+R1  Faithful to the persona — 2 points
+    Full (2): the illustration and panels match the Week 4 persona's context of use, goals, and frustrations; Panel 4 uses one of the persona's frustrations; evidence labels are carried over, and the panels that rest on assumptions are listed.
+    Partial (1): the story drifts from the persona in places, or labels are missing.
+    Missing (0): the storyboard is not based on the Week 4 persona.
+
+R2  Story arc and panel detail — 2 points
+    Full (2): 6 panels that follow trigger, first step, interaction, problem, response, outcome; each scene is specific (place, conditions, what the hands and attention are doing); a feeling curve that matches the story.
+    Partial (1): panels missing or out of order, scenes generic, or no feeling curve.
+    Missing (0): no storyboard.
+
+R3  Interaction mode and AI disposition — 2 points
+    Full (2): every panel names its interaction mode (direct manipulation, conversation, delegation, or not using the interface); Panels 3 and 5 match the persona's trust level and default mode, or the change is explained.
+    Partial (1): modes missing in some panels, or Panels 3 and 5 do not reflect the AI disposition.
+    Missing (0): no interaction modes or AI disposition.
+
+R4  Accessibility moments — 1 point
+    Full (1): 2 moments, each with the panel, the possible issue (for example, glare, one hand busy, noise, color-only signals, time pressure), and what to check.
+    Partial (0.5): only one moment, or no panel or check named.
+    Missing (0): none.
+
+R5  Your own version — 2 points
+    Full (2): panel text rewritten in your own words; at least 3 specific changes to the AI's script or images; images checked for stereotypes; every image labeled "AI-generated illustration (tool, date)".
+    Partial (1): few changes, no stereotype check, or images unlabeled.
+    Missing (0): AI output submitted as is.
+
+R6  AI transparency log — 1 point
+    Full (1): tool and date; complete chat attached; the changes and the stereotype check described; how you checked the storyboard against your persona. (Or "No AI used.")
+    Partial (0.5): chat missing, or changes vague.
+    Missing (0): AI used but no log.
+
+Deductions | 減点
+- A photo of a real person, or real names or identifying details, in any file (including the chat): −1, and you will be asked to resubmit.
+  いずれかのファイル（会話を含む）に、実在の人の写真、名前、個人が分かる情報がある場合：−1（再提出を求めます）。
+- Storyboard submitted as AI output with no changes (log does not show changes, or the panel text matches the chat word for word): R1–R3 are scored at most Partial.
+  AIの出力をそのまま提出した場合（ログに変更点がない、またはコマの説明が会話と一字一句同じ）：R1〜R3は最大でも「一部」。
+- A stereotyped image kept without comment in the log: R5 is scored Partial or lower.
+  ステレオタイプ的な画像を、ログで触れずにそのまま使った場合：R5は「一部」以下。
+
+------------------------------------------------------------
+4. SUBMISSION CHECKLIST (PASTE INTO THE LMS COMMENT BOX)
+   提出チェックリスト（LMSのコメント欄に貼り付け）
+------------------------------------------------------------
+
+[ ] File 1 LastName_FirstName_Week05_Storyboard.pdf — up to 2 pages
+[ ] File 2 LastName_FirstName_Week05_AILog — Part B + complete chat (or "No AI used")
+[ ] Title, interface, and scenario
+[ ] Persona illustration, labeled AI-generated (tool, date)
+[ ] 6-panel storyboard illustration, labeled AI-generated (tool, date)
+[ ] 6 panels: trigger, first step, interaction, problem, response, outcome
+[ ] Panel text in my own words, with evidence labels
+[ ] Interaction mode in every panel; Panels 3 and 5 match the AI disposition
+[ ] Feeling curve
+[ ] 2 accessibility moments, with panel and what to check
+[ ] Panels that rest on assumptions listed
+[ ] Images checked for stereotypes
+[ ] No photos of real people, no real names or identifying details
+[ ] AI tools used: ______________
+
+------------------------------------------------------------
+5. RULES FOR AI USE | AI利用のルール
+------------------------------------------------------------
+
+- Use an AI tool that can make images (ChatGPT, Gemini, or Copilot). Claude draws simple vector (SVG) illustrations instead, which is also acceptable.
+  画像を作れるAIツール（ChatGPT、Gemini、Copilot）を使う。Claudeは代わりに簡単なベクター（SVG）イラストを描きます。それでも可。
+- Never upload a photo of any person. The persona illustration must come only from your persona's characteristics.
+  人の写真は絶対にアップロードしない。ペルソナのイラストは、ペルソナの特徴だけから作ること。
+- AI images can contain stereotypes, and AI text can contain errors and invented details. Anything the AI added is an Assumption. Check every panel and image.
+  AIの画像にはステレオタイプが、AIの文章には誤りや作られた詳細が含まれることがある。AIが付け加えたものは「仮定」。すべてのコマと画像を確認すること。
+- AI is a tool, not an author. Label every AI-generated image and disclose all AI use in File 2.
+  AIは道具であり、著者ではない。AIが生成した画像にはすべて表示をつけ、AIの利用はファイル2ですべて開示する。
+- Turn off "use my chats for training" in your AI tool if possible.
+  可能なら、AIツールの「会話を学習に使う」設定をオフにする。

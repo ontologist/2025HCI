@@ -1,0 +1,81 @@
+WEEK 5 SUBMISSION TEMPLATE | 第5週 提出テンプレート
+
+Part A becomes File 1 (LastName_FirstName_Week05_Storyboard.pdf, up to 2 pages).
+Part B becomes File 2 (LastName_FirstName_Week05_AILog.pdf or .txt).
+Copy into Word, Google Docs, or slides. Replace everything in [brackets]. Insert the images where shown.
+パートAはファイル1（2ページまで）、パートBはファイル2になります。Word、Googleドキュメント、スライドにコピーし、[ ] の部分を書き換え、指定の場所に画像を入れる。
+
+Evidence labels | 根拠の印 (carried over from your Week 4 persona | 第4週のペルソナから引き継ぐ):
+[Interview] someone told you | 誰かから聞いた
+[Observation] you saw it (including your own behavior) | 自分で見た（自分の行動を含む）
+[Assumption] your guess or the AI's suggestion | 推測やAIの提案
+
+============================================================
+PART A: STORYBOARD — UP TO 2 PAGES
+ストーリーボード — 2ページまで
+============================================================
+
+PAGE 1 | 1ページ目
+
+Title: [Persona name] — [the goal, in a few words]
+Interface: [the interface from Week 4]
+Scenario: [1–2 sentences: who, what goal, which interface, where and when]
+
+[Image: persona illustration]
+Caption: AI-generated illustration of a fictional persona ([tool], [date])
+
+Persona at a glance (from Week 4) | ペルソナの要点（第4週から）:
+Goal used in this story: [ ]
+Frustration used in Panel 4: [ ]
+AI disposition: trust [too much / too little / about right], default mode [direct manipulation / conversation / delegation]
+
+PAGE 2 | 2ページ目
+
+[Image: 6-panel storyboard illustration, or 6 separate panel images]
+Caption: AI-generated storyboard illustration ([tool], [date])
+
+Panel text, in your own words | コマの説明（自分の言葉で）:
+
+PANEL 1, Trigger: [short title]
+Scene: [ ] [label]
+Action: [ ] [label]
+Mode: [direct manipulation / conversation / delegation / not using the interface]
+Says or thinks: "[ ]"
+Feeling: [word] ([1–5])
+
+PANEL 2, First step: [same fields]
+PANEL 3, Interaction: [same fields]
+PANEL 4, Problem: [same fields]
+PANEL 5, Response: [same fields]
+PANEL 6, Outcome: [same fields]
+
+Feeling curve | 感情の流れ: P1 [ ] → P2 [ ] → P3 [ ] → P4 [ ] → P5 [ ] → P6 [ ]
+
+Accessibility moments | アクセシビリティが関わる場面:
+1. Panel [n]: [the possible issue] → What to check: [ ]
+2. Panel [n]: [the possible issue] → What to check: [ ]
+
+Assumptions | 仮定:
+Panels that rest mainly on assumptions: [ ]
+The assumption that would change the story most if it were wrong: [ ] → How the story would change: [ ]
+
+============================================================
+PART B: AI TRANSPARENCY LOG | AI透明性ログ
+============================================================
+AI tools and dates: [e.g., ChatGPT, 2026-11-24, storyboard prompt]   (or "No AI used")
+
+What I kept, changed, or rejected from the AI's script and images (at least 3) | AIの台本と画像から残した・変えた・使わなかったこと（3つ以上）
+# | Part (panel, image, caption) | AI's version | I kept / changed it to / rejected | Why
+1 | [ ] | [ ] | [ ] | [ ]
+2 |
+3 |
+
+Stereotype check of the images and script | 画像と台本のステレオタイプ確認:
+[What I looked for, what I found, and what I asked the AI to redraw, or "none found"]
+
+How I checked the storyboard against my Week 4 persona | 第4週のペルソナとの照合方法:
+[ ]
+
+Attached chat (complete, unedited) | 添付した会話（全文、編集なし）:
+=== STORYBOARD CHAT — AI tool: ___ — date: ___ ===
+[paste]

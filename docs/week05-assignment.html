@@ -18,13 +18,24 @@
         .section h2 { color: #2a76dd; border-bottom: 3px solid #2a76dd; padding-bottom: 10px; margin-top: 0; }
         .section h3 { color: #7c3aed; margin-top: 25px; }
         .deliverable-box { background: #f0f7ff; border-left: 4px solid #2a76dd; padding: 20px; margin: 20px 0; border-radius: 5px; }
-        .requirement-list { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 15px 0; }
-        .requirement-list li { margin: 10px 0; }
+        .requirement-list { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 15px 0; overflow-wrap: anywhere; }
+        .requirement-list li { margin: 10px 0; overflow-wrap: anywhere; }
+        .stage-box { background: #fff; border: 2px solid #7c3aed; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .highlight-box { background: #fff3cd; border: 2px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
+        .draft-banner { background: #fde68a; border: 2px solid #d97706; padding: 15px; border-radius: 5px; margin: 20px 0; font-weight: 600; }
         .grading-rubric { width: 100%; border-collapse: collapse; margin: 20px 0; }
         .grading-rubric th { background: #2a76dd; color: white; padding: 12px; text-align: left; }
-        .grading-rubric td { padding: 12px; border: 1px solid #ddd; }
+        .grading-rubric td { padding: 12px; border: 1px solid #ddd; vertical-align: top; }
         .grading-rubric tr:nth-child(even) { background: #f8f9fa; }
-        .bilingual { color: #7c3aed; font-style: italic; margin-top: 5px; }
+        .table-wrap { overflow-x: auto; }
+        .file-list li { margin: 10px 0; }
+        .file-list a { color: #2a76dd; font-weight: bold; }
+        .flow { background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; white-space: pre-wrap; font-size: 0.95em; }
+        .panel-arc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 15px 0; }
+        .panel-arc div { border: 2px solid #2a76dd; border-radius: 5px; padding: 10px; background: #f0f7ff; }
+        .panel-arc strong { color: #2a76dd; }
+        @media (max-width: 600px) { .grading-rubric { font-size: 0.85em; } .grading-rubric th, .grading-rubric td { padding: 8px; } .panel-arc { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
 <body>
@@ -38,140 +49,220 @@
 
     <main>
         <div class="assignment-header">
-            <h1>Week 5: Mobile Interface Sketching Assignment</h1>
-            <p class="subtitle">Applying Mobile-First Design Principles</p>
-            <p class="bilingual">第5週：モバイルインターフェーススケッチ課題 - モバイルファーストデザイン原則の適用</p>
+            <h1>Week 5: Persona Storyboard</h1>
+            <p class="subtitle">Your Week 4 Persona, in Their Context of Use</p>
+            <p class="bilingual">第5週：ペルソナ・ストーリーボード — 第4週のペルソナを、その利用状況の中で描く</p>
+        </div>
+
+        <div class="draft-banner">
+            🎬 This assignment builds on your Week 4 persona draft. Have your persona draft and evidence notes ready before class.
+            <div class="bilingual" style="font-weight: normal; margin-top: 8px;">この課題は、第4週のペルソナ草案に基づきます。授業の前に、ペルソナ草案と根拠メモを用意しておいてください。</div>
         </div>
 
         <div class="section">
             <h2>📋 Assignment Overview / 課題概要</h2>
-            <p>Create low-fidelity wireframe sketches for 3-5 key screens of your mobile interface, applying mobile-first design principles. Focus on touch targets, content prioritization, and mobile navigation patterns.</p>
-            <p class="bilingual">モバイルインターフェースの3-5つの主要画面のロー忠実度ワイヤーフレームスケッチを作成し、モバイルファーストデザイン原則を適用します。</p>
+            <p>In this assignment, you'll turn your Week 4 persona into a 6-panel storyboard: your persona using the interface in their context of use, running into one of their frustrations, and dealing with it. A storyboard shows what a persona alone can't: how the experience unfolds over time, where the interaction mode and AI disposition make a difference, and where accessibility issues could appear.</p>
+            <p class="bilingual">この課題では、第4週のペルソナを6コマのストーリーボードにします。ペルソナが利用状況の中でインターフェースを使い、不満の1つにぶつかり、それに対処する場面です。ストーリーボードは、ペルソナだけでは分からないことを示します。体験が時間とともにどう進むか、インタラクションモードとAIに対する態度がどこで違いを生むか、そしてアクセシビリティの問題がどこで起こりうるかです。</p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Learning Objectives / 学習目標</h2>
+            <ul>
+                <li>Use a storyboard to show a persona's context of use (who, what, where) as a sequence over time</li>
+                <li>Show where the three interaction modes (direct manipulation, conversation, delegation) and the persona's AI disposition shape the experience</li>
+                <li>Identify moments in a story where accessibility issues could appear</li>
+                <li>Critically evaluate AI-generated text and images for fidelity to the persona and for stereotypes</li>
+            </ul>
+            <p class="bilingual">ストーリーボードを使い、ペルソナの利用状況（誰が・何を・どこで）を時間の流れとして示す。3つのインタラクションモード（直接操作、会話、委任）とペルソナのAIに対する態度が、体験をどこで形作るかを示す。物語の中で、アクセシビリティの問題が起こりうる場面を見つける。AIが生成した文章と画像を、ペルソナへの忠実さとステレオタイプの観点から批判的に評価する。</p>
         </div>
 
         <div class="section">
             <h2>📝 Activity Description / アクティビティ説明</h2>
 
-            <h3>Step 1: Screen Planning (計画)</h3>
-            <ul>
-                <li>Review your personas and requirements</li>
-                <li>Identify 3-5 essential screens for your primary user flow</li>
-                <li>Consider: Home/Dashboard, Main task screens, Key interaction points</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 1: Get Your Week 4 Persona Ready (第4週のペルソナの準備)</h3>
+                <ul>
+                    <li>Copy the text of your Week 4 persona draft and evidence notes</li>
+                    <li>Make sure it contains no real names or identifying details</li>
+                    <li>Do not upload any photo of a person. The persona illustration will be drawn from the persona's characteristics only</li>
+                </ul>
+                <p class="bilingual">第4週のペルソナ草案と根拠メモの文章をコピーする。実在の人の名前や個人が分かる情報が含まれていないことを確認する。人の写真はアップロードしないこと。ペルソナのイラストは、ペルソナの特徴だけから描かれます。</p>
+            </div>
 
-            <h3>Step 2: Create Sketches (スケッチ)</h3>
-            <ul>
-                <li>Sketch each screen on paper or digitally</li>
-                <li>Use mobile device frame (e.g., iPhone dimensions)</li>
-                <li>Apply mobile-first principles:
-                    <ul>
-                        <li>Prioritize critical content</li>
-                        <li>Touch targets minimum 44×44px</li>
-                        <li>Use appropriate mobile patterns (tab bars, cards, etc.)</li>
-                        <li>Consider thumb-friendly zones</li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 2: Run the Storyboard Prompt (プロンプトの実行)</h3>
+                <ul>
+                    <li>Paste the prompt and your persona into one message and send. The AI produces the whole storyboard in one reply</li>
+                    <li>You get a persona illustration, a 6-panel script, a 6-panel storyboard illustration, and a storyboard check</li>
+                </ul>
+                <div class="panel-arc">
+                    <div><strong>1 Trigger</strong><br>the need appears</div>
+                    <div><strong>2 First step</strong><br>they start using the interface</div>
+                    <div><strong>3 Interaction</strong><br>their default mode</div>
+                    <div><strong>4 Problem</strong><br>one of their frustrations</div>
+                    <div><strong>5 Response</strong><br>their AI disposition shows</div>
+                    <div><strong>6 Outcome</strong><br>result and feeling</div>
+                </div>
+                <p class="bilingual">プロンプトとペルソナを1つのメッセージに貼り付けて送信する。AIが1回の返答でストーリーボード全体を作ります。ペルソナのイラスト、6コマの台本、6コマのストーリーボードのイラスト、ストーリーボードの確認ができます。（1 きっかけ、2 最初の一歩、3 操作、4 問題、5 対応、6 結果）</p>
+            </div>
 
-            <h3>Step 3: Annotate Designs (注釈)</h3>
-            <ul>
-                <li>Add notes explaining design decisions</li>
-                <li>Label interactive elements</li>
-                <li>Indicate navigation flow</li>
-                <li>Connect sketches to persona goals</li>
-            </ul>
+            <div class="stage-box">
+                <h3>Step 3: Check the Panels and Images (コマと画像の確認)</h3>
+                <ul>
+                    <li>Does every panel match your persona's context of use, goals, and frustrations?</li>
+                    <li>Do Panels 3 and 5 match the persona's trust level and default interaction mode?</li>
+                    <li>Do the images look like a stereotype? If so, ask the AI to redraw them (type <code>redraw persona</code>, <code>redraw storyboard</code>, or <code>panel 3</code>)</li>
+                </ul>
+                <p class="bilingual">すべてのコマが、ペルソナの利用状況・目標・不満に合っているか。3コマ目と5コマ目は、ペルソナの信頼の程度とデフォルトのインタラクションモードに合っているか。画像がステレオタイプのように見えないか。そう見えたら、AIに描き直しを頼む。</p>
+            </div>
+
+            <div class="stage-box">
+                <h3>Step 4: Make It Your Own (自分のものにする)</h3>
+                <ul>
+                    <li>Rewrite the panel text in your own words</li>
+                    <li>Keep the 2 accessibility moments: which panel, the possible issue, and what to check</li>
+                    <li>Label every image "AI-generated illustration (tool, date)" and put everything into the template</li>
+                </ul>
+                <p class="bilingual">コマの説明を自分の言葉で書き直す。アクセシビリティが関わる場面2つ（どのコマか、起こりうる問題、確認すること）を残す。すべての画像に「AI生成イラスト（ツール名、日付）」と表示し、テンプレートにまとめる。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🤖 In-Class AI Prompt / 授業で使うAIプロンプト</h2>
+            <p>Use an AI tool that can make images: <strong>ChatGPT, Gemini, or Copilot</strong>. (Claude can't make picture-style images; it draws simple vector illustrations instead, which is also acceptable.) Open a <strong>new chat</strong>, paste everything from <strong>▼▼▼ PROMPT START ▼▼▼</strong> to <strong>▲▲▲ PROMPT END ▲▲▲</strong>, paste your Week 4 persona draft and evidence notes directly below it in the same message, and send.</p>
+            <p class="bilingual">画像を作れるAIツール（<strong>ChatGPT、Gemini、Copilot</strong>）を使います。（Claudeは絵のような画像を作れないため、代わりに簡単なベクターイラストを描きます。それでも可。）<strong>新しい会話</strong>を開き、「▼▼▼ PROMPT START ▼▼▼」から「▲▲▲ PROMPT END ▲▲▲」までを貼り付け、同じメッセージの中で、そのすぐ下に第4週のペルソナ草案と根拠メモを貼り付けて送信します。</p>
+            <div class="requirement-list">
+                <ul class="file-list">
+                    <li><a href="week05-prompts/01-storyboard-prompt.txt" download>Storyboard Prompt</a> (about 20–30 min, including checking) — produces a <strong>persona illustration</strong>, a <strong>6-panel storyboard</strong> script and illustration, and a <strong>storyboard check</strong> (assumptions, accessibility moments, AI disposition, stereotypes).
+                        <div class="bilingual">ペルソナのイラスト、6コマのストーリーボード（台本とイラスト）、ストーリーボードの確認（仮定、アクセシビリティ、AIに対する態度、ステレオタイプ）を作ります。</div></li>
+                    <li><a href="week05-prompts/week05-submission-template.txt" download>Submission Template</a> — Part A: the storyboard (up to 2 pages). Part B: the AI transparency log.
+                        <div class="bilingual">提出テンプレート：パートA（ストーリーボード、2ページまで）、パートB（AI透明性ログ）。</div></li>
+                </ul>
+            </div>
+            <div class="flow">Week 4 persona draft + evidence notes → Storyboard Prompt → persona illustration + 6-panel storyboard + check
+→ you check, correct, and rewrite → File 1 (storyboard) + File 2 (AI log)</div>
+            <div class="highlight-box">
+                <p><strong>AI output is a draft, and anything the AI adds is an Assumption.</strong> Never upload a photo of a person, and don't type real names or identifying details. AI images can contain stereotypes, so look at them critically and ask for a redraw when needed.</p>
+                <p class="bilingual">AIの出力は下書きで、AIが付け加えたものはすべて「仮定」です。人の写真は絶対にアップロードせず、実在の人の名前や個人が分かる情報も入力しないこと。AIの画像にはステレオタイプが含まれることがあるので、批判的に見て、必要なら描き直しを頼んでください。</p>
+            </div>
         </div>
 
         <div class="section">
             <h2>📦 Deliverables / 提出物</h2>
             <div class="deliverable-box">
-                <h3>Mobile Wireframe Sketches</h3>
-                <p><strong>Format:</strong> PDF document with photos/scans of sketches or digital sketches</p>
-
+                <h3>File 1: Storyboard</h3>
+                <p><strong>Format:</strong> PDF document (up to 2 pages) or up to 2 slides</p>
                 <div class="requirement-list">
                     <strong>Required Components:</strong>
                     <ul>
-                        <li><strong>3-5 Screen Sketches:</strong> Each showing mobile interface layout</li>
-                        <li><strong>Annotations:</strong> Design rationale and element labels</li>
-                        <li><strong>Navigation Flow:</strong> Arrows or diagram showing screen connections</li>
-                        <li><strong>Design Checklist:</strong> Documentation showing you met mobile design criteria:
-                            <ul>
-                                <li>✓ All touch targets ≥ 44×44px</li>
-                                <li>✓ Content prioritized for mobile</li>
-                                <li>✓ Appropriate navigation pattern used</li>
-                                <li>✓ Thumb-friendly layout</li>
-                            </ul>
-                        </li>
-                        <li><strong>Persona Alignment:</strong> Brief explanation of how screens meet persona goals</li>
-                        <li><strong>Bot Interaction:</strong> Screenshots of bot guidance</li>
+                        <li><strong>Title, interface, and scenario</strong> (1–2 sentences)</li>
+                        <li><strong>Persona illustration</strong>, labeled “AI-generated illustration (tool, date)”</li>
+                        <li><strong>6-panel storyboard illustration</strong>, labeled the same way</li>
+                        <li><strong>Panel text in your own words:</strong> scene, action, interaction mode, a line in the persona's voice, feeling (1–5), with evidence labels</li>
+                        <li><strong>Feeling curve</strong> across the 6 panels</li>
+                        <li><strong>2 accessibility moments:</strong> which panel, the possible issue, and what to check</li>
+                        <li><strong>Assumptions:</strong> which panels rest mainly on assumptions</li>
                     </ul>
+                    <p class="bilingual" style="margin-top: 10px;">タイトル、インターフェース、シナリオ（1〜2文）。ペルソナのイラスト（「AI生成イラスト（ツール名、日付）」と表示）。6コマのストーリーボードのイラスト（同様に表示）。自分の言葉によるコマの説明：場面、行動、インタラクションモード、ペルソナのセリフ、感情（1〜5）、根拠の印。6コマの感情の流れ。アクセシビリティが関わる場面2つ。主に仮定に基づくコマ。</p>
+                </div>
+            </div>
+            <div class="deliverable-box">
+                <h3>File 2: AI Transparency Log</h3>
+                <p><strong>Format:</strong> PDF or TXT (Part B of the template)</p>
+                <div class="requirement-list">
+                    <ul>
+                        <li><strong>Tools and dates</strong> (or “No AI used”, in which case you draw the storyboard yourself)</li>
+                        <li><strong>At least 3 things you kept, changed, or rejected</strong> from the AI's script and images, and why</li>
+                        <li><strong>Stereotype check:</strong> what you looked for in the images and script, and what you asked the AI to redraw</li>
+                        <li><strong>How you checked</strong> the storyboard against your Week 4 persona</li>
+                        <li><strong>The complete, unedited chat</strong>, starting with the header line <code>=== STORYBOARD CHAT — AI tool: ___ — date: ___ ===</code></li>
+                    </ul>
+                    <p class="bilingual" style="margin-top: 10px;">ツールと日付（AI不使用の場合は、ストーリーボードを自分で描く）。AIの台本と画像から残した・変えた・使わなかったこと3つ以上とその理由。ステレオタイプ確認。第4週のペルソナとの照合方法。会話の全文（編集なし、見出し行つき）。</p>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>📊 Grading Rubric / 評価基準</h2>
-
+            <h2>📊 Grading Rubric (10 Points) / 評価基準（10点）</h2>
+            <p>Each row is scored Full, Partial, or Missing. Assumptions don't lose points if they are clearly labeled.</p>
+            <p class="bilingual">各行を「満点／一部／なし」で評価します。仮定は明確に印をつけていれば減点しません。</p>
+            <div class="table-wrap">
             <table class="grading-rubric">
-                <thead>
-                    <tr>
-                        <th>Level</th>
-                        <th>Score</th>
-                        <th>Criteria</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>Criterion</th><th>Full</th><th>Partial</th><th>Missing</th></tr></thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Excellent</strong></td>
-                        <td>90-100%</td>
-                        <td>Mobile-first approach, all touch targets ≥ 44×44px, appropriate mobile patterns, 4-5 detailed screens with annotations, strong persona alignment</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Good</strong></td>
-                        <td>80-89%</td>
-                        <td>Mostly mobile-first, most targets sized correctly, good patterns, 3-4 screens with some annotations</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Satisfactory</strong></td>
-                        <td>70-79%</td>
-                        <td>Attempts mobile-first, some targets too small, 2-3 screens, basic annotations</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Needs Improvement</strong></td>
-                        <td>&lt;70%</td>
-                        <td>Desktop-first thinking, many small targets, few screens, minimal annotations</td>
-                    </tr>
+                    <tr><td><strong>R1 Faithful to the persona</strong><br>2 pts</td><td>(2) Illustration and panels match the Week 4 persona's context of use, goals, and frustrations; Panel 4 uses one of the persona's frustrations; evidence labels carried over and assumption panels listed</td><td>(1) Story drifts from the persona in places, or labels missing</td><td>(0) Not based on the Week 4 persona</td></tr>
+                    <tr><td><strong>R2 Story arc &amp; panel detail</strong><br>2 pts</td><td>(2) 6 panels: trigger, first step, interaction, problem, response, outcome; each scene specific (place, conditions, hands and attention); feeling curve matches the story</td><td>(1) Panels missing or out of order, generic scenes, or no feeling curve</td><td>(0) No storyboard</td></tr>
+                    <tr><td><strong>R3 Interaction mode &amp; AI disposition</strong><br>2 pts</td><td>(2) Every panel names its mode (direct manipulation, conversation, delegation, or not using the interface); Panels 3 and 5 match the persona's trust level and default mode, or the change is explained</td><td>(1) Modes missing in some panels, or Panels 3 and 5 don't reflect the AI disposition</td><td>(0) None</td></tr>
+                    <tr><td><strong>R4 Accessibility moments</strong><br>1 pt</td><td>(1) 2 moments, each with the panel, the possible issue (e.g., glare, one hand busy, noise, color-only signals, time pressure), and what to check</td><td>(0.5) Only one, or no panel or check named</td><td>(0) None</td></tr>
+                    <tr><td><strong>R5 Your own version</strong><br>2 pts</td><td>(2) Panel text in your own words; at least 3 specific changes to the AI's script or images; images checked for stereotypes; every image labeled AI-generated (tool, date)</td><td>(1) Few changes, no stereotype check, or images unlabeled</td><td>(0) AI output submitted as is</td></tr>
+                    <tr><td><strong>R6 AI transparency log</strong><br>1 pt</td><td>(1) Tool and date; complete chat; changes and stereotype check described; how you checked against your persona (or “No AI used”)</td><td>(0.5) Chat missing, or vague changes</td><td>(0) AI used but no log</td></tr>
                 </tbody>
             </table>
+            </div>
+            <h3>Deductions / 減点</h3>
+            <ul>
+                <li><strong>A photo of a real person, or real names or identifying details,</strong> in any file, including the chat: −1, and you will be asked to resubmit.<div class="bilingual">実在の人の写真、名前、個人が分かる情報（会話を含む）：−1（再提出）。</div></li>
+                <li><strong>Unchanged AI output</strong> (the log shows no changes, or the panel text matches the chat word for word): R1–R3 are scored at most Partial.<div class="bilingual">AIの出力をそのまま提出した場合：R1〜R3は最大「一部」。</div></li>
+                <li><strong>A stereotyped image kept without comment</strong> in the log: R5 is scored Partial or lower.<div class="bilingual">ステレオタイプ的な画像を、ログで触れずにそのまま使った場合：R5は「一部」以下。</div></li>
+            </ul>
         </div>
 
         <div class="section">
             <h2>✅ Submission Requirements / 提出要件</h2>
             <div class="requirement-list">
                 <ul>
-                    <li><strong>File Format:</strong> PDF</li>
-                    <li><strong>File Naming:</strong> LastName_FirstName_Week05.pdf</li>
-                    <li><strong>Content:</strong> 3-5 sketched screens with annotations</li>
+                    <li><strong>Where:</strong> the Week 5 assignment in the university LMS</li>
+                    <li><strong>File 1:</strong> LastName_FirstName_Week05_Storyboard.pdf (PDF preferred)</li>
+                    <li><strong>File 2:</strong> LastName_FirstName_Week05_AILog.pdf (or .txt)</li>
+                    <li><strong>Length:</strong> up to 2 pages for File 1</li>
+                    <li><strong>Work style:</strong> individual</li>
                     <li><strong>Due Date:</strong> Before next class session</li>
                 </ul>
+                <p class="bilingual">提出先：大学のLMS（第5週の課題）。ファイル1：LastName_FirstName_Week05_Storyboard.pdf（PDF推奨）。ファイル2：LastName_FirstName_Week05_AILog.pdf（または.txt）。長さ：ファイル1は2ページまで。進め方：個人。締め切り：次の授業までに。</p>
+            </div>
+            <p><strong>Checklist:</strong> paste this into the LMS submission comment box and mark each item [x] (done) or [ ] (not done).</p>
+            <p class="bilingual">チェックリスト：LMSの提出コメント欄に貼り付け、各項目に [x]（済）か [ ]（未）をつけてください。</p>
+            <div class="flow">[ ] File 1 LastName_FirstName_Week05_Storyboard.pdf — up to 2 pages
+[ ] File 2 LastName_FirstName_Week05_AILog — Part B + complete chat (or "No AI used")
+[ ] Title, interface, and scenario
+[ ] Persona illustration, labeled AI-generated (tool, date)
+[ ] 6-panel storyboard illustration, labeled AI-generated (tool, date)
+[ ] 6 panels: trigger, first step, interaction, problem, response, outcome
+[ ] Panel text in my own words, with evidence labels
+[ ] Interaction mode in every panel; Panels 3 and 5 match the AI disposition
+[ ] Feeling curve
+[ ] 2 accessibility moments, with panel and what to check
+[ ] Panels that rest on assumptions listed
+[ ] Images checked for stereotypes
+[ ] No photos of real people, no real names or identifying details
+[ ] AI tools used: ______________</div>
+        </div>
+
+        <div class="section">
+            <h2>🤖 AI Use on This Assignment / この課題でのAI使用</h2>
+            <div class="highlight-box">
+                <p>The AI drafts the storyboard and draws the illustrations, but the judgment is yours: whether each panel is true to your persona, whether the images are fair, and what the story should say.</p>
+                <p class="bilingual">AIはストーリーボードの下書きを作り、イラストを描きます。しかし、判断するのはあなたです。各コマがペルソナに忠実か、画像が公正か、物語が何を伝えるべきか。</p>
+                <p><strong>Log it:</strong> which tool, when, what you kept or changed, how you checked the images for stereotypes, and how you checked the storyboard against your persona. Label every AI-generated image. Submit the log as File 2, with the complete chat attached.</p>
+                <p class="bilingual"><strong>記録してください。</strong>どのツールを、いつ使い、何を残し・変更したか、画像のステレオタイプをどう確認したか、ペルソナとどう照合したか。AIが生成した画像にはすべて表示をつけてください。ログはファイル2として、会話の全文を添付して提出してください。</p>
             </div>
         </div>
 
         <div class="section">
             <h2>💡 Tips for Success / 成功のためのヒント</h2>
             <ul>
-                <li><strong>Think mobile-first:</strong> Don't just shrink desktop layouts</li>
-                <li><strong>Size matters:</strong> Use your thumb to check if targets are big enough</li>
-                <li><strong>Prioritize ruthlessly:</strong> Mobile screens have limited space</li>
-                <li><strong>Use patterns:</strong> Tab bars, cards, and gestures are familiar to mobile users</li>
-                <li><strong>Test thumb reach:</strong> Important actions should be within easy reach</li>
-                <li><strong>Keep it simple:</strong> Low-fidelity sketches focus on layout, not visual design</li>
+                <li><strong>Start from the context of use:</strong> the best panels show where the persona is, what their hands and attention are doing, and what gets in the way</li>
+                <li><strong>Make Panel 4 hurt:</strong> pick the frustration that matters most to your design, not the easiest one to draw</li>
+                <li><strong>Let the AI disposition drive Panel 5:</strong> a persona who distrusts AI responds differently from one who delegates everything</li>
+                <li><strong>Redraw, don't settle:</strong> if the persona looks generic or stereotyped, ask for a redraw and note it in your log</li>
             </ul>
+            <p class="bilingual">利用状況から始めてください。良いコマは、ペルソナがどこにいて、手と注意が何をしていて、何が邪魔をしているかを示します。4コマ目は痛いところを描いてください。描きやすい不満ではなく、デザインにとって一番重要な不満を選んでください。5コマ目はAIに対する態度で決めてください。AIを信頼しない人と、何でも任せる人では、対応が違います。妥協せず描き直してください。ペルソナが平凡またはステレオタイプ的に見えたら、描き直しを頼み、ログに書いてください。</p>
         </div>
     </main>
 
     <footer style="background: #2a76dd; color: white; text-align: center; padding: 20px; margin-top: 40px;">
-        <p>&copy; 2025 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
+        <p>&copy; 2026 Yuri Tijerino | HCI-101 | Kwansei Gakuin University</p>
+        <p style="font-size: 0.85em; opacity: 0.9;">著作権 © 2026 Yuri Tijerino | HCI-101 | 関西学院大学</p>
     </footer>
 </body>
 </html>
